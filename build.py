@@ -62,7 +62,7 @@ def build_python():
     grpc_python_plugin_cmd = which('grpc_python_plugin')
     grpc_python_plugin = '='.join(['protoc-gen-grpc', grpc_python_plugin_cmd])
     cd(proto_directory)
-    protoc("--python_out=" + python_dir, *protobuf_inputs)
+    protoc("--python_out=" + python_dir, *all_inputs)
     protoc(
         "--python_out=" + python_dir,
         "--grpc_out=" + python_dir,
