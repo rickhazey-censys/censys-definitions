@@ -21,10 +21,11 @@ TARGETS = [
 protobuf_prefixes = [
     "anonstore",
     "common",
+    "ct",
     "hoststore",
     "protocols",
+    "pubkey",
     "zlint",
-    "ct",
 ]
 
 grpc_prefixes = [
