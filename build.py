@@ -20,6 +20,7 @@ TARGETS = [
 
 protobuf_prefixes = [
     "anonstore",
+    "certificate",
     "common",
     "ct",
     "hoststore",
