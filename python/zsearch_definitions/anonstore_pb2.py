@@ -21,9 +21,9 @@ import certificate_pb2 as certificate__pb2
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='anonstore.proto',
-  package='censys_definitions',
+  package='zsearch',
   syntax='proto3',
-  serialized_pb=_b('\n\x0f\x61nonstore.proto\x12\x12\x63\x65nsys_definitions\x1a\x0c\x63ommon.proto\x1a\x0cpubkey.proto\x1a\x08\x63t.proto\x1a\x11\x63\x65rtificate.proto\"\xbf\x03\n\x0f\x41nonymousRecord\x12\x10\n\x08sha256fp\x18\x01 \x01(\x0c\x12\x11\n\ttimestamp\x18\x02 \x01(\x10\x12\x0f\n\x07scan_id\x18\x03 \x01(\r\x12\x14\n\x08\x65xported\x18\x04 \x01(\x08\x42\x02\x18\x01\x12\x32\n\x08userdata\x18\x05 \x01(\x0b\x32 .censys_definitions.UserdataAtom\x12\x0e\n\x04\x64\x61ta\x18\x06 \x01(\tH\x00\x12\x12\n\x08raw_data\x18\x07 \x01(\x0cH\x00\x12\x36\n\x0b\x63\x65rtificate\x18\x08 \x01(\x0b\x32\x1f.censys_definitions.CertificateH\x00\x12\x33\n\x03key\x18\t \x01(\x0b\x32$.censys_definitions.CryptographicKeyH\x00\x12(\n\x02\x61s\x18\n \x01(\x0b\x32\x1a.censys_definitions.ASAtomH\x00\x12/\n\x08metadata\x18\x0e \x03(\x0b\x32\x1d.censys_definitions.Metadatum\x12\x0c\n\x04tags\x18\x0f \x03(\t\x12\x12\n\nupdated_at\x18\x10 \x01(\x07\x12\x10\n\x08\x61\x64\x64\x65\x64_at\x18\x11 \x01(\x07\x42\x0c\n\noneof_data\"\xdf\x02\n\x0e\x41nonymousDelta\x12@\n\ndelta_type\x18\x01 \x01(\x0e\x32,.censys_definitions.AnonymousDelta.DeltaType\x12\x42\n\x0b\x64\x65lta_scope\x18\x02 \x01(\x0e\x32-.censys_definitions.AnonymousDelta.DeltaScope\x12\x33\n\x06record\x18\x03 \x01(\x0b\x32#.censys_definitions.AnonymousRecord\":\n\tDeltaType\x12\x0f\n\x0b\x44T_RESERVED\x10\x00\x12\r\n\tDT_UPDATE\x10\x01\x12\r\n\tDT_DELETE\x10\x02\"V\n\nDeltaScope\x12\x12\n\x0eSCOPE_RESERVED\x10\x00\x12\x13\n\x0fSCOPE_NO_CHANGE\x10\x01\x12\r\n\tSCOPE_NEW\x10\x02\x12\x10\n\x0cSCOPE_UPDATE\x10\x03\"\xc5\x02\n\x13\x45xternalCertificate\x12\x35\n\x06source\x18\x01 \x01(\x0e\x32%.censys_definitions.CertificateSource\x12=\n\x10\x61nonymous_record\x18\x02 \x01(\x0b\x32#.censys_definitions.AnonymousRecord\x12/\n\tct_server\x18\x03 \x01(\x0e\x32\x1c.censys_definitions.CTServer\x12\x35\n\tct_status\x18\x04 \x01(\x0b\x32\".censys_definitions.CTServerStatus\x12?\n\nnss_status\x18\x05 \x01(\x0b\x32+.censys_definitions.MozillaSalesForceStatus\x12\x0f\n\x07tbsHash\x18\x06 \x01(\x0c\x62\x06proto3')
+  serialized_pb=_b('\n\x0f\x61nonstore.proto\x12\x07zsearch\x1a\x0c\x63ommon.proto\x1a\x0cpubkey.proto\x1a\x08\x63t.proto\x1a\x11\x63\x65rtificate.proto\"\x88\x03\n\x0f\x41nonymousRecord\x12\x10\n\x08sha256fp\x18\x01 \x01(\x0c\x12\x11\n\ttimestamp\x18\x02 \x01(\x10\x12\x0f\n\x07scan_id\x18\x03 \x01(\r\x12\x14\n\x08\x65xported\x18\x04 \x01(\x08\x42\x02\x18\x01\x12\'\n\x08userdata\x18\x05 \x01(\x0b\x32\x15.zsearch.UserdataAtom\x12\x0e\n\x04\x64\x61ta\x18\x06 \x01(\tH\x00\x12\x12\n\x08raw_data\x18\x07 \x01(\x0cH\x00\x12+\n\x0b\x63\x65rtificate\x18\x08 \x01(\x0b\x32\x14.zsearch.CertificateH\x00\x12(\n\x03key\x18\t \x01(\x0b\x32\x19.zsearch.CryptographicKeyH\x00\x12\x1d\n\x02\x61s\x18\n \x01(\x0b\x32\x0f.zsearch.ASAtomH\x00\x12$\n\x08metadata\x18\x0e \x03(\x0b\x32\x12.zsearch.Metadatum\x12\x0c\n\x04tags\x18\x0f \x03(\t\x12\x12\n\nupdated_at\x18\x10 \x01(\x07\x12\x10\n\x08\x61\x64\x64\x65\x64_at\x18\x11 \x01(\x07\x42\x0c\n\noneof_data\"\xbe\x02\n\x0e\x41nonymousDelta\x12\x35\n\ndelta_type\x18\x01 \x01(\x0e\x32!.zsearch.AnonymousDelta.DeltaType\x12\x37\n\x0b\x64\x65lta_scope\x18\x02 \x01(\x0e\x32\".zsearch.AnonymousDelta.DeltaScope\x12(\n\x06record\x18\x03 \x01(\x0b\x32\x18.zsearch.AnonymousRecord\":\n\tDeltaType\x12\x0f\n\x0b\x44T_RESERVED\x10\x00\x12\r\n\tDT_UPDATE\x10\x01\x12\r\n\tDT_DELETE\x10\x02\"V\n\nDeltaScope\x12\x12\n\x0eSCOPE_RESERVED\x10\x00\x12\x13\n\x0fSCOPE_NO_CHANGE\x10\x01\x12\r\n\tSCOPE_NEW\x10\x02\x12\x10\n\x0cSCOPE_UPDATE\x10\x03\"\x8e\x02\n\x13\x45xternalCertificate\x12*\n\x06source\x18\x01 \x01(\x0e\x32\x1a.zsearch.CertificateSource\x12\x32\n\x10\x61nonymous_record\x18\x02 \x01(\x0b\x32\x18.zsearch.AnonymousRecord\x12$\n\tct_server\x18\x03 \x01(\x0e\x32\x11.zsearch.CTServer\x12*\n\tct_status\x18\x04 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x34\n\nnss_status\x18\x05 \x01(\x0b\x32 .zsearch.MozillaSalesForceStatus\x12\x0f\n\x07tbsHash\x18\x06 \x01(\x0c\x62\x06proto3')
   ,
   dependencies=[common__pb2.DESCRIPTOR,pubkey__pb2.DESCRIPTOR,ct__pb2.DESCRIPTOR,certificate__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -32,7 +32,7 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 _ANONYMOUSDELTA_DELTATYPE = _descriptor.EnumDescriptor(
   name='DeltaType',
-  full_name='censys_definitions.AnonymousDelta.DeltaType',
+  full_name='zsearch.AnonymousDelta.DeltaType',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -51,14 +51,14 @@ _ANONYMOUSDELTA_DELTATYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=752,
-  serialized_end=810,
+  serialized_start=653,
+  serialized_end=711,
 )
 _sym_db.RegisterEnumDescriptor(_ANONYMOUSDELTA_DELTATYPE)
 
 _ANONYMOUSDELTA_DELTASCOPE = _descriptor.EnumDescriptor(
   name='DeltaScope',
-  full_name='censys_definitions.AnonymousDelta.DeltaScope',
+  full_name='zsearch.AnonymousDelta.DeltaScope',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -81,112 +81,112 @@ _ANONYMOUSDELTA_DELTASCOPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=812,
-  serialized_end=898,
+  serialized_start=713,
+  serialized_end=799,
 )
 _sym_db.RegisterEnumDescriptor(_ANONYMOUSDELTA_DELTASCOPE)
 
 
 _ANONYMOUSRECORD = _descriptor.Descriptor(
   name='AnonymousRecord',
-  full_name='censys_definitions.AnonymousRecord',
+  full_name='zsearch.AnonymousRecord',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='sha256fp', full_name='censys_definitions.AnonymousRecord.sha256fp', index=0,
+      name='sha256fp', full_name='zsearch.AnonymousRecord.sha256fp', index=0,
       number=1, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='timestamp', full_name='censys_definitions.AnonymousRecord.timestamp', index=1,
+      name='timestamp', full_name='zsearch.AnonymousRecord.timestamp', index=1,
       number=2, type=16, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='scan_id', full_name='censys_definitions.AnonymousRecord.scan_id', index=2,
+      name='scan_id', full_name='zsearch.AnonymousRecord.scan_id', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='exported', full_name='censys_definitions.AnonymousRecord.exported', index=3,
+      name='exported', full_name='zsearch.AnonymousRecord.exported', index=3,
       number=4, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\030\001'))),
     _descriptor.FieldDescriptor(
-      name='userdata', full_name='censys_definitions.AnonymousRecord.userdata', index=4,
+      name='userdata', full_name='zsearch.AnonymousRecord.userdata', index=4,
       number=5, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='data', full_name='censys_definitions.AnonymousRecord.data', index=5,
+      name='data', full_name='zsearch.AnonymousRecord.data', index=5,
       number=6, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='raw_data', full_name='censys_definitions.AnonymousRecord.raw_data', index=6,
+      name='raw_data', full_name='zsearch.AnonymousRecord.raw_data', index=6,
       number=7, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='certificate', full_name='censys_definitions.AnonymousRecord.certificate', index=7,
+      name='certificate', full_name='zsearch.AnonymousRecord.certificate', index=7,
       number=8, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='key', full_name='censys_definitions.AnonymousRecord.key', index=8,
+      name='key', full_name='zsearch.AnonymousRecord.key', index=8,
       number=9, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='as', full_name='censys_definitions.AnonymousRecord.as', index=9,
+      name='as', full_name='zsearch.AnonymousRecord.as', index=9,
       number=10, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='metadata', full_name='censys_definitions.AnonymousRecord.metadata', index=10,
+      name='metadata', full_name='zsearch.AnonymousRecord.metadata', index=10,
       number=14, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='tags', full_name='censys_definitions.AnonymousRecord.tags', index=11,
+      name='tags', full_name='zsearch.AnonymousRecord.tags', index=11,
       number=15, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='updated_at', full_name='censys_definitions.AnonymousRecord.updated_at', index=12,
+      name='updated_at', full_name='zsearch.AnonymousRecord.updated_at', index=12,
       number=16, type=7, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='added_at', full_name='censys_definitions.AnonymousRecord.added_at', index=13,
+      name='added_at', full_name='zsearch.AnonymousRecord.added_at', index=13,
       number=17, type=7, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -204,37 +204,37 @@ _ANONYMOUSRECORD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
     _descriptor.OneofDescriptor(
-      name='oneof_data', full_name='censys_definitions.AnonymousRecord.oneof_data',
+      name='oneof_data', full_name='zsearch.AnonymousRecord.oneof_data',
       index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=97,
-  serialized_end=544,
+  serialized_start=86,
+  serialized_end=478,
 )
 
 
 _ANONYMOUSDELTA = _descriptor.Descriptor(
   name='AnonymousDelta',
-  full_name='censys_definitions.AnonymousDelta',
+  full_name='zsearch.AnonymousDelta',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='delta_type', full_name='censys_definitions.AnonymousDelta.delta_type', index=0,
+      name='delta_type', full_name='zsearch.AnonymousDelta.delta_type', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='delta_scope', full_name='censys_definitions.AnonymousDelta.delta_scope', index=1,
+      name='delta_scope', full_name='zsearch.AnonymousDelta.delta_scope', index=1,
       number=2, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='record', full_name='censys_definitions.AnonymousDelta.record', index=2,
+      name='record', full_name='zsearch.AnonymousDelta.record', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -254,55 +254,55 @@ _ANONYMOUSDELTA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=547,
-  serialized_end=898,
+  serialized_start=481,
+  serialized_end=799,
 )
 
 
 _EXTERNALCERTIFICATE = _descriptor.Descriptor(
   name='ExternalCertificate',
-  full_name='censys_definitions.ExternalCertificate',
+  full_name='zsearch.ExternalCertificate',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='source', full_name='censys_definitions.ExternalCertificate.source', index=0,
+      name='source', full_name='zsearch.ExternalCertificate.source', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='anonymous_record', full_name='censys_definitions.ExternalCertificate.anonymous_record', index=1,
+      name='anonymous_record', full_name='zsearch.ExternalCertificate.anonymous_record', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='ct_server', full_name='censys_definitions.ExternalCertificate.ct_server', index=2,
+      name='ct_server', full_name='zsearch.ExternalCertificate.ct_server', index=2,
       number=3, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='ct_status', full_name='censys_definitions.ExternalCertificate.ct_status', index=3,
+      name='ct_status', full_name='zsearch.ExternalCertificate.ct_status', index=3,
       number=4, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='nss_status', full_name='censys_definitions.ExternalCertificate.nss_status', index=4,
+      name='nss_status', full_name='zsearch.ExternalCertificate.nss_status', index=4,
       number=5, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='tbsHash', full_name='censys_definitions.ExternalCertificate.tbsHash', index=5,
+      name='tbsHash', full_name='zsearch.ExternalCertificate.tbsHash', index=5,
       number=6, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
@@ -320,8 +320,8 @@ _EXTERNALCERTIFICATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=901,
-  serialized_end=1226,
+  serialized_start=802,
+  serialized_end=1072,
 )
 
 _ANONYMOUSRECORD.fields_by_name['userdata'].message_type = common__pb2._USERDATAATOM
@@ -361,21 +361,21 @@ DESCRIPTOR.message_types_by_name['ExternalCertificate'] = _EXTERNALCERTIFICATE
 AnonymousRecord = _reflection.GeneratedProtocolMessageType('AnonymousRecord', (_message.Message,), dict(
   DESCRIPTOR = _ANONYMOUSRECORD,
   __module__ = 'anonstore_pb2'
-  # @@protoc_insertion_point(class_scope:censys_definitions.AnonymousRecord)
+  # @@protoc_insertion_point(class_scope:zsearch.AnonymousRecord)
   ))
 _sym_db.RegisterMessage(AnonymousRecord)
 
 AnonymousDelta = _reflection.GeneratedProtocolMessageType('AnonymousDelta', (_message.Message,), dict(
   DESCRIPTOR = _ANONYMOUSDELTA,
   __module__ = 'anonstore_pb2'
-  # @@protoc_insertion_point(class_scope:censys_definitions.AnonymousDelta)
+  # @@protoc_insertion_point(class_scope:zsearch.AnonymousDelta)
   ))
 _sym_db.RegisterMessage(AnonymousDelta)
 
 ExternalCertificate = _reflection.GeneratedProtocolMessageType('ExternalCertificate', (_message.Message,), dict(
   DESCRIPTOR = _EXTERNALCERTIFICATE,
   __module__ = 'anonstore_pb2'
-  # @@protoc_insertion_point(class_scope:censys_definitions.ExternalCertificate)
+  # @@protoc_insertion_point(class_scope:zsearch.ExternalCertificate)
   ))
 _sym_db.RegisterMessage(ExternalCertificate)
 

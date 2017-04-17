@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package censys_definitions;
+package zsearch;
 
 import "common.proto";
 import "certificate.proto";

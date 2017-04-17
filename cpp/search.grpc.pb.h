@@ -24,7 +24,7 @@ class ServerCompletionQueue;
 class ServerContext;
 }  // namespace grpc
 
-namespace censys_definitions {
+namespace zsearch {
 
 // Two gRPC interfaces. One from
 //
@@ -33,194 +33,194 @@ class AdminService final {
   class StubInterface {
    public:
     virtual ~StubInterface() {}
-    virtual ::grpc::Status Shutdown(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::censys_definitions::CommandReply* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::CommandReply>> AsyncShutdown(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::CommandReply>>(AsyncShutdownRaw(context, request, cq));
+    virtual ::grpc::Status Shutdown(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>> AsyncShutdown(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>>(AsyncShutdownRaw(context, request, cq));
     }
-    virtual ::grpc::Status Status(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::censys_definitions::CommandReply* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::CommandReply>> AsyncStatus(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::CommandReply>>(AsyncStatusRaw(context, request, cq));
+    virtual ::grpc::Status Status(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>> AsyncStatus(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>>(AsyncStatusRaw(context, request, cq));
     }
-    virtual ::grpc::Status Statistics(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::censys_definitions::CommandReply* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::CommandReply>> AsyncStatistics(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::CommandReply>>(AsyncStatisticsRaw(context, request, cq));
+    virtual ::grpc::Status Statistics(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>> AsyncStatistics(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>>(AsyncStatisticsRaw(context, request, cq));
     }
-    virtual ::grpc::Status PruneIPv4(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::censys_definitions::CommandReply* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::CommandReply>> AsyncPruneIPv4(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::CommandReply>>(AsyncPruneIPv4Raw(context, request, cq));
+    virtual ::grpc::Status PruneIPv4(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>> AsyncPruneIPv4(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>>(AsyncPruneIPv4Raw(context, request, cq));
     }
-    virtual ::grpc::Status PruneDomain(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::censys_definitions::CommandReply* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::CommandReply>> AsyncPruneDomain(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::CommandReply>>(AsyncPruneDomainRaw(context, request, cq));
+    virtual ::grpc::Status PruneDomain(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>> AsyncPruneDomain(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>>(AsyncPruneDomainRaw(context, request, cq));
     }
-    virtual ::grpc::Status UpdateASData(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::censys_definitions::CommandReply* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::CommandReply>> AsyncUpdateASData(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::CommandReply>>(AsyncUpdateASDataRaw(context, request, cq));
+    virtual ::grpc::Status UpdateASData(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>> AsyncUpdateASData(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>>(AsyncUpdateASDataRaw(context, request, cq));
     }
-    virtual ::grpc::Status UpdateLocationData(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::censys_definitions::CommandReply* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::CommandReply>> AsyncUpdateLocationData(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::CommandReply>>(AsyncUpdateLocationDataRaw(context, request, cq));
+    virtual ::grpc::Status UpdateLocationData(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>> AsyncUpdateLocationData(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>>(AsyncUpdateLocationDataRaw(context, request, cq));
     }
-    virtual ::grpc::Status ValidateCertificates(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::censys_definitions::CommandReply* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::CommandReply>> AsyncValidateCertificates(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::CommandReply>>(AsyncValidateCertificatesRaw(context, request, cq));
+    virtual ::grpc::Status ValidateCertificates(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>> AsyncValidateCertificates(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>>(AsyncValidateCertificatesRaw(context, request, cq));
     }
-    virtual ::grpc::Status FixCertificateSource(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::censys_definitions::CommandReply* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::CommandReply>> AsyncFixCertificateSource(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::CommandReply>>(AsyncFixCertificateSourceRaw(context, request, cq));
+    virtual ::grpc::Status FixCertificateSource(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>> AsyncFixCertificateSource(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>>(AsyncFixCertificateSourceRaw(context, request, cq));
     }
-    virtual ::grpc::Status DumpIPv4ToJSON(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::censys_definitions::CommandReply* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::CommandReply>> AsyncDumpIPv4ToJSON(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::CommandReply>>(AsyncDumpIPv4ToJSONRaw(context, request, cq));
+    virtual ::grpc::Status DumpIPv4ToJSON(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>> AsyncDumpIPv4ToJSON(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>>(AsyncDumpIPv4ToJSONRaw(context, request, cq));
     }
-    virtual ::grpc::Status DumpDomainToJSON(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::censys_definitions::CommandReply* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::CommandReply>> AsyncDumpDomainToJSON(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::CommandReply>>(AsyncDumpDomainToJSONRaw(context, request, cq));
+    virtual ::grpc::Status DumpDomainToJSON(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>> AsyncDumpDomainToJSON(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>>(AsyncDumpDomainToJSONRaw(context, request, cq));
     }
-    virtual ::grpc::Status DumpCertificatesToJSON(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::censys_definitions::CommandReply* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::CommandReply>> AsyncDumpCertificatesToJSON(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::CommandReply>>(AsyncDumpCertificatesToJSONRaw(context, request, cq));
+    virtual ::grpc::Status DumpCertificatesToJSON(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>> AsyncDumpCertificatesToJSON(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>>(AsyncDumpCertificatesToJSONRaw(context, request, cq));
     }
-    virtual ::grpc::Status DumpKeysToJSON(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::censys_definitions::CommandReply* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::CommandReply>> AsyncDumpKeysToJSON(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::CommandReply>>(AsyncDumpKeysToJSONRaw(context, request, cq));
+    virtual ::grpc::Status DumpKeysToJSON(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>> AsyncDumpKeysToJSON(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>>(AsyncDumpKeysToJSONRaw(context, request, cq));
     }
-    virtual ::grpc::Status RegenerateIPv4Deltas(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::censys_definitions::CommandReply* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::CommandReply>> AsyncRegenerateIPv4Deltas(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::CommandReply>>(AsyncRegenerateIPv4DeltasRaw(context, request, cq));
+    virtual ::grpc::Status RegenerateIPv4Deltas(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>> AsyncRegenerateIPv4Deltas(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>>(AsyncRegenerateIPv4DeltasRaw(context, request, cq));
     }
-    virtual ::grpc::Status RegenerateDomainDeltas(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::censys_definitions::CommandReply* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::CommandReply>> AsyncRegenerateDomainDeltas(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::CommandReply>>(AsyncRegenerateDomainDeltasRaw(context, request, cq));
+    virtual ::grpc::Status RegenerateDomainDeltas(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>> AsyncRegenerateDomainDeltas(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>>(AsyncRegenerateDomainDeltasRaw(context, request, cq));
     }
-    virtual ::grpc::Status RegenerateCertificateDeltas(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::censys_definitions::CommandReply* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::CommandReply>> AsyncRegenerateCertificateDeltas(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::CommandReply>>(AsyncRegenerateCertificateDeltasRaw(context, request, cq));
+    virtual ::grpc::Status RegenerateCertificateDeltas(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>> AsyncRegenerateCertificateDeltas(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>>(AsyncRegenerateCertificateDeltasRaw(context, request, cq));
     }
-    virtual ::grpc::Status RegenerateSingleCertificateDelta(::grpc::ClientContext* context, const ::censys_definitions::AnonymousQuery& request, ::censys_definitions::CommandReply* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::CommandReply>> AsyncRegenerateSingleCertificateDelta(::grpc::ClientContext* context, const ::censys_definitions::AnonymousQuery& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::CommandReply>>(AsyncRegenerateSingleCertificateDeltaRaw(context, request, cq));
+    virtual ::grpc::Status RegenerateSingleCertificateDelta(::grpc::ClientContext* context, const ::zsearch::AnonymousQuery& request, ::zsearch::CommandReply* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>> AsyncRegenerateSingleCertificateDelta(::grpc::ClientContext* context, const ::zsearch::AnonymousQuery& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>>(AsyncRegenerateSingleCertificateDeltaRaw(context, request, cq));
     }
-    virtual ::grpc::Status Ping(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::censys_definitions::CommandReply* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::CommandReply>> AsyncPing(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::CommandReply>>(AsyncPingRaw(context, request, cq));
+    virtual ::grpc::Status Ping(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>> AsyncPing(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>>(AsyncPingRaw(context, request, cq));
     }
   private:
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::CommandReply>* AsyncShutdownRaw(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::CommandReply>* AsyncStatusRaw(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::CommandReply>* AsyncStatisticsRaw(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::CommandReply>* AsyncPruneIPv4Raw(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::CommandReply>* AsyncPruneDomainRaw(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::CommandReply>* AsyncUpdateASDataRaw(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::CommandReply>* AsyncUpdateLocationDataRaw(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::CommandReply>* AsyncValidateCertificatesRaw(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::CommandReply>* AsyncFixCertificateSourceRaw(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::CommandReply>* AsyncDumpIPv4ToJSONRaw(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::CommandReply>* AsyncDumpDomainToJSONRaw(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::CommandReply>* AsyncDumpCertificatesToJSONRaw(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::CommandReply>* AsyncDumpKeysToJSONRaw(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::CommandReply>* AsyncRegenerateIPv4DeltasRaw(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::CommandReply>* AsyncRegenerateDomainDeltasRaw(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::CommandReply>* AsyncRegenerateCertificateDeltasRaw(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::CommandReply>* AsyncRegenerateSingleCertificateDeltaRaw(::grpc::ClientContext* context, const ::censys_definitions::AnonymousQuery& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::CommandReply>* AsyncPingRaw(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>* AsyncShutdownRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>* AsyncStatusRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>* AsyncStatisticsRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>* AsyncPruneIPv4Raw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>* AsyncPruneDomainRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>* AsyncUpdateASDataRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>* AsyncUpdateLocationDataRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>* AsyncValidateCertificatesRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>* AsyncFixCertificateSourceRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>* AsyncDumpIPv4ToJSONRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>* AsyncDumpDomainToJSONRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>* AsyncDumpCertificatesToJSONRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>* AsyncDumpKeysToJSONRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>* AsyncRegenerateIPv4DeltasRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>* AsyncRegenerateDomainDeltasRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>* AsyncRegenerateCertificateDeltasRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>* AsyncRegenerateSingleCertificateDeltaRaw(::grpc::ClientContext* context, const ::zsearch::AnonymousQuery& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>* AsyncPingRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) = 0;
   };
   class Stub final : public StubInterface {
    public:
     Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel);
-    ::grpc::Status Shutdown(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::censys_definitions::CommandReply* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>> AsyncShutdown(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>>(AsyncShutdownRaw(context, request, cq));
+    ::grpc::Status Shutdown(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>> AsyncShutdown(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>>(AsyncShutdownRaw(context, request, cq));
     }
-    ::grpc::Status Status(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::censys_definitions::CommandReply* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>> AsyncStatus(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>>(AsyncStatusRaw(context, request, cq));
+    ::grpc::Status Status(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>> AsyncStatus(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>>(AsyncStatusRaw(context, request, cq));
     }
-    ::grpc::Status Statistics(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::censys_definitions::CommandReply* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>> AsyncStatistics(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>>(AsyncStatisticsRaw(context, request, cq));
+    ::grpc::Status Statistics(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>> AsyncStatistics(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>>(AsyncStatisticsRaw(context, request, cq));
     }
-    ::grpc::Status PruneIPv4(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::censys_definitions::CommandReply* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>> AsyncPruneIPv4(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>>(AsyncPruneIPv4Raw(context, request, cq));
+    ::grpc::Status PruneIPv4(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>> AsyncPruneIPv4(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>>(AsyncPruneIPv4Raw(context, request, cq));
     }
-    ::grpc::Status PruneDomain(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::censys_definitions::CommandReply* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>> AsyncPruneDomain(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>>(AsyncPruneDomainRaw(context, request, cq));
+    ::grpc::Status PruneDomain(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>> AsyncPruneDomain(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>>(AsyncPruneDomainRaw(context, request, cq));
     }
-    ::grpc::Status UpdateASData(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::censys_definitions::CommandReply* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>> AsyncUpdateASData(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>>(AsyncUpdateASDataRaw(context, request, cq));
+    ::grpc::Status UpdateASData(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>> AsyncUpdateASData(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>>(AsyncUpdateASDataRaw(context, request, cq));
     }
-    ::grpc::Status UpdateLocationData(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::censys_definitions::CommandReply* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>> AsyncUpdateLocationData(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>>(AsyncUpdateLocationDataRaw(context, request, cq));
+    ::grpc::Status UpdateLocationData(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>> AsyncUpdateLocationData(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>>(AsyncUpdateLocationDataRaw(context, request, cq));
     }
-    ::grpc::Status ValidateCertificates(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::censys_definitions::CommandReply* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>> AsyncValidateCertificates(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>>(AsyncValidateCertificatesRaw(context, request, cq));
+    ::grpc::Status ValidateCertificates(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>> AsyncValidateCertificates(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>>(AsyncValidateCertificatesRaw(context, request, cq));
     }
-    ::grpc::Status FixCertificateSource(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::censys_definitions::CommandReply* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>> AsyncFixCertificateSource(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>>(AsyncFixCertificateSourceRaw(context, request, cq));
+    ::grpc::Status FixCertificateSource(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>> AsyncFixCertificateSource(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>>(AsyncFixCertificateSourceRaw(context, request, cq));
     }
-    ::grpc::Status DumpIPv4ToJSON(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::censys_definitions::CommandReply* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>> AsyncDumpIPv4ToJSON(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>>(AsyncDumpIPv4ToJSONRaw(context, request, cq));
+    ::grpc::Status DumpIPv4ToJSON(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>> AsyncDumpIPv4ToJSON(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>>(AsyncDumpIPv4ToJSONRaw(context, request, cq));
     }
-    ::grpc::Status DumpDomainToJSON(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::censys_definitions::CommandReply* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>> AsyncDumpDomainToJSON(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>>(AsyncDumpDomainToJSONRaw(context, request, cq));
+    ::grpc::Status DumpDomainToJSON(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>> AsyncDumpDomainToJSON(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>>(AsyncDumpDomainToJSONRaw(context, request, cq));
     }
-    ::grpc::Status DumpCertificatesToJSON(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::censys_definitions::CommandReply* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>> AsyncDumpCertificatesToJSON(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>>(AsyncDumpCertificatesToJSONRaw(context, request, cq));
+    ::grpc::Status DumpCertificatesToJSON(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>> AsyncDumpCertificatesToJSON(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>>(AsyncDumpCertificatesToJSONRaw(context, request, cq));
     }
-    ::grpc::Status DumpKeysToJSON(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::censys_definitions::CommandReply* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>> AsyncDumpKeysToJSON(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>>(AsyncDumpKeysToJSONRaw(context, request, cq));
+    ::grpc::Status DumpKeysToJSON(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>> AsyncDumpKeysToJSON(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>>(AsyncDumpKeysToJSONRaw(context, request, cq));
     }
-    ::grpc::Status RegenerateIPv4Deltas(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::censys_definitions::CommandReply* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>> AsyncRegenerateIPv4Deltas(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>>(AsyncRegenerateIPv4DeltasRaw(context, request, cq));
+    ::grpc::Status RegenerateIPv4Deltas(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>> AsyncRegenerateIPv4Deltas(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>>(AsyncRegenerateIPv4DeltasRaw(context, request, cq));
     }
-    ::grpc::Status RegenerateDomainDeltas(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::censys_definitions::CommandReply* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>> AsyncRegenerateDomainDeltas(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>>(AsyncRegenerateDomainDeltasRaw(context, request, cq));
+    ::grpc::Status RegenerateDomainDeltas(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>> AsyncRegenerateDomainDeltas(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>>(AsyncRegenerateDomainDeltasRaw(context, request, cq));
     }
-    ::grpc::Status RegenerateCertificateDeltas(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::censys_definitions::CommandReply* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>> AsyncRegenerateCertificateDeltas(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>>(AsyncRegenerateCertificateDeltasRaw(context, request, cq));
+    ::grpc::Status RegenerateCertificateDeltas(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>> AsyncRegenerateCertificateDeltas(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>>(AsyncRegenerateCertificateDeltasRaw(context, request, cq));
     }
-    ::grpc::Status RegenerateSingleCertificateDelta(::grpc::ClientContext* context, const ::censys_definitions::AnonymousQuery& request, ::censys_definitions::CommandReply* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>> AsyncRegenerateSingleCertificateDelta(::grpc::ClientContext* context, const ::censys_definitions::AnonymousQuery& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>>(AsyncRegenerateSingleCertificateDeltaRaw(context, request, cq));
+    ::grpc::Status RegenerateSingleCertificateDelta(::grpc::ClientContext* context, const ::zsearch::AnonymousQuery& request, ::zsearch::CommandReply* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>> AsyncRegenerateSingleCertificateDelta(::grpc::ClientContext* context, const ::zsearch::AnonymousQuery& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>>(AsyncRegenerateSingleCertificateDeltaRaw(context, request, cq));
     }
-    ::grpc::Status Ping(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::censys_definitions::CommandReply* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>> AsyncPing(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>>(AsyncPingRaw(context, request, cq));
+    ::grpc::Status Ping(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>> AsyncPing(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>>(AsyncPingRaw(context, request, cq));
     }
 
    private:
     std::shared_ptr< ::grpc::ChannelInterface> channel_;
-    ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>* AsyncShutdownRaw(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>* AsyncStatusRaw(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>* AsyncStatisticsRaw(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>* AsyncPruneIPv4Raw(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>* AsyncPruneDomainRaw(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>* AsyncUpdateASDataRaw(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>* AsyncUpdateLocationDataRaw(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>* AsyncValidateCertificatesRaw(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>* AsyncFixCertificateSourceRaw(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>* AsyncDumpIPv4ToJSONRaw(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>* AsyncDumpDomainToJSONRaw(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>* AsyncDumpCertificatesToJSONRaw(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>* AsyncDumpKeysToJSONRaw(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>* AsyncRegenerateIPv4DeltasRaw(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>* AsyncRegenerateDomainDeltasRaw(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>* AsyncRegenerateCertificateDeltasRaw(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>* AsyncRegenerateSingleCertificateDeltaRaw(::grpc::ClientContext* context, const ::censys_definitions::AnonymousQuery& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>* AsyncPingRaw(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AsyncShutdownRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AsyncStatusRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AsyncStatisticsRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AsyncPruneIPv4Raw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AsyncPruneDomainRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AsyncUpdateASDataRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AsyncUpdateLocationDataRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AsyncValidateCertificatesRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AsyncFixCertificateSourceRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AsyncDumpIPv4ToJSONRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AsyncDumpDomainToJSONRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AsyncDumpCertificatesToJSONRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AsyncDumpKeysToJSONRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AsyncRegenerateIPv4DeltasRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AsyncRegenerateDomainDeltasRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AsyncRegenerateCertificateDeltasRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AsyncRegenerateSingleCertificateDeltaRaw(::grpc::ClientContext* context, const ::zsearch::AnonymousQuery& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AsyncPingRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) override;
     const ::grpc::RpcMethod rpcmethod_Shutdown_;
     const ::grpc::RpcMethod rpcmethod_Status_;
     const ::grpc::RpcMethod rpcmethod_Statistics_;
@@ -246,24 +246,24 @@ class AdminService final {
    public:
     Service();
     virtual ~Service();
-    virtual ::grpc::Status Shutdown(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response);
-    virtual ::grpc::Status Status(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response);
-    virtual ::grpc::Status Statistics(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response);
-    virtual ::grpc::Status PruneIPv4(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response);
-    virtual ::grpc::Status PruneDomain(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response);
-    virtual ::grpc::Status UpdateASData(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response);
-    virtual ::grpc::Status UpdateLocationData(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response);
-    virtual ::grpc::Status ValidateCertificates(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response);
-    virtual ::grpc::Status FixCertificateSource(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response);
-    virtual ::grpc::Status DumpIPv4ToJSON(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response);
-    virtual ::grpc::Status DumpDomainToJSON(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response);
-    virtual ::grpc::Status DumpCertificatesToJSON(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response);
-    virtual ::grpc::Status DumpKeysToJSON(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response);
-    virtual ::grpc::Status RegenerateIPv4Deltas(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response);
-    virtual ::grpc::Status RegenerateDomainDeltas(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response);
-    virtual ::grpc::Status RegenerateCertificateDeltas(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response);
-    virtual ::grpc::Status RegenerateSingleCertificateDelta(::grpc::ServerContext* context, const ::censys_definitions::AnonymousQuery* request, ::censys_definitions::CommandReply* response);
-    virtual ::grpc::Status Ping(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response);
+    virtual ::grpc::Status Shutdown(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response);
+    virtual ::grpc::Status Status(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response);
+    virtual ::grpc::Status Statistics(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response);
+    virtual ::grpc::Status PruneIPv4(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response);
+    virtual ::grpc::Status PruneDomain(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response);
+    virtual ::grpc::Status UpdateASData(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response);
+    virtual ::grpc::Status UpdateLocationData(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response);
+    virtual ::grpc::Status ValidateCertificates(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response);
+    virtual ::grpc::Status FixCertificateSource(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response);
+    virtual ::grpc::Status DumpIPv4ToJSON(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response);
+    virtual ::grpc::Status DumpDomainToJSON(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response);
+    virtual ::grpc::Status DumpCertificatesToJSON(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response);
+    virtual ::grpc::Status DumpKeysToJSON(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response);
+    virtual ::grpc::Status RegenerateIPv4Deltas(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response);
+    virtual ::grpc::Status RegenerateDomainDeltas(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response);
+    virtual ::grpc::Status RegenerateCertificateDeltas(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response);
+    virtual ::grpc::Status RegenerateSingleCertificateDelta(::grpc::ServerContext* context, const ::zsearch::AnonymousQuery* request, ::zsearch::CommandReply* response);
+    virtual ::grpc::Status Ping(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response);
   };
   template <class BaseClass>
   class WithAsyncMethod_Shutdown : public BaseClass {
@@ -277,11 +277,11 @@ class AdminService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Shutdown(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) final override {
+    ::grpc::Status Shutdown(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestShutdown(::grpc::ServerContext* context, ::censys_definitions::Command* request, ::grpc::ServerAsyncResponseWriter< ::censys_definitions::CommandReply>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestShutdown(::grpc::ServerContext* context, ::zsearch::Command* request, ::grpc::ServerAsyncResponseWriter< ::zsearch::CommandReply>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(0, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -297,11 +297,11 @@ class AdminService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Status(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) final override {
+    ::grpc::Status Status(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestStatus(::grpc::ServerContext* context, ::censys_definitions::Command* request, ::grpc::ServerAsyncResponseWriter< ::censys_definitions::CommandReply>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestStatus(::grpc::ServerContext* context, ::zsearch::Command* request, ::grpc::ServerAsyncResponseWriter< ::zsearch::CommandReply>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(1, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -317,11 +317,11 @@ class AdminService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Statistics(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) final override {
+    ::grpc::Status Statistics(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestStatistics(::grpc::ServerContext* context, ::censys_definitions::Command* request, ::grpc::ServerAsyncResponseWriter< ::censys_definitions::CommandReply>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestStatistics(::grpc::ServerContext* context, ::zsearch::Command* request, ::grpc::ServerAsyncResponseWriter< ::zsearch::CommandReply>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(2, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -337,11 +337,11 @@ class AdminService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status PruneIPv4(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) final override {
+    ::grpc::Status PruneIPv4(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestPruneIPv4(::grpc::ServerContext* context, ::censys_definitions::Command* request, ::grpc::ServerAsyncResponseWriter< ::censys_definitions::CommandReply>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestPruneIPv4(::grpc::ServerContext* context, ::zsearch::Command* request, ::grpc::ServerAsyncResponseWriter< ::zsearch::CommandReply>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(3, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -357,11 +357,11 @@ class AdminService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status PruneDomain(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) final override {
+    ::grpc::Status PruneDomain(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestPruneDomain(::grpc::ServerContext* context, ::censys_definitions::Command* request, ::grpc::ServerAsyncResponseWriter< ::censys_definitions::CommandReply>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestPruneDomain(::grpc::ServerContext* context, ::zsearch::Command* request, ::grpc::ServerAsyncResponseWriter< ::zsearch::CommandReply>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(4, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -377,11 +377,11 @@ class AdminService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status UpdateASData(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) final override {
+    ::grpc::Status UpdateASData(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestUpdateASData(::grpc::ServerContext* context, ::censys_definitions::Command* request, ::grpc::ServerAsyncResponseWriter< ::censys_definitions::CommandReply>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestUpdateASData(::grpc::ServerContext* context, ::zsearch::Command* request, ::grpc::ServerAsyncResponseWriter< ::zsearch::CommandReply>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(5, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -397,11 +397,11 @@ class AdminService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status UpdateLocationData(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) final override {
+    ::grpc::Status UpdateLocationData(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestUpdateLocationData(::grpc::ServerContext* context, ::censys_definitions::Command* request, ::grpc::ServerAsyncResponseWriter< ::censys_definitions::CommandReply>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestUpdateLocationData(::grpc::ServerContext* context, ::zsearch::Command* request, ::grpc::ServerAsyncResponseWriter< ::zsearch::CommandReply>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(6, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -417,11 +417,11 @@ class AdminService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status ValidateCertificates(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) final override {
+    ::grpc::Status ValidateCertificates(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestValidateCertificates(::grpc::ServerContext* context, ::censys_definitions::Command* request, ::grpc::ServerAsyncResponseWriter< ::censys_definitions::CommandReply>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestValidateCertificates(::grpc::ServerContext* context, ::zsearch::Command* request, ::grpc::ServerAsyncResponseWriter< ::zsearch::CommandReply>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(7, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -437,11 +437,11 @@ class AdminService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status FixCertificateSource(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) final override {
+    ::grpc::Status FixCertificateSource(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestFixCertificateSource(::grpc::ServerContext* context, ::censys_definitions::Command* request, ::grpc::ServerAsyncResponseWriter< ::censys_definitions::CommandReply>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestFixCertificateSource(::grpc::ServerContext* context, ::zsearch::Command* request, ::grpc::ServerAsyncResponseWriter< ::zsearch::CommandReply>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(8, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -457,11 +457,11 @@ class AdminService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status DumpIPv4ToJSON(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) final override {
+    ::grpc::Status DumpIPv4ToJSON(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestDumpIPv4ToJSON(::grpc::ServerContext* context, ::censys_definitions::Command* request, ::grpc::ServerAsyncResponseWriter< ::censys_definitions::CommandReply>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestDumpIPv4ToJSON(::grpc::ServerContext* context, ::zsearch::Command* request, ::grpc::ServerAsyncResponseWriter< ::zsearch::CommandReply>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(9, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -477,11 +477,11 @@ class AdminService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status DumpDomainToJSON(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) final override {
+    ::grpc::Status DumpDomainToJSON(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestDumpDomainToJSON(::grpc::ServerContext* context, ::censys_definitions::Command* request, ::grpc::ServerAsyncResponseWriter< ::censys_definitions::CommandReply>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestDumpDomainToJSON(::grpc::ServerContext* context, ::zsearch::Command* request, ::grpc::ServerAsyncResponseWriter< ::zsearch::CommandReply>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(10, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -497,11 +497,11 @@ class AdminService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status DumpCertificatesToJSON(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) final override {
+    ::grpc::Status DumpCertificatesToJSON(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestDumpCertificatesToJSON(::grpc::ServerContext* context, ::censys_definitions::Command* request, ::grpc::ServerAsyncResponseWriter< ::censys_definitions::CommandReply>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestDumpCertificatesToJSON(::grpc::ServerContext* context, ::zsearch::Command* request, ::grpc::ServerAsyncResponseWriter< ::zsearch::CommandReply>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(11, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -517,11 +517,11 @@ class AdminService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status DumpKeysToJSON(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) final override {
+    ::grpc::Status DumpKeysToJSON(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestDumpKeysToJSON(::grpc::ServerContext* context, ::censys_definitions::Command* request, ::grpc::ServerAsyncResponseWriter< ::censys_definitions::CommandReply>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestDumpKeysToJSON(::grpc::ServerContext* context, ::zsearch::Command* request, ::grpc::ServerAsyncResponseWriter< ::zsearch::CommandReply>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(12, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -537,11 +537,11 @@ class AdminService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status RegenerateIPv4Deltas(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) final override {
+    ::grpc::Status RegenerateIPv4Deltas(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestRegenerateIPv4Deltas(::grpc::ServerContext* context, ::censys_definitions::Command* request, ::grpc::ServerAsyncResponseWriter< ::censys_definitions::CommandReply>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestRegenerateIPv4Deltas(::grpc::ServerContext* context, ::zsearch::Command* request, ::grpc::ServerAsyncResponseWriter< ::zsearch::CommandReply>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(13, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -557,11 +557,11 @@ class AdminService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status RegenerateDomainDeltas(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) final override {
+    ::grpc::Status RegenerateDomainDeltas(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestRegenerateDomainDeltas(::grpc::ServerContext* context, ::censys_definitions::Command* request, ::grpc::ServerAsyncResponseWriter< ::censys_definitions::CommandReply>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestRegenerateDomainDeltas(::grpc::ServerContext* context, ::zsearch::Command* request, ::grpc::ServerAsyncResponseWriter< ::zsearch::CommandReply>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(14, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -577,11 +577,11 @@ class AdminService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status RegenerateCertificateDeltas(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) final override {
+    ::grpc::Status RegenerateCertificateDeltas(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestRegenerateCertificateDeltas(::grpc::ServerContext* context, ::censys_definitions::Command* request, ::grpc::ServerAsyncResponseWriter< ::censys_definitions::CommandReply>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestRegenerateCertificateDeltas(::grpc::ServerContext* context, ::zsearch::Command* request, ::grpc::ServerAsyncResponseWriter< ::zsearch::CommandReply>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(15, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -597,11 +597,11 @@ class AdminService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status RegenerateSingleCertificateDelta(::grpc::ServerContext* context, const ::censys_definitions::AnonymousQuery* request, ::censys_definitions::CommandReply* response) final override {
+    ::grpc::Status RegenerateSingleCertificateDelta(::grpc::ServerContext* context, const ::zsearch::AnonymousQuery* request, ::zsearch::CommandReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestRegenerateSingleCertificateDelta(::grpc::ServerContext* context, ::censys_definitions::AnonymousQuery* request, ::grpc::ServerAsyncResponseWriter< ::censys_definitions::CommandReply>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestRegenerateSingleCertificateDelta(::grpc::ServerContext* context, ::zsearch::AnonymousQuery* request, ::grpc::ServerAsyncResponseWriter< ::zsearch::CommandReply>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(16, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -617,11 +617,11 @@ class AdminService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Ping(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) final override {
+    ::grpc::Status Ping(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestPing(::grpc::ServerContext* context, ::censys_definitions::Command* request, ::grpc::ServerAsyncResponseWriter< ::censys_definitions::CommandReply>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestPing(::grpc::ServerContext* context, ::zsearch::Command* request, ::grpc::ServerAsyncResponseWriter< ::zsearch::CommandReply>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(17, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -638,7 +638,7 @@ class AdminService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Shutdown(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) final override {
+    ::grpc::Status Shutdown(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -655,7 +655,7 @@ class AdminService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Status(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) final override {
+    ::grpc::Status Status(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -672,7 +672,7 @@ class AdminService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Statistics(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) final override {
+    ::grpc::Status Statistics(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -689,7 +689,7 @@ class AdminService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status PruneIPv4(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) final override {
+    ::grpc::Status PruneIPv4(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -706,7 +706,7 @@ class AdminService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status PruneDomain(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) final override {
+    ::grpc::Status PruneDomain(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -723,7 +723,7 @@ class AdminService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status UpdateASData(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) final override {
+    ::grpc::Status UpdateASData(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -740,7 +740,7 @@ class AdminService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status UpdateLocationData(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) final override {
+    ::grpc::Status UpdateLocationData(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -757,7 +757,7 @@ class AdminService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status ValidateCertificates(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) final override {
+    ::grpc::Status ValidateCertificates(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -774,7 +774,7 @@ class AdminService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status FixCertificateSource(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) final override {
+    ::grpc::Status FixCertificateSource(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -791,7 +791,7 @@ class AdminService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status DumpIPv4ToJSON(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) final override {
+    ::grpc::Status DumpIPv4ToJSON(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -808,7 +808,7 @@ class AdminService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status DumpDomainToJSON(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) final override {
+    ::grpc::Status DumpDomainToJSON(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -825,7 +825,7 @@ class AdminService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status DumpCertificatesToJSON(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) final override {
+    ::grpc::Status DumpCertificatesToJSON(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -842,7 +842,7 @@ class AdminService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status DumpKeysToJSON(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) final override {
+    ::grpc::Status DumpKeysToJSON(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -859,7 +859,7 @@ class AdminService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status RegenerateIPv4Deltas(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) final override {
+    ::grpc::Status RegenerateIPv4Deltas(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -876,7 +876,7 @@ class AdminService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status RegenerateDomainDeltas(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) final override {
+    ::grpc::Status RegenerateDomainDeltas(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -893,7 +893,7 @@ class AdminService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status RegenerateCertificateDeltas(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) final override {
+    ::grpc::Status RegenerateCertificateDeltas(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -910,7 +910,7 @@ class AdminService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status RegenerateSingleCertificateDelta(::grpc::ServerContext* context, const ::censys_definitions::AnonymousQuery* request, ::censys_definitions::CommandReply* response) final override {
+    ::grpc::Status RegenerateSingleCertificateDelta(::grpc::ServerContext* context, const ::zsearch::AnonymousQuery* request, ::zsearch::CommandReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -927,7 +927,7 @@ class AdminService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Ping(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) final override {
+    ::grpc::Status Ping(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -939,18 +939,18 @@ class AdminService final {
    public:
     WithStreamedUnaryMethod_Shutdown() {
       ::grpc::Service::MarkMethodStreamed(0,
-        new ::grpc::StreamedUnaryHandler< ::censys_definitions::Command, ::censys_definitions::CommandReply>(std::bind(&WithStreamedUnaryMethod_Shutdown<BaseClass>::StreamedShutdown, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::StreamedUnaryHandler< ::zsearch::Command, ::zsearch::CommandReply>(std::bind(&WithStreamedUnaryMethod_Shutdown<BaseClass>::StreamedShutdown, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_Shutdown() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status Shutdown(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) final override {
+    ::grpc::Status Shutdown(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedShutdown(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::censys_definitions::Command,::censys_definitions::CommandReply>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedShutdown(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::zsearch::Command,::zsearch::CommandReply>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_Status : public BaseClass {
@@ -959,18 +959,18 @@ class AdminService final {
    public:
     WithStreamedUnaryMethod_Status() {
       ::grpc::Service::MarkMethodStreamed(1,
-        new ::grpc::StreamedUnaryHandler< ::censys_definitions::Command, ::censys_definitions::CommandReply>(std::bind(&WithStreamedUnaryMethod_Status<BaseClass>::StreamedStatus, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::StreamedUnaryHandler< ::zsearch::Command, ::zsearch::CommandReply>(std::bind(&WithStreamedUnaryMethod_Status<BaseClass>::StreamedStatus, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_Status() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status Status(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) final override {
+    ::grpc::Status Status(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedStatus(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::censys_definitions::Command,::censys_definitions::CommandReply>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedStatus(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::zsearch::Command,::zsearch::CommandReply>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_Statistics : public BaseClass {
@@ -979,18 +979,18 @@ class AdminService final {
    public:
     WithStreamedUnaryMethod_Statistics() {
       ::grpc::Service::MarkMethodStreamed(2,
-        new ::grpc::StreamedUnaryHandler< ::censys_definitions::Command, ::censys_definitions::CommandReply>(std::bind(&WithStreamedUnaryMethod_Statistics<BaseClass>::StreamedStatistics, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::StreamedUnaryHandler< ::zsearch::Command, ::zsearch::CommandReply>(std::bind(&WithStreamedUnaryMethod_Statistics<BaseClass>::StreamedStatistics, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_Statistics() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status Statistics(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) final override {
+    ::grpc::Status Statistics(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedStatistics(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::censys_definitions::Command,::censys_definitions::CommandReply>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedStatistics(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::zsearch::Command,::zsearch::CommandReply>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_PruneIPv4 : public BaseClass {
@@ -999,18 +999,18 @@ class AdminService final {
    public:
     WithStreamedUnaryMethod_PruneIPv4() {
       ::grpc::Service::MarkMethodStreamed(3,
-        new ::grpc::StreamedUnaryHandler< ::censys_definitions::Command, ::censys_definitions::CommandReply>(std::bind(&WithStreamedUnaryMethod_PruneIPv4<BaseClass>::StreamedPruneIPv4, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::StreamedUnaryHandler< ::zsearch::Command, ::zsearch::CommandReply>(std::bind(&WithStreamedUnaryMethod_PruneIPv4<BaseClass>::StreamedPruneIPv4, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_PruneIPv4() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status PruneIPv4(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) final override {
+    ::grpc::Status PruneIPv4(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedPruneIPv4(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::censys_definitions::Command,::censys_definitions::CommandReply>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedPruneIPv4(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::zsearch::Command,::zsearch::CommandReply>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_PruneDomain : public BaseClass {
@@ -1019,18 +1019,18 @@ class AdminService final {
    public:
     WithStreamedUnaryMethod_PruneDomain() {
       ::grpc::Service::MarkMethodStreamed(4,
-        new ::grpc::StreamedUnaryHandler< ::censys_definitions::Command, ::censys_definitions::CommandReply>(std::bind(&WithStreamedUnaryMethod_PruneDomain<BaseClass>::StreamedPruneDomain, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::StreamedUnaryHandler< ::zsearch::Command, ::zsearch::CommandReply>(std::bind(&WithStreamedUnaryMethod_PruneDomain<BaseClass>::StreamedPruneDomain, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_PruneDomain() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status PruneDomain(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) final override {
+    ::grpc::Status PruneDomain(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedPruneDomain(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::censys_definitions::Command,::censys_definitions::CommandReply>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedPruneDomain(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::zsearch::Command,::zsearch::CommandReply>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_UpdateASData : public BaseClass {
@@ -1039,18 +1039,18 @@ class AdminService final {
    public:
     WithStreamedUnaryMethod_UpdateASData() {
       ::grpc::Service::MarkMethodStreamed(5,
-        new ::grpc::StreamedUnaryHandler< ::censys_definitions::Command, ::censys_definitions::CommandReply>(std::bind(&WithStreamedUnaryMethod_UpdateASData<BaseClass>::StreamedUpdateASData, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::StreamedUnaryHandler< ::zsearch::Command, ::zsearch::CommandReply>(std::bind(&WithStreamedUnaryMethod_UpdateASData<BaseClass>::StreamedUpdateASData, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_UpdateASData() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status UpdateASData(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) final override {
+    ::grpc::Status UpdateASData(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedUpdateASData(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::censys_definitions::Command,::censys_definitions::CommandReply>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedUpdateASData(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::zsearch::Command,::zsearch::CommandReply>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_UpdateLocationData : public BaseClass {
@@ -1059,18 +1059,18 @@ class AdminService final {
    public:
     WithStreamedUnaryMethod_UpdateLocationData() {
       ::grpc::Service::MarkMethodStreamed(6,
-        new ::grpc::StreamedUnaryHandler< ::censys_definitions::Command, ::censys_definitions::CommandReply>(std::bind(&WithStreamedUnaryMethod_UpdateLocationData<BaseClass>::StreamedUpdateLocationData, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::StreamedUnaryHandler< ::zsearch::Command, ::zsearch::CommandReply>(std::bind(&WithStreamedUnaryMethod_UpdateLocationData<BaseClass>::StreamedUpdateLocationData, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_UpdateLocationData() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status UpdateLocationData(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) final override {
+    ::grpc::Status UpdateLocationData(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedUpdateLocationData(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::censys_definitions::Command,::censys_definitions::CommandReply>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedUpdateLocationData(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::zsearch::Command,::zsearch::CommandReply>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_ValidateCertificates : public BaseClass {
@@ -1079,18 +1079,18 @@ class AdminService final {
    public:
     WithStreamedUnaryMethod_ValidateCertificates() {
       ::grpc::Service::MarkMethodStreamed(7,
-        new ::grpc::StreamedUnaryHandler< ::censys_definitions::Command, ::censys_definitions::CommandReply>(std::bind(&WithStreamedUnaryMethod_ValidateCertificates<BaseClass>::StreamedValidateCertificates, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::StreamedUnaryHandler< ::zsearch::Command, ::zsearch::CommandReply>(std::bind(&WithStreamedUnaryMethod_ValidateCertificates<BaseClass>::StreamedValidateCertificates, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_ValidateCertificates() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status ValidateCertificates(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) final override {
+    ::grpc::Status ValidateCertificates(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedValidateCertificates(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::censys_definitions::Command,::censys_definitions::CommandReply>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedValidateCertificates(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::zsearch::Command,::zsearch::CommandReply>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_FixCertificateSource : public BaseClass {
@@ -1099,18 +1099,18 @@ class AdminService final {
    public:
     WithStreamedUnaryMethod_FixCertificateSource() {
       ::grpc::Service::MarkMethodStreamed(8,
-        new ::grpc::StreamedUnaryHandler< ::censys_definitions::Command, ::censys_definitions::CommandReply>(std::bind(&WithStreamedUnaryMethod_FixCertificateSource<BaseClass>::StreamedFixCertificateSource, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::StreamedUnaryHandler< ::zsearch::Command, ::zsearch::CommandReply>(std::bind(&WithStreamedUnaryMethod_FixCertificateSource<BaseClass>::StreamedFixCertificateSource, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_FixCertificateSource() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status FixCertificateSource(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) final override {
+    ::grpc::Status FixCertificateSource(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedFixCertificateSource(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::censys_definitions::Command,::censys_definitions::CommandReply>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedFixCertificateSource(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::zsearch::Command,::zsearch::CommandReply>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_DumpIPv4ToJSON : public BaseClass {
@@ -1119,18 +1119,18 @@ class AdminService final {
    public:
     WithStreamedUnaryMethod_DumpIPv4ToJSON() {
       ::grpc::Service::MarkMethodStreamed(9,
-        new ::grpc::StreamedUnaryHandler< ::censys_definitions::Command, ::censys_definitions::CommandReply>(std::bind(&WithStreamedUnaryMethod_DumpIPv4ToJSON<BaseClass>::StreamedDumpIPv4ToJSON, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::StreamedUnaryHandler< ::zsearch::Command, ::zsearch::CommandReply>(std::bind(&WithStreamedUnaryMethod_DumpIPv4ToJSON<BaseClass>::StreamedDumpIPv4ToJSON, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_DumpIPv4ToJSON() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status DumpIPv4ToJSON(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) final override {
+    ::grpc::Status DumpIPv4ToJSON(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedDumpIPv4ToJSON(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::censys_definitions::Command,::censys_definitions::CommandReply>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedDumpIPv4ToJSON(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::zsearch::Command,::zsearch::CommandReply>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_DumpDomainToJSON : public BaseClass {
@@ -1139,18 +1139,18 @@ class AdminService final {
    public:
     WithStreamedUnaryMethod_DumpDomainToJSON() {
       ::grpc::Service::MarkMethodStreamed(10,
-        new ::grpc::StreamedUnaryHandler< ::censys_definitions::Command, ::censys_definitions::CommandReply>(std::bind(&WithStreamedUnaryMethod_DumpDomainToJSON<BaseClass>::StreamedDumpDomainToJSON, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::StreamedUnaryHandler< ::zsearch::Command, ::zsearch::CommandReply>(std::bind(&WithStreamedUnaryMethod_DumpDomainToJSON<BaseClass>::StreamedDumpDomainToJSON, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_DumpDomainToJSON() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status DumpDomainToJSON(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) final override {
+    ::grpc::Status DumpDomainToJSON(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedDumpDomainToJSON(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::censys_definitions::Command,::censys_definitions::CommandReply>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedDumpDomainToJSON(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::zsearch::Command,::zsearch::CommandReply>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_DumpCertificatesToJSON : public BaseClass {
@@ -1159,18 +1159,18 @@ class AdminService final {
    public:
     WithStreamedUnaryMethod_DumpCertificatesToJSON() {
       ::grpc::Service::MarkMethodStreamed(11,
-        new ::grpc::StreamedUnaryHandler< ::censys_definitions::Command, ::censys_definitions::CommandReply>(std::bind(&WithStreamedUnaryMethod_DumpCertificatesToJSON<BaseClass>::StreamedDumpCertificatesToJSON, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::StreamedUnaryHandler< ::zsearch::Command, ::zsearch::CommandReply>(std::bind(&WithStreamedUnaryMethod_DumpCertificatesToJSON<BaseClass>::StreamedDumpCertificatesToJSON, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_DumpCertificatesToJSON() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status DumpCertificatesToJSON(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) final override {
+    ::grpc::Status DumpCertificatesToJSON(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedDumpCertificatesToJSON(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::censys_definitions::Command,::censys_definitions::CommandReply>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedDumpCertificatesToJSON(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::zsearch::Command,::zsearch::CommandReply>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_DumpKeysToJSON : public BaseClass {
@@ -1179,18 +1179,18 @@ class AdminService final {
    public:
     WithStreamedUnaryMethod_DumpKeysToJSON() {
       ::grpc::Service::MarkMethodStreamed(12,
-        new ::grpc::StreamedUnaryHandler< ::censys_definitions::Command, ::censys_definitions::CommandReply>(std::bind(&WithStreamedUnaryMethod_DumpKeysToJSON<BaseClass>::StreamedDumpKeysToJSON, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::StreamedUnaryHandler< ::zsearch::Command, ::zsearch::CommandReply>(std::bind(&WithStreamedUnaryMethod_DumpKeysToJSON<BaseClass>::StreamedDumpKeysToJSON, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_DumpKeysToJSON() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status DumpKeysToJSON(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) final override {
+    ::grpc::Status DumpKeysToJSON(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedDumpKeysToJSON(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::censys_definitions::Command,::censys_definitions::CommandReply>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedDumpKeysToJSON(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::zsearch::Command,::zsearch::CommandReply>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_RegenerateIPv4Deltas : public BaseClass {
@@ -1199,18 +1199,18 @@ class AdminService final {
    public:
     WithStreamedUnaryMethod_RegenerateIPv4Deltas() {
       ::grpc::Service::MarkMethodStreamed(13,
-        new ::grpc::StreamedUnaryHandler< ::censys_definitions::Command, ::censys_definitions::CommandReply>(std::bind(&WithStreamedUnaryMethod_RegenerateIPv4Deltas<BaseClass>::StreamedRegenerateIPv4Deltas, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::StreamedUnaryHandler< ::zsearch::Command, ::zsearch::CommandReply>(std::bind(&WithStreamedUnaryMethod_RegenerateIPv4Deltas<BaseClass>::StreamedRegenerateIPv4Deltas, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_RegenerateIPv4Deltas() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status RegenerateIPv4Deltas(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) final override {
+    ::grpc::Status RegenerateIPv4Deltas(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedRegenerateIPv4Deltas(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::censys_definitions::Command,::censys_definitions::CommandReply>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedRegenerateIPv4Deltas(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::zsearch::Command,::zsearch::CommandReply>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_RegenerateDomainDeltas : public BaseClass {
@@ -1219,18 +1219,18 @@ class AdminService final {
    public:
     WithStreamedUnaryMethod_RegenerateDomainDeltas() {
       ::grpc::Service::MarkMethodStreamed(14,
-        new ::grpc::StreamedUnaryHandler< ::censys_definitions::Command, ::censys_definitions::CommandReply>(std::bind(&WithStreamedUnaryMethod_RegenerateDomainDeltas<BaseClass>::StreamedRegenerateDomainDeltas, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::StreamedUnaryHandler< ::zsearch::Command, ::zsearch::CommandReply>(std::bind(&WithStreamedUnaryMethod_RegenerateDomainDeltas<BaseClass>::StreamedRegenerateDomainDeltas, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_RegenerateDomainDeltas() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status RegenerateDomainDeltas(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) final override {
+    ::grpc::Status RegenerateDomainDeltas(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedRegenerateDomainDeltas(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::censys_definitions::Command,::censys_definitions::CommandReply>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedRegenerateDomainDeltas(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::zsearch::Command,::zsearch::CommandReply>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_RegenerateCertificateDeltas : public BaseClass {
@@ -1239,18 +1239,18 @@ class AdminService final {
    public:
     WithStreamedUnaryMethod_RegenerateCertificateDeltas() {
       ::grpc::Service::MarkMethodStreamed(15,
-        new ::grpc::StreamedUnaryHandler< ::censys_definitions::Command, ::censys_definitions::CommandReply>(std::bind(&WithStreamedUnaryMethod_RegenerateCertificateDeltas<BaseClass>::StreamedRegenerateCertificateDeltas, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::StreamedUnaryHandler< ::zsearch::Command, ::zsearch::CommandReply>(std::bind(&WithStreamedUnaryMethod_RegenerateCertificateDeltas<BaseClass>::StreamedRegenerateCertificateDeltas, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_RegenerateCertificateDeltas() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status RegenerateCertificateDeltas(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) final override {
+    ::grpc::Status RegenerateCertificateDeltas(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedRegenerateCertificateDeltas(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::censys_definitions::Command,::censys_definitions::CommandReply>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedRegenerateCertificateDeltas(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::zsearch::Command,::zsearch::CommandReply>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_RegenerateSingleCertificateDelta : public BaseClass {
@@ -1259,18 +1259,18 @@ class AdminService final {
    public:
     WithStreamedUnaryMethod_RegenerateSingleCertificateDelta() {
       ::grpc::Service::MarkMethodStreamed(16,
-        new ::grpc::StreamedUnaryHandler< ::censys_definitions::AnonymousQuery, ::censys_definitions::CommandReply>(std::bind(&WithStreamedUnaryMethod_RegenerateSingleCertificateDelta<BaseClass>::StreamedRegenerateSingleCertificateDelta, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::StreamedUnaryHandler< ::zsearch::AnonymousQuery, ::zsearch::CommandReply>(std::bind(&WithStreamedUnaryMethod_RegenerateSingleCertificateDelta<BaseClass>::StreamedRegenerateSingleCertificateDelta, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_RegenerateSingleCertificateDelta() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status RegenerateSingleCertificateDelta(::grpc::ServerContext* context, const ::censys_definitions::AnonymousQuery* request, ::censys_definitions::CommandReply* response) final override {
+    ::grpc::Status RegenerateSingleCertificateDelta(::grpc::ServerContext* context, const ::zsearch::AnonymousQuery* request, ::zsearch::CommandReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedRegenerateSingleCertificateDelta(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::censys_definitions::AnonymousQuery,::censys_definitions::CommandReply>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedRegenerateSingleCertificateDelta(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::zsearch::AnonymousQuery,::zsearch::CommandReply>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_Ping : public BaseClass {
@@ -1279,18 +1279,18 @@ class AdminService final {
    public:
     WithStreamedUnaryMethod_Ping() {
       ::grpc::Service::MarkMethodStreamed(17,
-        new ::grpc::StreamedUnaryHandler< ::censys_definitions::Command, ::censys_definitions::CommandReply>(std::bind(&WithStreamedUnaryMethod_Ping<BaseClass>::StreamedPing, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::StreamedUnaryHandler< ::zsearch::Command, ::zsearch::CommandReply>(std::bind(&WithStreamedUnaryMethod_Ping<BaseClass>::StreamedPing, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_Ping() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status Ping(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) final override {
+    ::grpc::Status Ping(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedPing(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::censys_definitions::Command,::censys_definitions::CommandReply>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedPing(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::zsearch::Command,::zsearch::CommandReply>* server_unary_streamer) = 0;
   };
   typedef WithStreamedUnaryMethod_Shutdown<WithStreamedUnaryMethod_Status<WithStreamedUnaryMethod_Statistics<WithStreamedUnaryMethod_PruneIPv4<WithStreamedUnaryMethod_PruneDomain<WithStreamedUnaryMethod_UpdateASData<WithStreamedUnaryMethod_UpdateLocationData<WithStreamedUnaryMethod_ValidateCertificates<WithStreamedUnaryMethod_FixCertificateSource<WithStreamedUnaryMethod_DumpIPv4ToJSON<WithStreamedUnaryMethod_DumpDomainToJSON<WithStreamedUnaryMethod_DumpCertificatesToJSON<WithStreamedUnaryMethod_DumpKeysToJSON<WithStreamedUnaryMethod_RegenerateIPv4Deltas<WithStreamedUnaryMethod_RegenerateDomainDeltas<WithStreamedUnaryMethod_RegenerateCertificateDeltas<WithStreamedUnaryMethod_RegenerateSingleCertificateDelta<WithStreamedUnaryMethod_Ping<Service > > > > > > > > > > > > > > > > > > StreamedUnaryService;
   typedef Service SplitStreamedService;
@@ -1302,224 +1302,224 @@ class QueryService final {
   class StubInterface {
    public:
     virtual ~StubInterface() {}
-    virtual ::grpc::Status GetHostIPv4Record(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::censys_definitions::HostQueryResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::HostQueryResponse>> AsyncGetHostIPv4Record(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::HostQueryResponse>>(AsyncGetHostIPv4RecordRaw(context, request, cq));
+    virtual ::grpc::Status GetHostIPv4Record(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::zsearch::HostQueryResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::HostQueryResponse>> AsyncGetHostIPv4Record(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::HostQueryResponse>>(AsyncGetHostIPv4RecordRaw(context, request, cq));
     }
-    virtual ::grpc::Status PutHostIPv4Record(::grpc::ClientContext* context, const ::censys_definitions::Record& request, ::censys_definitions::Delta* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::Delta>> AsyncPutHostIPv4Record(::grpc::ClientContext* context, const ::censys_definitions::Record& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::Delta>>(AsyncPutHostIPv4RecordRaw(context, request, cq));
+    virtual ::grpc::Status PutHostIPv4Record(::grpc::ClientContext* context, const ::zsearch::Record& request, ::zsearch::Delta* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::Delta>> AsyncPutHostIPv4Record(::grpc::ClientContext* context, const ::zsearch::Record& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::Delta>>(AsyncPutHostIPv4RecordRaw(context, request, cq));
     }
-    virtual ::grpc::Status DelHostIPv4Record(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::censys_definitions::Delta* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::Delta>> AsyncDelHostIPv4Record(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::Delta>>(AsyncDelHostIPv4RecordRaw(context, request, cq));
+    virtual ::grpc::Status DelHostIPv4Record(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::zsearch::Delta* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::Delta>> AsyncDelHostIPv4Record(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::Delta>>(AsyncDelHostIPv4RecordRaw(context, request, cq));
     }
-    virtual ::grpc::Status GetAllIPv4Records(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::censys_definitions::HostQueryResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::HostQueryResponse>> AsyncGetAllIPv4Records(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::HostQueryResponse>>(AsyncGetAllIPv4RecordsRaw(context, request, cq));
+    virtual ::grpc::Status GetAllIPv4Records(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::zsearch::HostQueryResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::HostQueryResponse>> AsyncGetAllIPv4Records(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::HostQueryResponse>>(AsyncGetAllIPv4RecordsRaw(context, request, cq));
     }
-    virtual ::grpc::Status GetHostIPv4Delta(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::censys_definitions::Delta* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::Delta>> AsyncGetHostIPv4Delta(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::Delta>>(AsyncGetHostIPv4DeltaRaw(context, request, cq));
+    virtual ::grpc::Status GetHostIPv4Delta(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::zsearch::Delta* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::Delta>> AsyncGetHostIPv4Delta(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::Delta>>(AsyncGetHostIPv4DeltaRaw(context, request, cq));
     }
-    virtual ::grpc::Status GetHostDomainRecord(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::censys_definitions::HostQueryResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::HostQueryResponse>> AsyncGetHostDomainRecord(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::HostQueryResponse>>(AsyncGetHostDomainRecordRaw(context, request, cq));
+    virtual ::grpc::Status GetHostDomainRecord(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::zsearch::HostQueryResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::HostQueryResponse>> AsyncGetHostDomainRecord(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::HostQueryResponse>>(AsyncGetHostDomainRecordRaw(context, request, cq));
     }
-    virtual ::grpc::Status PutHostDomainRecord(::grpc::ClientContext* context, const ::censys_definitions::Record& request, ::censys_definitions::Delta* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::Delta>> AsyncPutHostDomainRecord(::grpc::ClientContext* context, const ::censys_definitions::Record& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::Delta>>(AsyncPutHostDomainRecordRaw(context, request, cq));
+    virtual ::grpc::Status PutHostDomainRecord(::grpc::ClientContext* context, const ::zsearch::Record& request, ::zsearch::Delta* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::Delta>> AsyncPutHostDomainRecord(::grpc::ClientContext* context, const ::zsearch::Record& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::Delta>>(AsyncPutHostDomainRecordRaw(context, request, cq));
     }
-    virtual ::grpc::Status DelHostDomainRecord(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::censys_definitions::Delta* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::Delta>> AsyncDelHostDomainRecord(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::Delta>>(AsyncDelHostDomainRecordRaw(context, request, cq));
+    virtual ::grpc::Status DelHostDomainRecord(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::zsearch::Delta* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::Delta>> AsyncDelHostDomainRecord(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::Delta>>(AsyncDelHostDomainRecordRaw(context, request, cq));
     }
-    virtual ::grpc::Status GetAllDomainRecords(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::censys_definitions::HostQueryResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::HostQueryResponse>> AsyncGetAllDomainRecords(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::HostQueryResponse>>(AsyncGetAllDomainRecordsRaw(context, request, cq));
+    virtual ::grpc::Status GetAllDomainRecords(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::zsearch::HostQueryResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::HostQueryResponse>> AsyncGetAllDomainRecords(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::HostQueryResponse>>(AsyncGetAllDomainRecordsRaw(context, request, cq));
     }
-    virtual ::grpc::Status GetHostDomainDelta(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::censys_definitions::Delta* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::Delta>> AsyncGetHostDomainDelta(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::Delta>>(AsyncGetHostDomainDeltaRaw(context, request, cq));
+    virtual ::grpc::Status GetHostDomainDelta(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::zsearch::Delta* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::Delta>> AsyncGetHostDomainDelta(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::Delta>>(AsyncGetHostDomainDeltaRaw(context, request, cq));
     }
-    virtual ::grpc::Status GetCertificate(::grpc::ClientContext* context, const ::censys_definitions::AnonymousQuery& request, ::censys_definitions::AnonymousQueryResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::AnonymousQueryResponse>> AsyncGetCertificate(::grpc::ClientContext* context, const ::censys_definitions::AnonymousQuery& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::AnonymousQueryResponse>>(AsyncGetCertificateRaw(context, request, cq));
+    virtual ::grpc::Status GetCertificate(::grpc::ClientContext* context, const ::zsearch::AnonymousQuery& request, ::zsearch::AnonymousQueryResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::AnonymousQueryResponse>> AsyncGetCertificate(::grpc::ClientContext* context, const ::zsearch::AnonymousQuery& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::AnonymousQueryResponse>>(AsyncGetCertificateRaw(context, request, cq));
     }
-    virtual ::grpc::Status UpsertCertificate(::grpc::ClientContext* context, const ::censys_definitions::AnonymousRecord& request, ::censys_definitions::AnonymousDelta* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::AnonymousDelta>> AsyncUpsertCertificate(::grpc::ClientContext* context, const ::censys_definitions::AnonymousRecord& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::AnonymousDelta>>(AsyncUpsertCertificateRaw(context, request, cq));
+    virtual ::grpc::Status UpsertCertificate(::grpc::ClientContext* context, const ::zsearch::AnonymousRecord& request, ::zsearch::AnonymousDelta* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::AnonymousDelta>> AsyncUpsertCertificate(::grpc::ClientContext* context, const ::zsearch::AnonymousRecord& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::AnonymousDelta>>(AsyncUpsertCertificateRaw(context, request, cq));
     }
-    virtual ::grpc::Status UpsertRawCertificate(::grpc::ClientContext* context, const ::censys_definitions::AnonymousRecord& request, ::censys_definitions::AnonymousDelta* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::AnonymousDelta>> AsyncUpsertRawCertificate(::grpc::ClientContext* context, const ::censys_definitions::AnonymousRecord& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::AnonymousDelta>>(AsyncUpsertRawCertificateRaw(context, request, cq));
+    virtual ::grpc::Status UpsertRawCertificate(::grpc::ClientContext* context, const ::zsearch::AnonymousRecord& request, ::zsearch::AnonymousDelta* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::AnonymousDelta>> AsyncUpsertRawCertificate(::grpc::ClientContext* context, const ::zsearch::AnonymousRecord& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::AnonymousDelta>>(AsyncUpsertRawCertificateRaw(context, request, cq));
     }
-    virtual ::grpc::Status GetCryptographicKey(::grpc::ClientContext* context, const ::censys_definitions::AnonymousQuery& request, ::censys_definitions::AnonymousQueryResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::AnonymousQueryResponse>> AsyncGetCryptographicKey(::grpc::ClientContext* context, const ::censys_definitions::AnonymousQuery& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::AnonymousQueryResponse>>(AsyncGetCryptographicKeyRaw(context, request, cq));
+    virtual ::grpc::Status GetCryptographicKey(::grpc::ClientContext* context, const ::zsearch::AnonymousQuery& request, ::zsearch::AnonymousQueryResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::AnonymousQueryResponse>> AsyncGetCryptographicKey(::grpc::ClientContext* context, const ::zsearch::AnonymousQuery& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::AnonymousQueryResponse>>(AsyncGetCryptographicKeyRaw(context, request, cq));
     }
-    virtual ::grpc::Status UpsertCryptographicKey(::grpc::ClientContext* context, const ::censys_definitions::AnonymousRecord& request, ::censys_definitions::AnonymousDelta* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::AnonymousDelta>> AsyncUpsertCryptographicKey(::grpc::ClientContext* context, const ::censys_definitions::AnonymousRecord& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::AnonymousDelta>>(AsyncUpsertCryptographicKeyRaw(context, request, cq));
+    virtual ::grpc::Status UpsertCryptographicKey(::grpc::ClientContext* context, const ::zsearch::AnonymousRecord& request, ::zsearch::AnonymousDelta* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::AnonymousDelta>> AsyncUpsertCryptographicKey(::grpc::ClientContext* context, const ::zsearch::AnonymousRecord& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::AnonymousDelta>>(AsyncUpsertCryptographicKeyRaw(context, request, cq));
     }
-    virtual ::grpc::Status GetPublicLocation(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::censys_definitions::LocationAtom* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::LocationAtom>> AsyncGetPublicLocation(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::LocationAtom>>(AsyncGetPublicLocationRaw(context, request, cq));
+    virtual ::grpc::Status GetPublicLocation(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::zsearch::LocationAtom* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::LocationAtom>> AsyncGetPublicLocation(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::LocationAtom>>(AsyncGetPublicLocationRaw(context, request, cq));
     }
-    virtual ::grpc::Status GetRestrictedLocation(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::censys_definitions::LocationAtom* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::LocationAtom>> AsyncGetRestrictedLocation(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::LocationAtom>>(AsyncGetRestrictedLocationRaw(context, request, cq));
+    virtual ::grpc::Status GetRestrictedLocation(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::zsearch::LocationAtom* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::LocationAtom>> AsyncGetRestrictedLocation(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::LocationAtom>>(AsyncGetRestrictedLocationRaw(context, request, cq));
     }
-    virtual ::grpc::Status GetWHOIS(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::censys_definitions::Record* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::Record>> AsyncGetWHOIS(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::Record>>(AsyncGetWHOISRaw(context, request, cq));
+    virtual ::grpc::Status GetWHOIS(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::zsearch::Record* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::Record>> AsyncGetWHOIS(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::Record>>(AsyncGetWHOISRaw(context, request, cq));
     }
-    virtual ::grpc::Status GetUserMetadata(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::censys_definitions::Record* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::Record>> AsyncGetUserMetadata(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::Record>>(AsyncGetUserMetadataRaw(context, request, cq));
+    virtual ::grpc::Status GetUserMetadata(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::zsearch::Record* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::Record>> AsyncGetUserMetadata(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::Record>>(AsyncGetUserMetadataRaw(context, request, cq));
     }
-    virtual ::grpc::Status PutUserMetadata(::grpc::ClientContext* context, const ::censys_definitions::Record& request, ::censys_definitions::CommandReply* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::CommandReply>> AsyncPutUserMetadata(::grpc::ClientContext* context, const ::censys_definitions::Record& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::CommandReply>>(AsyncPutUserMetadataRaw(context, request, cq));
+    virtual ::grpc::Status PutUserMetadata(::grpc::ClientContext* context, const ::zsearch::Record& request, ::zsearch::CommandReply* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>> AsyncPutUserMetadata(::grpc::ClientContext* context, const ::zsearch::Record& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>>(AsyncPutUserMetadataRaw(context, request, cq));
     }
-    virtual ::grpc::Status GetRootStore(::grpc::ClientContext* context, const ::censys_definitions::RootStoreQuery& request, ::censys_definitions::RootStoreReply* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::RootStoreReply>> AsyncGetRootStore(::grpc::ClientContext* context, const ::censys_definitions::RootStoreQuery& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::RootStoreReply>>(AsyncGetRootStoreRaw(context, request, cq));
+    virtual ::grpc::Status GetRootStore(::grpc::ClientContext* context, const ::zsearch::RootStoreQuery& request, ::zsearch::RootStoreReply* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::RootStoreReply>> AsyncGetRootStore(::grpc::ClientContext* context, const ::zsearch::RootStoreQuery& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::RootStoreReply>>(AsyncGetRootStoreRaw(context, request, cq));
     }
   private:
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::HostQueryResponse>* AsyncGetHostIPv4RecordRaw(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::Delta>* AsyncPutHostIPv4RecordRaw(::grpc::ClientContext* context, const ::censys_definitions::Record& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::Delta>* AsyncDelHostIPv4RecordRaw(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::HostQueryResponse>* AsyncGetAllIPv4RecordsRaw(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::Delta>* AsyncGetHostIPv4DeltaRaw(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::HostQueryResponse>* AsyncGetHostDomainRecordRaw(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::Delta>* AsyncPutHostDomainRecordRaw(::grpc::ClientContext* context, const ::censys_definitions::Record& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::Delta>* AsyncDelHostDomainRecordRaw(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::HostQueryResponse>* AsyncGetAllDomainRecordsRaw(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::Delta>* AsyncGetHostDomainDeltaRaw(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::AnonymousQueryResponse>* AsyncGetCertificateRaw(::grpc::ClientContext* context, const ::censys_definitions::AnonymousQuery& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::AnonymousDelta>* AsyncUpsertCertificateRaw(::grpc::ClientContext* context, const ::censys_definitions::AnonymousRecord& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::AnonymousDelta>* AsyncUpsertRawCertificateRaw(::grpc::ClientContext* context, const ::censys_definitions::AnonymousRecord& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::AnonymousQueryResponse>* AsyncGetCryptographicKeyRaw(::grpc::ClientContext* context, const ::censys_definitions::AnonymousQuery& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::AnonymousDelta>* AsyncUpsertCryptographicKeyRaw(::grpc::ClientContext* context, const ::censys_definitions::AnonymousRecord& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::LocationAtom>* AsyncGetPublicLocationRaw(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::LocationAtom>* AsyncGetRestrictedLocationRaw(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::Record>* AsyncGetWHOISRaw(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::Record>* AsyncGetUserMetadataRaw(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::CommandReply>* AsyncPutUserMetadataRaw(::grpc::ClientContext* context, const ::censys_definitions::Record& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::censys_definitions::RootStoreReply>* AsyncGetRootStoreRaw(::grpc::ClientContext* context, const ::censys_definitions::RootStoreQuery& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::HostQueryResponse>* AsyncGetHostIPv4RecordRaw(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::Delta>* AsyncPutHostIPv4RecordRaw(::grpc::ClientContext* context, const ::zsearch::Record& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::Delta>* AsyncDelHostIPv4RecordRaw(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::HostQueryResponse>* AsyncGetAllIPv4RecordsRaw(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::Delta>* AsyncGetHostIPv4DeltaRaw(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::HostQueryResponse>* AsyncGetHostDomainRecordRaw(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::Delta>* AsyncPutHostDomainRecordRaw(::grpc::ClientContext* context, const ::zsearch::Record& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::Delta>* AsyncDelHostDomainRecordRaw(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::HostQueryResponse>* AsyncGetAllDomainRecordsRaw(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::Delta>* AsyncGetHostDomainDeltaRaw(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::AnonymousQueryResponse>* AsyncGetCertificateRaw(::grpc::ClientContext* context, const ::zsearch::AnonymousQuery& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::AnonymousDelta>* AsyncUpsertCertificateRaw(::grpc::ClientContext* context, const ::zsearch::AnonymousRecord& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::AnonymousDelta>* AsyncUpsertRawCertificateRaw(::grpc::ClientContext* context, const ::zsearch::AnonymousRecord& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::AnonymousQueryResponse>* AsyncGetCryptographicKeyRaw(::grpc::ClientContext* context, const ::zsearch::AnonymousQuery& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::AnonymousDelta>* AsyncUpsertCryptographicKeyRaw(::grpc::ClientContext* context, const ::zsearch::AnonymousRecord& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::LocationAtom>* AsyncGetPublicLocationRaw(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::LocationAtom>* AsyncGetRestrictedLocationRaw(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::Record>* AsyncGetWHOISRaw(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::Record>* AsyncGetUserMetadataRaw(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>* AsyncPutUserMetadataRaw(::grpc::ClientContext* context, const ::zsearch::Record& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::RootStoreReply>* AsyncGetRootStoreRaw(::grpc::ClientContext* context, const ::zsearch::RootStoreQuery& request, ::grpc::CompletionQueue* cq) = 0;
   };
   class Stub final : public StubInterface {
    public:
     Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel);
-    ::grpc::Status GetHostIPv4Record(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::censys_definitions::HostQueryResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::HostQueryResponse>> AsyncGetHostIPv4Record(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::HostQueryResponse>>(AsyncGetHostIPv4RecordRaw(context, request, cq));
+    ::grpc::Status GetHostIPv4Record(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::zsearch::HostQueryResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::HostQueryResponse>> AsyncGetHostIPv4Record(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::HostQueryResponse>>(AsyncGetHostIPv4RecordRaw(context, request, cq));
     }
-    ::grpc::Status PutHostIPv4Record(::grpc::ClientContext* context, const ::censys_definitions::Record& request, ::censys_definitions::Delta* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::Delta>> AsyncPutHostIPv4Record(::grpc::ClientContext* context, const ::censys_definitions::Record& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::Delta>>(AsyncPutHostIPv4RecordRaw(context, request, cq));
+    ::grpc::Status PutHostIPv4Record(::grpc::ClientContext* context, const ::zsearch::Record& request, ::zsearch::Delta* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::Delta>> AsyncPutHostIPv4Record(::grpc::ClientContext* context, const ::zsearch::Record& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::Delta>>(AsyncPutHostIPv4RecordRaw(context, request, cq));
     }
-    ::grpc::Status DelHostIPv4Record(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::censys_definitions::Delta* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::Delta>> AsyncDelHostIPv4Record(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::Delta>>(AsyncDelHostIPv4RecordRaw(context, request, cq));
+    ::grpc::Status DelHostIPv4Record(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::zsearch::Delta* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::Delta>> AsyncDelHostIPv4Record(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::Delta>>(AsyncDelHostIPv4RecordRaw(context, request, cq));
     }
-    ::grpc::Status GetAllIPv4Records(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::censys_definitions::HostQueryResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::HostQueryResponse>> AsyncGetAllIPv4Records(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::HostQueryResponse>>(AsyncGetAllIPv4RecordsRaw(context, request, cq));
+    ::grpc::Status GetAllIPv4Records(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::zsearch::HostQueryResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::HostQueryResponse>> AsyncGetAllIPv4Records(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::HostQueryResponse>>(AsyncGetAllIPv4RecordsRaw(context, request, cq));
     }
-    ::grpc::Status GetHostIPv4Delta(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::censys_definitions::Delta* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::Delta>> AsyncGetHostIPv4Delta(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::Delta>>(AsyncGetHostIPv4DeltaRaw(context, request, cq));
+    ::grpc::Status GetHostIPv4Delta(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::zsearch::Delta* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::Delta>> AsyncGetHostIPv4Delta(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::Delta>>(AsyncGetHostIPv4DeltaRaw(context, request, cq));
     }
-    ::grpc::Status GetHostDomainRecord(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::censys_definitions::HostQueryResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::HostQueryResponse>> AsyncGetHostDomainRecord(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::HostQueryResponse>>(AsyncGetHostDomainRecordRaw(context, request, cq));
+    ::grpc::Status GetHostDomainRecord(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::zsearch::HostQueryResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::HostQueryResponse>> AsyncGetHostDomainRecord(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::HostQueryResponse>>(AsyncGetHostDomainRecordRaw(context, request, cq));
     }
-    ::grpc::Status PutHostDomainRecord(::grpc::ClientContext* context, const ::censys_definitions::Record& request, ::censys_definitions::Delta* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::Delta>> AsyncPutHostDomainRecord(::grpc::ClientContext* context, const ::censys_definitions::Record& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::Delta>>(AsyncPutHostDomainRecordRaw(context, request, cq));
+    ::grpc::Status PutHostDomainRecord(::grpc::ClientContext* context, const ::zsearch::Record& request, ::zsearch::Delta* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::Delta>> AsyncPutHostDomainRecord(::grpc::ClientContext* context, const ::zsearch::Record& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::Delta>>(AsyncPutHostDomainRecordRaw(context, request, cq));
     }
-    ::grpc::Status DelHostDomainRecord(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::censys_definitions::Delta* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::Delta>> AsyncDelHostDomainRecord(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::Delta>>(AsyncDelHostDomainRecordRaw(context, request, cq));
+    ::grpc::Status DelHostDomainRecord(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::zsearch::Delta* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::Delta>> AsyncDelHostDomainRecord(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::Delta>>(AsyncDelHostDomainRecordRaw(context, request, cq));
     }
-    ::grpc::Status GetAllDomainRecords(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::censys_definitions::HostQueryResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::HostQueryResponse>> AsyncGetAllDomainRecords(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::HostQueryResponse>>(AsyncGetAllDomainRecordsRaw(context, request, cq));
+    ::grpc::Status GetAllDomainRecords(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::zsearch::HostQueryResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::HostQueryResponse>> AsyncGetAllDomainRecords(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::HostQueryResponse>>(AsyncGetAllDomainRecordsRaw(context, request, cq));
     }
-    ::grpc::Status GetHostDomainDelta(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::censys_definitions::Delta* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::Delta>> AsyncGetHostDomainDelta(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::Delta>>(AsyncGetHostDomainDeltaRaw(context, request, cq));
+    ::grpc::Status GetHostDomainDelta(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::zsearch::Delta* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::Delta>> AsyncGetHostDomainDelta(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::Delta>>(AsyncGetHostDomainDeltaRaw(context, request, cq));
     }
-    ::grpc::Status GetCertificate(::grpc::ClientContext* context, const ::censys_definitions::AnonymousQuery& request, ::censys_definitions::AnonymousQueryResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::AnonymousQueryResponse>> AsyncGetCertificate(::grpc::ClientContext* context, const ::censys_definitions::AnonymousQuery& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::AnonymousQueryResponse>>(AsyncGetCertificateRaw(context, request, cq));
+    ::grpc::Status GetCertificate(::grpc::ClientContext* context, const ::zsearch::AnonymousQuery& request, ::zsearch::AnonymousQueryResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::AnonymousQueryResponse>> AsyncGetCertificate(::grpc::ClientContext* context, const ::zsearch::AnonymousQuery& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::AnonymousQueryResponse>>(AsyncGetCertificateRaw(context, request, cq));
     }
-    ::grpc::Status UpsertCertificate(::grpc::ClientContext* context, const ::censys_definitions::AnonymousRecord& request, ::censys_definitions::AnonymousDelta* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::AnonymousDelta>> AsyncUpsertCertificate(::grpc::ClientContext* context, const ::censys_definitions::AnonymousRecord& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::AnonymousDelta>>(AsyncUpsertCertificateRaw(context, request, cq));
+    ::grpc::Status UpsertCertificate(::grpc::ClientContext* context, const ::zsearch::AnonymousRecord& request, ::zsearch::AnonymousDelta* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::AnonymousDelta>> AsyncUpsertCertificate(::grpc::ClientContext* context, const ::zsearch::AnonymousRecord& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::AnonymousDelta>>(AsyncUpsertCertificateRaw(context, request, cq));
     }
-    ::grpc::Status UpsertRawCertificate(::grpc::ClientContext* context, const ::censys_definitions::AnonymousRecord& request, ::censys_definitions::AnonymousDelta* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::AnonymousDelta>> AsyncUpsertRawCertificate(::grpc::ClientContext* context, const ::censys_definitions::AnonymousRecord& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::AnonymousDelta>>(AsyncUpsertRawCertificateRaw(context, request, cq));
+    ::grpc::Status UpsertRawCertificate(::grpc::ClientContext* context, const ::zsearch::AnonymousRecord& request, ::zsearch::AnonymousDelta* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::AnonymousDelta>> AsyncUpsertRawCertificate(::grpc::ClientContext* context, const ::zsearch::AnonymousRecord& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::AnonymousDelta>>(AsyncUpsertRawCertificateRaw(context, request, cq));
     }
-    ::grpc::Status GetCryptographicKey(::grpc::ClientContext* context, const ::censys_definitions::AnonymousQuery& request, ::censys_definitions::AnonymousQueryResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::AnonymousQueryResponse>> AsyncGetCryptographicKey(::grpc::ClientContext* context, const ::censys_definitions::AnonymousQuery& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::AnonymousQueryResponse>>(AsyncGetCryptographicKeyRaw(context, request, cq));
+    ::grpc::Status GetCryptographicKey(::grpc::ClientContext* context, const ::zsearch::AnonymousQuery& request, ::zsearch::AnonymousQueryResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::AnonymousQueryResponse>> AsyncGetCryptographicKey(::grpc::ClientContext* context, const ::zsearch::AnonymousQuery& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::AnonymousQueryResponse>>(AsyncGetCryptographicKeyRaw(context, request, cq));
     }
-    ::grpc::Status UpsertCryptographicKey(::grpc::ClientContext* context, const ::censys_definitions::AnonymousRecord& request, ::censys_definitions::AnonymousDelta* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::AnonymousDelta>> AsyncUpsertCryptographicKey(::grpc::ClientContext* context, const ::censys_definitions::AnonymousRecord& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::AnonymousDelta>>(AsyncUpsertCryptographicKeyRaw(context, request, cq));
+    ::grpc::Status UpsertCryptographicKey(::grpc::ClientContext* context, const ::zsearch::AnonymousRecord& request, ::zsearch::AnonymousDelta* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::AnonymousDelta>> AsyncUpsertCryptographicKey(::grpc::ClientContext* context, const ::zsearch::AnonymousRecord& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::AnonymousDelta>>(AsyncUpsertCryptographicKeyRaw(context, request, cq));
     }
-    ::grpc::Status GetPublicLocation(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::censys_definitions::LocationAtom* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::LocationAtom>> AsyncGetPublicLocation(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::LocationAtom>>(AsyncGetPublicLocationRaw(context, request, cq));
+    ::grpc::Status GetPublicLocation(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::zsearch::LocationAtom* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::LocationAtom>> AsyncGetPublicLocation(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::LocationAtom>>(AsyncGetPublicLocationRaw(context, request, cq));
     }
-    ::grpc::Status GetRestrictedLocation(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::censys_definitions::LocationAtom* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::LocationAtom>> AsyncGetRestrictedLocation(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::LocationAtom>>(AsyncGetRestrictedLocationRaw(context, request, cq));
+    ::grpc::Status GetRestrictedLocation(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::zsearch::LocationAtom* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::LocationAtom>> AsyncGetRestrictedLocation(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::LocationAtom>>(AsyncGetRestrictedLocationRaw(context, request, cq));
     }
-    ::grpc::Status GetWHOIS(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::censys_definitions::Record* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::Record>> AsyncGetWHOIS(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::Record>>(AsyncGetWHOISRaw(context, request, cq));
+    ::grpc::Status GetWHOIS(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::zsearch::Record* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::Record>> AsyncGetWHOIS(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::Record>>(AsyncGetWHOISRaw(context, request, cq));
     }
-    ::grpc::Status GetUserMetadata(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::censys_definitions::Record* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::Record>> AsyncGetUserMetadata(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::Record>>(AsyncGetUserMetadataRaw(context, request, cq));
+    ::grpc::Status GetUserMetadata(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::zsearch::Record* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::Record>> AsyncGetUserMetadata(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::Record>>(AsyncGetUserMetadataRaw(context, request, cq));
     }
-    ::grpc::Status PutUserMetadata(::grpc::ClientContext* context, const ::censys_definitions::Record& request, ::censys_definitions::CommandReply* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>> AsyncPutUserMetadata(::grpc::ClientContext* context, const ::censys_definitions::Record& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>>(AsyncPutUserMetadataRaw(context, request, cq));
+    ::grpc::Status PutUserMetadata(::grpc::ClientContext* context, const ::zsearch::Record& request, ::zsearch::CommandReply* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>> AsyncPutUserMetadata(::grpc::ClientContext* context, const ::zsearch::Record& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>>(AsyncPutUserMetadataRaw(context, request, cq));
     }
-    ::grpc::Status GetRootStore(::grpc::ClientContext* context, const ::censys_definitions::RootStoreQuery& request, ::censys_definitions::RootStoreReply* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::RootStoreReply>> AsyncGetRootStore(::grpc::ClientContext* context, const ::censys_definitions::RootStoreQuery& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::censys_definitions::RootStoreReply>>(AsyncGetRootStoreRaw(context, request, cq));
+    ::grpc::Status GetRootStore(::grpc::ClientContext* context, const ::zsearch::RootStoreQuery& request, ::zsearch::RootStoreReply* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::RootStoreReply>> AsyncGetRootStore(::grpc::ClientContext* context, const ::zsearch::RootStoreQuery& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::RootStoreReply>>(AsyncGetRootStoreRaw(context, request, cq));
     }
 
    private:
     std::shared_ptr< ::grpc::ChannelInterface> channel_;
-    ::grpc::ClientAsyncResponseReader< ::censys_definitions::HostQueryResponse>* AsyncGetHostIPv4RecordRaw(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::censys_definitions::Delta>* AsyncPutHostIPv4RecordRaw(::grpc::ClientContext* context, const ::censys_definitions::Record& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::censys_definitions::Delta>* AsyncDelHostIPv4RecordRaw(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::censys_definitions::HostQueryResponse>* AsyncGetAllIPv4RecordsRaw(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::censys_definitions::Delta>* AsyncGetHostIPv4DeltaRaw(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::censys_definitions::HostQueryResponse>* AsyncGetHostDomainRecordRaw(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::censys_definitions::Delta>* AsyncPutHostDomainRecordRaw(::grpc::ClientContext* context, const ::censys_definitions::Record& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::censys_definitions::Delta>* AsyncDelHostDomainRecordRaw(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::censys_definitions::HostQueryResponse>* AsyncGetAllDomainRecordsRaw(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::censys_definitions::Delta>* AsyncGetHostDomainDeltaRaw(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::censys_definitions::AnonymousQueryResponse>* AsyncGetCertificateRaw(::grpc::ClientContext* context, const ::censys_definitions::AnonymousQuery& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::censys_definitions::AnonymousDelta>* AsyncUpsertCertificateRaw(::grpc::ClientContext* context, const ::censys_definitions::AnonymousRecord& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::censys_definitions::AnonymousDelta>* AsyncUpsertRawCertificateRaw(::grpc::ClientContext* context, const ::censys_definitions::AnonymousRecord& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::censys_definitions::AnonymousQueryResponse>* AsyncGetCryptographicKeyRaw(::grpc::ClientContext* context, const ::censys_definitions::AnonymousQuery& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::censys_definitions::AnonymousDelta>* AsyncUpsertCryptographicKeyRaw(::grpc::ClientContext* context, const ::censys_definitions::AnonymousRecord& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::censys_definitions::LocationAtom>* AsyncGetPublicLocationRaw(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::censys_definitions::LocationAtom>* AsyncGetRestrictedLocationRaw(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::censys_definitions::Record>* AsyncGetWHOISRaw(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::censys_definitions::Record>* AsyncGetUserMetadataRaw(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>* AsyncPutUserMetadataRaw(::grpc::ClientContext* context, const ::censys_definitions::Record& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::censys_definitions::RootStoreReply>* AsyncGetRootStoreRaw(::grpc::ClientContext* context, const ::censys_definitions::RootStoreQuery& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::zsearch::HostQueryResponse>* AsyncGetHostIPv4RecordRaw(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::zsearch::Delta>* AsyncPutHostIPv4RecordRaw(::grpc::ClientContext* context, const ::zsearch::Record& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::zsearch::Delta>* AsyncDelHostIPv4RecordRaw(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::zsearch::HostQueryResponse>* AsyncGetAllIPv4RecordsRaw(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::zsearch::Delta>* AsyncGetHostIPv4DeltaRaw(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::zsearch::HostQueryResponse>* AsyncGetHostDomainRecordRaw(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::zsearch::Delta>* AsyncPutHostDomainRecordRaw(::grpc::ClientContext* context, const ::zsearch::Record& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::zsearch::Delta>* AsyncDelHostDomainRecordRaw(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::zsearch::HostQueryResponse>* AsyncGetAllDomainRecordsRaw(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::zsearch::Delta>* AsyncGetHostDomainDeltaRaw(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::zsearch::AnonymousQueryResponse>* AsyncGetCertificateRaw(::grpc::ClientContext* context, const ::zsearch::AnonymousQuery& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::zsearch::AnonymousDelta>* AsyncUpsertCertificateRaw(::grpc::ClientContext* context, const ::zsearch::AnonymousRecord& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::zsearch::AnonymousDelta>* AsyncUpsertRawCertificateRaw(::grpc::ClientContext* context, const ::zsearch::AnonymousRecord& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::zsearch::AnonymousQueryResponse>* AsyncGetCryptographicKeyRaw(::grpc::ClientContext* context, const ::zsearch::AnonymousQuery& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::zsearch::AnonymousDelta>* AsyncUpsertCryptographicKeyRaw(::grpc::ClientContext* context, const ::zsearch::AnonymousRecord& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::zsearch::LocationAtom>* AsyncGetPublicLocationRaw(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::zsearch::LocationAtom>* AsyncGetRestrictedLocationRaw(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::zsearch::Record>* AsyncGetWHOISRaw(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::zsearch::Record>* AsyncGetUserMetadataRaw(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AsyncPutUserMetadataRaw(::grpc::ClientContext* context, const ::zsearch::Record& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::zsearch::RootStoreReply>* AsyncGetRootStoreRaw(::grpc::ClientContext* context, const ::zsearch::RootStoreQuery& request, ::grpc::CompletionQueue* cq) override;
     const ::grpc::RpcMethod rpcmethod_GetHostIPv4Record_;
     const ::grpc::RpcMethod rpcmethod_PutHostIPv4Record_;
     const ::grpc::RpcMethod rpcmethod_DelHostIPv4Record_;
@@ -1548,27 +1548,27 @@ class QueryService final {
    public:
     Service();
     virtual ~Service();
-    virtual ::grpc::Status GetHostIPv4Record(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::HostQueryResponse* response);
-    virtual ::grpc::Status PutHostIPv4Record(::grpc::ServerContext* context, const ::censys_definitions::Record* request, ::censys_definitions::Delta* response);
-    virtual ::grpc::Status DelHostIPv4Record(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::Delta* response);
-    virtual ::grpc::Status GetAllIPv4Records(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::HostQueryResponse* response);
-    virtual ::grpc::Status GetHostIPv4Delta(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::Delta* response);
-    virtual ::grpc::Status GetHostDomainRecord(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::HostQueryResponse* response);
-    virtual ::grpc::Status PutHostDomainRecord(::grpc::ServerContext* context, const ::censys_definitions::Record* request, ::censys_definitions::Delta* response);
-    virtual ::grpc::Status DelHostDomainRecord(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::Delta* response);
-    virtual ::grpc::Status GetAllDomainRecords(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::HostQueryResponse* response);
-    virtual ::grpc::Status GetHostDomainDelta(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::Delta* response);
-    virtual ::grpc::Status GetCertificate(::grpc::ServerContext* context, const ::censys_definitions::AnonymousQuery* request, ::censys_definitions::AnonymousQueryResponse* response);
-    virtual ::grpc::Status UpsertCertificate(::grpc::ServerContext* context, const ::censys_definitions::AnonymousRecord* request, ::censys_definitions::AnonymousDelta* response);
-    virtual ::grpc::Status UpsertRawCertificate(::grpc::ServerContext* context, const ::censys_definitions::AnonymousRecord* request, ::censys_definitions::AnonymousDelta* response);
-    virtual ::grpc::Status GetCryptographicKey(::grpc::ServerContext* context, const ::censys_definitions::AnonymousQuery* request, ::censys_definitions::AnonymousQueryResponse* response);
-    virtual ::grpc::Status UpsertCryptographicKey(::grpc::ServerContext* context, const ::censys_definitions::AnonymousRecord* request, ::censys_definitions::AnonymousDelta* response);
-    virtual ::grpc::Status GetPublicLocation(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::LocationAtom* response);
-    virtual ::grpc::Status GetRestrictedLocation(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::LocationAtom* response);
-    virtual ::grpc::Status GetWHOIS(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::Record* response);
-    virtual ::grpc::Status GetUserMetadata(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::Record* response);
-    virtual ::grpc::Status PutUserMetadata(::grpc::ServerContext* context, const ::censys_definitions::Record* request, ::censys_definitions::CommandReply* response);
-    virtual ::grpc::Status GetRootStore(::grpc::ServerContext* context, const ::censys_definitions::RootStoreQuery* request, ::censys_definitions::RootStoreReply* response);
+    virtual ::grpc::Status GetHostIPv4Record(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::HostQueryResponse* response);
+    virtual ::grpc::Status PutHostIPv4Record(::grpc::ServerContext* context, const ::zsearch::Record* request, ::zsearch::Delta* response);
+    virtual ::grpc::Status DelHostIPv4Record(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::Delta* response);
+    virtual ::grpc::Status GetAllIPv4Records(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::HostQueryResponse* response);
+    virtual ::grpc::Status GetHostIPv4Delta(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::Delta* response);
+    virtual ::grpc::Status GetHostDomainRecord(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::HostQueryResponse* response);
+    virtual ::grpc::Status PutHostDomainRecord(::grpc::ServerContext* context, const ::zsearch::Record* request, ::zsearch::Delta* response);
+    virtual ::grpc::Status DelHostDomainRecord(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::Delta* response);
+    virtual ::grpc::Status GetAllDomainRecords(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::HostQueryResponse* response);
+    virtual ::grpc::Status GetHostDomainDelta(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::Delta* response);
+    virtual ::grpc::Status GetCertificate(::grpc::ServerContext* context, const ::zsearch::AnonymousQuery* request, ::zsearch::AnonymousQueryResponse* response);
+    virtual ::grpc::Status UpsertCertificate(::grpc::ServerContext* context, const ::zsearch::AnonymousRecord* request, ::zsearch::AnonymousDelta* response);
+    virtual ::grpc::Status UpsertRawCertificate(::grpc::ServerContext* context, const ::zsearch::AnonymousRecord* request, ::zsearch::AnonymousDelta* response);
+    virtual ::grpc::Status GetCryptographicKey(::grpc::ServerContext* context, const ::zsearch::AnonymousQuery* request, ::zsearch::AnonymousQueryResponse* response);
+    virtual ::grpc::Status UpsertCryptographicKey(::grpc::ServerContext* context, const ::zsearch::AnonymousRecord* request, ::zsearch::AnonymousDelta* response);
+    virtual ::grpc::Status GetPublicLocation(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::LocationAtom* response);
+    virtual ::grpc::Status GetRestrictedLocation(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::LocationAtom* response);
+    virtual ::grpc::Status GetWHOIS(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::Record* response);
+    virtual ::grpc::Status GetUserMetadata(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::Record* response);
+    virtual ::grpc::Status PutUserMetadata(::grpc::ServerContext* context, const ::zsearch::Record* request, ::zsearch::CommandReply* response);
+    virtual ::grpc::Status GetRootStore(::grpc::ServerContext* context, const ::zsearch::RootStoreQuery* request, ::zsearch::RootStoreReply* response);
   };
   template <class BaseClass>
   class WithAsyncMethod_GetHostIPv4Record : public BaseClass {
@@ -1582,11 +1582,11 @@ class QueryService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetHostIPv4Record(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::HostQueryResponse* response) final override {
+    ::grpc::Status GetHostIPv4Record(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::HostQueryResponse* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestGetHostIPv4Record(::grpc::ServerContext* context, ::censys_definitions::HostQuery* request, ::grpc::ServerAsyncResponseWriter< ::censys_definitions::HostQueryResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestGetHostIPv4Record(::grpc::ServerContext* context, ::zsearch::HostQuery* request, ::grpc::ServerAsyncResponseWriter< ::zsearch::HostQueryResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(0, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -1602,11 +1602,11 @@ class QueryService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status PutHostIPv4Record(::grpc::ServerContext* context, const ::censys_definitions::Record* request, ::censys_definitions::Delta* response) final override {
+    ::grpc::Status PutHostIPv4Record(::grpc::ServerContext* context, const ::zsearch::Record* request, ::zsearch::Delta* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestPutHostIPv4Record(::grpc::ServerContext* context, ::censys_definitions::Record* request, ::grpc::ServerAsyncResponseWriter< ::censys_definitions::Delta>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestPutHostIPv4Record(::grpc::ServerContext* context, ::zsearch::Record* request, ::grpc::ServerAsyncResponseWriter< ::zsearch::Delta>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(1, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -1622,11 +1622,11 @@ class QueryService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status DelHostIPv4Record(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::Delta* response) final override {
+    ::grpc::Status DelHostIPv4Record(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::Delta* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestDelHostIPv4Record(::grpc::ServerContext* context, ::censys_definitions::HostQuery* request, ::grpc::ServerAsyncResponseWriter< ::censys_definitions::Delta>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestDelHostIPv4Record(::grpc::ServerContext* context, ::zsearch::HostQuery* request, ::grpc::ServerAsyncResponseWriter< ::zsearch::Delta>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(2, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -1642,11 +1642,11 @@ class QueryService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetAllIPv4Records(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::HostQueryResponse* response) final override {
+    ::grpc::Status GetAllIPv4Records(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::HostQueryResponse* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestGetAllIPv4Records(::grpc::ServerContext* context, ::censys_definitions::HostQuery* request, ::grpc::ServerAsyncResponseWriter< ::censys_definitions::HostQueryResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestGetAllIPv4Records(::grpc::ServerContext* context, ::zsearch::HostQuery* request, ::grpc::ServerAsyncResponseWriter< ::zsearch::HostQueryResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(3, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -1662,11 +1662,11 @@ class QueryService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetHostIPv4Delta(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::Delta* response) final override {
+    ::grpc::Status GetHostIPv4Delta(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::Delta* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestGetHostIPv4Delta(::grpc::ServerContext* context, ::censys_definitions::HostQuery* request, ::grpc::ServerAsyncResponseWriter< ::censys_definitions::Delta>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestGetHostIPv4Delta(::grpc::ServerContext* context, ::zsearch::HostQuery* request, ::grpc::ServerAsyncResponseWriter< ::zsearch::Delta>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(4, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -1682,11 +1682,11 @@ class QueryService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetHostDomainRecord(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::HostQueryResponse* response) final override {
+    ::grpc::Status GetHostDomainRecord(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::HostQueryResponse* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestGetHostDomainRecord(::grpc::ServerContext* context, ::censys_definitions::HostQuery* request, ::grpc::ServerAsyncResponseWriter< ::censys_definitions::HostQueryResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestGetHostDomainRecord(::grpc::ServerContext* context, ::zsearch::HostQuery* request, ::grpc::ServerAsyncResponseWriter< ::zsearch::HostQueryResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(5, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -1702,11 +1702,11 @@ class QueryService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status PutHostDomainRecord(::grpc::ServerContext* context, const ::censys_definitions::Record* request, ::censys_definitions::Delta* response) final override {
+    ::grpc::Status PutHostDomainRecord(::grpc::ServerContext* context, const ::zsearch::Record* request, ::zsearch::Delta* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestPutHostDomainRecord(::grpc::ServerContext* context, ::censys_definitions::Record* request, ::grpc::ServerAsyncResponseWriter< ::censys_definitions::Delta>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestPutHostDomainRecord(::grpc::ServerContext* context, ::zsearch::Record* request, ::grpc::ServerAsyncResponseWriter< ::zsearch::Delta>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(6, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -1722,11 +1722,11 @@ class QueryService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status DelHostDomainRecord(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::Delta* response) final override {
+    ::grpc::Status DelHostDomainRecord(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::Delta* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestDelHostDomainRecord(::grpc::ServerContext* context, ::censys_definitions::HostQuery* request, ::grpc::ServerAsyncResponseWriter< ::censys_definitions::Delta>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestDelHostDomainRecord(::grpc::ServerContext* context, ::zsearch::HostQuery* request, ::grpc::ServerAsyncResponseWriter< ::zsearch::Delta>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(7, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -1742,11 +1742,11 @@ class QueryService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetAllDomainRecords(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::HostQueryResponse* response) final override {
+    ::grpc::Status GetAllDomainRecords(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::HostQueryResponse* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestGetAllDomainRecords(::grpc::ServerContext* context, ::censys_definitions::HostQuery* request, ::grpc::ServerAsyncResponseWriter< ::censys_definitions::HostQueryResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestGetAllDomainRecords(::grpc::ServerContext* context, ::zsearch::HostQuery* request, ::grpc::ServerAsyncResponseWriter< ::zsearch::HostQueryResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(8, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -1762,11 +1762,11 @@ class QueryService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetHostDomainDelta(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::Delta* response) final override {
+    ::grpc::Status GetHostDomainDelta(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::Delta* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestGetHostDomainDelta(::grpc::ServerContext* context, ::censys_definitions::HostQuery* request, ::grpc::ServerAsyncResponseWriter< ::censys_definitions::Delta>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestGetHostDomainDelta(::grpc::ServerContext* context, ::zsearch::HostQuery* request, ::grpc::ServerAsyncResponseWriter< ::zsearch::Delta>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(9, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -1782,11 +1782,11 @@ class QueryService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetCertificate(::grpc::ServerContext* context, const ::censys_definitions::AnonymousQuery* request, ::censys_definitions::AnonymousQueryResponse* response) final override {
+    ::grpc::Status GetCertificate(::grpc::ServerContext* context, const ::zsearch::AnonymousQuery* request, ::zsearch::AnonymousQueryResponse* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestGetCertificate(::grpc::ServerContext* context, ::censys_definitions::AnonymousQuery* request, ::grpc::ServerAsyncResponseWriter< ::censys_definitions::AnonymousQueryResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestGetCertificate(::grpc::ServerContext* context, ::zsearch::AnonymousQuery* request, ::grpc::ServerAsyncResponseWriter< ::zsearch::AnonymousQueryResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(10, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -1802,11 +1802,11 @@ class QueryService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status UpsertCertificate(::grpc::ServerContext* context, const ::censys_definitions::AnonymousRecord* request, ::censys_definitions::AnonymousDelta* response) final override {
+    ::grpc::Status UpsertCertificate(::grpc::ServerContext* context, const ::zsearch::AnonymousRecord* request, ::zsearch::AnonymousDelta* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestUpsertCertificate(::grpc::ServerContext* context, ::censys_definitions::AnonymousRecord* request, ::grpc::ServerAsyncResponseWriter< ::censys_definitions::AnonymousDelta>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestUpsertCertificate(::grpc::ServerContext* context, ::zsearch::AnonymousRecord* request, ::grpc::ServerAsyncResponseWriter< ::zsearch::AnonymousDelta>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(11, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -1822,11 +1822,11 @@ class QueryService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status UpsertRawCertificate(::grpc::ServerContext* context, const ::censys_definitions::AnonymousRecord* request, ::censys_definitions::AnonymousDelta* response) final override {
+    ::grpc::Status UpsertRawCertificate(::grpc::ServerContext* context, const ::zsearch::AnonymousRecord* request, ::zsearch::AnonymousDelta* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestUpsertRawCertificate(::grpc::ServerContext* context, ::censys_definitions::AnonymousRecord* request, ::grpc::ServerAsyncResponseWriter< ::censys_definitions::AnonymousDelta>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestUpsertRawCertificate(::grpc::ServerContext* context, ::zsearch::AnonymousRecord* request, ::grpc::ServerAsyncResponseWriter< ::zsearch::AnonymousDelta>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(12, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -1842,11 +1842,11 @@ class QueryService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetCryptographicKey(::grpc::ServerContext* context, const ::censys_definitions::AnonymousQuery* request, ::censys_definitions::AnonymousQueryResponse* response) final override {
+    ::grpc::Status GetCryptographicKey(::grpc::ServerContext* context, const ::zsearch::AnonymousQuery* request, ::zsearch::AnonymousQueryResponse* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestGetCryptographicKey(::grpc::ServerContext* context, ::censys_definitions::AnonymousQuery* request, ::grpc::ServerAsyncResponseWriter< ::censys_definitions::AnonymousQueryResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestGetCryptographicKey(::grpc::ServerContext* context, ::zsearch::AnonymousQuery* request, ::grpc::ServerAsyncResponseWriter< ::zsearch::AnonymousQueryResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(13, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -1862,11 +1862,11 @@ class QueryService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status UpsertCryptographicKey(::grpc::ServerContext* context, const ::censys_definitions::AnonymousRecord* request, ::censys_definitions::AnonymousDelta* response) final override {
+    ::grpc::Status UpsertCryptographicKey(::grpc::ServerContext* context, const ::zsearch::AnonymousRecord* request, ::zsearch::AnonymousDelta* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestUpsertCryptographicKey(::grpc::ServerContext* context, ::censys_definitions::AnonymousRecord* request, ::grpc::ServerAsyncResponseWriter< ::censys_definitions::AnonymousDelta>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestUpsertCryptographicKey(::grpc::ServerContext* context, ::zsearch::AnonymousRecord* request, ::grpc::ServerAsyncResponseWriter< ::zsearch::AnonymousDelta>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(14, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -1882,11 +1882,11 @@ class QueryService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetPublicLocation(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::LocationAtom* response) final override {
+    ::grpc::Status GetPublicLocation(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::LocationAtom* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestGetPublicLocation(::grpc::ServerContext* context, ::censys_definitions::HostQuery* request, ::grpc::ServerAsyncResponseWriter< ::censys_definitions::LocationAtom>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestGetPublicLocation(::grpc::ServerContext* context, ::zsearch::HostQuery* request, ::grpc::ServerAsyncResponseWriter< ::zsearch::LocationAtom>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(15, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -1902,11 +1902,11 @@ class QueryService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetRestrictedLocation(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::LocationAtom* response) final override {
+    ::grpc::Status GetRestrictedLocation(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::LocationAtom* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestGetRestrictedLocation(::grpc::ServerContext* context, ::censys_definitions::HostQuery* request, ::grpc::ServerAsyncResponseWriter< ::censys_definitions::LocationAtom>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestGetRestrictedLocation(::grpc::ServerContext* context, ::zsearch::HostQuery* request, ::grpc::ServerAsyncResponseWriter< ::zsearch::LocationAtom>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(16, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -1922,11 +1922,11 @@ class QueryService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetWHOIS(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::Record* response) final override {
+    ::grpc::Status GetWHOIS(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::Record* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestGetWHOIS(::grpc::ServerContext* context, ::censys_definitions::HostQuery* request, ::grpc::ServerAsyncResponseWriter< ::censys_definitions::Record>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestGetWHOIS(::grpc::ServerContext* context, ::zsearch::HostQuery* request, ::grpc::ServerAsyncResponseWriter< ::zsearch::Record>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(17, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -1942,11 +1942,11 @@ class QueryService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetUserMetadata(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::Record* response) final override {
+    ::grpc::Status GetUserMetadata(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::Record* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestGetUserMetadata(::grpc::ServerContext* context, ::censys_definitions::HostQuery* request, ::grpc::ServerAsyncResponseWriter< ::censys_definitions::Record>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestGetUserMetadata(::grpc::ServerContext* context, ::zsearch::HostQuery* request, ::grpc::ServerAsyncResponseWriter< ::zsearch::Record>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(18, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -1962,11 +1962,11 @@ class QueryService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status PutUserMetadata(::grpc::ServerContext* context, const ::censys_definitions::Record* request, ::censys_definitions::CommandReply* response) final override {
+    ::grpc::Status PutUserMetadata(::grpc::ServerContext* context, const ::zsearch::Record* request, ::zsearch::CommandReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestPutUserMetadata(::grpc::ServerContext* context, ::censys_definitions::Record* request, ::grpc::ServerAsyncResponseWriter< ::censys_definitions::CommandReply>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestPutUserMetadata(::grpc::ServerContext* context, ::zsearch::Record* request, ::grpc::ServerAsyncResponseWriter< ::zsearch::CommandReply>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(19, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -1982,11 +1982,11 @@ class QueryService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetRootStore(::grpc::ServerContext* context, const ::censys_definitions::RootStoreQuery* request, ::censys_definitions::RootStoreReply* response) final override {
+    ::grpc::Status GetRootStore(::grpc::ServerContext* context, const ::zsearch::RootStoreQuery* request, ::zsearch::RootStoreReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestGetRootStore(::grpc::ServerContext* context, ::censys_definitions::RootStoreQuery* request, ::grpc::ServerAsyncResponseWriter< ::censys_definitions::RootStoreReply>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestGetRootStore(::grpc::ServerContext* context, ::zsearch::RootStoreQuery* request, ::grpc::ServerAsyncResponseWriter< ::zsearch::RootStoreReply>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(20, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -2003,7 +2003,7 @@ class QueryService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetHostIPv4Record(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::HostQueryResponse* response) final override {
+    ::grpc::Status GetHostIPv4Record(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::HostQueryResponse* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -2020,7 +2020,7 @@ class QueryService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status PutHostIPv4Record(::grpc::ServerContext* context, const ::censys_definitions::Record* request, ::censys_definitions::Delta* response) final override {
+    ::grpc::Status PutHostIPv4Record(::grpc::ServerContext* context, const ::zsearch::Record* request, ::zsearch::Delta* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -2037,7 +2037,7 @@ class QueryService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status DelHostIPv4Record(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::Delta* response) final override {
+    ::grpc::Status DelHostIPv4Record(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::Delta* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -2054,7 +2054,7 @@ class QueryService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetAllIPv4Records(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::HostQueryResponse* response) final override {
+    ::grpc::Status GetAllIPv4Records(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::HostQueryResponse* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -2071,7 +2071,7 @@ class QueryService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetHostIPv4Delta(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::Delta* response) final override {
+    ::grpc::Status GetHostIPv4Delta(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::Delta* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -2088,7 +2088,7 @@ class QueryService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetHostDomainRecord(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::HostQueryResponse* response) final override {
+    ::grpc::Status GetHostDomainRecord(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::HostQueryResponse* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -2105,7 +2105,7 @@ class QueryService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status PutHostDomainRecord(::grpc::ServerContext* context, const ::censys_definitions::Record* request, ::censys_definitions::Delta* response) final override {
+    ::grpc::Status PutHostDomainRecord(::grpc::ServerContext* context, const ::zsearch::Record* request, ::zsearch::Delta* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -2122,7 +2122,7 @@ class QueryService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status DelHostDomainRecord(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::Delta* response) final override {
+    ::grpc::Status DelHostDomainRecord(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::Delta* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -2139,7 +2139,7 @@ class QueryService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetAllDomainRecords(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::HostQueryResponse* response) final override {
+    ::grpc::Status GetAllDomainRecords(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::HostQueryResponse* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -2156,7 +2156,7 @@ class QueryService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetHostDomainDelta(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::Delta* response) final override {
+    ::grpc::Status GetHostDomainDelta(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::Delta* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -2173,7 +2173,7 @@ class QueryService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetCertificate(::grpc::ServerContext* context, const ::censys_definitions::AnonymousQuery* request, ::censys_definitions::AnonymousQueryResponse* response) final override {
+    ::grpc::Status GetCertificate(::grpc::ServerContext* context, const ::zsearch::AnonymousQuery* request, ::zsearch::AnonymousQueryResponse* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -2190,7 +2190,7 @@ class QueryService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status UpsertCertificate(::grpc::ServerContext* context, const ::censys_definitions::AnonymousRecord* request, ::censys_definitions::AnonymousDelta* response) final override {
+    ::grpc::Status UpsertCertificate(::grpc::ServerContext* context, const ::zsearch::AnonymousRecord* request, ::zsearch::AnonymousDelta* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -2207,7 +2207,7 @@ class QueryService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status UpsertRawCertificate(::grpc::ServerContext* context, const ::censys_definitions::AnonymousRecord* request, ::censys_definitions::AnonymousDelta* response) final override {
+    ::grpc::Status UpsertRawCertificate(::grpc::ServerContext* context, const ::zsearch::AnonymousRecord* request, ::zsearch::AnonymousDelta* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -2224,7 +2224,7 @@ class QueryService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetCryptographicKey(::grpc::ServerContext* context, const ::censys_definitions::AnonymousQuery* request, ::censys_definitions::AnonymousQueryResponse* response) final override {
+    ::grpc::Status GetCryptographicKey(::grpc::ServerContext* context, const ::zsearch::AnonymousQuery* request, ::zsearch::AnonymousQueryResponse* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -2241,7 +2241,7 @@ class QueryService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status UpsertCryptographicKey(::grpc::ServerContext* context, const ::censys_definitions::AnonymousRecord* request, ::censys_definitions::AnonymousDelta* response) final override {
+    ::grpc::Status UpsertCryptographicKey(::grpc::ServerContext* context, const ::zsearch::AnonymousRecord* request, ::zsearch::AnonymousDelta* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -2258,7 +2258,7 @@ class QueryService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetPublicLocation(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::LocationAtom* response) final override {
+    ::grpc::Status GetPublicLocation(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::LocationAtom* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -2275,7 +2275,7 @@ class QueryService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetRestrictedLocation(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::LocationAtom* response) final override {
+    ::grpc::Status GetRestrictedLocation(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::LocationAtom* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -2292,7 +2292,7 @@ class QueryService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetWHOIS(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::Record* response) final override {
+    ::grpc::Status GetWHOIS(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::Record* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -2309,7 +2309,7 @@ class QueryService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetUserMetadata(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::Record* response) final override {
+    ::grpc::Status GetUserMetadata(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::Record* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -2326,7 +2326,7 @@ class QueryService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status PutUserMetadata(::grpc::ServerContext* context, const ::censys_definitions::Record* request, ::censys_definitions::CommandReply* response) final override {
+    ::grpc::Status PutUserMetadata(::grpc::ServerContext* context, const ::zsearch::Record* request, ::zsearch::CommandReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -2343,7 +2343,7 @@ class QueryService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status GetRootStore(::grpc::ServerContext* context, const ::censys_definitions::RootStoreQuery* request, ::censys_definitions::RootStoreReply* response) final override {
+    ::grpc::Status GetRootStore(::grpc::ServerContext* context, const ::zsearch::RootStoreQuery* request, ::zsearch::RootStoreReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -2355,18 +2355,18 @@ class QueryService final {
    public:
     WithStreamedUnaryMethod_GetHostIPv4Record() {
       ::grpc::Service::MarkMethodStreamed(0,
-        new ::grpc::StreamedUnaryHandler< ::censys_definitions::HostQuery, ::censys_definitions::HostQueryResponse>(std::bind(&WithStreamedUnaryMethod_GetHostIPv4Record<BaseClass>::StreamedGetHostIPv4Record, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::StreamedUnaryHandler< ::zsearch::HostQuery, ::zsearch::HostQueryResponse>(std::bind(&WithStreamedUnaryMethod_GetHostIPv4Record<BaseClass>::StreamedGetHostIPv4Record, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_GetHostIPv4Record() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status GetHostIPv4Record(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::HostQueryResponse* response) final override {
+    ::grpc::Status GetHostIPv4Record(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::HostQueryResponse* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedGetHostIPv4Record(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::censys_definitions::HostQuery,::censys_definitions::HostQueryResponse>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedGetHostIPv4Record(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::zsearch::HostQuery,::zsearch::HostQueryResponse>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_PutHostIPv4Record : public BaseClass {
@@ -2375,18 +2375,18 @@ class QueryService final {
    public:
     WithStreamedUnaryMethod_PutHostIPv4Record() {
       ::grpc::Service::MarkMethodStreamed(1,
-        new ::grpc::StreamedUnaryHandler< ::censys_definitions::Record, ::censys_definitions::Delta>(std::bind(&WithStreamedUnaryMethod_PutHostIPv4Record<BaseClass>::StreamedPutHostIPv4Record, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::StreamedUnaryHandler< ::zsearch::Record, ::zsearch::Delta>(std::bind(&WithStreamedUnaryMethod_PutHostIPv4Record<BaseClass>::StreamedPutHostIPv4Record, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_PutHostIPv4Record() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status PutHostIPv4Record(::grpc::ServerContext* context, const ::censys_definitions::Record* request, ::censys_definitions::Delta* response) final override {
+    ::grpc::Status PutHostIPv4Record(::grpc::ServerContext* context, const ::zsearch::Record* request, ::zsearch::Delta* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedPutHostIPv4Record(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::censys_definitions::Record,::censys_definitions::Delta>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedPutHostIPv4Record(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::zsearch::Record,::zsearch::Delta>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_DelHostIPv4Record : public BaseClass {
@@ -2395,18 +2395,18 @@ class QueryService final {
    public:
     WithStreamedUnaryMethod_DelHostIPv4Record() {
       ::grpc::Service::MarkMethodStreamed(2,
-        new ::grpc::StreamedUnaryHandler< ::censys_definitions::HostQuery, ::censys_definitions::Delta>(std::bind(&WithStreamedUnaryMethod_DelHostIPv4Record<BaseClass>::StreamedDelHostIPv4Record, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::StreamedUnaryHandler< ::zsearch::HostQuery, ::zsearch::Delta>(std::bind(&WithStreamedUnaryMethod_DelHostIPv4Record<BaseClass>::StreamedDelHostIPv4Record, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_DelHostIPv4Record() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status DelHostIPv4Record(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::Delta* response) final override {
+    ::grpc::Status DelHostIPv4Record(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::Delta* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedDelHostIPv4Record(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::censys_definitions::HostQuery,::censys_definitions::Delta>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedDelHostIPv4Record(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::zsearch::HostQuery,::zsearch::Delta>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_GetAllIPv4Records : public BaseClass {
@@ -2415,18 +2415,18 @@ class QueryService final {
    public:
     WithStreamedUnaryMethod_GetAllIPv4Records() {
       ::grpc::Service::MarkMethodStreamed(3,
-        new ::grpc::StreamedUnaryHandler< ::censys_definitions::HostQuery, ::censys_definitions::HostQueryResponse>(std::bind(&WithStreamedUnaryMethod_GetAllIPv4Records<BaseClass>::StreamedGetAllIPv4Records, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::StreamedUnaryHandler< ::zsearch::HostQuery, ::zsearch::HostQueryResponse>(std::bind(&WithStreamedUnaryMethod_GetAllIPv4Records<BaseClass>::StreamedGetAllIPv4Records, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_GetAllIPv4Records() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status GetAllIPv4Records(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::HostQueryResponse* response) final override {
+    ::grpc::Status GetAllIPv4Records(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::HostQueryResponse* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedGetAllIPv4Records(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::censys_definitions::HostQuery,::censys_definitions::HostQueryResponse>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedGetAllIPv4Records(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::zsearch::HostQuery,::zsearch::HostQueryResponse>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_GetHostIPv4Delta : public BaseClass {
@@ -2435,18 +2435,18 @@ class QueryService final {
    public:
     WithStreamedUnaryMethod_GetHostIPv4Delta() {
       ::grpc::Service::MarkMethodStreamed(4,
-        new ::grpc::StreamedUnaryHandler< ::censys_definitions::HostQuery, ::censys_definitions::Delta>(std::bind(&WithStreamedUnaryMethod_GetHostIPv4Delta<BaseClass>::StreamedGetHostIPv4Delta, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::StreamedUnaryHandler< ::zsearch::HostQuery, ::zsearch::Delta>(std::bind(&WithStreamedUnaryMethod_GetHostIPv4Delta<BaseClass>::StreamedGetHostIPv4Delta, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_GetHostIPv4Delta() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status GetHostIPv4Delta(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::Delta* response) final override {
+    ::grpc::Status GetHostIPv4Delta(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::Delta* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedGetHostIPv4Delta(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::censys_definitions::HostQuery,::censys_definitions::Delta>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedGetHostIPv4Delta(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::zsearch::HostQuery,::zsearch::Delta>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_GetHostDomainRecord : public BaseClass {
@@ -2455,18 +2455,18 @@ class QueryService final {
    public:
     WithStreamedUnaryMethod_GetHostDomainRecord() {
       ::grpc::Service::MarkMethodStreamed(5,
-        new ::grpc::StreamedUnaryHandler< ::censys_definitions::HostQuery, ::censys_definitions::HostQueryResponse>(std::bind(&WithStreamedUnaryMethod_GetHostDomainRecord<BaseClass>::StreamedGetHostDomainRecord, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::StreamedUnaryHandler< ::zsearch::HostQuery, ::zsearch::HostQueryResponse>(std::bind(&WithStreamedUnaryMethod_GetHostDomainRecord<BaseClass>::StreamedGetHostDomainRecord, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_GetHostDomainRecord() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status GetHostDomainRecord(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::HostQueryResponse* response) final override {
+    ::grpc::Status GetHostDomainRecord(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::HostQueryResponse* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedGetHostDomainRecord(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::censys_definitions::HostQuery,::censys_definitions::HostQueryResponse>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedGetHostDomainRecord(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::zsearch::HostQuery,::zsearch::HostQueryResponse>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_PutHostDomainRecord : public BaseClass {
@@ -2475,18 +2475,18 @@ class QueryService final {
    public:
     WithStreamedUnaryMethod_PutHostDomainRecord() {
       ::grpc::Service::MarkMethodStreamed(6,
-        new ::grpc::StreamedUnaryHandler< ::censys_definitions::Record, ::censys_definitions::Delta>(std::bind(&WithStreamedUnaryMethod_PutHostDomainRecord<BaseClass>::StreamedPutHostDomainRecord, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::StreamedUnaryHandler< ::zsearch::Record, ::zsearch::Delta>(std::bind(&WithStreamedUnaryMethod_PutHostDomainRecord<BaseClass>::StreamedPutHostDomainRecord, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_PutHostDomainRecord() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status PutHostDomainRecord(::grpc::ServerContext* context, const ::censys_definitions::Record* request, ::censys_definitions::Delta* response) final override {
+    ::grpc::Status PutHostDomainRecord(::grpc::ServerContext* context, const ::zsearch::Record* request, ::zsearch::Delta* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedPutHostDomainRecord(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::censys_definitions::Record,::censys_definitions::Delta>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedPutHostDomainRecord(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::zsearch::Record,::zsearch::Delta>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_DelHostDomainRecord : public BaseClass {
@@ -2495,18 +2495,18 @@ class QueryService final {
    public:
     WithStreamedUnaryMethod_DelHostDomainRecord() {
       ::grpc::Service::MarkMethodStreamed(7,
-        new ::grpc::StreamedUnaryHandler< ::censys_definitions::HostQuery, ::censys_definitions::Delta>(std::bind(&WithStreamedUnaryMethod_DelHostDomainRecord<BaseClass>::StreamedDelHostDomainRecord, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::StreamedUnaryHandler< ::zsearch::HostQuery, ::zsearch::Delta>(std::bind(&WithStreamedUnaryMethod_DelHostDomainRecord<BaseClass>::StreamedDelHostDomainRecord, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_DelHostDomainRecord() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status DelHostDomainRecord(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::Delta* response) final override {
+    ::grpc::Status DelHostDomainRecord(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::Delta* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedDelHostDomainRecord(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::censys_definitions::HostQuery,::censys_definitions::Delta>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedDelHostDomainRecord(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::zsearch::HostQuery,::zsearch::Delta>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_GetAllDomainRecords : public BaseClass {
@@ -2515,18 +2515,18 @@ class QueryService final {
    public:
     WithStreamedUnaryMethod_GetAllDomainRecords() {
       ::grpc::Service::MarkMethodStreamed(8,
-        new ::grpc::StreamedUnaryHandler< ::censys_definitions::HostQuery, ::censys_definitions::HostQueryResponse>(std::bind(&WithStreamedUnaryMethod_GetAllDomainRecords<BaseClass>::StreamedGetAllDomainRecords, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::StreamedUnaryHandler< ::zsearch::HostQuery, ::zsearch::HostQueryResponse>(std::bind(&WithStreamedUnaryMethod_GetAllDomainRecords<BaseClass>::StreamedGetAllDomainRecords, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_GetAllDomainRecords() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status GetAllDomainRecords(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::HostQueryResponse* response) final override {
+    ::grpc::Status GetAllDomainRecords(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::HostQueryResponse* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedGetAllDomainRecords(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::censys_definitions::HostQuery,::censys_definitions::HostQueryResponse>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedGetAllDomainRecords(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::zsearch::HostQuery,::zsearch::HostQueryResponse>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_GetHostDomainDelta : public BaseClass {
@@ -2535,18 +2535,18 @@ class QueryService final {
    public:
     WithStreamedUnaryMethod_GetHostDomainDelta() {
       ::grpc::Service::MarkMethodStreamed(9,
-        new ::grpc::StreamedUnaryHandler< ::censys_definitions::HostQuery, ::censys_definitions::Delta>(std::bind(&WithStreamedUnaryMethod_GetHostDomainDelta<BaseClass>::StreamedGetHostDomainDelta, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::StreamedUnaryHandler< ::zsearch::HostQuery, ::zsearch::Delta>(std::bind(&WithStreamedUnaryMethod_GetHostDomainDelta<BaseClass>::StreamedGetHostDomainDelta, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_GetHostDomainDelta() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status GetHostDomainDelta(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::Delta* response) final override {
+    ::grpc::Status GetHostDomainDelta(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::Delta* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedGetHostDomainDelta(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::censys_definitions::HostQuery,::censys_definitions::Delta>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedGetHostDomainDelta(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::zsearch::HostQuery,::zsearch::Delta>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_GetCertificate : public BaseClass {
@@ -2555,18 +2555,18 @@ class QueryService final {
    public:
     WithStreamedUnaryMethod_GetCertificate() {
       ::grpc::Service::MarkMethodStreamed(10,
-        new ::grpc::StreamedUnaryHandler< ::censys_definitions::AnonymousQuery, ::censys_definitions::AnonymousQueryResponse>(std::bind(&WithStreamedUnaryMethod_GetCertificate<BaseClass>::StreamedGetCertificate, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::StreamedUnaryHandler< ::zsearch::AnonymousQuery, ::zsearch::AnonymousQueryResponse>(std::bind(&WithStreamedUnaryMethod_GetCertificate<BaseClass>::StreamedGetCertificate, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_GetCertificate() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status GetCertificate(::grpc::ServerContext* context, const ::censys_definitions::AnonymousQuery* request, ::censys_definitions::AnonymousQueryResponse* response) final override {
+    ::grpc::Status GetCertificate(::grpc::ServerContext* context, const ::zsearch::AnonymousQuery* request, ::zsearch::AnonymousQueryResponse* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedGetCertificate(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::censys_definitions::AnonymousQuery,::censys_definitions::AnonymousQueryResponse>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedGetCertificate(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::zsearch::AnonymousQuery,::zsearch::AnonymousQueryResponse>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_UpsertCertificate : public BaseClass {
@@ -2575,18 +2575,18 @@ class QueryService final {
    public:
     WithStreamedUnaryMethod_UpsertCertificate() {
       ::grpc::Service::MarkMethodStreamed(11,
-        new ::grpc::StreamedUnaryHandler< ::censys_definitions::AnonymousRecord, ::censys_definitions::AnonymousDelta>(std::bind(&WithStreamedUnaryMethod_UpsertCertificate<BaseClass>::StreamedUpsertCertificate, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::StreamedUnaryHandler< ::zsearch::AnonymousRecord, ::zsearch::AnonymousDelta>(std::bind(&WithStreamedUnaryMethod_UpsertCertificate<BaseClass>::StreamedUpsertCertificate, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_UpsertCertificate() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status UpsertCertificate(::grpc::ServerContext* context, const ::censys_definitions::AnonymousRecord* request, ::censys_definitions::AnonymousDelta* response) final override {
+    ::grpc::Status UpsertCertificate(::grpc::ServerContext* context, const ::zsearch::AnonymousRecord* request, ::zsearch::AnonymousDelta* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedUpsertCertificate(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::censys_definitions::AnonymousRecord,::censys_definitions::AnonymousDelta>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedUpsertCertificate(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::zsearch::AnonymousRecord,::zsearch::AnonymousDelta>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_UpsertRawCertificate : public BaseClass {
@@ -2595,18 +2595,18 @@ class QueryService final {
    public:
     WithStreamedUnaryMethod_UpsertRawCertificate() {
       ::grpc::Service::MarkMethodStreamed(12,
-        new ::grpc::StreamedUnaryHandler< ::censys_definitions::AnonymousRecord, ::censys_definitions::AnonymousDelta>(std::bind(&WithStreamedUnaryMethod_UpsertRawCertificate<BaseClass>::StreamedUpsertRawCertificate, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::StreamedUnaryHandler< ::zsearch::AnonymousRecord, ::zsearch::AnonymousDelta>(std::bind(&WithStreamedUnaryMethod_UpsertRawCertificate<BaseClass>::StreamedUpsertRawCertificate, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_UpsertRawCertificate() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status UpsertRawCertificate(::grpc::ServerContext* context, const ::censys_definitions::AnonymousRecord* request, ::censys_definitions::AnonymousDelta* response) final override {
+    ::grpc::Status UpsertRawCertificate(::grpc::ServerContext* context, const ::zsearch::AnonymousRecord* request, ::zsearch::AnonymousDelta* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedUpsertRawCertificate(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::censys_definitions::AnonymousRecord,::censys_definitions::AnonymousDelta>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedUpsertRawCertificate(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::zsearch::AnonymousRecord,::zsearch::AnonymousDelta>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_GetCryptographicKey : public BaseClass {
@@ -2615,18 +2615,18 @@ class QueryService final {
    public:
     WithStreamedUnaryMethod_GetCryptographicKey() {
       ::grpc::Service::MarkMethodStreamed(13,
-        new ::grpc::StreamedUnaryHandler< ::censys_definitions::AnonymousQuery, ::censys_definitions::AnonymousQueryResponse>(std::bind(&WithStreamedUnaryMethod_GetCryptographicKey<BaseClass>::StreamedGetCryptographicKey, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::StreamedUnaryHandler< ::zsearch::AnonymousQuery, ::zsearch::AnonymousQueryResponse>(std::bind(&WithStreamedUnaryMethod_GetCryptographicKey<BaseClass>::StreamedGetCryptographicKey, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_GetCryptographicKey() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status GetCryptographicKey(::grpc::ServerContext* context, const ::censys_definitions::AnonymousQuery* request, ::censys_definitions::AnonymousQueryResponse* response) final override {
+    ::grpc::Status GetCryptographicKey(::grpc::ServerContext* context, const ::zsearch::AnonymousQuery* request, ::zsearch::AnonymousQueryResponse* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedGetCryptographicKey(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::censys_definitions::AnonymousQuery,::censys_definitions::AnonymousQueryResponse>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedGetCryptographicKey(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::zsearch::AnonymousQuery,::zsearch::AnonymousQueryResponse>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_UpsertCryptographicKey : public BaseClass {
@@ -2635,18 +2635,18 @@ class QueryService final {
    public:
     WithStreamedUnaryMethod_UpsertCryptographicKey() {
       ::grpc::Service::MarkMethodStreamed(14,
-        new ::grpc::StreamedUnaryHandler< ::censys_definitions::AnonymousRecord, ::censys_definitions::AnonymousDelta>(std::bind(&WithStreamedUnaryMethod_UpsertCryptographicKey<BaseClass>::StreamedUpsertCryptographicKey, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::StreamedUnaryHandler< ::zsearch::AnonymousRecord, ::zsearch::AnonymousDelta>(std::bind(&WithStreamedUnaryMethod_UpsertCryptographicKey<BaseClass>::StreamedUpsertCryptographicKey, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_UpsertCryptographicKey() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status UpsertCryptographicKey(::grpc::ServerContext* context, const ::censys_definitions::AnonymousRecord* request, ::censys_definitions::AnonymousDelta* response) final override {
+    ::grpc::Status UpsertCryptographicKey(::grpc::ServerContext* context, const ::zsearch::AnonymousRecord* request, ::zsearch::AnonymousDelta* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedUpsertCryptographicKey(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::censys_definitions::AnonymousRecord,::censys_definitions::AnonymousDelta>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedUpsertCryptographicKey(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::zsearch::AnonymousRecord,::zsearch::AnonymousDelta>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_GetPublicLocation : public BaseClass {
@@ -2655,18 +2655,18 @@ class QueryService final {
    public:
     WithStreamedUnaryMethod_GetPublicLocation() {
       ::grpc::Service::MarkMethodStreamed(15,
-        new ::grpc::StreamedUnaryHandler< ::censys_definitions::HostQuery, ::censys_definitions::LocationAtom>(std::bind(&WithStreamedUnaryMethod_GetPublicLocation<BaseClass>::StreamedGetPublicLocation, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::StreamedUnaryHandler< ::zsearch::HostQuery, ::zsearch::LocationAtom>(std::bind(&WithStreamedUnaryMethod_GetPublicLocation<BaseClass>::StreamedGetPublicLocation, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_GetPublicLocation() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status GetPublicLocation(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::LocationAtom* response) final override {
+    ::grpc::Status GetPublicLocation(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::LocationAtom* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedGetPublicLocation(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::censys_definitions::HostQuery,::censys_definitions::LocationAtom>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedGetPublicLocation(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::zsearch::HostQuery,::zsearch::LocationAtom>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_GetRestrictedLocation : public BaseClass {
@@ -2675,18 +2675,18 @@ class QueryService final {
    public:
     WithStreamedUnaryMethod_GetRestrictedLocation() {
       ::grpc::Service::MarkMethodStreamed(16,
-        new ::grpc::StreamedUnaryHandler< ::censys_definitions::HostQuery, ::censys_definitions::LocationAtom>(std::bind(&WithStreamedUnaryMethod_GetRestrictedLocation<BaseClass>::StreamedGetRestrictedLocation, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::StreamedUnaryHandler< ::zsearch::HostQuery, ::zsearch::LocationAtom>(std::bind(&WithStreamedUnaryMethod_GetRestrictedLocation<BaseClass>::StreamedGetRestrictedLocation, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_GetRestrictedLocation() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status GetRestrictedLocation(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::LocationAtom* response) final override {
+    ::grpc::Status GetRestrictedLocation(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::LocationAtom* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedGetRestrictedLocation(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::censys_definitions::HostQuery,::censys_definitions::LocationAtom>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedGetRestrictedLocation(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::zsearch::HostQuery,::zsearch::LocationAtom>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_GetWHOIS : public BaseClass {
@@ -2695,18 +2695,18 @@ class QueryService final {
    public:
     WithStreamedUnaryMethod_GetWHOIS() {
       ::grpc::Service::MarkMethodStreamed(17,
-        new ::grpc::StreamedUnaryHandler< ::censys_definitions::HostQuery, ::censys_definitions::Record>(std::bind(&WithStreamedUnaryMethod_GetWHOIS<BaseClass>::StreamedGetWHOIS, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::StreamedUnaryHandler< ::zsearch::HostQuery, ::zsearch::Record>(std::bind(&WithStreamedUnaryMethod_GetWHOIS<BaseClass>::StreamedGetWHOIS, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_GetWHOIS() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status GetWHOIS(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::Record* response) final override {
+    ::grpc::Status GetWHOIS(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::Record* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedGetWHOIS(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::censys_definitions::HostQuery,::censys_definitions::Record>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedGetWHOIS(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::zsearch::HostQuery,::zsearch::Record>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_GetUserMetadata : public BaseClass {
@@ -2715,18 +2715,18 @@ class QueryService final {
    public:
     WithStreamedUnaryMethod_GetUserMetadata() {
       ::grpc::Service::MarkMethodStreamed(18,
-        new ::grpc::StreamedUnaryHandler< ::censys_definitions::HostQuery, ::censys_definitions::Record>(std::bind(&WithStreamedUnaryMethod_GetUserMetadata<BaseClass>::StreamedGetUserMetadata, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::StreamedUnaryHandler< ::zsearch::HostQuery, ::zsearch::Record>(std::bind(&WithStreamedUnaryMethod_GetUserMetadata<BaseClass>::StreamedGetUserMetadata, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_GetUserMetadata() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status GetUserMetadata(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::Record* response) final override {
+    ::grpc::Status GetUserMetadata(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::Record* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedGetUserMetadata(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::censys_definitions::HostQuery,::censys_definitions::Record>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedGetUserMetadata(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::zsearch::HostQuery,::zsearch::Record>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_PutUserMetadata : public BaseClass {
@@ -2735,18 +2735,18 @@ class QueryService final {
    public:
     WithStreamedUnaryMethod_PutUserMetadata() {
       ::grpc::Service::MarkMethodStreamed(19,
-        new ::grpc::StreamedUnaryHandler< ::censys_definitions::Record, ::censys_definitions::CommandReply>(std::bind(&WithStreamedUnaryMethod_PutUserMetadata<BaseClass>::StreamedPutUserMetadata, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::StreamedUnaryHandler< ::zsearch::Record, ::zsearch::CommandReply>(std::bind(&WithStreamedUnaryMethod_PutUserMetadata<BaseClass>::StreamedPutUserMetadata, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_PutUserMetadata() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status PutUserMetadata(::grpc::ServerContext* context, const ::censys_definitions::Record* request, ::censys_definitions::CommandReply* response) final override {
+    ::grpc::Status PutUserMetadata(::grpc::ServerContext* context, const ::zsearch::Record* request, ::zsearch::CommandReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedPutUserMetadata(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::censys_definitions::Record,::censys_definitions::CommandReply>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedPutUserMetadata(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::zsearch::Record,::zsearch::CommandReply>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
   class WithStreamedUnaryMethod_GetRootStore : public BaseClass {
@@ -2755,25 +2755,25 @@ class QueryService final {
    public:
     WithStreamedUnaryMethod_GetRootStore() {
       ::grpc::Service::MarkMethodStreamed(20,
-        new ::grpc::StreamedUnaryHandler< ::censys_definitions::RootStoreQuery, ::censys_definitions::RootStoreReply>(std::bind(&WithStreamedUnaryMethod_GetRootStore<BaseClass>::StreamedGetRootStore, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::StreamedUnaryHandler< ::zsearch::RootStoreQuery, ::zsearch::RootStoreReply>(std::bind(&WithStreamedUnaryMethod_GetRootStore<BaseClass>::StreamedGetRootStore, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_GetRootStore() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status GetRootStore(::grpc::ServerContext* context, const ::censys_definitions::RootStoreQuery* request, ::censys_definitions::RootStoreReply* response) final override {
+    ::grpc::Status GetRootStore(::grpc::ServerContext* context, const ::zsearch::RootStoreQuery* request, ::zsearch::RootStoreReply* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedGetRootStore(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::censys_definitions::RootStoreQuery,::censys_definitions::RootStoreReply>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedGetRootStore(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::zsearch::RootStoreQuery,::zsearch::RootStoreReply>* server_unary_streamer) = 0;
   };
   typedef WithStreamedUnaryMethod_GetHostIPv4Record<WithStreamedUnaryMethod_PutHostIPv4Record<WithStreamedUnaryMethod_DelHostIPv4Record<WithStreamedUnaryMethod_GetAllIPv4Records<WithStreamedUnaryMethod_GetHostIPv4Delta<WithStreamedUnaryMethod_GetHostDomainRecord<WithStreamedUnaryMethod_PutHostDomainRecord<WithStreamedUnaryMethod_DelHostDomainRecord<WithStreamedUnaryMethod_GetAllDomainRecords<WithStreamedUnaryMethod_GetHostDomainDelta<WithStreamedUnaryMethod_GetCertificate<WithStreamedUnaryMethod_UpsertCertificate<WithStreamedUnaryMethod_UpsertRawCertificate<WithStreamedUnaryMethod_GetCryptographicKey<WithStreamedUnaryMethod_UpsertCryptographicKey<WithStreamedUnaryMethod_GetPublicLocation<WithStreamedUnaryMethod_GetRestrictedLocation<WithStreamedUnaryMethod_GetWHOIS<WithStreamedUnaryMethod_GetUserMetadata<WithStreamedUnaryMethod_PutUserMetadata<WithStreamedUnaryMethod_GetRootStore<Service > > > > > > > > > > > > > > > > > > > > > StreamedUnaryService;
   typedef Service SplitStreamedService;
   typedef WithStreamedUnaryMethod_GetHostIPv4Record<WithStreamedUnaryMethod_PutHostIPv4Record<WithStreamedUnaryMethod_DelHostIPv4Record<WithStreamedUnaryMethod_GetAllIPv4Records<WithStreamedUnaryMethod_GetHostIPv4Delta<WithStreamedUnaryMethod_GetHostDomainRecord<WithStreamedUnaryMethod_PutHostDomainRecord<WithStreamedUnaryMethod_DelHostDomainRecord<WithStreamedUnaryMethod_GetAllDomainRecords<WithStreamedUnaryMethod_GetHostDomainDelta<WithStreamedUnaryMethod_GetCertificate<WithStreamedUnaryMethod_UpsertCertificate<WithStreamedUnaryMethod_UpsertRawCertificate<WithStreamedUnaryMethod_GetCryptographicKey<WithStreamedUnaryMethod_UpsertCryptographicKey<WithStreamedUnaryMethod_GetPublicLocation<WithStreamedUnaryMethod_GetRestrictedLocation<WithStreamedUnaryMethod_GetWHOIS<WithStreamedUnaryMethod_GetUserMetadata<WithStreamedUnaryMethod_PutUserMetadata<WithStreamedUnaryMethod_GetRootStore<Service > > > > > > > > > > > > > > > > > > > > > StreamedService;
 };
 
-}  // namespace censys_definitions
+}  // namespace zsearch
 
 
 #endif  // GRPC_search_2eproto__INCLUDED

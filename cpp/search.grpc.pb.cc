@@ -13,27 +13,27 @@
 #include <grpc++/impl/codegen/rpc_service_method.h>
 #include <grpc++/impl/codegen/service_type.h>
 #include <grpc++/impl/codegen/sync_stream.h>
-namespace censys_definitions {
+namespace zsearch {
 
 static const char* AdminService_method_names[] = {
-  "/censys_definitions.AdminService/Shutdown",
-  "/censys_definitions.AdminService/Status",
-  "/censys_definitions.AdminService/Statistics",
-  "/censys_definitions.AdminService/PruneIPv4",
-  "/censys_definitions.AdminService/PruneDomain",
-  "/censys_definitions.AdminService/UpdateASData",
-  "/censys_definitions.AdminService/UpdateLocationData",
-  "/censys_definitions.AdminService/ValidateCertificates",
-  "/censys_definitions.AdminService/FixCertificateSource",
-  "/censys_definitions.AdminService/DumpIPv4ToJSON",
-  "/censys_definitions.AdminService/DumpDomainToJSON",
-  "/censys_definitions.AdminService/DumpCertificatesToJSON",
-  "/censys_definitions.AdminService/DumpKeysToJSON",
-  "/censys_definitions.AdminService/RegenerateIPv4Deltas",
-  "/censys_definitions.AdminService/RegenerateDomainDeltas",
-  "/censys_definitions.AdminService/RegenerateCertificateDeltas",
-  "/censys_definitions.AdminService/RegenerateSingleCertificateDelta",
-  "/censys_definitions.AdminService/Ping",
+  "/zsearch.AdminService/Shutdown",
+  "/zsearch.AdminService/Status",
+  "/zsearch.AdminService/Statistics",
+  "/zsearch.AdminService/PruneIPv4",
+  "/zsearch.AdminService/PruneDomain",
+  "/zsearch.AdminService/UpdateASData",
+  "/zsearch.AdminService/UpdateLocationData",
+  "/zsearch.AdminService/ValidateCertificates",
+  "/zsearch.AdminService/FixCertificateSource",
+  "/zsearch.AdminService/DumpIPv4ToJSON",
+  "/zsearch.AdminService/DumpDomainToJSON",
+  "/zsearch.AdminService/DumpCertificatesToJSON",
+  "/zsearch.AdminService/DumpKeysToJSON",
+  "/zsearch.AdminService/RegenerateIPv4Deltas",
+  "/zsearch.AdminService/RegenerateDomainDeltas",
+  "/zsearch.AdminService/RegenerateCertificateDeltas",
+  "/zsearch.AdminService/RegenerateSingleCertificateDelta",
+  "/zsearch.AdminService/Ping",
 };
 
 std::unique_ptr< AdminService::Stub> AdminService::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
@@ -62,366 +62,366 @@ AdminService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& chann
   , rpcmethod_Ping_(AdminService_method_names[17], ::grpc::RpcMethod::NORMAL_RPC, channel)
   {}
 
-::grpc::Status AdminService::Stub::Shutdown(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::censys_definitions::CommandReply* response) {
+::grpc::Status AdminService::Stub::Shutdown(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) {
   return ::grpc::BlockingUnaryCall(channel_.get(), rpcmethod_Shutdown_, context, request, response);
 }
 
-::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>* AdminService::Stub::AsyncShutdownRaw(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) {
-  return new ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>(channel_.get(), cq, rpcmethod_Shutdown_, context, request);
+::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AdminService::Stub::AsyncShutdownRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>(channel_.get(), cq, rpcmethod_Shutdown_, context, request);
 }
 
-::grpc::Status AdminService::Stub::Status(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::censys_definitions::CommandReply* response) {
+::grpc::Status AdminService::Stub::Status(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) {
   return ::grpc::BlockingUnaryCall(channel_.get(), rpcmethod_Status_, context, request, response);
 }
 
-::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>* AdminService::Stub::AsyncStatusRaw(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) {
-  return new ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>(channel_.get(), cq, rpcmethod_Status_, context, request);
+::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AdminService::Stub::AsyncStatusRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>(channel_.get(), cq, rpcmethod_Status_, context, request);
 }
 
-::grpc::Status AdminService::Stub::Statistics(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::censys_definitions::CommandReply* response) {
+::grpc::Status AdminService::Stub::Statistics(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) {
   return ::grpc::BlockingUnaryCall(channel_.get(), rpcmethod_Statistics_, context, request, response);
 }
 
-::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>* AdminService::Stub::AsyncStatisticsRaw(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) {
-  return new ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>(channel_.get(), cq, rpcmethod_Statistics_, context, request);
+::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AdminService::Stub::AsyncStatisticsRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>(channel_.get(), cq, rpcmethod_Statistics_, context, request);
 }
 
-::grpc::Status AdminService::Stub::PruneIPv4(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::censys_definitions::CommandReply* response) {
+::grpc::Status AdminService::Stub::PruneIPv4(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) {
   return ::grpc::BlockingUnaryCall(channel_.get(), rpcmethod_PruneIPv4_, context, request, response);
 }
 
-::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>* AdminService::Stub::AsyncPruneIPv4Raw(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) {
-  return new ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>(channel_.get(), cq, rpcmethod_PruneIPv4_, context, request);
+::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AdminService::Stub::AsyncPruneIPv4Raw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>(channel_.get(), cq, rpcmethod_PruneIPv4_, context, request);
 }
 
-::grpc::Status AdminService::Stub::PruneDomain(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::censys_definitions::CommandReply* response) {
+::grpc::Status AdminService::Stub::PruneDomain(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) {
   return ::grpc::BlockingUnaryCall(channel_.get(), rpcmethod_PruneDomain_, context, request, response);
 }
 
-::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>* AdminService::Stub::AsyncPruneDomainRaw(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) {
-  return new ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>(channel_.get(), cq, rpcmethod_PruneDomain_, context, request);
+::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AdminService::Stub::AsyncPruneDomainRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>(channel_.get(), cq, rpcmethod_PruneDomain_, context, request);
 }
 
-::grpc::Status AdminService::Stub::UpdateASData(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::censys_definitions::CommandReply* response) {
+::grpc::Status AdminService::Stub::UpdateASData(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) {
   return ::grpc::BlockingUnaryCall(channel_.get(), rpcmethod_UpdateASData_, context, request, response);
 }
 
-::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>* AdminService::Stub::AsyncUpdateASDataRaw(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) {
-  return new ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>(channel_.get(), cq, rpcmethod_UpdateASData_, context, request);
+::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AdminService::Stub::AsyncUpdateASDataRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>(channel_.get(), cq, rpcmethod_UpdateASData_, context, request);
 }
 
-::grpc::Status AdminService::Stub::UpdateLocationData(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::censys_definitions::CommandReply* response) {
+::grpc::Status AdminService::Stub::UpdateLocationData(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) {
   return ::grpc::BlockingUnaryCall(channel_.get(), rpcmethod_UpdateLocationData_, context, request, response);
 }
 
-::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>* AdminService::Stub::AsyncUpdateLocationDataRaw(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) {
-  return new ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>(channel_.get(), cq, rpcmethod_UpdateLocationData_, context, request);
+::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AdminService::Stub::AsyncUpdateLocationDataRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>(channel_.get(), cq, rpcmethod_UpdateLocationData_, context, request);
 }
 
-::grpc::Status AdminService::Stub::ValidateCertificates(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::censys_definitions::CommandReply* response) {
+::grpc::Status AdminService::Stub::ValidateCertificates(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) {
   return ::grpc::BlockingUnaryCall(channel_.get(), rpcmethod_ValidateCertificates_, context, request, response);
 }
 
-::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>* AdminService::Stub::AsyncValidateCertificatesRaw(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) {
-  return new ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>(channel_.get(), cq, rpcmethod_ValidateCertificates_, context, request);
+::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AdminService::Stub::AsyncValidateCertificatesRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>(channel_.get(), cq, rpcmethod_ValidateCertificates_, context, request);
 }
 
-::grpc::Status AdminService::Stub::FixCertificateSource(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::censys_definitions::CommandReply* response) {
+::grpc::Status AdminService::Stub::FixCertificateSource(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) {
   return ::grpc::BlockingUnaryCall(channel_.get(), rpcmethod_FixCertificateSource_, context, request, response);
 }
 
-::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>* AdminService::Stub::AsyncFixCertificateSourceRaw(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) {
-  return new ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>(channel_.get(), cq, rpcmethod_FixCertificateSource_, context, request);
+::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AdminService::Stub::AsyncFixCertificateSourceRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>(channel_.get(), cq, rpcmethod_FixCertificateSource_, context, request);
 }
 
-::grpc::Status AdminService::Stub::DumpIPv4ToJSON(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::censys_definitions::CommandReply* response) {
+::grpc::Status AdminService::Stub::DumpIPv4ToJSON(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) {
   return ::grpc::BlockingUnaryCall(channel_.get(), rpcmethod_DumpIPv4ToJSON_, context, request, response);
 }
 
-::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>* AdminService::Stub::AsyncDumpIPv4ToJSONRaw(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) {
-  return new ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>(channel_.get(), cq, rpcmethod_DumpIPv4ToJSON_, context, request);
+::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AdminService::Stub::AsyncDumpIPv4ToJSONRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>(channel_.get(), cq, rpcmethod_DumpIPv4ToJSON_, context, request);
 }
 
-::grpc::Status AdminService::Stub::DumpDomainToJSON(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::censys_definitions::CommandReply* response) {
+::grpc::Status AdminService::Stub::DumpDomainToJSON(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) {
   return ::grpc::BlockingUnaryCall(channel_.get(), rpcmethod_DumpDomainToJSON_, context, request, response);
 }
 
-::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>* AdminService::Stub::AsyncDumpDomainToJSONRaw(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) {
-  return new ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>(channel_.get(), cq, rpcmethod_DumpDomainToJSON_, context, request);
+::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AdminService::Stub::AsyncDumpDomainToJSONRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>(channel_.get(), cq, rpcmethod_DumpDomainToJSON_, context, request);
 }
 
-::grpc::Status AdminService::Stub::DumpCertificatesToJSON(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::censys_definitions::CommandReply* response) {
+::grpc::Status AdminService::Stub::DumpCertificatesToJSON(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) {
   return ::grpc::BlockingUnaryCall(channel_.get(), rpcmethod_DumpCertificatesToJSON_, context, request, response);
 }
 
-::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>* AdminService::Stub::AsyncDumpCertificatesToJSONRaw(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) {
-  return new ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>(channel_.get(), cq, rpcmethod_DumpCertificatesToJSON_, context, request);
+::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AdminService::Stub::AsyncDumpCertificatesToJSONRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>(channel_.get(), cq, rpcmethod_DumpCertificatesToJSON_, context, request);
 }
 
-::grpc::Status AdminService::Stub::DumpKeysToJSON(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::censys_definitions::CommandReply* response) {
+::grpc::Status AdminService::Stub::DumpKeysToJSON(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) {
   return ::grpc::BlockingUnaryCall(channel_.get(), rpcmethod_DumpKeysToJSON_, context, request, response);
 }
 
-::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>* AdminService::Stub::AsyncDumpKeysToJSONRaw(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) {
-  return new ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>(channel_.get(), cq, rpcmethod_DumpKeysToJSON_, context, request);
+::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AdminService::Stub::AsyncDumpKeysToJSONRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>(channel_.get(), cq, rpcmethod_DumpKeysToJSON_, context, request);
 }
 
-::grpc::Status AdminService::Stub::RegenerateIPv4Deltas(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::censys_definitions::CommandReply* response) {
+::grpc::Status AdminService::Stub::RegenerateIPv4Deltas(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) {
   return ::grpc::BlockingUnaryCall(channel_.get(), rpcmethod_RegenerateIPv4Deltas_, context, request, response);
 }
 
-::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>* AdminService::Stub::AsyncRegenerateIPv4DeltasRaw(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) {
-  return new ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>(channel_.get(), cq, rpcmethod_RegenerateIPv4Deltas_, context, request);
+::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AdminService::Stub::AsyncRegenerateIPv4DeltasRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>(channel_.get(), cq, rpcmethod_RegenerateIPv4Deltas_, context, request);
 }
 
-::grpc::Status AdminService::Stub::RegenerateDomainDeltas(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::censys_definitions::CommandReply* response) {
+::grpc::Status AdminService::Stub::RegenerateDomainDeltas(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) {
   return ::grpc::BlockingUnaryCall(channel_.get(), rpcmethod_RegenerateDomainDeltas_, context, request, response);
 }
 
-::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>* AdminService::Stub::AsyncRegenerateDomainDeltasRaw(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) {
-  return new ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>(channel_.get(), cq, rpcmethod_RegenerateDomainDeltas_, context, request);
+::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AdminService::Stub::AsyncRegenerateDomainDeltasRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>(channel_.get(), cq, rpcmethod_RegenerateDomainDeltas_, context, request);
 }
 
-::grpc::Status AdminService::Stub::RegenerateCertificateDeltas(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::censys_definitions::CommandReply* response) {
+::grpc::Status AdminService::Stub::RegenerateCertificateDeltas(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) {
   return ::grpc::BlockingUnaryCall(channel_.get(), rpcmethod_RegenerateCertificateDeltas_, context, request, response);
 }
 
-::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>* AdminService::Stub::AsyncRegenerateCertificateDeltasRaw(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) {
-  return new ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>(channel_.get(), cq, rpcmethod_RegenerateCertificateDeltas_, context, request);
+::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AdminService::Stub::AsyncRegenerateCertificateDeltasRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>(channel_.get(), cq, rpcmethod_RegenerateCertificateDeltas_, context, request);
 }
 
-::grpc::Status AdminService::Stub::RegenerateSingleCertificateDelta(::grpc::ClientContext* context, const ::censys_definitions::AnonymousQuery& request, ::censys_definitions::CommandReply* response) {
+::grpc::Status AdminService::Stub::RegenerateSingleCertificateDelta(::grpc::ClientContext* context, const ::zsearch::AnonymousQuery& request, ::zsearch::CommandReply* response) {
   return ::grpc::BlockingUnaryCall(channel_.get(), rpcmethod_RegenerateSingleCertificateDelta_, context, request, response);
 }
 
-::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>* AdminService::Stub::AsyncRegenerateSingleCertificateDeltaRaw(::grpc::ClientContext* context, const ::censys_definitions::AnonymousQuery& request, ::grpc::CompletionQueue* cq) {
-  return new ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>(channel_.get(), cq, rpcmethod_RegenerateSingleCertificateDelta_, context, request);
+::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AdminService::Stub::AsyncRegenerateSingleCertificateDeltaRaw(::grpc::ClientContext* context, const ::zsearch::AnonymousQuery& request, ::grpc::CompletionQueue* cq) {
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>(channel_.get(), cq, rpcmethod_RegenerateSingleCertificateDelta_, context, request);
 }
 
-::grpc::Status AdminService::Stub::Ping(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::censys_definitions::CommandReply* response) {
+::grpc::Status AdminService::Stub::Ping(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) {
   return ::grpc::BlockingUnaryCall(channel_.get(), rpcmethod_Ping_, context, request, response);
 }
 
-::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>* AdminService::Stub::AsyncPingRaw(::grpc::ClientContext* context, const ::censys_definitions::Command& request, ::grpc::CompletionQueue* cq) {
-  return new ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>(channel_.get(), cq, rpcmethod_Ping_, context, request);
+::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AdminService::Stub::AsyncPingRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>(channel_.get(), cq, rpcmethod_Ping_, context, request);
 }
 
 AdminService::Service::Service() {
   AddMethod(new ::grpc::RpcServiceMethod(
       AdminService_method_names[0],
       ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< AdminService::Service, ::censys_definitions::Command, ::censys_definitions::CommandReply>(
+      new ::grpc::RpcMethodHandler< AdminService::Service, ::zsearch::Command, ::zsearch::CommandReply>(
           std::mem_fn(&AdminService::Service::Shutdown), this)));
   AddMethod(new ::grpc::RpcServiceMethod(
       AdminService_method_names[1],
       ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< AdminService::Service, ::censys_definitions::Command, ::censys_definitions::CommandReply>(
+      new ::grpc::RpcMethodHandler< AdminService::Service, ::zsearch::Command, ::zsearch::CommandReply>(
           std::mem_fn(&AdminService::Service::Status), this)));
   AddMethod(new ::grpc::RpcServiceMethod(
       AdminService_method_names[2],
       ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< AdminService::Service, ::censys_definitions::Command, ::censys_definitions::CommandReply>(
+      new ::grpc::RpcMethodHandler< AdminService::Service, ::zsearch::Command, ::zsearch::CommandReply>(
           std::mem_fn(&AdminService::Service::Statistics), this)));
   AddMethod(new ::grpc::RpcServiceMethod(
       AdminService_method_names[3],
       ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< AdminService::Service, ::censys_definitions::Command, ::censys_definitions::CommandReply>(
+      new ::grpc::RpcMethodHandler< AdminService::Service, ::zsearch::Command, ::zsearch::CommandReply>(
           std::mem_fn(&AdminService::Service::PruneIPv4), this)));
   AddMethod(new ::grpc::RpcServiceMethod(
       AdminService_method_names[4],
       ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< AdminService::Service, ::censys_definitions::Command, ::censys_definitions::CommandReply>(
+      new ::grpc::RpcMethodHandler< AdminService::Service, ::zsearch::Command, ::zsearch::CommandReply>(
           std::mem_fn(&AdminService::Service::PruneDomain), this)));
   AddMethod(new ::grpc::RpcServiceMethod(
       AdminService_method_names[5],
       ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< AdminService::Service, ::censys_definitions::Command, ::censys_definitions::CommandReply>(
+      new ::grpc::RpcMethodHandler< AdminService::Service, ::zsearch::Command, ::zsearch::CommandReply>(
           std::mem_fn(&AdminService::Service::UpdateASData), this)));
   AddMethod(new ::grpc::RpcServiceMethod(
       AdminService_method_names[6],
       ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< AdminService::Service, ::censys_definitions::Command, ::censys_definitions::CommandReply>(
+      new ::grpc::RpcMethodHandler< AdminService::Service, ::zsearch::Command, ::zsearch::CommandReply>(
           std::mem_fn(&AdminService::Service::UpdateLocationData), this)));
   AddMethod(new ::grpc::RpcServiceMethod(
       AdminService_method_names[7],
       ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< AdminService::Service, ::censys_definitions::Command, ::censys_definitions::CommandReply>(
+      new ::grpc::RpcMethodHandler< AdminService::Service, ::zsearch::Command, ::zsearch::CommandReply>(
           std::mem_fn(&AdminService::Service::ValidateCertificates), this)));
   AddMethod(new ::grpc::RpcServiceMethod(
       AdminService_method_names[8],
       ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< AdminService::Service, ::censys_definitions::Command, ::censys_definitions::CommandReply>(
+      new ::grpc::RpcMethodHandler< AdminService::Service, ::zsearch::Command, ::zsearch::CommandReply>(
           std::mem_fn(&AdminService::Service::FixCertificateSource), this)));
   AddMethod(new ::grpc::RpcServiceMethod(
       AdminService_method_names[9],
       ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< AdminService::Service, ::censys_definitions::Command, ::censys_definitions::CommandReply>(
+      new ::grpc::RpcMethodHandler< AdminService::Service, ::zsearch::Command, ::zsearch::CommandReply>(
           std::mem_fn(&AdminService::Service::DumpIPv4ToJSON), this)));
   AddMethod(new ::grpc::RpcServiceMethod(
       AdminService_method_names[10],
       ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< AdminService::Service, ::censys_definitions::Command, ::censys_definitions::CommandReply>(
+      new ::grpc::RpcMethodHandler< AdminService::Service, ::zsearch::Command, ::zsearch::CommandReply>(
           std::mem_fn(&AdminService::Service::DumpDomainToJSON), this)));
   AddMethod(new ::grpc::RpcServiceMethod(
       AdminService_method_names[11],
       ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< AdminService::Service, ::censys_definitions::Command, ::censys_definitions::CommandReply>(
+      new ::grpc::RpcMethodHandler< AdminService::Service, ::zsearch::Command, ::zsearch::CommandReply>(
           std::mem_fn(&AdminService::Service::DumpCertificatesToJSON), this)));
   AddMethod(new ::grpc::RpcServiceMethod(
       AdminService_method_names[12],
       ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< AdminService::Service, ::censys_definitions::Command, ::censys_definitions::CommandReply>(
+      new ::grpc::RpcMethodHandler< AdminService::Service, ::zsearch::Command, ::zsearch::CommandReply>(
           std::mem_fn(&AdminService::Service::DumpKeysToJSON), this)));
   AddMethod(new ::grpc::RpcServiceMethod(
       AdminService_method_names[13],
       ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< AdminService::Service, ::censys_definitions::Command, ::censys_definitions::CommandReply>(
+      new ::grpc::RpcMethodHandler< AdminService::Service, ::zsearch::Command, ::zsearch::CommandReply>(
           std::mem_fn(&AdminService::Service::RegenerateIPv4Deltas), this)));
   AddMethod(new ::grpc::RpcServiceMethod(
       AdminService_method_names[14],
       ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< AdminService::Service, ::censys_definitions::Command, ::censys_definitions::CommandReply>(
+      new ::grpc::RpcMethodHandler< AdminService::Service, ::zsearch::Command, ::zsearch::CommandReply>(
           std::mem_fn(&AdminService::Service::RegenerateDomainDeltas), this)));
   AddMethod(new ::grpc::RpcServiceMethod(
       AdminService_method_names[15],
       ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< AdminService::Service, ::censys_definitions::Command, ::censys_definitions::CommandReply>(
+      new ::grpc::RpcMethodHandler< AdminService::Service, ::zsearch::Command, ::zsearch::CommandReply>(
           std::mem_fn(&AdminService::Service::RegenerateCertificateDeltas), this)));
   AddMethod(new ::grpc::RpcServiceMethod(
       AdminService_method_names[16],
       ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< AdminService::Service, ::censys_definitions::AnonymousQuery, ::censys_definitions::CommandReply>(
+      new ::grpc::RpcMethodHandler< AdminService::Service, ::zsearch::AnonymousQuery, ::zsearch::CommandReply>(
           std::mem_fn(&AdminService::Service::RegenerateSingleCertificateDelta), this)));
   AddMethod(new ::grpc::RpcServiceMethod(
       AdminService_method_names[17],
       ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< AdminService::Service, ::censys_definitions::Command, ::censys_definitions::CommandReply>(
+      new ::grpc::RpcMethodHandler< AdminService::Service, ::zsearch::Command, ::zsearch::CommandReply>(
           std::mem_fn(&AdminService::Service::Ping), this)));
 }
 
 AdminService::Service::~Service() {
 }
 
-::grpc::Status AdminService::Service::Shutdown(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) {
+::grpc::Status AdminService::Service::Shutdown(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status AdminService::Service::Status(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) {
+::grpc::Status AdminService::Service::Status(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status AdminService::Service::Statistics(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) {
+::grpc::Status AdminService::Service::Statistics(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status AdminService::Service::PruneIPv4(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) {
+::grpc::Status AdminService::Service::PruneIPv4(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status AdminService::Service::PruneDomain(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) {
+::grpc::Status AdminService::Service::PruneDomain(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status AdminService::Service::UpdateASData(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) {
+::grpc::Status AdminService::Service::UpdateASData(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status AdminService::Service::UpdateLocationData(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) {
+::grpc::Status AdminService::Service::UpdateLocationData(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status AdminService::Service::ValidateCertificates(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) {
+::grpc::Status AdminService::Service::ValidateCertificates(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status AdminService::Service::FixCertificateSource(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) {
+::grpc::Status AdminService::Service::FixCertificateSource(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status AdminService::Service::DumpIPv4ToJSON(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) {
+::grpc::Status AdminService::Service::DumpIPv4ToJSON(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status AdminService::Service::DumpDomainToJSON(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) {
+::grpc::Status AdminService::Service::DumpDomainToJSON(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status AdminService::Service::DumpCertificatesToJSON(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) {
+::grpc::Status AdminService::Service::DumpCertificatesToJSON(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status AdminService::Service::DumpKeysToJSON(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) {
+::grpc::Status AdminService::Service::DumpKeysToJSON(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status AdminService::Service::RegenerateIPv4Deltas(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) {
+::grpc::Status AdminService::Service::RegenerateIPv4Deltas(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status AdminService::Service::RegenerateDomainDeltas(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) {
+::grpc::Status AdminService::Service::RegenerateDomainDeltas(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status AdminService::Service::RegenerateCertificateDeltas(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) {
+::grpc::Status AdminService::Service::RegenerateCertificateDeltas(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status AdminService::Service::RegenerateSingleCertificateDelta(::grpc::ServerContext* context, const ::censys_definitions::AnonymousQuery* request, ::censys_definitions::CommandReply* response) {
+::grpc::Status AdminService::Service::RegenerateSingleCertificateDelta(::grpc::ServerContext* context, const ::zsearch::AnonymousQuery* request, ::zsearch::CommandReply* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status AdminService::Service::Ping(::grpc::ServerContext* context, const ::censys_definitions::Command* request, ::censys_definitions::CommandReply* response) {
+::grpc::Status AdminService::Service::Ping(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) {
   (void) context;
   (void) request;
   (void) response;
@@ -430,27 +430,27 @@ AdminService::Service::~Service() {
 
 
 static const char* QueryService_method_names[] = {
-  "/censys_definitions.QueryService/GetHostIPv4Record",
-  "/censys_definitions.QueryService/PutHostIPv4Record",
-  "/censys_definitions.QueryService/DelHostIPv4Record",
-  "/censys_definitions.QueryService/GetAllIPv4Records",
-  "/censys_definitions.QueryService/GetHostIPv4Delta",
-  "/censys_definitions.QueryService/GetHostDomainRecord",
-  "/censys_definitions.QueryService/PutHostDomainRecord",
-  "/censys_definitions.QueryService/DelHostDomainRecord",
-  "/censys_definitions.QueryService/GetAllDomainRecords",
-  "/censys_definitions.QueryService/GetHostDomainDelta",
-  "/censys_definitions.QueryService/GetCertificate",
-  "/censys_definitions.QueryService/UpsertCertificate",
-  "/censys_definitions.QueryService/UpsertRawCertificate",
-  "/censys_definitions.QueryService/GetCryptographicKey",
-  "/censys_definitions.QueryService/UpsertCryptographicKey",
-  "/censys_definitions.QueryService/GetPublicLocation",
-  "/censys_definitions.QueryService/GetRestrictedLocation",
-  "/censys_definitions.QueryService/GetWHOIS",
-  "/censys_definitions.QueryService/GetUserMetadata",
-  "/censys_definitions.QueryService/PutUserMetadata",
-  "/censys_definitions.QueryService/GetRootStore",
+  "/zsearch.QueryService/GetHostIPv4Record",
+  "/zsearch.QueryService/PutHostIPv4Record",
+  "/zsearch.QueryService/DelHostIPv4Record",
+  "/zsearch.QueryService/GetAllIPv4Records",
+  "/zsearch.QueryService/GetHostIPv4Delta",
+  "/zsearch.QueryService/GetHostDomainRecord",
+  "/zsearch.QueryService/PutHostDomainRecord",
+  "/zsearch.QueryService/DelHostDomainRecord",
+  "/zsearch.QueryService/GetAllDomainRecords",
+  "/zsearch.QueryService/GetHostDomainDelta",
+  "/zsearch.QueryService/GetCertificate",
+  "/zsearch.QueryService/UpsertCertificate",
+  "/zsearch.QueryService/UpsertRawCertificate",
+  "/zsearch.QueryService/GetCryptographicKey",
+  "/zsearch.QueryService/UpsertCryptographicKey",
+  "/zsearch.QueryService/GetPublicLocation",
+  "/zsearch.QueryService/GetRestrictedLocation",
+  "/zsearch.QueryService/GetWHOIS",
+  "/zsearch.QueryService/GetUserMetadata",
+  "/zsearch.QueryService/PutUserMetadata",
+  "/zsearch.QueryService/GetRootStore",
 };
 
 std::unique_ptr< QueryService::Stub> QueryService::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
@@ -482,426 +482,426 @@ QueryService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& chann
   , rpcmethod_GetRootStore_(QueryService_method_names[20], ::grpc::RpcMethod::NORMAL_RPC, channel)
   {}
 
-::grpc::Status QueryService::Stub::GetHostIPv4Record(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::censys_definitions::HostQueryResponse* response) {
+::grpc::Status QueryService::Stub::GetHostIPv4Record(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::zsearch::HostQueryResponse* response) {
   return ::grpc::BlockingUnaryCall(channel_.get(), rpcmethod_GetHostIPv4Record_, context, request, response);
 }
 
-::grpc::ClientAsyncResponseReader< ::censys_definitions::HostQueryResponse>* QueryService::Stub::AsyncGetHostIPv4RecordRaw(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) {
-  return new ::grpc::ClientAsyncResponseReader< ::censys_definitions::HostQueryResponse>(channel_.get(), cq, rpcmethod_GetHostIPv4Record_, context, request);
+::grpc::ClientAsyncResponseReader< ::zsearch::HostQueryResponse>* QueryService::Stub::AsyncGetHostIPv4RecordRaw(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) {
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::HostQueryResponse>(channel_.get(), cq, rpcmethod_GetHostIPv4Record_, context, request);
 }
 
-::grpc::Status QueryService::Stub::PutHostIPv4Record(::grpc::ClientContext* context, const ::censys_definitions::Record& request, ::censys_definitions::Delta* response) {
+::grpc::Status QueryService::Stub::PutHostIPv4Record(::grpc::ClientContext* context, const ::zsearch::Record& request, ::zsearch::Delta* response) {
   return ::grpc::BlockingUnaryCall(channel_.get(), rpcmethod_PutHostIPv4Record_, context, request, response);
 }
 
-::grpc::ClientAsyncResponseReader< ::censys_definitions::Delta>* QueryService::Stub::AsyncPutHostIPv4RecordRaw(::grpc::ClientContext* context, const ::censys_definitions::Record& request, ::grpc::CompletionQueue* cq) {
-  return new ::grpc::ClientAsyncResponseReader< ::censys_definitions::Delta>(channel_.get(), cq, rpcmethod_PutHostIPv4Record_, context, request);
+::grpc::ClientAsyncResponseReader< ::zsearch::Delta>* QueryService::Stub::AsyncPutHostIPv4RecordRaw(::grpc::ClientContext* context, const ::zsearch::Record& request, ::grpc::CompletionQueue* cq) {
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::Delta>(channel_.get(), cq, rpcmethod_PutHostIPv4Record_, context, request);
 }
 
-::grpc::Status QueryService::Stub::DelHostIPv4Record(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::censys_definitions::Delta* response) {
+::grpc::Status QueryService::Stub::DelHostIPv4Record(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::zsearch::Delta* response) {
   return ::grpc::BlockingUnaryCall(channel_.get(), rpcmethod_DelHostIPv4Record_, context, request, response);
 }
 
-::grpc::ClientAsyncResponseReader< ::censys_definitions::Delta>* QueryService::Stub::AsyncDelHostIPv4RecordRaw(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) {
-  return new ::grpc::ClientAsyncResponseReader< ::censys_definitions::Delta>(channel_.get(), cq, rpcmethod_DelHostIPv4Record_, context, request);
+::grpc::ClientAsyncResponseReader< ::zsearch::Delta>* QueryService::Stub::AsyncDelHostIPv4RecordRaw(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) {
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::Delta>(channel_.get(), cq, rpcmethod_DelHostIPv4Record_, context, request);
 }
 
-::grpc::Status QueryService::Stub::GetAllIPv4Records(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::censys_definitions::HostQueryResponse* response) {
+::grpc::Status QueryService::Stub::GetAllIPv4Records(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::zsearch::HostQueryResponse* response) {
   return ::grpc::BlockingUnaryCall(channel_.get(), rpcmethod_GetAllIPv4Records_, context, request, response);
 }
 
-::grpc::ClientAsyncResponseReader< ::censys_definitions::HostQueryResponse>* QueryService::Stub::AsyncGetAllIPv4RecordsRaw(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) {
-  return new ::grpc::ClientAsyncResponseReader< ::censys_definitions::HostQueryResponse>(channel_.get(), cq, rpcmethod_GetAllIPv4Records_, context, request);
+::grpc::ClientAsyncResponseReader< ::zsearch::HostQueryResponse>* QueryService::Stub::AsyncGetAllIPv4RecordsRaw(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) {
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::HostQueryResponse>(channel_.get(), cq, rpcmethod_GetAllIPv4Records_, context, request);
 }
 
-::grpc::Status QueryService::Stub::GetHostIPv4Delta(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::censys_definitions::Delta* response) {
+::grpc::Status QueryService::Stub::GetHostIPv4Delta(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::zsearch::Delta* response) {
   return ::grpc::BlockingUnaryCall(channel_.get(), rpcmethod_GetHostIPv4Delta_, context, request, response);
 }
 
-::grpc::ClientAsyncResponseReader< ::censys_definitions::Delta>* QueryService::Stub::AsyncGetHostIPv4DeltaRaw(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) {
-  return new ::grpc::ClientAsyncResponseReader< ::censys_definitions::Delta>(channel_.get(), cq, rpcmethod_GetHostIPv4Delta_, context, request);
+::grpc::ClientAsyncResponseReader< ::zsearch::Delta>* QueryService::Stub::AsyncGetHostIPv4DeltaRaw(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) {
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::Delta>(channel_.get(), cq, rpcmethod_GetHostIPv4Delta_, context, request);
 }
 
-::grpc::Status QueryService::Stub::GetHostDomainRecord(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::censys_definitions::HostQueryResponse* response) {
+::grpc::Status QueryService::Stub::GetHostDomainRecord(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::zsearch::HostQueryResponse* response) {
   return ::grpc::BlockingUnaryCall(channel_.get(), rpcmethod_GetHostDomainRecord_, context, request, response);
 }
 
-::grpc::ClientAsyncResponseReader< ::censys_definitions::HostQueryResponse>* QueryService::Stub::AsyncGetHostDomainRecordRaw(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) {
-  return new ::grpc::ClientAsyncResponseReader< ::censys_definitions::HostQueryResponse>(channel_.get(), cq, rpcmethod_GetHostDomainRecord_, context, request);
+::grpc::ClientAsyncResponseReader< ::zsearch::HostQueryResponse>* QueryService::Stub::AsyncGetHostDomainRecordRaw(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) {
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::HostQueryResponse>(channel_.get(), cq, rpcmethod_GetHostDomainRecord_, context, request);
 }
 
-::grpc::Status QueryService::Stub::PutHostDomainRecord(::grpc::ClientContext* context, const ::censys_definitions::Record& request, ::censys_definitions::Delta* response) {
+::grpc::Status QueryService::Stub::PutHostDomainRecord(::grpc::ClientContext* context, const ::zsearch::Record& request, ::zsearch::Delta* response) {
   return ::grpc::BlockingUnaryCall(channel_.get(), rpcmethod_PutHostDomainRecord_, context, request, response);
 }
 
-::grpc::ClientAsyncResponseReader< ::censys_definitions::Delta>* QueryService::Stub::AsyncPutHostDomainRecordRaw(::grpc::ClientContext* context, const ::censys_definitions::Record& request, ::grpc::CompletionQueue* cq) {
-  return new ::grpc::ClientAsyncResponseReader< ::censys_definitions::Delta>(channel_.get(), cq, rpcmethod_PutHostDomainRecord_, context, request);
+::grpc::ClientAsyncResponseReader< ::zsearch::Delta>* QueryService::Stub::AsyncPutHostDomainRecordRaw(::grpc::ClientContext* context, const ::zsearch::Record& request, ::grpc::CompletionQueue* cq) {
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::Delta>(channel_.get(), cq, rpcmethod_PutHostDomainRecord_, context, request);
 }
 
-::grpc::Status QueryService::Stub::DelHostDomainRecord(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::censys_definitions::Delta* response) {
+::grpc::Status QueryService::Stub::DelHostDomainRecord(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::zsearch::Delta* response) {
   return ::grpc::BlockingUnaryCall(channel_.get(), rpcmethod_DelHostDomainRecord_, context, request, response);
 }
 
-::grpc::ClientAsyncResponseReader< ::censys_definitions::Delta>* QueryService::Stub::AsyncDelHostDomainRecordRaw(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) {
-  return new ::grpc::ClientAsyncResponseReader< ::censys_definitions::Delta>(channel_.get(), cq, rpcmethod_DelHostDomainRecord_, context, request);
+::grpc::ClientAsyncResponseReader< ::zsearch::Delta>* QueryService::Stub::AsyncDelHostDomainRecordRaw(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) {
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::Delta>(channel_.get(), cq, rpcmethod_DelHostDomainRecord_, context, request);
 }
 
-::grpc::Status QueryService::Stub::GetAllDomainRecords(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::censys_definitions::HostQueryResponse* response) {
+::grpc::Status QueryService::Stub::GetAllDomainRecords(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::zsearch::HostQueryResponse* response) {
   return ::grpc::BlockingUnaryCall(channel_.get(), rpcmethod_GetAllDomainRecords_, context, request, response);
 }
 
-::grpc::ClientAsyncResponseReader< ::censys_definitions::HostQueryResponse>* QueryService::Stub::AsyncGetAllDomainRecordsRaw(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) {
-  return new ::grpc::ClientAsyncResponseReader< ::censys_definitions::HostQueryResponse>(channel_.get(), cq, rpcmethod_GetAllDomainRecords_, context, request);
+::grpc::ClientAsyncResponseReader< ::zsearch::HostQueryResponse>* QueryService::Stub::AsyncGetAllDomainRecordsRaw(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) {
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::HostQueryResponse>(channel_.get(), cq, rpcmethod_GetAllDomainRecords_, context, request);
 }
 
-::grpc::Status QueryService::Stub::GetHostDomainDelta(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::censys_definitions::Delta* response) {
+::grpc::Status QueryService::Stub::GetHostDomainDelta(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::zsearch::Delta* response) {
   return ::grpc::BlockingUnaryCall(channel_.get(), rpcmethod_GetHostDomainDelta_, context, request, response);
 }
 
-::grpc::ClientAsyncResponseReader< ::censys_definitions::Delta>* QueryService::Stub::AsyncGetHostDomainDeltaRaw(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) {
-  return new ::grpc::ClientAsyncResponseReader< ::censys_definitions::Delta>(channel_.get(), cq, rpcmethod_GetHostDomainDelta_, context, request);
+::grpc::ClientAsyncResponseReader< ::zsearch::Delta>* QueryService::Stub::AsyncGetHostDomainDeltaRaw(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) {
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::Delta>(channel_.get(), cq, rpcmethod_GetHostDomainDelta_, context, request);
 }
 
-::grpc::Status QueryService::Stub::GetCertificate(::grpc::ClientContext* context, const ::censys_definitions::AnonymousQuery& request, ::censys_definitions::AnonymousQueryResponse* response) {
+::grpc::Status QueryService::Stub::GetCertificate(::grpc::ClientContext* context, const ::zsearch::AnonymousQuery& request, ::zsearch::AnonymousQueryResponse* response) {
   return ::grpc::BlockingUnaryCall(channel_.get(), rpcmethod_GetCertificate_, context, request, response);
 }
 
-::grpc::ClientAsyncResponseReader< ::censys_definitions::AnonymousQueryResponse>* QueryService::Stub::AsyncGetCertificateRaw(::grpc::ClientContext* context, const ::censys_definitions::AnonymousQuery& request, ::grpc::CompletionQueue* cq) {
-  return new ::grpc::ClientAsyncResponseReader< ::censys_definitions::AnonymousQueryResponse>(channel_.get(), cq, rpcmethod_GetCertificate_, context, request);
+::grpc::ClientAsyncResponseReader< ::zsearch::AnonymousQueryResponse>* QueryService::Stub::AsyncGetCertificateRaw(::grpc::ClientContext* context, const ::zsearch::AnonymousQuery& request, ::grpc::CompletionQueue* cq) {
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::AnonymousQueryResponse>(channel_.get(), cq, rpcmethod_GetCertificate_, context, request);
 }
 
-::grpc::Status QueryService::Stub::UpsertCertificate(::grpc::ClientContext* context, const ::censys_definitions::AnonymousRecord& request, ::censys_definitions::AnonymousDelta* response) {
+::grpc::Status QueryService::Stub::UpsertCertificate(::grpc::ClientContext* context, const ::zsearch::AnonymousRecord& request, ::zsearch::AnonymousDelta* response) {
   return ::grpc::BlockingUnaryCall(channel_.get(), rpcmethod_UpsertCertificate_, context, request, response);
 }
 
-::grpc::ClientAsyncResponseReader< ::censys_definitions::AnonymousDelta>* QueryService::Stub::AsyncUpsertCertificateRaw(::grpc::ClientContext* context, const ::censys_definitions::AnonymousRecord& request, ::grpc::CompletionQueue* cq) {
-  return new ::grpc::ClientAsyncResponseReader< ::censys_definitions::AnonymousDelta>(channel_.get(), cq, rpcmethod_UpsertCertificate_, context, request);
+::grpc::ClientAsyncResponseReader< ::zsearch::AnonymousDelta>* QueryService::Stub::AsyncUpsertCertificateRaw(::grpc::ClientContext* context, const ::zsearch::AnonymousRecord& request, ::grpc::CompletionQueue* cq) {
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::AnonymousDelta>(channel_.get(), cq, rpcmethod_UpsertCertificate_, context, request);
 }
 
-::grpc::Status QueryService::Stub::UpsertRawCertificate(::grpc::ClientContext* context, const ::censys_definitions::AnonymousRecord& request, ::censys_definitions::AnonymousDelta* response) {
+::grpc::Status QueryService::Stub::UpsertRawCertificate(::grpc::ClientContext* context, const ::zsearch::AnonymousRecord& request, ::zsearch::AnonymousDelta* response) {
   return ::grpc::BlockingUnaryCall(channel_.get(), rpcmethod_UpsertRawCertificate_, context, request, response);
 }
 
-::grpc::ClientAsyncResponseReader< ::censys_definitions::AnonymousDelta>* QueryService::Stub::AsyncUpsertRawCertificateRaw(::grpc::ClientContext* context, const ::censys_definitions::AnonymousRecord& request, ::grpc::CompletionQueue* cq) {
-  return new ::grpc::ClientAsyncResponseReader< ::censys_definitions::AnonymousDelta>(channel_.get(), cq, rpcmethod_UpsertRawCertificate_, context, request);
+::grpc::ClientAsyncResponseReader< ::zsearch::AnonymousDelta>* QueryService::Stub::AsyncUpsertRawCertificateRaw(::grpc::ClientContext* context, const ::zsearch::AnonymousRecord& request, ::grpc::CompletionQueue* cq) {
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::AnonymousDelta>(channel_.get(), cq, rpcmethod_UpsertRawCertificate_, context, request);
 }
 
-::grpc::Status QueryService::Stub::GetCryptographicKey(::grpc::ClientContext* context, const ::censys_definitions::AnonymousQuery& request, ::censys_definitions::AnonymousQueryResponse* response) {
+::grpc::Status QueryService::Stub::GetCryptographicKey(::grpc::ClientContext* context, const ::zsearch::AnonymousQuery& request, ::zsearch::AnonymousQueryResponse* response) {
   return ::grpc::BlockingUnaryCall(channel_.get(), rpcmethod_GetCryptographicKey_, context, request, response);
 }
 
-::grpc::ClientAsyncResponseReader< ::censys_definitions::AnonymousQueryResponse>* QueryService::Stub::AsyncGetCryptographicKeyRaw(::grpc::ClientContext* context, const ::censys_definitions::AnonymousQuery& request, ::grpc::CompletionQueue* cq) {
-  return new ::grpc::ClientAsyncResponseReader< ::censys_definitions::AnonymousQueryResponse>(channel_.get(), cq, rpcmethod_GetCryptographicKey_, context, request);
+::grpc::ClientAsyncResponseReader< ::zsearch::AnonymousQueryResponse>* QueryService::Stub::AsyncGetCryptographicKeyRaw(::grpc::ClientContext* context, const ::zsearch::AnonymousQuery& request, ::grpc::CompletionQueue* cq) {
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::AnonymousQueryResponse>(channel_.get(), cq, rpcmethod_GetCryptographicKey_, context, request);
 }
 
-::grpc::Status QueryService::Stub::UpsertCryptographicKey(::grpc::ClientContext* context, const ::censys_definitions::AnonymousRecord& request, ::censys_definitions::AnonymousDelta* response) {
+::grpc::Status QueryService::Stub::UpsertCryptographicKey(::grpc::ClientContext* context, const ::zsearch::AnonymousRecord& request, ::zsearch::AnonymousDelta* response) {
   return ::grpc::BlockingUnaryCall(channel_.get(), rpcmethod_UpsertCryptographicKey_, context, request, response);
 }
 
-::grpc::ClientAsyncResponseReader< ::censys_definitions::AnonymousDelta>* QueryService::Stub::AsyncUpsertCryptographicKeyRaw(::grpc::ClientContext* context, const ::censys_definitions::AnonymousRecord& request, ::grpc::CompletionQueue* cq) {
-  return new ::grpc::ClientAsyncResponseReader< ::censys_definitions::AnonymousDelta>(channel_.get(), cq, rpcmethod_UpsertCryptographicKey_, context, request);
+::grpc::ClientAsyncResponseReader< ::zsearch::AnonymousDelta>* QueryService::Stub::AsyncUpsertCryptographicKeyRaw(::grpc::ClientContext* context, const ::zsearch::AnonymousRecord& request, ::grpc::CompletionQueue* cq) {
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::AnonymousDelta>(channel_.get(), cq, rpcmethod_UpsertCryptographicKey_, context, request);
 }
 
-::grpc::Status QueryService::Stub::GetPublicLocation(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::censys_definitions::LocationAtom* response) {
+::grpc::Status QueryService::Stub::GetPublicLocation(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::zsearch::LocationAtom* response) {
   return ::grpc::BlockingUnaryCall(channel_.get(), rpcmethod_GetPublicLocation_, context, request, response);
 }
 
-::grpc::ClientAsyncResponseReader< ::censys_definitions::LocationAtom>* QueryService::Stub::AsyncGetPublicLocationRaw(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) {
-  return new ::grpc::ClientAsyncResponseReader< ::censys_definitions::LocationAtom>(channel_.get(), cq, rpcmethod_GetPublicLocation_, context, request);
+::grpc::ClientAsyncResponseReader< ::zsearch::LocationAtom>* QueryService::Stub::AsyncGetPublicLocationRaw(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) {
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::LocationAtom>(channel_.get(), cq, rpcmethod_GetPublicLocation_, context, request);
 }
 
-::grpc::Status QueryService::Stub::GetRestrictedLocation(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::censys_definitions::LocationAtom* response) {
+::grpc::Status QueryService::Stub::GetRestrictedLocation(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::zsearch::LocationAtom* response) {
   return ::grpc::BlockingUnaryCall(channel_.get(), rpcmethod_GetRestrictedLocation_, context, request, response);
 }
 
-::grpc::ClientAsyncResponseReader< ::censys_definitions::LocationAtom>* QueryService::Stub::AsyncGetRestrictedLocationRaw(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) {
-  return new ::grpc::ClientAsyncResponseReader< ::censys_definitions::LocationAtom>(channel_.get(), cq, rpcmethod_GetRestrictedLocation_, context, request);
+::grpc::ClientAsyncResponseReader< ::zsearch::LocationAtom>* QueryService::Stub::AsyncGetRestrictedLocationRaw(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) {
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::LocationAtom>(channel_.get(), cq, rpcmethod_GetRestrictedLocation_, context, request);
 }
 
-::grpc::Status QueryService::Stub::GetWHOIS(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::censys_definitions::Record* response) {
+::grpc::Status QueryService::Stub::GetWHOIS(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::zsearch::Record* response) {
   return ::grpc::BlockingUnaryCall(channel_.get(), rpcmethod_GetWHOIS_, context, request, response);
 }
 
-::grpc::ClientAsyncResponseReader< ::censys_definitions::Record>* QueryService::Stub::AsyncGetWHOISRaw(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) {
-  return new ::grpc::ClientAsyncResponseReader< ::censys_definitions::Record>(channel_.get(), cq, rpcmethod_GetWHOIS_, context, request);
+::grpc::ClientAsyncResponseReader< ::zsearch::Record>* QueryService::Stub::AsyncGetWHOISRaw(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) {
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::Record>(channel_.get(), cq, rpcmethod_GetWHOIS_, context, request);
 }
 
-::grpc::Status QueryService::Stub::GetUserMetadata(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::censys_definitions::Record* response) {
+::grpc::Status QueryService::Stub::GetUserMetadata(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::zsearch::Record* response) {
   return ::grpc::BlockingUnaryCall(channel_.get(), rpcmethod_GetUserMetadata_, context, request, response);
 }
 
-::grpc::ClientAsyncResponseReader< ::censys_definitions::Record>* QueryService::Stub::AsyncGetUserMetadataRaw(::grpc::ClientContext* context, const ::censys_definitions::HostQuery& request, ::grpc::CompletionQueue* cq) {
-  return new ::grpc::ClientAsyncResponseReader< ::censys_definitions::Record>(channel_.get(), cq, rpcmethod_GetUserMetadata_, context, request);
+::grpc::ClientAsyncResponseReader< ::zsearch::Record>* QueryService::Stub::AsyncGetUserMetadataRaw(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) {
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::Record>(channel_.get(), cq, rpcmethod_GetUserMetadata_, context, request);
 }
 
-::grpc::Status QueryService::Stub::PutUserMetadata(::grpc::ClientContext* context, const ::censys_definitions::Record& request, ::censys_definitions::CommandReply* response) {
+::grpc::Status QueryService::Stub::PutUserMetadata(::grpc::ClientContext* context, const ::zsearch::Record& request, ::zsearch::CommandReply* response) {
   return ::grpc::BlockingUnaryCall(channel_.get(), rpcmethod_PutUserMetadata_, context, request, response);
 }
 
-::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>* QueryService::Stub::AsyncPutUserMetadataRaw(::grpc::ClientContext* context, const ::censys_definitions::Record& request, ::grpc::CompletionQueue* cq) {
-  return new ::grpc::ClientAsyncResponseReader< ::censys_definitions::CommandReply>(channel_.get(), cq, rpcmethod_PutUserMetadata_, context, request);
+::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* QueryService::Stub::AsyncPutUserMetadataRaw(::grpc::ClientContext* context, const ::zsearch::Record& request, ::grpc::CompletionQueue* cq) {
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>(channel_.get(), cq, rpcmethod_PutUserMetadata_, context, request);
 }
 
-::grpc::Status QueryService::Stub::GetRootStore(::grpc::ClientContext* context, const ::censys_definitions::RootStoreQuery& request, ::censys_definitions::RootStoreReply* response) {
+::grpc::Status QueryService::Stub::GetRootStore(::grpc::ClientContext* context, const ::zsearch::RootStoreQuery& request, ::zsearch::RootStoreReply* response) {
   return ::grpc::BlockingUnaryCall(channel_.get(), rpcmethod_GetRootStore_, context, request, response);
 }
 
-::grpc::ClientAsyncResponseReader< ::censys_definitions::RootStoreReply>* QueryService::Stub::AsyncGetRootStoreRaw(::grpc::ClientContext* context, const ::censys_definitions::RootStoreQuery& request, ::grpc::CompletionQueue* cq) {
-  return new ::grpc::ClientAsyncResponseReader< ::censys_definitions::RootStoreReply>(channel_.get(), cq, rpcmethod_GetRootStore_, context, request);
+::grpc::ClientAsyncResponseReader< ::zsearch::RootStoreReply>* QueryService::Stub::AsyncGetRootStoreRaw(::grpc::ClientContext* context, const ::zsearch::RootStoreQuery& request, ::grpc::CompletionQueue* cq) {
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::RootStoreReply>(channel_.get(), cq, rpcmethod_GetRootStore_, context, request);
 }
 
 QueryService::Service::Service() {
   AddMethod(new ::grpc::RpcServiceMethod(
       QueryService_method_names[0],
       ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< QueryService::Service, ::censys_definitions::HostQuery, ::censys_definitions::HostQueryResponse>(
+      new ::grpc::RpcMethodHandler< QueryService::Service, ::zsearch::HostQuery, ::zsearch::HostQueryResponse>(
           std::mem_fn(&QueryService::Service::GetHostIPv4Record), this)));
   AddMethod(new ::grpc::RpcServiceMethod(
       QueryService_method_names[1],
       ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< QueryService::Service, ::censys_definitions::Record, ::censys_definitions::Delta>(
+      new ::grpc::RpcMethodHandler< QueryService::Service, ::zsearch::Record, ::zsearch::Delta>(
           std::mem_fn(&QueryService::Service::PutHostIPv4Record), this)));
   AddMethod(new ::grpc::RpcServiceMethod(
       QueryService_method_names[2],
       ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< QueryService::Service, ::censys_definitions::HostQuery, ::censys_definitions::Delta>(
+      new ::grpc::RpcMethodHandler< QueryService::Service, ::zsearch::HostQuery, ::zsearch::Delta>(
           std::mem_fn(&QueryService::Service::DelHostIPv4Record), this)));
   AddMethod(new ::grpc::RpcServiceMethod(
       QueryService_method_names[3],
       ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< QueryService::Service, ::censys_definitions::HostQuery, ::censys_definitions::HostQueryResponse>(
+      new ::grpc::RpcMethodHandler< QueryService::Service, ::zsearch::HostQuery, ::zsearch::HostQueryResponse>(
           std::mem_fn(&QueryService::Service::GetAllIPv4Records), this)));
   AddMethod(new ::grpc::RpcServiceMethod(
       QueryService_method_names[4],
       ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< QueryService::Service, ::censys_definitions::HostQuery, ::censys_definitions::Delta>(
+      new ::grpc::RpcMethodHandler< QueryService::Service, ::zsearch::HostQuery, ::zsearch::Delta>(
           std::mem_fn(&QueryService::Service::GetHostIPv4Delta), this)));
   AddMethod(new ::grpc::RpcServiceMethod(
       QueryService_method_names[5],
       ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< QueryService::Service, ::censys_definitions::HostQuery, ::censys_definitions::HostQueryResponse>(
+      new ::grpc::RpcMethodHandler< QueryService::Service, ::zsearch::HostQuery, ::zsearch::HostQueryResponse>(
           std::mem_fn(&QueryService::Service::GetHostDomainRecord), this)));
   AddMethod(new ::grpc::RpcServiceMethod(
       QueryService_method_names[6],
       ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< QueryService::Service, ::censys_definitions::Record, ::censys_definitions::Delta>(
+      new ::grpc::RpcMethodHandler< QueryService::Service, ::zsearch::Record, ::zsearch::Delta>(
           std::mem_fn(&QueryService::Service::PutHostDomainRecord), this)));
   AddMethod(new ::grpc::RpcServiceMethod(
       QueryService_method_names[7],
       ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< QueryService::Service, ::censys_definitions::HostQuery, ::censys_definitions::Delta>(
+      new ::grpc::RpcMethodHandler< QueryService::Service, ::zsearch::HostQuery, ::zsearch::Delta>(
           std::mem_fn(&QueryService::Service::DelHostDomainRecord), this)));
   AddMethod(new ::grpc::RpcServiceMethod(
       QueryService_method_names[8],
       ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< QueryService::Service, ::censys_definitions::HostQuery, ::censys_definitions::HostQueryResponse>(
+      new ::grpc::RpcMethodHandler< QueryService::Service, ::zsearch::HostQuery, ::zsearch::HostQueryResponse>(
           std::mem_fn(&QueryService::Service::GetAllDomainRecords), this)));
   AddMethod(new ::grpc::RpcServiceMethod(
       QueryService_method_names[9],
       ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< QueryService::Service, ::censys_definitions::HostQuery, ::censys_definitions::Delta>(
+      new ::grpc::RpcMethodHandler< QueryService::Service, ::zsearch::HostQuery, ::zsearch::Delta>(
           std::mem_fn(&QueryService::Service::GetHostDomainDelta), this)));
   AddMethod(new ::grpc::RpcServiceMethod(
       QueryService_method_names[10],
       ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< QueryService::Service, ::censys_definitions::AnonymousQuery, ::censys_definitions::AnonymousQueryResponse>(
+      new ::grpc::RpcMethodHandler< QueryService::Service, ::zsearch::AnonymousQuery, ::zsearch::AnonymousQueryResponse>(
           std::mem_fn(&QueryService::Service::GetCertificate), this)));
   AddMethod(new ::grpc::RpcServiceMethod(
       QueryService_method_names[11],
       ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< QueryService::Service, ::censys_definitions::AnonymousRecord, ::censys_definitions::AnonymousDelta>(
+      new ::grpc::RpcMethodHandler< QueryService::Service, ::zsearch::AnonymousRecord, ::zsearch::AnonymousDelta>(
           std::mem_fn(&QueryService::Service::UpsertCertificate), this)));
   AddMethod(new ::grpc::RpcServiceMethod(
       QueryService_method_names[12],
       ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< QueryService::Service, ::censys_definitions::AnonymousRecord, ::censys_definitions::AnonymousDelta>(
+      new ::grpc::RpcMethodHandler< QueryService::Service, ::zsearch::AnonymousRecord, ::zsearch::AnonymousDelta>(
           std::mem_fn(&QueryService::Service::UpsertRawCertificate), this)));
   AddMethod(new ::grpc::RpcServiceMethod(
       QueryService_method_names[13],
       ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< QueryService::Service, ::censys_definitions::AnonymousQuery, ::censys_definitions::AnonymousQueryResponse>(
+      new ::grpc::RpcMethodHandler< QueryService::Service, ::zsearch::AnonymousQuery, ::zsearch::AnonymousQueryResponse>(
           std::mem_fn(&QueryService::Service::GetCryptographicKey), this)));
   AddMethod(new ::grpc::RpcServiceMethod(
       QueryService_method_names[14],
       ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< QueryService::Service, ::censys_definitions::AnonymousRecord, ::censys_definitions::AnonymousDelta>(
+      new ::grpc::RpcMethodHandler< QueryService::Service, ::zsearch::AnonymousRecord, ::zsearch::AnonymousDelta>(
           std::mem_fn(&QueryService::Service::UpsertCryptographicKey), this)));
   AddMethod(new ::grpc::RpcServiceMethod(
       QueryService_method_names[15],
       ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< QueryService::Service, ::censys_definitions::HostQuery, ::censys_definitions::LocationAtom>(
+      new ::grpc::RpcMethodHandler< QueryService::Service, ::zsearch::HostQuery, ::zsearch::LocationAtom>(
           std::mem_fn(&QueryService::Service::GetPublicLocation), this)));
   AddMethod(new ::grpc::RpcServiceMethod(
       QueryService_method_names[16],
       ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< QueryService::Service, ::censys_definitions::HostQuery, ::censys_definitions::LocationAtom>(
+      new ::grpc::RpcMethodHandler< QueryService::Service, ::zsearch::HostQuery, ::zsearch::LocationAtom>(
           std::mem_fn(&QueryService::Service::GetRestrictedLocation), this)));
   AddMethod(new ::grpc::RpcServiceMethod(
       QueryService_method_names[17],
       ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< QueryService::Service, ::censys_definitions::HostQuery, ::censys_definitions::Record>(
+      new ::grpc::RpcMethodHandler< QueryService::Service, ::zsearch::HostQuery, ::zsearch::Record>(
           std::mem_fn(&QueryService::Service::GetWHOIS), this)));
   AddMethod(new ::grpc::RpcServiceMethod(
       QueryService_method_names[18],
       ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< QueryService::Service, ::censys_definitions::HostQuery, ::censys_definitions::Record>(
+      new ::grpc::RpcMethodHandler< QueryService::Service, ::zsearch::HostQuery, ::zsearch::Record>(
           std::mem_fn(&QueryService::Service::GetUserMetadata), this)));
   AddMethod(new ::grpc::RpcServiceMethod(
       QueryService_method_names[19],
       ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< QueryService::Service, ::censys_definitions::Record, ::censys_definitions::CommandReply>(
+      new ::grpc::RpcMethodHandler< QueryService::Service, ::zsearch::Record, ::zsearch::CommandReply>(
           std::mem_fn(&QueryService::Service::PutUserMetadata), this)));
   AddMethod(new ::grpc::RpcServiceMethod(
       QueryService_method_names[20],
       ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< QueryService::Service, ::censys_definitions::RootStoreQuery, ::censys_definitions::RootStoreReply>(
+      new ::grpc::RpcMethodHandler< QueryService::Service, ::zsearch::RootStoreQuery, ::zsearch::RootStoreReply>(
           std::mem_fn(&QueryService::Service::GetRootStore), this)));
 }
 
 QueryService::Service::~Service() {
 }
 
-::grpc::Status QueryService::Service::GetHostIPv4Record(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::HostQueryResponse* response) {
+::grpc::Status QueryService::Service::GetHostIPv4Record(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::HostQueryResponse* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status QueryService::Service::PutHostIPv4Record(::grpc::ServerContext* context, const ::censys_definitions::Record* request, ::censys_definitions::Delta* response) {
+::grpc::Status QueryService::Service::PutHostIPv4Record(::grpc::ServerContext* context, const ::zsearch::Record* request, ::zsearch::Delta* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status QueryService::Service::DelHostIPv4Record(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::Delta* response) {
+::grpc::Status QueryService::Service::DelHostIPv4Record(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::Delta* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status QueryService::Service::GetAllIPv4Records(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::HostQueryResponse* response) {
+::grpc::Status QueryService::Service::GetAllIPv4Records(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::HostQueryResponse* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status QueryService::Service::GetHostIPv4Delta(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::Delta* response) {
+::grpc::Status QueryService::Service::GetHostIPv4Delta(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::Delta* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status QueryService::Service::GetHostDomainRecord(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::HostQueryResponse* response) {
+::grpc::Status QueryService::Service::GetHostDomainRecord(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::HostQueryResponse* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status QueryService::Service::PutHostDomainRecord(::grpc::ServerContext* context, const ::censys_definitions::Record* request, ::censys_definitions::Delta* response) {
+::grpc::Status QueryService::Service::PutHostDomainRecord(::grpc::ServerContext* context, const ::zsearch::Record* request, ::zsearch::Delta* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status QueryService::Service::DelHostDomainRecord(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::Delta* response) {
+::grpc::Status QueryService::Service::DelHostDomainRecord(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::Delta* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status QueryService::Service::GetAllDomainRecords(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::HostQueryResponse* response) {
+::grpc::Status QueryService::Service::GetAllDomainRecords(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::HostQueryResponse* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status QueryService::Service::GetHostDomainDelta(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::Delta* response) {
+::grpc::Status QueryService::Service::GetHostDomainDelta(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::Delta* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status QueryService::Service::GetCertificate(::grpc::ServerContext* context, const ::censys_definitions::AnonymousQuery* request, ::censys_definitions::AnonymousQueryResponse* response) {
+::grpc::Status QueryService::Service::GetCertificate(::grpc::ServerContext* context, const ::zsearch::AnonymousQuery* request, ::zsearch::AnonymousQueryResponse* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status QueryService::Service::UpsertCertificate(::grpc::ServerContext* context, const ::censys_definitions::AnonymousRecord* request, ::censys_definitions::AnonymousDelta* response) {
+::grpc::Status QueryService::Service::UpsertCertificate(::grpc::ServerContext* context, const ::zsearch::AnonymousRecord* request, ::zsearch::AnonymousDelta* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status QueryService::Service::UpsertRawCertificate(::grpc::ServerContext* context, const ::censys_definitions::AnonymousRecord* request, ::censys_definitions::AnonymousDelta* response) {
+::grpc::Status QueryService::Service::UpsertRawCertificate(::grpc::ServerContext* context, const ::zsearch::AnonymousRecord* request, ::zsearch::AnonymousDelta* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status QueryService::Service::GetCryptographicKey(::grpc::ServerContext* context, const ::censys_definitions::AnonymousQuery* request, ::censys_definitions::AnonymousQueryResponse* response) {
+::grpc::Status QueryService::Service::GetCryptographicKey(::grpc::ServerContext* context, const ::zsearch::AnonymousQuery* request, ::zsearch::AnonymousQueryResponse* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status QueryService::Service::UpsertCryptographicKey(::grpc::ServerContext* context, const ::censys_definitions::AnonymousRecord* request, ::censys_definitions::AnonymousDelta* response) {
+::grpc::Status QueryService::Service::UpsertCryptographicKey(::grpc::ServerContext* context, const ::zsearch::AnonymousRecord* request, ::zsearch::AnonymousDelta* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status QueryService::Service::GetPublicLocation(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::LocationAtom* response) {
+::grpc::Status QueryService::Service::GetPublicLocation(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::LocationAtom* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status QueryService::Service::GetRestrictedLocation(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::LocationAtom* response) {
+::grpc::Status QueryService::Service::GetRestrictedLocation(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::LocationAtom* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status QueryService::Service::GetWHOIS(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::Record* response) {
+::grpc::Status QueryService::Service::GetWHOIS(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::Record* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status QueryService::Service::GetUserMetadata(::grpc::ServerContext* context, const ::censys_definitions::HostQuery* request, ::censys_definitions::Record* response) {
+::grpc::Status QueryService::Service::GetUserMetadata(::grpc::ServerContext* context, const ::zsearch::HostQuery* request, ::zsearch::Record* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status QueryService::Service::PutUserMetadata(::grpc::ServerContext* context, const ::censys_definitions::Record* request, ::censys_definitions::CommandReply* response) {
+::grpc::Status QueryService::Service::PutUserMetadata(::grpc::ServerContext* context, const ::zsearch::Record* request, ::zsearch::CommandReply* response) {
   (void) context;
   (void) request;
   (void) response;
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status QueryService::Service::GetRootStore(::grpc::ServerContext* context, const ::censys_definitions::RootStoreQuery* request, ::censys_definitions::RootStoreReply* response) {
+::grpc::Status QueryService::Service::GetRootStore(::grpc::ServerContext* context, const ::zsearch::RootStoreQuery* request, ::zsearch::RootStoreReply* response) {
   (void) context;
   (void) request;
   (void) response;
@@ -909,5 +909,5 @@ QueryService::Service::~Service() {
 }
 
 
-}  // namespace censys_definitions
+}  // namespace zsearch
 

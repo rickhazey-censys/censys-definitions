@@ -21,9 +21,9 @@ import hoststore_pb2 as hoststore__pb2
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='rpc.proto',
-  package='censys_definitions',
+  package='zsearch',
   syntax='proto3',
-  serialized_pb=_b('\n\trpc.proto\x12\x12\x63\x65nsys_definitions\x1a\x0c\x63ommon.proto\x1a\x11\x63\x65rtificate.proto\x1a\x0f\x61nonstore.proto\x1a\x0fhoststore.proto\"O\n\tMinScanId\x12-\n\x03key\x18\x01 \x01(\x0b\x32 .censys_definitions.AnonymousKey\x12\x13\n\x0bmin_scan_id\x18\x02 \x01(\r\"W\n\x12MozillaOneCRLEntry\x12\x0e\n\x06issuer\x18\x01 \x01(\x0c\x12\x0e\n\x06serial\x18\x02 \x01(\x0c\x12\n\n\x02id\x18\x03 \x01(\t\x12\x15\n\rlast_modified\x18\x04 \x01(\r\"\xf4\x01\n\x07\x43ommand\x12\x18\n\x10incremental_dump\x18\x01 \x01(\x08\x12\x33\n\x0cmin_scan_ids\x18\x02 \x03(\x0b\x32\x1d.censys_definitions.MinScanId\x12\x10\n\x08\x66ilepath\x18\x03 \x01(\t\x12\x13\n\x0bmax_records\x18\x04 \x01(\r\x12\x10\n\x08start_ip\x18\x05 \x01(\r\x12\x0f\n\x07stop_ip\x18\x06 \x01(\r\x12?\n\x0fone_crl_entries\x18\x07 \x03(\x0b\x32&.censys_definitions.MozillaOneCRLEntry\x12\x0f\n\x07threads\x18\x08 \x01(\r\"\x9d\x02\n\x18\x41nonymousStoreStatistics\x12\x15\n\rtotal_records\x18\x01 \x01(\x04\x12 \n\x18records_added_last_reset\x18\x02 \x01(\x04\x12\"\n\x1arecords_updated_last_reset\x18\x03 \x01(\x04\x12$\n\x1crecords_unchanged_last_reset\x18\x04 \x01(\x04\x12\x18\n\x10records_received\x18\x05 \x01(\x04\x12\x1e\n\x16records_in_redis_queue\x18\x06 \x01(\r\x12\x18\n\x10redis_queue_name\x18\x07 \x01(\t\x12\x12\n\nqueue_type\x18\x08 \x01(\t\x12\x16\n\x0eworker_threads\x18\t \x01(\r\"\x87\x01\n\x0eStatisticsPair\x12\x0c\n\x04port\x18\x01 \x01(\r\x12\x10\n\x08protocol\x18\x02 \x01(\r\x12\x13\n\x0bsubprotocol\x18\x03 \x01(\r\x12@\n\nstatistics\x18\x04 \x01(\x0b\x32,.censys_definitions.AnonymousStoreStatistics\"\x86\x01\n\x0fStoreStatistics\x12<\n\x06global\x18\x01 \x01(\x0b\x32,.censys_definitions.AnonymousStoreStatistics\x12\x35\n\tprotocols\x18\x02 \x03(\x0b\x32\".censys_definitions.StatisticsPair\"\x9b\x03\n\x10ServerStatistics\x12S\n\x10store_statistics\x18\x01 \x03(\x0b\x32\x39.censys_definitions.ServerStatistics.StoreStatisticsEntry\x12\x66\n\x1a\x61nonymous_store_statistics\x18\x02 \x03(\x0b\x32\x42.censys_definitions.ServerStatistics.AnonymousStoreStatisticsEntry\x1a[\n\x14StoreStatisticsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x32\n\x05value\x18\x02 \x01(\x0b\x32#.censys_definitions.StoreStatistics:\x02\x38\x01\x1am\n\x1d\x41nonymousStoreStatisticsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12;\n\x05value\x18\x02 \x01(\x0b\x32,.censys_definitions.AnonymousStoreStatistics:\x02\x38\x01\"X\n\x0fPruneStatistics\x12-\n\x03key\x18\x01 \x01(\x0b\x32 .censys_definitions.AnonymousKey\x12\x16\n\x0erecords_pruned\x18\x02 \x01(\x04\"\x94\x02\n\x0c\x43ommandReply\x12>\n\x06status\x18\x01 \x01(\x0e\x32..censys_definitions.CommandReply.CommandStatus\x12\r\n\x05\x65rror\x18\x02 \x01(\t\x12\x33\n\x05stats\x18\x03 \x01(\x0b\x32$.censys_definitions.ServerStatistics\x12=\n\x10prune_statistics\x18\x04 \x03(\x0b\x32#.censys_definitions.PruneStatistics\"A\n\rCommandStatus\x12\t\n\x05\x46\x41TAL\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\t\n\x05\x45RROR\x10\x02\x12\r\n\tNO_RECORD\x10\x03\"q\n\tHostQuery\x12\n\n\x02ip\x18\x01 \x01(\x07\x12\x0e\n\x06\x64omain\x18\x02 \x01(\t\x12\x0c\n\x04port\x18\x03 \x01(\r\x12\x10\n\x08protocol\x18\x04 \x01(\r\x12\x13\n\x0bsubprotocol\x18\x05 \x01(\r\x12\x13\n\x0bmax_records\x18\x06 \x01(\r\"\xd9\x02\n\x11HostQueryResponse\x12\x44\n\x06status\x18\x01 \x01(\x0e\x32\x34.censys_definitions.HostQueryResponse.ResponseStatus\x12\n\n\x02ip\x18\x02 \x01(\x07\x12\x0e\n\x06\x64omain\x18\x03 \x01(\t\x12\x0c\n\x04port\x18\x04 \x01(\r\x12\x10\n\x08protocol\x18\x05 \x01(\r\x12\x13\n\x0bsubprotocol\x18\x06 \x01(\r\x12*\n\x06record\x18\x07 \x01(\x0b\x32\x1a.censys_definitions.Record\x12+\n\x07records\x18\x08 \x03(\x0b\x32\x1a.censys_definitions.Record\x12\r\n\x05\x65rror\x18\t \x01(\t\"E\n\x0eResponseStatus\x12\x0c\n\x08RESERVED\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\r\n\tNO_RECORD\x10\x02\x12\t\n\x05\x45RROR\x10\x03\"\"\n\x0e\x41nonymousQuery\x12\x10\n\x08sha256fp\x18\x01 \x01(\x0c\"\xb6\x02\n\x16\x41nonymousQueryResponse\x12\x10\n\x08sha256fp\x18\x01 \x01(\x0c\x12I\n\x06status\x18\x02 \x01(\x0e\x32\x39.censys_definitions.AnonymousQueryResponse.ResponseStatus\x12\x33\n\x06record\x18\x03 \x01(\x0b\x32#.censys_definitions.AnonymousRecord\x12\x34\n\x07records\x18\x04 \x03(\x0b\x32#.censys_definitions.AnonymousRecord\x12\r\n\x05\x65rror\x18; \x01(\t\"E\n\x0eResponseStatus\x12\x0c\n\x08RESERVED\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\r\n\tNO_RECORD\x10\x02\x12\t\n\x05\x45RROR\x10\x03\"]\n\x0fUserDataRequest\x12\n\n\x02ip\x18\x01 \x01(\x07\x12\x0e\n\x06\x64omain\x18\x02 \x01(\t\x12.\n\x04\x64\x61ta\x18\x03 \x01(\x0b\x32 .censys_definitions.UserdataAtom\"\xa9\x01\n\x0eRootStoreQuery\x12\x43\n\x04type\x18\x01 \x01(\x0e\x32\x35.censys_definitions.RootStoreQuery.RootStoreQueryType\"R\n\x12RootStoreQueryType\x12\x0c\n\x08RESERVED\x10\x00\x12\x0b\n\x07MOZILLA\x10\x01\x12\r\n\tMICROSOFT\x10\x02\x12\t\n\x05\x41PPLE\x10\x03\x12\x07\n\x03\x41LL\x10\x04\"G\n\x0eRootStoreReply\x12\x35\n\x0c\x63\x65rtificates\x18\x01 \x03(\x0b\x32\x1f.censys_definitions.Certificateb\x06proto3')
+  serialized_pb=_b('\n\trpc.proto\x12\x07zsearch\x1a\x0c\x63ommon.proto\x1a\x11\x63\x65rtificate.proto\x1a\x0f\x61nonstore.proto\x1a\x0fhoststore.proto\"D\n\tMinScanId\x12\"\n\x03key\x18\x01 \x01(\x0b\x32\x15.zsearch.AnonymousKey\x12\x13\n\x0bmin_scan_id\x18\x02 \x01(\r\"W\n\x12MozillaOneCRLEntry\x12\x0e\n\x06issuer\x18\x01 \x01(\x0c\x12\x0e\n\x06serial\x18\x02 \x01(\x0c\x12\n\n\x02id\x18\x03 \x01(\t\x12\x15\n\rlast_modified\x18\x04 \x01(\r\"\xde\x01\n\x07\x43ommand\x12\x18\n\x10incremental_dump\x18\x01 \x01(\x08\x12(\n\x0cmin_scan_ids\x18\x02 \x03(\x0b\x32\x12.zsearch.MinScanId\x12\x10\n\x08\x66ilepath\x18\x03 \x01(\t\x12\x13\n\x0bmax_records\x18\x04 \x01(\r\x12\x10\n\x08start_ip\x18\x05 \x01(\r\x12\x0f\n\x07stop_ip\x18\x06 \x01(\r\x12\x34\n\x0fone_crl_entries\x18\x07 \x03(\x0b\x32\x1b.zsearch.MozillaOneCRLEntry\x12\x0f\n\x07threads\x18\x08 \x01(\r\"\x9d\x02\n\x18\x41nonymousStoreStatistics\x12\x15\n\rtotal_records\x18\x01 \x01(\x04\x12 \n\x18records_added_last_reset\x18\x02 \x01(\x04\x12\"\n\x1arecords_updated_last_reset\x18\x03 \x01(\x04\x12$\n\x1crecords_unchanged_last_reset\x18\x04 \x01(\x04\x12\x18\n\x10records_received\x18\x05 \x01(\x04\x12\x1e\n\x16records_in_redis_queue\x18\x06 \x01(\r\x12\x18\n\x10redis_queue_name\x18\x07 \x01(\t\x12\x12\n\nqueue_type\x18\x08 \x01(\t\x12\x16\n\x0eworker_threads\x18\t \x01(\r\"|\n\x0eStatisticsPair\x12\x0c\n\x04port\x18\x01 \x01(\r\x12\x10\n\x08protocol\x18\x02 \x01(\r\x12\x13\n\x0bsubprotocol\x18\x03 \x01(\r\x12\x35\n\nstatistics\x18\x04 \x01(\x0b\x32!.zsearch.AnonymousStoreStatistics\"p\n\x0fStoreStatistics\x12\x31\n\x06global\x18\x01 \x01(\x0b\x32!.zsearch.AnonymousStoreStatistics\x12*\n\tprotocols\x18\x02 \x03(\x0b\x32\x17.zsearch.StatisticsPair\"\xef\x02\n\x10ServerStatistics\x12H\n\x10store_statistics\x18\x01 \x03(\x0b\x32..zsearch.ServerStatistics.StoreStatisticsEntry\x12[\n\x1a\x61nonymous_store_statistics\x18\x02 \x03(\x0b\x32\x37.zsearch.ServerStatistics.AnonymousStoreStatisticsEntry\x1aP\n\x14StoreStatisticsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\'\n\x05value\x18\x02 \x01(\x0b\x32\x18.zsearch.StoreStatistics:\x02\x38\x01\x1a\x62\n\x1d\x41nonymousStoreStatisticsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x30\n\x05value\x18\x02 \x01(\x0b\x32!.zsearch.AnonymousStoreStatistics:\x02\x38\x01\"M\n\x0fPruneStatistics\x12\"\n\x03key\x18\x01 \x01(\x0b\x32\x15.zsearch.AnonymousKey\x12\x16\n\x0erecords_pruned\x18\x02 \x01(\x04\"\xf3\x01\n\x0c\x43ommandReply\x12\x33\n\x06status\x18\x01 \x01(\x0e\x32#.zsearch.CommandReply.CommandStatus\x12\r\n\x05\x65rror\x18\x02 \x01(\t\x12(\n\x05stats\x18\x03 \x01(\x0b\x32\x19.zsearch.ServerStatistics\x12\x32\n\x10prune_statistics\x18\x04 \x03(\x0b\x32\x18.zsearch.PruneStatistics\"A\n\rCommandStatus\x12\t\n\x05\x46\x41TAL\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\t\n\x05\x45RROR\x10\x02\x12\r\n\tNO_RECORD\x10\x03\"q\n\tHostQuery\x12\n\n\x02ip\x18\x01 \x01(\x07\x12\x0e\n\x06\x64omain\x18\x02 \x01(\t\x12\x0c\n\x04port\x18\x03 \x01(\r\x12\x10\n\x08protocol\x18\x04 \x01(\r\x12\x13\n\x0bsubprotocol\x18\x05 \x01(\r\x12\x13\n\x0bmax_records\x18\x06 \x01(\r\"\xb8\x02\n\x11HostQueryResponse\x12\x39\n\x06status\x18\x01 \x01(\x0e\x32).zsearch.HostQueryResponse.ResponseStatus\x12\n\n\x02ip\x18\x02 \x01(\x07\x12\x0e\n\x06\x64omain\x18\x03 \x01(\t\x12\x0c\n\x04port\x18\x04 \x01(\r\x12\x10\n\x08protocol\x18\x05 \x01(\r\x12\x13\n\x0bsubprotocol\x18\x06 \x01(\r\x12\x1f\n\x06record\x18\x07 \x01(\x0b\x32\x0f.zsearch.Record\x12 \n\x07records\x18\x08 \x03(\x0b\x32\x0f.zsearch.Record\x12\r\n\x05\x65rror\x18\t \x01(\t\"E\n\x0eResponseStatus\x12\x0c\n\x08RESERVED\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\r\n\tNO_RECORD\x10\x02\x12\t\n\x05\x45RROR\x10\x03\"\"\n\x0e\x41nonymousQuery\x12\x10\n\x08sha256fp\x18\x01 \x01(\x0c\"\x95\x02\n\x16\x41nonymousQueryResponse\x12\x10\n\x08sha256fp\x18\x01 \x01(\x0c\x12>\n\x06status\x18\x02 \x01(\x0e\x32..zsearch.AnonymousQueryResponse.ResponseStatus\x12(\n\x06record\x18\x03 \x01(\x0b\x32\x18.zsearch.AnonymousRecord\x12)\n\x07records\x18\x04 \x03(\x0b\x32\x18.zsearch.AnonymousRecord\x12\r\n\x05\x65rror\x18; \x01(\t\"E\n\x0eResponseStatus\x12\x0c\n\x08RESERVED\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\r\n\tNO_RECORD\x10\x02\x12\t\n\x05\x45RROR\x10\x03\"R\n\x0fUserDataRequest\x12\n\n\x02ip\x18\x01 \x01(\x07\x12\x0e\n\x06\x64omain\x18\x02 \x01(\t\x12#\n\x04\x64\x61ta\x18\x03 \x01(\x0b\x32\x15.zsearch.UserdataAtom\"\x9e\x01\n\x0eRootStoreQuery\x12\x38\n\x04type\x18\x01 \x01(\x0e\x32*.zsearch.RootStoreQuery.RootStoreQueryType\"R\n\x12RootStoreQueryType\x12\x0c\n\x08RESERVED\x10\x00\x12\x0b\n\x07MOZILLA\x10\x01\x12\r\n\tMICROSOFT\x10\x02\x12\t\n\x05\x41PPLE\x10\x03\x12\x07\n\x03\x41LL\x10\x04\"<\n\x0eRootStoreReply\x12*\n\x0c\x63\x65rtificates\x18\x01 \x03(\x0b\x32\x14.zsearch.Certificateb\x06proto3')
   ,
   dependencies=[common__pb2.DESCRIPTOR,certificate__pb2.DESCRIPTOR,anonstore__pb2.DESCRIPTOR,hoststore__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -32,7 +32,7 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 _COMMANDREPLY_COMMANDSTATUS = _descriptor.EnumDescriptor(
   name='CommandStatus',
-  full_name='censys_definitions.CommandReply.CommandStatus',
+  full_name='zsearch.CommandReply.CommandStatus',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -55,14 +55,14 @@ _COMMANDREPLY_COMMANDSTATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1796,
-  serialized_end=1861,
+  serialized_start=1629,
+  serialized_end=1694,
 )
 _sym_db.RegisterEnumDescriptor(_COMMANDREPLY_COMMANDSTATUS)
 
 _HOSTQUERYRESPONSE_RESPONSESTATUS = _descriptor.EnumDescriptor(
   name='ResponseStatus',
-  full_name='censys_definitions.HostQueryResponse.ResponseStatus',
+  full_name='zsearch.HostQueryResponse.ResponseStatus',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -85,14 +85,14 @@ _HOSTQUERYRESPONSE_RESPONSESTATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2255,
-  serialized_end=2324,
+  serialized_start=2055,
+  serialized_end=2124,
 )
 _sym_db.RegisterEnumDescriptor(_HOSTQUERYRESPONSE_RESPONSESTATUS)
 
 _ANONYMOUSQUERYRESPONSE_RESPONSESTATUS = _descriptor.EnumDescriptor(
   name='ResponseStatus',
-  full_name='censys_definitions.AnonymousQueryResponse.ResponseStatus',
+  full_name='zsearch.AnonymousQueryResponse.ResponseStatus',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -115,14 +115,14 @@ _ANONYMOUSQUERYRESPONSE_RESPONSESTATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2255,
-  serialized_end=2324,
+  serialized_start=2055,
+  serialized_end=2124,
 )
 _sym_db.RegisterEnumDescriptor(_ANONYMOUSQUERYRESPONSE_RESPONSESTATUS)
 
 _ROOTSTOREQUERY_ROOTSTOREQUERYTYPE = _descriptor.EnumDescriptor(
   name='RootStoreQueryType',
-  full_name='censys_definitions.RootStoreQuery.RootStoreQueryType',
+  full_name='zsearch.RootStoreQuery.RootStoreQueryType',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -149,28 +149,28 @@ _ROOTSTOREQUERY_ROOTSTOREQUERYTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2858,
-  serialized_end=2940,
+  serialized_start=2603,
+  serialized_end=2685,
 )
 _sym_db.RegisterEnumDescriptor(_ROOTSTOREQUERY_ROOTSTOREQUERYTYPE)
 
 
 _MINSCANID = _descriptor.Descriptor(
   name='MinScanId',
-  full_name='censys_definitions.MinScanId',
+  full_name='zsearch.MinScanId',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='key', full_name='censys_definitions.MinScanId.key', index=0,
+      name='key', full_name='zsearch.MinScanId.key', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='min_scan_id', full_name='censys_definitions.MinScanId.min_scan_id', index=1,
+      name='min_scan_id', full_name='zsearch.MinScanId.min_scan_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -188,41 +188,41 @@ _MINSCANID = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=100,
-  serialized_end=179,
+  serialized_start=89,
+  serialized_end=157,
 )
 
 
 _MOZILLAONECRLENTRY = _descriptor.Descriptor(
   name='MozillaOneCRLEntry',
-  full_name='censys_definitions.MozillaOneCRLEntry',
+  full_name='zsearch.MozillaOneCRLEntry',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='issuer', full_name='censys_definitions.MozillaOneCRLEntry.issuer', index=0,
+      name='issuer', full_name='zsearch.MozillaOneCRLEntry.issuer', index=0,
       number=1, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='serial', full_name='censys_definitions.MozillaOneCRLEntry.serial', index=1,
+      name='serial', full_name='zsearch.MozillaOneCRLEntry.serial', index=1,
       number=2, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='id', full_name='censys_definitions.MozillaOneCRLEntry.id', index=2,
+      name='id', full_name='zsearch.MozillaOneCRLEntry.id', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='last_modified', full_name='censys_definitions.MozillaOneCRLEntry.last_modified', index=3,
+      name='last_modified', full_name='zsearch.MozillaOneCRLEntry.last_modified', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -240,69 +240,69 @@ _MOZILLAONECRLENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=181,
-  serialized_end=268,
+  serialized_start=159,
+  serialized_end=246,
 )
 
 
 _COMMAND = _descriptor.Descriptor(
   name='Command',
-  full_name='censys_definitions.Command',
+  full_name='zsearch.Command',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='incremental_dump', full_name='censys_definitions.Command.incremental_dump', index=0,
+      name='incremental_dump', full_name='zsearch.Command.incremental_dump', index=0,
       number=1, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='min_scan_ids', full_name='censys_definitions.Command.min_scan_ids', index=1,
+      name='min_scan_ids', full_name='zsearch.Command.min_scan_ids', index=1,
       number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='filepath', full_name='censys_definitions.Command.filepath', index=2,
+      name='filepath', full_name='zsearch.Command.filepath', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='max_records', full_name='censys_definitions.Command.max_records', index=3,
+      name='max_records', full_name='zsearch.Command.max_records', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='start_ip', full_name='censys_definitions.Command.start_ip', index=4,
+      name='start_ip', full_name='zsearch.Command.start_ip', index=4,
       number=5, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='stop_ip', full_name='censys_definitions.Command.stop_ip', index=5,
+      name='stop_ip', full_name='zsearch.Command.stop_ip', index=5,
       number=6, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='one_crl_entries', full_name='censys_definitions.Command.one_crl_entries', index=6,
+      name='one_crl_entries', full_name='zsearch.Command.one_crl_entries', index=6,
       number=7, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='threads', full_name='censys_definitions.Command.threads', index=7,
+      name='threads', full_name='zsearch.Command.threads', index=7,
       number=8, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -320,76 +320,76 @@ _COMMAND = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=271,
-  serialized_end=515,
+  serialized_start=249,
+  serialized_end=471,
 )
 
 
 _ANONYMOUSSTORESTATISTICS = _descriptor.Descriptor(
   name='AnonymousStoreStatistics',
-  full_name='censys_definitions.AnonymousStoreStatistics',
+  full_name='zsearch.AnonymousStoreStatistics',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='total_records', full_name='censys_definitions.AnonymousStoreStatistics.total_records', index=0,
+      name='total_records', full_name='zsearch.AnonymousStoreStatistics.total_records', index=0,
       number=1, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='records_added_last_reset', full_name='censys_definitions.AnonymousStoreStatistics.records_added_last_reset', index=1,
+      name='records_added_last_reset', full_name='zsearch.AnonymousStoreStatistics.records_added_last_reset', index=1,
       number=2, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='records_updated_last_reset', full_name='censys_definitions.AnonymousStoreStatistics.records_updated_last_reset', index=2,
+      name='records_updated_last_reset', full_name='zsearch.AnonymousStoreStatistics.records_updated_last_reset', index=2,
       number=3, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='records_unchanged_last_reset', full_name='censys_definitions.AnonymousStoreStatistics.records_unchanged_last_reset', index=3,
+      name='records_unchanged_last_reset', full_name='zsearch.AnonymousStoreStatistics.records_unchanged_last_reset', index=3,
       number=4, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='records_received', full_name='censys_definitions.AnonymousStoreStatistics.records_received', index=4,
+      name='records_received', full_name='zsearch.AnonymousStoreStatistics.records_received', index=4,
       number=5, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='records_in_redis_queue', full_name='censys_definitions.AnonymousStoreStatistics.records_in_redis_queue', index=5,
+      name='records_in_redis_queue', full_name='zsearch.AnonymousStoreStatistics.records_in_redis_queue', index=5,
       number=6, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='redis_queue_name', full_name='censys_definitions.AnonymousStoreStatistics.redis_queue_name', index=6,
+      name='redis_queue_name', full_name='zsearch.AnonymousStoreStatistics.redis_queue_name', index=6,
       number=7, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='queue_type', full_name='censys_definitions.AnonymousStoreStatistics.queue_type', index=7,
+      name='queue_type', full_name='zsearch.AnonymousStoreStatistics.queue_type', index=7,
       number=8, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='worker_threads', full_name='censys_definitions.AnonymousStoreStatistics.worker_threads', index=8,
+      name='worker_threads', full_name='zsearch.AnonymousStoreStatistics.worker_threads', index=8,
       number=9, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -407,41 +407,41 @@ _ANONYMOUSSTORESTATISTICS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=518,
-  serialized_end=803,
+  serialized_start=474,
+  serialized_end=759,
 )
 
 
 _STATISTICSPAIR = _descriptor.Descriptor(
   name='StatisticsPair',
-  full_name='censys_definitions.StatisticsPair',
+  full_name='zsearch.StatisticsPair',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='port', full_name='censys_definitions.StatisticsPair.port', index=0,
+      name='port', full_name='zsearch.StatisticsPair.port', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='protocol', full_name='censys_definitions.StatisticsPair.protocol', index=1,
+      name='protocol', full_name='zsearch.StatisticsPair.protocol', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='subprotocol', full_name='censys_definitions.StatisticsPair.subprotocol', index=2,
+      name='subprotocol', full_name='zsearch.StatisticsPair.subprotocol', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='statistics', full_name='censys_definitions.StatisticsPair.statistics', index=3,
+      name='statistics', full_name='zsearch.StatisticsPair.statistics', index=3,
       number=4, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -459,27 +459,27 @@ _STATISTICSPAIR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=806,
-  serialized_end=941,
+  serialized_start=761,
+  serialized_end=885,
 )
 
 
 _STORESTATISTICS = _descriptor.Descriptor(
   name='StoreStatistics',
-  full_name='censys_definitions.StoreStatistics',
+  full_name='zsearch.StoreStatistics',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='global', full_name='censys_definitions.StoreStatistics.global', index=0,
+      name='global', full_name='zsearch.StoreStatistics.global', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='protocols', full_name='censys_definitions.StoreStatistics.protocols', index=1,
+      name='protocols', full_name='zsearch.StoreStatistics.protocols', index=1,
       number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -497,27 +497,27 @@ _STORESTATISTICS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=944,
-  serialized_end=1078,
+  serialized_start=887,
+  serialized_end=999,
 )
 
 
 _SERVERSTATISTICS_STORESTATISTICSENTRY = _descriptor.Descriptor(
   name='StoreStatisticsEntry',
-  full_name='censys_definitions.ServerStatistics.StoreStatisticsEntry',
+  full_name='zsearch.ServerStatistics.StoreStatisticsEntry',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='key', full_name='censys_definitions.ServerStatistics.StoreStatisticsEntry.key', index=0,
+      name='key', full_name='zsearch.ServerStatistics.StoreStatisticsEntry.key', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='value', full_name='censys_definitions.ServerStatistics.StoreStatisticsEntry.value', index=1,
+      name='value', full_name='zsearch.ServerStatistics.StoreStatisticsEntry.value', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -535,26 +535,26 @@ _SERVERSTATISTICS_STORESTATISTICSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1290,
-  serialized_end=1381,
+  serialized_start=1189,
+  serialized_end=1269,
 )
 
 _SERVERSTATISTICS_ANONYMOUSSTORESTATISTICSENTRY = _descriptor.Descriptor(
   name='AnonymousStoreStatisticsEntry',
-  full_name='censys_definitions.ServerStatistics.AnonymousStoreStatisticsEntry',
+  full_name='zsearch.ServerStatistics.AnonymousStoreStatisticsEntry',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='key', full_name='censys_definitions.ServerStatistics.AnonymousStoreStatisticsEntry.key', index=0,
+      name='key', full_name='zsearch.ServerStatistics.AnonymousStoreStatisticsEntry.key', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='value', full_name='censys_definitions.ServerStatistics.AnonymousStoreStatisticsEntry.value', index=1,
+      name='value', full_name='zsearch.ServerStatistics.AnonymousStoreStatisticsEntry.value', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -572,26 +572,26 @@ _SERVERSTATISTICS_ANONYMOUSSTORESTATISTICSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1383,
-  serialized_end=1492,
+  serialized_start=1271,
+  serialized_end=1369,
 )
 
 _SERVERSTATISTICS = _descriptor.Descriptor(
   name='ServerStatistics',
-  full_name='censys_definitions.ServerStatistics',
+  full_name='zsearch.ServerStatistics',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='store_statistics', full_name='censys_definitions.ServerStatistics.store_statistics', index=0,
+      name='store_statistics', full_name='zsearch.ServerStatistics.store_statistics', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='anonymous_store_statistics', full_name='censys_definitions.ServerStatistics.anonymous_store_statistics', index=1,
+      name='anonymous_store_statistics', full_name='zsearch.ServerStatistics.anonymous_store_statistics', index=1,
       number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -609,27 +609,27 @@ _SERVERSTATISTICS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1081,
-  serialized_end=1492,
+  serialized_start=1002,
+  serialized_end=1369,
 )
 
 
 _PRUNESTATISTICS = _descriptor.Descriptor(
   name='PruneStatistics',
-  full_name='censys_definitions.PruneStatistics',
+  full_name='zsearch.PruneStatistics',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='key', full_name='censys_definitions.PruneStatistics.key', index=0,
+      name='key', full_name='zsearch.PruneStatistics.key', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='records_pruned', full_name='censys_definitions.PruneStatistics.records_pruned', index=1,
+      name='records_pruned', full_name='zsearch.PruneStatistics.records_pruned', index=1,
       number=2, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -647,41 +647,41 @@ _PRUNESTATISTICS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1494,
-  serialized_end=1582,
+  serialized_start=1371,
+  serialized_end=1448,
 )
 
 
 _COMMANDREPLY = _descriptor.Descriptor(
   name='CommandReply',
-  full_name='censys_definitions.CommandReply',
+  full_name='zsearch.CommandReply',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='status', full_name='censys_definitions.CommandReply.status', index=0,
+      name='status', full_name='zsearch.CommandReply.status', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='error', full_name='censys_definitions.CommandReply.error', index=1,
+      name='error', full_name='zsearch.CommandReply.error', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='stats', full_name='censys_definitions.CommandReply.stats', index=2,
+      name='stats', full_name='zsearch.CommandReply.stats', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='prune_statistics', full_name='censys_definitions.CommandReply.prune_statistics', index=3,
+      name='prune_statistics', full_name='zsearch.CommandReply.prune_statistics', index=3,
       number=4, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -700,55 +700,55 @@ _COMMANDREPLY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1585,
-  serialized_end=1861,
+  serialized_start=1451,
+  serialized_end=1694,
 )
 
 
 _HOSTQUERY = _descriptor.Descriptor(
   name='HostQuery',
-  full_name='censys_definitions.HostQuery',
+  full_name='zsearch.HostQuery',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='ip', full_name='censys_definitions.HostQuery.ip', index=0,
+      name='ip', full_name='zsearch.HostQuery.ip', index=0,
       number=1, type=7, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='domain', full_name='censys_definitions.HostQuery.domain', index=1,
+      name='domain', full_name='zsearch.HostQuery.domain', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='port', full_name='censys_definitions.HostQuery.port', index=2,
+      name='port', full_name='zsearch.HostQuery.port', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='protocol', full_name='censys_definitions.HostQuery.protocol', index=3,
+      name='protocol', full_name='zsearch.HostQuery.protocol', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='subprotocol', full_name='censys_definitions.HostQuery.subprotocol', index=4,
+      name='subprotocol', full_name='zsearch.HostQuery.subprotocol', index=4,
       number=5, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='max_records', full_name='censys_definitions.HostQuery.max_records', index=5,
+      name='max_records', full_name='zsearch.HostQuery.max_records', index=5,
       number=6, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -766,76 +766,76 @@ _HOSTQUERY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1863,
-  serialized_end=1976,
+  serialized_start=1696,
+  serialized_end=1809,
 )
 
 
 _HOSTQUERYRESPONSE = _descriptor.Descriptor(
   name='HostQueryResponse',
-  full_name='censys_definitions.HostQueryResponse',
+  full_name='zsearch.HostQueryResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='status', full_name='censys_definitions.HostQueryResponse.status', index=0,
+      name='status', full_name='zsearch.HostQueryResponse.status', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='ip', full_name='censys_definitions.HostQueryResponse.ip', index=1,
+      name='ip', full_name='zsearch.HostQueryResponse.ip', index=1,
       number=2, type=7, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='domain', full_name='censys_definitions.HostQueryResponse.domain', index=2,
+      name='domain', full_name='zsearch.HostQueryResponse.domain', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='port', full_name='censys_definitions.HostQueryResponse.port', index=3,
+      name='port', full_name='zsearch.HostQueryResponse.port', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='protocol', full_name='censys_definitions.HostQueryResponse.protocol', index=4,
+      name='protocol', full_name='zsearch.HostQueryResponse.protocol', index=4,
       number=5, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='subprotocol', full_name='censys_definitions.HostQueryResponse.subprotocol', index=5,
+      name='subprotocol', full_name='zsearch.HostQueryResponse.subprotocol', index=5,
       number=6, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='record', full_name='censys_definitions.HostQueryResponse.record', index=6,
+      name='record', full_name='zsearch.HostQueryResponse.record', index=6,
       number=7, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='records', full_name='censys_definitions.HostQueryResponse.records', index=7,
+      name='records', full_name='zsearch.HostQueryResponse.records', index=7,
       number=8, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='error', full_name='censys_definitions.HostQueryResponse.error', index=8,
+      name='error', full_name='zsearch.HostQueryResponse.error', index=8,
       number=9, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -854,20 +854,20 @@ _HOSTQUERYRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1979,
-  serialized_end=2324,
+  serialized_start=1812,
+  serialized_end=2124,
 )
 
 
 _ANONYMOUSQUERY = _descriptor.Descriptor(
   name='AnonymousQuery',
-  full_name='censys_definitions.AnonymousQuery',
+  full_name='zsearch.AnonymousQuery',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='sha256fp', full_name='censys_definitions.AnonymousQuery.sha256fp', index=0,
+      name='sha256fp', full_name='zsearch.AnonymousQuery.sha256fp', index=0,
       number=1, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
@@ -885,48 +885,48 @@ _ANONYMOUSQUERY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2326,
-  serialized_end=2360,
+  serialized_start=2126,
+  serialized_end=2160,
 )
 
 
 _ANONYMOUSQUERYRESPONSE = _descriptor.Descriptor(
   name='AnonymousQueryResponse',
-  full_name='censys_definitions.AnonymousQueryResponse',
+  full_name='zsearch.AnonymousQueryResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='sha256fp', full_name='censys_definitions.AnonymousQueryResponse.sha256fp', index=0,
+      name='sha256fp', full_name='zsearch.AnonymousQueryResponse.sha256fp', index=0,
       number=1, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='status', full_name='censys_definitions.AnonymousQueryResponse.status', index=1,
+      name='status', full_name='zsearch.AnonymousQueryResponse.status', index=1,
       number=2, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='record', full_name='censys_definitions.AnonymousQueryResponse.record', index=2,
+      name='record', full_name='zsearch.AnonymousQueryResponse.record', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='records', full_name='censys_definitions.AnonymousQueryResponse.records', index=3,
+      name='records', full_name='zsearch.AnonymousQueryResponse.records', index=3,
       number=4, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='error', full_name='censys_definitions.AnonymousQueryResponse.error', index=4,
+      name='error', full_name='zsearch.AnonymousQueryResponse.error', index=4,
       number=59, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -945,34 +945,34 @@ _ANONYMOUSQUERYRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2363,
-  serialized_end=2673,
+  serialized_start=2163,
+  serialized_end=2440,
 )
 
 
 _USERDATAREQUEST = _descriptor.Descriptor(
   name='UserDataRequest',
-  full_name='censys_definitions.UserDataRequest',
+  full_name='zsearch.UserDataRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='ip', full_name='censys_definitions.UserDataRequest.ip', index=0,
+      name='ip', full_name='zsearch.UserDataRequest.ip', index=0,
       number=1, type=7, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='domain', full_name='censys_definitions.UserDataRequest.domain', index=1,
+      name='domain', full_name='zsearch.UserDataRequest.domain', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='data', full_name='censys_definitions.UserDataRequest.data', index=2,
+      name='data', full_name='zsearch.UserDataRequest.data', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -990,20 +990,20 @@ _USERDATAREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2675,
-  serialized_end=2768,
+  serialized_start=2442,
+  serialized_end=2524,
 )
 
 
 _ROOTSTOREQUERY = _descriptor.Descriptor(
   name='RootStoreQuery',
-  full_name='censys_definitions.RootStoreQuery',
+  full_name='zsearch.RootStoreQuery',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='type', full_name='censys_definitions.RootStoreQuery.type', index=0,
+      name='type', full_name='zsearch.RootStoreQuery.type', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -1022,20 +1022,20 @@ _ROOTSTOREQUERY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2771,
-  serialized_end=2940,
+  serialized_start=2527,
+  serialized_end=2685,
 )
 
 
 _ROOTSTOREREPLY = _descriptor.Descriptor(
   name='RootStoreReply',
-  full_name='censys_definitions.RootStoreReply',
+  full_name='zsearch.RootStoreReply',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='certificates', full_name='censys_definitions.RootStoreReply.certificates', index=0,
+      name='certificates', full_name='zsearch.RootStoreReply.certificates', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -1053,8 +1053,8 @@ _ROOTSTOREREPLY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2942,
-  serialized_end=3013,
+  serialized_start=2687,
+  serialized_end=2747,
 )
 
 _MINSCANID.fields_by_name['key'].message_type = hoststore__pb2._ANONYMOUSKEY
@@ -1106,42 +1106,42 @@ DESCRIPTOR.message_types_by_name['RootStoreReply'] = _ROOTSTOREREPLY
 MinScanId = _reflection.GeneratedProtocolMessageType('MinScanId', (_message.Message,), dict(
   DESCRIPTOR = _MINSCANID,
   __module__ = 'rpc_pb2'
-  # @@protoc_insertion_point(class_scope:censys_definitions.MinScanId)
+  # @@protoc_insertion_point(class_scope:zsearch.MinScanId)
   ))
 _sym_db.RegisterMessage(MinScanId)
 
 MozillaOneCRLEntry = _reflection.GeneratedProtocolMessageType('MozillaOneCRLEntry', (_message.Message,), dict(
   DESCRIPTOR = _MOZILLAONECRLENTRY,
   __module__ = 'rpc_pb2'
-  # @@protoc_insertion_point(class_scope:censys_definitions.MozillaOneCRLEntry)
+  # @@protoc_insertion_point(class_scope:zsearch.MozillaOneCRLEntry)
   ))
 _sym_db.RegisterMessage(MozillaOneCRLEntry)
 
 Command = _reflection.GeneratedProtocolMessageType('Command', (_message.Message,), dict(
   DESCRIPTOR = _COMMAND,
   __module__ = 'rpc_pb2'
-  # @@protoc_insertion_point(class_scope:censys_definitions.Command)
+  # @@protoc_insertion_point(class_scope:zsearch.Command)
   ))
 _sym_db.RegisterMessage(Command)
 
 AnonymousStoreStatistics = _reflection.GeneratedProtocolMessageType('AnonymousStoreStatistics', (_message.Message,), dict(
   DESCRIPTOR = _ANONYMOUSSTORESTATISTICS,
   __module__ = 'rpc_pb2'
-  # @@protoc_insertion_point(class_scope:censys_definitions.AnonymousStoreStatistics)
+  # @@protoc_insertion_point(class_scope:zsearch.AnonymousStoreStatistics)
   ))
 _sym_db.RegisterMessage(AnonymousStoreStatistics)
 
 StatisticsPair = _reflection.GeneratedProtocolMessageType('StatisticsPair', (_message.Message,), dict(
   DESCRIPTOR = _STATISTICSPAIR,
   __module__ = 'rpc_pb2'
-  # @@protoc_insertion_point(class_scope:censys_definitions.StatisticsPair)
+  # @@protoc_insertion_point(class_scope:zsearch.StatisticsPair)
   ))
 _sym_db.RegisterMessage(StatisticsPair)
 
 StoreStatistics = _reflection.GeneratedProtocolMessageType('StoreStatistics', (_message.Message,), dict(
   DESCRIPTOR = _STORESTATISTICS,
   __module__ = 'rpc_pb2'
-  # @@protoc_insertion_point(class_scope:censys_definitions.StoreStatistics)
+  # @@protoc_insertion_point(class_scope:zsearch.StoreStatistics)
   ))
 _sym_db.RegisterMessage(StoreStatistics)
 
@@ -1150,19 +1150,19 @@ ServerStatistics = _reflection.GeneratedProtocolMessageType('ServerStatistics', 
   StoreStatisticsEntry = _reflection.GeneratedProtocolMessageType('StoreStatisticsEntry', (_message.Message,), dict(
     DESCRIPTOR = _SERVERSTATISTICS_STORESTATISTICSENTRY,
     __module__ = 'rpc_pb2'
-    # @@protoc_insertion_point(class_scope:censys_definitions.ServerStatistics.StoreStatisticsEntry)
+    # @@protoc_insertion_point(class_scope:zsearch.ServerStatistics.StoreStatisticsEntry)
     ))
   ,
 
   AnonymousStoreStatisticsEntry = _reflection.GeneratedProtocolMessageType('AnonymousStoreStatisticsEntry', (_message.Message,), dict(
     DESCRIPTOR = _SERVERSTATISTICS_ANONYMOUSSTORESTATISTICSENTRY,
     __module__ = 'rpc_pb2'
-    # @@protoc_insertion_point(class_scope:censys_definitions.ServerStatistics.AnonymousStoreStatisticsEntry)
+    # @@protoc_insertion_point(class_scope:zsearch.ServerStatistics.AnonymousStoreStatisticsEntry)
     ))
   ,
   DESCRIPTOR = _SERVERSTATISTICS,
   __module__ = 'rpc_pb2'
-  # @@protoc_insertion_point(class_scope:censys_definitions.ServerStatistics)
+  # @@protoc_insertion_point(class_scope:zsearch.ServerStatistics)
   ))
 _sym_db.RegisterMessage(ServerStatistics)
 _sym_db.RegisterMessage(ServerStatistics.StoreStatisticsEntry)
@@ -1171,63 +1171,63 @@ _sym_db.RegisterMessage(ServerStatistics.AnonymousStoreStatisticsEntry)
 PruneStatistics = _reflection.GeneratedProtocolMessageType('PruneStatistics', (_message.Message,), dict(
   DESCRIPTOR = _PRUNESTATISTICS,
   __module__ = 'rpc_pb2'
-  # @@protoc_insertion_point(class_scope:censys_definitions.PruneStatistics)
+  # @@protoc_insertion_point(class_scope:zsearch.PruneStatistics)
   ))
 _sym_db.RegisterMessage(PruneStatistics)
 
 CommandReply = _reflection.GeneratedProtocolMessageType('CommandReply', (_message.Message,), dict(
   DESCRIPTOR = _COMMANDREPLY,
   __module__ = 'rpc_pb2'
-  # @@protoc_insertion_point(class_scope:censys_definitions.CommandReply)
+  # @@protoc_insertion_point(class_scope:zsearch.CommandReply)
   ))
 _sym_db.RegisterMessage(CommandReply)
 
 HostQuery = _reflection.GeneratedProtocolMessageType('HostQuery', (_message.Message,), dict(
   DESCRIPTOR = _HOSTQUERY,
   __module__ = 'rpc_pb2'
-  # @@protoc_insertion_point(class_scope:censys_definitions.HostQuery)
+  # @@protoc_insertion_point(class_scope:zsearch.HostQuery)
   ))
 _sym_db.RegisterMessage(HostQuery)
 
 HostQueryResponse = _reflection.GeneratedProtocolMessageType('HostQueryResponse', (_message.Message,), dict(
   DESCRIPTOR = _HOSTQUERYRESPONSE,
   __module__ = 'rpc_pb2'
-  # @@protoc_insertion_point(class_scope:censys_definitions.HostQueryResponse)
+  # @@protoc_insertion_point(class_scope:zsearch.HostQueryResponse)
   ))
 _sym_db.RegisterMessage(HostQueryResponse)
 
 AnonymousQuery = _reflection.GeneratedProtocolMessageType('AnonymousQuery', (_message.Message,), dict(
   DESCRIPTOR = _ANONYMOUSQUERY,
   __module__ = 'rpc_pb2'
-  # @@protoc_insertion_point(class_scope:censys_definitions.AnonymousQuery)
+  # @@protoc_insertion_point(class_scope:zsearch.AnonymousQuery)
   ))
 _sym_db.RegisterMessage(AnonymousQuery)
 
 AnonymousQueryResponse = _reflection.GeneratedProtocolMessageType('AnonymousQueryResponse', (_message.Message,), dict(
   DESCRIPTOR = _ANONYMOUSQUERYRESPONSE,
   __module__ = 'rpc_pb2'
-  # @@protoc_insertion_point(class_scope:censys_definitions.AnonymousQueryResponse)
+  # @@protoc_insertion_point(class_scope:zsearch.AnonymousQueryResponse)
   ))
 _sym_db.RegisterMessage(AnonymousQueryResponse)
 
 UserDataRequest = _reflection.GeneratedProtocolMessageType('UserDataRequest', (_message.Message,), dict(
   DESCRIPTOR = _USERDATAREQUEST,
   __module__ = 'rpc_pb2'
-  # @@protoc_insertion_point(class_scope:censys_definitions.UserDataRequest)
+  # @@protoc_insertion_point(class_scope:zsearch.UserDataRequest)
   ))
 _sym_db.RegisterMessage(UserDataRequest)
 
 RootStoreQuery = _reflection.GeneratedProtocolMessageType('RootStoreQuery', (_message.Message,), dict(
   DESCRIPTOR = _ROOTSTOREQUERY,
   __module__ = 'rpc_pb2'
-  # @@protoc_insertion_point(class_scope:censys_definitions.RootStoreQuery)
+  # @@protoc_insertion_point(class_scope:zsearch.RootStoreQuery)
   ))
 _sym_db.RegisterMessage(RootStoreQuery)
 
 RootStoreReply = _reflection.GeneratedProtocolMessageType('RootStoreReply', (_message.Message,), dict(
   DESCRIPTOR = _ROOTSTOREREPLY,
   __module__ = 'rpc_pb2'
-  # @@protoc_insertion_point(class_scope:censys_definitions.RootStoreReply)
+  # @@protoc_insertion_point(class_scope:zsearch.RootStoreReply)
   ))
 _sym_db.RegisterMessage(RootStoreReply)
 

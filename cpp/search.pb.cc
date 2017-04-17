@@ -17,7 +17,7 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 
-namespace censys_definitions {
+namespace zsearch {
 
 namespace protobuf_search_2eproto {
 
@@ -59,9 +59,9 @@ void TableStruct::InitDefaultsImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   ::google::protobuf::internal::InitProtobufDefaults();
-  ::censys_definitions::protobuf_anonstore_2eproto::InitDefaults();
-  ::censys_definitions::protobuf_hoststore_2eproto::InitDefaults();
-  ::censys_definitions::protobuf_rpc_2eproto::InitDefaults();
+  ::zsearch::protobuf_anonstore_2eproto::InitDefaults();
+  ::zsearch::protobuf_hoststore_2eproto::InitDefaults();
+  ::zsearch::protobuf_rpc_2eproto::InitDefaults();
 }
 
 void InitDefaults() {
@@ -71,103 +71,81 @@ void InitDefaults() {
 void AddDescriptorsImpl() {
   InitDefaults();
   static const char descriptor[] = {
-      "\n\014search.proto\022\022censys_definitions\032\017anon"
-      "store.proto\032\017hoststore.proto\032\trpc.proto2"
-      "\214\014\n\014AdminService\022K\n\010Shutdown\022\033.censys_de"
-      "finitions.Command\032 .censys_definitions.C"
-      "ommandReply\"\000\022I\n\006Status\022\033.censys_definit"
-      "ions.Command\032 .censys_definitions.Comman"
-      "dReply\"\000\022M\n\nStatistics\022\033.censys_definiti"
-      "ons.Command\032 .censys_definitions.Command"
-      "Reply\"\000\022L\n\tPruneIPv4\022\033.censys_definition"
-      "s.Command\032 .censys_definitions.CommandRe"
-      "ply\"\000\022N\n\013PruneDomain\022\033.censys_definition"
-      "s.Command\032 .censys_definitions.CommandRe"
-      "ply\"\000\022O\n\014UpdateASData\022\033.censys_definitio"
-      "ns.Command\032 .censys_definitions.CommandR"
-      "eply\"\000\022U\n\022UpdateLocationData\022\033.censys_de"
-      "finitions.Command\032 .censys_definitions.C"
-      "ommandReply\"\000\022W\n\024ValidateCertificates\022\033."
-      "censys_definitions.Command\032 .censys_defi"
-      "nitions.CommandReply\"\000\022W\n\024FixCertificate"
-      "Source\022\033.censys_definitions.Command\032 .ce"
-      "nsys_definitions.CommandReply\"\000\022Q\n\016DumpI"
-      "Pv4ToJSON\022\033.censys_definitions.Command\032 "
-      ".censys_definitions.CommandReply\"\000\022S\n\020Du"
-      "mpDomainToJSON\022\033.censys_definitions.Comm"
-      "and\032 .censys_definitions.CommandReply\"\000\022"
-      "Y\n\026DumpCertificatesToJSON\022\033.censys_defin"
-      "itions.Command\032 .censys_definitions.Comm"
-      "andReply\"\000\022Q\n\016DumpKeysToJSON\022\033.censys_de"
-      "finitions.Command\032 .censys_definitions.C"
-      "ommandReply\"\000\022W\n\024RegenerateIPv4Deltas\022\033."
-      "censys_definitions.Command\032 .censys_defi"
-      "nitions.CommandReply\"\000\022Y\n\026RegenerateDoma"
-      "inDeltas\022\033.censys_definitions.Command\032 ."
-      "censys_definitions.CommandReply\"\000\022^\n\033Reg"
-      "enerateCertificateDeltas\022\033.censys_defini"
-      "tions.Command\032 .censys_definitions.Comma"
-      "ndReply\"\000\022j\n RegenerateSingleCertificate"
-      "Delta\022\".censys_definitions.AnonymousQuer"
-      "y\032 .censys_definitions.CommandReply\"\000\022G\n"
-      "\004Ping\022\033.censys_definitions.Command\032 .cen"
-      "sys_definitions.CommandReply\"\0002\331\016\n\014Query"
-      "Service\022[\n\021GetHostIPv4Record\022\035.censys_de"
-      "finitions.HostQuery\032%.censys_definitions"
-      ".HostQueryResponse\"\000\022L\n\021PutHostIPv4Recor"
-      "d\022\032.censys_definitions.Record\032\031.censys_d"
-      "efinitions.Delta\"\000\022O\n\021DelHostIPv4Record\022"
-      "\035.censys_definitions.HostQuery\032\031.censys_"
-      "definitions.Delta\"\000\022[\n\021GetAllIPv4Records"
-      "\022\035.censys_definitions.HostQuery\032%.censys"
-      "_definitions.HostQueryResponse\"\000\022N\n\020GetH"
-      "ostIPv4Delta\022\035.censys_definitions.HostQu"
-      "ery\032\031.censys_definitions.Delta\"\000\022]\n\023GetH"
-      "ostDomainRecord\022\035.censys_definitions.Hos"
-      "tQuery\032%.censys_definitions.HostQueryRes"
-      "ponse\"\000\022N\n\023PutHostDomainRecord\022\032.censys_"
-      "definitions.Record\032\031.censys_definitions."
-      "Delta\"\000\022Q\n\023DelHostDomainRecord\022\035.censys_"
-      "definitions.HostQuery\032\031.censys_definitio"
-      "ns.Delta\"\000\022]\n\023GetAllDomainRecords\022\035.cens"
-      "ys_definitions.HostQuery\032%.censys_defini"
-      "tions.HostQueryResponse\"\000\022P\n\022GetHostDoma"
-      "inDelta\022\035.censys_definitions.HostQuery\032\031"
-      ".censys_definitions.Delta\"\000\022b\n\016GetCertif"
-      "icate\022\".censys_definitions.AnonymousQuer"
-      "y\032*.censys_definitions.AnonymousQueryRes"
-      "ponse\"\000\022^\n\021UpsertCertificate\022#.censys_de"
-      "finitions.AnonymousRecord\032\".censys_defin"
-      "itions.AnonymousDelta\"\000\022a\n\024UpsertRawCert"
-      "ificate\022#.censys_definitions.AnonymousRe"
-      "cord\032\".censys_definitions.AnonymousDelta"
-      "\"\000\022g\n\023GetCryptographicKey\022\".censys_defin"
-      "itions.AnonymousQuery\032*.censys_definitio"
-      "ns.AnonymousQueryResponse\"\000\022c\n\026UpsertCry"
-      "ptographicKey\022#.censys_definitions.Anony"
-      "mousRecord\032\".censys_definitions.Anonymou"
-      "sDelta\"\000\022V\n\021GetPublicLocation\022\035.censys_d"
-      "efinitions.HostQuery\032 .censys_definition"
-      "s.LocationAtom\"\000\022Z\n\025GetRestrictedLocatio"
-      "n\022\035.censys_definitions.HostQuery\032 .censy"
-      "s_definitions.LocationAtom\"\000\022G\n\010GetWHOIS"
-      "\022\035.censys_definitions.HostQuery\032\032.censys"
-      "_definitions.Record\"\000\022N\n\017GetUserMetadata"
-      "\022\035.censys_definitions.HostQuery\032\032.censys"
-      "_definitions.Record\"\000\022Q\n\017PutUserMetadata"
-      "\022\032.censys_definitions.Record\032 .censys_de"
-      "finitions.CommandReply\"\000\022X\n\014GetRootStore"
-      "\022\".censys_definitions.RootStoreQuery\032\".c"
-      "ensys_definitions.RootStoreReply\"\000b\006prot"
-      "o3"
+      "\n\014search.proto\022\007zsearch\032\017anonstore.proto"
+      "\032\017hoststore.proto\032\trpc.proto2\200\t\n\014AdminSe"
+      "rvice\0225\n\010Shutdown\022\020.zsearch.Command\032\025.zs"
+      "earch.CommandReply\"\000\0223\n\006Status\022\020.zsearch"
+      ".Command\032\025.zsearch.CommandReply\"\000\0227\n\nSta"
+      "tistics\022\020.zsearch.Command\032\025.zsearch.Comm"
+      "andReply\"\000\0226\n\tPruneIPv4\022\020.zsearch.Comman"
+      "d\032\025.zsearch.CommandReply\"\000\0228\n\013PruneDomai"
+      "n\022\020.zsearch.Command\032\025.zsearch.CommandRep"
+      "ly\"\000\0229\n\014UpdateASData\022\020.zsearch.Command\032\025"
+      ".zsearch.CommandReply\"\000\022\?\n\022UpdateLocatio"
+      "nData\022\020.zsearch.Command\032\025.zsearch.Comman"
+      "dReply\"\000\022A\n\024ValidateCertificates\022\020.zsear"
+      "ch.Command\032\025.zsearch.CommandReply\"\000\022A\n\024F"
+      "ixCertificateSource\022\020.zsearch.Command\032\025."
+      "zsearch.CommandReply\"\000\022;\n\016DumpIPv4ToJSON"
+      "\022\020.zsearch.Command\032\025.zsearch.CommandRepl"
+      "y\"\000\022=\n\020DumpDomainToJSON\022\020.zsearch.Comman"
+      "d\032\025.zsearch.CommandReply\"\000\022C\n\026DumpCertif"
+      "icatesToJSON\022\020.zsearch.Command\032\025.zsearch"
+      ".CommandReply\"\000\022;\n\016DumpKeysToJSON\022\020.zsea"
+      "rch.Command\032\025.zsearch.CommandReply\"\000\022A\n\024"
+      "RegenerateIPv4Deltas\022\020.zsearch.Command\032\025"
+      ".zsearch.CommandReply\"\000\022C\n\026RegenerateDom"
+      "ainDeltas\022\020.zsearch.Command\032\025.zsearch.Co"
+      "mmandReply\"\000\022H\n\033RegenerateCertificateDel"
+      "tas\022\020.zsearch.Command\032\025.zsearch.CommandR"
+      "eply\"\000\022T\n RegenerateSingleCertificateDel"
+      "ta\022\027.zsearch.AnonymousQuery\032\025.zsearch.Co"
+      "mmandReply\"\000\0221\n\004Ping\022\020.zsearch.Command\032\025"
+      ".zsearch.CommandReply\"\0002\213\013\n\014QueryService"
+      "\022E\n\021GetHostIPv4Record\022\022.zsearch.HostQuer"
+      "y\032\032.zsearch.HostQueryResponse\"\000\0226\n\021PutHo"
+      "stIPv4Record\022\017.zsearch.Record\032\016.zsearch."
+      "Delta\"\000\0229\n\021DelHostIPv4Record\022\022.zsearch.H"
+      "ostQuery\032\016.zsearch.Delta\"\000\022E\n\021GetAllIPv4"
+      "Records\022\022.zsearch.HostQuery\032\032.zsearch.Ho"
+      "stQueryResponse\"\000\0228\n\020GetHostIPv4Delta\022\022."
+      "zsearch.HostQuery\032\016.zsearch.Delta\"\000\022G\n\023G"
+      "etHostDomainRecord\022\022.zsearch.HostQuery\032\032"
+      ".zsearch.HostQueryResponse\"\000\0228\n\023PutHostD"
+      "omainRecord\022\017.zsearch.Record\032\016.zsearch.D"
+      "elta\"\000\022;\n\023DelHostDomainRecord\022\022.zsearch."
+      "HostQuery\032\016.zsearch.Delta\"\000\022G\n\023GetAllDom"
+      "ainRecords\022\022.zsearch.HostQuery\032\032.zsearch"
+      ".HostQueryResponse\"\000\022:\n\022GetHostDomainDel"
+      "ta\022\022.zsearch.HostQuery\032\016.zsearch.Delta\"\000"
+      "\022L\n\016GetCertificate\022\027.zsearch.AnonymousQu"
+      "ery\032\037.zsearch.AnonymousQueryResponse\"\000\022H"
+      "\n\021UpsertCertificate\022\030.zsearch.AnonymousR"
+      "ecord\032\027.zsearch.AnonymousDelta\"\000\022K\n\024Upse"
+      "rtRawCertificate\022\030.zsearch.AnonymousReco"
+      "rd\032\027.zsearch.AnonymousDelta\"\000\022Q\n\023GetCryp"
+      "tographicKey\022\027.zsearch.AnonymousQuery\032\037."
+      "zsearch.AnonymousQueryResponse\"\000\022M\n\026Upse"
+      "rtCryptographicKey\022\030.zsearch.AnonymousRe"
+      "cord\032\027.zsearch.AnonymousDelta\"\000\022@\n\021GetPu"
+      "blicLocation\022\022.zsearch.HostQuery\032\025.zsear"
+      "ch.LocationAtom\"\000\022D\n\025GetRestrictedLocati"
+      "on\022\022.zsearch.HostQuery\032\025.zsearch.Locatio"
+      "nAtom\"\000\0221\n\010GetWHOIS\022\022.zsearch.HostQuery\032"
+      "\017.zsearch.Record\"\000\0228\n\017GetUserMetadata\022\022."
+      "zsearch.HostQuery\032\017.zsearch.Record\"\000\022;\n\017"
+      "PutUserMetadata\022\017.zsearch.Record\032\025.zsear"
+      "ch.CommandReply\"\000\022B\n\014GetRootStore\022\027.zsea"
+      "rch.RootStoreQuery\032\027.zsearch.RootStoreRe"
+      "ply\"\000b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 3522);
+      descriptor, 2653);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "search.proto", &protobuf_RegisterTypes);
-  ::censys_definitions::protobuf_anonstore_2eproto::AddDescriptors();
-  ::censys_definitions::protobuf_hoststore_2eproto::AddDescriptors();
-  ::censys_definitions::protobuf_rpc_2eproto::AddDescriptors();
+  ::zsearch::protobuf_anonstore_2eproto::AddDescriptors();
+  ::zsearch::protobuf_hoststore_2eproto::AddDescriptors();
+  ::zsearch::protobuf_rpc_2eproto::AddDescriptors();
   ::google::protobuf::internal::OnShutdown(&TableStruct::Shutdown);
 }
 
@@ -187,6 +165,6 @@ struct StaticDescriptorInitializer {
 
 // @@protoc_insertion_point(namespace_scope)
 
-}  // namespace censys_definitions
+}  // namespace zsearch
 
 // @@protoc_insertion_point(global_scope)

@@ -20,92 +20,92 @@ class AdminServiceStub(object):
       channel: A grpc.Channel.
     """
     self.Shutdown = channel.unary_unary(
-        '/censys_definitions.AdminService/Shutdown',
+        '/zsearch.AdminService/Shutdown',
         request_serializer=rpc__pb2.Command.SerializeToString,
         response_deserializer=rpc__pb2.CommandReply.FromString,
         )
     self.Status = channel.unary_unary(
-        '/censys_definitions.AdminService/Status',
+        '/zsearch.AdminService/Status',
         request_serializer=rpc__pb2.Command.SerializeToString,
         response_deserializer=rpc__pb2.CommandReply.FromString,
         )
     self.Statistics = channel.unary_unary(
-        '/censys_definitions.AdminService/Statistics',
+        '/zsearch.AdminService/Statistics',
         request_serializer=rpc__pb2.Command.SerializeToString,
         response_deserializer=rpc__pb2.CommandReply.FromString,
         )
     self.PruneIPv4 = channel.unary_unary(
-        '/censys_definitions.AdminService/PruneIPv4',
+        '/zsearch.AdminService/PruneIPv4',
         request_serializer=rpc__pb2.Command.SerializeToString,
         response_deserializer=rpc__pb2.CommandReply.FromString,
         )
     self.PruneDomain = channel.unary_unary(
-        '/censys_definitions.AdminService/PruneDomain',
+        '/zsearch.AdminService/PruneDomain',
         request_serializer=rpc__pb2.Command.SerializeToString,
         response_deserializer=rpc__pb2.CommandReply.FromString,
         )
     self.UpdateASData = channel.unary_unary(
-        '/censys_definitions.AdminService/UpdateASData',
+        '/zsearch.AdminService/UpdateASData',
         request_serializer=rpc__pb2.Command.SerializeToString,
         response_deserializer=rpc__pb2.CommandReply.FromString,
         )
     self.UpdateLocationData = channel.unary_unary(
-        '/censys_definitions.AdminService/UpdateLocationData',
+        '/zsearch.AdminService/UpdateLocationData',
         request_serializer=rpc__pb2.Command.SerializeToString,
         response_deserializer=rpc__pb2.CommandReply.FromString,
         )
     self.ValidateCertificates = channel.unary_unary(
-        '/censys_definitions.AdminService/ValidateCertificates',
+        '/zsearch.AdminService/ValidateCertificates',
         request_serializer=rpc__pb2.Command.SerializeToString,
         response_deserializer=rpc__pb2.CommandReply.FromString,
         )
     self.FixCertificateSource = channel.unary_unary(
-        '/censys_definitions.AdminService/FixCertificateSource',
+        '/zsearch.AdminService/FixCertificateSource',
         request_serializer=rpc__pb2.Command.SerializeToString,
         response_deserializer=rpc__pb2.CommandReply.FromString,
         )
     self.DumpIPv4ToJSON = channel.unary_unary(
-        '/censys_definitions.AdminService/DumpIPv4ToJSON',
+        '/zsearch.AdminService/DumpIPv4ToJSON',
         request_serializer=rpc__pb2.Command.SerializeToString,
         response_deserializer=rpc__pb2.CommandReply.FromString,
         )
     self.DumpDomainToJSON = channel.unary_unary(
-        '/censys_definitions.AdminService/DumpDomainToJSON',
+        '/zsearch.AdminService/DumpDomainToJSON',
         request_serializer=rpc__pb2.Command.SerializeToString,
         response_deserializer=rpc__pb2.CommandReply.FromString,
         )
     self.DumpCertificatesToJSON = channel.unary_unary(
-        '/censys_definitions.AdminService/DumpCertificatesToJSON',
+        '/zsearch.AdminService/DumpCertificatesToJSON',
         request_serializer=rpc__pb2.Command.SerializeToString,
         response_deserializer=rpc__pb2.CommandReply.FromString,
         )
     self.DumpKeysToJSON = channel.unary_unary(
-        '/censys_definitions.AdminService/DumpKeysToJSON',
+        '/zsearch.AdminService/DumpKeysToJSON',
         request_serializer=rpc__pb2.Command.SerializeToString,
         response_deserializer=rpc__pb2.CommandReply.FromString,
         )
     self.RegenerateIPv4Deltas = channel.unary_unary(
-        '/censys_definitions.AdminService/RegenerateIPv4Deltas',
+        '/zsearch.AdminService/RegenerateIPv4Deltas',
         request_serializer=rpc__pb2.Command.SerializeToString,
         response_deserializer=rpc__pb2.CommandReply.FromString,
         )
     self.RegenerateDomainDeltas = channel.unary_unary(
-        '/censys_definitions.AdminService/RegenerateDomainDeltas',
+        '/zsearch.AdminService/RegenerateDomainDeltas',
         request_serializer=rpc__pb2.Command.SerializeToString,
         response_deserializer=rpc__pb2.CommandReply.FromString,
         )
     self.RegenerateCertificateDeltas = channel.unary_unary(
-        '/censys_definitions.AdminService/RegenerateCertificateDeltas',
+        '/zsearch.AdminService/RegenerateCertificateDeltas',
         request_serializer=rpc__pb2.Command.SerializeToString,
         response_deserializer=rpc__pb2.CommandReply.FromString,
         )
     self.RegenerateSingleCertificateDelta = channel.unary_unary(
-        '/censys_definitions.AdminService/RegenerateSingleCertificateDelta',
+        '/zsearch.AdminService/RegenerateSingleCertificateDelta',
         request_serializer=rpc__pb2.AnonymousQuery.SerializeToString,
         response_deserializer=rpc__pb2.CommandReply.FromString,
         )
     self.Ping = channel.unary_unary(
-        '/censys_definitions.AdminService/Ping',
+        '/zsearch.AdminService/Ping',
         request_serializer=rpc__pb2.Command.SerializeToString,
         response_deserializer=rpc__pb2.CommandReply.FromString,
         )
@@ -301,7 +301,7 @@ def add_AdminServiceServicer_to_server(servicer, server):
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
-      'censys_definitions.AdminService', rpc_method_handlers)
+      'zsearch.AdminService', rpc_method_handlers)
   server.add_generic_rpc_handlers((generic_handler,))
 
 
@@ -314,107 +314,107 @@ class QueryServiceStub(object):
       channel: A grpc.Channel.
     """
     self.GetHostIPv4Record = channel.unary_unary(
-        '/censys_definitions.QueryService/GetHostIPv4Record',
+        '/zsearch.QueryService/GetHostIPv4Record',
         request_serializer=rpc__pb2.HostQuery.SerializeToString,
         response_deserializer=rpc__pb2.HostQueryResponse.FromString,
         )
     self.PutHostIPv4Record = channel.unary_unary(
-        '/censys_definitions.QueryService/PutHostIPv4Record',
+        '/zsearch.QueryService/PutHostIPv4Record',
         request_serializer=hoststore__pb2.Record.SerializeToString,
         response_deserializer=hoststore__pb2.Delta.FromString,
         )
     self.DelHostIPv4Record = channel.unary_unary(
-        '/censys_definitions.QueryService/DelHostIPv4Record',
+        '/zsearch.QueryService/DelHostIPv4Record',
         request_serializer=rpc__pb2.HostQuery.SerializeToString,
         response_deserializer=hoststore__pb2.Delta.FromString,
         )
     self.GetAllIPv4Records = channel.unary_unary(
-        '/censys_definitions.QueryService/GetAllIPv4Records',
+        '/zsearch.QueryService/GetAllIPv4Records',
         request_serializer=rpc__pb2.HostQuery.SerializeToString,
         response_deserializer=rpc__pb2.HostQueryResponse.FromString,
         )
     self.GetHostIPv4Delta = channel.unary_unary(
-        '/censys_definitions.QueryService/GetHostIPv4Delta',
+        '/zsearch.QueryService/GetHostIPv4Delta',
         request_serializer=rpc__pb2.HostQuery.SerializeToString,
         response_deserializer=hoststore__pb2.Delta.FromString,
         )
     self.GetHostDomainRecord = channel.unary_unary(
-        '/censys_definitions.QueryService/GetHostDomainRecord',
+        '/zsearch.QueryService/GetHostDomainRecord',
         request_serializer=rpc__pb2.HostQuery.SerializeToString,
         response_deserializer=rpc__pb2.HostQueryResponse.FromString,
         )
     self.PutHostDomainRecord = channel.unary_unary(
-        '/censys_definitions.QueryService/PutHostDomainRecord',
+        '/zsearch.QueryService/PutHostDomainRecord',
         request_serializer=hoststore__pb2.Record.SerializeToString,
         response_deserializer=hoststore__pb2.Delta.FromString,
         )
     self.DelHostDomainRecord = channel.unary_unary(
-        '/censys_definitions.QueryService/DelHostDomainRecord',
+        '/zsearch.QueryService/DelHostDomainRecord',
         request_serializer=rpc__pb2.HostQuery.SerializeToString,
         response_deserializer=hoststore__pb2.Delta.FromString,
         )
     self.GetAllDomainRecords = channel.unary_unary(
-        '/censys_definitions.QueryService/GetAllDomainRecords',
+        '/zsearch.QueryService/GetAllDomainRecords',
         request_serializer=rpc__pb2.HostQuery.SerializeToString,
         response_deserializer=rpc__pb2.HostQueryResponse.FromString,
         )
     self.GetHostDomainDelta = channel.unary_unary(
-        '/censys_definitions.QueryService/GetHostDomainDelta',
+        '/zsearch.QueryService/GetHostDomainDelta',
         request_serializer=rpc__pb2.HostQuery.SerializeToString,
         response_deserializer=hoststore__pb2.Delta.FromString,
         )
     self.GetCertificate = channel.unary_unary(
-        '/censys_definitions.QueryService/GetCertificate',
+        '/zsearch.QueryService/GetCertificate',
         request_serializer=rpc__pb2.AnonymousQuery.SerializeToString,
         response_deserializer=rpc__pb2.AnonymousQueryResponse.FromString,
         )
     self.UpsertCertificate = channel.unary_unary(
-        '/censys_definitions.QueryService/UpsertCertificate',
+        '/zsearch.QueryService/UpsertCertificate',
         request_serializer=anonstore__pb2.AnonymousRecord.SerializeToString,
         response_deserializer=anonstore__pb2.AnonymousDelta.FromString,
         )
     self.UpsertRawCertificate = channel.unary_unary(
-        '/censys_definitions.QueryService/UpsertRawCertificate',
+        '/zsearch.QueryService/UpsertRawCertificate',
         request_serializer=anonstore__pb2.AnonymousRecord.SerializeToString,
         response_deserializer=anonstore__pb2.AnonymousDelta.FromString,
         )
     self.GetCryptographicKey = channel.unary_unary(
-        '/censys_definitions.QueryService/GetCryptographicKey',
+        '/zsearch.QueryService/GetCryptographicKey',
         request_serializer=rpc__pb2.AnonymousQuery.SerializeToString,
         response_deserializer=rpc__pb2.AnonymousQueryResponse.FromString,
         )
     self.UpsertCryptographicKey = channel.unary_unary(
-        '/censys_definitions.QueryService/UpsertCryptographicKey',
+        '/zsearch.QueryService/UpsertCryptographicKey',
         request_serializer=anonstore__pb2.AnonymousRecord.SerializeToString,
         response_deserializer=anonstore__pb2.AnonymousDelta.FromString,
         )
     self.GetPublicLocation = channel.unary_unary(
-        '/censys_definitions.QueryService/GetPublicLocation',
+        '/zsearch.QueryService/GetPublicLocation',
         request_serializer=rpc__pb2.HostQuery.SerializeToString,
         response_deserializer=hoststore__pb2.LocationAtom.FromString,
         )
     self.GetRestrictedLocation = channel.unary_unary(
-        '/censys_definitions.QueryService/GetRestrictedLocation',
+        '/zsearch.QueryService/GetRestrictedLocation',
         request_serializer=rpc__pb2.HostQuery.SerializeToString,
         response_deserializer=hoststore__pb2.LocationAtom.FromString,
         )
     self.GetWHOIS = channel.unary_unary(
-        '/censys_definitions.QueryService/GetWHOIS',
+        '/zsearch.QueryService/GetWHOIS',
         request_serializer=rpc__pb2.HostQuery.SerializeToString,
         response_deserializer=hoststore__pb2.Record.FromString,
         )
     self.GetUserMetadata = channel.unary_unary(
-        '/censys_definitions.QueryService/GetUserMetadata',
+        '/zsearch.QueryService/GetUserMetadata',
         request_serializer=rpc__pb2.HostQuery.SerializeToString,
         response_deserializer=hoststore__pb2.Record.FromString,
         )
     self.PutUserMetadata = channel.unary_unary(
-        '/censys_definitions.QueryService/PutUserMetadata',
+        '/zsearch.QueryService/PutUserMetadata',
         request_serializer=hoststore__pb2.Record.SerializeToString,
         response_deserializer=rpc__pb2.CommandReply.FromString,
         )
     self.GetRootStore = channel.unary_unary(
-        '/censys_definitions.QueryService/GetRootStore',
+        '/zsearch.QueryService/GetRootStore',
         request_serializer=rpc__pb2.RootStoreQuery.SerializeToString,
         response_deserializer=rpc__pb2.RootStoreReply.FromString,
         )
@@ -637,5 +637,5 @@ def add_QueryServiceServicer_to_server(servicer, server):
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
-      'censys_definitions.QueryService', rpc_method_handlers)
+      'zsearch.QueryService', rpc_method_handlers)
   server.add_generic_rpc_handlers((generic_handler,))

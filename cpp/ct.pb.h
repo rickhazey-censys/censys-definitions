@@ -30,7 +30,7 @@
 #include <google/protobuf/generated_enum_reflection.h>
 #include <google/protobuf/unknown_field_set.h>
 // @@protoc_insertion_point(includes)
-namespace censys_definitions {
+namespace zsearch {
 class CTServerStatus;
 class CTServerStatusDefaultTypeInternal;
 extern CTServerStatusDefaultTypeInternal _CTServerStatus_default_instance_;
@@ -40,9 +40,9 @@ extern CTStatusDefaultTypeInternal _CTStatus_default_instance_;
 class SCT;
 class SCTDefaultTypeInternal;
 extern SCTDefaultTypeInternal _SCT_default_instance_;
-}  // namespace censys_definitions
+}  // namespace zsearch
 
-namespace censys_definitions {
+namespace zsearch {
 
 namespace protobuf_ct_2eproto {
 // Internal implementation detail -- do not call these.
@@ -134,7 +134,7 @@ inline bool CTServer_Parse(
 }
 // ===================================================================
 
-class CTServerStatus : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:censys_definitions.CTServerStatus) */ {
+class CTServerStatus : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zsearch.CTServerStatus) */ {
  public:
   CTServerStatus();
   virtual ~CTServerStatus();
@@ -253,13 +253,13 @@ class CTServerStatus : public ::google::protobuf::Message /* @@protoc_insertion_
   ::google::protobuf::int64 push_timestamp() const;
   void set_push_timestamp(::google::protobuf::int64 value);
 
-  // .censys_definitions.CTPushStatus push_status = 5;
+  // .zsearch.CTPushStatus push_status = 5;
   void clear_push_status();
   static const int kPushStatusFieldNumber = 5;
-  ::censys_definitions::CTPushStatus push_status() const;
-  void set_push_status(::censys_definitions::CTPushStatus value);
+  ::zsearch::CTPushStatus push_status() const;
+  void set_push_status(::zsearch::CTPushStatus value);
 
-  // @@protoc_insertion_point(class_scope:censys_definitions.CTServerStatus)
+  // @@protoc_insertion_point(class_scope:zsearch.CTServerStatus)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -275,7 +275,7 @@ class CTServerStatus : public ::google::protobuf::Message /* @@protoc_insertion_
 };
 // -------------------------------------------------------------------
 
-class CTStatus : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:censys_definitions.CTStatus) */ {
+class CTStatus : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zsearch.CTStatus) */ {
  public:
   CTStatus();
   virtual ~CTStatus();
@@ -342,326 +342,326 @@ class CTStatus : public ::google::protobuf::Message /* @@protoc_insertion_point(
 
   // accessors -------------------------------------------------------
 
-  // .censys_definitions.CTServerStatus censys_dev = 1;
+  // .zsearch.CTServerStatus censys_dev = 1;
   bool has_censys_dev() const;
   void clear_censys_dev();
   static const int kCensysDevFieldNumber = 1;
-  const ::censys_definitions::CTServerStatus& censys_dev() const;
-  ::censys_definitions::CTServerStatus* mutable_censys_dev();
-  ::censys_definitions::CTServerStatus* release_censys_dev();
-  void set_allocated_censys_dev(::censys_definitions::CTServerStatus* censys_dev);
+  const ::zsearch::CTServerStatus& censys_dev() const;
+  ::zsearch::CTServerStatus* mutable_censys_dev();
+  ::zsearch::CTServerStatus* release_censys_dev();
+  void set_allocated_censys_dev(::zsearch::CTServerStatus* censys_dev);
 
-  // .censys_definitions.CTServerStatus censys = 2;
+  // .zsearch.CTServerStatus censys = 2;
   bool has_censys() const;
   void clear_censys();
   static const int kCensysFieldNumber = 2;
-  const ::censys_definitions::CTServerStatus& censys() const;
-  ::censys_definitions::CTServerStatus* mutable_censys();
-  ::censys_definitions::CTServerStatus* release_censys();
-  void set_allocated_censys(::censys_definitions::CTServerStatus* censys);
+  const ::zsearch::CTServerStatus& censys() const;
+  ::zsearch::CTServerStatus* mutable_censys();
+  ::zsearch::CTServerStatus* release_censys();
+  void set_allocated_censys(::zsearch::CTServerStatus* censys);
 
-  // .censys_definitions.CTServerStatus google_aviator = 10;
+  // .zsearch.CTServerStatus google_aviator = 10;
   bool has_google_aviator() const;
   void clear_google_aviator();
   static const int kGoogleAviatorFieldNumber = 10;
-  const ::censys_definitions::CTServerStatus& google_aviator() const;
-  ::censys_definitions::CTServerStatus* mutable_google_aviator();
-  ::censys_definitions::CTServerStatus* release_google_aviator();
-  void set_allocated_google_aviator(::censys_definitions::CTServerStatus* google_aviator);
+  const ::zsearch::CTServerStatus& google_aviator() const;
+  ::zsearch::CTServerStatus* mutable_google_aviator();
+  ::zsearch::CTServerStatus* release_google_aviator();
+  void set_allocated_google_aviator(::zsearch::CTServerStatus* google_aviator);
 
-  // .censys_definitions.CTServerStatus google_pilot = 11;
+  // .zsearch.CTServerStatus google_pilot = 11;
   bool has_google_pilot() const;
   void clear_google_pilot();
   static const int kGooglePilotFieldNumber = 11;
-  const ::censys_definitions::CTServerStatus& google_pilot() const;
-  ::censys_definitions::CTServerStatus* mutable_google_pilot();
-  ::censys_definitions::CTServerStatus* release_google_pilot();
-  void set_allocated_google_pilot(::censys_definitions::CTServerStatus* google_pilot);
+  const ::zsearch::CTServerStatus& google_pilot() const;
+  ::zsearch::CTServerStatus* mutable_google_pilot();
+  ::zsearch::CTServerStatus* release_google_pilot();
+  void set_allocated_google_pilot(::zsearch::CTServerStatus* google_pilot);
 
-  // .censys_definitions.CTServerStatus google_rocketeer = 12;
+  // .zsearch.CTServerStatus google_rocketeer = 12;
   bool has_google_rocketeer() const;
   void clear_google_rocketeer();
   static const int kGoogleRocketeerFieldNumber = 12;
-  const ::censys_definitions::CTServerStatus& google_rocketeer() const;
-  ::censys_definitions::CTServerStatus* mutable_google_rocketeer();
-  ::censys_definitions::CTServerStatus* release_google_rocketeer();
-  void set_allocated_google_rocketeer(::censys_definitions::CTServerStatus* google_rocketeer);
+  const ::zsearch::CTServerStatus& google_rocketeer() const;
+  ::zsearch::CTServerStatus* mutable_google_rocketeer();
+  ::zsearch::CTServerStatus* release_google_rocketeer();
+  void set_allocated_google_rocketeer(::zsearch::CTServerStatus* google_rocketeer);
 
-  // .censys_definitions.CTServerStatus google_submariner = 13;
+  // .zsearch.CTServerStatus google_submariner = 13;
   bool has_google_submariner() const;
   void clear_google_submariner();
   static const int kGoogleSubmarinerFieldNumber = 13;
-  const ::censys_definitions::CTServerStatus& google_submariner() const;
-  ::censys_definitions::CTServerStatus* mutable_google_submariner();
-  ::censys_definitions::CTServerStatus* release_google_submariner();
-  void set_allocated_google_submariner(::censys_definitions::CTServerStatus* google_submariner);
+  const ::zsearch::CTServerStatus& google_submariner() const;
+  ::zsearch::CTServerStatus* mutable_google_submariner();
+  ::zsearch::CTServerStatus* release_google_submariner();
+  void set_allocated_google_submariner(::zsearch::CTServerStatus* google_submariner);
 
-  // .censys_definitions.CTServerStatus google_testtube = 14;
+  // .zsearch.CTServerStatus google_testtube = 14;
   bool has_google_testtube() const;
   void clear_google_testtube();
   static const int kGoogleTesttubeFieldNumber = 14;
-  const ::censys_definitions::CTServerStatus& google_testtube() const;
-  ::censys_definitions::CTServerStatus* mutable_google_testtube();
-  ::censys_definitions::CTServerStatus* release_google_testtube();
-  void set_allocated_google_testtube(::censys_definitions::CTServerStatus* google_testtube);
+  const ::zsearch::CTServerStatus& google_testtube() const;
+  ::zsearch::CTServerStatus* mutable_google_testtube();
+  ::zsearch::CTServerStatus* release_google_testtube();
+  void set_allocated_google_testtube(::zsearch::CTServerStatus* google_testtube);
 
-  // .censys_definitions.CTServerStatus google_icarus = 15;
+  // .zsearch.CTServerStatus google_icarus = 15;
   bool has_google_icarus() const;
   void clear_google_icarus();
   static const int kGoogleIcarusFieldNumber = 15;
-  const ::censys_definitions::CTServerStatus& google_icarus() const;
-  ::censys_definitions::CTServerStatus* mutable_google_icarus();
-  ::censys_definitions::CTServerStatus* release_google_icarus();
-  void set_allocated_google_icarus(::censys_definitions::CTServerStatus* google_icarus);
+  const ::zsearch::CTServerStatus& google_icarus() const;
+  ::zsearch::CTServerStatus* mutable_google_icarus();
+  ::zsearch::CTServerStatus* release_google_icarus();
+  void set_allocated_google_icarus(::zsearch::CTServerStatus* google_icarus);
 
-  // .censys_definitions.CTServerStatus google_skydiver = 16;
+  // .zsearch.CTServerStatus google_skydiver = 16;
   bool has_google_skydiver() const;
   void clear_google_skydiver();
   static const int kGoogleSkydiverFieldNumber = 16;
-  const ::censys_definitions::CTServerStatus& google_skydiver() const;
-  ::censys_definitions::CTServerStatus* mutable_google_skydiver();
-  ::censys_definitions::CTServerStatus* release_google_skydiver();
-  void set_allocated_google_skydiver(::censys_definitions::CTServerStatus* google_skydiver);
+  const ::zsearch::CTServerStatus& google_skydiver() const;
+  ::zsearch::CTServerStatus* mutable_google_skydiver();
+  ::zsearch::CTServerStatus* release_google_skydiver();
+  void set_allocated_google_skydiver(::zsearch::CTServerStatus* google_skydiver);
 
-  // .censys_definitions.CTServerStatus google_daedalus = 17;
+  // .zsearch.CTServerStatus google_daedalus = 17;
   bool has_google_daedalus() const;
   void clear_google_daedalus();
   static const int kGoogleDaedalusFieldNumber = 17;
-  const ::censys_definitions::CTServerStatus& google_daedalus() const;
-  ::censys_definitions::CTServerStatus* mutable_google_daedalus();
-  ::censys_definitions::CTServerStatus* release_google_daedalus();
-  void set_allocated_google_daedalus(::censys_definitions::CTServerStatus* google_daedalus);
+  const ::zsearch::CTServerStatus& google_daedalus() const;
+  ::zsearch::CTServerStatus* mutable_google_daedalus();
+  ::zsearch::CTServerStatus* release_google_daedalus();
+  void set_allocated_google_daedalus(::zsearch::CTServerStatus* google_daedalus);
 
-  // .censys_definitions.CTServerStatus digicert_ct1 = 20;
+  // .zsearch.CTServerStatus digicert_ct1 = 20;
   bool has_digicert_ct1() const;
   void clear_digicert_ct1();
   static const int kDigicertCt1FieldNumber = 20;
-  const ::censys_definitions::CTServerStatus& digicert_ct1() const;
-  ::censys_definitions::CTServerStatus* mutable_digicert_ct1();
-  ::censys_definitions::CTServerStatus* release_digicert_ct1();
-  void set_allocated_digicert_ct1(::censys_definitions::CTServerStatus* digicert_ct1);
+  const ::zsearch::CTServerStatus& digicert_ct1() const;
+  ::zsearch::CTServerStatus* mutable_digicert_ct1();
+  ::zsearch::CTServerStatus* release_digicert_ct1();
+  void set_allocated_digicert_ct1(::zsearch::CTServerStatus* digicert_ct1);
 
-  // .censys_definitions.CTServerStatus digicert_ct2 = 40;
+  // .zsearch.CTServerStatus digicert_ct2 = 40;
   bool has_digicert_ct2() const;
   void clear_digicert_ct2();
   static const int kDigicertCt2FieldNumber = 40;
-  const ::censys_definitions::CTServerStatus& digicert_ct2() const;
-  ::censys_definitions::CTServerStatus* mutable_digicert_ct2();
-  ::censys_definitions::CTServerStatus* release_digicert_ct2();
-  void set_allocated_digicert_ct2(::censys_definitions::CTServerStatus* digicert_ct2);
+  const ::zsearch::CTServerStatus& digicert_ct2() const;
+  ::zsearch::CTServerStatus* mutable_digicert_ct2();
+  ::zsearch::CTServerStatus* release_digicert_ct2();
+  void set_allocated_digicert_ct2(::zsearch::CTServerStatus* digicert_ct2);
 
-  // .censys_definitions.CTServerStatus izenpe_com_ct = 21;
+  // .zsearch.CTServerStatus izenpe_com_ct = 21;
   bool has_izenpe_com_ct() const;
   void clear_izenpe_com_ct();
   static const int kIzenpeComCtFieldNumber = 21;
-  const ::censys_definitions::CTServerStatus& izenpe_com_ct() const;
-  ::censys_definitions::CTServerStatus* mutable_izenpe_com_ct();
-  ::censys_definitions::CTServerStatus* release_izenpe_com_ct();
-  void set_allocated_izenpe_com_ct(::censys_definitions::CTServerStatus* izenpe_com_ct);
+  const ::zsearch::CTServerStatus& izenpe_com_ct() const;
+  ::zsearch::CTServerStatus* mutable_izenpe_com_ct();
+  ::zsearch::CTServerStatus* release_izenpe_com_ct();
+  void set_allocated_izenpe_com_ct(::zsearch::CTServerStatus* izenpe_com_ct);
 
-  // .censys_definitions.CTServerStatus izenpe_eus_ct = 22;
+  // .zsearch.CTServerStatus izenpe_eus_ct = 22;
   bool has_izenpe_eus_ct() const;
   void clear_izenpe_eus_ct();
   static const int kIzenpeEusCtFieldNumber = 22;
-  const ::censys_definitions::CTServerStatus& izenpe_eus_ct() const;
-  ::censys_definitions::CTServerStatus* mutable_izenpe_eus_ct();
-  ::censys_definitions::CTServerStatus* release_izenpe_eus_ct();
-  void set_allocated_izenpe_eus_ct(::censys_definitions::CTServerStatus* izenpe_eus_ct);
+  const ::zsearch::CTServerStatus& izenpe_eus_ct() const;
+  ::zsearch::CTServerStatus* mutable_izenpe_eus_ct();
+  ::zsearch::CTServerStatus* release_izenpe_eus_ct();
+  void set_allocated_izenpe_eus_ct(::zsearch::CTServerStatus* izenpe_eus_ct);
 
-  // .censys_definitions.CTServerStatus symantec_ws_ct = 23;
+  // .zsearch.CTServerStatus symantec_ws_ct = 23;
   bool has_symantec_ws_ct() const;
   void clear_symantec_ws_ct();
   static const int kSymantecWsCtFieldNumber = 23;
-  const ::censys_definitions::CTServerStatus& symantec_ws_ct() const;
-  ::censys_definitions::CTServerStatus* mutable_symantec_ws_ct();
-  ::censys_definitions::CTServerStatus* release_symantec_ws_ct();
-  void set_allocated_symantec_ws_ct(::censys_definitions::CTServerStatus* symantec_ws_ct);
+  const ::zsearch::CTServerStatus& symantec_ws_ct() const;
+  ::zsearch::CTServerStatus* mutable_symantec_ws_ct();
+  ::zsearch::CTServerStatus* release_symantec_ws_ct();
+  void set_allocated_symantec_ws_ct(::zsearch::CTServerStatus* symantec_ws_ct);
 
-  // .censys_definitions.CTServerStatus symantec_ws_vega = 24;
+  // .zsearch.CTServerStatus symantec_ws_vega = 24;
   bool has_symantec_ws_vega() const;
   void clear_symantec_ws_vega();
   static const int kSymantecWsVegaFieldNumber = 24;
-  const ::censys_definitions::CTServerStatus& symantec_ws_vega() const;
-  ::censys_definitions::CTServerStatus* mutable_symantec_ws_vega();
-  ::censys_definitions::CTServerStatus* release_symantec_ws_vega();
-  void set_allocated_symantec_ws_vega(::censys_definitions::CTServerStatus* symantec_ws_vega);
+  const ::zsearch::CTServerStatus& symantec_ws_vega() const;
+  ::zsearch::CTServerStatus* mutable_symantec_ws_vega();
+  ::zsearch::CTServerStatus* release_symantec_ws_vega();
+  void set_allocated_symantec_ws_vega(::zsearch::CTServerStatus* symantec_ws_vega);
 
-  // .censys_definitions.CTServerStatus symantec_ws_sirius = 37;
+  // .zsearch.CTServerStatus symantec_ws_sirius = 37;
   bool has_symantec_ws_sirius() const;
   void clear_symantec_ws_sirius();
   static const int kSymantecWsSiriusFieldNumber = 37;
-  const ::censys_definitions::CTServerStatus& symantec_ws_sirius() const;
-  ::censys_definitions::CTServerStatus* mutable_symantec_ws_sirius();
-  ::censys_definitions::CTServerStatus* release_symantec_ws_sirius();
-  void set_allocated_symantec_ws_sirius(::censys_definitions::CTServerStatus* symantec_ws_sirius);
+  const ::zsearch::CTServerStatus& symantec_ws_sirius() const;
+  ::zsearch::CTServerStatus* mutable_symantec_ws_sirius();
+  ::zsearch::CTServerStatus* release_symantec_ws_sirius();
+  void set_allocated_symantec_ws_sirius(::zsearch::CTServerStatus* symantec_ws_sirius);
 
-  // .censys_definitions.CTServerStatus symantec_ws_deneb = 32;
+  // .zsearch.CTServerStatus symantec_ws_deneb = 32;
   bool has_symantec_ws_deneb() const;
   void clear_symantec_ws_deneb();
   static const int kSymantecWsDenebFieldNumber = 32;
-  const ::censys_definitions::CTServerStatus& symantec_ws_deneb() const;
-  ::censys_definitions::CTServerStatus* mutable_symantec_ws_deneb();
-  ::censys_definitions::CTServerStatus* release_symantec_ws_deneb();
-  void set_allocated_symantec_ws_deneb(::censys_definitions::CTServerStatus* symantec_ws_deneb);
+  const ::zsearch::CTServerStatus& symantec_ws_deneb() const;
+  ::zsearch::CTServerStatus* mutable_symantec_ws_deneb();
+  ::zsearch::CTServerStatus* release_symantec_ws_deneb();
+  void set_allocated_symantec_ws_deneb(::zsearch::CTServerStatus* symantec_ws_deneb);
 
-  // .censys_definitions.CTServerStatus comodo_dodo = 34;
+  // .zsearch.CTServerStatus comodo_dodo = 34;
   bool has_comodo_dodo() const;
   void clear_comodo_dodo();
   static const int kComodoDodoFieldNumber = 34;
-  const ::censys_definitions::CTServerStatus& comodo_dodo() const;
-  ::censys_definitions::CTServerStatus* mutable_comodo_dodo();
-  ::censys_definitions::CTServerStatus* release_comodo_dodo();
-  void set_allocated_comodo_dodo(::censys_definitions::CTServerStatus* comodo_dodo);
+  const ::zsearch::CTServerStatus& comodo_dodo() const;
+  ::zsearch::CTServerStatus* mutable_comodo_dodo();
+  ::zsearch::CTServerStatus* release_comodo_dodo();
+  void set_allocated_comodo_dodo(::zsearch::CTServerStatus* comodo_dodo);
 
-  // .censys_definitions.CTServerStatus comodo_mammoth = 35;
+  // .zsearch.CTServerStatus comodo_mammoth = 35;
   bool has_comodo_mammoth() const;
   void clear_comodo_mammoth();
   static const int kComodoMammothFieldNumber = 35;
-  const ::censys_definitions::CTServerStatus& comodo_mammoth() const;
-  ::censys_definitions::CTServerStatus* mutable_comodo_mammoth();
-  ::censys_definitions::CTServerStatus* release_comodo_mammoth();
-  void set_allocated_comodo_mammoth(::censys_definitions::CTServerStatus* comodo_mammoth);
+  const ::zsearch::CTServerStatus& comodo_mammoth() const;
+  ::zsearch::CTServerStatus* mutable_comodo_mammoth();
+  ::zsearch::CTServerStatus* release_comodo_mammoth();
+  void set_allocated_comodo_mammoth(::zsearch::CTServerStatus* comodo_mammoth);
 
-  // .censys_definitions.CTServerStatus wosign_ctlog = 25;
+  // .zsearch.CTServerStatus wosign_ctlog = 25;
   bool has_wosign_ctlog() const;
   void clear_wosign_ctlog();
   static const int kWosignCtlogFieldNumber = 25;
-  const ::censys_definitions::CTServerStatus& wosign_ctlog() const;
-  ::censys_definitions::CTServerStatus* mutable_wosign_ctlog();
-  ::censys_definitions::CTServerStatus* release_wosign_ctlog();
-  void set_allocated_wosign_ctlog(::censys_definitions::CTServerStatus* wosign_ctlog);
+  const ::zsearch::CTServerStatus& wosign_ctlog() const;
+  ::zsearch::CTServerStatus* mutable_wosign_ctlog();
+  ::zsearch::CTServerStatus* release_wosign_ctlog();
+  void set_allocated_wosign_ctlog(::zsearch::CTServerStatus* wosign_ctlog);
 
-  // .censys_definitions.CTServerStatus wosign_ct = 26;
+  // .zsearch.CTServerStatus wosign_ct = 26;
   bool has_wosign_ct() const;
   void clear_wosign_ct();
   static const int kWosignCtFieldNumber = 26;
-  const ::censys_definitions::CTServerStatus& wosign_ct() const;
-  ::censys_definitions::CTServerStatus* mutable_wosign_ct();
-  ::censys_definitions::CTServerStatus* release_wosign_ct();
-  void set_allocated_wosign_ct(::censys_definitions::CTServerStatus* wosign_ct);
+  const ::zsearch::CTServerStatus& wosign_ct() const;
+  ::zsearch::CTServerStatus* mutable_wosign_ct();
+  ::zsearch::CTServerStatus* release_wosign_ct();
+  void set_allocated_wosign_ct(::zsearch::CTServerStatus* wosign_ct);
 
-  // .censys_definitions.CTServerStatus gdca_ct = 28;
+  // .zsearch.CTServerStatus gdca_ct = 28;
   bool has_gdca_ct() const;
   void clear_gdca_ct();
   static const int kGdcaCtFieldNumber = 28;
-  const ::censys_definitions::CTServerStatus& gdca_ct() const;
-  ::censys_definitions::CTServerStatus* mutable_gdca_ct();
-  ::censys_definitions::CTServerStatus* release_gdca_ct();
-  void set_allocated_gdca_ct(::censys_definitions::CTServerStatus* gdca_ct);
+  const ::zsearch::CTServerStatus& gdca_ct() const;
+  ::zsearch::CTServerStatus* mutable_gdca_ct();
+  ::zsearch::CTServerStatus* release_gdca_ct();
+  void set_allocated_gdca_ct(::zsearch::CTServerStatus* gdca_ct);
 
-  // .censys_definitions.CTServerStatus gdca_ctlog = 36;
+  // .zsearch.CTServerStatus gdca_ctlog = 36;
   bool has_gdca_ctlog() const;
   void clear_gdca_ctlog();
   static const int kGdcaCtlogFieldNumber = 36;
-  const ::censys_definitions::CTServerStatus& gdca_ctlog() const;
-  ::censys_definitions::CTServerStatus* mutable_gdca_ctlog();
-  ::censys_definitions::CTServerStatus* release_gdca_ctlog();
-  void set_allocated_gdca_ctlog(::censys_definitions::CTServerStatus* gdca_ctlog);
+  const ::zsearch::CTServerStatus& gdca_ctlog() const;
+  ::zsearch::CTServerStatus* mutable_gdca_ctlog();
+  ::zsearch::CTServerStatus* release_gdca_ctlog();
+  void set_allocated_gdca_ctlog(::zsearch::CTServerStatus* gdca_ctlog);
 
-  // .censys_definitions.CTServerStatus venafi_api_ctlog = 31;
+  // .zsearch.CTServerStatus venafi_api_ctlog = 31;
   bool has_venafi_api_ctlog() const;
   void clear_venafi_api_ctlog();
   static const int kVenafiApiCtlogFieldNumber = 31;
-  const ::censys_definitions::CTServerStatus& venafi_api_ctlog() const;
-  ::censys_definitions::CTServerStatus* mutable_venafi_api_ctlog();
-  ::censys_definitions::CTServerStatus* release_venafi_api_ctlog();
-  void set_allocated_venafi_api_ctlog(::censys_definitions::CTServerStatus* venafi_api_ctlog);
+  const ::zsearch::CTServerStatus& venafi_api_ctlog() const;
+  ::zsearch::CTServerStatus* mutable_venafi_api_ctlog();
+  ::zsearch::CTServerStatus* release_venafi_api_ctlog();
+  void set_allocated_venafi_api_ctlog(::zsearch::CTServerStatus* venafi_api_ctlog);
 
-  // .censys_definitions.CTServerStatus venafi_api_ctlog_gen2 = 39;
+  // .zsearch.CTServerStatus venafi_api_ctlog_gen2 = 39;
   bool has_venafi_api_ctlog_gen2() const;
   void clear_venafi_api_ctlog_gen2();
   static const int kVenafiApiCtlogGen2FieldNumber = 39;
-  const ::censys_definitions::CTServerStatus& venafi_api_ctlog_gen2() const;
-  ::censys_definitions::CTServerStatus* mutable_venafi_api_ctlog_gen2();
-  ::censys_definitions::CTServerStatus* release_venafi_api_ctlog_gen2();
-  void set_allocated_venafi_api_ctlog_gen2(::censys_definitions::CTServerStatus* venafi_api_ctlog_gen2);
+  const ::zsearch::CTServerStatus& venafi_api_ctlog_gen2() const;
+  ::zsearch::CTServerStatus* mutable_venafi_api_ctlog_gen2();
+  ::zsearch::CTServerStatus* release_venafi_api_ctlog_gen2();
+  void set_allocated_venafi_api_ctlog_gen2(::zsearch::CTServerStatus* venafi_api_ctlog_gen2);
 
-  // .censys_definitions.CTServerStatus nordu_ct_plausible = 33;
+  // .zsearch.CTServerStatus nordu_ct_plausible = 33;
   bool has_nordu_ct_plausible() const;
   void clear_nordu_ct_plausible();
   static const int kNorduCtPlausibleFieldNumber = 33;
-  const ::censys_definitions::CTServerStatus& nordu_ct_plausible() const;
-  ::censys_definitions::CTServerStatus* mutable_nordu_ct_plausible();
-  ::censys_definitions::CTServerStatus* release_nordu_ct_plausible();
-  void set_allocated_nordu_ct_plausible(::censys_definitions::CTServerStatus* nordu_ct_plausible);
+  const ::zsearch::CTServerStatus& nordu_ct_plausible() const;
+  ::zsearch::CTServerStatus* mutable_nordu_ct_plausible();
+  ::zsearch::CTServerStatus* release_nordu_ct_plausible();
+  void set_allocated_nordu_ct_plausible(::zsearch::CTServerStatus* nordu_ct_plausible);
 
-  // .censys_definitions.CTServerStatus cnnic_ctserver = 27;
+  // .zsearch.CTServerStatus cnnic_ctserver = 27;
   bool has_cnnic_ctserver() const;
   void clear_cnnic_ctserver();
   static const int kCnnicCtserverFieldNumber = 27;
-  const ::censys_definitions::CTServerStatus& cnnic_ctserver() const;
-  ::censys_definitions::CTServerStatus* mutable_cnnic_ctserver();
-  ::censys_definitions::CTServerStatus* release_cnnic_ctserver();
-  void set_allocated_cnnic_ctserver(::censys_definitions::CTServerStatus* cnnic_ctserver);
+  const ::zsearch::CTServerStatus& cnnic_ctserver() const;
+  ::zsearch::CTServerStatus* mutable_cnnic_ctserver();
+  ::zsearch::CTServerStatus* release_cnnic_ctserver();
+  void set_allocated_cnnic_ctserver(::zsearch::CTServerStatus* cnnic_ctserver);
 
-  // .censys_definitions.CTServerStatus startssl_ct = 29;
+  // .zsearch.CTServerStatus startssl_ct = 29;
   bool has_startssl_ct() const;
   void clear_startssl_ct();
   static const int kStartsslCtFieldNumber = 29;
-  const ::censys_definitions::CTServerStatus& startssl_ct() const;
-  ::censys_definitions::CTServerStatus* mutable_startssl_ct();
-  ::censys_definitions::CTServerStatus* release_startssl_ct();
-  void set_allocated_startssl_ct(::censys_definitions::CTServerStatus* startssl_ct);
+  const ::zsearch::CTServerStatus& startssl_ct() const;
+  ::zsearch::CTServerStatus* mutable_startssl_ct();
+  ::zsearch::CTServerStatus* release_startssl_ct();
+  void set_allocated_startssl_ct(::zsearch::CTServerStatus* startssl_ct);
 
-  // .censys_definitions.CTServerStatus certly_log = 30;
+  // .zsearch.CTServerStatus certly_log = 30;
   bool has_certly_log() const;
   void clear_certly_log();
   static const int kCertlyLogFieldNumber = 30;
-  const ::censys_definitions::CTServerStatus& certly_log() const;
-  ::censys_definitions::CTServerStatus* mutable_certly_log();
-  ::censys_definitions::CTServerStatus* release_certly_log();
-  void set_allocated_certly_log(::censys_definitions::CTServerStatus* certly_log);
+  const ::zsearch::CTServerStatus& certly_log() const;
+  ::zsearch::CTServerStatus* mutable_certly_log();
+  ::zsearch::CTServerStatus* release_certly_log();
+  void set_allocated_certly_log(::zsearch::CTServerStatus* certly_log);
 
-  // .censys_definitions.CTServerStatus certificatetransparency_cn_ct = 38;
+  // .zsearch.CTServerStatus certificatetransparency_cn_ct = 38;
   bool has_certificatetransparency_cn_ct() const;
   void clear_certificatetransparency_cn_ct();
   static const int kCertificatetransparencyCnCtFieldNumber = 38;
-  const ::censys_definitions::CTServerStatus& certificatetransparency_cn_ct() const;
-  ::censys_definitions::CTServerStatus* mutable_certificatetransparency_cn_ct();
-  ::censys_definitions::CTServerStatus* release_certificatetransparency_cn_ct();
-  void set_allocated_certificatetransparency_cn_ct(::censys_definitions::CTServerStatus* certificatetransparency_cn_ct);
+  const ::zsearch::CTServerStatus& certificatetransparency_cn_ct() const;
+  ::zsearch::CTServerStatus* mutable_certificatetransparency_cn_ct();
+  ::zsearch::CTServerStatus* release_certificatetransparency_cn_ct();
+  void set_allocated_certificatetransparency_cn_ct(::zsearch::CTServerStatus* certificatetransparency_cn_ct);
 
-  // @@protoc_insertion_point(class_scope:censys_definitions.CTStatus)
+  // @@protoc_insertion_point(class_scope:zsearch.CTStatus)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::censys_definitions::CTServerStatus* censys_dev_;
-  ::censys_definitions::CTServerStatus* censys_;
-  ::censys_definitions::CTServerStatus* google_aviator_;
-  ::censys_definitions::CTServerStatus* google_pilot_;
-  ::censys_definitions::CTServerStatus* google_rocketeer_;
-  ::censys_definitions::CTServerStatus* google_submariner_;
-  ::censys_definitions::CTServerStatus* google_testtube_;
-  ::censys_definitions::CTServerStatus* google_icarus_;
-  ::censys_definitions::CTServerStatus* google_skydiver_;
-  ::censys_definitions::CTServerStatus* google_daedalus_;
-  ::censys_definitions::CTServerStatus* digicert_ct1_;
-  ::censys_definitions::CTServerStatus* digicert_ct2_;
-  ::censys_definitions::CTServerStatus* izenpe_com_ct_;
-  ::censys_definitions::CTServerStatus* izenpe_eus_ct_;
-  ::censys_definitions::CTServerStatus* symantec_ws_ct_;
-  ::censys_definitions::CTServerStatus* symantec_ws_vega_;
-  ::censys_definitions::CTServerStatus* symantec_ws_sirius_;
-  ::censys_definitions::CTServerStatus* symantec_ws_deneb_;
-  ::censys_definitions::CTServerStatus* comodo_dodo_;
-  ::censys_definitions::CTServerStatus* comodo_mammoth_;
-  ::censys_definitions::CTServerStatus* wosign_ctlog_;
-  ::censys_definitions::CTServerStatus* wosign_ct_;
-  ::censys_definitions::CTServerStatus* gdca_ct_;
-  ::censys_definitions::CTServerStatus* gdca_ctlog_;
-  ::censys_definitions::CTServerStatus* venafi_api_ctlog_;
-  ::censys_definitions::CTServerStatus* venafi_api_ctlog_gen2_;
-  ::censys_definitions::CTServerStatus* nordu_ct_plausible_;
-  ::censys_definitions::CTServerStatus* cnnic_ctserver_;
-  ::censys_definitions::CTServerStatus* startssl_ct_;
-  ::censys_definitions::CTServerStatus* certly_log_;
-  ::censys_definitions::CTServerStatus* certificatetransparency_cn_ct_;
+  ::zsearch::CTServerStatus* censys_dev_;
+  ::zsearch::CTServerStatus* censys_;
+  ::zsearch::CTServerStatus* google_aviator_;
+  ::zsearch::CTServerStatus* google_pilot_;
+  ::zsearch::CTServerStatus* google_rocketeer_;
+  ::zsearch::CTServerStatus* google_submariner_;
+  ::zsearch::CTServerStatus* google_testtube_;
+  ::zsearch::CTServerStatus* google_icarus_;
+  ::zsearch::CTServerStatus* google_skydiver_;
+  ::zsearch::CTServerStatus* google_daedalus_;
+  ::zsearch::CTServerStatus* digicert_ct1_;
+  ::zsearch::CTServerStatus* digicert_ct2_;
+  ::zsearch::CTServerStatus* izenpe_com_ct_;
+  ::zsearch::CTServerStatus* izenpe_eus_ct_;
+  ::zsearch::CTServerStatus* symantec_ws_ct_;
+  ::zsearch::CTServerStatus* symantec_ws_vega_;
+  ::zsearch::CTServerStatus* symantec_ws_sirius_;
+  ::zsearch::CTServerStatus* symantec_ws_deneb_;
+  ::zsearch::CTServerStatus* comodo_dodo_;
+  ::zsearch::CTServerStatus* comodo_mammoth_;
+  ::zsearch::CTServerStatus* wosign_ctlog_;
+  ::zsearch::CTServerStatus* wosign_ct_;
+  ::zsearch::CTServerStatus* gdca_ct_;
+  ::zsearch::CTServerStatus* gdca_ctlog_;
+  ::zsearch::CTServerStatus* venafi_api_ctlog_;
+  ::zsearch::CTServerStatus* venafi_api_ctlog_gen2_;
+  ::zsearch::CTServerStatus* nordu_ct_plausible_;
+  ::zsearch::CTServerStatus* cnnic_ctserver_;
+  ::zsearch::CTServerStatus* startssl_ct_;
+  ::zsearch::CTServerStatus* certly_log_;
+  ::zsearch::CTServerStatus* certificatetransparency_cn_ct_;
   mutable int _cached_size_;
   friend struct  protobuf_ct_2eproto::TableStruct;
 };
 // -------------------------------------------------------------------
 
-class SCT : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:censys_definitions.SCT) */ {
+class SCT : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zsearch.SCT) */ {
  public:
   SCT();
   virtual ~SCT();
@@ -742,27 +742,27 @@ class SCT : public ::google::protobuf::Message /* @@protoc_insertion_point(class
   ::std::string* release_sha256fp();
   void set_allocated_sha256fp(::std::string* sha256fp);
 
-  // .censys_definitions.CTServerStatus status = 3;
+  // .zsearch.CTServerStatus status = 3;
   bool has_status() const;
   void clear_status();
   static const int kStatusFieldNumber = 3;
-  const ::censys_definitions::CTServerStatus& status() const;
-  ::censys_definitions::CTServerStatus* mutable_status();
-  ::censys_definitions::CTServerStatus* release_status();
-  void set_allocated_status(::censys_definitions::CTServerStatus* status);
+  const ::zsearch::CTServerStatus& status() const;
+  ::zsearch::CTServerStatus* mutable_status();
+  ::zsearch::CTServerStatus* release_status();
+  void set_allocated_status(::zsearch::CTServerStatus* status);
 
-  // .censys_definitions.CTServer server = 2;
+  // .zsearch.CTServer server = 2;
   void clear_server();
   static const int kServerFieldNumber = 2;
-  ::censys_definitions::CTServer server() const;
-  void set_server(::censys_definitions::CTServer value);
+  ::zsearch::CTServer server() const;
+  void set_server(::zsearch::CTServer value);
 
-  // @@protoc_insertion_point(class_scope:censys_definitions.SCT)
+  // @@protoc_insertion_point(class_scope:zsearch.SCT)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::ArenaStringPtr sha256fp_;
-  ::censys_definitions::CTServerStatus* status_;
+  ::zsearch::CTServerStatus* status_;
   int server_;
   mutable int _cached_size_;
   friend struct  protobuf_ct_2eproto::TableStruct;
@@ -780,13 +780,13 @@ inline void CTServerStatus::clear_index() {
   index_ = GOOGLE_LONGLONG(0);
 }
 inline ::google::protobuf::int64 CTServerStatus::index() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.CTServerStatus.index)
+  // @@protoc_insertion_point(field_get:zsearch.CTServerStatus.index)
   return index_;
 }
 inline void CTServerStatus::set_index(::google::protobuf::int64 value) {
   
   index_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.CTServerStatus.index)
+  // @@protoc_insertion_point(field_set:zsearch.CTServerStatus.index)
 }
 
 // int64 ct_timestamp = 2;
@@ -794,13 +794,13 @@ inline void CTServerStatus::clear_ct_timestamp() {
   ct_timestamp_ = GOOGLE_LONGLONG(0);
 }
 inline ::google::protobuf::int64 CTServerStatus::ct_timestamp() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.CTServerStatus.ct_timestamp)
+  // @@protoc_insertion_point(field_get:zsearch.CTServerStatus.ct_timestamp)
   return ct_timestamp_;
 }
 inline void CTServerStatus::set_ct_timestamp(::google::protobuf::int64 value) {
   
   ct_timestamp_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.CTServerStatus.ct_timestamp)
+  // @@protoc_insertion_point(field_set:zsearch.CTServerStatus.ct_timestamp)
 }
 
 // int64 pull_timestamp = 3;
@@ -808,13 +808,13 @@ inline void CTServerStatus::clear_pull_timestamp() {
   pull_timestamp_ = GOOGLE_LONGLONG(0);
 }
 inline ::google::protobuf::int64 CTServerStatus::pull_timestamp() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.CTServerStatus.pull_timestamp)
+  // @@protoc_insertion_point(field_get:zsearch.CTServerStatus.pull_timestamp)
   return pull_timestamp_;
 }
 inline void CTServerStatus::set_pull_timestamp(::google::protobuf::int64 value) {
   
   pull_timestamp_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.CTServerStatus.pull_timestamp)
+  // @@protoc_insertion_point(field_set:zsearch.CTServerStatus.pull_timestamp)
 }
 
 // int64 push_timestamp = 4;
@@ -822,27 +822,27 @@ inline void CTServerStatus::clear_push_timestamp() {
   push_timestamp_ = GOOGLE_LONGLONG(0);
 }
 inline ::google::protobuf::int64 CTServerStatus::push_timestamp() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.CTServerStatus.push_timestamp)
+  // @@protoc_insertion_point(field_get:zsearch.CTServerStatus.push_timestamp)
   return push_timestamp_;
 }
 inline void CTServerStatus::set_push_timestamp(::google::protobuf::int64 value) {
   
   push_timestamp_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.CTServerStatus.push_timestamp)
+  // @@protoc_insertion_point(field_set:zsearch.CTServerStatus.push_timestamp)
 }
 
-// .censys_definitions.CTPushStatus push_status = 5;
+// .zsearch.CTPushStatus push_status = 5;
 inline void CTServerStatus::clear_push_status() {
   push_status_ = 0;
 }
-inline ::censys_definitions::CTPushStatus CTServerStatus::push_status() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.CTServerStatus.push_status)
-  return static_cast< ::censys_definitions::CTPushStatus >(push_status_);
+inline ::zsearch::CTPushStatus CTServerStatus::push_status() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTServerStatus.push_status)
+  return static_cast< ::zsearch::CTPushStatus >(push_status_);
 }
-inline void CTServerStatus::set_push_status(::censys_definitions::CTPushStatus value) {
+inline void CTServerStatus::set_push_status(::zsearch::CTPushStatus value) {
   
   push_status_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.CTServerStatus.push_status)
+  // @@protoc_insertion_point(field_set:zsearch.CTServerStatus.push_status)
 }
 
 // bytes sct = 6;
@@ -850,40 +850,40 @@ inline void CTServerStatus::clear_sct() {
   sct_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& CTServerStatus::sct() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.CTServerStatus.sct)
+  // @@protoc_insertion_point(field_get:zsearch.CTServerStatus.sct)
   return sct_.GetNoArena();
 }
 inline void CTServerStatus::set_sct(const ::std::string& value) {
   
   sct_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:censys_definitions.CTServerStatus.sct)
+  // @@protoc_insertion_point(field_set:zsearch.CTServerStatus.sct)
 }
 #if LANG_CXX11
 inline void CTServerStatus::set_sct(::std::string&& value) {
   
   sct_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:censys_definitions.CTServerStatus.sct)
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.CTServerStatus.sct)
 }
 #endif
 inline void CTServerStatus::set_sct(const char* value) {
   
   sct_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:censys_definitions.CTServerStatus.sct)
+  // @@protoc_insertion_point(field_set_char:zsearch.CTServerStatus.sct)
 }
 inline void CTServerStatus::set_sct(const void* value, size_t size) {
   
   sct_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.CTServerStatus.sct)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.CTServerStatus.sct)
 }
 inline ::std::string* CTServerStatus::mutable_sct() {
   
-  // @@protoc_insertion_point(field_mutable:censys_definitions.CTServerStatus.sct)
+  // @@protoc_insertion_point(field_mutable:zsearch.CTServerStatus.sct)
   return sct_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* CTServerStatus::release_sct() {
-  // @@protoc_insertion_point(field_release:censys_definitions.CTServerStatus.sct)
+  // @@protoc_insertion_point(field_release:zsearch.CTServerStatus.sct)
   
   return sct_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -894,7 +894,7 @@ inline void CTServerStatus::set_allocated_sct(::std::string* sct) {
     
   }
   sct_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), sct);
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.CTServerStatus.sct)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTServerStatus.sct)
 }
 
 // string push_error = 7;
@@ -902,40 +902,40 @@ inline void CTServerStatus::clear_push_error() {
   push_error_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& CTServerStatus::push_error() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.CTServerStatus.push_error)
+  // @@protoc_insertion_point(field_get:zsearch.CTServerStatus.push_error)
   return push_error_.GetNoArena();
 }
 inline void CTServerStatus::set_push_error(const ::std::string& value) {
   
   push_error_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:censys_definitions.CTServerStatus.push_error)
+  // @@protoc_insertion_point(field_set:zsearch.CTServerStatus.push_error)
 }
 #if LANG_CXX11
 inline void CTServerStatus::set_push_error(::std::string&& value) {
   
   push_error_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:censys_definitions.CTServerStatus.push_error)
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.CTServerStatus.push_error)
 }
 #endif
 inline void CTServerStatus::set_push_error(const char* value) {
   
   push_error_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:censys_definitions.CTServerStatus.push_error)
+  // @@protoc_insertion_point(field_set_char:zsearch.CTServerStatus.push_error)
 }
 inline void CTServerStatus::set_push_error(const char* value, size_t size) {
   
   push_error_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.CTServerStatus.push_error)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.CTServerStatus.push_error)
 }
 inline ::std::string* CTServerStatus::mutable_push_error() {
   
-  // @@protoc_insertion_point(field_mutable:censys_definitions.CTServerStatus.push_error)
+  // @@protoc_insertion_point(field_mutable:zsearch.CTServerStatus.push_error)
   return push_error_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* CTServerStatus::release_push_error() {
-  // @@protoc_insertion_point(field_release:censys_definitions.CTServerStatus.push_error)
+  // @@protoc_insertion_point(field_release:zsearch.CTServerStatus.push_error)
   
   return push_error_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -946,14 +946,14 @@ inline void CTServerStatus::set_allocated_push_error(::std::string* push_error) 
     
   }
   push_error_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), push_error);
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.CTServerStatus.push_error)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTServerStatus.push_error)
 }
 
 // -------------------------------------------------------------------
 
 // CTStatus
 
-// .censys_definitions.CTServerStatus censys_dev = 1;
+// .zsearch.CTServerStatus censys_dev = 1;
 inline bool CTStatus::has_censys_dev() const {
   return this != internal_default_instance() && censys_dev_ != NULL;
 }
@@ -961,27 +961,27 @@ inline void CTStatus::clear_censys_dev() {
   if (GetArenaNoVirtual() == NULL && censys_dev_ != NULL) delete censys_dev_;
   censys_dev_ = NULL;
 }
-inline const ::censys_definitions::CTServerStatus& CTStatus::censys_dev() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.CTStatus.censys_dev)
+inline const ::zsearch::CTServerStatus& CTStatus::censys_dev() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.censys_dev)
   return censys_dev_ != NULL ? *censys_dev_
-                         : *::censys_definitions::CTServerStatus::internal_default_instance();
+                         : *::zsearch::CTServerStatus::internal_default_instance();
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::mutable_censys_dev() {
+inline ::zsearch::CTServerStatus* CTStatus::mutable_censys_dev() {
   
   if (censys_dev_ == NULL) {
-    censys_dev_ = new ::censys_definitions::CTServerStatus;
+    censys_dev_ = new ::zsearch::CTServerStatus;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.CTStatus.censys_dev)
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.censys_dev)
   return censys_dev_;
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::release_censys_dev() {
-  // @@protoc_insertion_point(field_release:censys_definitions.CTStatus.censys_dev)
+inline ::zsearch::CTServerStatus* CTStatus::release_censys_dev() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.censys_dev)
   
-  ::censys_definitions::CTServerStatus* temp = censys_dev_;
+  ::zsearch::CTServerStatus* temp = censys_dev_;
   censys_dev_ = NULL;
   return temp;
 }
-inline void CTStatus::set_allocated_censys_dev(::censys_definitions::CTServerStatus* censys_dev) {
+inline void CTStatus::set_allocated_censys_dev(::zsearch::CTServerStatus* censys_dev) {
   delete censys_dev_;
   censys_dev_ = censys_dev;
   if (censys_dev) {
@@ -989,10 +989,10 @@ inline void CTStatus::set_allocated_censys_dev(::censys_definitions::CTServerSta
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.CTStatus.censys_dev)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.censys_dev)
 }
 
-// .censys_definitions.CTServerStatus censys = 2;
+// .zsearch.CTServerStatus censys = 2;
 inline bool CTStatus::has_censys() const {
   return this != internal_default_instance() && censys_ != NULL;
 }
@@ -1000,27 +1000,27 @@ inline void CTStatus::clear_censys() {
   if (GetArenaNoVirtual() == NULL && censys_ != NULL) delete censys_;
   censys_ = NULL;
 }
-inline const ::censys_definitions::CTServerStatus& CTStatus::censys() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.CTStatus.censys)
+inline const ::zsearch::CTServerStatus& CTStatus::censys() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.censys)
   return censys_ != NULL ? *censys_
-                         : *::censys_definitions::CTServerStatus::internal_default_instance();
+                         : *::zsearch::CTServerStatus::internal_default_instance();
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::mutable_censys() {
+inline ::zsearch::CTServerStatus* CTStatus::mutable_censys() {
   
   if (censys_ == NULL) {
-    censys_ = new ::censys_definitions::CTServerStatus;
+    censys_ = new ::zsearch::CTServerStatus;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.CTStatus.censys)
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.censys)
   return censys_;
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::release_censys() {
-  // @@protoc_insertion_point(field_release:censys_definitions.CTStatus.censys)
+inline ::zsearch::CTServerStatus* CTStatus::release_censys() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.censys)
   
-  ::censys_definitions::CTServerStatus* temp = censys_;
+  ::zsearch::CTServerStatus* temp = censys_;
   censys_ = NULL;
   return temp;
 }
-inline void CTStatus::set_allocated_censys(::censys_definitions::CTServerStatus* censys) {
+inline void CTStatus::set_allocated_censys(::zsearch::CTServerStatus* censys) {
   delete censys_;
   censys_ = censys;
   if (censys) {
@@ -1028,10 +1028,10 @@ inline void CTStatus::set_allocated_censys(::censys_definitions::CTServerStatus*
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.CTStatus.censys)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.censys)
 }
 
-// .censys_definitions.CTServerStatus google_aviator = 10;
+// .zsearch.CTServerStatus google_aviator = 10;
 inline bool CTStatus::has_google_aviator() const {
   return this != internal_default_instance() && google_aviator_ != NULL;
 }
@@ -1039,27 +1039,27 @@ inline void CTStatus::clear_google_aviator() {
   if (GetArenaNoVirtual() == NULL && google_aviator_ != NULL) delete google_aviator_;
   google_aviator_ = NULL;
 }
-inline const ::censys_definitions::CTServerStatus& CTStatus::google_aviator() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.CTStatus.google_aviator)
+inline const ::zsearch::CTServerStatus& CTStatus::google_aviator() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.google_aviator)
   return google_aviator_ != NULL ? *google_aviator_
-                         : *::censys_definitions::CTServerStatus::internal_default_instance();
+                         : *::zsearch::CTServerStatus::internal_default_instance();
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::mutable_google_aviator() {
+inline ::zsearch::CTServerStatus* CTStatus::mutable_google_aviator() {
   
   if (google_aviator_ == NULL) {
-    google_aviator_ = new ::censys_definitions::CTServerStatus;
+    google_aviator_ = new ::zsearch::CTServerStatus;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.CTStatus.google_aviator)
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.google_aviator)
   return google_aviator_;
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::release_google_aviator() {
-  // @@protoc_insertion_point(field_release:censys_definitions.CTStatus.google_aviator)
+inline ::zsearch::CTServerStatus* CTStatus::release_google_aviator() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.google_aviator)
   
-  ::censys_definitions::CTServerStatus* temp = google_aviator_;
+  ::zsearch::CTServerStatus* temp = google_aviator_;
   google_aviator_ = NULL;
   return temp;
 }
-inline void CTStatus::set_allocated_google_aviator(::censys_definitions::CTServerStatus* google_aviator) {
+inline void CTStatus::set_allocated_google_aviator(::zsearch::CTServerStatus* google_aviator) {
   delete google_aviator_;
   google_aviator_ = google_aviator;
   if (google_aviator) {
@@ -1067,10 +1067,10 @@ inline void CTStatus::set_allocated_google_aviator(::censys_definitions::CTServe
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.CTStatus.google_aviator)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.google_aviator)
 }
 
-// .censys_definitions.CTServerStatus google_pilot = 11;
+// .zsearch.CTServerStatus google_pilot = 11;
 inline bool CTStatus::has_google_pilot() const {
   return this != internal_default_instance() && google_pilot_ != NULL;
 }
@@ -1078,27 +1078,27 @@ inline void CTStatus::clear_google_pilot() {
   if (GetArenaNoVirtual() == NULL && google_pilot_ != NULL) delete google_pilot_;
   google_pilot_ = NULL;
 }
-inline const ::censys_definitions::CTServerStatus& CTStatus::google_pilot() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.CTStatus.google_pilot)
+inline const ::zsearch::CTServerStatus& CTStatus::google_pilot() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.google_pilot)
   return google_pilot_ != NULL ? *google_pilot_
-                         : *::censys_definitions::CTServerStatus::internal_default_instance();
+                         : *::zsearch::CTServerStatus::internal_default_instance();
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::mutable_google_pilot() {
+inline ::zsearch::CTServerStatus* CTStatus::mutable_google_pilot() {
   
   if (google_pilot_ == NULL) {
-    google_pilot_ = new ::censys_definitions::CTServerStatus;
+    google_pilot_ = new ::zsearch::CTServerStatus;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.CTStatus.google_pilot)
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.google_pilot)
   return google_pilot_;
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::release_google_pilot() {
-  // @@protoc_insertion_point(field_release:censys_definitions.CTStatus.google_pilot)
+inline ::zsearch::CTServerStatus* CTStatus::release_google_pilot() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.google_pilot)
   
-  ::censys_definitions::CTServerStatus* temp = google_pilot_;
+  ::zsearch::CTServerStatus* temp = google_pilot_;
   google_pilot_ = NULL;
   return temp;
 }
-inline void CTStatus::set_allocated_google_pilot(::censys_definitions::CTServerStatus* google_pilot) {
+inline void CTStatus::set_allocated_google_pilot(::zsearch::CTServerStatus* google_pilot) {
   delete google_pilot_;
   google_pilot_ = google_pilot;
   if (google_pilot) {
@@ -1106,10 +1106,10 @@ inline void CTStatus::set_allocated_google_pilot(::censys_definitions::CTServerS
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.CTStatus.google_pilot)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.google_pilot)
 }
 
-// .censys_definitions.CTServerStatus google_rocketeer = 12;
+// .zsearch.CTServerStatus google_rocketeer = 12;
 inline bool CTStatus::has_google_rocketeer() const {
   return this != internal_default_instance() && google_rocketeer_ != NULL;
 }
@@ -1117,27 +1117,27 @@ inline void CTStatus::clear_google_rocketeer() {
   if (GetArenaNoVirtual() == NULL && google_rocketeer_ != NULL) delete google_rocketeer_;
   google_rocketeer_ = NULL;
 }
-inline const ::censys_definitions::CTServerStatus& CTStatus::google_rocketeer() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.CTStatus.google_rocketeer)
+inline const ::zsearch::CTServerStatus& CTStatus::google_rocketeer() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.google_rocketeer)
   return google_rocketeer_ != NULL ? *google_rocketeer_
-                         : *::censys_definitions::CTServerStatus::internal_default_instance();
+                         : *::zsearch::CTServerStatus::internal_default_instance();
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::mutable_google_rocketeer() {
+inline ::zsearch::CTServerStatus* CTStatus::mutable_google_rocketeer() {
   
   if (google_rocketeer_ == NULL) {
-    google_rocketeer_ = new ::censys_definitions::CTServerStatus;
+    google_rocketeer_ = new ::zsearch::CTServerStatus;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.CTStatus.google_rocketeer)
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.google_rocketeer)
   return google_rocketeer_;
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::release_google_rocketeer() {
-  // @@protoc_insertion_point(field_release:censys_definitions.CTStatus.google_rocketeer)
+inline ::zsearch::CTServerStatus* CTStatus::release_google_rocketeer() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.google_rocketeer)
   
-  ::censys_definitions::CTServerStatus* temp = google_rocketeer_;
+  ::zsearch::CTServerStatus* temp = google_rocketeer_;
   google_rocketeer_ = NULL;
   return temp;
 }
-inline void CTStatus::set_allocated_google_rocketeer(::censys_definitions::CTServerStatus* google_rocketeer) {
+inline void CTStatus::set_allocated_google_rocketeer(::zsearch::CTServerStatus* google_rocketeer) {
   delete google_rocketeer_;
   google_rocketeer_ = google_rocketeer;
   if (google_rocketeer) {
@@ -1145,10 +1145,10 @@ inline void CTStatus::set_allocated_google_rocketeer(::censys_definitions::CTSer
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.CTStatus.google_rocketeer)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.google_rocketeer)
 }
 
-// .censys_definitions.CTServerStatus google_submariner = 13;
+// .zsearch.CTServerStatus google_submariner = 13;
 inline bool CTStatus::has_google_submariner() const {
   return this != internal_default_instance() && google_submariner_ != NULL;
 }
@@ -1156,27 +1156,27 @@ inline void CTStatus::clear_google_submariner() {
   if (GetArenaNoVirtual() == NULL && google_submariner_ != NULL) delete google_submariner_;
   google_submariner_ = NULL;
 }
-inline const ::censys_definitions::CTServerStatus& CTStatus::google_submariner() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.CTStatus.google_submariner)
+inline const ::zsearch::CTServerStatus& CTStatus::google_submariner() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.google_submariner)
   return google_submariner_ != NULL ? *google_submariner_
-                         : *::censys_definitions::CTServerStatus::internal_default_instance();
+                         : *::zsearch::CTServerStatus::internal_default_instance();
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::mutable_google_submariner() {
+inline ::zsearch::CTServerStatus* CTStatus::mutable_google_submariner() {
   
   if (google_submariner_ == NULL) {
-    google_submariner_ = new ::censys_definitions::CTServerStatus;
+    google_submariner_ = new ::zsearch::CTServerStatus;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.CTStatus.google_submariner)
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.google_submariner)
   return google_submariner_;
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::release_google_submariner() {
-  // @@protoc_insertion_point(field_release:censys_definitions.CTStatus.google_submariner)
+inline ::zsearch::CTServerStatus* CTStatus::release_google_submariner() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.google_submariner)
   
-  ::censys_definitions::CTServerStatus* temp = google_submariner_;
+  ::zsearch::CTServerStatus* temp = google_submariner_;
   google_submariner_ = NULL;
   return temp;
 }
-inline void CTStatus::set_allocated_google_submariner(::censys_definitions::CTServerStatus* google_submariner) {
+inline void CTStatus::set_allocated_google_submariner(::zsearch::CTServerStatus* google_submariner) {
   delete google_submariner_;
   google_submariner_ = google_submariner;
   if (google_submariner) {
@@ -1184,10 +1184,10 @@ inline void CTStatus::set_allocated_google_submariner(::censys_definitions::CTSe
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.CTStatus.google_submariner)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.google_submariner)
 }
 
-// .censys_definitions.CTServerStatus google_testtube = 14;
+// .zsearch.CTServerStatus google_testtube = 14;
 inline bool CTStatus::has_google_testtube() const {
   return this != internal_default_instance() && google_testtube_ != NULL;
 }
@@ -1195,27 +1195,27 @@ inline void CTStatus::clear_google_testtube() {
   if (GetArenaNoVirtual() == NULL && google_testtube_ != NULL) delete google_testtube_;
   google_testtube_ = NULL;
 }
-inline const ::censys_definitions::CTServerStatus& CTStatus::google_testtube() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.CTStatus.google_testtube)
+inline const ::zsearch::CTServerStatus& CTStatus::google_testtube() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.google_testtube)
   return google_testtube_ != NULL ? *google_testtube_
-                         : *::censys_definitions::CTServerStatus::internal_default_instance();
+                         : *::zsearch::CTServerStatus::internal_default_instance();
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::mutable_google_testtube() {
+inline ::zsearch::CTServerStatus* CTStatus::mutable_google_testtube() {
   
   if (google_testtube_ == NULL) {
-    google_testtube_ = new ::censys_definitions::CTServerStatus;
+    google_testtube_ = new ::zsearch::CTServerStatus;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.CTStatus.google_testtube)
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.google_testtube)
   return google_testtube_;
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::release_google_testtube() {
-  // @@protoc_insertion_point(field_release:censys_definitions.CTStatus.google_testtube)
+inline ::zsearch::CTServerStatus* CTStatus::release_google_testtube() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.google_testtube)
   
-  ::censys_definitions::CTServerStatus* temp = google_testtube_;
+  ::zsearch::CTServerStatus* temp = google_testtube_;
   google_testtube_ = NULL;
   return temp;
 }
-inline void CTStatus::set_allocated_google_testtube(::censys_definitions::CTServerStatus* google_testtube) {
+inline void CTStatus::set_allocated_google_testtube(::zsearch::CTServerStatus* google_testtube) {
   delete google_testtube_;
   google_testtube_ = google_testtube;
   if (google_testtube) {
@@ -1223,10 +1223,10 @@ inline void CTStatus::set_allocated_google_testtube(::censys_definitions::CTServ
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.CTStatus.google_testtube)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.google_testtube)
 }
 
-// .censys_definitions.CTServerStatus google_icarus = 15;
+// .zsearch.CTServerStatus google_icarus = 15;
 inline bool CTStatus::has_google_icarus() const {
   return this != internal_default_instance() && google_icarus_ != NULL;
 }
@@ -1234,27 +1234,27 @@ inline void CTStatus::clear_google_icarus() {
   if (GetArenaNoVirtual() == NULL && google_icarus_ != NULL) delete google_icarus_;
   google_icarus_ = NULL;
 }
-inline const ::censys_definitions::CTServerStatus& CTStatus::google_icarus() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.CTStatus.google_icarus)
+inline const ::zsearch::CTServerStatus& CTStatus::google_icarus() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.google_icarus)
   return google_icarus_ != NULL ? *google_icarus_
-                         : *::censys_definitions::CTServerStatus::internal_default_instance();
+                         : *::zsearch::CTServerStatus::internal_default_instance();
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::mutable_google_icarus() {
+inline ::zsearch::CTServerStatus* CTStatus::mutable_google_icarus() {
   
   if (google_icarus_ == NULL) {
-    google_icarus_ = new ::censys_definitions::CTServerStatus;
+    google_icarus_ = new ::zsearch::CTServerStatus;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.CTStatus.google_icarus)
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.google_icarus)
   return google_icarus_;
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::release_google_icarus() {
-  // @@protoc_insertion_point(field_release:censys_definitions.CTStatus.google_icarus)
+inline ::zsearch::CTServerStatus* CTStatus::release_google_icarus() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.google_icarus)
   
-  ::censys_definitions::CTServerStatus* temp = google_icarus_;
+  ::zsearch::CTServerStatus* temp = google_icarus_;
   google_icarus_ = NULL;
   return temp;
 }
-inline void CTStatus::set_allocated_google_icarus(::censys_definitions::CTServerStatus* google_icarus) {
+inline void CTStatus::set_allocated_google_icarus(::zsearch::CTServerStatus* google_icarus) {
   delete google_icarus_;
   google_icarus_ = google_icarus;
   if (google_icarus) {
@@ -1262,10 +1262,10 @@ inline void CTStatus::set_allocated_google_icarus(::censys_definitions::CTServer
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.CTStatus.google_icarus)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.google_icarus)
 }
 
-// .censys_definitions.CTServerStatus google_skydiver = 16;
+// .zsearch.CTServerStatus google_skydiver = 16;
 inline bool CTStatus::has_google_skydiver() const {
   return this != internal_default_instance() && google_skydiver_ != NULL;
 }
@@ -1273,27 +1273,27 @@ inline void CTStatus::clear_google_skydiver() {
   if (GetArenaNoVirtual() == NULL && google_skydiver_ != NULL) delete google_skydiver_;
   google_skydiver_ = NULL;
 }
-inline const ::censys_definitions::CTServerStatus& CTStatus::google_skydiver() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.CTStatus.google_skydiver)
+inline const ::zsearch::CTServerStatus& CTStatus::google_skydiver() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.google_skydiver)
   return google_skydiver_ != NULL ? *google_skydiver_
-                         : *::censys_definitions::CTServerStatus::internal_default_instance();
+                         : *::zsearch::CTServerStatus::internal_default_instance();
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::mutable_google_skydiver() {
+inline ::zsearch::CTServerStatus* CTStatus::mutable_google_skydiver() {
   
   if (google_skydiver_ == NULL) {
-    google_skydiver_ = new ::censys_definitions::CTServerStatus;
+    google_skydiver_ = new ::zsearch::CTServerStatus;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.CTStatus.google_skydiver)
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.google_skydiver)
   return google_skydiver_;
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::release_google_skydiver() {
-  // @@protoc_insertion_point(field_release:censys_definitions.CTStatus.google_skydiver)
+inline ::zsearch::CTServerStatus* CTStatus::release_google_skydiver() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.google_skydiver)
   
-  ::censys_definitions::CTServerStatus* temp = google_skydiver_;
+  ::zsearch::CTServerStatus* temp = google_skydiver_;
   google_skydiver_ = NULL;
   return temp;
 }
-inline void CTStatus::set_allocated_google_skydiver(::censys_definitions::CTServerStatus* google_skydiver) {
+inline void CTStatus::set_allocated_google_skydiver(::zsearch::CTServerStatus* google_skydiver) {
   delete google_skydiver_;
   google_skydiver_ = google_skydiver;
   if (google_skydiver) {
@@ -1301,10 +1301,10 @@ inline void CTStatus::set_allocated_google_skydiver(::censys_definitions::CTServ
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.CTStatus.google_skydiver)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.google_skydiver)
 }
 
-// .censys_definitions.CTServerStatus google_daedalus = 17;
+// .zsearch.CTServerStatus google_daedalus = 17;
 inline bool CTStatus::has_google_daedalus() const {
   return this != internal_default_instance() && google_daedalus_ != NULL;
 }
@@ -1312,27 +1312,27 @@ inline void CTStatus::clear_google_daedalus() {
   if (GetArenaNoVirtual() == NULL && google_daedalus_ != NULL) delete google_daedalus_;
   google_daedalus_ = NULL;
 }
-inline const ::censys_definitions::CTServerStatus& CTStatus::google_daedalus() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.CTStatus.google_daedalus)
+inline const ::zsearch::CTServerStatus& CTStatus::google_daedalus() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.google_daedalus)
   return google_daedalus_ != NULL ? *google_daedalus_
-                         : *::censys_definitions::CTServerStatus::internal_default_instance();
+                         : *::zsearch::CTServerStatus::internal_default_instance();
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::mutable_google_daedalus() {
+inline ::zsearch::CTServerStatus* CTStatus::mutable_google_daedalus() {
   
   if (google_daedalus_ == NULL) {
-    google_daedalus_ = new ::censys_definitions::CTServerStatus;
+    google_daedalus_ = new ::zsearch::CTServerStatus;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.CTStatus.google_daedalus)
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.google_daedalus)
   return google_daedalus_;
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::release_google_daedalus() {
-  // @@protoc_insertion_point(field_release:censys_definitions.CTStatus.google_daedalus)
+inline ::zsearch::CTServerStatus* CTStatus::release_google_daedalus() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.google_daedalus)
   
-  ::censys_definitions::CTServerStatus* temp = google_daedalus_;
+  ::zsearch::CTServerStatus* temp = google_daedalus_;
   google_daedalus_ = NULL;
   return temp;
 }
-inline void CTStatus::set_allocated_google_daedalus(::censys_definitions::CTServerStatus* google_daedalus) {
+inline void CTStatus::set_allocated_google_daedalus(::zsearch::CTServerStatus* google_daedalus) {
   delete google_daedalus_;
   google_daedalus_ = google_daedalus;
   if (google_daedalus) {
@@ -1340,10 +1340,10 @@ inline void CTStatus::set_allocated_google_daedalus(::censys_definitions::CTServ
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.CTStatus.google_daedalus)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.google_daedalus)
 }
 
-// .censys_definitions.CTServerStatus digicert_ct1 = 20;
+// .zsearch.CTServerStatus digicert_ct1 = 20;
 inline bool CTStatus::has_digicert_ct1() const {
   return this != internal_default_instance() && digicert_ct1_ != NULL;
 }
@@ -1351,27 +1351,27 @@ inline void CTStatus::clear_digicert_ct1() {
   if (GetArenaNoVirtual() == NULL && digicert_ct1_ != NULL) delete digicert_ct1_;
   digicert_ct1_ = NULL;
 }
-inline const ::censys_definitions::CTServerStatus& CTStatus::digicert_ct1() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.CTStatus.digicert_ct1)
+inline const ::zsearch::CTServerStatus& CTStatus::digicert_ct1() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.digicert_ct1)
   return digicert_ct1_ != NULL ? *digicert_ct1_
-                         : *::censys_definitions::CTServerStatus::internal_default_instance();
+                         : *::zsearch::CTServerStatus::internal_default_instance();
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::mutable_digicert_ct1() {
+inline ::zsearch::CTServerStatus* CTStatus::mutable_digicert_ct1() {
   
   if (digicert_ct1_ == NULL) {
-    digicert_ct1_ = new ::censys_definitions::CTServerStatus;
+    digicert_ct1_ = new ::zsearch::CTServerStatus;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.CTStatus.digicert_ct1)
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.digicert_ct1)
   return digicert_ct1_;
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::release_digicert_ct1() {
-  // @@protoc_insertion_point(field_release:censys_definitions.CTStatus.digicert_ct1)
+inline ::zsearch::CTServerStatus* CTStatus::release_digicert_ct1() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.digicert_ct1)
   
-  ::censys_definitions::CTServerStatus* temp = digicert_ct1_;
+  ::zsearch::CTServerStatus* temp = digicert_ct1_;
   digicert_ct1_ = NULL;
   return temp;
 }
-inline void CTStatus::set_allocated_digicert_ct1(::censys_definitions::CTServerStatus* digicert_ct1) {
+inline void CTStatus::set_allocated_digicert_ct1(::zsearch::CTServerStatus* digicert_ct1) {
   delete digicert_ct1_;
   digicert_ct1_ = digicert_ct1;
   if (digicert_ct1) {
@@ -1379,10 +1379,10 @@ inline void CTStatus::set_allocated_digicert_ct1(::censys_definitions::CTServerS
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.CTStatus.digicert_ct1)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.digicert_ct1)
 }
 
-// .censys_definitions.CTServerStatus digicert_ct2 = 40;
+// .zsearch.CTServerStatus digicert_ct2 = 40;
 inline bool CTStatus::has_digicert_ct2() const {
   return this != internal_default_instance() && digicert_ct2_ != NULL;
 }
@@ -1390,27 +1390,27 @@ inline void CTStatus::clear_digicert_ct2() {
   if (GetArenaNoVirtual() == NULL && digicert_ct2_ != NULL) delete digicert_ct2_;
   digicert_ct2_ = NULL;
 }
-inline const ::censys_definitions::CTServerStatus& CTStatus::digicert_ct2() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.CTStatus.digicert_ct2)
+inline const ::zsearch::CTServerStatus& CTStatus::digicert_ct2() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.digicert_ct2)
   return digicert_ct2_ != NULL ? *digicert_ct2_
-                         : *::censys_definitions::CTServerStatus::internal_default_instance();
+                         : *::zsearch::CTServerStatus::internal_default_instance();
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::mutable_digicert_ct2() {
+inline ::zsearch::CTServerStatus* CTStatus::mutable_digicert_ct2() {
   
   if (digicert_ct2_ == NULL) {
-    digicert_ct2_ = new ::censys_definitions::CTServerStatus;
+    digicert_ct2_ = new ::zsearch::CTServerStatus;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.CTStatus.digicert_ct2)
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.digicert_ct2)
   return digicert_ct2_;
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::release_digicert_ct2() {
-  // @@protoc_insertion_point(field_release:censys_definitions.CTStatus.digicert_ct2)
+inline ::zsearch::CTServerStatus* CTStatus::release_digicert_ct2() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.digicert_ct2)
   
-  ::censys_definitions::CTServerStatus* temp = digicert_ct2_;
+  ::zsearch::CTServerStatus* temp = digicert_ct2_;
   digicert_ct2_ = NULL;
   return temp;
 }
-inline void CTStatus::set_allocated_digicert_ct2(::censys_definitions::CTServerStatus* digicert_ct2) {
+inline void CTStatus::set_allocated_digicert_ct2(::zsearch::CTServerStatus* digicert_ct2) {
   delete digicert_ct2_;
   digicert_ct2_ = digicert_ct2;
   if (digicert_ct2) {
@@ -1418,10 +1418,10 @@ inline void CTStatus::set_allocated_digicert_ct2(::censys_definitions::CTServerS
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.CTStatus.digicert_ct2)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.digicert_ct2)
 }
 
-// .censys_definitions.CTServerStatus izenpe_com_ct = 21;
+// .zsearch.CTServerStatus izenpe_com_ct = 21;
 inline bool CTStatus::has_izenpe_com_ct() const {
   return this != internal_default_instance() && izenpe_com_ct_ != NULL;
 }
@@ -1429,27 +1429,27 @@ inline void CTStatus::clear_izenpe_com_ct() {
   if (GetArenaNoVirtual() == NULL && izenpe_com_ct_ != NULL) delete izenpe_com_ct_;
   izenpe_com_ct_ = NULL;
 }
-inline const ::censys_definitions::CTServerStatus& CTStatus::izenpe_com_ct() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.CTStatus.izenpe_com_ct)
+inline const ::zsearch::CTServerStatus& CTStatus::izenpe_com_ct() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.izenpe_com_ct)
   return izenpe_com_ct_ != NULL ? *izenpe_com_ct_
-                         : *::censys_definitions::CTServerStatus::internal_default_instance();
+                         : *::zsearch::CTServerStatus::internal_default_instance();
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::mutable_izenpe_com_ct() {
+inline ::zsearch::CTServerStatus* CTStatus::mutable_izenpe_com_ct() {
   
   if (izenpe_com_ct_ == NULL) {
-    izenpe_com_ct_ = new ::censys_definitions::CTServerStatus;
+    izenpe_com_ct_ = new ::zsearch::CTServerStatus;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.CTStatus.izenpe_com_ct)
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.izenpe_com_ct)
   return izenpe_com_ct_;
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::release_izenpe_com_ct() {
-  // @@protoc_insertion_point(field_release:censys_definitions.CTStatus.izenpe_com_ct)
+inline ::zsearch::CTServerStatus* CTStatus::release_izenpe_com_ct() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.izenpe_com_ct)
   
-  ::censys_definitions::CTServerStatus* temp = izenpe_com_ct_;
+  ::zsearch::CTServerStatus* temp = izenpe_com_ct_;
   izenpe_com_ct_ = NULL;
   return temp;
 }
-inline void CTStatus::set_allocated_izenpe_com_ct(::censys_definitions::CTServerStatus* izenpe_com_ct) {
+inline void CTStatus::set_allocated_izenpe_com_ct(::zsearch::CTServerStatus* izenpe_com_ct) {
   delete izenpe_com_ct_;
   izenpe_com_ct_ = izenpe_com_ct;
   if (izenpe_com_ct) {
@@ -1457,10 +1457,10 @@ inline void CTStatus::set_allocated_izenpe_com_ct(::censys_definitions::CTServer
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.CTStatus.izenpe_com_ct)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.izenpe_com_ct)
 }
 
-// .censys_definitions.CTServerStatus izenpe_eus_ct = 22;
+// .zsearch.CTServerStatus izenpe_eus_ct = 22;
 inline bool CTStatus::has_izenpe_eus_ct() const {
   return this != internal_default_instance() && izenpe_eus_ct_ != NULL;
 }
@@ -1468,27 +1468,27 @@ inline void CTStatus::clear_izenpe_eus_ct() {
   if (GetArenaNoVirtual() == NULL && izenpe_eus_ct_ != NULL) delete izenpe_eus_ct_;
   izenpe_eus_ct_ = NULL;
 }
-inline const ::censys_definitions::CTServerStatus& CTStatus::izenpe_eus_ct() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.CTStatus.izenpe_eus_ct)
+inline const ::zsearch::CTServerStatus& CTStatus::izenpe_eus_ct() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.izenpe_eus_ct)
   return izenpe_eus_ct_ != NULL ? *izenpe_eus_ct_
-                         : *::censys_definitions::CTServerStatus::internal_default_instance();
+                         : *::zsearch::CTServerStatus::internal_default_instance();
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::mutable_izenpe_eus_ct() {
+inline ::zsearch::CTServerStatus* CTStatus::mutable_izenpe_eus_ct() {
   
   if (izenpe_eus_ct_ == NULL) {
-    izenpe_eus_ct_ = new ::censys_definitions::CTServerStatus;
+    izenpe_eus_ct_ = new ::zsearch::CTServerStatus;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.CTStatus.izenpe_eus_ct)
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.izenpe_eus_ct)
   return izenpe_eus_ct_;
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::release_izenpe_eus_ct() {
-  // @@protoc_insertion_point(field_release:censys_definitions.CTStatus.izenpe_eus_ct)
+inline ::zsearch::CTServerStatus* CTStatus::release_izenpe_eus_ct() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.izenpe_eus_ct)
   
-  ::censys_definitions::CTServerStatus* temp = izenpe_eus_ct_;
+  ::zsearch::CTServerStatus* temp = izenpe_eus_ct_;
   izenpe_eus_ct_ = NULL;
   return temp;
 }
-inline void CTStatus::set_allocated_izenpe_eus_ct(::censys_definitions::CTServerStatus* izenpe_eus_ct) {
+inline void CTStatus::set_allocated_izenpe_eus_ct(::zsearch::CTServerStatus* izenpe_eus_ct) {
   delete izenpe_eus_ct_;
   izenpe_eus_ct_ = izenpe_eus_ct;
   if (izenpe_eus_ct) {
@@ -1496,10 +1496,10 @@ inline void CTStatus::set_allocated_izenpe_eus_ct(::censys_definitions::CTServer
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.CTStatus.izenpe_eus_ct)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.izenpe_eus_ct)
 }
 
-// .censys_definitions.CTServerStatus symantec_ws_ct = 23;
+// .zsearch.CTServerStatus symantec_ws_ct = 23;
 inline bool CTStatus::has_symantec_ws_ct() const {
   return this != internal_default_instance() && symantec_ws_ct_ != NULL;
 }
@@ -1507,27 +1507,27 @@ inline void CTStatus::clear_symantec_ws_ct() {
   if (GetArenaNoVirtual() == NULL && symantec_ws_ct_ != NULL) delete symantec_ws_ct_;
   symantec_ws_ct_ = NULL;
 }
-inline const ::censys_definitions::CTServerStatus& CTStatus::symantec_ws_ct() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.CTStatus.symantec_ws_ct)
+inline const ::zsearch::CTServerStatus& CTStatus::symantec_ws_ct() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.symantec_ws_ct)
   return symantec_ws_ct_ != NULL ? *symantec_ws_ct_
-                         : *::censys_definitions::CTServerStatus::internal_default_instance();
+                         : *::zsearch::CTServerStatus::internal_default_instance();
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::mutable_symantec_ws_ct() {
+inline ::zsearch::CTServerStatus* CTStatus::mutable_symantec_ws_ct() {
   
   if (symantec_ws_ct_ == NULL) {
-    symantec_ws_ct_ = new ::censys_definitions::CTServerStatus;
+    symantec_ws_ct_ = new ::zsearch::CTServerStatus;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.CTStatus.symantec_ws_ct)
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.symantec_ws_ct)
   return symantec_ws_ct_;
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::release_symantec_ws_ct() {
-  // @@protoc_insertion_point(field_release:censys_definitions.CTStatus.symantec_ws_ct)
+inline ::zsearch::CTServerStatus* CTStatus::release_symantec_ws_ct() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.symantec_ws_ct)
   
-  ::censys_definitions::CTServerStatus* temp = symantec_ws_ct_;
+  ::zsearch::CTServerStatus* temp = symantec_ws_ct_;
   symantec_ws_ct_ = NULL;
   return temp;
 }
-inline void CTStatus::set_allocated_symantec_ws_ct(::censys_definitions::CTServerStatus* symantec_ws_ct) {
+inline void CTStatus::set_allocated_symantec_ws_ct(::zsearch::CTServerStatus* symantec_ws_ct) {
   delete symantec_ws_ct_;
   symantec_ws_ct_ = symantec_ws_ct;
   if (symantec_ws_ct) {
@@ -1535,10 +1535,10 @@ inline void CTStatus::set_allocated_symantec_ws_ct(::censys_definitions::CTServe
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.CTStatus.symantec_ws_ct)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.symantec_ws_ct)
 }
 
-// .censys_definitions.CTServerStatus symantec_ws_vega = 24;
+// .zsearch.CTServerStatus symantec_ws_vega = 24;
 inline bool CTStatus::has_symantec_ws_vega() const {
   return this != internal_default_instance() && symantec_ws_vega_ != NULL;
 }
@@ -1546,27 +1546,27 @@ inline void CTStatus::clear_symantec_ws_vega() {
   if (GetArenaNoVirtual() == NULL && symantec_ws_vega_ != NULL) delete symantec_ws_vega_;
   symantec_ws_vega_ = NULL;
 }
-inline const ::censys_definitions::CTServerStatus& CTStatus::symantec_ws_vega() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.CTStatus.symantec_ws_vega)
+inline const ::zsearch::CTServerStatus& CTStatus::symantec_ws_vega() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.symantec_ws_vega)
   return symantec_ws_vega_ != NULL ? *symantec_ws_vega_
-                         : *::censys_definitions::CTServerStatus::internal_default_instance();
+                         : *::zsearch::CTServerStatus::internal_default_instance();
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::mutable_symantec_ws_vega() {
+inline ::zsearch::CTServerStatus* CTStatus::mutable_symantec_ws_vega() {
   
   if (symantec_ws_vega_ == NULL) {
-    symantec_ws_vega_ = new ::censys_definitions::CTServerStatus;
+    symantec_ws_vega_ = new ::zsearch::CTServerStatus;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.CTStatus.symantec_ws_vega)
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.symantec_ws_vega)
   return symantec_ws_vega_;
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::release_symantec_ws_vega() {
-  // @@protoc_insertion_point(field_release:censys_definitions.CTStatus.symantec_ws_vega)
+inline ::zsearch::CTServerStatus* CTStatus::release_symantec_ws_vega() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.symantec_ws_vega)
   
-  ::censys_definitions::CTServerStatus* temp = symantec_ws_vega_;
+  ::zsearch::CTServerStatus* temp = symantec_ws_vega_;
   symantec_ws_vega_ = NULL;
   return temp;
 }
-inline void CTStatus::set_allocated_symantec_ws_vega(::censys_definitions::CTServerStatus* symantec_ws_vega) {
+inline void CTStatus::set_allocated_symantec_ws_vega(::zsearch::CTServerStatus* symantec_ws_vega) {
   delete symantec_ws_vega_;
   symantec_ws_vega_ = symantec_ws_vega;
   if (symantec_ws_vega) {
@@ -1574,10 +1574,10 @@ inline void CTStatus::set_allocated_symantec_ws_vega(::censys_definitions::CTSer
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.CTStatus.symantec_ws_vega)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.symantec_ws_vega)
 }
 
-// .censys_definitions.CTServerStatus symantec_ws_sirius = 37;
+// .zsearch.CTServerStatus symantec_ws_sirius = 37;
 inline bool CTStatus::has_symantec_ws_sirius() const {
   return this != internal_default_instance() && symantec_ws_sirius_ != NULL;
 }
@@ -1585,27 +1585,27 @@ inline void CTStatus::clear_symantec_ws_sirius() {
   if (GetArenaNoVirtual() == NULL && symantec_ws_sirius_ != NULL) delete symantec_ws_sirius_;
   symantec_ws_sirius_ = NULL;
 }
-inline const ::censys_definitions::CTServerStatus& CTStatus::symantec_ws_sirius() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.CTStatus.symantec_ws_sirius)
+inline const ::zsearch::CTServerStatus& CTStatus::symantec_ws_sirius() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.symantec_ws_sirius)
   return symantec_ws_sirius_ != NULL ? *symantec_ws_sirius_
-                         : *::censys_definitions::CTServerStatus::internal_default_instance();
+                         : *::zsearch::CTServerStatus::internal_default_instance();
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::mutable_symantec_ws_sirius() {
+inline ::zsearch::CTServerStatus* CTStatus::mutable_symantec_ws_sirius() {
   
   if (symantec_ws_sirius_ == NULL) {
-    symantec_ws_sirius_ = new ::censys_definitions::CTServerStatus;
+    symantec_ws_sirius_ = new ::zsearch::CTServerStatus;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.CTStatus.symantec_ws_sirius)
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.symantec_ws_sirius)
   return symantec_ws_sirius_;
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::release_symantec_ws_sirius() {
-  // @@protoc_insertion_point(field_release:censys_definitions.CTStatus.symantec_ws_sirius)
+inline ::zsearch::CTServerStatus* CTStatus::release_symantec_ws_sirius() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.symantec_ws_sirius)
   
-  ::censys_definitions::CTServerStatus* temp = symantec_ws_sirius_;
+  ::zsearch::CTServerStatus* temp = symantec_ws_sirius_;
   symantec_ws_sirius_ = NULL;
   return temp;
 }
-inline void CTStatus::set_allocated_symantec_ws_sirius(::censys_definitions::CTServerStatus* symantec_ws_sirius) {
+inline void CTStatus::set_allocated_symantec_ws_sirius(::zsearch::CTServerStatus* symantec_ws_sirius) {
   delete symantec_ws_sirius_;
   symantec_ws_sirius_ = symantec_ws_sirius;
   if (symantec_ws_sirius) {
@@ -1613,10 +1613,10 @@ inline void CTStatus::set_allocated_symantec_ws_sirius(::censys_definitions::CTS
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.CTStatus.symantec_ws_sirius)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.symantec_ws_sirius)
 }
 
-// .censys_definitions.CTServerStatus symantec_ws_deneb = 32;
+// .zsearch.CTServerStatus symantec_ws_deneb = 32;
 inline bool CTStatus::has_symantec_ws_deneb() const {
   return this != internal_default_instance() && symantec_ws_deneb_ != NULL;
 }
@@ -1624,27 +1624,27 @@ inline void CTStatus::clear_symantec_ws_deneb() {
   if (GetArenaNoVirtual() == NULL && symantec_ws_deneb_ != NULL) delete symantec_ws_deneb_;
   symantec_ws_deneb_ = NULL;
 }
-inline const ::censys_definitions::CTServerStatus& CTStatus::symantec_ws_deneb() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.CTStatus.symantec_ws_deneb)
+inline const ::zsearch::CTServerStatus& CTStatus::symantec_ws_deneb() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.symantec_ws_deneb)
   return symantec_ws_deneb_ != NULL ? *symantec_ws_deneb_
-                         : *::censys_definitions::CTServerStatus::internal_default_instance();
+                         : *::zsearch::CTServerStatus::internal_default_instance();
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::mutable_symantec_ws_deneb() {
+inline ::zsearch::CTServerStatus* CTStatus::mutable_symantec_ws_deneb() {
   
   if (symantec_ws_deneb_ == NULL) {
-    symantec_ws_deneb_ = new ::censys_definitions::CTServerStatus;
+    symantec_ws_deneb_ = new ::zsearch::CTServerStatus;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.CTStatus.symantec_ws_deneb)
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.symantec_ws_deneb)
   return symantec_ws_deneb_;
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::release_symantec_ws_deneb() {
-  // @@protoc_insertion_point(field_release:censys_definitions.CTStatus.symantec_ws_deneb)
+inline ::zsearch::CTServerStatus* CTStatus::release_symantec_ws_deneb() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.symantec_ws_deneb)
   
-  ::censys_definitions::CTServerStatus* temp = symantec_ws_deneb_;
+  ::zsearch::CTServerStatus* temp = symantec_ws_deneb_;
   symantec_ws_deneb_ = NULL;
   return temp;
 }
-inline void CTStatus::set_allocated_symantec_ws_deneb(::censys_definitions::CTServerStatus* symantec_ws_deneb) {
+inline void CTStatus::set_allocated_symantec_ws_deneb(::zsearch::CTServerStatus* symantec_ws_deneb) {
   delete symantec_ws_deneb_;
   symantec_ws_deneb_ = symantec_ws_deneb;
   if (symantec_ws_deneb) {
@@ -1652,10 +1652,10 @@ inline void CTStatus::set_allocated_symantec_ws_deneb(::censys_definitions::CTSe
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.CTStatus.symantec_ws_deneb)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.symantec_ws_deneb)
 }
 
-// .censys_definitions.CTServerStatus comodo_dodo = 34;
+// .zsearch.CTServerStatus comodo_dodo = 34;
 inline bool CTStatus::has_comodo_dodo() const {
   return this != internal_default_instance() && comodo_dodo_ != NULL;
 }
@@ -1663,27 +1663,27 @@ inline void CTStatus::clear_comodo_dodo() {
   if (GetArenaNoVirtual() == NULL && comodo_dodo_ != NULL) delete comodo_dodo_;
   comodo_dodo_ = NULL;
 }
-inline const ::censys_definitions::CTServerStatus& CTStatus::comodo_dodo() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.CTStatus.comodo_dodo)
+inline const ::zsearch::CTServerStatus& CTStatus::comodo_dodo() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.comodo_dodo)
   return comodo_dodo_ != NULL ? *comodo_dodo_
-                         : *::censys_definitions::CTServerStatus::internal_default_instance();
+                         : *::zsearch::CTServerStatus::internal_default_instance();
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::mutable_comodo_dodo() {
+inline ::zsearch::CTServerStatus* CTStatus::mutable_comodo_dodo() {
   
   if (comodo_dodo_ == NULL) {
-    comodo_dodo_ = new ::censys_definitions::CTServerStatus;
+    comodo_dodo_ = new ::zsearch::CTServerStatus;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.CTStatus.comodo_dodo)
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.comodo_dodo)
   return comodo_dodo_;
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::release_comodo_dodo() {
-  // @@protoc_insertion_point(field_release:censys_definitions.CTStatus.comodo_dodo)
+inline ::zsearch::CTServerStatus* CTStatus::release_comodo_dodo() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.comodo_dodo)
   
-  ::censys_definitions::CTServerStatus* temp = comodo_dodo_;
+  ::zsearch::CTServerStatus* temp = comodo_dodo_;
   comodo_dodo_ = NULL;
   return temp;
 }
-inline void CTStatus::set_allocated_comodo_dodo(::censys_definitions::CTServerStatus* comodo_dodo) {
+inline void CTStatus::set_allocated_comodo_dodo(::zsearch::CTServerStatus* comodo_dodo) {
   delete comodo_dodo_;
   comodo_dodo_ = comodo_dodo;
   if (comodo_dodo) {
@@ -1691,10 +1691,10 @@ inline void CTStatus::set_allocated_comodo_dodo(::censys_definitions::CTServerSt
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.CTStatus.comodo_dodo)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.comodo_dodo)
 }
 
-// .censys_definitions.CTServerStatus comodo_mammoth = 35;
+// .zsearch.CTServerStatus comodo_mammoth = 35;
 inline bool CTStatus::has_comodo_mammoth() const {
   return this != internal_default_instance() && comodo_mammoth_ != NULL;
 }
@@ -1702,27 +1702,27 @@ inline void CTStatus::clear_comodo_mammoth() {
   if (GetArenaNoVirtual() == NULL && comodo_mammoth_ != NULL) delete comodo_mammoth_;
   comodo_mammoth_ = NULL;
 }
-inline const ::censys_definitions::CTServerStatus& CTStatus::comodo_mammoth() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.CTStatus.comodo_mammoth)
+inline const ::zsearch::CTServerStatus& CTStatus::comodo_mammoth() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.comodo_mammoth)
   return comodo_mammoth_ != NULL ? *comodo_mammoth_
-                         : *::censys_definitions::CTServerStatus::internal_default_instance();
+                         : *::zsearch::CTServerStatus::internal_default_instance();
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::mutable_comodo_mammoth() {
+inline ::zsearch::CTServerStatus* CTStatus::mutable_comodo_mammoth() {
   
   if (comodo_mammoth_ == NULL) {
-    comodo_mammoth_ = new ::censys_definitions::CTServerStatus;
+    comodo_mammoth_ = new ::zsearch::CTServerStatus;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.CTStatus.comodo_mammoth)
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.comodo_mammoth)
   return comodo_mammoth_;
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::release_comodo_mammoth() {
-  // @@protoc_insertion_point(field_release:censys_definitions.CTStatus.comodo_mammoth)
+inline ::zsearch::CTServerStatus* CTStatus::release_comodo_mammoth() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.comodo_mammoth)
   
-  ::censys_definitions::CTServerStatus* temp = comodo_mammoth_;
+  ::zsearch::CTServerStatus* temp = comodo_mammoth_;
   comodo_mammoth_ = NULL;
   return temp;
 }
-inline void CTStatus::set_allocated_comodo_mammoth(::censys_definitions::CTServerStatus* comodo_mammoth) {
+inline void CTStatus::set_allocated_comodo_mammoth(::zsearch::CTServerStatus* comodo_mammoth) {
   delete comodo_mammoth_;
   comodo_mammoth_ = comodo_mammoth;
   if (comodo_mammoth) {
@@ -1730,10 +1730,10 @@ inline void CTStatus::set_allocated_comodo_mammoth(::censys_definitions::CTServe
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.CTStatus.comodo_mammoth)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.comodo_mammoth)
 }
 
-// .censys_definitions.CTServerStatus wosign_ctlog = 25;
+// .zsearch.CTServerStatus wosign_ctlog = 25;
 inline bool CTStatus::has_wosign_ctlog() const {
   return this != internal_default_instance() && wosign_ctlog_ != NULL;
 }
@@ -1741,27 +1741,27 @@ inline void CTStatus::clear_wosign_ctlog() {
   if (GetArenaNoVirtual() == NULL && wosign_ctlog_ != NULL) delete wosign_ctlog_;
   wosign_ctlog_ = NULL;
 }
-inline const ::censys_definitions::CTServerStatus& CTStatus::wosign_ctlog() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.CTStatus.wosign_ctlog)
+inline const ::zsearch::CTServerStatus& CTStatus::wosign_ctlog() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.wosign_ctlog)
   return wosign_ctlog_ != NULL ? *wosign_ctlog_
-                         : *::censys_definitions::CTServerStatus::internal_default_instance();
+                         : *::zsearch::CTServerStatus::internal_default_instance();
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::mutable_wosign_ctlog() {
+inline ::zsearch::CTServerStatus* CTStatus::mutable_wosign_ctlog() {
   
   if (wosign_ctlog_ == NULL) {
-    wosign_ctlog_ = new ::censys_definitions::CTServerStatus;
+    wosign_ctlog_ = new ::zsearch::CTServerStatus;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.CTStatus.wosign_ctlog)
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.wosign_ctlog)
   return wosign_ctlog_;
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::release_wosign_ctlog() {
-  // @@protoc_insertion_point(field_release:censys_definitions.CTStatus.wosign_ctlog)
+inline ::zsearch::CTServerStatus* CTStatus::release_wosign_ctlog() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.wosign_ctlog)
   
-  ::censys_definitions::CTServerStatus* temp = wosign_ctlog_;
+  ::zsearch::CTServerStatus* temp = wosign_ctlog_;
   wosign_ctlog_ = NULL;
   return temp;
 }
-inline void CTStatus::set_allocated_wosign_ctlog(::censys_definitions::CTServerStatus* wosign_ctlog) {
+inline void CTStatus::set_allocated_wosign_ctlog(::zsearch::CTServerStatus* wosign_ctlog) {
   delete wosign_ctlog_;
   wosign_ctlog_ = wosign_ctlog;
   if (wosign_ctlog) {
@@ -1769,10 +1769,10 @@ inline void CTStatus::set_allocated_wosign_ctlog(::censys_definitions::CTServerS
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.CTStatus.wosign_ctlog)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.wosign_ctlog)
 }
 
-// .censys_definitions.CTServerStatus wosign_ct = 26;
+// .zsearch.CTServerStatus wosign_ct = 26;
 inline bool CTStatus::has_wosign_ct() const {
   return this != internal_default_instance() && wosign_ct_ != NULL;
 }
@@ -1780,27 +1780,27 @@ inline void CTStatus::clear_wosign_ct() {
   if (GetArenaNoVirtual() == NULL && wosign_ct_ != NULL) delete wosign_ct_;
   wosign_ct_ = NULL;
 }
-inline const ::censys_definitions::CTServerStatus& CTStatus::wosign_ct() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.CTStatus.wosign_ct)
+inline const ::zsearch::CTServerStatus& CTStatus::wosign_ct() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.wosign_ct)
   return wosign_ct_ != NULL ? *wosign_ct_
-                         : *::censys_definitions::CTServerStatus::internal_default_instance();
+                         : *::zsearch::CTServerStatus::internal_default_instance();
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::mutable_wosign_ct() {
+inline ::zsearch::CTServerStatus* CTStatus::mutable_wosign_ct() {
   
   if (wosign_ct_ == NULL) {
-    wosign_ct_ = new ::censys_definitions::CTServerStatus;
+    wosign_ct_ = new ::zsearch::CTServerStatus;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.CTStatus.wosign_ct)
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.wosign_ct)
   return wosign_ct_;
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::release_wosign_ct() {
-  // @@protoc_insertion_point(field_release:censys_definitions.CTStatus.wosign_ct)
+inline ::zsearch::CTServerStatus* CTStatus::release_wosign_ct() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.wosign_ct)
   
-  ::censys_definitions::CTServerStatus* temp = wosign_ct_;
+  ::zsearch::CTServerStatus* temp = wosign_ct_;
   wosign_ct_ = NULL;
   return temp;
 }
-inline void CTStatus::set_allocated_wosign_ct(::censys_definitions::CTServerStatus* wosign_ct) {
+inline void CTStatus::set_allocated_wosign_ct(::zsearch::CTServerStatus* wosign_ct) {
   delete wosign_ct_;
   wosign_ct_ = wosign_ct;
   if (wosign_ct) {
@@ -1808,10 +1808,10 @@ inline void CTStatus::set_allocated_wosign_ct(::censys_definitions::CTServerStat
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.CTStatus.wosign_ct)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.wosign_ct)
 }
 
-// .censys_definitions.CTServerStatus gdca_ct = 28;
+// .zsearch.CTServerStatus gdca_ct = 28;
 inline bool CTStatus::has_gdca_ct() const {
   return this != internal_default_instance() && gdca_ct_ != NULL;
 }
@@ -1819,27 +1819,27 @@ inline void CTStatus::clear_gdca_ct() {
   if (GetArenaNoVirtual() == NULL && gdca_ct_ != NULL) delete gdca_ct_;
   gdca_ct_ = NULL;
 }
-inline const ::censys_definitions::CTServerStatus& CTStatus::gdca_ct() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.CTStatus.gdca_ct)
+inline const ::zsearch::CTServerStatus& CTStatus::gdca_ct() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.gdca_ct)
   return gdca_ct_ != NULL ? *gdca_ct_
-                         : *::censys_definitions::CTServerStatus::internal_default_instance();
+                         : *::zsearch::CTServerStatus::internal_default_instance();
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::mutable_gdca_ct() {
+inline ::zsearch::CTServerStatus* CTStatus::mutable_gdca_ct() {
   
   if (gdca_ct_ == NULL) {
-    gdca_ct_ = new ::censys_definitions::CTServerStatus;
+    gdca_ct_ = new ::zsearch::CTServerStatus;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.CTStatus.gdca_ct)
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.gdca_ct)
   return gdca_ct_;
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::release_gdca_ct() {
-  // @@protoc_insertion_point(field_release:censys_definitions.CTStatus.gdca_ct)
+inline ::zsearch::CTServerStatus* CTStatus::release_gdca_ct() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.gdca_ct)
   
-  ::censys_definitions::CTServerStatus* temp = gdca_ct_;
+  ::zsearch::CTServerStatus* temp = gdca_ct_;
   gdca_ct_ = NULL;
   return temp;
 }
-inline void CTStatus::set_allocated_gdca_ct(::censys_definitions::CTServerStatus* gdca_ct) {
+inline void CTStatus::set_allocated_gdca_ct(::zsearch::CTServerStatus* gdca_ct) {
   delete gdca_ct_;
   gdca_ct_ = gdca_ct;
   if (gdca_ct) {
@@ -1847,10 +1847,10 @@ inline void CTStatus::set_allocated_gdca_ct(::censys_definitions::CTServerStatus
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.CTStatus.gdca_ct)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.gdca_ct)
 }
 
-// .censys_definitions.CTServerStatus gdca_ctlog = 36;
+// .zsearch.CTServerStatus gdca_ctlog = 36;
 inline bool CTStatus::has_gdca_ctlog() const {
   return this != internal_default_instance() && gdca_ctlog_ != NULL;
 }
@@ -1858,27 +1858,27 @@ inline void CTStatus::clear_gdca_ctlog() {
   if (GetArenaNoVirtual() == NULL && gdca_ctlog_ != NULL) delete gdca_ctlog_;
   gdca_ctlog_ = NULL;
 }
-inline const ::censys_definitions::CTServerStatus& CTStatus::gdca_ctlog() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.CTStatus.gdca_ctlog)
+inline const ::zsearch::CTServerStatus& CTStatus::gdca_ctlog() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.gdca_ctlog)
   return gdca_ctlog_ != NULL ? *gdca_ctlog_
-                         : *::censys_definitions::CTServerStatus::internal_default_instance();
+                         : *::zsearch::CTServerStatus::internal_default_instance();
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::mutable_gdca_ctlog() {
+inline ::zsearch::CTServerStatus* CTStatus::mutable_gdca_ctlog() {
   
   if (gdca_ctlog_ == NULL) {
-    gdca_ctlog_ = new ::censys_definitions::CTServerStatus;
+    gdca_ctlog_ = new ::zsearch::CTServerStatus;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.CTStatus.gdca_ctlog)
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.gdca_ctlog)
   return gdca_ctlog_;
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::release_gdca_ctlog() {
-  // @@protoc_insertion_point(field_release:censys_definitions.CTStatus.gdca_ctlog)
+inline ::zsearch::CTServerStatus* CTStatus::release_gdca_ctlog() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.gdca_ctlog)
   
-  ::censys_definitions::CTServerStatus* temp = gdca_ctlog_;
+  ::zsearch::CTServerStatus* temp = gdca_ctlog_;
   gdca_ctlog_ = NULL;
   return temp;
 }
-inline void CTStatus::set_allocated_gdca_ctlog(::censys_definitions::CTServerStatus* gdca_ctlog) {
+inline void CTStatus::set_allocated_gdca_ctlog(::zsearch::CTServerStatus* gdca_ctlog) {
   delete gdca_ctlog_;
   gdca_ctlog_ = gdca_ctlog;
   if (gdca_ctlog) {
@@ -1886,10 +1886,10 @@ inline void CTStatus::set_allocated_gdca_ctlog(::censys_definitions::CTServerSta
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.CTStatus.gdca_ctlog)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.gdca_ctlog)
 }
 
-// .censys_definitions.CTServerStatus venafi_api_ctlog = 31;
+// .zsearch.CTServerStatus venafi_api_ctlog = 31;
 inline bool CTStatus::has_venafi_api_ctlog() const {
   return this != internal_default_instance() && venafi_api_ctlog_ != NULL;
 }
@@ -1897,27 +1897,27 @@ inline void CTStatus::clear_venafi_api_ctlog() {
   if (GetArenaNoVirtual() == NULL && venafi_api_ctlog_ != NULL) delete venafi_api_ctlog_;
   venafi_api_ctlog_ = NULL;
 }
-inline const ::censys_definitions::CTServerStatus& CTStatus::venafi_api_ctlog() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.CTStatus.venafi_api_ctlog)
+inline const ::zsearch::CTServerStatus& CTStatus::venafi_api_ctlog() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.venafi_api_ctlog)
   return venafi_api_ctlog_ != NULL ? *venafi_api_ctlog_
-                         : *::censys_definitions::CTServerStatus::internal_default_instance();
+                         : *::zsearch::CTServerStatus::internal_default_instance();
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::mutable_venafi_api_ctlog() {
+inline ::zsearch::CTServerStatus* CTStatus::mutable_venafi_api_ctlog() {
   
   if (venafi_api_ctlog_ == NULL) {
-    venafi_api_ctlog_ = new ::censys_definitions::CTServerStatus;
+    venafi_api_ctlog_ = new ::zsearch::CTServerStatus;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.CTStatus.venafi_api_ctlog)
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.venafi_api_ctlog)
   return venafi_api_ctlog_;
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::release_venafi_api_ctlog() {
-  // @@protoc_insertion_point(field_release:censys_definitions.CTStatus.venafi_api_ctlog)
+inline ::zsearch::CTServerStatus* CTStatus::release_venafi_api_ctlog() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.venafi_api_ctlog)
   
-  ::censys_definitions::CTServerStatus* temp = venafi_api_ctlog_;
+  ::zsearch::CTServerStatus* temp = venafi_api_ctlog_;
   venafi_api_ctlog_ = NULL;
   return temp;
 }
-inline void CTStatus::set_allocated_venafi_api_ctlog(::censys_definitions::CTServerStatus* venafi_api_ctlog) {
+inline void CTStatus::set_allocated_venafi_api_ctlog(::zsearch::CTServerStatus* venafi_api_ctlog) {
   delete venafi_api_ctlog_;
   venafi_api_ctlog_ = venafi_api_ctlog;
   if (venafi_api_ctlog) {
@@ -1925,10 +1925,10 @@ inline void CTStatus::set_allocated_venafi_api_ctlog(::censys_definitions::CTSer
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.CTStatus.venafi_api_ctlog)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.venafi_api_ctlog)
 }
 
-// .censys_definitions.CTServerStatus venafi_api_ctlog_gen2 = 39;
+// .zsearch.CTServerStatus venafi_api_ctlog_gen2 = 39;
 inline bool CTStatus::has_venafi_api_ctlog_gen2() const {
   return this != internal_default_instance() && venafi_api_ctlog_gen2_ != NULL;
 }
@@ -1936,27 +1936,27 @@ inline void CTStatus::clear_venafi_api_ctlog_gen2() {
   if (GetArenaNoVirtual() == NULL && venafi_api_ctlog_gen2_ != NULL) delete venafi_api_ctlog_gen2_;
   venafi_api_ctlog_gen2_ = NULL;
 }
-inline const ::censys_definitions::CTServerStatus& CTStatus::venafi_api_ctlog_gen2() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.CTStatus.venafi_api_ctlog_gen2)
+inline const ::zsearch::CTServerStatus& CTStatus::venafi_api_ctlog_gen2() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.venafi_api_ctlog_gen2)
   return venafi_api_ctlog_gen2_ != NULL ? *venafi_api_ctlog_gen2_
-                         : *::censys_definitions::CTServerStatus::internal_default_instance();
+                         : *::zsearch::CTServerStatus::internal_default_instance();
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::mutable_venafi_api_ctlog_gen2() {
+inline ::zsearch::CTServerStatus* CTStatus::mutable_venafi_api_ctlog_gen2() {
   
   if (venafi_api_ctlog_gen2_ == NULL) {
-    venafi_api_ctlog_gen2_ = new ::censys_definitions::CTServerStatus;
+    venafi_api_ctlog_gen2_ = new ::zsearch::CTServerStatus;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.CTStatus.venafi_api_ctlog_gen2)
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.venafi_api_ctlog_gen2)
   return venafi_api_ctlog_gen2_;
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::release_venafi_api_ctlog_gen2() {
-  // @@protoc_insertion_point(field_release:censys_definitions.CTStatus.venafi_api_ctlog_gen2)
+inline ::zsearch::CTServerStatus* CTStatus::release_venafi_api_ctlog_gen2() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.venafi_api_ctlog_gen2)
   
-  ::censys_definitions::CTServerStatus* temp = venafi_api_ctlog_gen2_;
+  ::zsearch::CTServerStatus* temp = venafi_api_ctlog_gen2_;
   venafi_api_ctlog_gen2_ = NULL;
   return temp;
 }
-inline void CTStatus::set_allocated_venafi_api_ctlog_gen2(::censys_definitions::CTServerStatus* venafi_api_ctlog_gen2) {
+inline void CTStatus::set_allocated_venafi_api_ctlog_gen2(::zsearch::CTServerStatus* venafi_api_ctlog_gen2) {
   delete venafi_api_ctlog_gen2_;
   venafi_api_ctlog_gen2_ = venafi_api_ctlog_gen2;
   if (venafi_api_ctlog_gen2) {
@@ -1964,10 +1964,10 @@ inline void CTStatus::set_allocated_venafi_api_ctlog_gen2(::censys_definitions::
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.CTStatus.venafi_api_ctlog_gen2)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.venafi_api_ctlog_gen2)
 }
 
-// .censys_definitions.CTServerStatus nordu_ct_plausible = 33;
+// .zsearch.CTServerStatus nordu_ct_plausible = 33;
 inline bool CTStatus::has_nordu_ct_plausible() const {
   return this != internal_default_instance() && nordu_ct_plausible_ != NULL;
 }
@@ -1975,27 +1975,27 @@ inline void CTStatus::clear_nordu_ct_plausible() {
   if (GetArenaNoVirtual() == NULL && nordu_ct_plausible_ != NULL) delete nordu_ct_plausible_;
   nordu_ct_plausible_ = NULL;
 }
-inline const ::censys_definitions::CTServerStatus& CTStatus::nordu_ct_plausible() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.CTStatus.nordu_ct_plausible)
+inline const ::zsearch::CTServerStatus& CTStatus::nordu_ct_plausible() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.nordu_ct_plausible)
   return nordu_ct_plausible_ != NULL ? *nordu_ct_plausible_
-                         : *::censys_definitions::CTServerStatus::internal_default_instance();
+                         : *::zsearch::CTServerStatus::internal_default_instance();
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::mutable_nordu_ct_plausible() {
+inline ::zsearch::CTServerStatus* CTStatus::mutable_nordu_ct_plausible() {
   
   if (nordu_ct_plausible_ == NULL) {
-    nordu_ct_plausible_ = new ::censys_definitions::CTServerStatus;
+    nordu_ct_plausible_ = new ::zsearch::CTServerStatus;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.CTStatus.nordu_ct_plausible)
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.nordu_ct_plausible)
   return nordu_ct_plausible_;
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::release_nordu_ct_plausible() {
-  // @@protoc_insertion_point(field_release:censys_definitions.CTStatus.nordu_ct_plausible)
+inline ::zsearch::CTServerStatus* CTStatus::release_nordu_ct_plausible() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.nordu_ct_plausible)
   
-  ::censys_definitions::CTServerStatus* temp = nordu_ct_plausible_;
+  ::zsearch::CTServerStatus* temp = nordu_ct_plausible_;
   nordu_ct_plausible_ = NULL;
   return temp;
 }
-inline void CTStatus::set_allocated_nordu_ct_plausible(::censys_definitions::CTServerStatus* nordu_ct_plausible) {
+inline void CTStatus::set_allocated_nordu_ct_plausible(::zsearch::CTServerStatus* nordu_ct_plausible) {
   delete nordu_ct_plausible_;
   nordu_ct_plausible_ = nordu_ct_plausible;
   if (nordu_ct_plausible) {
@@ -2003,10 +2003,10 @@ inline void CTStatus::set_allocated_nordu_ct_plausible(::censys_definitions::CTS
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.CTStatus.nordu_ct_plausible)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.nordu_ct_plausible)
 }
 
-// .censys_definitions.CTServerStatus cnnic_ctserver = 27;
+// .zsearch.CTServerStatus cnnic_ctserver = 27;
 inline bool CTStatus::has_cnnic_ctserver() const {
   return this != internal_default_instance() && cnnic_ctserver_ != NULL;
 }
@@ -2014,27 +2014,27 @@ inline void CTStatus::clear_cnnic_ctserver() {
   if (GetArenaNoVirtual() == NULL && cnnic_ctserver_ != NULL) delete cnnic_ctserver_;
   cnnic_ctserver_ = NULL;
 }
-inline const ::censys_definitions::CTServerStatus& CTStatus::cnnic_ctserver() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.CTStatus.cnnic_ctserver)
+inline const ::zsearch::CTServerStatus& CTStatus::cnnic_ctserver() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.cnnic_ctserver)
   return cnnic_ctserver_ != NULL ? *cnnic_ctserver_
-                         : *::censys_definitions::CTServerStatus::internal_default_instance();
+                         : *::zsearch::CTServerStatus::internal_default_instance();
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::mutable_cnnic_ctserver() {
+inline ::zsearch::CTServerStatus* CTStatus::mutable_cnnic_ctserver() {
   
   if (cnnic_ctserver_ == NULL) {
-    cnnic_ctserver_ = new ::censys_definitions::CTServerStatus;
+    cnnic_ctserver_ = new ::zsearch::CTServerStatus;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.CTStatus.cnnic_ctserver)
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.cnnic_ctserver)
   return cnnic_ctserver_;
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::release_cnnic_ctserver() {
-  // @@protoc_insertion_point(field_release:censys_definitions.CTStatus.cnnic_ctserver)
+inline ::zsearch::CTServerStatus* CTStatus::release_cnnic_ctserver() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.cnnic_ctserver)
   
-  ::censys_definitions::CTServerStatus* temp = cnnic_ctserver_;
+  ::zsearch::CTServerStatus* temp = cnnic_ctserver_;
   cnnic_ctserver_ = NULL;
   return temp;
 }
-inline void CTStatus::set_allocated_cnnic_ctserver(::censys_definitions::CTServerStatus* cnnic_ctserver) {
+inline void CTStatus::set_allocated_cnnic_ctserver(::zsearch::CTServerStatus* cnnic_ctserver) {
   delete cnnic_ctserver_;
   cnnic_ctserver_ = cnnic_ctserver;
   if (cnnic_ctserver) {
@@ -2042,10 +2042,10 @@ inline void CTStatus::set_allocated_cnnic_ctserver(::censys_definitions::CTServe
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.CTStatus.cnnic_ctserver)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.cnnic_ctserver)
 }
 
-// .censys_definitions.CTServerStatus startssl_ct = 29;
+// .zsearch.CTServerStatus startssl_ct = 29;
 inline bool CTStatus::has_startssl_ct() const {
   return this != internal_default_instance() && startssl_ct_ != NULL;
 }
@@ -2053,27 +2053,27 @@ inline void CTStatus::clear_startssl_ct() {
   if (GetArenaNoVirtual() == NULL && startssl_ct_ != NULL) delete startssl_ct_;
   startssl_ct_ = NULL;
 }
-inline const ::censys_definitions::CTServerStatus& CTStatus::startssl_ct() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.CTStatus.startssl_ct)
+inline const ::zsearch::CTServerStatus& CTStatus::startssl_ct() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.startssl_ct)
   return startssl_ct_ != NULL ? *startssl_ct_
-                         : *::censys_definitions::CTServerStatus::internal_default_instance();
+                         : *::zsearch::CTServerStatus::internal_default_instance();
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::mutable_startssl_ct() {
+inline ::zsearch::CTServerStatus* CTStatus::mutable_startssl_ct() {
   
   if (startssl_ct_ == NULL) {
-    startssl_ct_ = new ::censys_definitions::CTServerStatus;
+    startssl_ct_ = new ::zsearch::CTServerStatus;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.CTStatus.startssl_ct)
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.startssl_ct)
   return startssl_ct_;
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::release_startssl_ct() {
-  // @@protoc_insertion_point(field_release:censys_definitions.CTStatus.startssl_ct)
+inline ::zsearch::CTServerStatus* CTStatus::release_startssl_ct() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.startssl_ct)
   
-  ::censys_definitions::CTServerStatus* temp = startssl_ct_;
+  ::zsearch::CTServerStatus* temp = startssl_ct_;
   startssl_ct_ = NULL;
   return temp;
 }
-inline void CTStatus::set_allocated_startssl_ct(::censys_definitions::CTServerStatus* startssl_ct) {
+inline void CTStatus::set_allocated_startssl_ct(::zsearch::CTServerStatus* startssl_ct) {
   delete startssl_ct_;
   startssl_ct_ = startssl_ct;
   if (startssl_ct) {
@@ -2081,10 +2081,10 @@ inline void CTStatus::set_allocated_startssl_ct(::censys_definitions::CTServerSt
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.CTStatus.startssl_ct)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.startssl_ct)
 }
 
-// .censys_definitions.CTServerStatus certly_log = 30;
+// .zsearch.CTServerStatus certly_log = 30;
 inline bool CTStatus::has_certly_log() const {
   return this != internal_default_instance() && certly_log_ != NULL;
 }
@@ -2092,27 +2092,27 @@ inline void CTStatus::clear_certly_log() {
   if (GetArenaNoVirtual() == NULL && certly_log_ != NULL) delete certly_log_;
   certly_log_ = NULL;
 }
-inline const ::censys_definitions::CTServerStatus& CTStatus::certly_log() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.CTStatus.certly_log)
+inline const ::zsearch::CTServerStatus& CTStatus::certly_log() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.certly_log)
   return certly_log_ != NULL ? *certly_log_
-                         : *::censys_definitions::CTServerStatus::internal_default_instance();
+                         : *::zsearch::CTServerStatus::internal_default_instance();
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::mutable_certly_log() {
+inline ::zsearch::CTServerStatus* CTStatus::mutable_certly_log() {
   
   if (certly_log_ == NULL) {
-    certly_log_ = new ::censys_definitions::CTServerStatus;
+    certly_log_ = new ::zsearch::CTServerStatus;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.CTStatus.certly_log)
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.certly_log)
   return certly_log_;
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::release_certly_log() {
-  // @@protoc_insertion_point(field_release:censys_definitions.CTStatus.certly_log)
+inline ::zsearch::CTServerStatus* CTStatus::release_certly_log() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.certly_log)
   
-  ::censys_definitions::CTServerStatus* temp = certly_log_;
+  ::zsearch::CTServerStatus* temp = certly_log_;
   certly_log_ = NULL;
   return temp;
 }
-inline void CTStatus::set_allocated_certly_log(::censys_definitions::CTServerStatus* certly_log) {
+inline void CTStatus::set_allocated_certly_log(::zsearch::CTServerStatus* certly_log) {
   delete certly_log_;
   certly_log_ = certly_log;
   if (certly_log) {
@@ -2120,10 +2120,10 @@ inline void CTStatus::set_allocated_certly_log(::censys_definitions::CTServerSta
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.CTStatus.certly_log)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.certly_log)
 }
 
-// .censys_definitions.CTServerStatus certificatetransparency_cn_ct = 38;
+// .zsearch.CTServerStatus certificatetransparency_cn_ct = 38;
 inline bool CTStatus::has_certificatetransparency_cn_ct() const {
   return this != internal_default_instance() && certificatetransparency_cn_ct_ != NULL;
 }
@@ -2131,27 +2131,27 @@ inline void CTStatus::clear_certificatetransparency_cn_ct() {
   if (GetArenaNoVirtual() == NULL && certificatetransparency_cn_ct_ != NULL) delete certificatetransparency_cn_ct_;
   certificatetransparency_cn_ct_ = NULL;
 }
-inline const ::censys_definitions::CTServerStatus& CTStatus::certificatetransparency_cn_ct() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.CTStatus.certificatetransparency_cn_ct)
+inline const ::zsearch::CTServerStatus& CTStatus::certificatetransparency_cn_ct() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.certificatetransparency_cn_ct)
   return certificatetransparency_cn_ct_ != NULL ? *certificatetransparency_cn_ct_
-                         : *::censys_definitions::CTServerStatus::internal_default_instance();
+                         : *::zsearch::CTServerStatus::internal_default_instance();
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::mutable_certificatetransparency_cn_ct() {
+inline ::zsearch::CTServerStatus* CTStatus::mutable_certificatetransparency_cn_ct() {
   
   if (certificatetransparency_cn_ct_ == NULL) {
-    certificatetransparency_cn_ct_ = new ::censys_definitions::CTServerStatus;
+    certificatetransparency_cn_ct_ = new ::zsearch::CTServerStatus;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.CTStatus.certificatetransparency_cn_ct)
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.certificatetransparency_cn_ct)
   return certificatetransparency_cn_ct_;
 }
-inline ::censys_definitions::CTServerStatus* CTStatus::release_certificatetransparency_cn_ct() {
-  // @@protoc_insertion_point(field_release:censys_definitions.CTStatus.certificatetransparency_cn_ct)
+inline ::zsearch::CTServerStatus* CTStatus::release_certificatetransparency_cn_ct() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.certificatetransparency_cn_ct)
   
-  ::censys_definitions::CTServerStatus* temp = certificatetransparency_cn_ct_;
+  ::zsearch::CTServerStatus* temp = certificatetransparency_cn_ct_;
   certificatetransparency_cn_ct_ = NULL;
   return temp;
 }
-inline void CTStatus::set_allocated_certificatetransparency_cn_ct(::censys_definitions::CTServerStatus* certificatetransparency_cn_ct) {
+inline void CTStatus::set_allocated_certificatetransparency_cn_ct(::zsearch::CTServerStatus* certificatetransparency_cn_ct) {
   delete certificatetransparency_cn_ct_;
   certificatetransparency_cn_ct_ = certificatetransparency_cn_ct;
   if (certificatetransparency_cn_ct) {
@@ -2159,7 +2159,7 @@ inline void CTStatus::set_allocated_certificatetransparency_cn_ct(::censys_defin
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.CTStatus.certificatetransparency_cn_ct)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.certificatetransparency_cn_ct)
 }
 
 // -------------------------------------------------------------------
@@ -2171,40 +2171,40 @@ inline void SCT::clear_sha256fp() {
   sha256fp_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& SCT::sha256fp() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.SCT.sha256fp)
+  // @@protoc_insertion_point(field_get:zsearch.SCT.sha256fp)
   return sha256fp_.GetNoArena();
 }
 inline void SCT::set_sha256fp(const ::std::string& value) {
   
   sha256fp_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:censys_definitions.SCT.sha256fp)
+  // @@protoc_insertion_point(field_set:zsearch.SCT.sha256fp)
 }
 #if LANG_CXX11
 inline void SCT::set_sha256fp(::std::string&& value) {
   
   sha256fp_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:censys_definitions.SCT.sha256fp)
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.SCT.sha256fp)
 }
 #endif
 inline void SCT::set_sha256fp(const char* value) {
   
   sha256fp_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:censys_definitions.SCT.sha256fp)
+  // @@protoc_insertion_point(field_set_char:zsearch.SCT.sha256fp)
 }
 inline void SCT::set_sha256fp(const void* value, size_t size) {
   
   sha256fp_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.SCT.sha256fp)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.SCT.sha256fp)
 }
 inline ::std::string* SCT::mutable_sha256fp() {
   
-  // @@protoc_insertion_point(field_mutable:censys_definitions.SCT.sha256fp)
+  // @@protoc_insertion_point(field_mutable:zsearch.SCT.sha256fp)
   return sha256fp_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* SCT::release_sha256fp() {
-  // @@protoc_insertion_point(field_release:censys_definitions.SCT.sha256fp)
+  // @@protoc_insertion_point(field_release:zsearch.SCT.sha256fp)
   
   return sha256fp_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -2215,24 +2215,24 @@ inline void SCT::set_allocated_sha256fp(::std::string* sha256fp) {
     
   }
   sha256fp_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), sha256fp);
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.SCT.sha256fp)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.SCT.sha256fp)
 }
 
-// .censys_definitions.CTServer server = 2;
+// .zsearch.CTServer server = 2;
 inline void SCT::clear_server() {
   server_ = 0;
 }
-inline ::censys_definitions::CTServer SCT::server() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.SCT.server)
-  return static_cast< ::censys_definitions::CTServer >(server_);
+inline ::zsearch::CTServer SCT::server() const {
+  // @@protoc_insertion_point(field_get:zsearch.SCT.server)
+  return static_cast< ::zsearch::CTServer >(server_);
 }
-inline void SCT::set_server(::censys_definitions::CTServer value) {
+inline void SCT::set_server(::zsearch::CTServer value) {
   
   server_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.SCT.server)
+  // @@protoc_insertion_point(field_set:zsearch.SCT.server)
 }
 
-// .censys_definitions.CTServerStatus status = 3;
+// .zsearch.CTServerStatus status = 3;
 inline bool SCT::has_status() const {
   return this != internal_default_instance() && status_ != NULL;
 }
@@ -2240,27 +2240,27 @@ inline void SCT::clear_status() {
   if (GetArenaNoVirtual() == NULL && status_ != NULL) delete status_;
   status_ = NULL;
 }
-inline const ::censys_definitions::CTServerStatus& SCT::status() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.SCT.status)
+inline const ::zsearch::CTServerStatus& SCT::status() const {
+  // @@protoc_insertion_point(field_get:zsearch.SCT.status)
   return status_ != NULL ? *status_
-                         : *::censys_definitions::CTServerStatus::internal_default_instance();
+                         : *::zsearch::CTServerStatus::internal_default_instance();
 }
-inline ::censys_definitions::CTServerStatus* SCT::mutable_status() {
+inline ::zsearch::CTServerStatus* SCT::mutable_status() {
   
   if (status_ == NULL) {
-    status_ = new ::censys_definitions::CTServerStatus;
+    status_ = new ::zsearch::CTServerStatus;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.SCT.status)
+  // @@protoc_insertion_point(field_mutable:zsearch.SCT.status)
   return status_;
 }
-inline ::censys_definitions::CTServerStatus* SCT::release_status() {
-  // @@protoc_insertion_point(field_release:censys_definitions.SCT.status)
+inline ::zsearch::CTServerStatus* SCT::release_status() {
+  // @@protoc_insertion_point(field_release:zsearch.SCT.status)
   
-  ::censys_definitions::CTServerStatus* temp = status_;
+  ::zsearch::CTServerStatus* temp = status_;
   status_ = NULL;
   return temp;
 }
-inline void SCT::set_allocated_status(::censys_definitions::CTServerStatus* status) {
+inline void SCT::set_allocated_status(::zsearch::CTServerStatus* status) {
   delete status_;
   status_ = status;
   if (status) {
@@ -2268,7 +2268,7 @@ inline void SCT::set_allocated_status(::censys_definitions::CTServerStatus* stat
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.SCT.status)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.SCT.status)
 }
 
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -2280,21 +2280,21 @@ inline void SCT::set_allocated_status(::censys_definitions::CTServerStatus* stat
 // @@protoc_insertion_point(namespace_scope)
 
 
-}  // namespace censys_definitions
+}  // namespace zsearch
 
 #ifndef SWIG
 namespace google {
 namespace protobuf {
 
-template <> struct is_proto_enum< ::censys_definitions::CTPushStatus> : ::google::protobuf::internal::true_type {};
+template <> struct is_proto_enum< ::zsearch::CTPushStatus> : ::google::protobuf::internal::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::censys_definitions::CTPushStatus>() {
-  return ::censys_definitions::CTPushStatus_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::zsearch::CTPushStatus>() {
+  return ::zsearch::CTPushStatus_descriptor();
 }
-template <> struct is_proto_enum< ::censys_definitions::CTServer> : ::google::protobuf::internal::true_type {};
+template <> struct is_proto_enum< ::zsearch::CTServer> : ::google::protobuf::internal::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::censys_definitions::CTServer>() {
-  return ::censys_definitions::CTServer_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::zsearch::CTServer>() {
+  return ::zsearch::CTServer_descriptor();
 }
 
 }  // namespace protobuf

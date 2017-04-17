@@ -18,15 +18,15 @@ _sym_db = _symbol_database.Default()
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='common.proto',
-  package='censys_definitions',
+  package='zsearch',
   syntax='proto3',
-  serialized_pb=_b('\n\x0c\x63ommon.proto\x12\x12\x63\x65nsys_definitions\"\'\n\tMetadatum\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\"\xd7\x01\n\x0cUserdataAtom\x12\x15\n\rprivate_notes\x18\x01 \x01(\t\x12\x14\n\x0cpublic_notes\x18\x02 \x01(\t\x12\x37\n\x10private_metadata\x18\x03 \x03(\x0b\x32\x1d.censys_definitions.Metadatum\x12\x36\n\x0fpublic_metadata\x18\x04 \x03(\x0b\x32\x1d.censys_definitions.Metadatum\x12\x14\n\x0cprivate_tags\x18\x05 \x03(\t\x12\x13\n\x0bpublic_tags\x18\x06 \x03(\t\"\xbe\x01\n\x06\x41SAtom\x12\x0b\n\x03\x61sn\x18\x01 \x01(\r\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\x12\x10\n\x04path\x18\x03 \x03(\rB\x02\x10\x01\x12\x32\n\x03rir\x18\x04 \x01(\x0e\x32%.censys_definitions.RegionalRegistrar\x12\x12\n\nbgp_prefix\x18\x05 \x01(\t\x12\x0c\n\x04name\x18\x06 \x01(\t\x12\x14\n\x0c\x63ountry_code\x18\x07 \x01(\t\x12\x14\n\x0corganization\x18\x08 \x01(\t*L\n\tDeltaType\x12\x0f\n\x0b\x44T_RESERVED\x10\x00\x12\r\n\tDT_UPDATE\x10\x01\x12\r\n\tDT_DELETE\x10\x02\x12\x10\n\x0c\x44T_NO_CHANGE\x10\x03*\x82\x01\n\x11RegionalRegistrar\x12\x10\n\x0cRIR_RESERVED\x10\x00\x12\x0c\n\x08RIR_ARIN\x10\x01\x12\x0c\n\x08RIR_RIPE\x10\x02\x12\r\n\tRIR_APNIC\x10\x03\x12\x0f\n\x0bRIR_AFRINIC\x10\x04\x12\x0e\n\nRIR_LACNIC\x10\x05\x12\x0f\n\x0bRIR_UNKNOWN\x10\x06\x62\x06proto3')
+  serialized_pb=_b('\n\x0c\x63ommon.proto\x12\x07zsearch\"\'\n\tMetadatum\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\"\xc1\x01\n\x0cUserdataAtom\x12\x15\n\rprivate_notes\x18\x01 \x01(\t\x12\x14\n\x0cpublic_notes\x18\x02 \x01(\t\x12,\n\x10private_metadata\x18\x03 \x03(\x0b\x32\x12.zsearch.Metadatum\x12+\n\x0fpublic_metadata\x18\x04 \x03(\x0b\x32\x12.zsearch.Metadatum\x12\x14\n\x0cprivate_tags\x18\x05 \x03(\t\x12\x13\n\x0bpublic_tags\x18\x06 \x03(\t\"\xb3\x01\n\x06\x41SAtom\x12\x0b\n\x03\x61sn\x18\x01 \x01(\r\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\x12\x10\n\x04path\x18\x03 \x03(\rB\x02\x10\x01\x12\'\n\x03rir\x18\x04 \x01(\x0e\x32\x1a.zsearch.RegionalRegistrar\x12\x12\n\nbgp_prefix\x18\x05 \x01(\t\x12\x0c\n\x04name\x18\x06 \x01(\t\x12\x14\n\x0c\x63ountry_code\x18\x07 \x01(\t\x12\x14\n\x0corganization\x18\x08 \x01(\t*L\n\tDeltaType\x12\x0f\n\x0b\x44T_RESERVED\x10\x00\x12\r\n\tDT_UPDATE\x10\x01\x12\r\n\tDT_DELETE\x10\x02\x12\x10\n\x0c\x44T_NO_CHANGE\x10\x03*\x82\x01\n\x11RegionalRegistrar\x12\x10\n\x0cRIR_RESERVED\x10\x00\x12\x0c\n\x08RIR_ARIN\x10\x01\x12\x0c\n\x08RIR_RIPE\x10\x02\x12\r\n\tRIR_APNIC\x10\x03\x12\x0f\n\x0bRIR_AFRINIC\x10\x04\x12\x0e\n\nRIR_LACNIC\x10\x05\x12\x0f\n\x0bRIR_UNKNOWN\x10\x06\x62\x06proto3')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 _DELTATYPE = _descriptor.EnumDescriptor(
   name='DeltaType',
-  full_name='censys_definitions.DeltaType',
+  full_name='zsearch.DeltaType',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -49,15 +49,15 @@ _DELTATYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=488,
-  serialized_end=564,
+  serialized_start=444,
+  serialized_end=520,
 )
 _sym_db.RegisterEnumDescriptor(_DELTATYPE)
 
 DeltaType = enum_type_wrapper.EnumTypeWrapper(_DELTATYPE)
 _REGIONALREGISTRAR = _descriptor.EnumDescriptor(
   name='RegionalRegistrar',
-  full_name='censys_definitions.RegionalRegistrar',
+  full_name='zsearch.RegionalRegistrar',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -92,8 +92,8 @@ _REGIONALREGISTRAR = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=567,
-  serialized_end=697,
+  serialized_start=523,
+  serialized_end=653,
 )
 _sym_db.RegisterEnumDescriptor(_REGIONALREGISTRAR)
 
@@ -114,20 +114,20 @@ RIR_UNKNOWN = 6
 
 _METADATUM = _descriptor.Descriptor(
   name='Metadatum',
-  full_name='censys_definitions.Metadatum',
+  full_name='zsearch.Metadatum',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='key', full_name='censys_definitions.Metadatum.key', index=0,
+      name='key', full_name='zsearch.Metadatum.key', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='value', full_name='censys_definitions.Metadatum.value', index=1,
+      name='value', full_name='zsearch.Metadatum.value', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -145,55 +145,55 @@ _METADATUM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=36,
-  serialized_end=75,
+  serialized_start=25,
+  serialized_end=64,
 )
 
 
 _USERDATAATOM = _descriptor.Descriptor(
   name='UserdataAtom',
-  full_name='censys_definitions.UserdataAtom',
+  full_name='zsearch.UserdataAtom',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='private_notes', full_name='censys_definitions.UserdataAtom.private_notes', index=0,
+      name='private_notes', full_name='zsearch.UserdataAtom.private_notes', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='public_notes', full_name='censys_definitions.UserdataAtom.public_notes', index=1,
+      name='public_notes', full_name='zsearch.UserdataAtom.public_notes', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='private_metadata', full_name='censys_definitions.UserdataAtom.private_metadata', index=2,
+      name='private_metadata', full_name='zsearch.UserdataAtom.private_metadata', index=2,
       number=3, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='public_metadata', full_name='censys_definitions.UserdataAtom.public_metadata', index=3,
+      name='public_metadata', full_name='zsearch.UserdataAtom.public_metadata', index=3,
       number=4, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='private_tags', full_name='censys_definitions.UserdataAtom.private_tags', index=4,
+      name='private_tags', full_name='zsearch.UserdataAtom.private_tags', index=4,
       number=5, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='public_tags', full_name='censys_definitions.UserdataAtom.public_tags', index=5,
+      name='public_tags', full_name='zsearch.UserdataAtom.public_tags', index=5,
       number=6, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -211,69 +211,69 @@ _USERDATAATOM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=78,
-  serialized_end=293,
+  serialized_start=67,
+  serialized_end=260,
 )
 
 
 _ASATOM = _descriptor.Descriptor(
   name='ASAtom',
-  full_name='censys_definitions.ASAtom',
+  full_name='zsearch.ASAtom',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='asn', full_name='censys_definitions.ASAtom.asn', index=0,
+      name='asn', full_name='zsearch.ASAtom.asn', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='description', full_name='censys_definitions.ASAtom.description', index=1,
+      name='description', full_name='zsearch.ASAtom.description', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='path', full_name='censys_definitions.ASAtom.path', index=2,
+      name='path', full_name='zsearch.ASAtom.path', index=2,
       number=3, type=13, cpp_type=3, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\020\001'))),
     _descriptor.FieldDescriptor(
-      name='rir', full_name='censys_definitions.ASAtom.rir', index=3,
+      name='rir', full_name='zsearch.ASAtom.rir', index=3,
       number=4, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='bgp_prefix', full_name='censys_definitions.ASAtom.bgp_prefix', index=4,
+      name='bgp_prefix', full_name='zsearch.ASAtom.bgp_prefix', index=4,
       number=5, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='name', full_name='censys_definitions.ASAtom.name', index=5,
+      name='name', full_name='zsearch.ASAtom.name', index=5,
       number=6, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='country_code', full_name='censys_definitions.ASAtom.country_code', index=6,
+      name='country_code', full_name='zsearch.ASAtom.country_code', index=6,
       number=7, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='organization', full_name='censys_definitions.ASAtom.organization', index=7,
+      name='organization', full_name='zsearch.ASAtom.organization', index=7,
       number=8, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -291,8 +291,8 @@ _ASATOM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=296,
-  serialized_end=486,
+  serialized_start=263,
+  serialized_end=442,
 )
 
 _USERDATAATOM.fields_by_name['private_metadata'].message_type = _METADATUM
@@ -307,21 +307,21 @@ DESCRIPTOR.enum_types_by_name['RegionalRegistrar'] = _REGIONALREGISTRAR
 Metadatum = _reflection.GeneratedProtocolMessageType('Metadatum', (_message.Message,), dict(
   DESCRIPTOR = _METADATUM,
   __module__ = 'common_pb2'
-  # @@protoc_insertion_point(class_scope:censys_definitions.Metadatum)
+  # @@protoc_insertion_point(class_scope:zsearch.Metadatum)
   ))
 _sym_db.RegisterMessage(Metadatum)
 
 UserdataAtom = _reflection.GeneratedProtocolMessageType('UserdataAtom', (_message.Message,), dict(
   DESCRIPTOR = _USERDATAATOM,
   __module__ = 'common_pb2'
-  # @@protoc_insertion_point(class_scope:censys_definitions.UserdataAtom)
+  # @@protoc_insertion_point(class_scope:zsearch.UserdataAtom)
   ))
 _sym_db.RegisterMessage(UserdataAtom)
 
 ASAtom = _reflection.GeneratedProtocolMessageType('ASAtom', (_message.Message,), dict(
   DESCRIPTOR = _ASATOM,
   __module__ = 'common_pb2'
-  # @@protoc_insertion_point(class_scope:censys_definitions.ASAtom)
+  # @@protoc_insertion_point(class_scope:zsearch.ASAtom)
   ))
 _sym_db.RegisterMessage(ASAtom)
 

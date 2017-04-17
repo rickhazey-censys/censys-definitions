@@ -33,7 +33,7 @@
 #include "zlint.pb.h"
 #include "ct.pb.h"
 // @@protoc_insertion_point(includes)
-namespace censys_definitions {
+namespace zsearch {
 class ASAtom;
 class ASAtomDefaultTypeInternal;
 extern ASAtomDefaultTypeInternal _ASAtom_default_instance_;
@@ -79,9 +79,9 @@ extern UserdataAtomDefaultTypeInternal _UserdataAtom_default_instance_;
 class ZLint;
 class ZLintDefaultTypeInternal;
 extern ZLintDefaultTypeInternal _ZLint_default_instance_;
-}  // namespace censys_definitions
+}  // namespace zsearch
 
-namespace censys_definitions {
+namespace zsearch {
 
 namespace protobuf_certificate_2eproto {
 // Internal implementation detail -- do not call these.
@@ -203,7 +203,7 @@ inline bool CertificateRevocationReason_Parse(
 }
 // ===================================================================
 
-class RootStoreStatus : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:censys_definitions.RootStoreStatus) */ {
+class RootStoreStatus : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zsearch.RootStoreStatus) */ {
  public:
   RootStoreStatus();
   virtual ~RootStoreStatus();
@@ -322,13 +322,13 @@ class RootStoreStatus : public ::google::protobuf::Message /* @@protoc_insertion
   bool whitelisted() const;
   void set_whitelisted(bool value);
 
-  // .censys_definitions.CertificateType type = 7;
+  // .zsearch.CertificateType type = 7;
   void clear_type();
   static const int kTypeFieldNumber = 7;
-  ::censys_definitions::CertificateType type() const;
-  void set_type(::censys_definitions::CertificateType value);
+  ::zsearch::CertificateType type() const;
+  void set_type(::zsearch::CertificateType value);
 
-  // @@protoc_insertion_point(class_scope:censys_definitions.RootStoreStatus)
+  // @@protoc_insertion_point(class_scope:zsearch.RootStoreStatus)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -345,7 +345,7 @@ class RootStoreStatus : public ::google::protobuf::Message /* @@protoc_insertion
 };
 // -------------------------------------------------------------------
 
-class CertificateValidation : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:censys_definitions.CertificateValidation) */ {
+class CertificateValidation : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zsearch.CertificateValidation) */ {
  public:
   CertificateValidation();
   virtual ~CertificateValidation();
@@ -412,76 +412,76 @@ class CertificateValidation : public ::google::protobuf::Message /* @@protoc_ins
 
   // accessors -------------------------------------------------------
 
-  // .censys_definitions.RootStoreStatus nss = 1;
+  // .zsearch.RootStoreStatus nss = 1;
   bool has_nss() const;
   void clear_nss();
   static const int kNssFieldNumber = 1;
-  const ::censys_definitions::RootStoreStatus& nss() const;
-  ::censys_definitions::RootStoreStatus* mutable_nss();
-  ::censys_definitions::RootStoreStatus* release_nss();
-  void set_allocated_nss(::censys_definitions::RootStoreStatus* nss);
+  const ::zsearch::RootStoreStatus& nss() const;
+  ::zsearch::RootStoreStatus* mutable_nss();
+  ::zsearch::RootStoreStatus* release_nss();
+  void set_allocated_nss(::zsearch::RootStoreStatus* nss);
 
-  // .censys_definitions.RootStoreStatus microsoft = 2;
+  // .zsearch.RootStoreStatus microsoft = 2;
   bool has_microsoft() const;
   void clear_microsoft();
   static const int kMicrosoftFieldNumber = 2;
-  const ::censys_definitions::RootStoreStatus& microsoft() const;
-  ::censys_definitions::RootStoreStatus* mutable_microsoft();
-  ::censys_definitions::RootStoreStatus* release_microsoft();
-  void set_allocated_microsoft(::censys_definitions::RootStoreStatus* microsoft);
+  const ::zsearch::RootStoreStatus& microsoft() const;
+  ::zsearch::RootStoreStatus* mutable_microsoft();
+  ::zsearch::RootStoreStatus* release_microsoft();
+  void set_allocated_microsoft(::zsearch::RootStoreStatus* microsoft);
 
-  // .censys_definitions.RootStoreStatus apple = 3;
+  // .zsearch.RootStoreStatus apple = 3;
   bool has_apple() const;
   void clear_apple();
   static const int kAppleFieldNumber = 3;
-  const ::censys_definitions::RootStoreStatus& apple() const;
-  ::censys_definitions::RootStoreStatus* mutable_apple();
-  ::censys_definitions::RootStoreStatus* release_apple();
-  void set_allocated_apple(::censys_definitions::RootStoreStatus* apple);
+  const ::zsearch::RootStoreStatus& apple() const;
+  ::zsearch::RootStoreStatus* mutable_apple();
+  ::zsearch::RootStoreStatus* release_apple();
+  void set_allocated_apple(::zsearch::RootStoreStatus* apple);
 
-  // .censys_definitions.RootStoreStatus java = 4;
+  // .zsearch.RootStoreStatus java = 4;
   bool has_java() const;
   void clear_java();
   static const int kJavaFieldNumber = 4;
-  const ::censys_definitions::RootStoreStatus& java() const;
-  ::censys_definitions::RootStoreStatus* mutable_java();
-  ::censys_definitions::RootStoreStatus* release_java();
-  void set_allocated_java(::censys_definitions::RootStoreStatus* java);
+  const ::zsearch::RootStoreStatus& java() const;
+  ::zsearch::RootStoreStatus* mutable_java();
+  ::zsearch::RootStoreStatus* release_java();
+  void set_allocated_java(::zsearch::RootStoreStatus* java);
 
-  // .censys_definitions.RootStoreStatus android = 5;
+  // .zsearch.RootStoreStatus android = 5;
   bool has_android() const;
   void clear_android();
   static const int kAndroidFieldNumber = 5;
-  const ::censys_definitions::RootStoreStatus& android() const;
-  ::censys_definitions::RootStoreStatus* mutable_android();
-  ::censys_definitions::RootStoreStatus* release_android();
-  void set_allocated_android(::censys_definitions::RootStoreStatus* android);
+  const ::zsearch::RootStoreStatus& android() const;
+  ::zsearch::RootStoreStatus* mutable_android();
+  ::zsearch::RootStoreStatus* release_android();
+  void set_allocated_android(::zsearch::RootStoreStatus* android);
 
-  // .censys_definitions.RootStoreStatus google_ct_primary = 10;
+  // .zsearch.RootStoreStatus google_ct_primary = 10;
   bool has_google_ct_primary() const;
   void clear_google_ct_primary();
   static const int kGoogleCtPrimaryFieldNumber = 10;
-  const ::censys_definitions::RootStoreStatus& google_ct_primary() const;
-  ::censys_definitions::RootStoreStatus* mutable_google_ct_primary();
-  ::censys_definitions::RootStoreStatus* release_google_ct_primary();
-  void set_allocated_google_ct_primary(::censys_definitions::RootStoreStatus* google_ct_primary);
+  const ::zsearch::RootStoreStatus& google_ct_primary() const;
+  ::zsearch::RootStoreStatus* mutable_google_ct_primary();
+  ::zsearch::RootStoreStatus* release_google_ct_primary();
+  void set_allocated_google_ct_primary(::zsearch::RootStoreStatus* google_ct_primary);
 
-  // @@protoc_insertion_point(class_scope:censys_definitions.CertificateValidation)
+  // @@protoc_insertion_point(class_scope:zsearch.CertificateValidation)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::censys_definitions::RootStoreStatus* nss_;
-  ::censys_definitions::RootStoreStatus* microsoft_;
-  ::censys_definitions::RootStoreStatus* apple_;
-  ::censys_definitions::RootStoreStatus* java_;
-  ::censys_definitions::RootStoreStatus* android_;
-  ::censys_definitions::RootStoreStatus* google_ct_primary_;
+  ::zsearch::RootStoreStatus* nss_;
+  ::zsearch::RootStoreStatus* microsoft_;
+  ::zsearch::RootStoreStatus* apple_;
+  ::zsearch::RootStoreStatus* java_;
+  ::zsearch::RootStoreStatus* android_;
+  ::zsearch::RootStoreStatus* google_ct_primary_;
   mutable int _cached_size_;
   friend struct  protobuf_certificate_2eproto::TableStruct;
 };
 // -------------------------------------------------------------------
 
-class MozillaSalesForceStatus : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:censys_definitions.MozillaSalesForceStatus) */ {
+class MozillaSalesForceStatus : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zsearch.MozillaSalesForceStatus) */ {
  public:
   MozillaSalesForceStatus();
   virtual ~MozillaSalesForceStatus();
@@ -684,7 +684,7 @@ class MozillaSalesForceStatus : public ::google::protobuf::Message /* @@protoc_i
   bool audit_same_as_parent() const;
   void set_audit_same_as_parent(bool value);
 
-  // @@protoc_insertion_point(class_scope:censys_definitions.MozillaSalesForceStatus)
+  // @@protoc_insertion_point(class_scope:zsearch.MozillaSalesForceStatus)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -705,7 +705,7 @@ class MozillaSalesForceStatus : public ::google::protobuf::Message /* @@protoc_i
 };
 // -------------------------------------------------------------------
 
-class CertificateRevocation : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:censys_definitions.CertificateRevocation) */ {
+class CertificateRevocation : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zsearch.CertificateRevocation) */ {
  public:
   CertificateRevocation();
   virtual ~CertificateRevocation();
@@ -778,13 +778,13 @@ class CertificateRevocation : public ::google::protobuf::Message /* @@protoc_ins
   bool revoked() const;
   void set_revoked(bool value);
 
-  // .censys_definitions.CertificateRevocationReason reason = 2;
+  // .zsearch.CertificateRevocationReason reason = 2;
   void clear_reason();
   static const int kReasonFieldNumber = 2;
-  ::censys_definitions::CertificateRevocationReason reason() const;
-  void set_reason(::censys_definitions::CertificateRevocationReason value);
+  ::zsearch::CertificateRevocationReason reason() const;
+  void set_reason(::zsearch::CertificateRevocationReason value);
 
-  // @@protoc_insertion_point(class_scope:censys_definitions.CertificateRevocation)
+  // @@protoc_insertion_point(class_scope:zsearch.CertificateRevocation)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -795,7 +795,7 @@ class CertificateRevocation : public ::google::protobuf::Message /* @@protoc_ins
 };
 // -------------------------------------------------------------------
 
-class CertificateAudit : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:censys_definitions.CertificateAudit) */ {
+class CertificateAudit : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zsearch.CertificateAudit) */ {
  public:
   CertificateAudit();
   virtual ~CertificateAudit();
@@ -862,26 +862,26 @@ class CertificateAudit : public ::google::protobuf::Message /* @@protoc_insertio
 
   // accessors -------------------------------------------------------
 
-  // .censys_definitions.MozillaSalesForceStatus mozilla = 1;
+  // .zsearch.MozillaSalesForceStatus mozilla = 1;
   bool has_mozilla() const;
   void clear_mozilla();
   static const int kMozillaFieldNumber = 1;
-  const ::censys_definitions::MozillaSalesForceStatus& mozilla() const;
-  ::censys_definitions::MozillaSalesForceStatus* mutable_mozilla();
-  ::censys_definitions::MozillaSalesForceStatus* release_mozilla();
-  void set_allocated_mozilla(::censys_definitions::MozillaSalesForceStatus* mozilla);
+  const ::zsearch::MozillaSalesForceStatus& mozilla() const;
+  ::zsearch::MozillaSalesForceStatus* mutable_mozilla();
+  ::zsearch::MozillaSalesForceStatus* release_mozilla();
+  void set_allocated_mozilla(::zsearch::MozillaSalesForceStatus* mozilla);
 
-  // @@protoc_insertion_point(class_scope:censys_definitions.CertificateAudit)
+  // @@protoc_insertion_point(class_scope:zsearch.CertificateAudit)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::censys_definitions::MozillaSalesForceStatus* mozilla_;
+  ::zsearch::MozillaSalesForceStatus* mozilla_;
   mutable int _cached_size_;
   friend struct  protobuf_certificate_2eproto::TableStruct;
 };
 // -------------------------------------------------------------------
 
-class Certificate : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:censys_definitions.Certificate) */ {
+class Certificate : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zsearch.Certificate) */ {
  public:
   Certificate();
   virtual ~Certificate();
@@ -1050,65 +1050,65 @@ class Certificate : public ::google::protobuf::Message /* @@protoc_insertion_poi
   ::std::string* release_parse_error();
   void set_allocated_parse_error(::std::string* parse_error);
 
-  // .censys_definitions.CertificateValidation validation = 35;
+  // .zsearch.CertificateValidation validation = 35;
   bool has_validation() const;
   void clear_validation();
   static const int kValidationFieldNumber = 35;
-  const ::censys_definitions::CertificateValidation& validation() const;
-  ::censys_definitions::CertificateValidation* mutable_validation();
-  ::censys_definitions::CertificateValidation* release_validation();
-  void set_allocated_validation(::censys_definitions::CertificateValidation* validation);
+  const ::zsearch::CertificateValidation& validation() const;
+  ::zsearch::CertificateValidation* mutable_validation();
+  ::zsearch::CertificateValidation* release_validation();
+  void set_allocated_validation(::zsearch::CertificateValidation* validation);
 
-  // .censys_definitions.CTStatus ct = 30;
+  // .zsearch.CTStatus ct = 30;
   bool has_ct() const;
   void clear_ct();
   static const int kCtFieldNumber = 30;
-  const ::censys_definitions::CTStatus& ct() const;
-  ::censys_definitions::CTStatus* mutable_ct();
-  ::censys_definitions::CTStatus* release_ct();
-  void set_allocated_ct(::censys_definitions::CTStatus* ct);
+  const ::zsearch::CTStatus& ct() const;
+  ::zsearch::CTStatus* mutable_ct();
+  ::zsearch::CTStatus* release_ct();
+  void set_allocated_ct(::zsearch::CTStatus* ct);
 
-  // .censys_definitions.ZLint zlint = 38;
+  // .zsearch.ZLint zlint = 38;
   bool has_zlint() const;
   void clear_zlint();
   static const int kZlintFieldNumber = 38;
-  const ::censys_definitions::ZLint& zlint() const;
-  ::censys_definitions::ZLint* mutable_zlint();
-  ::censys_definitions::ZLint* release_zlint();
-  void set_allocated_zlint(::censys_definitions::ZLint* zlint);
+  const ::zsearch::ZLint& zlint() const;
+  ::zsearch::ZLint* mutable_zlint();
+  ::zsearch::ZLint* release_zlint();
+  void set_allocated_zlint(::zsearch::ZLint* zlint);
 
-  // .censys_definitions.CertificateRevocation revocation = 43;
+  // .zsearch.CertificateRevocation revocation = 43;
   bool has_revocation() const;
   void clear_revocation();
   static const int kRevocationFieldNumber = 43;
-  const ::censys_definitions::CertificateRevocation& revocation() const;
-  ::censys_definitions::CertificateRevocation* mutable_revocation();
-  ::censys_definitions::CertificateRevocation* release_revocation();
-  void set_allocated_revocation(::censys_definitions::CertificateRevocation* revocation);
+  const ::zsearch::CertificateRevocation& revocation() const;
+  ::zsearch::CertificateRevocation* mutable_revocation();
+  ::zsearch::CertificateRevocation* release_revocation();
+  void set_allocated_revocation(::zsearch::CertificateRevocation* revocation);
 
-  // .censys_definitions.CertificateAudit audit = 46;
+  // .zsearch.CertificateAudit audit = 46;
   bool has_audit() const;
   void clear_audit();
   static const int kAuditFieldNumber = 46;
-  const ::censys_definitions::CertificateAudit& audit() const;
-  ::censys_definitions::CertificateAudit* mutable_audit();
-  ::censys_definitions::CertificateAudit* release_audit();
-  void set_allocated_audit(::censys_definitions::CertificateAudit* audit);
+  const ::zsearch::CertificateAudit& audit() const;
+  ::zsearch::CertificateAudit* mutable_audit();
+  ::zsearch::CertificateAudit* release_audit();
+  void set_allocated_audit(::zsearch::CertificateAudit* audit);
 
-  // .censys_definitions.MozillaSalesForceStatus nss_audit = 31 [deprecated = true];
+  // .zsearch.MozillaSalesForceStatus nss_audit = 31 [deprecated = true];
   GOOGLE_PROTOBUF_DEPRECATED_ATTR bool has_nss_audit() const;
   GOOGLE_PROTOBUF_DEPRECATED_ATTR void clear_nss_audit();
   GOOGLE_PROTOBUF_DEPRECATED_ATTR static const int kNssAuditFieldNumber = 31;
-  GOOGLE_PROTOBUF_DEPRECATED_ATTR const ::censys_definitions::MozillaSalesForceStatus& nss_audit() const;
-  GOOGLE_PROTOBUF_DEPRECATED_ATTR ::censys_definitions::MozillaSalesForceStatus* mutable_nss_audit();
-  GOOGLE_PROTOBUF_DEPRECATED_ATTR ::censys_definitions::MozillaSalesForceStatus* release_nss_audit();
-  GOOGLE_PROTOBUF_DEPRECATED_ATTR void set_allocated_nss_audit(::censys_definitions::MozillaSalesForceStatus* nss_audit);
+  GOOGLE_PROTOBUF_DEPRECATED_ATTR const ::zsearch::MozillaSalesForceStatus& nss_audit() const;
+  GOOGLE_PROTOBUF_DEPRECATED_ATTR ::zsearch::MozillaSalesForceStatus* mutable_nss_audit();
+  GOOGLE_PROTOBUF_DEPRECATED_ATTR ::zsearch::MozillaSalesForceStatus* release_nss_audit();
+  GOOGLE_PROTOBUF_DEPRECATED_ATTR void set_allocated_nss_audit(::zsearch::MozillaSalesForceStatus* nss_audit);
 
-  // .censys_definitions.CertificateParseStatus parse_status = 44;
+  // .zsearch.CertificateParseStatus parse_status = 44;
   void clear_parse_status();
   static const int kParseStatusFieldNumber = 44;
-  ::censys_definitions::CertificateParseStatus parse_status() const;
-  void set_parse_status(::censys_definitions::CertificateParseStatus value);
+  ::zsearch::CertificateParseStatus parse_status() const;
+  void set_parse_status(::zsearch::CertificateParseStatus value);
 
   // uint32 parse_version = 39;
   void clear_parse_version();
@@ -1116,11 +1116,11 @@ class Certificate : public ::google::protobuf::Message /* @@protoc_insertion_poi
   ::google::protobuf::uint32 parse_version() const;
   void set_parse_version(::google::protobuf::uint32 value);
 
-  // .censys_definitions.CertificateSource source = 28;
+  // .zsearch.CertificateSource source = 28;
   void clear_source();
   static const int kSourceFieldNumber = 28;
-  ::censys_definitions::CertificateSource source() const;
-  void set_source(::censys_definitions::CertificateSource value);
+  ::zsearch::CertificateSource source() const;
+  void set_source(::zsearch::CertificateSource value);
 
   // uint32 post_process_timestamp = 37;
   void clear_post_process_timestamp();
@@ -1284,7 +1284,7 @@ class Certificate : public ::google::protobuf::Message /* @@protoc_insertion_poi
   GOOGLE_PROTOBUF_DEPRECATED_ATTR bool do_not_post_process() const;
   GOOGLE_PROTOBUF_DEPRECATED_ATTR void set_do_not_post_process(bool value);
 
-  // @@protoc_insertion_point(class_scope:censys_definitions.Certificate)
+  // @@protoc_insertion_point(class_scope:zsearch.Certificate)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -1295,12 +1295,12 @@ class Certificate : public ::google::protobuf::Message /* @@protoc_insertion_poi
   ::google::protobuf::internal::ArenaStringPtr raw_;
   ::google::protobuf::internal::ArenaStringPtr parsed_;
   ::google::protobuf::internal::ArenaStringPtr parse_error_;
-  ::censys_definitions::CertificateValidation* validation_;
-  ::censys_definitions::CTStatus* ct_;
-  ::censys_definitions::ZLint* zlint_;
-  ::censys_definitions::CertificateRevocation* revocation_;
-  ::censys_definitions::CertificateAudit* audit_;
-  ::censys_definitions::MozillaSalesForceStatus* nss_audit_;
+  ::zsearch::CertificateValidation* validation_;
+  ::zsearch::CTStatus* ct_;
+  ::zsearch::ZLint* zlint_;
+  ::zsearch::CertificateRevocation* revocation_;
+  ::zsearch::CertificateAudit* audit_;
+  ::zsearch::MozillaSalesForceStatus* nss_audit_;
   int parse_status_;
   ::google::protobuf::uint32 parse_version_;
   int source_;
@@ -1347,13 +1347,13 @@ inline void RootStoreStatus::clear_valid() {
   valid_ = false;
 }
 inline bool RootStoreStatus::valid() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.RootStoreStatus.valid)
+  // @@protoc_insertion_point(field_get:zsearch.RootStoreStatus.valid)
   return valid_;
 }
 inline void RootStoreStatus::set_valid(bool value) {
   
   valid_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.RootStoreStatus.valid)
+  // @@protoc_insertion_point(field_set:zsearch.RootStoreStatus.valid)
 }
 
 // bool was_valid = 2;
@@ -1361,13 +1361,13 @@ inline void RootStoreStatus::clear_was_valid() {
   was_valid_ = false;
 }
 inline bool RootStoreStatus::was_valid() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.RootStoreStatus.was_valid)
+  // @@protoc_insertion_point(field_get:zsearch.RootStoreStatus.was_valid)
   return was_valid_;
 }
 inline void RootStoreStatus::set_was_valid(bool value) {
   
   was_valid_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.RootStoreStatus.was_valid)
+  // @@protoc_insertion_point(field_set:zsearch.RootStoreStatus.was_valid)
 }
 
 // bool trusted_path = 3;
@@ -1375,13 +1375,13 @@ inline void RootStoreStatus::clear_trusted_path() {
   trusted_path_ = false;
 }
 inline bool RootStoreStatus::trusted_path() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.RootStoreStatus.trusted_path)
+  // @@protoc_insertion_point(field_get:zsearch.RootStoreStatus.trusted_path)
   return trusted_path_;
 }
 inline void RootStoreStatus::set_trusted_path(bool value) {
   
   trusted_path_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.RootStoreStatus.trusted_path)
+  // @@protoc_insertion_point(field_set:zsearch.RootStoreStatus.trusted_path)
 }
 
 // bool was_trusted_path = 4;
@@ -1389,13 +1389,13 @@ inline void RootStoreStatus::clear_was_trusted_path() {
   was_trusted_path_ = false;
 }
 inline bool RootStoreStatus::was_trusted_path() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.RootStoreStatus.was_trusted_path)
+  // @@protoc_insertion_point(field_get:zsearch.RootStoreStatus.was_trusted_path)
   return was_trusted_path_;
 }
 inline void RootStoreStatus::set_was_trusted_path(bool value) {
   
   was_trusted_path_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.RootStoreStatus.was_trusted_path)
+  // @@protoc_insertion_point(field_set:zsearch.RootStoreStatus.was_trusted_path)
 }
 
 // bool blacklisted = 5;
@@ -1403,13 +1403,13 @@ inline void RootStoreStatus::clear_blacklisted() {
   blacklisted_ = false;
 }
 inline bool RootStoreStatus::blacklisted() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.RootStoreStatus.blacklisted)
+  // @@protoc_insertion_point(field_get:zsearch.RootStoreStatus.blacklisted)
   return blacklisted_;
 }
 inline void RootStoreStatus::set_blacklisted(bool value) {
   
   blacklisted_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.RootStoreStatus.blacklisted)
+  // @@protoc_insertion_point(field_set:zsearch.RootStoreStatus.blacklisted)
 }
 
 // bool whitelisted = 6;
@@ -1417,27 +1417,27 @@ inline void RootStoreStatus::clear_whitelisted() {
   whitelisted_ = false;
 }
 inline bool RootStoreStatus::whitelisted() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.RootStoreStatus.whitelisted)
+  // @@protoc_insertion_point(field_get:zsearch.RootStoreStatus.whitelisted)
   return whitelisted_;
 }
 inline void RootStoreStatus::set_whitelisted(bool value) {
   
   whitelisted_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.RootStoreStatus.whitelisted)
+  // @@protoc_insertion_point(field_set:zsearch.RootStoreStatus.whitelisted)
 }
 
-// .censys_definitions.CertificateType type = 7;
+// .zsearch.CertificateType type = 7;
 inline void RootStoreStatus::clear_type() {
   type_ = 0;
 }
-inline ::censys_definitions::CertificateType RootStoreStatus::type() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.RootStoreStatus.type)
-  return static_cast< ::censys_definitions::CertificateType >(type_);
+inline ::zsearch::CertificateType RootStoreStatus::type() const {
+  // @@protoc_insertion_point(field_get:zsearch.RootStoreStatus.type)
+  return static_cast< ::zsearch::CertificateType >(type_);
 }
-inline void RootStoreStatus::set_type(::censys_definitions::CertificateType value) {
+inline void RootStoreStatus::set_type(::zsearch::CertificateType value) {
   
   type_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.RootStoreStatus.type)
+  // @@protoc_insertion_point(field_set:zsearch.RootStoreStatus.type)
 }
 
 // repeated bytes path = 8;
@@ -1448,50 +1448,50 @@ inline void RootStoreStatus::clear_path() {
   path_.Clear();
 }
 inline const ::std::string& RootStoreStatus::path(int index) const {
-  // @@protoc_insertion_point(field_get:censys_definitions.RootStoreStatus.path)
+  // @@protoc_insertion_point(field_get:zsearch.RootStoreStatus.path)
   return path_.Get(index);
 }
 inline ::std::string* RootStoreStatus::mutable_path(int index) {
-  // @@protoc_insertion_point(field_mutable:censys_definitions.RootStoreStatus.path)
+  // @@protoc_insertion_point(field_mutable:zsearch.RootStoreStatus.path)
   return path_.Mutable(index);
 }
 inline void RootStoreStatus::set_path(int index, const ::std::string& value) {
-  // @@protoc_insertion_point(field_set:censys_definitions.RootStoreStatus.path)
+  // @@protoc_insertion_point(field_set:zsearch.RootStoreStatus.path)
   path_.Mutable(index)->assign(value);
 }
 inline void RootStoreStatus::set_path(int index, const char* value) {
   path_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:censys_definitions.RootStoreStatus.path)
+  // @@protoc_insertion_point(field_set_char:zsearch.RootStoreStatus.path)
 }
 inline void RootStoreStatus::set_path(int index, const void* value, size_t size) {
   path_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.RootStoreStatus.path)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.RootStoreStatus.path)
 }
 inline ::std::string* RootStoreStatus::add_path() {
-  // @@protoc_insertion_point(field_add_mutable:censys_definitions.RootStoreStatus.path)
+  // @@protoc_insertion_point(field_add_mutable:zsearch.RootStoreStatus.path)
   return path_.Add();
 }
 inline void RootStoreStatus::add_path(const ::std::string& value) {
   path_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:censys_definitions.RootStoreStatus.path)
+  // @@protoc_insertion_point(field_add:zsearch.RootStoreStatus.path)
 }
 inline void RootStoreStatus::add_path(const char* value) {
   path_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:censys_definitions.RootStoreStatus.path)
+  // @@protoc_insertion_point(field_add_char:zsearch.RootStoreStatus.path)
 }
 inline void RootStoreStatus::add_path(const void* value, size_t size) {
   path_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:censys_definitions.RootStoreStatus.path)
+  // @@protoc_insertion_point(field_add_pointer:zsearch.RootStoreStatus.path)
 }
 inline const ::google::protobuf::RepeatedPtrField< ::std::string>&
 RootStoreStatus::path() const {
-  // @@protoc_insertion_point(field_list:censys_definitions.RootStoreStatus.path)
+  // @@protoc_insertion_point(field_list:zsearch.RootStoreStatus.path)
   return path_;
 }
 inline ::google::protobuf::RepeatedPtrField< ::std::string>*
 RootStoreStatus::mutable_path() {
-  // @@protoc_insertion_point(field_mutable_list:censys_definitions.RootStoreStatus.path)
+  // @@protoc_insertion_point(field_mutable_list:zsearch.RootStoreStatus.path)
   return &path_;
 }
 
@@ -1499,7 +1499,7 @@ RootStoreStatus::mutable_path() {
 
 // CertificateValidation
 
-// .censys_definitions.RootStoreStatus nss = 1;
+// .zsearch.RootStoreStatus nss = 1;
 inline bool CertificateValidation::has_nss() const {
   return this != internal_default_instance() && nss_ != NULL;
 }
@@ -1507,27 +1507,27 @@ inline void CertificateValidation::clear_nss() {
   if (GetArenaNoVirtual() == NULL && nss_ != NULL) delete nss_;
   nss_ = NULL;
 }
-inline const ::censys_definitions::RootStoreStatus& CertificateValidation::nss() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.CertificateValidation.nss)
+inline const ::zsearch::RootStoreStatus& CertificateValidation::nss() const {
+  // @@protoc_insertion_point(field_get:zsearch.CertificateValidation.nss)
   return nss_ != NULL ? *nss_
-                         : *::censys_definitions::RootStoreStatus::internal_default_instance();
+                         : *::zsearch::RootStoreStatus::internal_default_instance();
 }
-inline ::censys_definitions::RootStoreStatus* CertificateValidation::mutable_nss() {
+inline ::zsearch::RootStoreStatus* CertificateValidation::mutable_nss() {
   
   if (nss_ == NULL) {
-    nss_ = new ::censys_definitions::RootStoreStatus;
+    nss_ = new ::zsearch::RootStoreStatus;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.CertificateValidation.nss)
+  // @@protoc_insertion_point(field_mutable:zsearch.CertificateValidation.nss)
   return nss_;
 }
-inline ::censys_definitions::RootStoreStatus* CertificateValidation::release_nss() {
-  // @@protoc_insertion_point(field_release:censys_definitions.CertificateValidation.nss)
+inline ::zsearch::RootStoreStatus* CertificateValidation::release_nss() {
+  // @@protoc_insertion_point(field_release:zsearch.CertificateValidation.nss)
   
-  ::censys_definitions::RootStoreStatus* temp = nss_;
+  ::zsearch::RootStoreStatus* temp = nss_;
   nss_ = NULL;
   return temp;
 }
-inline void CertificateValidation::set_allocated_nss(::censys_definitions::RootStoreStatus* nss) {
+inline void CertificateValidation::set_allocated_nss(::zsearch::RootStoreStatus* nss) {
   delete nss_;
   nss_ = nss;
   if (nss) {
@@ -1535,10 +1535,10 @@ inline void CertificateValidation::set_allocated_nss(::censys_definitions::RootS
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.CertificateValidation.nss)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CertificateValidation.nss)
 }
 
-// .censys_definitions.RootStoreStatus microsoft = 2;
+// .zsearch.RootStoreStatus microsoft = 2;
 inline bool CertificateValidation::has_microsoft() const {
   return this != internal_default_instance() && microsoft_ != NULL;
 }
@@ -1546,27 +1546,27 @@ inline void CertificateValidation::clear_microsoft() {
   if (GetArenaNoVirtual() == NULL && microsoft_ != NULL) delete microsoft_;
   microsoft_ = NULL;
 }
-inline const ::censys_definitions::RootStoreStatus& CertificateValidation::microsoft() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.CertificateValidation.microsoft)
+inline const ::zsearch::RootStoreStatus& CertificateValidation::microsoft() const {
+  // @@protoc_insertion_point(field_get:zsearch.CertificateValidation.microsoft)
   return microsoft_ != NULL ? *microsoft_
-                         : *::censys_definitions::RootStoreStatus::internal_default_instance();
+                         : *::zsearch::RootStoreStatus::internal_default_instance();
 }
-inline ::censys_definitions::RootStoreStatus* CertificateValidation::mutable_microsoft() {
+inline ::zsearch::RootStoreStatus* CertificateValidation::mutable_microsoft() {
   
   if (microsoft_ == NULL) {
-    microsoft_ = new ::censys_definitions::RootStoreStatus;
+    microsoft_ = new ::zsearch::RootStoreStatus;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.CertificateValidation.microsoft)
+  // @@protoc_insertion_point(field_mutable:zsearch.CertificateValidation.microsoft)
   return microsoft_;
 }
-inline ::censys_definitions::RootStoreStatus* CertificateValidation::release_microsoft() {
-  // @@protoc_insertion_point(field_release:censys_definitions.CertificateValidation.microsoft)
+inline ::zsearch::RootStoreStatus* CertificateValidation::release_microsoft() {
+  // @@protoc_insertion_point(field_release:zsearch.CertificateValidation.microsoft)
   
-  ::censys_definitions::RootStoreStatus* temp = microsoft_;
+  ::zsearch::RootStoreStatus* temp = microsoft_;
   microsoft_ = NULL;
   return temp;
 }
-inline void CertificateValidation::set_allocated_microsoft(::censys_definitions::RootStoreStatus* microsoft) {
+inline void CertificateValidation::set_allocated_microsoft(::zsearch::RootStoreStatus* microsoft) {
   delete microsoft_;
   microsoft_ = microsoft;
   if (microsoft) {
@@ -1574,10 +1574,10 @@ inline void CertificateValidation::set_allocated_microsoft(::censys_definitions:
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.CertificateValidation.microsoft)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CertificateValidation.microsoft)
 }
 
-// .censys_definitions.RootStoreStatus apple = 3;
+// .zsearch.RootStoreStatus apple = 3;
 inline bool CertificateValidation::has_apple() const {
   return this != internal_default_instance() && apple_ != NULL;
 }
@@ -1585,27 +1585,27 @@ inline void CertificateValidation::clear_apple() {
   if (GetArenaNoVirtual() == NULL && apple_ != NULL) delete apple_;
   apple_ = NULL;
 }
-inline const ::censys_definitions::RootStoreStatus& CertificateValidation::apple() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.CertificateValidation.apple)
+inline const ::zsearch::RootStoreStatus& CertificateValidation::apple() const {
+  // @@protoc_insertion_point(field_get:zsearch.CertificateValidation.apple)
   return apple_ != NULL ? *apple_
-                         : *::censys_definitions::RootStoreStatus::internal_default_instance();
+                         : *::zsearch::RootStoreStatus::internal_default_instance();
 }
-inline ::censys_definitions::RootStoreStatus* CertificateValidation::mutable_apple() {
+inline ::zsearch::RootStoreStatus* CertificateValidation::mutable_apple() {
   
   if (apple_ == NULL) {
-    apple_ = new ::censys_definitions::RootStoreStatus;
+    apple_ = new ::zsearch::RootStoreStatus;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.CertificateValidation.apple)
+  // @@protoc_insertion_point(field_mutable:zsearch.CertificateValidation.apple)
   return apple_;
 }
-inline ::censys_definitions::RootStoreStatus* CertificateValidation::release_apple() {
-  // @@protoc_insertion_point(field_release:censys_definitions.CertificateValidation.apple)
+inline ::zsearch::RootStoreStatus* CertificateValidation::release_apple() {
+  // @@protoc_insertion_point(field_release:zsearch.CertificateValidation.apple)
   
-  ::censys_definitions::RootStoreStatus* temp = apple_;
+  ::zsearch::RootStoreStatus* temp = apple_;
   apple_ = NULL;
   return temp;
 }
-inline void CertificateValidation::set_allocated_apple(::censys_definitions::RootStoreStatus* apple) {
+inline void CertificateValidation::set_allocated_apple(::zsearch::RootStoreStatus* apple) {
   delete apple_;
   apple_ = apple;
   if (apple) {
@@ -1613,10 +1613,10 @@ inline void CertificateValidation::set_allocated_apple(::censys_definitions::Roo
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.CertificateValidation.apple)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CertificateValidation.apple)
 }
 
-// .censys_definitions.RootStoreStatus java = 4;
+// .zsearch.RootStoreStatus java = 4;
 inline bool CertificateValidation::has_java() const {
   return this != internal_default_instance() && java_ != NULL;
 }
@@ -1624,27 +1624,27 @@ inline void CertificateValidation::clear_java() {
   if (GetArenaNoVirtual() == NULL && java_ != NULL) delete java_;
   java_ = NULL;
 }
-inline const ::censys_definitions::RootStoreStatus& CertificateValidation::java() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.CertificateValidation.java)
+inline const ::zsearch::RootStoreStatus& CertificateValidation::java() const {
+  // @@protoc_insertion_point(field_get:zsearch.CertificateValidation.java)
   return java_ != NULL ? *java_
-                         : *::censys_definitions::RootStoreStatus::internal_default_instance();
+                         : *::zsearch::RootStoreStatus::internal_default_instance();
 }
-inline ::censys_definitions::RootStoreStatus* CertificateValidation::mutable_java() {
+inline ::zsearch::RootStoreStatus* CertificateValidation::mutable_java() {
   
   if (java_ == NULL) {
-    java_ = new ::censys_definitions::RootStoreStatus;
+    java_ = new ::zsearch::RootStoreStatus;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.CertificateValidation.java)
+  // @@protoc_insertion_point(field_mutable:zsearch.CertificateValidation.java)
   return java_;
 }
-inline ::censys_definitions::RootStoreStatus* CertificateValidation::release_java() {
-  // @@protoc_insertion_point(field_release:censys_definitions.CertificateValidation.java)
+inline ::zsearch::RootStoreStatus* CertificateValidation::release_java() {
+  // @@protoc_insertion_point(field_release:zsearch.CertificateValidation.java)
   
-  ::censys_definitions::RootStoreStatus* temp = java_;
+  ::zsearch::RootStoreStatus* temp = java_;
   java_ = NULL;
   return temp;
 }
-inline void CertificateValidation::set_allocated_java(::censys_definitions::RootStoreStatus* java) {
+inline void CertificateValidation::set_allocated_java(::zsearch::RootStoreStatus* java) {
   delete java_;
   java_ = java;
   if (java) {
@@ -1652,10 +1652,10 @@ inline void CertificateValidation::set_allocated_java(::censys_definitions::Root
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.CertificateValidation.java)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CertificateValidation.java)
 }
 
-// .censys_definitions.RootStoreStatus android = 5;
+// .zsearch.RootStoreStatus android = 5;
 inline bool CertificateValidation::has_android() const {
   return this != internal_default_instance() && android_ != NULL;
 }
@@ -1663,27 +1663,27 @@ inline void CertificateValidation::clear_android() {
   if (GetArenaNoVirtual() == NULL && android_ != NULL) delete android_;
   android_ = NULL;
 }
-inline const ::censys_definitions::RootStoreStatus& CertificateValidation::android() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.CertificateValidation.android)
+inline const ::zsearch::RootStoreStatus& CertificateValidation::android() const {
+  // @@protoc_insertion_point(field_get:zsearch.CertificateValidation.android)
   return android_ != NULL ? *android_
-                         : *::censys_definitions::RootStoreStatus::internal_default_instance();
+                         : *::zsearch::RootStoreStatus::internal_default_instance();
 }
-inline ::censys_definitions::RootStoreStatus* CertificateValidation::mutable_android() {
+inline ::zsearch::RootStoreStatus* CertificateValidation::mutable_android() {
   
   if (android_ == NULL) {
-    android_ = new ::censys_definitions::RootStoreStatus;
+    android_ = new ::zsearch::RootStoreStatus;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.CertificateValidation.android)
+  // @@protoc_insertion_point(field_mutable:zsearch.CertificateValidation.android)
   return android_;
 }
-inline ::censys_definitions::RootStoreStatus* CertificateValidation::release_android() {
-  // @@protoc_insertion_point(field_release:censys_definitions.CertificateValidation.android)
+inline ::zsearch::RootStoreStatus* CertificateValidation::release_android() {
+  // @@protoc_insertion_point(field_release:zsearch.CertificateValidation.android)
   
-  ::censys_definitions::RootStoreStatus* temp = android_;
+  ::zsearch::RootStoreStatus* temp = android_;
   android_ = NULL;
   return temp;
 }
-inline void CertificateValidation::set_allocated_android(::censys_definitions::RootStoreStatus* android) {
+inline void CertificateValidation::set_allocated_android(::zsearch::RootStoreStatus* android) {
   delete android_;
   android_ = android;
   if (android) {
@@ -1691,10 +1691,10 @@ inline void CertificateValidation::set_allocated_android(::censys_definitions::R
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.CertificateValidation.android)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CertificateValidation.android)
 }
 
-// .censys_definitions.RootStoreStatus google_ct_primary = 10;
+// .zsearch.RootStoreStatus google_ct_primary = 10;
 inline bool CertificateValidation::has_google_ct_primary() const {
   return this != internal_default_instance() && google_ct_primary_ != NULL;
 }
@@ -1702,27 +1702,27 @@ inline void CertificateValidation::clear_google_ct_primary() {
   if (GetArenaNoVirtual() == NULL && google_ct_primary_ != NULL) delete google_ct_primary_;
   google_ct_primary_ = NULL;
 }
-inline const ::censys_definitions::RootStoreStatus& CertificateValidation::google_ct_primary() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.CertificateValidation.google_ct_primary)
+inline const ::zsearch::RootStoreStatus& CertificateValidation::google_ct_primary() const {
+  // @@protoc_insertion_point(field_get:zsearch.CertificateValidation.google_ct_primary)
   return google_ct_primary_ != NULL ? *google_ct_primary_
-                         : *::censys_definitions::RootStoreStatus::internal_default_instance();
+                         : *::zsearch::RootStoreStatus::internal_default_instance();
 }
-inline ::censys_definitions::RootStoreStatus* CertificateValidation::mutable_google_ct_primary() {
+inline ::zsearch::RootStoreStatus* CertificateValidation::mutable_google_ct_primary() {
   
   if (google_ct_primary_ == NULL) {
-    google_ct_primary_ = new ::censys_definitions::RootStoreStatus;
+    google_ct_primary_ = new ::zsearch::RootStoreStatus;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.CertificateValidation.google_ct_primary)
+  // @@protoc_insertion_point(field_mutable:zsearch.CertificateValidation.google_ct_primary)
   return google_ct_primary_;
 }
-inline ::censys_definitions::RootStoreStatus* CertificateValidation::release_google_ct_primary() {
-  // @@protoc_insertion_point(field_release:censys_definitions.CertificateValidation.google_ct_primary)
+inline ::zsearch::RootStoreStatus* CertificateValidation::release_google_ct_primary() {
+  // @@protoc_insertion_point(field_release:zsearch.CertificateValidation.google_ct_primary)
   
-  ::censys_definitions::RootStoreStatus* temp = google_ct_primary_;
+  ::zsearch::RootStoreStatus* temp = google_ct_primary_;
   google_ct_primary_ = NULL;
   return temp;
 }
-inline void CertificateValidation::set_allocated_google_ct_primary(::censys_definitions::RootStoreStatus* google_ct_primary) {
+inline void CertificateValidation::set_allocated_google_ct_primary(::zsearch::RootStoreStatus* google_ct_primary) {
   delete google_ct_primary_;
   google_ct_primary_ = google_ct_primary;
   if (google_ct_primary) {
@@ -1730,7 +1730,7 @@ inline void CertificateValidation::set_allocated_google_ct_primary(::censys_defi
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.CertificateValidation.google_ct_primary)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CertificateValidation.google_ct_primary)
 }
 
 // -------------------------------------------------------------------
@@ -1742,13 +1742,13 @@ inline void MozillaSalesForceStatus::clear_current_in() {
   current_in_ = false;
 }
 inline bool MozillaSalesForceStatus::current_in() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.MozillaSalesForceStatus.current_in)
+  // @@protoc_insertion_point(field_get:zsearch.MozillaSalesForceStatus.current_in)
   return current_in_;
 }
 inline void MozillaSalesForceStatus::set_current_in(bool value) {
   
   current_in_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.MozillaSalesForceStatus.current_in)
+  // @@protoc_insertion_point(field_set:zsearch.MozillaSalesForceStatus.current_in)
 }
 
 // bool was_in = 2;
@@ -1756,13 +1756,13 @@ inline void MozillaSalesForceStatus::clear_was_in() {
   was_in_ = false;
 }
 inline bool MozillaSalesForceStatus::was_in() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.MozillaSalesForceStatus.was_in)
+  // @@protoc_insertion_point(field_get:zsearch.MozillaSalesForceStatus.was_in)
   return was_in_;
 }
 inline void MozillaSalesForceStatus::set_was_in(bool value) {
   
   was_in_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.MozillaSalesForceStatus.was_in)
+  // @@protoc_insertion_point(field_set:zsearch.MozillaSalesForceStatus.was_in)
 }
 
 // string owner_name = 3;
@@ -1770,40 +1770,40 @@ inline void MozillaSalesForceStatus::clear_owner_name() {
   owner_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& MozillaSalesForceStatus::owner_name() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.MozillaSalesForceStatus.owner_name)
+  // @@protoc_insertion_point(field_get:zsearch.MozillaSalesForceStatus.owner_name)
   return owner_name_.GetNoArena();
 }
 inline void MozillaSalesForceStatus::set_owner_name(const ::std::string& value) {
   
   owner_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:censys_definitions.MozillaSalesForceStatus.owner_name)
+  // @@protoc_insertion_point(field_set:zsearch.MozillaSalesForceStatus.owner_name)
 }
 #if LANG_CXX11
 inline void MozillaSalesForceStatus::set_owner_name(::std::string&& value) {
   
   owner_name_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:censys_definitions.MozillaSalesForceStatus.owner_name)
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.MozillaSalesForceStatus.owner_name)
 }
 #endif
 inline void MozillaSalesForceStatus::set_owner_name(const char* value) {
   
   owner_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:censys_definitions.MozillaSalesForceStatus.owner_name)
+  // @@protoc_insertion_point(field_set_char:zsearch.MozillaSalesForceStatus.owner_name)
 }
 inline void MozillaSalesForceStatus::set_owner_name(const char* value, size_t size) {
   
   owner_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.MozillaSalesForceStatus.owner_name)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.MozillaSalesForceStatus.owner_name)
 }
 inline ::std::string* MozillaSalesForceStatus::mutable_owner_name() {
   
-  // @@protoc_insertion_point(field_mutable:censys_definitions.MozillaSalesForceStatus.owner_name)
+  // @@protoc_insertion_point(field_mutable:zsearch.MozillaSalesForceStatus.owner_name)
   return owner_name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* MozillaSalesForceStatus::release_owner_name() {
-  // @@protoc_insertion_point(field_release:censys_definitions.MozillaSalesForceStatus.owner_name)
+  // @@protoc_insertion_point(field_release:zsearch.MozillaSalesForceStatus.owner_name)
   
   return owner_name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -1814,7 +1814,7 @@ inline void MozillaSalesForceStatus::set_allocated_owner_name(::std::string* own
     
   }
   owner_name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), owner_name);
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.MozillaSalesForceStatus.owner_name)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.MozillaSalesForceStatus.owner_name)
 }
 
 // string parent_name = 4;
@@ -1822,40 +1822,40 @@ inline void MozillaSalesForceStatus::clear_parent_name() {
   parent_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& MozillaSalesForceStatus::parent_name() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.MozillaSalesForceStatus.parent_name)
+  // @@protoc_insertion_point(field_get:zsearch.MozillaSalesForceStatus.parent_name)
   return parent_name_.GetNoArena();
 }
 inline void MozillaSalesForceStatus::set_parent_name(const ::std::string& value) {
   
   parent_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:censys_definitions.MozillaSalesForceStatus.parent_name)
+  // @@protoc_insertion_point(field_set:zsearch.MozillaSalesForceStatus.parent_name)
 }
 #if LANG_CXX11
 inline void MozillaSalesForceStatus::set_parent_name(::std::string&& value) {
   
   parent_name_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:censys_definitions.MozillaSalesForceStatus.parent_name)
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.MozillaSalesForceStatus.parent_name)
 }
 #endif
 inline void MozillaSalesForceStatus::set_parent_name(const char* value) {
   
   parent_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:censys_definitions.MozillaSalesForceStatus.parent_name)
+  // @@protoc_insertion_point(field_set_char:zsearch.MozillaSalesForceStatus.parent_name)
 }
 inline void MozillaSalesForceStatus::set_parent_name(const char* value, size_t size) {
   
   parent_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.MozillaSalesForceStatus.parent_name)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.MozillaSalesForceStatus.parent_name)
 }
 inline ::std::string* MozillaSalesForceStatus::mutable_parent_name() {
   
-  // @@protoc_insertion_point(field_mutable:censys_definitions.MozillaSalesForceStatus.parent_name)
+  // @@protoc_insertion_point(field_mutable:zsearch.MozillaSalesForceStatus.parent_name)
   return parent_name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* MozillaSalesForceStatus::release_parent_name() {
-  // @@protoc_insertion_point(field_release:censys_definitions.MozillaSalesForceStatus.parent_name)
+  // @@protoc_insertion_point(field_release:zsearch.MozillaSalesForceStatus.parent_name)
   
   return parent_name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -1866,7 +1866,7 @@ inline void MozillaSalesForceStatus::set_allocated_parent_name(::std::string* pa
     
   }
   parent_name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), parent_name);
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.MozillaSalesForceStatus.parent_name)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.MozillaSalesForceStatus.parent_name)
 }
 
 // string certificate_name = 5;
@@ -1874,40 +1874,40 @@ inline void MozillaSalesForceStatus::clear_certificate_name() {
   certificate_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& MozillaSalesForceStatus::certificate_name() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.MozillaSalesForceStatus.certificate_name)
+  // @@protoc_insertion_point(field_get:zsearch.MozillaSalesForceStatus.certificate_name)
   return certificate_name_.GetNoArena();
 }
 inline void MozillaSalesForceStatus::set_certificate_name(const ::std::string& value) {
   
   certificate_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:censys_definitions.MozillaSalesForceStatus.certificate_name)
+  // @@protoc_insertion_point(field_set:zsearch.MozillaSalesForceStatus.certificate_name)
 }
 #if LANG_CXX11
 inline void MozillaSalesForceStatus::set_certificate_name(::std::string&& value) {
   
   certificate_name_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:censys_definitions.MozillaSalesForceStatus.certificate_name)
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.MozillaSalesForceStatus.certificate_name)
 }
 #endif
 inline void MozillaSalesForceStatus::set_certificate_name(const char* value) {
   
   certificate_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:censys_definitions.MozillaSalesForceStatus.certificate_name)
+  // @@protoc_insertion_point(field_set_char:zsearch.MozillaSalesForceStatus.certificate_name)
 }
 inline void MozillaSalesForceStatus::set_certificate_name(const char* value, size_t size) {
   
   certificate_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.MozillaSalesForceStatus.certificate_name)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.MozillaSalesForceStatus.certificate_name)
 }
 inline ::std::string* MozillaSalesForceStatus::mutable_certificate_name() {
   
-  // @@protoc_insertion_point(field_mutable:censys_definitions.MozillaSalesForceStatus.certificate_name)
+  // @@protoc_insertion_point(field_mutable:zsearch.MozillaSalesForceStatus.certificate_name)
   return certificate_name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* MozillaSalesForceStatus::release_certificate_name() {
-  // @@protoc_insertion_point(field_release:censys_definitions.MozillaSalesForceStatus.certificate_name)
+  // @@protoc_insertion_point(field_release:zsearch.MozillaSalesForceStatus.certificate_name)
   
   return certificate_name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -1918,7 +1918,7 @@ inline void MozillaSalesForceStatus::set_allocated_certificate_name(::std::strin
     
   }
   certificate_name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), certificate_name);
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.MozillaSalesForceStatus.certificate_name)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.MozillaSalesForceStatus.certificate_name)
 }
 
 // string certificate_policy = 6;
@@ -1926,40 +1926,40 @@ inline void MozillaSalesForceStatus::clear_certificate_policy() {
   certificate_policy_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& MozillaSalesForceStatus::certificate_policy() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.MozillaSalesForceStatus.certificate_policy)
+  // @@protoc_insertion_point(field_get:zsearch.MozillaSalesForceStatus.certificate_policy)
   return certificate_policy_.GetNoArena();
 }
 inline void MozillaSalesForceStatus::set_certificate_policy(const ::std::string& value) {
   
   certificate_policy_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:censys_definitions.MozillaSalesForceStatus.certificate_policy)
+  // @@protoc_insertion_point(field_set:zsearch.MozillaSalesForceStatus.certificate_policy)
 }
 #if LANG_CXX11
 inline void MozillaSalesForceStatus::set_certificate_policy(::std::string&& value) {
   
   certificate_policy_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:censys_definitions.MozillaSalesForceStatus.certificate_policy)
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.MozillaSalesForceStatus.certificate_policy)
 }
 #endif
 inline void MozillaSalesForceStatus::set_certificate_policy(const char* value) {
   
   certificate_policy_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:censys_definitions.MozillaSalesForceStatus.certificate_policy)
+  // @@protoc_insertion_point(field_set_char:zsearch.MozillaSalesForceStatus.certificate_policy)
 }
 inline void MozillaSalesForceStatus::set_certificate_policy(const char* value, size_t size) {
   
   certificate_policy_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.MozillaSalesForceStatus.certificate_policy)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.MozillaSalesForceStatus.certificate_policy)
 }
 inline ::std::string* MozillaSalesForceStatus::mutable_certificate_policy() {
   
-  // @@protoc_insertion_point(field_mutable:censys_definitions.MozillaSalesForceStatus.certificate_policy)
+  // @@protoc_insertion_point(field_mutable:zsearch.MozillaSalesForceStatus.certificate_policy)
   return certificate_policy_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* MozillaSalesForceStatus::release_certificate_policy() {
-  // @@protoc_insertion_point(field_release:censys_definitions.MozillaSalesForceStatus.certificate_policy)
+  // @@protoc_insertion_point(field_release:zsearch.MozillaSalesForceStatus.certificate_policy)
   
   return certificate_policy_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -1970,7 +1970,7 @@ inline void MozillaSalesForceStatus::set_allocated_certificate_policy(::std::str
     
   }
   certificate_policy_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), certificate_policy);
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.MozillaSalesForceStatus.certificate_policy)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.MozillaSalesForceStatus.certificate_policy)
 }
 
 // string certification_practice_statement = 7;
@@ -1978,40 +1978,40 @@ inline void MozillaSalesForceStatus::clear_certification_practice_statement() {
   certification_practice_statement_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& MozillaSalesForceStatus::certification_practice_statement() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.MozillaSalesForceStatus.certification_practice_statement)
+  // @@protoc_insertion_point(field_get:zsearch.MozillaSalesForceStatus.certification_practice_statement)
   return certification_practice_statement_.GetNoArena();
 }
 inline void MozillaSalesForceStatus::set_certification_practice_statement(const ::std::string& value) {
   
   certification_practice_statement_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:censys_definitions.MozillaSalesForceStatus.certification_practice_statement)
+  // @@protoc_insertion_point(field_set:zsearch.MozillaSalesForceStatus.certification_practice_statement)
 }
 #if LANG_CXX11
 inline void MozillaSalesForceStatus::set_certification_practice_statement(::std::string&& value) {
   
   certification_practice_statement_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:censys_definitions.MozillaSalesForceStatus.certification_practice_statement)
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.MozillaSalesForceStatus.certification_practice_statement)
 }
 #endif
 inline void MozillaSalesForceStatus::set_certification_practice_statement(const char* value) {
   
   certification_practice_statement_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:censys_definitions.MozillaSalesForceStatus.certification_practice_statement)
+  // @@protoc_insertion_point(field_set_char:zsearch.MozillaSalesForceStatus.certification_practice_statement)
 }
 inline void MozillaSalesForceStatus::set_certification_practice_statement(const char* value, size_t size) {
   
   certification_practice_statement_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.MozillaSalesForceStatus.certification_practice_statement)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.MozillaSalesForceStatus.certification_practice_statement)
 }
 inline ::std::string* MozillaSalesForceStatus::mutable_certification_practice_statement() {
   
-  // @@protoc_insertion_point(field_mutable:censys_definitions.MozillaSalesForceStatus.certification_practice_statement)
+  // @@protoc_insertion_point(field_mutable:zsearch.MozillaSalesForceStatus.certification_practice_statement)
   return certification_practice_statement_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* MozillaSalesForceStatus::release_certification_practice_statement() {
-  // @@protoc_insertion_point(field_release:censys_definitions.MozillaSalesForceStatus.certification_practice_statement)
+  // @@protoc_insertion_point(field_release:zsearch.MozillaSalesForceStatus.certification_practice_statement)
   
   return certification_practice_statement_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -2022,7 +2022,7 @@ inline void MozillaSalesForceStatus::set_allocated_certification_practice_statem
     
   }
   certification_practice_statement_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), certification_practice_statement);
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.MozillaSalesForceStatus.certification_practice_statement)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.MozillaSalesForceStatus.certification_practice_statement)
 }
 
 // bool cp_same_as_parent = 8;
@@ -2030,13 +2030,13 @@ inline void MozillaSalesForceStatus::clear_cp_same_as_parent() {
   cp_same_as_parent_ = false;
 }
 inline bool MozillaSalesForceStatus::cp_same_as_parent() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.MozillaSalesForceStatus.cp_same_as_parent)
+  // @@protoc_insertion_point(field_get:zsearch.MozillaSalesForceStatus.cp_same_as_parent)
   return cp_same_as_parent_;
 }
 inline void MozillaSalesForceStatus::set_cp_same_as_parent(bool value) {
   
   cp_same_as_parent_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.MozillaSalesForceStatus.cp_same_as_parent)
+  // @@protoc_insertion_point(field_set:zsearch.MozillaSalesForceStatus.cp_same_as_parent)
 }
 
 // bool audit_same_as_parent = 9;
@@ -2044,13 +2044,13 @@ inline void MozillaSalesForceStatus::clear_audit_same_as_parent() {
   audit_same_as_parent_ = false;
 }
 inline bool MozillaSalesForceStatus::audit_same_as_parent() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.MozillaSalesForceStatus.audit_same_as_parent)
+  // @@protoc_insertion_point(field_get:zsearch.MozillaSalesForceStatus.audit_same_as_parent)
   return audit_same_as_parent_;
 }
 inline void MozillaSalesForceStatus::set_audit_same_as_parent(bool value) {
   
   audit_same_as_parent_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.MozillaSalesForceStatus.audit_same_as_parent)
+  // @@protoc_insertion_point(field_set:zsearch.MozillaSalesForceStatus.audit_same_as_parent)
 }
 
 // string standard_audit = 10;
@@ -2058,40 +2058,40 @@ inline void MozillaSalesForceStatus::clear_standard_audit() {
   standard_audit_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& MozillaSalesForceStatus::standard_audit() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.MozillaSalesForceStatus.standard_audit)
+  // @@protoc_insertion_point(field_get:zsearch.MozillaSalesForceStatus.standard_audit)
   return standard_audit_.GetNoArena();
 }
 inline void MozillaSalesForceStatus::set_standard_audit(const ::std::string& value) {
   
   standard_audit_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:censys_definitions.MozillaSalesForceStatus.standard_audit)
+  // @@protoc_insertion_point(field_set:zsearch.MozillaSalesForceStatus.standard_audit)
 }
 #if LANG_CXX11
 inline void MozillaSalesForceStatus::set_standard_audit(::std::string&& value) {
   
   standard_audit_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:censys_definitions.MozillaSalesForceStatus.standard_audit)
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.MozillaSalesForceStatus.standard_audit)
 }
 #endif
 inline void MozillaSalesForceStatus::set_standard_audit(const char* value) {
   
   standard_audit_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:censys_definitions.MozillaSalesForceStatus.standard_audit)
+  // @@protoc_insertion_point(field_set_char:zsearch.MozillaSalesForceStatus.standard_audit)
 }
 inline void MozillaSalesForceStatus::set_standard_audit(const char* value, size_t size) {
   
   standard_audit_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.MozillaSalesForceStatus.standard_audit)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.MozillaSalesForceStatus.standard_audit)
 }
 inline ::std::string* MozillaSalesForceStatus::mutable_standard_audit() {
   
-  // @@protoc_insertion_point(field_mutable:censys_definitions.MozillaSalesForceStatus.standard_audit)
+  // @@protoc_insertion_point(field_mutable:zsearch.MozillaSalesForceStatus.standard_audit)
   return standard_audit_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* MozillaSalesForceStatus::release_standard_audit() {
-  // @@protoc_insertion_point(field_release:censys_definitions.MozillaSalesForceStatus.standard_audit)
+  // @@protoc_insertion_point(field_release:zsearch.MozillaSalesForceStatus.standard_audit)
   
   return standard_audit_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -2102,7 +2102,7 @@ inline void MozillaSalesForceStatus::set_allocated_standard_audit(::std::string*
     
   }
   standard_audit_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), standard_audit);
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.MozillaSalesForceStatus.standard_audit)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.MozillaSalesForceStatus.standard_audit)
 }
 
 // string br_audit = 11;
@@ -2110,40 +2110,40 @@ inline void MozillaSalesForceStatus::clear_br_audit() {
   br_audit_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& MozillaSalesForceStatus::br_audit() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.MozillaSalesForceStatus.br_audit)
+  // @@protoc_insertion_point(field_get:zsearch.MozillaSalesForceStatus.br_audit)
   return br_audit_.GetNoArena();
 }
 inline void MozillaSalesForceStatus::set_br_audit(const ::std::string& value) {
   
   br_audit_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:censys_definitions.MozillaSalesForceStatus.br_audit)
+  // @@protoc_insertion_point(field_set:zsearch.MozillaSalesForceStatus.br_audit)
 }
 #if LANG_CXX11
 inline void MozillaSalesForceStatus::set_br_audit(::std::string&& value) {
   
   br_audit_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:censys_definitions.MozillaSalesForceStatus.br_audit)
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.MozillaSalesForceStatus.br_audit)
 }
 #endif
 inline void MozillaSalesForceStatus::set_br_audit(const char* value) {
   
   br_audit_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:censys_definitions.MozillaSalesForceStatus.br_audit)
+  // @@protoc_insertion_point(field_set_char:zsearch.MozillaSalesForceStatus.br_audit)
 }
 inline void MozillaSalesForceStatus::set_br_audit(const char* value, size_t size) {
   
   br_audit_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.MozillaSalesForceStatus.br_audit)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.MozillaSalesForceStatus.br_audit)
 }
 inline ::std::string* MozillaSalesForceStatus::mutable_br_audit() {
   
-  // @@protoc_insertion_point(field_mutable:censys_definitions.MozillaSalesForceStatus.br_audit)
+  // @@protoc_insertion_point(field_mutable:zsearch.MozillaSalesForceStatus.br_audit)
   return br_audit_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* MozillaSalesForceStatus::release_br_audit() {
-  // @@protoc_insertion_point(field_release:censys_definitions.MozillaSalesForceStatus.br_audit)
+  // @@protoc_insertion_point(field_release:zsearch.MozillaSalesForceStatus.br_audit)
   
   return br_audit_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -2154,7 +2154,7 @@ inline void MozillaSalesForceStatus::set_allocated_br_audit(::std::string* br_au
     
   }
   br_audit_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), br_audit);
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.MozillaSalesForceStatus.br_audit)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.MozillaSalesForceStatus.br_audit)
 }
 
 // string auditor = 12;
@@ -2162,40 +2162,40 @@ inline void MozillaSalesForceStatus::clear_auditor() {
   auditor_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& MozillaSalesForceStatus::auditor() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.MozillaSalesForceStatus.auditor)
+  // @@protoc_insertion_point(field_get:zsearch.MozillaSalesForceStatus.auditor)
   return auditor_.GetNoArena();
 }
 inline void MozillaSalesForceStatus::set_auditor(const ::std::string& value) {
   
   auditor_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:censys_definitions.MozillaSalesForceStatus.auditor)
+  // @@protoc_insertion_point(field_set:zsearch.MozillaSalesForceStatus.auditor)
 }
 #if LANG_CXX11
 inline void MozillaSalesForceStatus::set_auditor(::std::string&& value) {
   
   auditor_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:censys_definitions.MozillaSalesForceStatus.auditor)
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.MozillaSalesForceStatus.auditor)
 }
 #endif
 inline void MozillaSalesForceStatus::set_auditor(const char* value) {
   
   auditor_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:censys_definitions.MozillaSalesForceStatus.auditor)
+  // @@protoc_insertion_point(field_set_char:zsearch.MozillaSalesForceStatus.auditor)
 }
 inline void MozillaSalesForceStatus::set_auditor(const char* value, size_t size) {
   
   auditor_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.MozillaSalesForceStatus.auditor)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.MozillaSalesForceStatus.auditor)
 }
 inline ::std::string* MozillaSalesForceStatus::mutable_auditor() {
   
-  // @@protoc_insertion_point(field_mutable:censys_definitions.MozillaSalesForceStatus.auditor)
+  // @@protoc_insertion_point(field_mutable:zsearch.MozillaSalesForceStatus.auditor)
   return auditor_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* MozillaSalesForceStatus::release_auditor() {
-  // @@protoc_insertion_point(field_release:censys_definitions.MozillaSalesForceStatus.auditor)
+  // @@protoc_insertion_point(field_release:zsearch.MozillaSalesForceStatus.auditor)
   
   return auditor_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -2206,7 +2206,7 @@ inline void MozillaSalesForceStatus::set_allocated_auditor(::std::string* audito
     
   }
   auditor_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), auditor);
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.MozillaSalesForceStatus.auditor)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.MozillaSalesForceStatus.auditor)
 }
 
 // -------------------------------------------------------------------
@@ -2218,34 +2218,34 @@ inline void CertificateRevocation::clear_revoked() {
   revoked_ = false;
 }
 inline bool CertificateRevocation::revoked() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.CertificateRevocation.revoked)
+  // @@protoc_insertion_point(field_get:zsearch.CertificateRevocation.revoked)
   return revoked_;
 }
 inline void CertificateRevocation::set_revoked(bool value) {
   
   revoked_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.CertificateRevocation.revoked)
+  // @@protoc_insertion_point(field_set:zsearch.CertificateRevocation.revoked)
 }
 
-// .censys_definitions.CertificateRevocationReason reason = 2;
+// .zsearch.CertificateRevocationReason reason = 2;
 inline void CertificateRevocation::clear_reason() {
   reason_ = 0;
 }
-inline ::censys_definitions::CertificateRevocationReason CertificateRevocation::reason() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.CertificateRevocation.reason)
-  return static_cast< ::censys_definitions::CertificateRevocationReason >(reason_);
+inline ::zsearch::CertificateRevocationReason CertificateRevocation::reason() const {
+  // @@protoc_insertion_point(field_get:zsearch.CertificateRevocation.reason)
+  return static_cast< ::zsearch::CertificateRevocationReason >(reason_);
 }
-inline void CertificateRevocation::set_reason(::censys_definitions::CertificateRevocationReason value) {
+inline void CertificateRevocation::set_reason(::zsearch::CertificateRevocationReason value) {
   
   reason_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.CertificateRevocation.reason)
+  // @@protoc_insertion_point(field_set:zsearch.CertificateRevocation.reason)
 }
 
 // -------------------------------------------------------------------
 
 // CertificateAudit
 
-// .censys_definitions.MozillaSalesForceStatus mozilla = 1;
+// .zsearch.MozillaSalesForceStatus mozilla = 1;
 inline bool CertificateAudit::has_mozilla() const {
   return this != internal_default_instance() && mozilla_ != NULL;
 }
@@ -2253,27 +2253,27 @@ inline void CertificateAudit::clear_mozilla() {
   if (GetArenaNoVirtual() == NULL && mozilla_ != NULL) delete mozilla_;
   mozilla_ = NULL;
 }
-inline const ::censys_definitions::MozillaSalesForceStatus& CertificateAudit::mozilla() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.CertificateAudit.mozilla)
+inline const ::zsearch::MozillaSalesForceStatus& CertificateAudit::mozilla() const {
+  // @@protoc_insertion_point(field_get:zsearch.CertificateAudit.mozilla)
   return mozilla_ != NULL ? *mozilla_
-                         : *::censys_definitions::MozillaSalesForceStatus::internal_default_instance();
+                         : *::zsearch::MozillaSalesForceStatus::internal_default_instance();
 }
-inline ::censys_definitions::MozillaSalesForceStatus* CertificateAudit::mutable_mozilla() {
+inline ::zsearch::MozillaSalesForceStatus* CertificateAudit::mutable_mozilla() {
   
   if (mozilla_ == NULL) {
-    mozilla_ = new ::censys_definitions::MozillaSalesForceStatus;
+    mozilla_ = new ::zsearch::MozillaSalesForceStatus;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.CertificateAudit.mozilla)
+  // @@protoc_insertion_point(field_mutable:zsearch.CertificateAudit.mozilla)
   return mozilla_;
 }
-inline ::censys_definitions::MozillaSalesForceStatus* CertificateAudit::release_mozilla() {
-  // @@protoc_insertion_point(field_release:censys_definitions.CertificateAudit.mozilla)
+inline ::zsearch::MozillaSalesForceStatus* CertificateAudit::release_mozilla() {
+  // @@protoc_insertion_point(field_release:zsearch.CertificateAudit.mozilla)
   
-  ::censys_definitions::MozillaSalesForceStatus* temp = mozilla_;
+  ::zsearch::MozillaSalesForceStatus* temp = mozilla_;
   mozilla_ = NULL;
   return temp;
 }
-inline void CertificateAudit::set_allocated_mozilla(::censys_definitions::MozillaSalesForceStatus* mozilla) {
+inline void CertificateAudit::set_allocated_mozilla(::zsearch::MozillaSalesForceStatus* mozilla) {
   delete mozilla_;
   mozilla_ = mozilla;
   if (mozilla) {
@@ -2281,7 +2281,7 @@ inline void CertificateAudit::set_allocated_mozilla(::censys_definitions::Mozill
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.CertificateAudit.mozilla)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CertificateAudit.mozilla)
 }
 
 // -------------------------------------------------------------------
@@ -2293,40 +2293,40 @@ inline void Certificate::clear_sha1fp() {
   sha1fp_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& Certificate::sha1fp() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Certificate.sha1fp)
+  // @@protoc_insertion_point(field_get:zsearch.Certificate.sha1fp)
   return sha1fp_.GetNoArena();
 }
 inline void Certificate::set_sha1fp(const ::std::string& value) {
   
   sha1fp_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:censys_definitions.Certificate.sha1fp)
+  // @@protoc_insertion_point(field_set:zsearch.Certificate.sha1fp)
 }
 #if LANG_CXX11
 inline void Certificate::set_sha1fp(::std::string&& value) {
   
   sha1fp_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:censys_definitions.Certificate.sha1fp)
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.Certificate.sha1fp)
 }
 #endif
 inline void Certificate::set_sha1fp(const char* value) {
   
   sha1fp_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:censys_definitions.Certificate.sha1fp)
+  // @@protoc_insertion_point(field_set_char:zsearch.Certificate.sha1fp)
 }
 inline void Certificate::set_sha1fp(const void* value, size_t size) {
   
   sha1fp_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.Certificate.sha1fp)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.Certificate.sha1fp)
 }
 inline ::std::string* Certificate::mutable_sha1fp() {
   
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Certificate.sha1fp)
+  // @@protoc_insertion_point(field_mutable:zsearch.Certificate.sha1fp)
   return sha1fp_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Certificate::release_sha1fp() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Certificate.sha1fp)
+  // @@protoc_insertion_point(field_release:zsearch.Certificate.sha1fp)
   
   return sha1fp_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -2337,7 +2337,7 @@ inline void Certificate::set_allocated_sha1fp(::std::string* sha1fp) {
     
   }
   sha1fp_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), sha1fp);
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Certificate.sha1fp)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Certificate.sha1fp)
 }
 
 // bytes sha256fp = 2;
@@ -2345,40 +2345,40 @@ inline void Certificate::clear_sha256fp() {
   sha256fp_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& Certificate::sha256fp() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Certificate.sha256fp)
+  // @@protoc_insertion_point(field_get:zsearch.Certificate.sha256fp)
   return sha256fp_.GetNoArena();
 }
 inline void Certificate::set_sha256fp(const ::std::string& value) {
   
   sha256fp_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:censys_definitions.Certificate.sha256fp)
+  // @@protoc_insertion_point(field_set:zsearch.Certificate.sha256fp)
 }
 #if LANG_CXX11
 inline void Certificate::set_sha256fp(::std::string&& value) {
   
   sha256fp_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:censys_definitions.Certificate.sha256fp)
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.Certificate.sha256fp)
 }
 #endif
 inline void Certificate::set_sha256fp(const char* value) {
   
   sha256fp_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:censys_definitions.Certificate.sha256fp)
+  // @@protoc_insertion_point(field_set_char:zsearch.Certificate.sha256fp)
 }
 inline void Certificate::set_sha256fp(const void* value, size_t size) {
   
   sha256fp_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.Certificate.sha256fp)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.Certificate.sha256fp)
 }
 inline ::std::string* Certificate::mutable_sha256fp() {
   
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Certificate.sha256fp)
+  // @@protoc_insertion_point(field_mutable:zsearch.Certificate.sha256fp)
   return sha256fp_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Certificate::release_sha256fp() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Certificate.sha256fp)
+  // @@protoc_insertion_point(field_release:zsearch.Certificate.sha256fp)
   
   return sha256fp_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -2389,7 +2389,7 @@ inline void Certificate::set_allocated_sha256fp(::std::string* sha256fp) {
     
   }
   sha256fp_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), sha256fp);
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Certificate.sha256fp)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Certificate.sha256fp)
 }
 
 // bytes raw = 3;
@@ -2397,40 +2397,40 @@ inline void Certificate::clear_raw() {
   raw_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& Certificate::raw() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Certificate.raw)
+  // @@protoc_insertion_point(field_get:zsearch.Certificate.raw)
   return raw_.GetNoArena();
 }
 inline void Certificate::set_raw(const ::std::string& value) {
   
   raw_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:censys_definitions.Certificate.raw)
+  // @@protoc_insertion_point(field_set:zsearch.Certificate.raw)
 }
 #if LANG_CXX11
 inline void Certificate::set_raw(::std::string&& value) {
   
   raw_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:censys_definitions.Certificate.raw)
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.Certificate.raw)
 }
 #endif
 inline void Certificate::set_raw(const char* value) {
   
   raw_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:censys_definitions.Certificate.raw)
+  // @@protoc_insertion_point(field_set_char:zsearch.Certificate.raw)
 }
 inline void Certificate::set_raw(const void* value, size_t size) {
   
   raw_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.Certificate.raw)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.Certificate.raw)
 }
 inline ::std::string* Certificate::mutable_raw() {
   
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Certificate.raw)
+  // @@protoc_insertion_point(field_mutable:zsearch.Certificate.raw)
   return raw_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Certificate::release_raw() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Certificate.raw)
+  // @@protoc_insertion_point(field_release:zsearch.Certificate.raw)
   
   return raw_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -2441,7 +2441,7 @@ inline void Certificate::set_allocated_raw(::std::string* raw) {
     
   }
   raw_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), raw);
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Certificate.raw)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Certificate.raw)
 }
 
 // string parsed = 4;
@@ -2449,40 +2449,40 @@ inline void Certificate::clear_parsed() {
   parsed_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& Certificate::parsed() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Certificate.parsed)
+  // @@protoc_insertion_point(field_get:zsearch.Certificate.parsed)
   return parsed_.GetNoArena();
 }
 inline void Certificate::set_parsed(const ::std::string& value) {
   
   parsed_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:censys_definitions.Certificate.parsed)
+  // @@protoc_insertion_point(field_set:zsearch.Certificate.parsed)
 }
 #if LANG_CXX11
 inline void Certificate::set_parsed(::std::string&& value) {
   
   parsed_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:censys_definitions.Certificate.parsed)
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.Certificate.parsed)
 }
 #endif
 inline void Certificate::set_parsed(const char* value) {
   
   parsed_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:censys_definitions.Certificate.parsed)
+  // @@protoc_insertion_point(field_set_char:zsearch.Certificate.parsed)
 }
 inline void Certificate::set_parsed(const char* value, size_t size) {
   
   parsed_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.Certificate.parsed)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.Certificate.parsed)
 }
 inline ::std::string* Certificate::mutable_parsed() {
   
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Certificate.parsed)
+  // @@protoc_insertion_point(field_mutable:zsearch.Certificate.parsed)
   return parsed_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Certificate::release_parsed() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Certificate.parsed)
+  // @@protoc_insertion_point(field_release:zsearch.Certificate.parsed)
   
   return parsed_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -2493,21 +2493,21 @@ inline void Certificate::set_allocated_parsed(::std::string* parsed) {
     
   }
   parsed_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), parsed);
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Certificate.parsed)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Certificate.parsed)
 }
 
-// .censys_definitions.CertificateParseStatus parse_status = 44;
+// .zsearch.CertificateParseStatus parse_status = 44;
 inline void Certificate::clear_parse_status() {
   parse_status_ = 0;
 }
-inline ::censys_definitions::CertificateParseStatus Certificate::parse_status() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Certificate.parse_status)
-  return static_cast< ::censys_definitions::CertificateParseStatus >(parse_status_);
+inline ::zsearch::CertificateParseStatus Certificate::parse_status() const {
+  // @@protoc_insertion_point(field_get:zsearch.Certificate.parse_status)
+  return static_cast< ::zsearch::CertificateParseStatus >(parse_status_);
 }
-inline void Certificate::set_parse_status(::censys_definitions::CertificateParseStatus value) {
+inline void Certificate::set_parse_status(::zsearch::CertificateParseStatus value) {
   
   parse_status_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.Certificate.parse_status)
+  // @@protoc_insertion_point(field_set:zsearch.Certificate.parse_status)
 }
 
 // uint32 parse_version = 39;
@@ -2515,13 +2515,13 @@ inline void Certificate::clear_parse_version() {
   parse_version_ = 0u;
 }
 inline ::google::protobuf::uint32 Certificate::parse_version() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Certificate.parse_version)
+  // @@protoc_insertion_point(field_get:zsearch.Certificate.parse_version)
   return parse_version_;
 }
 inline void Certificate::set_parse_version(::google::protobuf::uint32 value) {
   
   parse_version_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.Certificate.parse_version)
+  // @@protoc_insertion_point(field_set:zsearch.Certificate.parse_version)
 }
 
 // string parse_error = 47;
@@ -2529,40 +2529,40 @@ inline void Certificate::clear_parse_error() {
   parse_error_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& Certificate::parse_error() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Certificate.parse_error)
+  // @@protoc_insertion_point(field_get:zsearch.Certificate.parse_error)
   return parse_error_.GetNoArena();
 }
 inline void Certificate::set_parse_error(const ::std::string& value) {
   
   parse_error_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:censys_definitions.Certificate.parse_error)
+  // @@protoc_insertion_point(field_set:zsearch.Certificate.parse_error)
 }
 #if LANG_CXX11
 inline void Certificate::set_parse_error(::std::string&& value) {
   
   parse_error_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:censys_definitions.Certificate.parse_error)
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.Certificate.parse_error)
 }
 #endif
 inline void Certificate::set_parse_error(const char* value) {
   
   parse_error_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:censys_definitions.Certificate.parse_error)
+  // @@protoc_insertion_point(field_set_char:zsearch.Certificate.parse_error)
 }
 inline void Certificate::set_parse_error(const char* value, size_t size) {
   
   parse_error_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.Certificate.parse_error)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.Certificate.parse_error)
 }
 inline ::std::string* Certificate::mutable_parse_error() {
   
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Certificate.parse_error)
+  // @@protoc_insertion_point(field_mutable:zsearch.Certificate.parse_error)
   return parse_error_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Certificate::release_parse_error() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Certificate.parse_error)
+  // @@protoc_insertion_point(field_release:zsearch.Certificate.parse_error)
   
   return parse_error_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -2573,7 +2573,7 @@ inline void Certificate::set_allocated_parse_error(::std::string* parse_error) {
     
   }
   parse_error_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), parse_error);
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Certificate.parse_error)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Certificate.parse_error)
 }
 
 // repeated bytes parents = 5;
@@ -2584,50 +2584,50 @@ inline void Certificate::clear_parents() {
   parents_.Clear();
 }
 inline const ::std::string& Certificate::parents(int index) const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Certificate.parents)
+  // @@protoc_insertion_point(field_get:zsearch.Certificate.parents)
   return parents_.Get(index);
 }
 inline ::std::string* Certificate::mutable_parents(int index) {
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Certificate.parents)
+  // @@protoc_insertion_point(field_mutable:zsearch.Certificate.parents)
   return parents_.Mutable(index);
 }
 inline void Certificate::set_parents(int index, const ::std::string& value) {
-  // @@protoc_insertion_point(field_set:censys_definitions.Certificate.parents)
+  // @@protoc_insertion_point(field_set:zsearch.Certificate.parents)
   parents_.Mutable(index)->assign(value);
 }
 inline void Certificate::set_parents(int index, const char* value) {
   parents_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:censys_definitions.Certificate.parents)
+  // @@protoc_insertion_point(field_set_char:zsearch.Certificate.parents)
 }
 inline void Certificate::set_parents(int index, const void* value, size_t size) {
   parents_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.Certificate.parents)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.Certificate.parents)
 }
 inline ::std::string* Certificate::add_parents() {
-  // @@protoc_insertion_point(field_add_mutable:censys_definitions.Certificate.parents)
+  // @@protoc_insertion_point(field_add_mutable:zsearch.Certificate.parents)
   return parents_.Add();
 }
 inline void Certificate::add_parents(const ::std::string& value) {
   parents_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:censys_definitions.Certificate.parents)
+  // @@protoc_insertion_point(field_add:zsearch.Certificate.parents)
 }
 inline void Certificate::add_parents(const char* value) {
   parents_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:censys_definitions.Certificate.parents)
+  // @@protoc_insertion_point(field_add_char:zsearch.Certificate.parents)
 }
 inline void Certificate::add_parents(const void* value, size_t size) {
   parents_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:censys_definitions.Certificate.parents)
+  // @@protoc_insertion_point(field_add_pointer:zsearch.Certificate.parents)
 }
 inline const ::google::protobuf::RepeatedPtrField< ::std::string>&
 Certificate::parents() const {
-  // @@protoc_insertion_point(field_list:censys_definitions.Certificate.parents)
+  // @@protoc_insertion_point(field_list:zsearch.Certificate.parents)
   return parents_;
 }
 inline ::google::protobuf::RepeatedPtrField< ::std::string>*
 Certificate::mutable_parents() {
-  // @@protoc_insertion_point(field_mutable_list:censys_definitions.Certificate.parents)
+  // @@protoc_insertion_point(field_mutable_list:zsearch.Certificate.parents)
   return &parents_;
 }
 
@@ -2639,65 +2639,65 @@ inline void Certificate::clear_presented_chain() {
   presented_chain_.Clear();
 }
 inline const ::std::string& Certificate::presented_chain(int index) const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Certificate.presented_chain)
+  // @@protoc_insertion_point(field_get:zsearch.Certificate.presented_chain)
   return presented_chain_.Get(index);
 }
 inline ::std::string* Certificate::mutable_presented_chain(int index) {
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Certificate.presented_chain)
+  // @@protoc_insertion_point(field_mutable:zsearch.Certificate.presented_chain)
   return presented_chain_.Mutable(index);
 }
 inline void Certificate::set_presented_chain(int index, const ::std::string& value) {
-  // @@protoc_insertion_point(field_set:censys_definitions.Certificate.presented_chain)
+  // @@protoc_insertion_point(field_set:zsearch.Certificate.presented_chain)
   presented_chain_.Mutable(index)->assign(value);
 }
 inline void Certificate::set_presented_chain(int index, const char* value) {
   presented_chain_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:censys_definitions.Certificate.presented_chain)
+  // @@protoc_insertion_point(field_set_char:zsearch.Certificate.presented_chain)
 }
 inline void Certificate::set_presented_chain(int index, const void* value, size_t size) {
   presented_chain_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.Certificate.presented_chain)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.Certificate.presented_chain)
 }
 inline ::std::string* Certificate::add_presented_chain() {
-  // @@protoc_insertion_point(field_add_mutable:censys_definitions.Certificate.presented_chain)
+  // @@protoc_insertion_point(field_add_mutable:zsearch.Certificate.presented_chain)
   return presented_chain_.Add();
 }
 inline void Certificate::add_presented_chain(const ::std::string& value) {
   presented_chain_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:censys_definitions.Certificate.presented_chain)
+  // @@protoc_insertion_point(field_add:zsearch.Certificate.presented_chain)
 }
 inline void Certificate::add_presented_chain(const char* value) {
   presented_chain_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:censys_definitions.Certificate.presented_chain)
+  // @@protoc_insertion_point(field_add_char:zsearch.Certificate.presented_chain)
 }
 inline void Certificate::add_presented_chain(const void* value, size_t size) {
   presented_chain_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:censys_definitions.Certificate.presented_chain)
+  // @@protoc_insertion_point(field_add_pointer:zsearch.Certificate.presented_chain)
 }
 inline const ::google::protobuf::RepeatedPtrField< ::std::string>&
 Certificate::presented_chain() const {
-  // @@protoc_insertion_point(field_list:censys_definitions.Certificate.presented_chain)
+  // @@protoc_insertion_point(field_list:zsearch.Certificate.presented_chain)
   return presented_chain_;
 }
 inline ::google::protobuf::RepeatedPtrField< ::std::string>*
 Certificate::mutable_presented_chain() {
-  // @@protoc_insertion_point(field_mutable_list:censys_definitions.Certificate.presented_chain)
+  // @@protoc_insertion_point(field_mutable_list:zsearch.Certificate.presented_chain)
   return &presented_chain_;
 }
 
-// .censys_definitions.CertificateSource source = 28;
+// .zsearch.CertificateSource source = 28;
 inline void Certificate::clear_source() {
   source_ = 0;
 }
-inline ::censys_definitions::CertificateSource Certificate::source() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Certificate.source)
-  return static_cast< ::censys_definitions::CertificateSource >(source_);
+inline ::zsearch::CertificateSource Certificate::source() const {
+  // @@protoc_insertion_point(field_get:zsearch.Certificate.source)
+  return static_cast< ::zsearch::CertificateSource >(source_);
 }
-inline void Certificate::set_source(::censys_definitions::CertificateSource value) {
+inline void Certificate::set_source(::zsearch::CertificateSource value) {
   
   source_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.Certificate.source)
+  // @@protoc_insertion_point(field_set:zsearch.Certificate.source)
 }
 
 // bool seen_in_scan = 29;
@@ -2705,13 +2705,13 @@ inline void Certificate::clear_seen_in_scan() {
   seen_in_scan_ = false;
 }
 inline bool Certificate::seen_in_scan() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Certificate.seen_in_scan)
+  // @@protoc_insertion_point(field_get:zsearch.Certificate.seen_in_scan)
   return seen_in_scan_;
 }
 inline void Certificate::set_seen_in_scan(bool value) {
   
   seen_in_scan_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.Certificate.seen_in_scan)
+  // @@protoc_insertion_point(field_set:zsearch.Certificate.seen_in_scan)
 }
 
 // bool post_processed = 26;
@@ -2719,13 +2719,13 @@ inline void Certificate::clear_post_processed() {
   post_processed_ = false;
 }
 inline bool Certificate::post_processed() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Certificate.post_processed)
+  // @@protoc_insertion_point(field_get:zsearch.Certificate.post_processed)
   return post_processed_;
 }
 inline void Certificate::set_post_processed(bool value) {
   
   post_processed_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.Certificate.post_processed)
+  // @@protoc_insertion_point(field_set:zsearch.Certificate.post_processed)
 }
 
 // uint32 post_process_timestamp = 37;
@@ -2733,16 +2733,16 @@ inline void Certificate::clear_post_process_timestamp() {
   post_process_timestamp_ = 0u;
 }
 inline ::google::protobuf::uint32 Certificate::post_process_timestamp() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Certificate.post_process_timestamp)
+  // @@protoc_insertion_point(field_get:zsearch.Certificate.post_process_timestamp)
   return post_process_timestamp_;
 }
 inline void Certificate::set_post_process_timestamp(::google::protobuf::uint32 value) {
   
   post_process_timestamp_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.Certificate.post_process_timestamp)
+  // @@protoc_insertion_point(field_set:zsearch.Certificate.post_process_timestamp)
 }
 
-// .censys_definitions.CertificateValidation validation = 35;
+// .zsearch.CertificateValidation validation = 35;
 inline bool Certificate::has_validation() const {
   return this != internal_default_instance() && validation_ != NULL;
 }
@@ -2750,27 +2750,27 @@ inline void Certificate::clear_validation() {
   if (GetArenaNoVirtual() == NULL && validation_ != NULL) delete validation_;
   validation_ = NULL;
 }
-inline const ::censys_definitions::CertificateValidation& Certificate::validation() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Certificate.validation)
+inline const ::zsearch::CertificateValidation& Certificate::validation() const {
+  // @@protoc_insertion_point(field_get:zsearch.Certificate.validation)
   return validation_ != NULL ? *validation_
-                         : *::censys_definitions::CertificateValidation::internal_default_instance();
+                         : *::zsearch::CertificateValidation::internal_default_instance();
 }
-inline ::censys_definitions::CertificateValidation* Certificate::mutable_validation() {
+inline ::zsearch::CertificateValidation* Certificate::mutable_validation() {
   
   if (validation_ == NULL) {
-    validation_ = new ::censys_definitions::CertificateValidation;
+    validation_ = new ::zsearch::CertificateValidation;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Certificate.validation)
+  // @@protoc_insertion_point(field_mutable:zsearch.Certificate.validation)
   return validation_;
 }
-inline ::censys_definitions::CertificateValidation* Certificate::release_validation() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Certificate.validation)
+inline ::zsearch::CertificateValidation* Certificate::release_validation() {
+  // @@protoc_insertion_point(field_release:zsearch.Certificate.validation)
   
-  ::censys_definitions::CertificateValidation* temp = validation_;
+  ::zsearch::CertificateValidation* temp = validation_;
   validation_ = NULL;
   return temp;
 }
-inline void Certificate::set_allocated_validation(::censys_definitions::CertificateValidation* validation) {
+inline void Certificate::set_allocated_validation(::zsearch::CertificateValidation* validation) {
   delete validation_;
   validation_ = validation;
   if (validation) {
@@ -2778,10 +2778,10 @@ inline void Certificate::set_allocated_validation(::censys_definitions::Certific
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Certificate.validation)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Certificate.validation)
 }
 
-// .censys_definitions.CTStatus ct = 30;
+// .zsearch.CTStatus ct = 30;
 inline bool Certificate::has_ct() const {
   return this != internal_default_instance() && ct_ != NULL;
 }
@@ -2789,27 +2789,27 @@ inline void Certificate::clear_ct() {
   if (GetArenaNoVirtual() == NULL && ct_ != NULL) delete ct_;
   ct_ = NULL;
 }
-inline const ::censys_definitions::CTStatus& Certificate::ct() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Certificate.ct)
+inline const ::zsearch::CTStatus& Certificate::ct() const {
+  // @@protoc_insertion_point(field_get:zsearch.Certificate.ct)
   return ct_ != NULL ? *ct_
-                         : *::censys_definitions::CTStatus::internal_default_instance();
+                         : *::zsearch::CTStatus::internal_default_instance();
 }
-inline ::censys_definitions::CTStatus* Certificate::mutable_ct() {
+inline ::zsearch::CTStatus* Certificate::mutable_ct() {
   
   if (ct_ == NULL) {
-    ct_ = new ::censys_definitions::CTStatus;
+    ct_ = new ::zsearch::CTStatus;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Certificate.ct)
+  // @@protoc_insertion_point(field_mutable:zsearch.Certificate.ct)
   return ct_;
 }
-inline ::censys_definitions::CTStatus* Certificate::release_ct() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Certificate.ct)
+inline ::zsearch::CTStatus* Certificate::release_ct() {
+  // @@protoc_insertion_point(field_release:zsearch.Certificate.ct)
   
-  ::censys_definitions::CTStatus* temp = ct_;
+  ::zsearch::CTStatus* temp = ct_;
   ct_ = NULL;
   return temp;
 }
-inline void Certificate::set_allocated_ct(::censys_definitions::CTStatus* ct) {
+inline void Certificate::set_allocated_ct(::zsearch::CTStatus* ct) {
   delete ct_;
   ct_ = ct;
   if (ct) {
@@ -2817,10 +2817,10 @@ inline void Certificate::set_allocated_ct(::censys_definitions::CTStatus* ct) {
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Certificate.ct)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Certificate.ct)
 }
 
-// .censys_definitions.ZLint zlint = 38;
+// .zsearch.ZLint zlint = 38;
 inline bool Certificate::has_zlint() const {
   return this != internal_default_instance() && zlint_ != NULL;
 }
@@ -2828,27 +2828,27 @@ inline void Certificate::clear_zlint() {
   if (GetArenaNoVirtual() == NULL && zlint_ != NULL) delete zlint_;
   zlint_ = NULL;
 }
-inline const ::censys_definitions::ZLint& Certificate::zlint() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Certificate.zlint)
+inline const ::zsearch::ZLint& Certificate::zlint() const {
+  // @@protoc_insertion_point(field_get:zsearch.Certificate.zlint)
   return zlint_ != NULL ? *zlint_
-                         : *::censys_definitions::ZLint::internal_default_instance();
+                         : *::zsearch::ZLint::internal_default_instance();
 }
-inline ::censys_definitions::ZLint* Certificate::mutable_zlint() {
+inline ::zsearch::ZLint* Certificate::mutable_zlint() {
   
   if (zlint_ == NULL) {
-    zlint_ = new ::censys_definitions::ZLint;
+    zlint_ = new ::zsearch::ZLint;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Certificate.zlint)
+  // @@protoc_insertion_point(field_mutable:zsearch.Certificate.zlint)
   return zlint_;
 }
-inline ::censys_definitions::ZLint* Certificate::release_zlint() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Certificate.zlint)
+inline ::zsearch::ZLint* Certificate::release_zlint() {
+  // @@protoc_insertion_point(field_release:zsearch.Certificate.zlint)
   
-  ::censys_definitions::ZLint* temp = zlint_;
+  ::zsearch::ZLint* temp = zlint_;
   zlint_ = NULL;
   return temp;
 }
-inline void Certificate::set_allocated_zlint(::censys_definitions::ZLint* zlint) {
+inline void Certificate::set_allocated_zlint(::zsearch::ZLint* zlint) {
   delete zlint_;
   zlint_ = zlint;
   if (zlint) {
@@ -2856,10 +2856,10 @@ inline void Certificate::set_allocated_zlint(::censys_definitions::ZLint* zlint)
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Certificate.zlint)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Certificate.zlint)
 }
 
-// .censys_definitions.CertificateRevocation revocation = 43;
+// .zsearch.CertificateRevocation revocation = 43;
 inline bool Certificate::has_revocation() const {
   return this != internal_default_instance() && revocation_ != NULL;
 }
@@ -2867,27 +2867,27 @@ inline void Certificate::clear_revocation() {
   if (GetArenaNoVirtual() == NULL && revocation_ != NULL) delete revocation_;
   revocation_ = NULL;
 }
-inline const ::censys_definitions::CertificateRevocation& Certificate::revocation() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Certificate.revocation)
+inline const ::zsearch::CertificateRevocation& Certificate::revocation() const {
+  // @@protoc_insertion_point(field_get:zsearch.Certificate.revocation)
   return revocation_ != NULL ? *revocation_
-                         : *::censys_definitions::CertificateRevocation::internal_default_instance();
+                         : *::zsearch::CertificateRevocation::internal_default_instance();
 }
-inline ::censys_definitions::CertificateRevocation* Certificate::mutable_revocation() {
+inline ::zsearch::CertificateRevocation* Certificate::mutable_revocation() {
   
   if (revocation_ == NULL) {
-    revocation_ = new ::censys_definitions::CertificateRevocation;
+    revocation_ = new ::zsearch::CertificateRevocation;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Certificate.revocation)
+  // @@protoc_insertion_point(field_mutable:zsearch.Certificate.revocation)
   return revocation_;
 }
-inline ::censys_definitions::CertificateRevocation* Certificate::release_revocation() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Certificate.revocation)
+inline ::zsearch::CertificateRevocation* Certificate::release_revocation() {
+  // @@protoc_insertion_point(field_release:zsearch.Certificate.revocation)
   
-  ::censys_definitions::CertificateRevocation* temp = revocation_;
+  ::zsearch::CertificateRevocation* temp = revocation_;
   revocation_ = NULL;
   return temp;
 }
-inline void Certificate::set_allocated_revocation(::censys_definitions::CertificateRevocation* revocation) {
+inline void Certificate::set_allocated_revocation(::zsearch::CertificateRevocation* revocation) {
   delete revocation_;
   revocation_ = revocation;
   if (revocation) {
@@ -2895,10 +2895,10 @@ inline void Certificate::set_allocated_revocation(::censys_definitions::Certific
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Certificate.revocation)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Certificate.revocation)
 }
 
-// .censys_definitions.CertificateAudit audit = 46;
+// .zsearch.CertificateAudit audit = 46;
 inline bool Certificate::has_audit() const {
   return this != internal_default_instance() && audit_ != NULL;
 }
@@ -2906,27 +2906,27 @@ inline void Certificate::clear_audit() {
   if (GetArenaNoVirtual() == NULL && audit_ != NULL) delete audit_;
   audit_ = NULL;
 }
-inline const ::censys_definitions::CertificateAudit& Certificate::audit() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Certificate.audit)
+inline const ::zsearch::CertificateAudit& Certificate::audit() const {
+  // @@protoc_insertion_point(field_get:zsearch.Certificate.audit)
   return audit_ != NULL ? *audit_
-                         : *::censys_definitions::CertificateAudit::internal_default_instance();
+                         : *::zsearch::CertificateAudit::internal_default_instance();
 }
-inline ::censys_definitions::CertificateAudit* Certificate::mutable_audit() {
+inline ::zsearch::CertificateAudit* Certificate::mutable_audit() {
   
   if (audit_ == NULL) {
-    audit_ = new ::censys_definitions::CertificateAudit;
+    audit_ = new ::zsearch::CertificateAudit;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Certificate.audit)
+  // @@protoc_insertion_point(field_mutable:zsearch.Certificate.audit)
   return audit_;
 }
-inline ::censys_definitions::CertificateAudit* Certificate::release_audit() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Certificate.audit)
+inline ::zsearch::CertificateAudit* Certificate::release_audit() {
+  // @@protoc_insertion_point(field_release:zsearch.Certificate.audit)
   
-  ::censys_definitions::CertificateAudit* temp = audit_;
+  ::zsearch::CertificateAudit* temp = audit_;
   audit_ = NULL;
   return temp;
 }
-inline void Certificate::set_allocated_audit(::censys_definitions::CertificateAudit* audit) {
+inline void Certificate::set_allocated_audit(::zsearch::CertificateAudit* audit) {
   delete audit_;
   audit_ = audit;
   if (audit) {
@@ -2934,7 +2934,7 @@ inline void Certificate::set_allocated_audit(::censys_definitions::CertificateAu
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Certificate.audit)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Certificate.audit)
 }
 
 // bool is_precert = 32;
@@ -2942,13 +2942,13 @@ inline void Certificate::clear_is_precert() {
   is_precert_ = false;
 }
 inline bool Certificate::is_precert() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Certificate.is_precert)
+  // @@protoc_insertion_point(field_get:zsearch.Certificate.is_precert)
   return is_precert_;
 }
 inline void Certificate::set_is_precert(bool value) {
   
   is_precert_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.Certificate.is_precert)
+  // @@protoc_insertion_point(field_set:zsearch.Certificate.is_precert)
 }
 
 // uint32 not_valid_after = 41;
@@ -2956,13 +2956,13 @@ inline void Certificate::clear_not_valid_after() {
   not_valid_after_ = 0u;
 }
 inline ::google::protobuf::uint32 Certificate::not_valid_after() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Certificate.not_valid_after)
+  // @@protoc_insertion_point(field_get:zsearch.Certificate.not_valid_after)
   return not_valid_after_;
 }
 inline void Certificate::set_not_valid_after(::google::protobuf::uint32 value) {
   
   not_valid_after_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.Certificate.not_valid_after)
+  // @@protoc_insertion_point(field_set:zsearch.Certificate.not_valid_after)
 }
 
 // uint32 not_valid_before = 42;
@@ -2970,13 +2970,13 @@ inline void Certificate::clear_not_valid_before() {
   not_valid_before_ = 0u;
 }
 inline ::google::protobuf::uint32 Certificate::not_valid_before() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Certificate.not_valid_before)
+  // @@protoc_insertion_point(field_get:zsearch.Certificate.not_valid_before)
   return not_valid_before_;
 }
 inline void Certificate::set_not_valid_before(::google::protobuf::uint32 value) {
   
   not_valid_before_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.Certificate.not_valid_before)
+  // @@protoc_insertion_point(field_set:zsearch.Certificate.not_valid_before)
 }
 
 // bool in_nss = 6;
@@ -2984,13 +2984,13 @@ inline void Certificate::clear_in_nss() {
   in_nss_ = false;
 }
 inline bool Certificate::in_nss() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Certificate.in_nss)
+  // @@protoc_insertion_point(field_get:zsearch.Certificate.in_nss)
   return in_nss_;
 }
 inline void Certificate::set_in_nss(bool value) {
   
   in_nss_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.Certificate.in_nss)
+  // @@protoc_insertion_point(field_set:zsearch.Certificate.in_nss)
 }
 
 // bool in_microsoft = 7 [deprecated = true];
@@ -2998,13 +2998,13 @@ inline void Certificate::clear_in_microsoft() {
   in_microsoft_ = false;
 }
 inline bool Certificate::in_microsoft() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Certificate.in_microsoft)
+  // @@protoc_insertion_point(field_get:zsearch.Certificate.in_microsoft)
   return in_microsoft_;
 }
 inline void Certificate::set_in_microsoft(bool value) {
   
   in_microsoft_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.Certificate.in_microsoft)
+  // @@protoc_insertion_point(field_set:zsearch.Certificate.in_microsoft)
 }
 
 // bool in_apple = 8 [deprecated = true];
@@ -3012,13 +3012,13 @@ inline void Certificate::clear_in_apple() {
   in_apple_ = false;
 }
 inline bool Certificate::in_apple() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Certificate.in_apple)
+  // @@protoc_insertion_point(field_get:zsearch.Certificate.in_apple)
   return in_apple_;
 }
 inline void Certificate::set_in_apple(bool value) {
   
   in_apple_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.Certificate.in_apple)
+  // @@protoc_insertion_point(field_set:zsearch.Certificate.in_apple)
 }
 
 // uint32 validation_timestamp = 10;
@@ -3026,13 +3026,13 @@ inline void Certificate::clear_validation_timestamp() {
   validation_timestamp_ = 0u;
 }
 inline ::google::protobuf::uint32 Certificate::validation_timestamp() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Certificate.validation_timestamp)
+  // @@protoc_insertion_point(field_get:zsearch.Certificate.validation_timestamp)
   return validation_timestamp_;
 }
 inline void Certificate::set_validation_timestamp(::google::protobuf::uint32 value) {
   
   validation_timestamp_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.Certificate.validation_timestamp)
+  // @@protoc_insertion_point(field_set:zsearch.Certificate.validation_timestamp)
 }
 
 // bool valid_nss = 11 [deprecated = true];
@@ -3040,13 +3040,13 @@ inline void Certificate::clear_valid_nss() {
   valid_nss_ = false;
 }
 inline bool Certificate::valid_nss() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Certificate.valid_nss)
+  // @@protoc_insertion_point(field_get:zsearch.Certificate.valid_nss)
   return valid_nss_;
 }
 inline void Certificate::set_valid_nss(bool value) {
   
   valid_nss_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.Certificate.valid_nss)
+  // @@protoc_insertion_point(field_set:zsearch.Certificate.valid_nss)
 }
 
 // bool valid_microsoft = 12 [deprecated = true];
@@ -3054,13 +3054,13 @@ inline void Certificate::clear_valid_microsoft() {
   valid_microsoft_ = false;
 }
 inline bool Certificate::valid_microsoft() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Certificate.valid_microsoft)
+  // @@protoc_insertion_point(field_get:zsearch.Certificate.valid_microsoft)
   return valid_microsoft_;
 }
 inline void Certificate::set_valid_microsoft(bool value) {
   
   valid_microsoft_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.Certificate.valid_microsoft)
+  // @@protoc_insertion_point(field_set:zsearch.Certificate.valid_microsoft)
 }
 
 // bool valid_apple = 13 [deprecated = true];
@@ -3068,13 +3068,13 @@ inline void Certificate::clear_valid_apple() {
   valid_apple_ = false;
 }
 inline bool Certificate::valid_apple() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Certificate.valid_apple)
+  // @@protoc_insertion_point(field_get:zsearch.Certificate.valid_apple)
   return valid_apple_;
 }
 inline void Certificate::set_valid_apple(bool value) {
   
   valid_apple_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.Certificate.valid_apple)
+  // @@protoc_insertion_point(field_set:zsearch.Certificate.valid_apple)
 }
 
 // bool was_valid_nss = 14;
@@ -3082,13 +3082,13 @@ inline void Certificate::clear_was_valid_nss() {
   was_valid_nss_ = false;
 }
 inline bool Certificate::was_valid_nss() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Certificate.was_valid_nss)
+  // @@protoc_insertion_point(field_get:zsearch.Certificate.was_valid_nss)
   return was_valid_nss_;
 }
 inline void Certificate::set_was_valid_nss(bool value) {
   
   was_valid_nss_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.Certificate.was_valid_nss)
+  // @@protoc_insertion_point(field_set:zsearch.Certificate.was_valid_nss)
 }
 
 // bool was_valid_microsoft = 15 [deprecated = true];
@@ -3096,13 +3096,13 @@ inline void Certificate::clear_was_valid_microsoft() {
   was_valid_microsoft_ = false;
 }
 inline bool Certificate::was_valid_microsoft() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Certificate.was_valid_microsoft)
+  // @@protoc_insertion_point(field_get:zsearch.Certificate.was_valid_microsoft)
   return was_valid_microsoft_;
 }
 inline void Certificate::set_was_valid_microsoft(bool value) {
   
   was_valid_microsoft_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.Certificate.was_valid_microsoft)
+  // @@protoc_insertion_point(field_set:zsearch.Certificate.was_valid_microsoft)
 }
 
 // bool was_valid_apple = 16 [deprecated = true];
@@ -3110,13 +3110,13 @@ inline void Certificate::clear_was_valid_apple() {
   was_valid_apple_ = false;
 }
 inline bool Certificate::was_valid_apple() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Certificate.was_valid_apple)
+  // @@protoc_insertion_point(field_get:zsearch.Certificate.was_valid_apple)
   return was_valid_apple_;
 }
 inline void Certificate::set_was_valid_apple(bool value) {
   
   was_valid_apple_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.Certificate.was_valid_apple)
+  // @@protoc_insertion_point(field_set:zsearch.Certificate.was_valid_apple)
 }
 
 // bool was_in_nss = 17 [deprecated = true];
@@ -3124,13 +3124,13 @@ inline void Certificate::clear_was_in_nss() {
   was_in_nss_ = false;
 }
 inline bool Certificate::was_in_nss() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Certificate.was_in_nss)
+  // @@protoc_insertion_point(field_get:zsearch.Certificate.was_in_nss)
   return was_in_nss_;
 }
 inline void Certificate::set_was_in_nss(bool value) {
   
   was_in_nss_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.Certificate.was_in_nss)
+  // @@protoc_insertion_point(field_set:zsearch.Certificate.was_in_nss)
 }
 
 // bool was_in_microsoft = 18 [deprecated = true];
@@ -3138,13 +3138,13 @@ inline void Certificate::clear_was_in_microsoft() {
   was_in_microsoft_ = false;
 }
 inline bool Certificate::was_in_microsoft() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Certificate.was_in_microsoft)
+  // @@protoc_insertion_point(field_get:zsearch.Certificate.was_in_microsoft)
   return was_in_microsoft_;
 }
 inline void Certificate::set_was_in_microsoft(bool value) {
   
   was_in_microsoft_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.Certificate.was_in_microsoft)
+  // @@protoc_insertion_point(field_set:zsearch.Certificate.was_in_microsoft)
 }
 
 // bool was_in_apple = 19 [deprecated = true];
@@ -3152,13 +3152,13 @@ inline void Certificate::clear_was_in_apple() {
   was_in_apple_ = false;
 }
 inline bool Certificate::was_in_apple() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Certificate.was_in_apple)
+  // @@protoc_insertion_point(field_get:zsearch.Certificate.was_in_apple)
   return was_in_apple_;
 }
 inline void Certificate::set_was_in_apple(bool value) {
   
   was_in_apple_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.Certificate.was_in_apple)
+  // @@protoc_insertion_point(field_set:zsearch.Certificate.was_in_apple)
 }
 
 // bool current_valid_nss = 20;
@@ -3166,13 +3166,13 @@ inline void Certificate::clear_current_valid_nss() {
   current_valid_nss_ = false;
 }
 inline bool Certificate::current_valid_nss() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Certificate.current_valid_nss)
+  // @@protoc_insertion_point(field_get:zsearch.Certificate.current_valid_nss)
   return current_valid_nss_;
 }
 inline void Certificate::set_current_valid_nss(bool value) {
   
   current_valid_nss_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.Certificate.current_valid_nss)
+  // @@protoc_insertion_point(field_set:zsearch.Certificate.current_valid_nss)
 }
 
 // bool current_valid_microsoft = 21 [deprecated = true];
@@ -3180,13 +3180,13 @@ inline void Certificate::clear_current_valid_microsoft() {
   current_valid_microsoft_ = false;
 }
 inline bool Certificate::current_valid_microsoft() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Certificate.current_valid_microsoft)
+  // @@protoc_insertion_point(field_get:zsearch.Certificate.current_valid_microsoft)
   return current_valid_microsoft_;
 }
 inline void Certificate::set_current_valid_microsoft(bool value) {
   
   current_valid_microsoft_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.Certificate.current_valid_microsoft)
+  // @@protoc_insertion_point(field_set:zsearch.Certificate.current_valid_microsoft)
 }
 
 // bool current_valid_apple = 22 [deprecated = true];
@@ -3194,13 +3194,13 @@ inline void Certificate::clear_current_valid_apple() {
   current_valid_apple_ = false;
 }
 inline bool Certificate::current_valid_apple() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Certificate.current_valid_apple)
+  // @@protoc_insertion_point(field_get:zsearch.Certificate.current_valid_apple)
   return current_valid_apple_;
 }
 inline void Certificate::set_current_valid_apple(bool value) {
   
   current_valid_apple_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.Certificate.current_valid_apple)
+  // @@protoc_insertion_point(field_set:zsearch.Certificate.current_valid_apple)
 }
 
 // bool current_in_nss = 23;
@@ -3208,13 +3208,13 @@ inline void Certificate::clear_current_in_nss() {
   current_in_nss_ = false;
 }
 inline bool Certificate::current_in_nss() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Certificate.current_in_nss)
+  // @@protoc_insertion_point(field_get:zsearch.Certificate.current_in_nss)
   return current_in_nss_;
 }
 inline void Certificate::set_current_in_nss(bool value) {
   
   current_in_nss_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.Certificate.current_in_nss)
+  // @@protoc_insertion_point(field_set:zsearch.Certificate.current_in_nss)
 }
 
 // bool current_in_microsoft = 24 [deprecated = true];
@@ -3222,13 +3222,13 @@ inline void Certificate::clear_current_in_microsoft() {
   current_in_microsoft_ = false;
 }
 inline bool Certificate::current_in_microsoft() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Certificate.current_in_microsoft)
+  // @@protoc_insertion_point(field_get:zsearch.Certificate.current_in_microsoft)
   return current_in_microsoft_;
 }
 inline void Certificate::set_current_in_microsoft(bool value) {
   
   current_in_microsoft_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.Certificate.current_in_microsoft)
+  // @@protoc_insertion_point(field_set:zsearch.Certificate.current_in_microsoft)
 }
 
 // bool current_in_apple = 25 [deprecated = true];
@@ -3236,16 +3236,16 @@ inline void Certificate::clear_current_in_apple() {
   current_in_apple_ = false;
 }
 inline bool Certificate::current_in_apple() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Certificate.current_in_apple)
+  // @@protoc_insertion_point(field_get:zsearch.Certificate.current_in_apple)
   return current_in_apple_;
 }
 inline void Certificate::set_current_in_apple(bool value) {
   
   current_in_apple_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.Certificate.current_in_apple)
+  // @@protoc_insertion_point(field_set:zsearch.Certificate.current_in_apple)
 }
 
-// .censys_definitions.MozillaSalesForceStatus nss_audit = 31 [deprecated = true];
+// .zsearch.MozillaSalesForceStatus nss_audit = 31 [deprecated = true];
 inline bool Certificate::has_nss_audit() const {
   return this != internal_default_instance() && nss_audit_ != NULL;
 }
@@ -3253,27 +3253,27 @@ inline void Certificate::clear_nss_audit() {
   if (GetArenaNoVirtual() == NULL && nss_audit_ != NULL) delete nss_audit_;
   nss_audit_ = NULL;
 }
-inline const ::censys_definitions::MozillaSalesForceStatus& Certificate::nss_audit() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Certificate.nss_audit)
+inline const ::zsearch::MozillaSalesForceStatus& Certificate::nss_audit() const {
+  // @@protoc_insertion_point(field_get:zsearch.Certificate.nss_audit)
   return nss_audit_ != NULL ? *nss_audit_
-                         : *::censys_definitions::MozillaSalesForceStatus::internal_default_instance();
+                         : *::zsearch::MozillaSalesForceStatus::internal_default_instance();
 }
-inline ::censys_definitions::MozillaSalesForceStatus* Certificate::mutable_nss_audit() {
+inline ::zsearch::MozillaSalesForceStatus* Certificate::mutable_nss_audit() {
   
   if (nss_audit_ == NULL) {
-    nss_audit_ = new ::censys_definitions::MozillaSalesForceStatus;
+    nss_audit_ = new ::zsearch::MozillaSalesForceStatus;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Certificate.nss_audit)
+  // @@protoc_insertion_point(field_mutable:zsearch.Certificate.nss_audit)
   return nss_audit_;
 }
-inline ::censys_definitions::MozillaSalesForceStatus* Certificate::release_nss_audit() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Certificate.nss_audit)
+inline ::zsearch::MozillaSalesForceStatus* Certificate::release_nss_audit() {
+  // @@protoc_insertion_point(field_release:zsearch.Certificate.nss_audit)
   
-  ::censys_definitions::MozillaSalesForceStatus* temp = nss_audit_;
+  ::zsearch::MozillaSalesForceStatus* temp = nss_audit_;
   nss_audit_ = NULL;
   return temp;
 }
-inline void Certificate::set_allocated_nss_audit(::censys_definitions::MozillaSalesForceStatus* nss_audit) {
+inline void Certificate::set_allocated_nss_audit(::zsearch::MozillaSalesForceStatus* nss_audit) {
   delete nss_audit_;
   nss_audit_ = nss_audit;
   if (nss_audit) {
@@ -3281,7 +3281,7 @@ inline void Certificate::set_allocated_nss_audit(::censys_definitions::MozillaSa
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Certificate.nss_audit)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Certificate.nss_audit)
 }
 
 // bool should_post_process = 27 [deprecated = true];
@@ -3289,13 +3289,13 @@ inline void Certificate::clear_should_post_process() {
   should_post_process_ = false;
 }
 inline bool Certificate::should_post_process() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Certificate.should_post_process)
+  // @@protoc_insertion_point(field_get:zsearch.Certificate.should_post_process)
   return should_post_process_;
 }
 inline void Certificate::set_should_post_process(bool value) {
   
   should_post_process_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.Certificate.should_post_process)
+  // @@protoc_insertion_point(field_set:zsearch.Certificate.should_post_process)
 }
 
 // bool do_not_post_process = 36 [deprecated = true];
@@ -3303,13 +3303,13 @@ inline void Certificate::clear_do_not_post_process() {
   do_not_post_process_ = false;
 }
 inline bool Certificate::do_not_post_process() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Certificate.do_not_post_process)
+  // @@protoc_insertion_point(field_get:zsearch.Certificate.do_not_post_process)
   return do_not_post_process_;
 }
 inline void Certificate::set_do_not_post_process(bool value) {
   
   do_not_post_process_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.Certificate.do_not_post_process)
+  // @@protoc_insertion_point(field_set:zsearch.Certificate.do_not_post_process)
 }
 
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -3327,31 +3327,31 @@ inline void Certificate::set_do_not_post_process(bool value) {
 // @@protoc_insertion_point(namespace_scope)
 
 
-}  // namespace censys_definitions
+}  // namespace zsearch
 
 #ifndef SWIG
 namespace google {
 namespace protobuf {
 
-template <> struct is_proto_enum< ::censys_definitions::CertificateType> : ::google::protobuf::internal::true_type {};
+template <> struct is_proto_enum< ::zsearch::CertificateType> : ::google::protobuf::internal::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::censys_definitions::CertificateType>() {
-  return ::censys_definitions::CertificateType_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::zsearch::CertificateType>() {
+  return ::zsearch::CertificateType_descriptor();
 }
-template <> struct is_proto_enum< ::censys_definitions::CertificateSource> : ::google::protobuf::internal::true_type {};
+template <> struct is_proto_enum< ::zsearch::CertificateSource> : ::google::protobuf::internal::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::censys_definitions::CertificateSource>() {
-  return ::censys_definitions::CertificateSource_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::zsearch::CertificateSource>() {
+  return ::zsearch::CertificateSource_descriptor();
 }
-template <> struct is_proto_enum< ::censys_definitions::CertificateParseStatus> : ::google::protobuf::internal::true_type {};
+template <> struct is_proto_enum< ::zsearch::CertificateParseStatus> : ::google::protobuf::internal::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::censys_definitions::CertificateParseStatus>() {
-  return ::censys_definitions::CertificateParseStatus_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::zsearch::CertificateParseStatus>() {
+  return ::zsearch::CertificateParseStatus_descriptor();
 }
-template <> struct is_proto_enum< ::censys_definitions::CertificateRevocationReason> : ::google::protobuf::internal::true_type {};
+template <> struct is_proto_enum< ::zsearch::CertificateRevocationReason> : ::google::protobuf::internal::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::censys_definitions::CertificateRevocationReason>() {
-  return ::censys_definitions::CertificateRevocationReason_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::zsearch::CertificateRevocationReason>() {
+  return ::zsearch::CertificateRevocationReason_descriptor();
 }
 
 }  // namespace protobuf

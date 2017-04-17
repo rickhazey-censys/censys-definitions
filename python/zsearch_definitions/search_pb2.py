@@ -20,9 +20,9 @@ import rpc_pb2 as rpc__pb2
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='search.proto',
-  package='censys_definitions',
+  package='zsearch',
   syntax='proto3',
-  serialized_pb=_b('\n\x0csearch.proto\x12\x12\x63\x65nsys_definitions\x1a\x0f\x61nonstore.proto\x1a\x0fhoststore.proto\x1a\trpc.proto2\x8c\x0c\n\x0c\x41\x64minService\x12K\n\x08Shutdown\x12\x1b.censys_definitions.Command\x1a .censys_definitions.CommandReply\"\x00\x12I\n\x06Status\x12\x1b.censys_definitions.Command\x1a .censys_definitions.CommandReply\"\x00\x12M\n\nStatistics\x12\x1b.censys_definitions.Command\x1a .censys_definitions.CommandReply\"\x00\x12L\n\tPruneIPv4\x12\x1b.censys_definitions.Command\x1a .censys_definitions.CommandReply\"\x00\x12N\n\x0bPruneDomain\x12\x1b.censys_definitions.Command\x1a .censys_definitions.CommandReply\"\x00\x12O\n\x0cUpdateASData\x12\x1b.censys_definitions.Command\x1a .censys_definitions.CommandReply\"\x00\x12U\n\x12UpdateLocationData\x12\x1b.censys_definitions.Command\x1a .censys_definitions.CommandReply\"\x00\x12W\n\x14ValidateCertificates\x12\x1b.censys_definitions.Command\x1a .censys_definitions.CommandReply\"\x00\x12W\n\x14\x46ixCertificateSource\x12\x1b.censys_definitions.Command\x1a .censys_definitions.CommandReply\"\x00\x12Q\n\x0e\x44umpIPv4ToJSON\x12\x1b.censys_definitions.Command\x1a .censys_definitions.CommandReply\"\x00\x12S\n\x10\x44umpDomainToJSON\x12\x1b.censys_definitions.Command\x1a .censys_definitions.CommandReply\"\x00\x12Y\n\x16\x44umpCertificatesToJSON\x12\x1b.censys_definitions.Command\x1a .censys_definitions.CommandReply\"\x00\x12Q\n\x0e\x44umpKeysToJSON\x12\x1b.censys_definitions.Command\x1a .censys_definitions.CommandReply\"\x00\x12W\n\x14RegenerateIPv4Deltas\x12\x1b.censys_definitions.Command\x1a .censys_definitions.CommandReply\"\x00\x12Y\n\x16RegenerateDomainDeltas\x12\x1b.censys_definitions.Command\x1a .censys_definitions.CommandReply\"\x00\x12^\n\x1bRegenerateCertificateDeltas\x12\x1b.censys_definitions.Command\x1a .censys_definitions.CommandReply\"\x00\x12j\n RegenerateSingleCertificateDelta\x12\".censys_definitions.AnonymousQuery\x1a .censys_definitions.CommandReply\"\x00\x12G\n\x04Ping\x12\x1b.censys_definitions.Command\x1a .censys_definitions.CommandReply\"\x00\x32\xd9\x0e\n\x0cQueryService\x12[\n\x11GetHostIPv4Record\x12\x1d.censys_definitions.HostQuery\x1a%.censys_definitions.HostQueryResponse\"\x00\x12L\n\x11PutHostIPv4Record\x12\x1a.censys_definitions.Record\x1a\x19.censys_definitions.Delta\"\x00\x12O\n\x11\x44\x65lHostIPv4Record\x12\x1d.censys_definitions.HostQuery\x1a\x19.censys_definitions.Delta\"\x00\x12[\n\x11GetAllIPv4Records\x12\x1d.censys_definitions.HostQuery\x1a%.censys_definitions.HostQueryResponse\"\x00\x12N\n\x10GetHostIPv4Delta\x12\x1d.censys_definitions.HostQuery\x1a\x19.censys_definitions.Delta\"\x00\x12]\n\x13GetHostDomainRecord\x12\x1d.censys_definitions.HostQuery\x1a%.censys_definitions.HostQueryResponse\"\x00\x12N\n\x13PutHostDomainRecord\x12\x1a.censys_definitions.Record\x1a\x19.censys_definitions.Delta\"\x00\x12Q\n\x13\x44\x65lHostDomainRecord\x12\x1d.censys_definitions.HostQuery\x1a\x19.censys_definitions.Delta\"\x00\x12]\n\x13GetAllDomainRecords\x12\x1d.censys_definitions.HostQuery\x1a%.censys_definitions.HostQueryResponse\"\x00\x12P\n\x12GetHostDomainDelta\x12\x1d.censys_definitions.HostQuery\x1a\x19.censys_definitions.Delta\"\x00\x12\x62\n\x0eGetCertificate\x12\".censys_definitions.AnonymousQuery\x1a*.censys_definitions.AnonymousQueryResponse\"\x00\x12^\n\x11UpsertCertificate\x12#.censys_definitions.AnonymousRecord\x1a\".censys_definitions.AnonymousDelta\"\x00\x12\x61\n\x14UpsertRawCertificate\x12#.censys_definitions.AnonymousRecord\x1a\".censys_definitions.AnonymousDelta\"\x00\x12g\n\x13GetCryptographicKey\x12\".censys_definitions.AnonymousQuery\x1a*.censys_definitions.AnonymousQueryResponse\"\x00\x12\x63\n\x16UpsertCryptographicKey\x12#.censys_definitions.AnonymousRecord\x1a\".censys_definitions.AnonymousDelta\"\x00\x12V\n\x11GetPublicLocation\x12\x1d.censys_definitions.HostQuery\x1a .censys_definitions.LocationAtom\"\x00\x12Z\n\x15GetRestrictedLocation\x12\x1d.censys_definitions.HostQuery\x1a .censys_definitions.LocationAtom\"\x00\x12G\n\x08GetWHOIS\x12\x1d.censys_definitions.HostQuery\x1a\x1a.censys_definitions.Record\"\x00\x12N\n\x0fGetUserMetadata\x12\x1d.censys_definitions.HostQuery\x1a\x1a.censys_definitions.Record\"\x00\x12Q\n\x0fPutUserMetadata\x12\x1a.censys_definitions.Record\x1a .censys_definitions.CommandReply\"\x00\x12X\n\x0cGetRootStore\x12\".censys_definitions.RootStoreQuery\x1a\".censys_definitions.RootStoreReply\"\x00\x62\x06proto3')
+  serialized_pb=_b('\n\x0csearch.proto\x12\x07zsearch\x1a\x0f\x61nonstore.proto\x1a\x0fhoststore.proto\x1a\trpc.proto2\x80\t\n\x0c\x41\x64minService\x12\x35\n\x08Shutdown\x12\x10.zsearch.Command\x1a\x15.zsearch.CommandReply\"\x00\x12\x33\n\x06Status\x12\x10.zsearch.Command\x1a\x15.zsearch.CommandReply\"\x00\x12\x37\n\nStatistics\x12\x10.zsearch.Command\x1a\x15.zsearch.CommandReply\"\x00\x12\x36\n\tPruneIPv4\x12\x10.zsearch.Command\x1a\x15.zsearch.CommandReply\"\x00\x12\x38\n\x0bPruneDomain\x12\x10.zsearch.Command\x1a\x15.zsearch.CommandReply\"\x00\x12\x39\n\x0cUpdateASData\x12\x10.zsearch.Command\x1a\x15.zsearch.CommandReply\"\x00\x12?\n\x12UpdateLocationData\x12\x10.zsearch.Command\x1a\x15.zsearch.CommandReply\"\x00\x12\x41\n\x14ValidateCertificates\x12\x10.zsearch.Command\x1a\x15.zsearch.CommandReply\"\x00\x12\x41\n\x14\x46ixCertificateSource\x12\x10.zsearch.Command\x1a\x15.zsearch.CommandReply\"\x00\x12;\n\x0e\x44umpIPv4ToJSON\x12\x10.zsearch.Command\x1a\x15.zsearch.CommandReply\"\x00\x12=\n\x10\x44umpDomainToJSON\x12\x10.zsearch.Command\x1a\x15.zsearch.CommandReply\"\x00\x12\x43\n\x16\x44umpCertificatesToJSON\x12\x10.zsearch.Command\x1a\x15.zsearch.CommandReply\"\x00\x12;\n\x0e\x44umpKeysToJSON\x12\x10.zsearch.Command\x1a\x15.zsearch.CommandReply\"\x00\x12\x41\n\x14RegenerateIPv4Deltas\x12\x10.zsearch.Command\x1a\x15.zsearch.CommandReply\"\x00\x12\x43\n\x16RegenerateDomainDeltas\x12\x10.zsearch.Command\x1a\x15.zsearch.CommandReply\"\x00\x12H\n\x1bRegenerateCertificateDeltas\x12\x10.zsearch.Command\x1a\x15.zsearch.CommandReply\"\x00\x12T\n RegenerateSingleCertificateDelta\x12\x17.zsearch.AnonymousQuery\x1a\x15.zsearch.CommandReply\"\x00\x12\x31\n\x04Ping\x12\x10.zsearch.Command\x1a\x15.zsearch.CommandReply\"\x00\x32\x8b\x0b\n\x0cQueryService\x12\x45\n\x11GetHostIPv4Record\x12\x12.zsearch.HostQuery\x1a\x1a.zsearch.HostQueryResponse\"\x00\x12\x36\n\x11PutHostIPv4Record\x12\x0f.zsearch.Record\x1a\x0e.zsearch.Delta\"\x00\x12\x39\n\x11\x44\x65lHostIPv4Record\x12\x12.zsearch.HostQuery\x1a\x0e.zsearch.Delta\"\x00\x12\x45\n\x11GetAllIPv4Records\x12\x12.zsearch.HostQuery\x1a\x1a.zsearch.HostQueryResponse\"\x00\x12\x38\n\x10GetHostIPv4Delta\x12\x12.zsearch.HostQuery\x1a\x0e.zsearch.Delta\"\x00\x12G\n\x13GetHostDomainRecord\x12\x12.zsearch.HostQuery\x1a\x1a.zsearch.HostQueryResponse\"\x00\x12\x38\n\x13PutHostDomainRecord\x12\x0f.zsearch.Record\x1a\x0e.zsearch.Delta\"\x00\x12;\n\x13\x44\x65lHostDomainRecord\x12\x12.zsearch.HostQuery\x1a\x0e.zsearch.Delta\"\x00\x12G\n\x13GetAllDomainRecords\x12\x12.zsearch.HostQuery\x1a\x1a.zsearch.HostQueryResponse\"\x00\x12:\n\x12GetHostDomainDelta\x12\x12.zsearch.HostQuery\x1a\x0e.zsearch.Delta\"\x00\x12L\n\x0eGetCertificate\x12\x17.zsearch.AnonymousQuery\x1a\x1f.zsearch.AnonymousQueryResponse\"\x00\x12H\n\x11UpsertCertificate\x12\x18.zsearch.AnonymousRecord\x1a\x17.zsearch.AnonymousDelta\"\x00\x12K\n\x14UpsertRawCertificate\x12\x18.zsearch.AnonymousRecord\x1a\x17.zsearch.AnonymousDelta\"\x00\x12Q\n\x13GetCryptographicKey\x12\x17.zsearch.AnonymousQuery\x1a\x1f.zsearch.AnonymousQueryResponse\"\x00\x12M\n\x16UpsertCryptographicKey\x12\x18.zsearch.AnonymousRecord\x1a\x17.zsearch.AnonymousDelta\"\x00\x12@\n\x11GetPublicLocation\x12\x12.zsearch.HostQuery\x1a\x15.zsearch.LocationAtom\"\x00\x12\x44\n\x15GetRestrictedLocation\x12\x12.zsearch.HostQuery\x1a\x15.zsearch.LocationAtom\"\x00\x12\x31\n\x08GetWHOIS\x12\x12.zsearch.HostQuery\x1a\x0f.zsearch.Record\"\x00\x12\x38\n\x0fGetUserMetadata\x12\x12.zsearch.HostQuery\x1a\x0f.zsearch.Record\"\x00\x12;\n\x0fPutUserMetadata\x12\x0f.zsearch.Record\x1a\x15.zsearch.CommandReply\"\x00\x12\x42\n\x0cGetRootStore\x12\x17.zsearch.RootStoreQuery\x1a\x17.zsearch.RootStoreReply\"\x00\x62\x06proto3')
   ,
   dependencies=[anonstore__pb2.DESCRIPTOR,hoststore__pb2.DESCRIPTOR,rpc__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -53,92 +53,92 @@ try:
         channel: A grpc.Channel.
       """
       self.Shutdown = channel.unary_unary(
-          '/censys_definitions.AdminService/Shutdown',
+          '/zsearch.AdminService/Shutdown',
           request_serializer=rpc__pb2.Command.SerializeToString,
           response_deserializer=rpc__pb2.CommandReply.FromString,
           )
       self.Status = channel.unary_unary(
-          '/censys_definitions.AdminService/Status',
+          '/zsearch.AdminService/Status',
           request_serializer=rpc__pb2.Command.SerializeToString,
           response_deserializer=rpc__pb2.CommandReply.FromString,
           )
       self.Statistics = channel.unary_unary(
-          '/censys_definitions.AdminService/Statistics',
+          '/zsearch.AdminService/Statistics',
           request_serializer=rpc__pb2.Command.SerializeToString,
           response_deserializer=rpc__pb2.CommandReply.FromString,
           )
       self.PruneIPv4 = channel.unary_unary(
-          '/censys_definitions.AdminService/PruneIPv4',
+          '/zsearch.AdminService/PruneIPv4',
           request_serializer=rpc__pb2.Command.SerializeToString,
           response_deserializer=rpc__pb2.CommandReply.FromString,
           )
       self.PruneDomain = channel.unary_unary(
-          '/censys_definitions.AdminService/PruneDomain',
+          '/zsearch.AdminService/PruneDomain',
           request_serializer=rpc__pb2.Command.SerializeToString,
           response_deserializer=rpc__pb2.CommandReply.FromString,
           )
       self.UpdateASData = channel.unary_unary(
-          '/censys_definitions.AdminService/UpdateASData',
+          '/zsearch.AdminService/UpdateASData',
           request_serializer=rpc__pb2.Command.SerializeToString,
           response_deserializer=rpc__pb2.CommandReply.FromString,
           )
       self.UpdateLocationData = channel.unary_unary(
-          '/censys_definitions.AdminService/UpdateLocationData',
+          '/zsearch.AdminService/UpdateLocationData',
           request_serializer=rpc__pb2.Command.SerializeToString,
           response_deserializer=rpc__pb2.CommandReply.FromString,
           )
       self.ValidateCertificates = channel.unary_unary(
-          '/censys_definitions.AdminService/ValidateCertificates',
+          '/zsearch.AdminService/ValidateCertificates',
           request_serializer=rpc__pb2.Command.SerializeToString,
           response_deserializer=rpc__pb2.CommandReply.FromString,
           )
       self.FixCertificateSource = channel.unary_unary(
-          '/censys_definitions.AdminService/FixCertificateSource',
+          '/zsearch.AdminService/FixCertificateSource',
           request_serializer=rpc__pb2.Command.SerializeToString,
           response_deserializer=rpc__pb2.CommandReply.FromString,
           )
       self.DumpIPv4ToJSON = channel.unary_unary(
-          '/censys_definitions.AdminService/DumpIPv4ToJSON',
+          '/zsearch.AdminService/DumpIPv4ToJSON',
           request_serializer=rpc__pb2.Command.SerializeToString,
           response_deserializer=rpc__pb2.CommandReply.FromString,
           )
       self.DumpDomainToJSON = channel.unary_unary(
-          '/censys_definitions.AdminService/DumpDomainToJSON',
+          '/zsearch.AdminService/DumpDomainToJSON',
           request_serializer=rpc__pb2.Command.SerializeToString,
           response_deserializer=rpc__pb2.CommandReply.FromString,
           )
       self.DumpCertificatesToJSON = channel.unary_unary(
-          '/censys_definitions.AdminService/DumpCertificatesToJSON',
+          '/zsearch.AdminService/DumpCertificatesToJSON',
           request_serializer=rpc__pb2.Command.SerializeToString,
           response_deserializer=rpc__pb2.CommandReply.FromString,
           )
       self.DumpKeysToJSON = channel.unary_unary(
-          '/censys_definitions.AdminService/DumpKeysToJSON',
+          '/zsearch.AdminService/DumpKeysToJSON',
           request_serializer=rpc__pb2.Command.SerializeToString,
           response_deserializer=rpc__pb2.CommandReply.FromString,
           )
       self.RegenerateIPv4Deltas = channel.unary_unary(
-          '/censys_definitions.AdminService/RegenerateIPv4Deltas',
+          '/zsearch.AdminService/RegenerateIPv4Deltas',
           request_serializer=rpc__pb2.Command.SerializeToString,
           response_deserializer=rpc__pb2.CommandReply.FromString,
           )
       self.RegenerateDomainDeltas = channel.unary_unary(
-          '/censys_definitions.AdminService/RegenerateDomainDeltas',
+          '/zsearch.AdminService/RegenerateDomainDeltas',
           request_serializer=rpc__pb2.Command.SerializeToString,
           response_deserializer=rpc__pb2.CommandReply.FromString,
           )
       self.RegenerateCertificateDeltas = channel.unary_unary(
-          '/censys_definitions.AdminService/RegenerateCertificateDeltas',
+          '/zsearch.AdminService/RegenerateCertificateDeltas',
           request_serializer=rpc__pb2.Command.SerializeToString,
           response_deserializer=rpc__pb2.CommandReply.FromString,
           )
       self.RegenerateSingleCertificateDelta = channel.unary_unary(
-          '/censys_definitions.AdminService/RegenerateSingleCertificateDelta',
+          '/zsearch.AdminService/RegenerateSingleCertificateDelta',
           request_serializer=rpc__pb2.AnonymousQuery.SerializeToString,
           response_deserializer=rpc__pb2.CommandReply.FromString,
           )
       self.Ping = channel.unary_unary(
-          '/censys_definitions.AdminService/Ping',
+          '/zsearch.AdminService/Ping',
           request_serializer=rpc__pb2.Command.SerializeToString,
           response_deserializer=rpc__pb2.CommandReply.FromString,
           )
@@ -334,7 +334,7 @@ try:
         ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-        'censys_definitions.AdminService', rpc_method_handlers)
+        'zsearch.AdminService', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
 
 
@@ -347,107 +347,107 @@ try:
         channel: A grpc.Channel.
       """
       self.GetHostIPv4Record = channel.unary_unary(
-          '/censys_definitions.QueryService/GetHostIPv4Record',
+          '/zsearch.QueryService/GetHostIPv4Record',
           request_serializer=rpc__pb2.HostQuery.SerializeToString,
           response_deserializer=rpc__pb2.HostQueryResponse.FromString,
           )
       self.PutHostIPv4Record = channel.unary_unary(
-          '/censys_definitions.QueryService/PutHostIPv4Record',
+          '/zsearch.QueryService/PutHostIPv4Record',
           request_serializer=hoststore__pb2.Record.SerializeToString,
           response_deserializer=hoststore__pb2.Delta.FromString,
           )
       self.DelHostIPv4Record = channel.unary_unary(
-          '/censys_definitions.QueryService/DelHostIPv4Record',
+          '/zsearch.QueryService/DelHostIPv4Record',
           request_serializer=rpc__pb2.HostQuery.SerializeToString,
           response_deserializer=hoststore__pb2.Delta.FromString,
           )
       self.GetAllIPv4Records = channel.unary_unary(
-          '/censys_definitions.QueryService/GetAllIPv4Records',
+          '/zsearch.QueryService/GetAllIPv4Records',
           request_serializer=rpc__pb2.HostQuery.SerializeToString,
           response_deserializer=rpc__pb2.HostQueryResponse.FromString,
           )
       self.GetHostIPv4Delta = channel.unary_unary(
-          '/censys_definitions.QueryService/GetHostIPv4Delta',
+          '/zsearch.QueryService/GetHostIPv4Delta',
           request_serializer=rpc__pb2.HostQuery.SerializeToString,
           response_deserializer=hoststore__pb2.Delta.FromString,
           )
       self.GetHostDomainRecord = channel.unary_unary(
-          '/censys_definitions.QueryService/GetHostDomainRecord',
+          '/zsearch.QueryService/GetHostDomainRecord',
           request_serializer=rpc__pb2.HostQuery.SerializeToString,
           response_deserializer=rpc__pb2.HostQueryResponse.FromString,
           )
       self.PutHostDomainRecord = channel.unary_unary(
-          '/censys_definitions.QueryService/PutHostDomainRecord',
+          '/zsearch.QueryService/PutHostDomainRecord',
           request_serializer=hoststore__pb2.Record.SerializeToString,
           response_deserializer=hoststore__pb2.Delta.FromString,
           )
       self.DelHostDomainRecord = channel.unary_unary(
-          '/censys_definitions.QueryService/DelHostDomainRecord',
+          '/zsearch.QueryService/DelHostDomainRecord',
           request_serializer=rpc__pb2.HostQuery.SerializeToString,
           response_deserializer=hoststore__pb2.Delta.FromString,
           )
       self.GetAllDomainRecords = channel.unary_unary(
-          '/censys_definitions.QueryService/GetAllDomainRecords',
+          '/zsearch.QueryService/GetAllDomainRecords',
           request_serializer=rpc__pb2.HostQuery.SerializeToString,
           response_deserializer=rpc__pb2.HostQueryResponse.FromString,
           )
       self.GetHostDomainDelta = channel.unary_unary(
-          '/censys_definitions.QueryService/GetHostDomainDelta',
+          '/zsearch.QueryService/GetHostDomainDelta',
           request_serializer=rpc__pb2.HostQuery.SerializeToString,
           response_deserializer=hoststore__pb2.Delta.FromString,
           )
       self.GetCertificate = channel.unary_unary(
-          '/censys_definitions.QueryService/GetCertificate',
+          '/zsearch.QueryService/GetCertificate',
           request_serializer=rpc__pb2.AnonymousQuery.SerializeToString,
           response_deserializer=rpc__pb2.AnonymousQueryResponse.FromString,
           )
       self.UpsertCertificate = channel.unary_unary(
-          '/censys_definitions.QueryService/UpsertCertificate',
+          '/zsearch.QueryService/UpsertCertificate',
           request_serializer=anonstore__pb2.AnonymousRecord.SerializeToString,
           response_deserializer=anonstore__pb2.AnonymousDelta.FromString,
           )
       self.UpsertRawCertificate = channel.unary_unary(
-          '/censys_definitions.QueryService/UpsertRawCertificate',
+          '/zsearch.QueryService/UpsertRawCertificate',
           request_serializer=anonstore__pb2.AnonymousRecord.SerializeToString,
           response_deserializer=anonstore__pb2.AnonymousDelta.FromString,
           )
       self.GetCryptographicKey = channel.unary_unary(
-          '/censys_definitions.QueryService/GetCryptographicKey',
+          '/zsearch.QueryService/GetCryptographicKey',
           request_serializer=rpc__pb2.AnonymousQuery.SerializeToString,
           response_deserializer=rpc__pb2.AnonymousQueryResponse.FromString,
           )
       self.UpsertCryptographicKey = channel.unary_unary(
-          '/censys_definitions.QueryService/UpsertCryptographicKey',
+          '/zsearch.QueryService/UpsertCryptographicKey',
           request_serializer=anonstore__pb2.AnonymousRecord.SerializeToString,
           response_deserializer=anonstore__pb2.AnonymousDelta.FromString,
           )
       self.GetPublicLocation = channel.unary_unary(
-          '/censys_definitions.QueryService/GetPublicLocation',
+          '/zsearch.QueryService/GetPublicLocation',
           request_serializer=rpc__pb2.HostQuery.SerializeToString,
           response_deserializer=hoststore__pb2.LocationAtom.FromString,
           )
       self.GetRestrictedLocation = channel.unary_unary(
-          '/censys_definitions.QueryService/GetRestrictedLocation',
+          '/zsearch.QueryService/GetRestrictedLocation',
           request_serializer=rpc__pb2.HostQuery.SerializeToString,
           response_deserializer=hoststore__pb2.LocationAtom.FromString,
           )
       self.GetWHOIS = channel.unary_unary(
-          '/censys_definitions.QueryService/GetWHOIS',
+          '/zsearch.QueryService/GetWHOIS',
           request_serializer=rpc__pb2.HostQuery.SerializeToString,
           response_deserializer=hoststore__pb2.Record.FromString,
           )
       self.GetUserMetadata = channel.unary_unary(
-          '/censys_definitions.QueryService/GetUserMetadata',
+          '/zsearch.QueryService/GetUserMetadata',
           request_serializer=rpc__pb2.HostQuery.SerializeToString,
           response_deserializer=hoststore__pb2.Record.FromString,
           )
       self.PutUserMetadata = channel.unary_unary(
-          '/censys_definitions.QueryService/PutUserMetadata',
+          '/zsearch.QueryService/PutUserMetadata',
           request_serializer=hoststore__pb2.Record.SerializeToString,
           response_deserializer=rpc__pb2.CommandReply.FromString,
           )
       self.GetRootStore = channel.unary_unary(
-          '/censys_definitions.QueryService/GetRootStore',
+          '/zsearch.QueryService/GetRootStore',
           request_serializer=rpc__pb2.RootStoreQuery.SerializeToString,
           response_deserializer=rpc__pb2.RootStoreReply.FromString,
           )
@@ -670,7 +670,7 @@ try:
         ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-        'censys_definitions.QueryService', rpc_method_handlers)
+        'zsearch.QueryService', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
 
 
@@ -793,64 +793,64 @@ try:
     file not marked beta) for all further purposes. This function was
     generated only to ease transition from grpcio<0.15.0 to grpcio>=0.15.0"""
     request_deserializers = {
-      ('censys_definitions.AdminService', 'DumpCertificatesToJSON'): rpc__pb2.Command.FromString,
-      ('censys_definitions.AdminService', 'DumpDomainToJSON'): rpc__pb2.Command.FromString,
-      ('censys_definitions.AdminService', 'DumpIPv4ToJSON'): rpc__pb2.Command.FromString,
-      ('censys_definitions.AdminService', 'DumpKeysToJSON'): rpc__pb2.Command.FromString,
-      ('censys_definitions.AdminService', 'FixCertificateSource'): rpc__pb2.Command.FromString,
-      ('censys_definitions.AdminService', 'Ping'): rpc__pb2.Command.FromString,
-      ('censys_definitions.AdminService', 'PruneDomain'): rpc__pb2.Command.FromString,
-      ('censys_definitions.AdminService', 'PruneIPv4'): rpc__pb2.Command.FromString,
-      ('censys_definitions.AdminService', 'RegenerateCertificateDeltas'): rpc__pb2.Command.FromString,
-      ('censys_definitions.AdminService', 'RegenerateDomainDeltas'): rpc__pb2.Command.FromString,
-      ('censys_definitions.AdminService', 'RegenerateIPv4Deltas'): rpc__pb2.Command.FromString,
-      ('censys_definitions.AdminService', 'RegenerateSingleCertificateDelta'): rpc__pb2.AnonymousQuery.FromString,
-      ('censys_definitions.AdminService', 'Shutdown'): rpc__pb2.Command.FromString,
-      ('censys_definitions.AdminService', 'Statistics'): rpc__pb2.Command.FromString,
-      ('censys_definitions.AdminService', 'Status'): rpc__pb2.Command.FromString,
-      ('censys_definitions.AdminService', 'UpdateASData'): rpc__pb2.Command.FromString,
-      ('censys_definitions.AdminService', 'UpdateLocationData'): rpc__pb2.Command.FromString,
-      ('censys_definitions.AdminService', 'ValidateCertificates'): rpc__pb2.Command.FromString,
+      ('zsearch.AdminService', 'DumpCertificatesToJSON'): rpc__pb2.Command.FromString,
+      ('zsearch.AdminService', 'DumpDomainToJSON'): rpc__pb2.Command.FromString,
+      ('zsearch.AdminService', 'DumpIPv4ToJSON'): rpc__pb2.Command.FromString,
+      ('zsearch.AdminService', 'DumpKeysToJSON'): rpc__pb2.Command.FromString,
+      ('zsearch.AdminService', 'FixCertificateSource'): rpc__pb2.Command.FromString,
+      ('zsearch.AdminService', 'Ping'): rpc__pb2.Command.FromString,
+      ('zsearch.AdminService', 'PruneDomain'): rpc__pb2.Command.FromString,
+      ('zsearch.AdminService', 'PruneIPv4'): rpc__pb2.Command.FromString,
+      ('zsearch.AdminService', 'RegenerateCertificateDeltas'): rpc__pb2.Command.FromString,
+      ('zsearch.AdminService', 'RegenerateDomainDeltas'): rpc__pb2.Command.FromString,
+      ('zsearch.AdminService', 'RegenerateIPv4Deltas'): rpc__pb2.Command.FromString,
+      ('zsearch.AdminService', 'RegenerateSingleCertificateDelta'): rpc__pb2.AnonymousQuery.FromString,
+      ('zsearch.AdminService', 'Shutdown'): rpc__pb2.Command.FromString,
+      ('zsearch.AdminService', 'Statistics'): rpc__pb2.Command.FromString,
+      ('zsearch.AdminService', 'Status'): rpc__pb2.Command.FromString,
+      ('zsearch.AdminService', 'UpdateASData'): rpc__pb2.Command.FromString,
+      ('zsearch.AdminService', 'UpdateLocationData'): rpc__pb2.Command.FromString,
+      ('zsearch.AdminService', 'ValidateCertificates'): rpc__pb2.Command.FromString,
     }
     response_serializers = {
-      ('censys_definitions.AdminService', 'DumpCertificatesToJSON'): rpc__pb2.CommandReply.SerializeToString,
-      ('censys_definitions.AdminService', 'DumpDomainToJSON'): rpc__pb2.CommandReply.SerializeToString,
-      ('censys_definitions.AdminService', 'DumpIPv4ToJSON'): rpc__pb2.CommandReply.SerializeToString,
-      ('censys_definitions.AdminService', 'DumpKeysToJSON'): rpc__pb2.CommandReply.SerializeToString,
-      ('censys_definitions.AdminService', 'FixCertificateSource'): rpc__pb2.CommandReply.SerializeToString,
-      ('censys_definitions.AdminService', 'Ping'): rpc__pb2.CommandReply.SerializeToString,
-      ('censys_definitions.AdminService', 'PruneDomain'): rpc__pb2.CommandReply.SerializeToString,
-      ('censys_definitions.AdminService', 'PruneIPv4'): rpc__pb2.CommandReply.SerializeToString,
-      ('censys_definitions.AdminService', 'RegenerateCertificateDeltas'): rpc__pb2.CommandReply.SerializeToString,
-      ('censys_definitions.AdminService', 'RegenerateDomainDeltas'): rpc__pb2.CommandReply.SerializeToString,
-      ('censys_definitions.AdminService', 'RegenerateIPv4Deltas'): rpc__pb2.CommandReply.SerializeToString,
-      ('censys_definitions.AdminService', 'RegenerateSingleCertificateDelta'): rpc__pb2.CommandReply.SerializeToString,
-      ('censys_definitions.AdminService', 'Shutdown'): rpc__pb2.CommandReply.SerializeToString,
-      ('censys_definitions.AdminService', 'Statistics'): rpc__pb2.CommandReply.SerializeToString,
-      ('censys_definitions.AdminService', 'Status'): rpc__pb2.CommandReply.SerializeToString,
-      ('censys_definitions.AdminService', 'UpdateASData'): rpc__pb2.CommandReply.SerializeToString,
-      ('censys_definitions.AdminService', 'UpdateLocationData'): rpc__pb2.CommandReply.SerializeToString,
-      ('censys_definitions.AdminService', 'ValidateCertificates'): rpc__pb2.CommandReply.SerializeToString,
+      ('zsearch.AdminService', 'DumpCertificatesToJSON'): rpc__pb2.CommandReply.SerializeToString,
+      ('zsearch.AdminService', 'DumpDomainToJSON'): rpc__pb2.CommandReply.SerializeToString,
+      ('zsearch.AdminService', 'DumpIPv4ToJSON'): rpc__pb2.CommandReply.SerializeToString,
+      ('zsearch.AdminService', 'DumpKeysToJSON'): rpc__pb2.CommandReply.SerializeToString,
+      ('zsearch.AdminService', 'FixCertificateSource'): rpc__pb2.CommandReply.SerializeToString,
+      ('zsearch.AdminService', 'Ping'): rpc__pb2.CommandReply.SerializeToString,
+      ('zsearch.AdminService', 'PruneDomain'): rpc__pb2.CommandReply.SerializeToString,
+      ('zsearch.AdminService', 'PruneIPv4'): rpc__pb2.CommandReply.SerializeToString,
+      ('zsearch.AdminService', 'RegenerateCertificateDeltas'): rpc__pb2.CommandReply.SerializeToString,
+      ('zsearch.AdminService', 'RegenerateDomainDeltas'): rpc__pb2.CommandReply.SerializeToString,
+      ('zsearch.AdminService', 'RegenerateIPv4Deltas'): rpc__pb2.CommandReply.SerializeToString,
+      ('zsearch.AdminService', 'RegenerateSingleCertificateDelta'): rpc__pb2.CommandReply.SerializeToString,
+      ('zsearch.AdminService', 'Shutdown'): rpc__pb2.CommandReply.SerializeToString,
+      ('zsearch.AdminService', 'Statistics'): rpc__pb2.CommandReply.SerializeToString,
+      ('zsearch.AdminService', 'Status'): rpc__pb2.CommandReply.SerializeToString,
+      ('zsearch.AdminService', 'UpdateASData'): rpc__pb2.CommandReply.SerializeToString,
+      ('zsearch.AdminService', 'UpdateLocationData'): rpc__pb2.CommandReply.SerializeToString,
+      ('zsearch.AdminService', 'ValidateCertificates'): rpc__pb2.CommandReply.SerializeToString,
     }
     method_implementations = {
-      ('censys_definitions.AdminService', 'DumpCertificatesToJSON'): face_utilities.unary_unary_inline(servicer.DumpCertificatesToJSON),
-      ('censys_definitions.AdminService', 'DumpDomainToJSON'): face_utilities.unary_unary_inline(servicer.DumpDomainToJSON),
-      ('censys_definitions.AdminService', 'DumpIPv4ToJSON'): face_utilities.unary_unary_inline(servicer.DumpIPv4ToJSON),
-      ('censys_definitions.AdminService', 'DumpKeysToJSON'): face_utilities.unary_unary_inline(servicer.DumpKeysToJSON),
-      ('censys_definitions.AdminService', 'FixCertificateSource'): face_utilities.unary_unary_inline(servicer.FixCertificateSource),
-      ('censys_definitions.AdminService', 'Ping'): face_utilities.unary_unary_inline(servicer.Ping),
-      ('censys_definitions.AdminService', 'PruneDomain'): face_utilities.unary_unary_inline(servicer.PruneDomain),
-      ('censys_definitions.AdminService', 'PruneIPv4'): face_utilities.unary_unary_inline(servicer.PruneIPv4),
-      ('censys_definitions.AdminService', 'RegenerateCertificateDeltas'): face_utilities.unary_unary_inline(servicer.RegenerateCertificateDeltas),
-      ('censys_definitions.AdminService', 'RegenerateDomainDeltas'): face_utilities.unary_unary_inline(servicer.RegenerateDomainDeltas),
-      ('censys_definitions.AdminService', 'RegenerateIPv4Deltas'): face_utilities.unary_unary_inline(servicer.RegenerateIPv4Deltas),
-      ('censys_definitions.AdminService', 'RegenerateSingleCertificateDelta'): face_utilities.unary_unary_inline(servicer.RegenerateSingleCertificateDelta),
-      ('censys_definitions.AdminService', 'Shutdown'): face_utilities.unary_unary_inline(servicer.Shutdown),
-      ('censys_definitions.AdminService', 'Statistics'): face_utilities.unary_unary_inline(servicer.Statistics),
-      ('censys_definitions.AdminService', 'Status'): face_utilities.unary_unary_inline(servicer.Status),
-      ('censys_definitions.AdminService', 'UpdateASData'): face_utilities.unary_unary_inline(servicer.UpdateASData),
-      ('censys_definitions.AdminService', 'UpdateLocationData'): face_utilities.unary_unary_inline(servicer.UpdateLocationData),
-      ('censys_definitions.AdminService', 'ValidateCertificates'): face_utilities.unary_unary_inline(servicer.ValidateCertificates),
+      ('zsearch.AdminService', 'DumpCertificatesToJSON'): face_utilities.unary_unary_inline(servicer.DumpCertificatesToJSON),
+      ('zsearch.AdminService', 'DumpDomainToJSON'): face_utilities.unary_unary_inline(servicer.DumpDomainToJSON),
+      ('zsearch.AdminService', 'DumpIPv4ToJSON'): face_utilities.unary_unary_inline(servicer.DumpIPv4ToJSON),
+      ('zsearch.AdminService', 'DumpKeysToJSON'): face_utilities.unary_unary_inline(servicer.DumpKeysToJSON),
+      ('zsearch.AdminService', 'FixCertificateSource'): face_utilities.unary_unary_inline(servicer.FixCertificateSource),
+      ('zsearch.AdminService', 'Ping'): face_utilities.unary_unary_inline(servicer.Ping),
+      ('zsearch.AdminService', 'PruneDomain'): face_utilities.unary_unary_inline(servicer.PruneDomain),
+      ('zsearch.AdminService', 'PruneIPv4'): face_utilities.unary_unary_inline(servicer.PruneIPv4),
+      ('zsearch.AdminService', 'RegenerateCertificateDeltas'): face_utilities.unary_unary_inline(servicer.RegenerateCertificateDeltas),
+      ('zsearch.AdminService', 'RegenerateDomainDeltas'): face_utilities.unary_unary_inline(servicer.RegenerateDomainDeltas),
+      ('zsearch.AdminService', 'RegenerateIPv4Deltas'): face_utilities.unary_unary_inline(servicer.RegenerateIPv4Deltas),
+      ('zsearch.AdminService', 'RegenerateSingleCertificateDelta'): face_utilities.unary_unary_inline(servicer.RegenerateSingleCertificateDelta),
+      ('zsearch.AdminService', 'Shutdown'): face_utilities.unary_unary_inline(servicer.Shutdown),
+      ('zsearch.AdminService', 'Statistics'): face_utilities.unary_unary_inline(servicer.Statistics),
+      ('zsearch.AdminService', 'Status'): face_utilities.unary_unary_inline(servicer.Status),
+      ('zsearch.AdminService', 'UpdateASData'): face_utilities.unary_unary_inline(servicer.UpdateASData),
+      ('zsearch.AdminService', 'UpdateLocationData'): face_utilities.unary_unary_inline(servicer.UpdateLocationData),
+      ('zsearch.AdminService', 'ValidateCertificates'): face_utilities.unary_unary_inline(servicer.ValidateCertificates),
     }
     server_options = beta_implementations.server_options(request_deserializers=request_deserializers, response_serializers=response_serializers, thread_pool=pool, thread_pool_size=pool_size, default_timeout=default_timeout, maximum_timeout=maximum_timeout)
     return beta_implementations.server(method_implementations, options=server_options)
@@ -863,44 +863,44 @@ try:
     file not marked beta) for all further purposes. This function was
     generated only to ease transition from grpcio<0.15.0 to grpcio>=0.15.0"""
     request_serializers = {
-      ('censys_definitions.AdminService', 'DumpCertificatesToJSON'): rpc__pb2.Command.SerializeToString,
-      ('censys_definitions.AdminService', 'DumpDomainToJSON'): rpc__pb2.Command.SerializeToString,
-      ('censys_definitions.AdminService', 'DumpIPv4ToJSON'): rpc__pb2.Command.SerializeToString,
-      ('censys_definitions.AdminService', 'DumpKeysToJSON'): rpc__pb2.Command.SerializeToString,
-      ('censys_definitions.AdminService', 'FixCertificateSource'): rpc__pb2.Command.SerializeToString,
-      ('censys_definitions.AdminService', 'Ping'): rpc__pb2.Command.SerializeToString,
-      ('censys_definitions.AdminService', 'PruneDomain'): rpc__pb2.Command.SerializeToString,
-      ('censys_definitions.AdminService', 'PruneIPv4'): rpc__pb2.Command.SerializeToString,
-      ('censys_definitions.AdminService', 'RegenerateCertificateDeltas'): rpc__pb2.Command.SerializeToString,
-      ('censys_definitions.AdminService', 'RegenerateDomainDeltas'): rpc__pb2.Command.SerializeToString,
-      ('censys_definitions.AdminService', 'RegenerateIPv4Deltas'): rpc__pb2.Command.SerializeToString,
-      ('censys_definitions.AdminService', 'RegenerateSingleCertificateDelta'): rpc__pb2.AnonymousQuery.SerializeToString,
-      ('censys_definitions.AdminService', 'Shutdown'): rpc__pb2.Command.SerializeToString,
-      ('censys_definitions.AdminService', 'Statistics'): rpc__pb2.Command.SerializeToString,
-      ('censys_definitions.AdminService', 'Status'): rpc__pb2.Command.SerializeToString,
-      ('censys_definitions.AdminService', 'UpdateASData'): rpc__pb2.Command.SerializeToString,
-      ('censys_definitions.AdminService', 'UpdateLocationData'): rpc__pb2.Command.SerializeToString,
-      ('censys_definitions.AdminService', 'ValidateCertificates'): rpc__pb2.Command.SerializeToString,
+      ('zsearch.AdminService', 'DumpCertificatesToJSON'): rpc__pb2.Command.SerializeToString,
+      ('zsearch.AdminService', 'DumpDomainToJSON'): rpc__pb2.Command.SerializeToString,
+      ('zsearch.AdminService', 'DumpIPv4ToJSON'): rpc__pb2.Command.SerializeToString,
+      ('zsearch.AdminService', 'DumpKeysToJSON'): rpc__pb2.Command.SerializeToString,
+      ('zsearch.AdminService', 'FixCertificateSource'): rpc__pb2.Command.SerializeToString,
+      ('zsearch.AdminService', 'Ping'): rpc__pb2.Command.SerializeToString,
+      ('zsearch.AdminService', 'PruneDomain'): rpc__pb2.Command.SerializeToString,
+      ('zsearch.AdminService', 'PruneIPv4'): rpc__pb2.Command.SerializeToString,
+      ('zsearch.AdminService', 'RegenerateCertificateDeltas'): rpc__pb2.Command.SerializeToString,
+      ('zsearch.AdminService', 'RegenerateDomainDeltas'): rpc__pb2.Command.SerializeToString,
+      ('zsearch.AdminService', 'RegenerateIPv4Deltas'): rpc__pb2.Command.SerializeToString,
+      ('zsearch.AdminService', 'RegenerateSingleCertificateDelta'): rpc__pb2.AnonymousQuery.SerializeToString,
+      ('zsearch.AdminService', 'Shutdown'): rpc__pb2.Command.SerializeToString,
+      ('zsearch.AdminService', 'Statistics'): rpc__pb2.Command.SerializeToString,
+      ('zsearch.AdminService', 'Status'): rpc__pb2.Command.SerializeToString,
+      ('zsearch.AdminService', 'UpdateASData'): rpc__pb2.Command.SerializeToString,
+      ('zsearch.AdminService', 'UpdateLocationData'): rpc__pb2.Command.SerializeToString,
+      ('zsearch.AdminService', 'ValidateCertificates'): rpc__pb2.Command.SerializeToString,
     }
     response_deserializers = {
-      ('censys_definitions.AdminService', 'DumpCertificatesToJSON'): rpc__pb2.CommandReply.FromString,
-      ('censys_definitions.AdminService', 'DumpDomainToJSON'): rpc__pb2.CommandReply.FromString,
-      ('censys_definitions.AdminService', 'DumpIPv4ToJSON'): rpc__pb2.CommandReply.FromString,
-      ('censys_definitions.AdminService', 'DumpKeysToJSON'): rpc__pb2.CommandReply.FromString,
-      ('censys_definitions.AdminService', 'FixCertificateSource'): rpc__pb2.CommandReply.FromString,
-      ('censys_definitions.AdminService', 'Ping'): rpc__pb2.CommandReply.FromString,
-      ('censys_definitions.AdminService', 'PruneDomain'): rpc__pb2.CommandReply.FromString,
-      ('censys_definitions.AdminService', 'PruneIPv4'): rpc__pb2.CommandReply.FromString,
-      ('censys_definitions.AdminService', 'RegenerateCertificateDeltas'): rpc__pb2.CommandReply.FromString,
-      ('censys_definitions.AdminService', 'RegenerateDomainDeltas'): rpc__pb2.CommandReply.FromString,
-      ('censys_definitions.AdminService', 'RegenerateIPv4Deltas'): rpc__pb2.CommandReply.FromString,
-      ('censys_definitions.AdminService', 'RegenerateSingleCertificateDelta'): rpc__pb2.CommandReply.FromString,
-      ('censys_definitions.AdminService', 'Shutdown'): rpc__pb2.CommandReply.FromString,
-      ('censys_definitions.AdminService', 'Statistics'): rpc__pb2.CommandReply.FromString,
-      ('censys_definitions.AdminService', 'Status'): rpc__pb2.CommandReply.FromString,
-      ('censys_definitions.AdminService', 'UpdateASData'): rpc__pb2.CommandReply.FromString,
-      ('censys_definitions.AdminService', 'UpdateLocationData'): rpc__pb2.CommandReply.FromString,
-      ('censys_definitions.AdminService', 'ValidateCertificates'): rpc__pb2.CommandReply.FromString,
+      ('zsearch.AdminService', 'DumpCertificatesToJSON'): rpc__pb2.CommandReply.FromString,
+      ('zsearch.AdminService', 'DumpDomainToJSON'): rpc__pb2.CommandReply.FromString,
+      ('zsearch.AdminService', 'DumpIPv4ToJSON'): rpc__pb2.CommandReply.FromString,
+      ('zsearch.AdminService', 'DumpKeysToJSON'): rpc__pb2.CommandReply.FromString,
+      ('zsearch.AdminService', 'FixCertificateSource'): rpc__pb2.CommandReply.FromString,
+      ('zsearch.AdminService', 'Ping'): rpc__pb2.CommandReply.FromString,
+      ('zsearch.AdminService', 'PruneDomain'): rpc__pb2.CommandReply.FromString,
+      ('zsearch.AdminService', 'PruneIPv4'): rpc__pb2.CommandReply.FromString,
+      ('zsearch.AdminService', 'RegenerateCertificateDeltas'): rpc__pb2.CommandReply.FromString,
+      ('zsearch.AdminService', 'RegenerateDomainDeltas'): rpc__pb2.CommandReply.FromString,
+      ('zsearch.AdminService', 'RegenerateIPv4Deltas'): rpc__pb2.CommandReply.FromString,
+      ('zsearch.AdminService', 'RegenerateSingleCertificateDelta'): rpc__pb2.CommandReply.FromString,
+      ('zsearch.AdminService', 'Shutdown'): rpc__pb2.CommandReply.FromString,
+      ('zsearch.AdminService', 'Statistics'): rpc__pb2.CommandReply.FromString,
+      ('zsearch.AdminService', 'Status'): rpc__pb2.CommandReply.FromString,
+      ('zsearch.AdminService', 'UpdateASData'): rpc__pb2.CommandReply.FromString,
+      ('zsearch.AdminService', 'UpdateLocationData'): rpc__pb2.CommandReply.FromString,
+      ('zsearch.AdminService', 'ValidateCertificates'): rpc__pb2.CommandReply.FromString,
     }
     cardinalities = {
       'DumpCertificatesToJSON': cardinality.Cardinality.UNARY_UNARY,
@@ -923,7 +923,7 @@ try:
       'ValidateCertificates': cardinality.Cardinality.UNARY_UNARY,
     }
     stub_options = beta_implementations.stub_options(host=host, metadata_transformer=metadata_transformer, request_serializers=request_serializers, response_deserializers=response_deserializers, thread_pool=pool, thread_pool_size=pool_size)
-    return beta_implementations.dynamic_stub(channel, 'censys_definitions.AdminService', cardinalities, options=stub_options)
+    return beta_implementations.dynamic_stub(channel, 'zsearch.AdminService', cardinalities, options=stub_options)
 
 
   class BetaQueryServiceServicer(object):
@@ -1054,73 +1054,73 @@ try:
     file not marked beta) for all further purposes. This function was
     generated only to ease transition from grpcio<0.15.0 to grpcio>=0.15.0"""
     request_deserializers = {
-      ('censys_definitions.QueryService', 'DelHostDomainRecord'): rpc__pb2.HostQuery.FromString,
-      ('censys_definitions.QueryService', 'DelHostIPv4Record'): rpc__pb2.HostQuery.FromString,
-      ('censys_definitions.QueryService', 'GetAllDomainRecords'): rpc__pb2.HostQuery.FromString,
-      ('censys_definitions.QueryService', 'GetAllIPv4Records'): rpc__pb2.HostQuery.FromString,
-      ('censys_definitions.QueryService', 'GetCertificate'): rpc__pb2.AnonymousQuery.FromString,
-      ('censys_definitions.QueryService', 'GetCryptographicKey'): rpc__pb2.AnonymousQuery.FromString,
-      ('censys_definitions.QueryService', 'GetHostDomainDelta'): rpc__pb2.HostQuery.FromString,
-      ('censys_definitions.QueryService', 'GetHostDomainRecord'): rpc__pb2.HostQuery.FromString,
-      ('censys_definitions.QueryService', 'GetHostIPv4Delta'): rpc__pb2.HostQuery.FromString,
-      ('censys_definitions.QueryService', 'GetHostIPv4Record'): rpc__pb2.HostQuery.FromString,
-      ('censys_definitions.QueryService', 'GetPublicLocation'): rpc__pb2.HostQuery.FromString,
-      ('censys_definitions.QueryService', 'GetRestrictedLocation'): rpc__pb2.HostQuery.FromString,
-      ('censys_definitions.QueryService', 'GetRootStore'): rpc__pb2.RootStoreQuery.FromString,
-      ('censys_definitions.QueryService', 'GetUserMetadata'): rpc__pb2.HostQuery.FromString,
-      ('censys_definitions.QueryService', 'GetWHOIS'): rpc__pb2.HostQuery.FromString,
-      ('censys_definitions.QueryService', 'PutHostDomainRecord'): hoststore__pb2.Record.FromString,
-      ('censys_definitions.QueryService', 'PutHostIPv4Record'): hoststore__pb2.Record.FromString,
-      ('censys_definitions.QueryService', 'PutUserMetadata'): hoststore__pb2.Record.FromString,
-      ('censys_definitions.QueryService', 'UpsertCertificate'): anonstore__pb2.AnonymousRecord.FromString,
-      ('censys_definitions.QueryService', 'UpsertCryptographicKey'): anonstore__pb2.AnonymousRecord.FromString,
-      ('censys_definitions.QueryService', 'UpsertRawCertificate'): anonstore__pb2.AnonymousRecord.FromString,
+      ('zsearch.QueryService', 'DelHostDomainRecord'): rpc__pb2.HostQuery.FromString,
+      ('zsearch.QueryService', 'DelHostIPv4Record'): rpc__pb2.HostQuery.FromString,
+      ('zsearch.QueryService', 'GetAllDomainRecords'): rpc__pb2.HostQuery.FromString,
+      ('zsearch.QueryService', 'GetAllIPv4Records'): rpc__pb2.HostQuery.FromString,
+      ('zsearch.QueryService', 'GetCertificate'): rpc__pb2.AnonymousQuery.FromString,
+      ('zsearch.QueryService', 'GetCryptographicKey'): rpc__pb2.AnonymousQuery.FromString,
+      ('zsearch.QueryService', 'GetHostDomainDelta'): rpc__pb2.HostQuery.FromString,
+      ('zsearch.QueryService', 'GetHostDomainRecord'): rpc__pb2.HostQuery.FromString,
+      ('zsearch.QueryService', 'GetHostIPv4Delta'): rpc__pb2.HostQuery.FromString,
+      ('zsearch.QueryService', 'GetHostIPv4Record'): rpc__pb2.HostQuery.FromString,
+      ('zsearch.QueryService', 'GetPublicLocation'): rpc__pb2.HostQuery.FromString,
+      ('zsearch.QueryService', 'GetRestrictedLocation'): rpc__pb2.HostQuery.FromString,
+      ('zsearch.QueryService', 'GetRootStore'): rpc__pb2.RootStoreQuery.FromString,
+      ('zsearch.QueryService', 'GetUserMetadata'): rpc__pb2.HostQuery.FromString,
+      ('zsearch.QueryService', 'GetWHOIS'): rpc__pb2.HostQuery.FromString,
+      ('zsearch.QueryService', 'PutHostDomainRecord'): hoststore__pb2.Record.FromString,
+      ('zsearch.QueryService', 'PutHostIPv4Record'): hoststore__pb2.Record.FromString,
+      ('zsearch.QueryService', 'PutUserMetadata'): hoststore__pb2.Record.FromString,
+      ('zsearch.QueryService', 'UpsertCertificate'): anonstore__pb2.AnonymousRecord.FromString,
+      ('zsearch.QueryService', 'UpsertCryptographicKey'): anonstore__pb2.AnonymousRecord.FromString,
+      ('zsearch.QueryService', 'UpsertRawCertificate'): anonstore__pb2.AnonymousRecord.FromString,
     }
     response_serializers = {
-      ('censys_definitions.QueryService', 'DelHostDomainRecord'): hoststore__pb2.Delta.SerializeToString,
-      ('censys_definitions.QueryService', 'DelHostIPv4Record'): hoststore__pb2.Delta.SerializeToString,
-      ('censys_definitions.QueryService', 'GetAllDomainRecords'): rpc__pb2.HostQueryResponse.SerializeToString,
-      ('censys_definitions.QueryService', 'GetAllIPv4Records'): rpc__pb2.HostQueryResponse.SerializeToString,
-      ('censys_definitions.QueryService', 'GetCertificate'): rpc__pb2.AnonymousQueryResponse.SerializeToString,
-      ('censys_definitions.QueryService', 'GetCryptographicKey'): rpc__pb2.AnonymousQueryResponse.SerializeToString,
-      ('censys_definitions.QueryService', 'GetHostDomainDelta'): hoststore__pb2.Delta.SerializeToString,
-      ('censys_definitions.QueryService', 'GetHostDomainRecord'): rpc__pb2.HostQueryResponse.SerializeToString,
-      ('censys_definitions.QueryService', 'GetHostIPv4Delta'): hoststore__pb2.Delta.SerializeToString,
-      ('censys_definitions.QueryService', 'GetHostIPv4Record'): rpc__pb2.HostQueryResponse.SerializeToString,
-      ('censys_definitions.QueryService', 'GetPublicLocation'): hoststore__pb2.LocationAtom.SerializeToString,
-      ('censys_definitions.QueryService', 'GetRestrictedLocation'): hoststore__pb2.LocationAtom.SerializeToString,
-      ('censys_definitions.QueryService', 'GetRootStore'): rpc__pb2.RootStoreReply.SerializeToString,
-      ('censys_definitions.QueryService', 'GetUserMetadata'): hoststore__pb2.Record.SerializeToString,
-      ('censys_definitions.QueryService', 'GetWHOIS'): hoststore__pb2.Record.SerializeToString,
-      ('censys_definitions.QueryService', 'PutHostDomainRecord'): hoststore__pb2.Delta.SerializeToString,
-      ('censys_definitions.QueryService', 'PutHostIPv4Record'): hoststore__pb2.Delta.SerializeToString,
-      ('censys_definitions.QueryService', 'PutUserMetadata'): rpc__pb2.CommandReply.SerializeToString,
-      ('censys_definitions.QueryService', 'UpsertCertificate'): anonstore__pb2.AnonymousDelta.SerializeToString,
-      ('censys_definitions.QueryService', 'UpsertCryptographicKey'): anonstore__pb2.AnonymousDelta.SerializeToString,
-      ('censys_definitions.QueryService', 'UpsertRawCertificate'): anonstore__pb2.AnonymousDelta.SerializeToString,
+      ('zsearch.QueryService', 'DelHostDomainRecord'): hoststore__pb2.Delta.SerializeToString,
+      ('zsearch.QueryService', 'DelHostIPv4Record'): hoststore__pb2.Delta.SerializeToString,
+      ('zsearch.QueryService', 'GetAllDomainRecords'): rpc__pb2.HostQueryResponse.SerializeToString,
+      ('zsearch.QueryService', 'GetAllIPv4Records'): rpc__pb2.HostQueryResponse.SerializeToString,
+      ('zsearch.QueryService', 'GetCertificate'): rpc__pb2.AnonymousQueryResponse.SerializeToString,
+      ('zsearch.QueryService', 'GetCryptographicKey'): rpc__pb2.AnonymousQueryResponse.SerializeToString,
+      ('zsearch.QueryService', 'GetHostDomainDelta'): hoststore__pb2.Delta.SerializeToString,
+      ('zsearch.QueryService', 'GetHostDomainRecord'): rpc__pb2.HostQueryResponse.SerializeToString,
+      ('zsearch.QueryService', 'GetHostIPv4Delta'): hoststore__pb2.Delta.SerializeToString,
+      ('zsearch.QueryService', 'GetHostIPv4Record'): rpc__pb2.HostQueryResponse.SerializeToString,
+      ('zsearch.QueryService', 'GetPublicLocation'): hoststore__pb2.LocationAtom.SerializeToString,
+      ('zsearch.QueryService', 'GetRestrictedLocation'): hoststore__pb2.LocationAtom.SerializeToString,
+      ('zsearch.QueryService', 'GetRootStore'): rpc__pb2.RootStoreReply.SerializeToString,
+      ('zsearch.QueryService', 'GetUserMetadata'): hoststore__pb2.Record.SerializeToString,
+      ('zsearch.QueryService', 'GetWHOIS'): hoststore__pb2.Record.SerializeToString,
+      ('zsearch.QueryService', 'PutHostDomainRecord'): hoststore__pb2.Delta.SerializeToString,
+      ('zsearch.QueryService', 'PutHostIPv4Record'): hoststore__pb2.Delta.SerializeToString,
+      ('zsearch.QueryService', 'PutUserMetadata'): rpc__pb2.CommandReply.SerializeToString,
+      ('zsearch.QueryService', 'UpsertCertificate'): anonstore__pb2.AnonymousDelta.SerializeToString,
+      ('zsearch.QueryService', 'UpsertCryptographicKey'): anonstore__pb2.AnonymousDelta.SerializeToString,
+      ('zsearch.QueryService', 'UpsertRawCertificate'): anonstore__pb2.AnonymousDelta.SerializeToString,
     }
     method_implementations = {
-      ('censys_definitions.QueryService', 'DelHostDomainRecord'): face_utilities.unary_unary_inline(servicer.DelHostDomainRecord),
-      ('censys_definitions.QueryService', 'DelHostIPv4Record'): face_utilities.unary_unary_inline(servicer.DelHostIPv4Record),
-      ('censys_definitions.QueryService', 'GetAllDomainRecords'): face_utilities.unary_unary_inline(servicer.GetAllDomainRecords),
-      ('censys_definitions.QueryService', 'GetAllIPv4Records'): face_utilities.unary_unary_inline(servicer.GetAllIPv4Records),
-      ('censys_definitions.QueryService', 'GetCertificate'): face_utilities.unary_unary_inline(servicer.GetCertificate),
-      ('censys_definitions.QueryService', 'GetCryptographicKey'): face_utilities.unary_unary_inline(servicer.GetCryptographicKey),
-      ('censys_definitions.QueryService', 'GetHostDomainDelta'): face_utilities.unary_unary_inline(servicer.GetHostDomainDelta),
-      ('censys_definitions.QueryService', 'GetHostDomainRecord'): face_utilities.unary_unary_inline(servicer.GetHostDomainRecord),
-      ('censys_definitions.QueryService', 'GetHostIPv4Delta'): face_utilities.unary_unary_inline(servicer.GetHostIPv4Delta),
-      ('censys_definitions.QueryService', 'GetHostIPv4Record'): face_utilities.unary_unary_inline(servicer.GetHostIPv4Record),
-      ('censys_definitions.QueryService', 'GetPublicLocation'): face_utilities.unary_unary_inline(servicer.GetPublicLocation),
-      ('censys_definitions.QueryService', 'GetRestrictedLocation'): face_utilities.unary_unary_inline(servicer.GetRestrictedLocation),
-      ('censys_definitions.QueryService', 'GetRootStore'): face_utilities.unary_unary_inline(servicer.GetRootStore),
-      ('censys_definitions.QueryService', 'GetUserMetadata'): face_utilities.unary_unary_inline(servicer.GetUserMetadata),
-      ('censys_definitions.QueryService', 'GetWHOIS'): face_utilities.unary_unary_inline(servicer.GetWHOIS),
-      ('censys_definitions.QueryService', 'PutHostDomainRecord'): face_utilities.unary_unary_inline(servicer.PutHostDomainRecord),
-      ('censys_definitions.QueryService', 'PutHostIPv4Record'): face_utilities.unary_unary_inline(servicer.PutHostIPv4Record),
-      ('censys_definitions.QueryService', 'PutUserMetadata'): face_utilities.unary_unary_inline(servicer.PutUserMetadata),
-      ('censys_definitions.QueryService', 'UpsertCertificate'): face_utilities.unary_unary_inline(servicer.UpsertCertificate),
-      ('censys_definitions.QueryService', 'UpsertCryptographicKey'): face_utilities.unary_unary_inline(servicer.UpsertCryptographicKey),
-      ('censys_definitions.QueryService', 'UpsertRawCertificate'): face_utilities.unary_unary_inline(servicer.UpsertRawCertificate),
+      ('zsearch.QueryService', 'DelHostDomainRecord'): face_utilities.unary_unary_inline(servicer.DelHostDomainRecord),
+      ('zsearch.QueryService', 'DelHostIPv4Record'): face_utilities.unary_unary_inline(servicer.DelHostIPv4Record),
+      ('zsearch.QueryService', 'GetAllDomainRecords'): face_utilities.unary_unary_inline(servicer.GetAllDomainRecords),
+      ('zsearch.QueryService', 'GetAllIPv4Records'): face_utilities.unary_unary_inline(servicer.GetAllIPv4Records),
+      ('zsearch.QueryService', 'GetCertificate'): face_utilities.unary_unary_inline(servicer.GetCertificate),
+      ('zsearch.QueryService', 'GetCryptographicKey'): face_utilities.unary_unary_inline(servicer.GetCryptographicKey),
+      ('zsearch.QueryService', 'GetHostDomainDelta'): face_utilities.unary_unary_inline(servicer.GetHostDomainDelta),
+      ('zsearch.QueryService', 'GetHostDomainRecord'): face_utilities.unary_unary_inline(servicer.GetHostDomainRecord),
+      ('zsearch.QueryService', 'GetHostIPv4Delta'): face_utilities.unary_unary_inline(servicer.GetHostIPv4Delta),
+      ('zsearch.QueryService', 'GetHostIPv4Record'): face_utilities.unary_unary_inline(servicer.GetHostIPv4Record),
+      ('zsearch.QueryService', 'GetPublicLocation'): face_utilities.unary_unary_inline(servicer.GetPublicLocation),
+      ('zsearch.QueryService', 'GetRestrictedLocation'): face_utilities.unary_unary_inline(servicer.GetRestrictedLocation),
+      ('zsearch.QueryService', 'GetRootStore'): face_utilities.unary_unary_inline(servicer.GetRootStore),
+      ('zsearch.QueryService', 'GetUserMetadata'): face_utilities.unary_unary_inline(servicer.GetUserMetadata),
+      ('zsearch.QueryService', 'GetWHOIS'): face_utilities.unary_unary_inline(servicer.GetWHOIS),
+      ('zsearch.QueryService', 'PutHostDomainRecord'): face_utilities.unary_unary_inline(servicer.PutHostDomainRecord),
+      ('zsearch.QueryService', 'PutHostIPv4Record'): face_utilities.unary_unary_inline(servicer.PutHostIPv4Record),
+      ('zsearch.QueryService', 'PutUserMetadata'): face_utilities.unary_unary_inline(servicer.PutUserMetadata),
+      ('zsearch.QueryService', 'UpsertCertificate'): face_utilities.unary_unary_inline(servicer.UpsertCertificate),
+      ('zsearch.QueryService', 'UpsertCryptographicKey'): face_utilities.unary_unary_inline(servicer.UpsertCryptographicKey),
+      ('zsearch.QueryService', 'UpsertRawCertificate'): face_utilities.unary_unary_inline(servicer.UpsertRawCertificate),
     }
     server_options = beta_implementations.server_options(request_deserializers=request_deserializers, response_serializers=response_serializers, thread_pool=pool, thread_pool_size=pool_size, default_timeout=default_timeout, maximum_timeout=maximum_timeout)
     return beta_implementations.server(method_implementations, options=server_options)
@@ -1133,50 +1133,50 @@ try:
     file not marked beta) for all further purposes. This function was
     generated only to ease transition from grpcio<0.15.0 to grpcio>=0.15.0"""
     request_serializers = {
-      ('censys_definitions.QueryService', 'DelHostDomainRecord'): rpc__pb2.HostQuery.SerializeToString,
-      ('censys_definitions.QueryService', 'DelHostIPv4Record'): rpc__pb2.HostQuery.SerializeToString,
-      ('censys_definitions.QueryService', 'GetAllDomainRecords'): rpc__pb2.HostQuery.SerializeToString,
-      ('censys_definitions.QueryService', 'GetAllIPv4Records'): rpc__pb2.HostQuery.SerializeToString,
-      ('censys_definitions.QueryService', 'GetCertificate'): rpc__pb2.AnonymousQuery.SerializeToString,
-      ('censys_definitions.QueryService', 'GetCryptographicKey'): rpc__pb2.AnonymousQuery.SerializeToString,
-      ('censys_definitions.QueryService', 'GetHostDomainDelta'): rpc__pb2.HostQuery.SerializeToString,
-      ('censys_definitions.QueryService', 'GetHostDomainRecord'): rpc__pb2.HostQuery.SerializeToString,
-      ('censys_definitions.QueryService', 'GetHostIPv4Delta'): rpc__pb2.HostQuery.SerializeToString,
-      ('censys_definitions.QueryService', 'GetHostIPv4Record'): rpc__pb2.HostQuery.SerializeToString,
-      ('censys_definitions.QueryService', 'GetPublicLocation'): rpc__pb2.HostQuery.SerializeToString,
-      ('censys_definitions.QueryService', 'GetRestrictedLocation'): rpc__pb2.HostQuery.SerializeToString,
-      ('censys_definitions.QueryService', 'GetRootStore'): rpc__pb2.RootStoreQuery.SerializeToString,
-      ('censys_definitions.QueryService', 'GetUserMetadata'): rpc__pb2.HostQuery.SerializeToString,
-      ('censys_definitions.QueryService', 'GetWHOIS'): rpc__pb2.HostQuery.SerializeToString,
-      ('censys_definitions.QueryService', 'PutHostDomainRecord'): hoststore__pb2.Record.SerializeToString,
-      ('censys_definitions.QueryService', 'PutHostIPv4Record'): hoststore__pb2.Record.SerializeToString,
-      ('censys_definitions.QueryService', 'PutUserMetadata'): hoststore__pb2.Record.SerializeToString,
-      ('censys_definitions.QueryService', 'UpsertCertificate'): anonstore__pb2.AnonymousRecord.SerializeToString,
-      ('censys_definitions.QueryService', 'UpsertCryptographicKey'): anonstore__pb2.AnonymousRecord.SerializeToString,
-      ('censys_definitions.QueryService', 'UpsertRawCertificate'): anonstore__pb2.AnonymousRecord.SerializeToString,
+      ('zsearch.QueryService', 'DelHostDomainRecord'): rpc__pb2.HostQuery.SerializeToString,
+      ('zsearch.QueryService', 'DelHostIPv4Record'): rpc__pb2.HostQuery.SerializeToString,
+      ('zsearch.QueryService', 'GetAllDomainRecords'): rpc__pb2.HostQuery.SerializeToString,
+      ('zsearch.QueryService', 'GetAllIPv4Records'): rpc__pb2.HostQuery.SerializeToString,
+      ('zsearch.QueryService', 'GetCertificate'): rpc__pb2.AnonymousQuery.SerializeToString,
+      ('zsearch.QueryService', 'GetCryptographicKey'): rpc__pb2.AnonymousQuery.SerializeToString,
+      ('zsearch.QueryService', 'GetHostDomainDelta'): rpc__pb2.HostQuery.SerializeToString,
+      ('zsearch.QueryService', 'GetHostDomainRecord'): rpc__pb2.HostQuery.SerializeToString,
+      ('zsearch.QueryService', 'GetHostIPv4Delta'): rpc__pb2.HostQuery.SerializeToString,
+      ('zsearch.QueryService', 'GetHostIPv4Record'): rpc__pb2.HostQuery.SerializeToString,
+      ('zsearch.QueryService', 'GetPublicLocation'): rpc__pb2.HostQuery.SerializeToString,
+      ('zsearch.QueryService', 'GetRestrictedLocation'): rpc__pb2.HostQuery.SerializeToString,
+      ('zsearch.QueryService', 'GetRootStore'): rpc__pb2.RootStoreQuery.SerializeToString,
+      ('zsearch.QueryService', 'GetUserMetadata'): rpc__pb2.HostQuery.SerializeToString,
+      ('zsearch.QueryService', 'GetWHOIS'): rpc__pb2.HostQuery.SerializeToString,
+      ('zsearch.QueryService', 'PutHostDomainRecord'): hoststore__pb2.Record.SerializeToString,
+      ('zsearch.QueryService', 'PutHostIPv4Record'): hoststore__pb2.Record.SerializeToString,
+      ('zsearch.QueryService', 'PutUserMetadata'): hoststore__pb2.Record.SerializeToString,
+      ('zsearch.QueryService', 'UpsertCertificate'): anonstore__pb2.AnonymousRecord.SerializeToString,
+      ('zsearch.QueryService', 'UpsertCryptographicKey'): anonstore__pb2.AnonymousRecord.SerializeToString,
+      ('zsearch.QueryService', 'UpsertRawCertificate'): anonstore__pb2.AnonymousRecord.SerializeToString,
     }
     response_deserializers = {
-      ('censys_definitions.QueryService', 'DelHostDomainRecord'): hoststore__pb2.Delta.FromString,
-      ('censys_definitions.QueryService', 'DelHostIPv4Record'): hoststore__pb2.Delta.FromString,
-      ('censys_definitions.QueryService', 'GetAllDomainRecords'): rpc__pb2.HostQueryResponse.FromString,
-      ('censys_definitions.QueryService', 'GetAllIPv4Records'): rpc__pb2.HostQueryResponse.FromString,
-      ('censys_definitions.QueryService', 'GetCertificate'): rpc__pb2.AnonymousQueryResponse.FromString,
-      ('censys_definitions.QueryService', 'GetCryptographicKey'): rpc__pb2.AnonymousQueryResponse.FromString,
-      ('censys_definitions.QueryService', 'GetHostDomainDelta'): hoststore__pb2.Delta.FromString,
-      ('censys_definitions.QueryService', 'GetHostDomainRecord'): rpc__pb2.HostQueryResponse.FromString,
-      ('censys_definitions.QueryService', 'GetHostIPv4Delta'): hoststore__pb2.Delta.FromString,
-      ('censys_definitions.QueryService', 'GetHostIPv4Record'): rpc__pb2.HostQueryResponse.FromString,
-      ('censys_definitions.QueryService', 'GetPublicLocation'): hoststore__pb2.LocationAtom.FromString,
-      ('censys_definitions.QueryService', 'GetRestrictedLocation'): hoststore__pb2.LocationAtom.FromString,
-      ('censys_definitions.QueryService', 'GetRootStore'): rpc__pb2.RootStoreReply.FromString,
-      ('censys_definitions.QueryService', 'GetUserMetadata'): hoststore__pb2.Record.FromString,
-      ('censys_definitions.QueryService', 'GetWHOIS'): hoststore__pb2.Record.FromString,
-      ('censys_definitions.QueryService', 'PutHostDomainRecord'): hoststore__pb2.Delta.FromString,
-      ('censys_definitions.QueryService', 'PutHostIPv4Record'): hoststore__pb2.Delta.FromString,
-      ('censys_definitions.QueryService', 'PutUserMetadata'): rpc__pb2.CommandReply.FromString,
-      ('censys_definitions.QueryService', 'UpsertCertificate'): anonstore__pb2.AnonymousDelta.FromString,
-      ('censys_definitions.QueryService', 'UpsertCryptographicKey'): anonstore__pb2.AnonymousDelta.FromString,
-      ('censys_definitions.QueryService', 'UpsertRawCertificate'): anonstore__pb2.AnonymousDelta.FromString,
+      ('zsearch.QueryService', 'DelHostDomainRecord'): hoststore__pb2.Delta.FromString,
+      ('zsearch.QueryService', 'DelHostIPv4Record'): hoststore__pb2.Delta.FromString,
+      ('zsearch.QueryService', 'GetAllDomainRecords'): rpc__pb2.HostQueryResponse.FromString,
+      ('zsearch.QueryService', 'GetAllIPv4Records'): rpc__pb2.HostQueryResponse.FromString,
+      ('zsearch.QueryService', 'GetCertificate'): rpc__pb2.AnonymousQueryResponse.FromString,
+      ('zsearch.QueryService', 'GetCryptographicKey'): rpc__pb2.AnonymousQueryResponse.FromString,
+      ('zsearch.QueryService', 'GetHostDomainDelta'): hoststore__pb2.Delta.FromString,
+      ('zsearch.QueryService', 'GetHostDomainRecord'): rpc__pb2.HostQueryResponse.FromString,
+      ('zsearch.QueryService', 'GetHostIPv4Delta'): hoststore__pb2.Delta.FromString,
+      ('zsearch.QueryService', 'GetHostIPv4Record'): rpc__pb2.HostQueryResponse.FromString,
+      ('zsearch.QueryService', 'GetPublicLocation'): hoststore__pb2.LocationAtom.FromString,
+      ('zsearch.QueryService', 'GetRestrictedLocation'): hoststore__pb2.LocationAtom.FromString,
+      ('zsearch.QueryService', 'GetRootStore'): rpc__pb2.RootStoreReply.FromString,
+      ('zsearch.QueryService', 'GetUserMetadata'): hoststore__pb2.Record.FromString,
+      ('zsearch.QueryService', 'GetWHOIS'): hoststore__pb2.Record.FromString,
+      ('zsearch.QueryService', 'PutHostDomainRecord'): hoststore__pb2.Delta.FromString,
+      ('zsearch.QueryService', 'PutHostIPv4Record'): hoststore__pb2.Delta.FromString,
+      ('zsearch.QueryService', 'PutUserMetadata'): rpc__pb2.CommandReply.FromString,
+      ('zsearch.QueryService', 'UpsertCertificate'): anonstore__pb2.AnonymousDelta.FromString,
+      ('zsearch.QueryService', 'UpsertCryptographicKey'): anonstore__pb2.AnonymousDelta.FromString,
+      ('zsearch.QueryService', 'UpsertRawCertificate'): anonstore__pb2.AnonymousDelta.FromString,
     }
     cardinalities = {
       'DelHostDomainRecord': cardinality.Cardinality.UNARY_UNARY,
@@ -1202,7 +1202,7 @@ try:
       'UpsertRawCertificate': cardinality.Cardinality.UNARY_UNARY,
     }
     stub_options = beta_implementations.stub_options(host=host, metadata_transformer=metadata_transformer, request_serializers=request_serializers, response_deserializers=response_deserializers, thread_pool=pool, thread_pool_size=pool_size)
-    return beta_implementations.dynamic_stub(channel, 'censys_definitions.QueryService', cardinalities, options=stub_options)
+    return beta_implementations.dynamic_stub(channel, 'zsearch.QueryService', cardinalities, options=stub_options)
 except ImportError:
   pass
 # @@protoc_insertion_point(module_scope)

@@ -18,15 +18,15 @@ _sym_db = _symbol_database.Default()
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='ct.proto',
-  package='censys_definitions',
+  package='zsearch',
   syntax='proto3',
-  serialized_pb=_b('\n\x08\x63t.proto\x12\x12\x63\x65nsys_definitions\"\xbd\x01\n\x0e\x43TServerStatus\x12\r\n\x05index\x18\x01 \x01(\x03\x12\x14\n\x0c\x63t_timestamp\x18\x02 \x01(\x03\x12\x16\n\x0epull_timestamp\x18\x03 \x01(\x03\x12\x16\n\x0epush_timestamp\x18\x04 \x01(\x03\x12\x35\n\x0bpush_status\x18\x05 \x01(\x0e\x32 .censys_definitions.CTPushStatus\x12\x0b\n\x03sct\x18\x06 \x01(\x0c\x12\x12\n\npush_error\x18\x07 \x01(\t\"\xca\x0e\n\x08\x43TStatus\x12\x36\n\ncensys_dev\x18\x01 \x01(\x0b\x32\".censys_definitions.CTServerStatus\x12\x32\n\x06\x63\x65nsys\x18\x02 \x01(\x0b\x32\".censys_definitions.CTServerStatus\x12:\n\x0egoogle_aviator\x18\n \x01(\x0b\x32\".censys_definitions.CTServerStatus\x12\x38\n\x0cgoogle_pilot\x18\x0b \x01(\x0b\x32\".censys_definitions.CTServerStatus\x12<\n\x10google_rocketeer\x18\x0c \x01(\x0b\x32\".censys_definitions.CTServerStatus\x12=\n\x11google_submariner\x18\r \x01(\x0b\x32\".censys_definitions.CTServerStatus\x12;\n\x0fgoogle_testtube\x18\x0e \x01(\x0b\x32\".censys_definitions.CTServerStatus\x12\x39\n\rgoogle_icarus\x18\x0f \x01(\x0b\x32\".censys_definitions.CTServerStatus\x12;\n\x0fgoogle_skydiver\x18\x10 \x01(\x0b\x32\".censys_definitions.CTServerStatus\x12;\n\x0fgoogle_daedalus\x18\x11 \x01(\x0b\x32\".censys_definitions.CTServerStatus\x12\x38\n\x0c\x64igicert_ct1\x18\x14 \x01(\x0b\x32\".censys_definitions.CTServerStatus\x12\x38\n\x0c\x64igicert_ct2\x18( \x01(\x0b\x32\".censys_definitions.CTServerStatus\x12\x39\n\rizenpe_com_ct\x18\x15 \x01(\x0b\x32\".censys_definitions.CTServerStatus\x12\x39\n\rizenpe_eus_ct\x18\x16 \x01(\x0b\x32\".censys_definitions.CTServerStatus\x12:\n\x0esymantec_ws_ct\x18\x17 \x01(\x0b\x32\".censys_definitions.CTServerStatus\x12<\n\x10symantec_ws_vega\x18\x18 \x01(\x0b\x32\".censys_definitions.CTServerStatus\x12>\n\x12symantec_ws_sirius\x18% \x01(\x0b\x32\".censys_definitions.CTServerStatus\x12=\n\x11symantec_ws_deneb\x18  \x01(\x0b\x32\".censys_definitions.CTServerStatus\x12\x37\n\x0b\x63omodo_dodo\x18\" \x01(\x0b\x32\".censys_definitions.CTServerStatus\x12:\n\x0e\x63omodo_mammoth\x18# \x01(\x0b\x32\".censys_definitions.CTServerStatus\x12\x38\n\x0cwosign_ctlog\x18\x19 \x01(\x0b\x32\".censys_definitions.CTServerStatus\x12\x35\n\twosign_ct\x18\x1a \x01(\x0b\x32\".censys_definitions.CTServerStatus\x12\x33\n\x07gdca_ct\x18\x1c \x01(\x0b\x32\".censys_definitions.CTServerStatus\x12\x36\n\ngdca_ctlog\x18$ \x01(\x0b\x32\".censys_definitions.CTServerStatus\x12<\n\x10venafi_api_ctlog\x18\x1f \x01(\x0b\x32\".censys_definitions.CTServerStatus\x12\x41\n\x15venafi_api_ctlog_gen2\x18\' \x01(\x0b\x32\".censys_definitions.CTServerStatus\x12>\n\x12nordu_ct_plausible\x18! \x01(\x0b\x32\".censys_definitions.CTServerStatus\x12:\n\x0e\x63nnic_ctserver\x18\x1b \x01(\x0b\x32\".censys_definitions.CTServerStatus\x12\x37\n\x0bstartssl_ct\x18\x1d \x01(\x0b\x32\".censys_definitions.CTServerStatus\x12\x36\n\ncertly_log\x18\x1e \x01(\x0b\x32\".censys_definitions.CTServerStatus\x12I\n\x1d\x63\x65rtificatetransparency_cn_ct\x18& \x01(\x0b\x32\".censys_definitions.CTServerStatus\"y\n\x03SCT\x12\x10\n\x08sha256fp\x18\x01 \x01(\x0c\x12,\n\x06server\x18\x02 \x01(\x0e\x32\x1c.censys_definitions.CTServer\x12\x32\n\x06status\x18\x03 \x01(\x0b\x32\".censys_definitions.CTServerStatus*\xeb\x01\n\x0c\x43TPushStatus\x12\x1b\n\x17\x43T_PUSH_STATUS_RESERVED\x10\x00\x12\x1a\n\x16\x43T_PUSH_STATUS_UNKNOWN\x10\x01\x12\x1a\n\x16\x43T_PUSH_STATUS_SUCCESS\x10\x02\x12 \n\x1c\x43T_PUSH_STATUS_UNKNOWN_ERROR\x10\x03\x12\x1f\n\x1b\x43T_PUSH_STATUS_INVALID_ROOT\x10\x04\x12!\n\x1d\x43T_PUSH_STATUS_ALREADY_EXISTS\x10\x05\x12 \n\x1c\x43T_PUSH_STATUS_WILL_NOT_PUSH\x10\x06*\xd3\x07\n\x08\x43TServer\x12\x16\n\x12\x43T_SERVER_RESERVED\x10\x00\x12\x1f\n\x1b\x43T_SERVER_CENSYS_PRODUCTION\x10\x01\x12 \n\x1c\x43T_SERVER_CENSYS_DEVELOPMENT\x10\x02\x12\x1a\n\x16\x43T_SERVER_GOOGLE_PILOT\x10\x0b\x12\x1e\n\x1a\x43T_SERVER_GOOGLE_ROCKETEER\x10\x0c\x12\x1f\n\x1b\x43T_SERVER_GOOGLE_SUBMARINER\x10\r\x12\x1d\n\x19\x43T_SERVER_GOOGLE_TESTTUBE\x10\x0e\x12\x1b\n\x17\x43T_SERVER_GOOGLE_ICARUS\x10\x0f\x12\x1d\n\x19\x43T_SERVER_GOOGLE_SKYDIVER\x10\x10\x12\x1d\n\x19\x43T_SERVER_GOOGLE_DAEDALUS\x10\x11\x12\x1c\n\x18\x43T_SERVER_GOOGLE_AVIATOR\x10\n\x12\x1c\n\x18\x43T_SERVER_SYMANTEC_WS_CT\x10\x17\x12\x1e\n\x1a\x43T_SERVER_SYMANTEC_WS_VEGA\x10\x18\x12\x1f\n\x1b\x43T_SERVER_SYMANTEC_WS_DENEB\x10 \x12 \n\x1c\x43T_SERVER_SYMANTEC_WS_SIRIUS\x10%\x12\x19\n\x15\x43T_SERVER_COMODO_DODO\x10#\x12\x1c\n\x18\x43T_SERVER_COMODO_MAMMOTH\x10$\x12\x1a\n\x16\x43T_SERVER_WOSIGN_CTLOG\x10\x19\x12\x17\n\x13\x43T_SERVER_WOSIGN_CT\x10\x1a\x12\x1e\n\x1a\x43T_SERVER_VENAFI_API_CTLOG\x10\x1f\x12#\n\x1f\x43T_SERVER_VENAFI_API_CTLOG_GEN2\x10\'\x12\x15\n\x11\x43T_SERVER_GDCA_CT\x10\x1c\x12\x18\n\x14\x43T_SERVER_GDCA_CTLOG\x10\"\x12\x1b\n\x17\x43T_SERVER_IZENPE_COM_CT\x10\x15\x12\x1b\n\x17\x43T_SERVER_IZENPE_EUS_CT\x10\x16\x12\x1a\n\x16\x43T_SERVER_DIGICERT_CT1\x10\x14\x12\x1a\n\x16\x43T_SERVER_DIGICERT_CT2\x10(\x12\x1c\n\x18\x43T_SERVER_CNNIC_CTSERVER\x10\x1b\x12\x19\n\x15\x43T_SERVER_STARTSSL_CT\x10\x1d\x12\x18\n\x14\x43T_SERVER_CERTLY_LOG\x10\x1e\x12 \n\x1c\x43T_SERVER_NORDU_CT_PLAUSIBLE\x10!\x12+\n\'CT_SERVER_CERTIFICATETRANSPARENCY_CN_CT\x10&b\x06proto3')
+  serialized_pb=_b('\n\x08\x63t.proto\x12\x07zsearch\"\xb2\x01\n\x0e\x43TServerStatus\x12\r\n\x05index\x18\x01 \x01(\x03\x12\x14\n\x0c\x63t_timestamp\x18\x02 \x01(\x03\x12\x16\n\x0epull_timestamp\x18\x03 \x01(\x03\x12\x16\n\x0epush_timestamp\x18\x04 \x01(\x03\x12*\n\x0bpush_status\x18\x05 \x01(\x0e\x32\x15.zsearch.CTPushStatus\x12\x0b\n\x03sct\x18\x06 \x01(\x0c\x12\x12\n\npush_error\x18\x07 \x01(\t\"\xf5\x0b\n\x08\x43TStatus\x12+\n\ncensys_dev\x18\x01 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\'\n\x06\x63\x65nsys\x18\x02 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12/\n\x0egoogle_aviator\x18\n \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12-\n\x0cgoogle_pilot\x18\x0b \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x31\n\x10google_rocketeer\x18\x0c \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x32\n\x11google_submariner\x18\r \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x30\n\x0fgoogle_testtube\x18\x0e \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12.\n\rgoogle_icarus\x18\x0f \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x30\n\x0fgoogle_skydiver\x18\x10 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x30\n\x0fgoogle_daedalus\x18\x11 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12-\n\x0c\x64igicert_ct1\x18\x14 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12-\n\x0c\x64igicert_ct2\x18( \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12.\n\rizenpe_com_ct\x18\x15 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12.\n\rizenpe_eus_ct\x18\x16 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12/\n\x0esymantec_ws_ct\x18\x17 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x31\n\x10symantec_ws_vega\x18\x18 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x33\n\x12symantec_ws_sirius\x18% \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x32\n\x11symantec_ws_deneb\x18  \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12,\n\x0b\x63omodo_dodo\x18\" \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12/\n\x0e\x63omodo_mammoth\x18# \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12-\n\x0cwosign_ctlog\x18\x19 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12*\n\twosign_ct\x18\x1a \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12(\n\x07gdca_ct\x18\x1c \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12+\n\ngdca_ctlog\x18$ \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x31\n\x10venafi_api_ctlog\x18\x1f \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x36\n\x15venafi_api_ctlog_gen2\x18\' \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x33\n\x12nordu_ct_plausible\x18! \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12/\n\x0e\x63nnic_ctserver\x18\x1b \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12,\n\x0bstartssl_ct\x18\x1d \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12+\n\ncertly_log\x18\x1e \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12>\n\x1d\x63\x65rtificatetransparency_cn_ct\x18& \x01(\x0b\x32\x17.zsearch.CTServerStatus\"c\n\x03SCT\x12\x10\n\x08sha256fp\x18\x01 \x01(\x0c\x12!\n\x06server\x18\x02 \x01(\x0e\x32\x11.zsearch.CTServer\x12\'\n\x06status\x18\x03 \x01(\x0b\x32\x17.zsearch.CTServerStatus*\xeb\x01\n\x0c\x43TPushStatus\x12\x1b\n\x17\x43T_PUSH_STATUS_RESERVED\x10\x00\x12\x1a\n\x16\x43T_PUSH_STATUS_UNKNOWN\x10\x01\x12\x1a\n\x16\x43T_PUSH_STATUS_SUCCESS\x10\x02\x12 \n\x1c\x43T_PUSH_STATUS_UNKNOWN_ERROR\x10\x03\x12\x1f\n\x1b\x43T_PUSH_STATUS_INVALID_ROOT\x10\x04\x12!\n\x1d\x43T_PUSH_STATUS_ALREADY_EXISTS\x10\x05\x12 \n\x1c\x43T_PUSH_STATUS_WILL_NOT_PUSH\x10\x06*\xd3\x07\n\x08\x43TServer\x12\x16\n\x12\x43T_SERVER_RESERVED\x10\x00\x12\x1f\n\x1b\x43T_SERVER_CENSYS_PRODUCTION\x10\x01\x12 \n\x1c\x43T_SERVER_CENSYS_DEVELOPMENT\x10\x02\x12\x1a\n\x16\x43T_SERVER_GOOGLE_PILOT\x10\x0b\x12\x1e\n\x1a\x43T_SERVER_GOOGLE_ROCKETEER\x10\x0c\x12\x1f\n\x1b\x43T_SERVER_GOOGLE_SUBMARINER\x10\r\x12\x1d\n\x19\x43T_SERVER_GOOGLE_TESTTUBE\x10\x0e\x12\x1b\n\x17\x43T_SERVER_GOOGLE_ICARUS\x10\x0f\x12\x1d\n\x19\x43T_SERVER_GOOGLE_SKYDIVER\x10\x10\x12\x1d\n\x19\x43T_SERVER_GOOGLE_DAEDALUS\x10\x11\x12\x1c\n\x18\x43T_SERVER_GOOGLE_AVIATOR\x10\n\x12\x1c\n\x18\x43T_SERVER_SYMANTEC_WS_CT\x10\x17\x12\x1e\n\x1a\x43T_SERVER_SYMANTEC_WS_VEGA\x10\x18\x12\x1f\n\x1b\x43T_SERVER_SYMANTEC_WS_DENEB\x10 \x12 \n\x1c\x43T_SERVER_SYMANTEC_WS_SIRIUS\x10%\x12\x19\n\x15\x43T_SERVER_COMODO_DODO\x10#\x12\x1c\n\x18\x43T_SERVER_COMODO_MAMMOTH\x10$\x12\x1a\n\x16\x43T_SERVER_WOSIGN_CTLOG\x10\x19\x12\x17\n\x13\x43T_SERVER_WOSIGN_CT\x10\x1a\x12\x1e\n\x1a\x43T_SERVER_VENAFI_API_CTLOG\x10\x1f\x12#\n\x1f\x43T_SERVER_VENAFI_API_CTLOG_GEN2\x10\'\x12\x15\n\x11\x43T_SERVER_GDCA_CT\x10\x1c\x12\x18\n\x14\x43T_SERVER_GDCA_CTLOG\x10\"\x12\x1b\n\x17\x43T_SERVER_IZENPE_COM_CT\x10\x15\x12\x1b\n\x17\x43T_SERVER_IZENPE_EUS_CT\x10\x16\x12\x1a\n\x16\x43T_SERVER_DIGICERT_CT1\x10\x14\x12\x1a\n\x16\x43T_SERVER_DIGICERT_CT2\x10(\x12\x1c\n\x18\x43T_SERVER_CNNIC_CTSERVER\x10\x1b\x12\x19\n\x15\x43T_SERVER_STARTSSL_CT\x10\x1d\x12\x18\n\x14\x43T_SERVER_CERTLY_LOG\x10\x1e\x12 \n\x1c\x43T_SERVER_NORDU_CT_PLAUSIBLE\x10!\x12+\n\'CT_SERVER_CERTIFICATETRANSPARENCY_CN_CT\x10&b\x06proto3')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 _CTPUSHSTATUS = _descriptor.EnumDescriptor(
   name='CTPushStatus',
-  full_name='censys_definitions.CTPushStatus',
+  full_name='zsearch.CTPushStatus',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -61,15 +61,15 @@ _CTPUSHSTATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2217,
-  serialized_end=2452,
+  serialized_start=1832,
+  serialized_end=2067,
 )
 _sym_db.RegisterEnumDescriptor(_CTPUSHSTATUS)
 
 CTPushStatus = enum_type_wrapper.EnumTypeWrapper(_CTPUSHSTATUS)
 _CTSERVER = _descriptor.EnumDescriptor(
   name='CTServer',
-  full_name='censys_definitions.CTServer',
+  full_name='zsearch.CTServer',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -204,8 +204,8 @@ _CTSERVER = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2455,
-  serialized_end=3434,
+  serialized_start=2070,
+  serialized_end=3049,
 )
 _sym_db.RegisterEnumDescriptor(_CTSERVER)
 
@@ -254,55 +254,55 @@ CT_SERVER_CERTIFICATETRANSPARENCY_CN_CT = 38
 
 _CTSERVERSTATUS = _descriptor.Descriptor(
   name='CTServerStatus',
-  full_name='censys_definitions.CTServerStatus',
+  full_name='zsearch.CTServerStatus',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='index', full_name='censys_definitions.CTServerStatus.index', index=0,
+      name='index', full_name='zsearch.CTServerStatus.index', index=0,
       number=1, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='ct_timestamp', full_name='censys_definitions.CTServerStatus.ct_timestamp', index=1,
+      name='ct_timestamp', full_name='zsearch.CTServerStatus.ct_timestamp', index=1,
       number=2, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='pull_timestamp', full_name='censys_definitions.CTServerStatus.pull_timestamp', index=2,
+      name='pull_timestamp', full_name='zsearch.CTServerStatus.pull_timestamp', index=2,
       number=3, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='push_timestamp', full_name='censys_definitions.CTServerStatus.push_timestamp', index=3,
+      name='push_timestamp', full_name='zsearch.CTServerStatus.push_timestamp', index=3,
       number=4, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='push_status', full_name='censys_definitions.CTServerStatus.push_status', index=4,
+      name='push_status', full_name='zsearch.CTServerStatus.push_status', index=4,
       number=5, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='sct', full_name='censys_definitions.CTServerStatus.sct', index=5,
+      name='sct', full_name='zsearch.CTServerStatus.sct', index=5,
       number=6, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='push_error', full_name='censys_definitions.CTServerStatus.push_error', index=6,
+      name='push_error', full_name='zsearch.CTServerStatus.push_error', index=6,
       number=7, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -320,230 +320,230 @@ _CTSERVERSTATUS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=33,
-  serialized_end=222,
+  serialized_start=22,
+  serialized_end=200,
 )
 
 
 _CTSTATUS = _descriptor.Descriptor(
   name='CTStatus',
-  full_name='censys_definitions.CTStatus',
+  full_name='zsearch.CTStatus',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='censys_dev', full_name='censys_definitions.CTStatus.censys_dev', index=0,
+      name='censys_dev', full_name='zsearch.CTStatus.censys_dev', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='censys', full_name='censys_definitions.CTStatus.censys', index=1,
+      name='censys', full_name='zsearch.CTStatus.censys', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='google_aviator', full_name='censys_definitions.CTStatus.google_aviator', index=2,
+      name='google_aviator', full_name='zsearch.CTStatus.google_aviator', index=2,
       number=10, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='google_pilot', full_name='censys_definitions.CTStatus.google_pilot', index=3,
+      name='google_pilot', full_name='zsearch.CTStatus.google_pilot', index=3,
       number=11, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='google_rocketeer', full_name='censys_definitions.CTStatus.google_rocketeer', index=4,
+      name='google_rocketeer', full_name='zsearch.CTStatus.google_rocketeer', index=4,
       number=12, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='google_submariner', full_name='censys_definitions.CTStatus.google_submariner', index=5,
+      name='google_submariner', full_name='zsearch.CTStatus.google_submariner', index=5,
       number=13, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='google_testtube', full_name='censys_definitions.CTStatus.google_testtube', index=6,
+      name='google_testtube', full_name='zsearch.CTStatus.google_testtube', index=6,
       number=14, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='google_icarus', full_name='censys_definitions.CTStatus.google_icarus', index=7,
+      name='google_icarus', full_name='zsearch.CTStatus.google_icarus', index=7,
       number=15, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='google_skydiver', full_name='censys_definitions.CTStatus.google_skydiver', index=8,
+      name='google_skydiver', full_name='zsearch.CTStatus.google_skydiver', index=8,
       number=16, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='google_daedalus', full_name='censys_definitions.CTStatus.google_daedalus', index=9,
+      name='google_daedalus', full_name='zsearch.CTStatus.google_daedalus', index=9,
       number=17, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='digicert_ct1', full_name='censys_definitions.CTStatus.digicert_ct1', index=10,
+      name='digicert_ct1', full_name='zsearch.CTStatus.digicert_ct1', index=10,
       number=20, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='digicert_ct2', full_name='censys_definitions.CTStatus.digicert_ct2', index=11,
+      name='digicert_ct2', full_name='zsearch.CTStatus.digicert_ct2', index=11,
       number=40, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='izenpe_com_ct', full_name='censys_definitions.CTStatus.izenpe_com_ct', index=12,
+      name='izenpe_com_ct', full_name='zsearch.CTStatus.izenpe_com_ct', index=12,
       number=21, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='izenpe_eus_ct', full_name='censys_definitions.CTStatus.izenpe_eus_ct', index=13,
+      name='izenpe_eus_ct', full_name='zsearch.CTStatus.izenpe_eus_ct', index=13,
       number=22, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='symantec_ws_ct', full_name='censys_definitions.CTStatus.symantec_ws_ct', index=14,
+      name='symantec_ws_ct', full_name='zsearch.CTStatus.symantec_ws_ct', index=14,
       number=23, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='symantec_ws_vega', full_name='censys_definitions.CTStatus.symantec_ws_vega', index=15,
+      name='symantec_ws_vega', full_name='zsearch.CTStatus.symantec_ws_vega', index=15,
       number=24, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='symantec_ws_sirius', full_name='censys_definitions.CTStatus.symantec_ws_sirius', index=16,
+      name='symantec_ws_sirius', full_name='zsearch.CTStatus.symantec_ws_sirius', index=16,
       number=37, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='symantec_ws_deneb', full_name='censys_definitions.CTStatus.symantec_ws_deneb', index=17,
+      name='symantec_ws_deneb', full_name='zsearch.CTStatus.symantec_ws_deneb', index=17,
       number=32, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='comodo_dodo', full_name='censys_definitions.CTStatus.comodo_dodo', index=18,
+      name='comodo_dodo', full_name='zsearch.CTStatus.comodo_dodo', index=18,
       number=34, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='comodo_mammoth', full_name='censys_definitions.CTStatus.comodo_mammoth', index=19,
+      name='comodo_mammoth', full_name='zsearch.CTStatus.comodo_mammoth', index=19,
       number=35, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='wosign_ctlog', full_name='censys_definitions.CTStatus.wosign_ctlog', index=20,
+      name='wosign_ctlog', full_name='zsearch.CTStatus.wosign_ctlog', index=20,
       number=25, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='wosign_ct', full_name='censys_definitions.CTStatus.wosign_ct', index=21,
+      name='wosign_ct', full_name='zsearch.CTStatus.wosign_ct', index=21,
       number=26, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='gdca_ct', full_name='censys_definitions.CTStatus.gdca_ct', index=22,
+      name='gdca_ct', full_name='zsearch.CTStatus.gdca_ct', index=22,
       number=28, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='gdca_ctlog', full_name='censys_definitions.CTStatus.gdca_ctlog', index=23,
+      name='gdca_ctlog', full_name='zsearch.CTStatus.gdca_ctlog', index=23,
       number=36, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='venafi_api_ctlog', full_name='censys_definitions.CTStatus.venafi_api_ctlog', index=24,
+      name='venafi_api_ctlog', full_name='zsearch.CTStatus.venafi_api_ctlog', index=24,
       number=31, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='venafi_api_ctlog_gen2', full_name='censys_definitions.CTStatus.venafi_api_ctlog_gen2', index=25,
+      name='venafi_api_ctlog_gen2', full_name='zsearch.CTStatus.venafi_api_ctlog_gen2', index=25,
       number=39, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='nordu_ct_plausible', full_name='censys_definitions.CTStatus.nordu_ct_plausible', index=26,
+      name='nordu_ct_plausible', full_name='zsearch.CTStatus.nordu_ct_plausible', index=26,
       number=33, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='cnnic_ctserver', full_name='censys_definitions.CTStatus.cnnic_ctserver', index=27,
+      name='cnnic_ctserver', full_name='zsearch.CTStatus.cnnic_ctserver', index=27,
       number=27, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='startssl_ct', full_name='censys_definitions.CTStatus.startssl_ct', index=28,
+      name='startssl_ct', full_name='zsearch.CTStatus.startssl_ct', index=28,
       number=29, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='certly_log', full_name='censys_definitions.CTStatus.certly_log', index=29,
+      name='certly_log', full_name='zsearch.CTStatus.certly_log', index=29,
       number=30, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='certificatetransparency_cn_ct', full_name='censys_definitions.CTStatus.certificatetransparency_cn_ct', index=30,
+      name='certificatetransparency_cn_ct', full_name='zsearch.CTStatus.certificatetransparency_cn_ct', index=30,
       number=38, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -561,34 +561,34 @@ _CTSTATUS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=225,
-  serialized_end=2091,
+  serialized_start=203,
+  serialized_end=1728,
 )
 
 
 _SCT = _descriptor.Descriptor(
   name='SCT',
-  full_name='censys_definitions.SCT',
+  full_name='zsearch.SCT',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='sha256fp', full_name='censys_definitions.SCT.sha256fp', index=0,
+      name='sha256fp', full_name='zsearch.SCT.sha256fp', index=0,
       number=1, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='server', full_name='censys_definitions.SCT.server', index=1,
+      name='server', full_name='zsearch.SCT.server', index=1,
       number=2, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='status', full_name='censys_definitions.SCT.status', index=2,
+      name='status', full_name='zsearch.SCT.status', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -606,8 +606,8 @@ _SCT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2093,
-  serialized_end=2214,
+  serialized_start=1730,
+  serialized_end=1829,
 )
 
 _CTSERVERSTATUS.fields_by_name['push_status'].enum_type = _CTPUSHSTATUS
@@ -653,21 +653,21 @@ DESCRIPTOR.enum_types_by_name['CTServer'] = _CTSERVER
 CTServerStatus = _reflection.GeneratedProtocolMessageType('CTServerStatus', (_message.Message,), dict(
   DESCRIPTOR = _CTSERVERSTATUS,
   __module__ = 'ct_pb2'
-  # @@protoc_insertion_point(class_scope:censys_definitions.CTServerStatus)
+  # @@protoc_insertion_point(class_scope:zsearch.CTServerStatus)
   ))
 _sym_db.RegisterMessage(CTServerStatus)
 
 CTStatus = _reflection.GeneratedProtocolMessageType('CTStatus', (_message.Message,), dict(
   DESCRIPTOR = _CTSTATUS,
   __module__ = 'ct_pb2'
-  # @@protoc_insertion_point(class_scope:censys_definitions.CTStatus)
+  # @@protoc_insertion_point(class_scope:zsearch.CTStatus)
   ))
 _sym_db.RegisterMessage(CTStatus)
 
 SCT = _reflection.GeneratedProtocolMessageType('SCT', (_message.Message,), dict(
   DESCRIPTOR = _SCT,
   __module__ = 'ct_pb2'
-  # @@protoc_insertion_point(class_scope:censys_definitions.SCT)
+  # @@protoc_insertion_point(class_scope:zsearch.SCT)
   ))
 _sym_db.RegisterMessage(SCT)
 

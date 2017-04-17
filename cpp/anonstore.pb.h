@@ -34,7 +34,7 @@
 #include "ct.pb.h"
 #include "certificate.pb.h"
 // @@protoc_insertion_point(includes)
-namespace censys_definitions {
+namespace zsearch {
 class ASAtom;
 class ASAtomDefaultTypeInternal;
 extern ASAtomDefaultTypeInternal _ASAtom_default_instance_;
@@ -92,9 +92,9 @@ extern SCTDefaultTypeInternal _SCT_default_instance_;
 class UserdataAtom;
 class UserdataAtomDefaultTypeInternal;
 extern UserdataAtomDefaultTypeInternal _UserdataAtom_default_instance_;
-}  // namespace censys_definitions
+}  // namespace zsearch
 
-namespace censys_definitions {
+namespace zsearch {
 
 namespace protobuf_anonstore_2eproto {
 // Internal implementation detail -- do not call these.
@@ -154,7 +154,7 @@ inline bool AnonymousDelta_DeltaScope_Parse(
 }
 // ===================================================================
 
-class AnonymousRecord : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:censys_definitions.AnonymousRecord) */ {
+class AnonymousRecord : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zsearch.AnonymousRecord) */ {
  public:
   AnonymousRecord();
   virtual ~AnonymousRecord();
@@ -230,16 +230,16 @@ class AnonymousRecord : public ::google::protobuf::Message /* @@protoc_insertion
 
   // accessors -------------------------------------------------------
 
-  // repeated .censys_definitions.Metadatum metadata = 14;
+  // repeated .zsearch.Metadatum metadata = 14;
   int metadata_size() const;
   void clear_metadata();
   static const int kMetadataFieldNumber = 14;
-  const ::censys_definitions::Metadatum& metadata(int index) const;
-  ::censys_definitions::Metadatum* mutable_metadata(int index);
-  ::censys_definitions::Metadatum* add_metadata();
-  ::google::protobuf::RepeatedPtrField< ::censys_definitions::Metadatum >*
+  const ::zsearch::Metadatum& metadata(int index) const;
+  ::zsearch::Metadatum* mutable_metadata(int index);
+  ::zsearch::Metadatum* add_metadata();
+  ::google::protobuf::RepeatedPtrField< ::zsearch::Metadatum >*
       mutable_metadata();
-  const ::google::protobuf::RepeatedPtrField< ::censys_definitions::Metadatum >&
+  const ::google::protobuf::RepeatedPtrField< ::zsearch::Metadatum >&
       metadata() const;
 
   // repeated string tags = 15;
@@ -272,14 +272,14 @@ class AnonymousRecord : public ::google::protobuf::Message /* @@protoc_insertion
   ::std::string* release_sha256fp();
   void set_allocated_sha256fp(::std::string* sha256fp);
 
-  // .censys_definitions.UserdataAtom userdata = 5;
+  // .zsearch.UserdataAtom userdata = 5;
   bool has_userdata() const;
   void clear_userdata();
   static const int kUserdataFieldNumber = 5;
-  const ::censys_definitions::UserdataAtom& userdata() const;
-  ::censys_definitions::UserdataAtom* mutable_userdata();
-  ::censys_definitions::UserdataAtom* release_userdata();
-  void set_allocated_userdata(::censys_definitions::UserdataAtom* userdata);
+  const ::zsearch::UserdataAtom& userdata() const;
+  ::zsearch::UserdataAtom* mutable_userdata();
+  ::zsearch::UserdataAtom* release_userdata();
+  void set_allocated_userdata(::zsearch::UserdataAtom* userdata);
 
   // sfixed64 timestamp = 2;
   void clear_timestamp();
@@ -345,35 +345,35 @@ class AnonymousRecord : public ::google::protobuf::Message /* @@protoc_insertion
   ::std::string* release_raw_data();
   void set_allocated_raw_data(::std::string* raw_data);
 
-  // .censys_definitions.Certificate certificate = 8;
+  // .zsearch.Certificate certificate = 8;
   bool has_certificate() const;
   void clear_certificate();
   static const int kCertificateFieldNumber = 8;
-  const ::censys_definitions::Certificate& certificate() const;
-  ::censys_definitions::Certificate* mutable_certificate();
-  ::censys_definitions::Certificate* release_certificate();
-  void set_allocated_certificate(::censys_definitions::Certificate* certificate);
+  const ::zsearch::Certificate& certificate() const;
+  ::zsearch::Certificate* mutable_certificate();
+  ::zsearch::Certificate* release_certificate();
+  void set_allocated_certificate(::zsearch::Certificate* certificate);
 
-  // .censys_definitions.CryptographicKey key = 9;
+  // .zsearch.CryptographicKey key = 9;
   bool has_key() const;
   void clear_key();
   static const int kKeyFieldNumber = 9;
-  const ::censys_definitions::CryptographicKey& key() const;
-  ::censys_definitions::CryptographicKey* mutable_key();
-  ::censys_definitions::CryptographicKey* release_key();
-  void set_allocated_key(::censys_definitions::CryptographicKey* key);
+  const ::zsearch::CryptographicKey& key() const;
+  ::zsearch::CryptographicKey* mutable_key();
+  ::zsearch::CryptographicKey* release_key();
+  void set_allocated_key(::zsearch::CryptographicKey* key);
 
-  // .censys_definitions.ASAtom as = 10;
+  // .zsearch.ASAtom as = 10;
   bool has_as() const;
   void clear_as();
   static const int kAsFieldNumber = 10;
-  const ::censys_definitions::ASAtom& as() const;
-  ::censys_definitions::ASAtom* mutable_as();
-  ::censys_definitions::ASAtom* release_as();
-  void set_allocated_as(::censys_definitions::ASAtom* as);
+  const ::zsearch::ASAtom& as() const;
+  ::zsearch::ASAtom* mutable_as();
+  ::zsearch::ASAtom* release_as();
+  void set_allocated_as(::zsearch::ASAtom* as);
 
   OneofDataCase oneof_data_case() const;
-  // @@protoc_insertion_point(class_scope:censys_definitions.AnonymousRecord)
+  // @@protoc_insertion_point(class_scope:zsearch.AnonymousRecord)
  private:
   void set_has_data();
   void set_has_raw_data();
@@ -386,10 +386,10 @@ class AnonymousRecord : public ::google::protobuf::Message /* @@protoc_insertion
   inline void clear_has_oneof_data();
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::RepeatedPtrField< ::censys_definitions::Metadatum > metadata_;
+  ::google::protobuf::RepeatedPtrField< ::zsearch::Metadatum > metadata_;
   ::google::protobuf::RepeatedPtrField< ::std::string> tags_;
   ::google::protobuf::internal::ArenaStringPtr sha256fp_;
-  ::censys_definitions::UserdataAtom* userdata_;
+  ::zsearch::UserdataAtom* userdata_;
   ::google::protobuf::int64 timestamp_;
   ::google::protobuf::uint32 scan_id_;
   bool exported_;
@@ -399,9 +399,9 @@ class AnonymousRecord : public ::google::protobuf::Message /* @@protoc_insertion
     OneofDataUnion() {}
     ::google::protobuf::internal::ArenaStringPtr data_;
     ::google::protobuf::internal::ArenaStringPtr raw_data_;
-    ::censys_definitions::Certificate* certificate_;
-    ::censys_definitions::CryptographicKey* key_;
-    ::censys_definitions::ASAtom* as_;
+    ::zsearch::Certificate* certificate_;
+    ::zsearch::CryptographicKey* key_;
+    ::zsearch::ASAtom* as_;
   } oneof_data_;
   mutable int _cached_size_;
   ::google::protobuf::uint32 _oneof_case_[1];
@@ -410,7 +410,7 @@ class AnonymousRecord : public ::google::protobuf::Message /* @@protoc_insertion
 };
 // -------------------------------------------------------------------
 
-class AnonymousDelta : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:censys_definitions.AnonymousDelta) */ {
+class AnonymousDelta : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zsearch.AnonymousDelta) */ {
  public:
   AnonymousDelta();
   virtual ~AnonymousDelta();
@@ -535,32 +535,32 @@ class AnonymousDelta : public ::google::protobuf::Message /* @@protoc_insertion_
 
   // accessors -------------------------------------------------------
 
-  // .censys_definitions.AnonymousRecord record = 3;
+  // .zsearch.AnonymousRecord record = 3;
   bool has_record() const;
   void clear_record();
   static const int kRecordFieldNumber = 3;
-  const ::censys_definitions::AnonymousRecord& record() const;
-  ::censys_definitions::AnonymousRecord* mutable_record();
-  ::censys_definitions::AnonymousRecord* release_record();
-  void set_allocated_record(::censys_definitions::AnonymousRecord* record);
+  const ::zsearch::AnonymousRecord& record() const;
+  ::zsearch::AnonymousRecord* mutable_record();
+  ::zsearch::AnonymousRecord* release_record();
+  void set_allocated_record(::zsearch::AnonymousRecord* record);
 
-  // .censys_definitions.AnonymousDelta.DeltaType delta_type = 1;
+  // .zsearch.AnonymousDelta.DeltaType delta_type = 1;
   void clear_delta_type();
   static const int kDeltaTypeFieldNumber = 1;
-  ::censys_definitions::AnonymousDelta_DeltaType delta_type() const;
-  void set_delta_type(::censys_definitions::AnonymousDelta_DeltaType value);
+  ::zsearch::AnonymousDelta_DeltaType delta_type() const;
+  void set_delta_type(::zsearch::AnonymousDelta_DeltaType value);
 
-  // .censys_definitions.AnonymousDelta.DeltaScope delta_scope = 2;
+  // .zsearch.AnonymousDelta.DeltaScope delta_scope = 2;
   void clear_delta_scope();
   static const int kDeltaScopeFieldNumber = 2;
-  ::censys_definitions::AnonymousDelta_DeltaScope delta_scope() const;
-  void set_delta_scope(::censys_definitions::AnonymousDelta_DeltaScope value);
+  ::zsearch::AnonymousDelta_DeltaScope delta_scope() const;
+  void set_delta_scope(::zsearch::AnonymousDelta_DeltaScope value);
 
-  // @@protoc_insertion_point(class_scope:censys_definitions.AnonymousDelta)
+  // @@protoc_insertion_point(class_scope:zsearch.AnonymousDelta)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::censys_definitions::AnonymousRecord* record_;
+  ::zsearch::AnonymousRecord* record_;
   int delta_type_;
   int delta_scope_;
   mutable int _cached_size_;
@@ -568,7 +568,7 @@ class AnonymousDelta : public ::google::protobuf::Message /* @@protoc_insertion_
 };
 // -------------------------------------------------------------------
 
-class ExternalCertificate : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:censys_definitions.ExternalCertificate) */ {
+class ExternalCertificate : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zsearch.ExternalCertificate) */ {
  public:
   ExternalCertificate();
   virtual ~ExternalCertificate();
@@ -649,53 +649,53 @@ class ExternalCertificate : public ::google::protobuf::Message /* @@protoc_inser
   ::std::string* release_tbshash();
   void set_allocated_tbshash(::std::string* tbshash);
 
-  // .censys_definitions.AnonymousRecord anonymous_record = 2;
+  // .zsearch.AnonymousRecord anonymous_record = 2;
   bool has_anonymous_record() const;
   void clear_anonymous_record();
   static const int kAnonymousRecordFieldNumber = 2;
-  const ::censys_definitions::AnonymousRecord& anonymous_record() const;
-  ::censys_definitions::AnonymousRecord* mutable_anonymous_record();
-  ::censys_definitions::AnonymousRecord* release_anonymous_record();
-  void set_allocated_anonymous_record(::censys_definitions::AnonymousRecord* anonymous_record);
+  const ::zsearch::AnonymousRecord& anonymous_record() const;
+  ::zsearch::AnonymousRecord* mutable_anonymous_record();
+  ::zsearch::AnonymousRecord* release_anonymous_record();
+  void set_allocated_anonymous_record(::zsearch::AnonymousRecord* anonymous_record);
 
-  // .censys_definitions.CTServerStatus ct_status = 4;
+  // .zsearch.CTServerStatus ct_status = 4;
   bool has_ct_status() const;
   void clear_ct_status();
   static const int kCtStatusFieldNumber = 4;
-  const ::censys_definitions::CTServerStatus& ct_status() const;
-  ::censys_definitions::CTServerStatus* mutable_ct_status();
-  ::censys_definitions::CTServerStatus* release_ct_status();
-  void set_allocated_ct_status(::censys_definitions::CTServerStatus* ct_status);
+  const ::zsearch::CTServerStatus& ct_status() const;
+  ::zsearch::CTServerStatus* mutable_ct_status();
+  ::zsearch::CTServerStatus* release_ct_status();
+  void set_allocated_ct_status(::zsearch::CTServerStatus* ct_status);
 
-  // .censys_definitions.MozillaSalesForceStatus nss_status = 5;
+  // .zsearch.MozillaSalesForceStatus nss_status = 5;
   bool has_nss_status() const;
   void clear_nss_status();
   static const int kNssStatusFieldNumber = 5;
-  const ::censys_definitions::MozillaSalesForceStatus& nss_status() const;
-  ::censys_definitions::MozillaSalesForceStatus* mutable_nss_status();
-  ::censys_definitions::MozillaSalesForceStatus* release_nss_status();
-  void set_allocated_nss_status(::censys_definitions::MozillaSalesForceStatus* nss_status);
+  const ::zsearch::MozillaSalesForceStatus& nss_status() const;
+  ::zsearch::MozillaSalesForceStatus* mutable_nss_status();
+  ::zsearch::MozillaSalesForceStatus* release_nss_status();
+  void set_allocated_nss_status(::zsearch::MozillaSalesForceStatus* nss_status);
 
-  // .censys_definitions.CertificateSource source = 1;
+  // .zsearch.CertificateSource source = 1;
   void clear_source();
   static const int kSourceFieldNumber = 1;
-  ::censys_definitions::CertificateSource source() const;
-  void set_source(::censys_definitions::CertificateSource value);
+  ::zsearch::CertificateSource source() const;
+  void set_source(::zsearch::CertificateSource value);
 
-  // .censys_definitions.CTServer ct_server = 3;
+  // .zsearch.CTServer ct_server = 3;
   void clear_ct_server();
   static const int kCtServerFieldNumber = 3;
-  ::censys_definitions::CTServer ct_server() const;
-  void set_ct_server(::censys_definitions::CTServer value);
+  ::zsearch::CTServer ct_server() const;
+  void set_ct_server(::zsearch::CTServer value);
 
-  // @@protoc_insertion_point(class_scope:censys_definitions.ExternalCertificate)
+  // @@protoc_insertion_point(class_scope:zsearch.ExternalCertificate)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::ArenaStringPtr tbshash_;
-  ::censys_definitions::AnonymousRecord* anonymous_record_;
-  ::censys_definitions::CTServerStatus* ct_status_;
-  ::censys_definitions::MozillaSalesForceStatus* nss_status_;
+  ::zsearch::AnonymousRecord* anonymous_record_;
+  ::zsearch::CTServerStatus* ct_status_;
+  ::zsearch::MozillaSalesForceStatus* nss_status_;
   int source_;
   int ct_server_;
   mutable int _cached_size_;
@@ -714,40 +714,40 @@ inline void AnonymousRecord::clear_sha256fp() {
   sha256fp_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& AnonymousRecord::sha256fp() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.AnonymousRecord.sha256fp)
+  // @@protoc_insertion_point(field_get:zsearch.AnonymousRecord.sha256fp)
   return sha256fp_.GetNoArena();
 }
 inline void AnonymousRecord::set_sha256fp(const ::std::string& value) {
   
   sha256fp_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:censys_definitions.AnonymousRecord.sha256fp)
+  // @@protoc_insertion_point(field_set:zsearch.AnonymousRecord.sha256fp)
 }
 #if LANG_CXX11
 inline void AnonymousRecord::set_sha256fp(::std::string&& value) {
   
   sha256fp_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:censys_definitions.AnonymousRecord.sha256fp)
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.AnonymousRecord.sha256fp)
 }
 #endif
 inline void AnonymousRecord::set_sha256fp(const char* value) {
   
   sha256fp_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:censys_definitions.AnonymousRecord.sha256fp)
+  // @@protoc_insertion_point(field_set_char:zsearch.AnonymousRecord.sha256fp)
 }
 inline void AnonymousRecord::set_sha256fp(const void* value, size_t size) {
   
   sha256fp_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.AnonymousRecord.sha256fp)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.AnonymousRecord.sha256fp)
 }
 inline ::std::string* AnonymousRecord::mutable_sha256fp() {
   
-  // @@protoc_insertion_point(field_mutable:censys_definitions.AnonymousRecord.sha256fp)
+  // @@protoc_insertion_point(field_mutable:zsearch.AnonymousRecord.sha256fp)
   return sha256fp_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* AnonymousRecord::release_sha256fp() {
-  // @@protoc_insertion_point(field_release:censys_definitions.AnonymousRecord.sha256fp)
+  // @@protoc_insertion_point(field_release:zsearch.AnonymousRecord.sha256fp)
   
   return sha256fp_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -758,7 +758,7 @@ inline void AnonymousRecord::set_allocated_sha256fp(::std::string* sha256fp) {
     
   }
   sha256fp_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), sha256fp);
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.AnonymousRecord.sha256fp)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.AnonymousRecord.sha256fp)
 }
 
 // sfixed64 timestamp = 2;
@@ -766,13 +766,13 @@ inline void AnonymousRecord::clear_timestamp() {
   timestamp_ = GOOGLE_LONGLONG(0);
 }
 inline ::google::protobuf::int64 AnonymousRecord::timestamp() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.AnonymousRecord.timestamp)
+  // @@protoc_insertion_point(field_get:zsearch.AnonymousRecord.timestamp)
   return timestamp_;
 }
 inline void AnonymousRecord::set_timestamp(::google::protobuf::int64 value) {
   
   timestamp_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.AnonymousRecord.timestamp)
+  // @@protoc_insertion_point(field_set:zsearch.AnonymousRecord.timestamp)
 }
 
 // uint32 scan_id = 3;
@@ -780,13 +780,13 @@ inline void AnonymousRecord::clear_scan_id() {
   scan_id_ = 0u;
 }
 inline ::google::protobuf::uint32 AnonymousRecord::scan_id() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.AnonymousRecord.scan_id)
+  // @@protoc_insertion_point(field_get:zsearch.AnonymousRecord.scan_id)
   return scan_id_;
 }
 inline void AnonymousRecord::set_scan_id(::google::protobuf::uint32 value) {
   
   scan_id_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.AnonymousRecord.scan_id)
+  // @@protoc_insertion_point(field_set:zsearch.AnonymousRecord.scan_id)
 }
 
 // bool exported = 4 [deprecated = true];
@@ -794,16 +794,16 @@ inline void AnonymousRecord::clear_exported() {
   exported_ = false;
 }
 inline bool AnonymousRecord::exported() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.AnonymousRecord.exported)
+  // @@protoc_insertion_point(field_get:zsearch.AnonymousRecord.exported)
   return exported_;
 }
 inline void AnonymousRecord::set_exported(bool value) {
   
   exported_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.AnonymousRecord.exported)
+  // @@protoc_insertion_point(field_set:zsearch.AnonymousRecord.exported)
 }
 
-// .censys_definitions.UserdataAtom userdata = 5;
+// .zsearch.UserdataAtom userdata = 5;
 inline bool AnonymousRecord::has_userdata() const {
   return this != internal_default_instance() && userdata_ != NULL;
 }
@@ -811,27 +811,27 @@ inline void AnonymousRecord::clear_userdata() {
   if (GetArenaNoVirtual() == NULL && userdata_ != NULL) delete userdata_;
   userdata_ = NULL;
 }
-inline const ::censys_definitions::UserdataAtom& AnonymousRecord::userdata() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.AnonymousRecord.userdata)
+inline const ::zsearch::UserdataAtom& AnonymousRecord::userdata() const {
+  // @@protoc_insertion_point(field_get:zsearch.AnonymousRecord.userdata)
   return userdata_ != NULL ? *userdata_
-                         : *::censys_definitions::UserdataAtom::internal_default_instance();
+                         : *::zsearch::UserdataAtom::internal_default_instance();
 }
-inline ::censys_definitions::UserdataAtom* AnonymousRecord::mutable_userdata() {
+inline ::zsearch::UserdataAtom* AnonymousRecord::mutable_userdata() {
   
   if (userdata_ == NULL) {
-    userdata_ = new ::censys_definitions::UserdataAtom;
+    userdata_ = new ::zsearch::UserdataAtom;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.AnonymousRecord.userdata)
+  // @@protoc_insertion_point(field_mutable:zsearch.AnonymousRecord.userdata)
   return userdata_;
 }
-inline ::censys_definitions::UserdataAtom* AnonymousRecord::release_userdata() {
-  // @@protoc_insertion_point(field_release:censys_definitions.AnonymousRecord.userdata)
+inline ::zsearch::UserdataAtom* AnonymousRecord::release_userdata() {
+  // @@protoc_insertion_point(field_release:zsearch.AnonymousRecord.userdata)
   
-  ::censys_definitions::UserdataAtom* temp = userdata_;
+  ::zsearch::UserdataAtom* temp = userdata_;
   userdata_ = NULL;
   return temp;
 }
-inline void AnonymousRecord::set_allocated_userdata(::censys_definitions::UserdataAtom* userdata) {
+inline void AnonymousRecord::set_allocated_userdata(::zsearch::UserdataAtom* userdata) {
   delete userdata_;
   userdata_ = userdata;
   if (userdata) {
@@ -839,7 +839,7 @@ inline void AnonymousRecord::set_allocated_userdata(::censys_definitions::Userda
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.AnonymousRecord.userdata)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.AnonymousRecord.userdata)
 }
 
 // string data = 6;
@@ -856,25 +856,25 @@ inline void AnonymousRecord::clear_data() {
   }
 }
 inline const ::std::string& AnonymousRecord::data() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.AnonymousRecord.data)
+  // @@protoc_insertion_point(field_get:zsearch.AnonymousRecord.data)
   if (has_data()) {
     return oneof_data_.data_.GetNoArena();
   }
   return *&::google::protobuf::internal::GetEmptyStringAlreadyInited();
 }
 inline void AnonymousRecord::set_data(const ::std::string& value) {
-  // @@protoc_insertion_point(field_set:censys_definitions.AnonymousRecord.data)
+  // @@protoc_insertion_point(field_set:zsearch.AnonymousRecord.data)
   if (!has_data()) {
     clear_oneof_data();
     set_has_data();
     oneof_data_.data_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   }
   oneof_data_.data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:censys_definitions.AnonymousRecord.data)
+  // @@protoc_insertion_point(field_set:zsearch.AnonymousRecord.data)
 }
 #if LANG_CXX11
 inline void AnonymousRecord::set_data(::std::string&& value) {
-  // @@protoc_insertion_point(field_set:censys_definitions.AnonymousRecord.data)
+  // @@protoc_insertion_point(field_set:zsearch.AnonymousRecord.data)
   if (!has_data()) {
     clear_oneof_data();
     set_has_data();
@@ -882,7 +882,7 @@ inline void AnonymousRecord::set_data(::std::string&& value) {
   }
   oneof_data_.data_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:censys_definitions.AnonymousRecord.data)
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.AnonymousRecord.data)
 }
 #endif
 inline void AnonymousRecord::set_data(const char* value) {
@@ -893,7 +893,7 @@ inline void AnonymousRecord::set_data(const char* value) {
   }
   oneof_data_.data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:censys_definitions.AnonymousRecord.data)
+  // @@protoc_insertion_point(field_set_char:zsearch.AnonymousRecord.data)
 }
 inline void AnonymousRecord::set_data(const char* value, size_t size) {
   if (!has_data()) {
@@ -903,7 +903,7 @@ inline void AnonymousRecord::set_data(const char* value, size_t size) {
   }
   oneof_data_.data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.AnonymousRecord.data)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.AnonymousRecord.data)
 }
 inline ::std::string* AnonymousRecord::mutable_data() {
   if (!has_data()) {
@@ -911,11 +911,11 @@ inline ::std::string* AnonymousRecord::mutable_data() {
     set_has_data();
     oneof_data_.data_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.AnonymousRecord.data)
+  // @@protoc_insertion_point(field_mutable:zsearch.AnonymousRecord.data)
   return oneof_data_.data_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* AnonymousRecord::release_data() {
-  // @@protoc_insertion_point(field_release:censys_definitions.AnonymousRecord.data)
+  // @@protoc_insertion_point(field_release:zsearch.AnonymousRecord.data)
   if (has_data()) {
     clear_has_oneof_data();
     return oneof_data_.data_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
@@ -933,7 +933,7 @@ inline void AnonymousRecord::set_allocated_data(::std::string* data) {
     oneof_data_.data_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
         data);
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.AnonymousRecord.data)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.AnonymousRecord.data)
 }
 
 // bytes raw_data = 7;
@@ -950,25 +950,25 @@ inline void AnonymousRecord::clear_raw_data() {
   }
 }
 inline const ::std::string& AnonymousRecord::raw_data() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.AnonymousRecord.raw_data)
+  // @@protoc_insertion_point(field_get:zsearch.AnonymousRecord.raw_data)
   if (has_raw_data()) {
     return oneof_data_.raw_data_.GetNoArena();
   }
   return *&::google::protobuf::internal::GetEmptyStringAlreadyInited();
 }
 inline void AnonymousRecord::set_raw_data(const ::std::string& value) {
-  // @@protoc_insertion_point(field_set:censys_definitions.AnonymousRecord.raw_data)
+  // @@protoc_insertion_point(field_set:zsearch.AnonymousRecord.raw_data)
   if (!has_raw_data()) {
     clear_oneof_data();
     set_has_raw_data();
     oneof_data_.raw_data_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   }
   oneof_data_.raw_data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:censys_definitions.AnonymousRecord.raw_data)
+  // @@protoc_insertion_point(field_set:zsearch.AnonymousRecord.raw_data)
 }
 #if LANG_CXX11
 inline void AnonymousRecord::set_raw_data(::std::string&& value) {
-  // @@protoc_insertion_point(field_set:censys_definitions.AnonymousRecord.raw_data)
+  // @@protoc_insertion_point(field_set:zsearch.AnonymousRecord.raw_data)
   if (!has_raw_data()) {
     clear_oneof_data();
     set_has_raw_data();
@@ -976,7 +976,7 @@ inline void AnonymousRecord::set_raw_data(::std::string&& value) {
   }
   oneof_data_.raw_data_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:censys_definitions.AnonymousRecord.raw_data)
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.AnonymousRecord.raw_data)
 }
 #endif
 inline void AnonymousRecord::set_raw_data(const char* value) {
@@ -987,7 +987,7 @@ inline void AnonymousRecord::set_raw_data(const char* value) {
   }
   oneof_data_.raw_data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:censys_definitions.AnonymousRecord.raw_data)
+  // @@protoc_insertion_point(field_set_char:zsearch.AnonymousRecord.raw_data)
 }
 inline void AnonymousRecord::set_raw_data(const void* value, size_t size) {
   if (!has_raw_data()) {
@@ -997,7 +997,7 @@ inline void AnonymousRecord::set_raw_data(const void* value, size_t size) {
   }
   oneof_data_.raw_data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.AnonymousRecord.raw_data)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.AnonymousRecord.raw_data)
 }
 inline ::std::string* AnonymousRecord::mutable_raw_data() {
   if (!has_raw_data()) {
@@ -1005,11 +1005,11 @@ inline ::std::string* AnonymousRecord::mutable_raw_data() {
     set_has_raw_data();
     oneof_data_.raw_data_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.AnonymousRecord.raw_data)
+  // @@protoc_insertion_point(field_mutable:zsearch.AnonymousRecord.raw_data)
   return oneof_data_.raw_data_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* AnonymousRecord::release_raw_data() {
-  // @@protoc_insertion_point(field_release:censys_definitions.AnonymousRecord.raw_data)
+  // @@protoc_insertion_point(field_release:zsearch.AnonymousRecord.raw_data)
   if (has_raw_data()) {
     clear_has_oneof_data();
     return oneof_data_.raw_data_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
@@ -1027,10 +1027,10 @@ inline void AnonymousRecord::set_allocated_raw_data(::std::string* raw_data) {
     oneof_data_.raw_data_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
         raw_data);
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.AnonymousRecord.raw_data)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.AnonymousRecord.raw_data)
 }
 
-// .censys_definitions.Certificate certificate = 8;
+// .zsearch.Certificate certificate = 8;
 inline bool AnonymousRecord::has_certificate() const {
   return oneof_data_case() == kCertificate;
 }
@@ -1043,42 +1043,42 @@ inline void AnonymousRecord::clear_certificate() {
     clear_has_oneof_data();
   }
 }
-inline  const ::censys_definitions::Certificate& AnonymousRecord::certificate() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.AnonymousRecord.certificate)
+inline  const ::zsearch::Certificate& AnonymousRecord::certificate() const {
+  // @@protoc_insertion_point(field_get:zsearch.AnonymousRecord.certificate)
   return has_certificate()
       ? *oneof_data_.certificate_
-      : ::censys_definitions::Certificate::default_instance();
+      : ::zsearch::Certificate::default_instance();
 }
-inline ::censys_definitions::Certificate* AnonymousRecord::mutable_certificate() {
+inline ::zsearch::Certificate* AnonymousRecord::mutable_certificate() {
   if (!has_certificate()) {
     clear_oneof_data();
     set_has_certificate();
-    oneof_data_.certificate_ = new ::censys_definitions::Certificate;
+    oneof_data_.certificate_ = new ::zsearch::Certificate;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.AnonymousRecord.certificate)
+  // @@protoc_insertion_point(field_mutable:zsearch.AnonymousRecord.certificate)
   return oneof_data_.certificate_;
 }
-inline ::censys_definitions::Certificate* AnonymousRecord::release_certificate() {
-  // @@protoc_insertion_point(field_release:censys_definitions.AnonymousRecord.certificate)
+inline ::zsearch::Certificate* AnonymousRecord::release_certificate() {
+  // @@protoc_insertion_point(field_release:zsearch.AnonymousRecord.certificate)
   if (has_certificate()) {
     clear_has_oneof_data();
-    ::censys_definitions::Certificate* temp = oneof_data_.certificate_;
+    ::zsearch::Certificate* temp = oneof_data_.certificate_;
     oneof_data_.certificate_ = NULL;
     return temp;
   } else {
     return NULL;
   }
 }
-inline void AnonymousRecord::set_allocated_certificate(::censys_definitions::Certificate* certificate) {
+inline void AnonymousRecord::set_allocated_certificate(::zsearch::Certificate* certificate) {
   clear_oneof_data();
   if (certificate) {
     set_has_certificate();
     oneof_data_.certificate_ = certificate;
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.AnonymousRecord.certificate)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.AnonymousRecord.certificate)
 }
 
-// .censys_definitions.CryptographicKey key = 9;
+// .zsearch.CryptographicKey key = 9;
 inline bool AnonymousRecord::has_key() const {
   return oneof_data_case() == kKey;
 }
@@ -1091,42 +1091,42 @@ inline void AnonymousRecord::clear_key() {
     clear_has_oneof_data();
   }
 }
-inline  const ::censys_definitions::CryptographicKey& AnonymousRecord::key() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.AnonymousRecord.key)
+inline  const ::zsearch::CryptographicKey& AnonymousRecord::key() const {
+  // @@protoc_insertion_point(field_get:zsearch.AnonymousRecord.key)
   return has_key()
       ? *oneof_data_.key_
-      : ::censys_definitions::CryptographicKey::default_instance();
+      : ::zsearch::CryptographicKey::default_instance();
 }
-inline ::censys_definitions::CryptographicKey* AnonymousRecord::mutable_key() {
+inline ::zsearch::CryptographicKey* AnonymousRecord::mutable_key() {
   if (!has_key()) {
     clear_oneof_data();
     set_has_key();
-    oneof_data_.key_ = new ::censys_definitions::CryptographicKey;
+    oneof_data_.key_ = new ::zsearch::CryptographicKey;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.AnonymousRecord.key)
+  // @@protoc_insertion_point(field_mutable:zsearch.AnonymousRecord.key)
   return oneof_data_.key_;
 }
-inline ::censys_definitions::CryptographicKey* AnonymousRecord::release_key() {
-  // @@protoc_insertion_point(field_release:censys_definitions.AnonymousRecord.key)
+inline ::zsearch::CryptographicKey* AnonymousRecord::release_key() {
+  // @@protoc_insertion_point(field_release:zsearch.AnonymousRecord.key)
   if (has_key()) {
     clear_has_oneof_data();
-    ::censys_definitions::CryptographicKey* temp = oneof_data_.key_;
+    ::zsearch::CryptographicKey* temp = oneof_data_.key_;
     oneof_data_.key_ = NULL;
     return temp;
   } else {
     return NULL;
   }
 }
-inline void AnonymousRecord::set_allocated_key(::censys_definitions::CryptographicKey* key) {
+inline void AnonymousRecord::set_allocated_key(::zsearch::CryptographicKey* key) {
   clear_oneof_data();
   if (key) {
     set_has_key();
     oneof_data_.key_ = key;
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.AnonymousRecord.key)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.AnonymousRecord.key)
 }
 
-// .censys_definitions.ASAtom as = 10;
+// .zsearch.ASAtom as = 10;
 inline bool AnonymousRecord::has_as() const {
   return oneof_data_case() == kAs;
 }
@@ -1139,68 +1139,68 @@ inline void AnonymousRecord::clear_as() {
     clear_has_oneof_data();
   }
 }
-inline  const ::censys_definitions::ASAtom& AnonymousRecord::as() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.AnonymousRecord.as)
+inline  const ::zsearch::ASAtom& AnonymousRecord::as() const {
+  // @@protoc_insertion_point(field_get:zsearch.AnonymousRecord.as)
   return has_as()
       ? *oneof_data_.as_
-      : ::censys_definitions::ASAtom::default_instance();
+      : ::zsearch::ASAtom::default_instance();
 }
-inline ::censys_definitions::ASAtom* AnonymousRecord::mutable_as() {
+inline ::zsearch::ASAtom* AnonymousRecord::mutable_as() {
   if (!has_as()) {
     clear_oneof_data();
     set_has_as();
-    oneof_data_.as_ = new ::censys_definitions::ASAtom;
+    oneof_data_.as_ = new ::zsearch::ASAtom;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.AnonymousRecord.as)
+  // @@protoc_insertion_point(field_mutable:zsearch.AnonymousRecord.as)
   return oneof_data_.as_;
 }
-inline ::censys_definitions::ASAtom* AnonymousRecord::release_as() {
-  // @@protoc_insertion_point(field_release:censys_definitions.AnonymousRecord.as)
+inline ::zsearch::ASAtom* AnonymousRecord::release_as() {
+  // @@protoc_insertion_point(field_release:zsearch.AnonymousRecord.as)
   if (has_as()) {
     clear_has_oneof_data();
-    ::censys_definitions::ASAtom* temp = oneof_data_.as_;
+    ::zsearch::ASAtom* temp = oneof_data_.as_;
     oneof_data_.as_ = NULL;
     return temp;
   } else {
     return NULL;
   }
 }
-inline void AnonymousRecord::set_allocated_as(::censys_definitions::ASAtom* as) {
+inline void AnonymousRecord::set_allocated_as(::zsearch::ASAtom* as) {
   clear_oneof_data();
   if (as) {
     set_has_as();
     oneof_data_.as_ = as;
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.AnonymousRecord.as)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.AnonymousRecord.as)
 }
 
-// repeated .censys_definitions.Metadatum metadata = 14;
+// repeated .zsearch.Metadatum metadata = 14;
 inline int AnonymousRecord::metadata_size() const {
   return metadata_.size();
 }
 inline void AnonymousRecord::clear_metadata() {
   metadata_.Clear();
 }
-inline const ::censys_definitions::Metadatum& AnonymousRecord::metadata(int index) const {
-  // @@protoc_insertion_point(field_get:censys_definitions.AnonymousRecord.metadata)
+inline const ::zsearch::Metadatum& AnonymousRecord::metadata(int index) const {
+  // @@protoc_insertion_point(field_get:zsearch.AnonymousRecord.metadata)
   return metadata_.Get(index);
 }
-inline ::censys_definitions::Metadatum* AnonymousRecord::mutable_metadata(int index) {
-  // @@protoc_insertion_point(field_mutable:censys_definitions.AnonymousRecord.metadata)
+inline ::zsearch::Metadatum* AnonymousRecord::mutable_metadata(int index) {
+  // @@protoc_insertion_point(field_mutable:zsearch.AnonymousRecord.metadata)
   return metadata_.Mutable(index);
 }
-inline ::censys_definitions::Metadatum* AnonymousRecord::add_metadata() {
-  // @@protoc_insertion_point(field_add:censys_definitions.AnonymousRecord.metadata)
+inline ::zsearch::Metadatum* AnonymousRecord::add_metadata() {
+  // @@protoc_insertion_point(field_add:zsearch.AnonymousRecord.metadata)
   return metadata_.Add();
 }
-inline ::google::protobuf::RepeatedPtrField< ::censys_definitions::Metadatum >*
+inline ::google::protobuf::RepeatedPtrField< ::zsearch::Metadatum >*
 AnonymousRecord::mutable_metadata() {
-  // @@protoc_insertion_point(field_mutable_list:censys_definitions.AnonymousRecord.metadata)
+  // @@protoc_insertion_point(field_mutable_list:zsearch.AnonymousRecord.metadata)
   return &metadata_;
 }
-inline const ::google::protobuf::RepeatedPtrField< ::censys_definitions::Metadatum >&
+inline const ::google::protobuf::RepeatedPtrField< ::zsearch::Metadatum >&
 AnonymousRecord::metadata() const {
-  // @@protoc_insertion_point(field_list:censys_definitions.AnonymousRecord.metadata)
+  // @@protoc_insertion_point(field_list:zsearch.AnonymousRecord.metadata)
   return metadata_;
 }
 
@@ -1212,50 +1212,50 @@ inline void AnonymousRecord::clear_tags() {
   tags_.Clear();
 }
 inline const ::std::string& AnonymousRecord::tags(int index) const {
-  // @@protoc_insertion_point(field_get:censys_definitions.AnonymousRecord.tags)
+  // @@protoc_insertion_point(field_get:zsearch.AnonymousRecord.tags)
   return tags_.Get(index);
 }
 inline ::std::string* AnonymousRecord::mutable_tags(int index) {
-  // @@protoc_insertion_point(field_mutable:censys_definitions.AnonymousRecord.tags)
+  // @@protoc_insertion_point(field_mutable:zsearch.AnonymousRecord.tags)
   return tags_.Mutable(index);
 }
 inline void AnonymousRecord::set_tags(int index, const ::std::string& value) {
-  // @@protoc_insertion_point(field_set:censys_definitions.AnonymousRecord.tags)
+  // @@protoc_insertion_point(field_set:zsearch.AnonymousRecord.tags)
   tags_.Mutable(index)->assign(value);
 }
 inline void AnonymousRecord::set_tags(int index, const char* value) {
   tags_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:censys_definitions.AnonymousRecord.tags)
+  // @@protoc_insertion_point(field_set_char:zsearch.AnonymousRecord.tags)
 }
 inline void AnonymousRecord::set_tags(int index, const char* value, size_t size) {
   tags_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.AnonymousRecord.tags)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.AnonymousRecord.tags)
 }
 inline ::std::string* AnonymousRecord::add_tags() {
-  // @@protoc_insertion_point(field_add_mutable:censys_definitions.AnonymousRecord.tags)
+  // @@protoc_insertion_point(field_add_mutable:zsearch.AnonymousRecord.tags)
   return tags_.Add();
 }
 inline void AnonymousRecord::add_tags(const ::std::string& value) {
   tags_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:censys_definitions.AnonymousRecord.tags)
+  // @@protoc_insertion_point(field_add:zsearch.AnonymousRecord.tags)
 }
 inline void AnonymousRecord::add_tags(const char* value) {
   tags_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:censys_definitions.AnonymousRecord.tags)
+  // @@protoc_insertion_point(field_add_char:zsearch.AnonymousRecord.tags)
 }
 inline void AnonymousRecord::add_tags(const char* value, size_t size) {
   tags_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:censys_definitions.AnonymousRecord.tags)
+  // @@protoc_insertion_point(field_add_pointer:zsearch.AnonymousRecord.tags)
 }
 inline const ::google::protobuf::RepeatedPtrField< ::std::string>&
 AnonymousRecord::tags() const {
-  // @@protoc_insertion_point(field_list:censys_definitions.AnonymousRecord.tags)
+  // @@protoc_insertion_point(field_list:zsearch.AnonymousRecord.tags)
   return tags_;
 }
 inline ::google::protobuf::RepeatedPtrField< ::std::string>*
 AnonymousRecord::mutable_tags() {
-  // @@protoc_insertion_point(field_mutable_list:censys_definitions.AnonymousRecord.tags)
+  // @@protoc_insertion_point(field_mutable_list:zsearch.AnonymousRecord.tags)
   return &tags_;
 }
 
@@ -1264,13 +1264,13 @@ inline void AnonymousRecord::clear_updated_at() {
   updated_at_ = 0u;
 }
 inline ::google::protobuf::uint32 AnonymousRecord::updated_at() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.AnonymousRecord.updated_at)
+  // @@protoc_insertion_point(field_get:zsearch.AnonymousRecord.updated_at)
   return updated_at_;
 }
 inline void AnonymousRecord::set_updated_at(::google::protobuf::uint32 value) {
   
   updated_at_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.AnonymousRecord.updated_at)
+  // @@protoc_insertion_point(field_set:zsearch.AnonymousRecord.updated_at)
 }
 
 // fixed32 added_at = 17;
@@ -1278,13 +1278,13 @@ inline void AnonymousRecord::clear_added_at() {
   added_at_ = 0u;
 }
 inline ::google::protobuf::uint32 AnonymousRecord::added_at() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.AnonymousRecord.added_at)
+  // @@protoc_insertion_point(field_get:zsearch.AnonymousRecord.added_at)
   return added_at_;
 }
 inline void AnonymousRecord::set_added_at(::google::protobuf::uint32 value) {
   
   added_at_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.AnonymousRecord.added_at)
+  // @@protoc_insertion_point(field_set:zsearch.AnonymousRecord.added_at)
 }
 
 inline bool AnonymousRecord::has_oneof_data() const {
@@ -1300,35 +1300,35 @@ inline AnonymousRecord::OneofDataCase AnonymousRecord::oneof_data_case() const {
 
 // AnonymousDelta
 
-// .censys_definitions.AnonymousDelta.DeltaType delta_type = 1;
+// .zsearch.AnonymousDelta.DeltaType delta_type = 1;
 inline void AnonymousDelta::clear_delta_type() {
   delta_type_ = 0;
 }
-inline ::censys_definitions::AnonymousDelta_DeltaType AnonymousDelta::delta_type() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.AnonymousDelta.delta_type)
-  return static_cast< ::censys_definitions::AnonymousDelta_DeltaType >(delta_type_);
+inline ::zsearch::AnonymousDelta_DeltaType AnonymousDelta::delta_type() const {
+  // @@protoc_insertion_point(field_get:zsearch.AnonymousDelta.delta_type)
+  return static_cast< ::zsearch::AnonymousDelta_DeltaType >(delta_type_);
 }
-inline void AnonymousDelta::set_delta_type(::censys_definitions::AnonymousDelta_DeltaType value) {
+inline void AnonymousDelta::set_delta_type(::zsearch::AnonymousDelta_DeltaType value) {
   
   delta_type_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.AnonymousDelta.delta_type)
+  // @@protoc_insertion_point(field_set:zsearch.AnonymousDelta.delta_type)
 }
 
-// .censys_definitions.AnonymousDelta.DeltaScope delta_scope = 2;
+// .zsearch.AnonymousDelta.DeltaScope delta_scope = 2;
 inline void AnonymousDelta::clear_delta_scope() {
   delta_scope_ = 0;
 }
-inline ::censys_definitions::AnonymousDelta_DeltaScope AnonymousDelta::delta_scope() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.AnonymousDelta.delta_scope)
-  return static_cast< ::censys_definitions::AnonymousDelta_DeltaScope >(delta_scope_);
+inline ::zsearch::AnonymousDelta_DeltaScope AnonymousDelta::delta_scope() const {
+  // @@protoc_insertion_point(field_get:zsearch.AnonymousDelta.delta_scope)
+  return static_cast< ::zsearch::AnonymousDelta_DeltaScope >(delta_scope_);
 }
-inline void AnonymousDelta::set_delta_scope(::censys_definitions::AnonymousDelta_DeltaScope value) {
+inline void AnonymousDelta::set_delta_scope(::zsearch::AnonymousDelta_DeltaScope value) {
   
   delta_scope_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.AnonymousDelta.delta_scope)
+  // @@protoc_insertion_point(field_set:zsearch.AnonymousDelta.delta_scope)
 }
 
-// .censys_definitions.AnonymousRecord record = 3;
+// .zsearch.AnonymousRecord record = 3;
 inline bool AnonymousDelta::has_record() const {
   return this != internal_default_instance() && record_ != NULL;
 }
@@ -1336,27 +1336,27 @@ inline void AnonymousDelta::clear_record() {
   if (GetArenaNoVirtual() == NULL && record_ != NULL) delete record_;
   record_ = NULL;
 }
-inline const ::censys_definitions::AnonymousRecord& AnonymousDelta::record() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.AnonymousDelta.record)
+inline const ::zsearch::AnonymousRecord& AnonymousDelta::record() const {
+  // @@protoc_insertion_point(field_get:zsearch.AnonymousDelta.record)
   return record_ != NULL ? *record_
-                         : *::censys_definitions::AnonymousRecord::internal_default_instance();
+                         : *::zsearch::AnonymousRecord::internal_default_instance();
 }
-inline ::censys_definitions::AnonymousRecord* AnonymousDelta::mutable_record() {
+inline ::zsearch::AnonymousRecord* AnonymousDelta::mutable_record() {
   
   if (record_ == NULL) {
-    record_ = new ::censys_definitions::AnonymousRecord;
+    record_ = new ::zsearch::AnonymousRecord;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.AnonymousDelta.record)
+  // @@protoc_insertion_point(field_mutable:zsearch.AnonymousDelta.record)
   return record_;
 }
-inline ::censys_definitions::AnonymousRecord* AnonymousDelta::release_record() {
-  // @@protoc_insertion_point(field_release:censys_definitions.AnonymousDelta.record)
+inline ::zsearch::AnonymousRecord* AnonymousDelta::release_record() {
+  // @@protoc_insertion_point(field_release:zsearch.AnonymousDelta.record)
   
-  ::censys_definitions::AnonymousRecord* temp = record_;
+  ::zsearch::AnonymousRecord* temp = record_;
   record_ = NULL;
   return temp;
 }
-inline void AnonymousDelta::set_allocated_record(::censys_definitions::AnonymousRecord* record) {
+inline void AnonymousDelta::set_allocated_record(::zsearch::AnonymousRecord* record) {
   delete record_;
   record_ = record;
   if (record) {
@@ -1364,28 +1364,28 @@ inline void AnonymousDelta::set_allocated_record(::censys_definitions::Anonymous
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.AnonymousDelta.record)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.AnonymousDelta.record)
 }
 
 // -------------------------------------------------------------------
 
 // ExternalCertificate
 
-// .censys_definitions.CertificateSource source = 1;
+// .zsearch.CertificateSource source = 1;
 inline void ExternalCertificate::clear_source() {
   source_ = 0;
 }
-inline ::censys_definitions::CertificateSource ExternalCertificate::source() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.ExternalCertificate.source)
-  return static_cast< ::censys_definitions::CertificateSource >(source_);
+inline ::zsearch::CertificateSource ExternalCertificate::source() const {
+  // @@protoc_insertion_point(field_get:zsearch.ExternalCertificate.source)
+  return static_cast< ::zsearch::CertificateSource >(source_);
 }
-inline void ExternalCertificate::set_source(::censys_definitions::CertificateSource value) {
+inline void ExternalCertificate::set_source(::zsearch::CertificateSource value) {
   
   source_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.ExternalCertificate.source)
+  // @@protoc_insertion_point(field_set:zsearch.ExternalCertificate.source)
 }
 
-// .censys_definitions.AnonymousRecord anonymous_record = 2;
+// .zsearch.AnonymousRecord anonymous_record = 2;
 inline bool ExternalCertificate::has_anonymous_record() const {
   return this != internal_default_instance() && anonymous_record_ != NULL;
 }
@@ -1393,27 +1393,27 @@ inline void ExternalCertificate::clear_anonymous_record() {
   if (GetArenaNoVirtual() == NULL && anonymous_record_ != NULL) delete anonymous_record_;
   anonymous_record_ = NULL;
 }
-inline const ::censys_definitions::AnonymousRecord& ExternalCertificate::anonymous_record() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.ExternalCertificate.anonymous_record)
+inline const ::zsearch::AnonymousRecord& ExternalCertificate::anonymous_record() const {
+  // @@protoc_insertion_point(field_get:zsearch.ExternalCertificate.anonymous_record)
   return anonymous_record_ != NULL ? *anonymous_record_
-                         : *::censys_definitions::AnonymousRecord::internal_default_instance();
+                         : *::zsearch::AnonymousRecord::internal_default_instance();
 }
-inline ::censys_definitions::AnonymousRecord* ExternalCertificate::mutable_anonymous_record() {
+inline ::zsearch::AnonymousRecord* ExternalCertificate::mutable_anonymous_record() {
   
   if (anonymous_record_ == NULL) {
-    anonymous_record_ = new ::censys_definitions::AnonymousRecord;
+    anonymous_record_ = new ::zsearch::AnonymousRecord;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.ExternalCertificate.anonymous_record)
+  // @@protoc_insertion_point(field_mutable:zsearch.ExternalCertificate.anonymous_record)
   return anonymous_record_;
 }
-inline ::censys_definitions::AnonymousRecord* ExternalCertificate::release_anonymous_record() {
-  // @@protoc_insertion_point(field_release:censys_definitions.ExternalCertificate.anonymous_record)
+inline ::zsearch::AnonymousRecord* ExternalCertificate::release_anonymous_record() {
+  // @@protoc_insertion_point(field_release:zsearch.ExternalCertificate.anonymous_record)
   
-  ::censys_definitions::AnonymousRecord* temp = anonymous_record_;
+  ::zsearch::AnonymousRecord* temp = anonymous_record_;
   anonymous_record_ = NULL;
   return temp;
 }
-inline void ExternalCertificate::set_allocated_anonymous_record(::censys_definitions::AnonymousRecord* anonymous_record) {
+inline void ExternalCertificate::set_allocated_anonymous_record(::zsearch::AnonymousRecord* anonymous_record) {
   delete anonymous_record_;
   anonymous_record_ = anonymous_record;
   if (anonymous_record) {
@@ -1421,24 +1421,24 @@ inline void ExternalCertificate::set_allocated_anonymous_record(::censys_definit
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.ExternalCertificate.anonymous_record)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.ExternalCertificate.anonymous_record)
 }
 
-// .censys_definitions.CTServer ct_server = 3;
+// .zsearch.CTServer ct_server = 3;
 inline void ExternalCertificate::clear_ct_server() {
   ct_server_ = 0;
 }
-inline ::censys_definitions::CTServer ExternalCertificate::ct_server() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.ExternalCertificate.ct_server)
-  return static_cast< ::censys_definitions::CTServer >(ct_server_);
+inline ::zsearch::CTServer ExternalCertificate::ct_server() const {
+  // @@protoc_insertion_point(field_get:zsearch.ExternalCertificate.ct_server)
+  return static_cast< ::zsearch::CTServer >(ct_server_);
 }
-inline void ExternalCertificate::set_ct_server(::censys_definitions::CTServer value) {
+inline void ExternalCertificate::set_ct_server(::zsearch::CTServer value) {
   
   ct_server_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.ExternalCertificate.ct_server)
+  // @@protoc_insertion_point(field_set:zsearch.ExternalCertificate.ct_server)
 }
 
-// .censys_definitions.CTServerStatus ct_status = 4;
+// .zsearch.CTServerStatus ct_status = 4;
 inline bool ExternalCertificate::has_ct_status() const {
   return this != internal_default_instance() && ct_status_ != NULL;
 }
@@ -1446,27 +1446,27 @@ inline void ExternalCertificate::clear_ct_status() {
   if (GetArenaNoVirtual() == NULL && ct_status_ != NULL) delete ct_status_;
   ct_status_ = NULL;
 }
-inline const ::censys_definitions::CTServerStatus& ExternalCertificate::ct_status() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.ExternalCertificate.ct_status)
+inline const ::zsearch::CTServerStatus& ExternalCertificate::ct_status() const {
+  // @@protoc_insertion_point(field_get:zsearch.ExternalCertificate.ct_status)
   return ct_status_ != NULL ? *ct_status_
-                         : *::censys_definitions::CTServerStatus::internal_default_instance();
+                         : *::zsearch::CTServerStatus::internal_default_instance();
 }
-inline ::censys_definitions::CTServerStatus* ExternalCertificate::mutable_ct_status() {
+inline ::zsearch::CTServerStatus* ExternalCertificate::mutable_ct_status() {
   
   if (ct_status_ == NULL) {
-    ct_status_ = new ::censys_definitions::CTServerStatus;
+    ct_status_ = new ::zsearch::CTServerStatus;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.ExternalCertificate.ct_status)
+  // @@protoc_insertion_point(field_mutable:zsearch.ExternalCertificate.ct_status)
   return ct_status_;
 }
-inline ::censys_definitions::CTServerStatus* ExternalCertificate::release_ct_status() {
-  // @@protoc_insertion_point(field_release:censys_definitions.ExternalCertificate.ct_status)
+inline ::zsearch::CTServerStatus* ExternalCertificate::release_ct_status() {
+  // @@protoc_insertion_point(field_release:zsearch.ExternalCertificate.ct_status)
   
-  ::censys_definitions::CTServerStatus* temp = ct_status_;
+  ::zsearch::CTServerStatus* temp = ct_status_;
   ct_status_ = NULL;
   return temp;
 }
-inline void ExternalCertificate::set_allocated_ct_status(::censys_definitions::CTServerStatus* ct_status) {
+inline void ExternalCertificate::set_allocated_ct_status(::zsearch::CTServerStatus* ct_status) {
   delete ct_status_;
   ct_status_ = ct_status;
   if (ct_status) {
@@ -1474,10 +1474,10 @@ inline void ExternalCertificate::set_allocated_ct_status(::censys_definitions::C
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.ExternalCertificate.ct_status)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.ExternalCertificate.ct_status)
 }
 
-// .censys_definitions.MozillaSalesForceStatus nss_status = 5;
+// .zsearch.MozillaSalesForceStatus nss_status = 5;
 inline bool ExternalCertificate::has_nss_status() const {
   return this != internal_default_instance() && nss_status_ != NULL;
 }
@@ -1485,27 +1485,27 @@ inline void ExternalCertificate::clear_nss_status() {
   if (GetArenaNoVirtual() == NULL && nss_status_ != NULL) delete nss_status_;
   nss_status_ = NULL;
 }
-inline const ::censys_definitions::MozillaSalesForceStatus& ExternalCertificate::nss_status() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.ExternalCertificate.nss_status)
+inline const ::zsearch::MozillaSalesForceStatus& ExternalCertificate::nss_status() const {
+  // @@protoc_insertion_point(field_get:zsearch.ExternalCertificate.nss_status)
   return nss_status_ != NULL ? *nss_status_
-                         : *::censys_definitions::MozillaSalesForceStatus::internal_default_instance();
+                         : *::zsearch::MozillaSalesForceStatus::internal_default_instance();
 }
-inline ::censys_definitions::MozillaSalesForceStatus* ExternalCertificate::mutable_nss_status() {
+inline ::zsearch::MozillaSalesForceStatus* ExternalCertificate::mutable_nss_status() {
   
   if (nss_status_ == NULL) {
-    nss_status_ = new ::censys_definitions::MozillaSalesForceStatus;
+    nss_status_ = new ::zsearch::MozillaSalesForceStatus;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.ExternalCertificate.nss_status)
+  // @@protoc_insertion_point(field_mutable:zsearch.ExternalCertificate.nss_status)
   return nss_status_;
 }
-inline ::censys_definitions::MozillaSalesForceStatus* ExternalCertificate::release_nss_status() {
-  // @@protoc_insertion_point(field_release:censys_definitions.ExternalCertificate.nss_status)
+inline ::zsearch::MozillaSalesForceStatus* ExternalCertificate::release_nss_status() {
+  // @@protoc_insertion_point(field_release:zsearch.ExternalCertificate.nss_status)
   
-  ::censys_definitions::MozillaSalesForceStatus* temp = nss_status_;
+  ::zsearch::MozillaSalesForceStatus* temp = nss_status_;
   nss_status_ = NULL;
   return temp;
 }
-inline void ExternalCertificate::set_allocated_nss_status(::censys_definitions::MozillaSalesForceStatus* nss_status) {
+inline void ExternalCertificate::set_allocated_nss_status(::zsearch::MozillaSalesForceStatus* nss_status) {
   delete nss_status_;
   nss_status_ = nss_status;
   if (nss_status) {
@@ -1513,7 +1513,7 @@ inline void ExternalCertificate::set_allocated_nss_status(::censys_definitions::
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.ExternalCertificate.nss_status)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.ExternalCertificate.nss_status)
 }
 
 // bytes tbsHash = 6;
@@ -1521,40 +1521,40 @@ inline void ExternalCertificate::clear_tbshash() {
   tbshash_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& ExternalCertificate::tbshash() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.ExternalCertificate.tbsHash)
+  // @@protoc_insertion_point(field_get:zsearch.ExternalCertificate.tbsHash)
   return tbshash_.GetNoArena();
 }
 inline void ExternalCertificate::set_tbshash(const ::std::string& value) {
   
   tbshash_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:censys_definitions.ExternalCertificate.tbsHash)
+  // @@protoc_insertion_point(field_set:zsearch.ExternalCertificate.tbsHash)
 }
 #if LANG_CXX11
 inline void ExternalCertificate::set_tbshash(::std::string&& value) {
   
   tbshash_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:censys_definitions.ExternalCertificate.tbsHash)
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.ExternalCertificate.tbsHash)
 }
 #endif
 inline void ExternalCertificate::set_tbshash(const char* value) {
   
   tbshash_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:censys_definitions.ExternalCertificate.tbsHash)
+  // @@protoc_insertion_point(field_set_char:zsearch.ExternalCertificate.tbsHash)
 }
 inline void ExternalCertificate::set_tbshash(const void* value, size_t size) {
   
   tbshash_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.ExternalCertificate.tbsHash)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.ExternalCertificate.tbsHash)
 }
 inline ::std::string* ExternalCertificate::mutable_tbshash() {
   
-  // @@protoc_insertion_point(field_mutable:censys_definitions.ExternalCertificate.tbsHash)
+  // @@protoc_insertion_point(field_mutable:zsearch.ExternalCertificate.tbsHash)
   return tbshash_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* ExternalCertificate::release_tbshash() {
-  // @@protoc_insertion_point(field_release:censys_definitions.ExternalCertificate.tbsHash)
+  // @@protoc_insertion_point(field_release:zsearch.ExternalCertificate.tbsHash)
   
   return tbshash_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -1565,7 +1565,7 @@ inline void ExternalCertificate::set_allocated_tbshash(::std::string* tbshash) {
     
   }
   tbshash_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), tbshash);
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.ExternalCertificate.tbsHash)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.ExternalCertificate.tbsHash)
 }
 
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -1577,21 +1577,21 @@ inline void ExternalCertificate::set_allocated_tbshash(::std::string* tbshash) {
 // @@protoc_insertion_point(namespace_scope)
 
 
-}  // namespace censys_definitions
+}  // namespace zsearch
 
 #ifndef SWIG
 namespace google {
 namespace protobuf {
 
-template <> struct is_proto_enum< ::censys_definitions::AnonymousDelta_DeltaType> : ::google::protobuf::internal::true_type {};
+template <> struct is_proto_enum< ::zsearch::AnonymousDelta_DeltaType> : ::google::protobuf::internal::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::censys_definitions::AnonymousDelta_DeltaType>() {
-  return ::censys_definitions::AnonymousDelta_DeltaType_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::zsearch::AnonymousDelta_DeltaType>() {
+  return ::zsearch::AnonymousDelta_DeltaType_descriptor();
 }
-template <> struct is_proto_enum< ::censys_definitions::AnonymousDelta_DeltaScope> : ::google::protobuf::internal::true_type {};
+template <> struct is_proto_enum< ::zsearch::AnonymousDelta_DeltaScope> : ::google::protobuf::internal::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::censys_definitions::AnonymousDelta_DeltaScope>() {
-  return ::censys_definitions::AnonymousDelta_DeltaScope_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::zsearch::AnonymousDelta_DeltaScope>() {
+  return ::zsearch::AnonymousDelta_DeltaScope_descriptor();
 }
 
 }  // namespace protobuf

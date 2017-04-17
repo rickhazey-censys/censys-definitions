@@ -30,7 +30,7 @@
 #include <google/protobuf/generated_enum_reflection.h>
 #include <google/protobuf/unknown_field_set.h>
 // @@protoc_insertion_point(includes)
-namespace censys_definitions {
+namespace zsearch {
 class LintResult;
 class LintResultDefaultTypeInternal;
 extern LintResultDefaultTypeInternal _LintResult_default_instance_;
@@ -40,9 +40,9 @@ extern LintsDefaultTypeInternal _Lints_default_instance_;
 class ZLint;
 class ZLintDefaultTypeInternal;
 extern ZLintDefaultTypeInternal _ZLint_default_instance_;
-}  // namespace censys_definitions
+}  // namespace zsearch
 
-namespace censys_definitions {
+namespace zsearch {
 
 namespace protobuf_zlint_2eproto {
 // Internal implementation detail -- do not call these.
@@ -105,7 +105,7 @@ inline bool ZLintStatus_Parse(
 }
 // ===================================================================
 
-class LintResult : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:censys_definitions.LintResult) */ {
+class LintResult : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zsearch.LintResult) */ {
  public:
   LintResult();
   virtual ~LintResult();
@@ -186,13 +186,13 @@ class LintResult : public ::google::protobuf::Message /* @@protoc_insertion_poin
   ::std::string* release_details();
   void set_allocated_details(::std::string* details);
 
-  // .censys_definitions.LintResultStatus result = 1;
+  // .zsearch.LintResultStatus result = 1;
   void clear_result();
   static const int kResultFieldNumber = 1;
-  ::censys_definitions::LintResultStatus result() const;
-  void set_result(::censys_definitions::LintResultStatus value);
+  ::zsearch::LintResultStatus result() const;
+  void set_result(::zsearch::LintResultStatus value);
 
-  // @@protoc_insertion_point(class_scope:censys_definitions.LintResult)
+  // @@protoc_insertion_point(class_scope:zsearch.LintResult)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -203,7 +203,7 @@ class LintResult : public ::google::protobuf::Message /* @@protoc_insertion_poin
 };
 // -------------------------------------------------------------------
 
-class ZLint : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:censys_definitions.ZLint) */ {
+class ZLint : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zsearch.ZLint) */ {
  public:
   ZLint();
   virtual ~ZLint();
@@ -270,14 +270,14 @@ class ZLint : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
 
   // accessors -------------------------------------------------------
 
-  // .censys_definitions.Lints lints = 8;
+  // .zsearch.Lints lints = 8;
   bool has_lints() const;
   void clear_lints();
   static const int kLintsFieldNumber = 8;
-  const ::censys_definitions::Lints& lints() const;
-  ::censys_definitions::Lints* mutable_lints();
-  ::censys_definitions::Lints* release_lints();
-  void set_allocated_lints(::censys_definitions::Lints* lints);
+  const ::zsearch::Lints& lints() const;
+  ::zsearch::Lints* mutable_lints();
+  ::zsearch::Lints* release_lints();
+  void set_allocated_lints(::zsearch::Lints* lints);
 
   // int64 version = 1;
   void clear_version();
@@ -291,11 +291,11 @@ class ZLint : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
   ::google::protobuf::int64 timestamp() const;
   void set_timestamp(::google::protobuf::int64 value);
 
-  // .censys_definitions.ZLintStatus status = 3;
+  // .zsearch.ZLintStatus status = 3;
   void clear_status();
   static const int kStatusFieldNumber = 3;
-  ::censys_definitions::ZLintStatus status() const;
-  void set_status(::censys_definitions::ZLintStatus value);
+  ::zsearch::ZLintStatus status() const;
+  void set_status(::zsearch::ZLintStatus value);
 
   // bool infos_present = 4;
   void clear_infos_present();
@@ -321,11 +321,11 @@ class ZLint : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
   bool fatals_present() const;
   void set_fatals_present(bool value);
 
-  // @@protoc_insertion_point(class_scope:censys_definitions.ZLint)
+  // @@protoc_insertion_point(class_scope:zsearch.ZLint)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::censys_definitions::Lints* lints_;
+  ::zsearch::Lints* lints_;
   ::google::protobuf::int64 version_;
   ::google::protobuf::int64 timestamp_;
   int status_;
@@ -338,7 +338,7 @@ class ZLint : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
 };
 // -------------------------------------------------------------------
 
-class Lints : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:censys_definitions.Lints) */ {
+class Lints : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zsearch.Lints) */ {
  public:
   Lints();
   virtual ~Lints();
@@ -405,1870 +405,1870 @@ class Lints : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
 
   // accessors -------------------------------------------------------
 
-  // .censys_definitions.LintResult e_basic_constraints_not_critical = 1;
+  // .zsearch.LintResult e_basic_constraints_not_critical = 1;
   bool has_e_basic_constraints_not_critical() const;
   void clear_e_basic_constraints_not_critical();
   static const int kEBasicConstraintsNotCriticalFieldNumber = 1;
-  const ::censys_definitions::LintResult& e_basic_constraints_not_critical() const;
-  ::censys_definitions::LintResult* mutable_e_basic_constraints_not_critical();
-  ::censys_definitions::LintResult* release_e_basic_constraints_not_critical();
-  void set_allocated_e_basic_constraints_not_critical(::censys_definitions::LintResult* e_basic_constraints_not_critical);
+  const ::zsearch::LintResult& e_basic_constraints_not_critical() const;
+  ::zsearch::LintResult* mutable_e_basic_constraints_not_critical();
+  ::zsearch::LintResult* release_e_basic_constraints_not_critical();
+  void set_allocated_e_basic_constraints_not_critical(::zsearch::LintResult* e_basic_constraints_not_critical);
 
-  // .censys_definitions.LintResult e_ian_bare_wildcard = 2;
+  // .zsearch.LintResult e_ian_bare_wildcard = 2;
   bool has_e_ian_bare_wildcard() const;
   void clear_e_ian_bare_wildcard();
   static const int kEIanBareWildcardFieldNumber = 2;
-  const ::censys_definitions::LintResult& e_ian_bare_wildcard() const;
-  ::censys_definitions::LintResult* mutable_e_ian_bare_wildcard();
-  ::censys_definitions::LintResult* release_e_ian_bare_wildcard();
-  void set_allocated_e_ian_bare_wildcard(::censys_definitions::LintResult* e_ian_bare_wildcard);
+  const ::zsearch::LintResult& e_ian_bare_wildcard() const;
+  ::zsearch::LintResult* mutable_e_ian_bare_wildcard();
+  ::zsearch::LintResult* release_e_ian_bare_wildcard();
+  void set_allocated_e_ian_bare_wildcard(::zsearch::LintResult* e_ian_bare_wildcard);
 
-  // .censys_definitions.LintResult e_ian_wildcard_not_first = 3;
+  // .zsearch.LintResult e_ian_wildcard_not_first = 3;
   bool has_e_ian_wildcard_not_first() const;
   void clear_e_ian_wildcard_not_first();
   static const int kEIanWildcardNotFirstFieldNumber = 3;
-  const ::censys_definitions::LintResult& e_ian_wildcard_not_first() const;
-  ::censys_definitions::LintResult* mutable_e_ian_wildcard_not_first();
-  ::censys_definitions::LintResult* release_e_ian_wildcard_not_first();
-  void set_allocated_e_ian_wildcard_not_first(::censys_definitions::LintResult* e_ian_wildcard_not_first);
+  const ::zsearch::LintResult& e_ian_wildcard_not_first() const;
+  ::zsearch::LintResult* mutable_e_ian_wildcard_not_first();
+  ::zsearch::LintResult* release_e_ian_wildcard_not_first();
+  void set_allocated_e_ian_wildcard_not_first(::zsearch::LintResult* e_ian_wildcard_not_first);
 
-  // .censys_definitions.LintResult e_san_bare_wildcard = 4;
+  // .zsearch.LintResult e_san_bare_wildcard = 4;
   bool has_e_san_bare_wildcard() const;
   void clear_e_san_bare_wildcard();
   static const int kESanBareWildcardFieldNumber = 4;
-  const ::censys_definitions::LintResult& e_san_bare_wildcard() const;
-  ::censys_definitions::LintResult* mutable_e_san_bare_wildcard();
-  ::censys_definitions::LintResult* release_e_san_bare_wildcard();
-  void set_allocated_e_san_bare_wildcard(::censys_definitions::LintResult* e_san_bare_wildcard);
+  const ::zsearch::LintResult& e_san_bare_wildcard() const;
+  ::zsearch::LintResult* mutable_e_san_bare_wildcard();
+  ::zsearch::LintResult* release_e_san_bare_wildcard();
+  void set_allocated_e_san_bare_wildcard(::zsearch::LintResult* e_san_bare_wildcard);
 
-  // .censys_definitions.LintResult e_san_wildcard_not_first = 5;
+  // .zsearch.LintResult e_san_wildcard_not_first = 5;
   bool has_e_san_wildcard_not_first() const;
   void clear_e_san_wildcard_not_first();
   static const int kESanWildcardNotFirstFieldNumber = 5;
-  const ::censys_definitions::LintResult& e_san_wildcard_not_first() const;
-  ::censys_definitions::LintResult* mutable_e_san_wildcard_not_first();
-  ::censys_definitions::LintResult* release_e_san_wildcard_not_first();
-  void set_allocated_e_san_wildcard_not_first(::censys_definitions::LintResult* e_san_wildcard_not_first);
+  const ::zsearch::LintResult& e_san_wildcard_not_first() const;
+  ::zsearch::LintResult* mutable_e_san_wildcard_not_first();
+  ::zsearch::LintResult* release_e_san_wildcard_not_first();
+  void set_allocated_e_san_wildcard_not_first(::zsearch::LintResult* e_san_wildcard_not_first);
 
-  // .censys_definitions.LintResult e_ca_country_name_invalid = 6;
+  // .zsearch.LintResult e_ca_country_name_invalid = 6;
   bool has_e_ca_country_name_invalid() const;
   void clear_e_ca_country_name_invalid();
   static const int kECaCountryNameInvalidFieldNumber = 6;
-  const ::censys_definitions::LintResult& e_ca_country_name_invalid() const;
-  ::censys_definitions::LintResult* mutable_e_ca_country_name_invalid();
-  ::censys_definitions::LintResult* release_e_ca_country_name_invalid();
-  void set_allocated_e_ca_country_name_invalid(::censys_definitions::LintResult* e_ca_country_name_invalid);
+  const ::zsearch::LintResult& e_ca_country_name_invalid() const;
+  ::zsearch::LintResult* mutable_e_ca_country_name_invalid();
+  ::zsearch::LintResult* release_e_ca_country_name_invalid();
+  void set_allocated_e_ca_country_name_invalid(::zsearch::LintResult* e_ca_country_name_invalid);
 
-  // .censys_definitions.LintResult e_ca_country_name_missing = 7;
+  // .zsearch.LintResult e_ca_country_name_missing = 7;
   bool has_e_ca_country_name_missing() const;
   void clear_e_ca_country_name_missing();
   static const int kECaCountryNameMissingFieldNumber = 7;
-  const ::censys_definitions::LintResult& e_ca_country_name_missing() const;
-  ::censys_definitions::LintResult* mutable_e_ca_country_name_missing();
-  ::censys_definitions::LintResult* release_e_ca_country_name_missing();
-  void set_allocated_e_ca_country_name_missing(::censys_definitions::LintResult* e_ca_country_name_missing);
+  const ::zsearch::LintResult& e_ca_country_name_missing() const;
+  ::zsearch::LintResult* mutable_e_ca_country_name_missing();
+  ::zsearch::LintResult* release_e_ca_country_name_missing();
+  void set_allocated_e_ca_country_name_missing(::zsearch::LintResult* e_ca_country_name_missing);
 
-  // .censys_definitions.LintResult e_ca_crl_sign_not_set = 8;
+  // .zsearch.LintResult e_ca_crl_sign_not_set = 8;
   bool has_e_ca_crl_sign_not_set() const;
   void clear_e_ca_crl_sign_not_set();
   static const int kECaCrlSignNotSetFieldNumber = 8;
-  const ::censys_definitions::LintResult& e_ca_crl_sign_not_set() const;
-  ::censys_definitions::LintResult* mutable_e_ca_crl_sign_not_set();
-  ::censys_definitions::LintResult* release_e_ca_crl_sign_not_set();
-  void set_allocated_e_ca_crl_sign_not_set(::censys_definitions::LintResult* e_ca_crl_sign_not_set);
+  const ::zsearch::LintResult& e_ca_crl_sign_not_set() const;
+  ::zsearch::LintResult* mutable_e_ca_crl_sign_not_set();
+  ::zsearch::LintResult* release_e_ca_crl_sign_not_set();
+  void set_allocated_e_ca_crl_sign_not_set(::zsearch::LintResult* e_ca_crl_sign_not_set);
 
-  // .censys_definitions.LintResult w_ca_digital_signature_not_set = 9;
+  // .zsearch.LintResult w_ca_digital_signature_not_set = 9;
   bool has_w_ca_digital_signature_not_set() const;
   void clear_w_ca_digital_signature_not_set();
   static const int kWCaDigitalSignatureNotSetFieldNumber = 9;
-  const ::censys_definitions::LintResult& w_ca_digital_signature_not_set() const;
-  ::censys_definitions::LintResult* mutable_w_ca_digital_signature_not_set();
-  ::censys_definitions::LintResult* release_w_ca_digital_signature_not_set();
-  void set_allocated_w_ca_digital_signature_not_set(::censys_definitions::LintResult* w_ca_digital_signature_not_set);
+  const ::zsearch::LintResult& w_ca_digital_signature_not_set() const;
+  ::zsearch::LintResult* mutable_w_ca_digital_signature_not_set();
+  ::zsearch::LintResult* release_w_ca_digital_signature_not_set();
+  void set_allocated_w_ca_digital_signature_not_set(::zsearch::LintResult* w_ca_digital_signature_not_set);
 
-  // .censys_definitions.LintResult e_ca_key_cert_sign_not_set = 10;
+  // .zsearch.LintResult e_ca_key_cert_sign_not_set = 10;
   bool has_e_ca_key_cert_sign_not_set() const;
   void clear_e_ca_key_cert_sign_not_set();
   static const int kECaKeyCertSignNotSetFieldNumber = 10;
-  const ::censys_definitions::LintResult& e_ca_key_cert_sign_not_set() const;
-  ::censys_definitions::LintResult* mutable_e_ca_key_cert_sign_not_set();
-  ::censys_definitions::LintResult* release_e_ca_key_cert_sign_not_set();
-  void set_allocated_e_ca_key_cert_sign_not_set(::censys_definitions::LintResult* e_ca_key_cert_sign_not_set);
+  const ::zsearch::LintResult& e_ca_key_cert_sign_not_set() const;
+  ::zsearch::LintResult* mutable_e_ca_key_cert_sign_not_set();
+  ::zsearch::LintResult* release_e_ca_key_cert_sign_not_set();
+  void set_allocated_e_ca_key_cert_sign_not_set(::zsearch::LintResult* e_ca_key_cert_sign_not_set);
 
-  // .censys_definitions.LintResult e_ca_key_usage_missing = 11;
+  // .zsearch.LintResult e_ca_key_usage_missing = 11;
   bool has_e_ca_key_usage_missing() const;
   void clear_e_ca_key_usage_missing();
   static const int kECaKeyUsageMissingFieldNumber = 11;
-  const ::censys_definitions::LintResult& e_ca_key_usage_missing() const;
-  ::censys_definitions::LintResult* mutable_e_ca_key_usage_missing();
-  ::censys_definitions::LintResult* release_e_ca_key_usage_missing();
-  void set_allocated_e_ca_key_usage_missing(::censys_definitions::LintResult* e_ca_key_usage_missing);
+  const ::zsearch::LintResult& e_ca_key_usage_missing() const;
+  ::zsearch::LintResult* mutable_e_ca_key_usage_missing();
+  ::zsearch::LintResult* release_e_ca_key_usage_missing();
+  void set_allocated_e_ca_key_usage_missing(::zsearch::LintResult* e_ca_key_usage_missing);
 
-  // .censys_definitions.LintResult e_ca_key_usage_not_critical = 12;
+  // .zsearch.LintResult e_ca_key_usage_not_critical = 12;
   bool has_e_ca_key_usage_not_critical() const;
   void clear_e_ca_key_usage_not_critical();
   static const int kECaKeyUsageNotCriticalFieldNumber = 12;
-  const ::censys_definitions::LintResult& e_ca_key_usage_not_critical() const;
-  ::censys_definitions::LintResult* mutable_e_ca_key_usage_not_critical();
-  ::censys_definitions::LintResult* release_e_ca_key_usage_not_critical();
-  void set_allocated_e_ca_key_usage_not_critical(::censys_definitions::LintResult* e_ca_key_usage_not_critical);
+  const ::zsearch::LintResult& e_ca_key_usage_not_critical() const;
+  ::zsearch::LintResult* mutable_e_ca_key_usage_not_critical();
+  ::zsearch::LintResult* release_e_ca_key_usage_not_critical();
+  void set_allocated_e_ca_key_usage_not_critical(::zsearch::LintResult* e_ca_key_usage_not_critical);
 
-  // .censys_definitions.LintResult e_ca_organization_name_missing = 13;
+  // .zsearch.LintResult e_ca_organization_name_missing = 13;
   bool has_e_ca_organization_name_missing() const;
   void clear_e_ca_organization_name_missing();
   static const int kECaOrganizationNameMissingFieldNumber = 13;
-  const ::censys_definitions::LintResult& e_ca_organization_name_missing() const;
-  ::censys_definitions::LintResult* mutable_e_ca_organization_name_missing();
-  ::censys_definitions::LintResult* release_e_ca_organization_name_missing();
-  void set_allocated_e_ca_organization_name_missing(::censys_definitions::LintResult* e_ca_organization_name_missing);
+  const ::zsearch::LintResult& e_ca_organization_name_missing() const;
+  ::zsearch::LintResult* mutable_e_ca_organization_name_missing();
+  ::zsearch::LintResult* release_e_ca_organization_name_missing();
+  void set_allocated_e_ca_organization_name_missing(::zsearch::LintResult* e_ca_organization_name_missing);
 
-  // .censys_definitions.LintResult e_ca_subject_field_empty = 14;
+  // .zsearch.LintResult e_ca_subject_field_empty = 14;
   bool has_e_ca_subject_field_empty() const;
   void clear_e_ca_subject_field_empty();
   static const int kECaSubjectFieldEmptyFieldNumber = 14;
-  const ::censys_definitions::LintResult& e_ca_subject_field_empty() const;
-  ::censys_definitions::LintResult* mutable_e_ca_subject_field_empty();
-  ::censys_definitions::LintResult* release_e_ca_subject_field_empty();
-  void set_allocated_e_ca_subject_field_empty(::censys_definitions::LintResult* e_ca_subject_field_empty);
+  const ::zsearch::LintResult& e_ca_subject_field_empty() const;
+  ::zsearch::LintResult* mutable_e_ca_subject_field_empty();
+  ::zsearch::LintResult* release_e_ca_subject_field_empty();
+  void set_allocated_e_ca_subject_field_empty(::zsearch::LintResult* e_ca_subject_field_empty);
 
-  // .censys_definitions.LintResult e_cert_contains_unique_identifier = 15;
+  // .zsearch.LintResult e_cert_contains_unique_identifier = 15;
   bool has_e_cert_contains_unique_identifier() const;
   void clear_e_cert_contains_unique_identifier();
   static const int kECertContainsUniqueIdentifierFieldNumber = 15;
-  const ::censys_definitions::LintResult& e_cert_contains_unique_identifier() const;
-  ::censys_definitions::LintResult* mutable_e_cert_contains_unique_identifier();
-  ::censys_definitions::LintResult* release_e_cert_contains_unique_identifier();
-  void set_allocated_e_cert_contains_unique_identifier(::censys_definitions::LintResult* e_cert_contains_unique_identifier);
+  const ::zsearch::LintResult& e_cert_contains_unique_identifier() const;
+  ::zsearch::LintResult* mutable_e_cert_contains_unique_identifier();
+  ::zsearch::LintResult* release_e_cert_contains_unique_identifier();
+  void set_allocated_e_cert_contains_unique_identifier(::zsearch::LintResult* e_cert_contains_unique_identifier);
 
-  // .censys_definitions.LintResult e_cert_extensions_version_not_3 = 16;
+  // .zsearch.LintResult e_cert_extensions_version_not_3 = 16;
   bool has_e_cert_extensions_version_not_3() const;
   void clear_e_cert_extensions_version_not_3();
   static const int kECertExtensionsVersionNot3FieldNumber = 16;
-  const ::censys_definitions::LintResult& e_cert_extensions_version_not_3() const;
-  ::censys_definitions::LintResult* mutable_e_cert_extensions_version_not_3();
-  ::censys_definitions::LintResult* release_e_cert_extensions_version_not_3();
-  void set_allocated_e_cert_extensions_version_not_3(::censys_definitions::LintResult* e_cert_extensions_version_not_3);
+  const ::zsearch::LintResult& e_cert_extensions_version_not_3() const;
+  ::zsearch::LintResult* mutable_e_cert_extensions_version_not_3();
+  ::zsearch::LintResult* release_e_cert_extensions_version_not_3();
+  void set_allocated_e_cert_extensions_version_not_3(::zsearch::LintResult* e_cert_extensions_version_not_3);
 
-  // .censys_definitions.LintResult e_cab_dv_conflicts_with_locality = 17;
+  // .zsearch.LintResult e_cab_dv_conflicts_with_locality = 17;
   bool has_e_cab_dv_conflicts_with_locality() const;
   void clear_e_cab_dv_conflicts_with_locality();
   static const int kECabDvConflictsWithLocalityFieldNumber = 17;
-  const ::censys_definitions::LintResult& e_cab_dv_conflicts_with_locality() const;
-  ::censys_definitions::LintResult* mutable_e_cab_dv_conflicts_with_locality();
-  ::censys_definitions::LintResult* release_e_cab_dv_conflicts_with_locality();
-  void set_allocated_e_cab_dv_conflicts_with_locality(::censys_definitions::LintResult* e_cab_dv_conflicts_with_locality);
+  const ::zsearch::LintResult& e_cab_dv_conflicts_with_locality() const;
+  ::zsearch::LintResult* mutable_e_cab_dv_conflicts_with_locality();
+  ::zsearch::LintResult* release_e_cab_dv_conflicts_with_locality();
+  void set_allocated_e_cab_dv_conflicts_with_locality(::zsearch::LintResult* e_cab_dv_conflicts_with_locality);
 
-  // .censys_definitions.LintResult e_cab_dv_conflicts_with_org = 18;
+  // .zsearch.LintResult e_cab_dv_conflicts_with_org = 18;
   bool has_e_cab_dv_conflicts_with_org() const;
   void clear_e_cab_dv_conflicts_with_org();
   static const int kECabDvConflictsWithOrgFieldNumber = 18;
-  const ::censys_definitions::LintResult& e_cab_dv_conflicts_with_org() const;
-  ::censys_definitions::LintResult* mutable_e_cab_dv_conflicts_with_org();
-  ::censys_definitions::LintResult* release_e_cab_dv_conflicts_with_org();
-  void set_allocated_e_cab_dv_conflicts_with_org(::censys_definitions::LintResult* e_cab_dv_conflicts_with_org);
+  const ::zsearch::LintResult& e_cab_dv_conflicts_with_org() const;
+  ::zsearch::LintResult* mutable_e_cab_dv_conflicts_with_org();
+  ::zsearch::LintResult* release_e_cab_dv_conflicts_with_org();
+  void set_allocated_e_cab_dv_conflicts_with_org(::zsearch::LintResult* e_cab_dv_conflicts_with_org);
 
-  // .censys_definitions.LintResult e_cab_dv_conflicts_with_postal = 19;
+  // .zsearch.LintResult e_cab_dv_conflicts_with_postal = 19;
   bool has_e_cab_dv_conflicts_with_postal() const;
   void clear_e_cab_dv_conflicts_with_postal();
   static const int kECabDvConflictsWithPostalFieldNumber = 19;
-  const ::censys_definitions::LintResult& e_cab_dv_conflicts_with_postal() const;
-  ::censys_definitions::LintResult* mutable_e_cab_dv_conflicts_with_postal();
-  ::censys_definitions::LintResult* release_e_cab_dv_conflicts_with_postal();
-  void set_allocated_e_cab_dv_conflicts_with_postal(::censys_definitions::LintResult* e_cab_dv_conflicts_with_postal);
+  const ::zsearch::LintResult& e_cab_dv_conflicts_with_postal() const;
+  ::zsearch::LintResult* mutable_e_cab_dv_conflicts_with_postal();
+  ::zsearch::LintResult* release_e_cab_dv_conflicts_with_postal();
+  void set_allocated_e_cab_dv_conflicts_with_postal(::zsearch::LintResult* e_cab_dv_conflicts_with_postal);
 
-  // .censys_definitions.LintResult e_cab_dv_conflicts_with_province = 20;
+  // .zsearch.LintResult e_cab_dv_conflicts_with_province = 20;
   bool has_e_cab_dv_conflicts_with_province() const;
   void clear_e_cab_dv_conflicts_with_province();
   static const int kECabDvConflictsWithProvinceFieldNumber = 20;
-  const ::censys_definitions::LintResult& e_cab_dv_conflicts_with_province() const;
-  ::censys_definitions::LintResult* mutable_e_cab_dv_conflicts_with_province();
-  ::censys_definitions::LintResult* release_e_cab_dv_conflicts_with_province();
-  void set_allocated_e_cab_dv_conflicts_with_province(::censys_definitions::LintResult* e_cab_dv_conflicts_with_province);
+  const ::zsearch::LintResult& e_cab_dv_conflicts_with_province() const;
+  ::zsearch::LintResult* mutable_e_cab_dv_conflicts_with_province();
+  ::zsearch::LintResult* release_e_cab_dv_conflicts_with_province();
+  void set_allocated_e_cab_dv_conflicts_with_province(::zsearch::LintResult* e_cab_dv_conflicts_with_province);
 
-  // .censys_definitions.LintResult e_cab_dv_conflicts_with_street = 21;
+  // .zsearch.LintResult e_cab_dv_conflicts_with_street = 21;
   bool has_e_cab_dv_conflicts_with_street() const;
   void clear_e_cab_dv_conflicts_with_street();
   static const int kECabDvConflictsWithStreetFieldNumber = 21;
-  const ::censys_definitions::LintResult& e_cab_dv_conflicts_with_street() const;
-  ::censys_definitions::LintResult* mutable_e_cab_dv_conflicts_with_street();
-  ::censys_definitions::LintResult* release_e_cab_dv_conflicts_with_street();
-  void set_allocated_e_cab_dv_conflicts_with_street(::censys_definitions::LintResult* e_cab_dv_conflicts_with_street);
+  const ::zsearch::LintResult& e_cab_dv_conflicts_with_street() const;
+  ::zsearch::LintResult* mutable_e_cab_dv_conflicts_with_street();
+  ::zsearch::LintResult* release_e_cab_dv_conflicts_with_street();
+  void set_allocated_e_cab_dv_conflicts_with_street(::zsearch::LintResult* e_cab_dv_conflicts_with_street);
 
-  // .censys_definitions.LintResult e_cert_policy_iv_requires_country = 22;
+  // .zsearch.LintResult e_cert_policy_iv_requires_country = 22;
   bool has_e_cert_policy_iv_requires_country() const;
   void clear_e_cert_policy_iv_requires_country();
   static const int kECertPolicyIvRequiresCountryFieldNumber = 22;
-  const ::censys_definitions::LintResult& e_cert_policy_iv_requires_country() const;
-  ::censys_definitions::LintResult* mutable_e_cert_policy_iv_requires_country();
-  ::censys_definitions::LintResult* release_e_cert_policy_iv_requires_country();
-  void set_allocated_e_cert_policy_iv_requires_country(::censys_definitions::LintResult* e_cert_policy_iv_requires_country);
+  const ::zsearch::LintResult& e_cert_policy_iv_requires_country() const;
+  ::zsearch::LintResult* mutable_e_cert_policy_iv_requires_country();
+  ::zsearch::LintResult* release_e_cert_policy_iv_requires_country();
+  void set_allocated_e_cert_policy_iv_requires_country(::zsearch::LintResult* e_cert_policy_iv_requires_country);
 
-  // .censys_definitions.LintResult e_cert_policy_iv_requires_province_or_locality = 23;
+  // .zsearch.LintResult e_cert_policy_iv_requires_province_or_locality = 23;
   bool has_e_cert_policy_iv_requires_province_or_locality() const;
   void clear_e_cert_policy_iv_requires_province_or_locality();
   static const int kECertPolicyIvRequiresProvinceOrLocalityFieldNumber = 23;
-  const ::censys_definitions::LintResult& e_cert_policy_iv_requires_province_or_locality() const;
-  ::censys_definitions::LintResult* mutable_e_cert_policy_iv_requires_province_or_locality();
-  ::censys_definitions::LintResult* release_e_cert_policy_iv_requires_province_or_locality();
-  void set_allocated_e_cert_policy_iv_requires_province_or_locality(::censys_definitions::LintResult* e_cert_policy_iv_requires_province_or_locality);
+  const ::zsearch::LintResult& e_cert_policy_iv_requires_province_or_locality() const;
+  ::zsearch::LintResult* mutable_e_cert_policy_iv_requires_province_or_locality();
+  ::zsearch::LintResult* release_e_cert_policy_iv_requires_province_or_locality();
+  void set_allocated_e_cert_policy_iv_requires_province_or_locality(::zsearch::LintResult* e_cert_policy_iv_requires_province_or_locality);
 
-  // .censys_definitions.LintResult e_cert_policy_ov_requires_country = 24;
+  // .zsearch.LintResult e_cert_policy_ov_requires_country = 24;
   bool has_e_cert_policy_ov_requires_country() const;
   void clear_e_cert_policy_ov_requires_country();
   static const int kECertPolicyOvRequiresCountryFieldNumber = 24;
-  const ::censys_definitions::LintResult& e_cert_policy_ov_requires_country() const;
-  ::censys_definitions::LintResult* mutable_e_cert_policy_ov_requires_country();
-  ::censys_definitions::LintResult* release_e_cert_policy_ov_requires_country();
-  void set_allocated_e_cert_policy_ov_requires_country(::censys_definitions::LintResult* e_cert_policy_ov_requires_country);
+  const ::zsearch::LintResult& e_cert_policy_ov_requires_country() const;
+  ::zsearch::LintResult* mutable_e_cert_policy_ov_requires_country();
+  ::zsearch::LintResult* release_e_cert_policy_ov_requires_country();
+  void set_allocated_e_cert_policy_ov_requires_country(::zsearch::LintResult* e_cert_policy_ov_requires_country);
 
-  // .censys_definitions.LintResult e_cert_policy_ov_requires_province_or_locality = 25;
+  // .zsearch.LintResult e_cert_policy_ov_requires_province_or_locality = 25;
   bool has_e_cert_policy_ov_requires_province_or_locality() const;
   void clear_e_cert_policy_ov_requires_province_or_locality();
   static const int kECertPolicyOvRequiresProvinceOrLocalityFieldNumber = 25;
-  const ::censys_definitions::LintResult& e_cert_policy_ov_requires_province_or_locality() const;
-  ::censys_definitions::LintResult* mutable_e_cert_policy_ov_requires_province_or_locality();
-  ::censys_definitions::LintResult* release_e_cert_policy_ov_requires_province_or_locality();
-  void set_allocated_e_cert_policy_ov_requires_province_or_locality(::censys_definitions::LintResult* e_cert_policy_ov_requires_province_or_locality);
+  const ::zsearch::LintResult& e_cert_policy_ov_requires_province_or_locality() const;
+  ::zsearch::LintResult* mutable_e_cert_policy_ov_requires_province_or_locality();
+  ::zsearch::LintResult* release_e_cert_policy_ov_requires_province_or_locality();
+  void set_allocated_e_cert_policy_ov_requires_province_or_locality(::zsearch::LintResult* e_cert_policy_ov_requires_province_or_locality);
 
-  // .censys_definitions.LintResult e_cab_ov_requires_org = 26;
+  // .zsearch.LintResult e_cab_ov_requires_org = 26;
   bool has_e_cab_ov_requires_org() const;
   void clear_e_cab_ov_requires_org();
   static const int kECabOvRequiresOrgFieldNumber = 26;
-  const ::censys_definitions::LintResult& e_cab_ov_requires_org() const;
-  ::censys_definitions::LintResult* mutable_e_cab_ov_requires_org();
-  ::censys_definitions::LintResult* release_e_cab_ov_requires_org();
-  void set_allocated_e_cab_ov_requires_org(::censys_definitions::LintResult* e_cab_ov_requires_org);
+  const ::zsearch::LintResult& e_cab_ov_requires_org() const;
+  ::zsearch::LintResult* mutable_e_cab_ov_requires_org();
+  ::zsearch::LintResult* release_e_cab_ov_requires_org();
+  void set_allocated_e_cab_ov_requires_org(::zsearch::LintResult* e_cab_ov_requires_org);
 
-  // .censys_definitions.LintResult e_cab_iv_requires_personal_name = 27;
+  // .zsearch.LintResult e_cab_iv_requires_personal_name = 27;
   bool has_e_cab_iv_requires_personal_name() const;
   void clear_e_cab_iv_requires_personal_name();
   static const int kECabIvRequiresPersonalNameFieldNumber = 27;
-  const ::censys_definitions::LintResult& e_cab_iv_requires_personal_name() const;
-  ::censys_definitions::LintResult* mutable_e_cab_iv_requires_personal_name();
-  ::censys_definitions::LintResult* release_e_cab_iv_requires_personal_name();
-  void set_allocated_e_cab_iv_requires_personal_name(::censys_definitions::LintResult* e_cab_iv_requires_personal_name);
+  const ::zsearch::LintResult& e_cab_iv_requires_personal_name() const;
+  ::zsearch::LintResult* mutable_e_cab_iv_requires_personal_name();
+  ::zsearch::LintResult* release_e_cab_iv_requires_personal_name();
+  void set_allocated_e_cab_iv_requires_personal_name(::zsearch::LintResult* e_cab_iv_requires_personal_name);
 
-  // .censys_definitions.LintResult e_cert_unique_identifier_version_not_2_or_3 = 28;
+  // .zsearch.LintResult e_cert_unique_identifier_version_not_2_or_3 = 28;
   bool has_e_cert_unique_identifier_version_not_2_or_3() const;
   void clear_e_cert_unique_identifier_version_not_2_or_3();
   static const int kECertUniqueIdentifierVersionNot2Or3FieldNumber = 28;
-  const ::censys_definitions::LintResult& e_cert_unique_identifier_version_not_2_or_3() const;
-  ::censys_definitions::LintResult* mutable_e_cert_unique_identifier_version_not_2_or_3();
-  ::censys_definitions::LintResult* release_e_cert_unique_identifier_version_not_2_or_3();
-  void set_allocated_e_cert_unique_identifier_version_not_2_or_3(::censys_definitions::LintResult* e_cert_unique_identifier_version_not_2_or_3);
+  const ::zsearch::LintResult& e_cert_unique_identifier_version_not_2_or_3() const;
+  ::zsearch::LintResult* mutable_e_cert_unique_identifier_version_not_2_or_3();
+  ::zsearch::LintResult* release_e_cert_unique_identifier_version_not_2_or_3();
+  void set_allocated_e_cert_unique_identifier_version_not_2_or_3(::zsearch::LintResult* e_cert_unique_identifier_version_not_2_or_3);
 
-  // .censys_definitions.LintResult e_dh_params_missing = 29;
+  // .zsearch.LintResult e_dh_params_missing = 29;
   bool has_e_dh_params_missing() const;
   void clear_e_dh_params_missing();
   static const int kEDhParamsMissingFieldNumber = 29;
-  const ::censys_definitions::LintResult& e_dh_params_missing() const;
-  ::censys_definitions::LintResult* mutable_e_dh_params_missing();
-  ::censys_definitions::LintResult* release_e_dh_params_missing();
-  void set_allocated_e_dh_params_missing(::censys_definitions::LintResult* e_dh_params_missing);
+  const ::zsearch::LintResult& e_dh_params_missing() const;
+  ::zsearch::LintResult* mutable_e_dh_params_missing();
+  ::zsearch::LintResult* release_e_dh_params_missing();
+  void set_allocated_e_dh_params_missing(::zsearch::LintResult* e_dh_params_missing);
 
-  // .censys_definitions.LintResult e_distribution_point_incomplete = 30;
+  // .zsearch.LintResult e_distribution_point_incomplete = 30;
   bool has_e_distribution_point_incomplete() const;
   void clear_e_distribution_point_incomplete();
   static const int kEDistributionPointIncompleteFieldNumber = 30;
-  const ::censys_definitions::LintResult& e_distribution_point_incomplete() const;
-  ::censys_definitions::LintResult* mutable_e_distribution_point_incomplete();
-  ::censys_definitions::LintResult* release_e_distribution_point_incomplete();
-  void set_allocated_e_distribution_point_incomplete(::censys_definitions::LintResult* e_distribution_point_incomplete);
+  const ::zsearch::LintResult& e_distribution_point_incomplete() const;
+  ::zsearch::LintResult* mutable_e_distribution_point_incomplete();
+  ::zsearch::LintResult* release_e_distribution_point_incomplete();
+  void set_allocated_e_distribution_point_incomplete(::zsearch::LintResult* e_distribution_point_incomplete);
 
-  // .censys_definitions.LintResult w_distribution_point_missing_ldap_or_uri = 31;
+  // .zsearch.LintResult w_distribution_point_missing_ldap_or_uri = 31;
   bool has_w_distribution_point_missing_ldap_or_uri() const;
   void clear_w_distribution_point_missing_ldap_or_uri();
   static const int kWDistributionPointMissingLdapOrUriFieldNumber = 31;
-  const ::censys_definitions::LintResult& w_distribution_point_missing_ldap_or_uri() const;
-  ::censys_definitions::LintResult* mutable_w_distribution_point_missing_ldap_or_uri();
-  ::censys_definitions::LintResult* release_w_distribution_point_missing_ldap_or_uri();
-  void set_allocated_w_distribution_point_missing_ldap_or_uri(::censys_definitions::LintResult* w_distribution_point_missing_ldap_or_uri);
+  const ::zsearch::LintResult& w_distribution_point_missing_ldap_or_uri() const;
+  ::zsearch::LintResult* mutable_w_distribution_point_missing_ldap_or_uri();
+  ::zsearch::LintResult* release_w_distribution_point_missing_ldap_or_uri();
+  void set_allocated_w_distribution_point_missing_ldap_or_uri(::zsearch::LintResult* w_distribution_point_missing_ldap_or_uri);
 
-  // .censys_definitions.LintResult e_dsa_improper_modulus_or_divisor_size = 32;
+  // .zsearch.LintResult e_dsa_improper_modulus_or_divisor_size = 32;
   bool has_e_dsa_improper_modulus_or_divisor_size() const;
   void clear_e_dsa_improper_modulus_or_divisor_size();
   static const int kEDsaImproperModulusOrDivisorSizeFieldNumber = 32;
-  const ::censys_definitions::LintResult& e_dsa_improper_modulus_or_divisor_size() const;
-  ::censys_definitions::LintResult* mutable_e_dsa_improper_modulus_or_divisor_size();
-  ::censys_definitions::LintResult* release_e_dsa_improper_modulus_or_divisor_size();
-  void set_allocated_e_dsa_improper_modulus_or_divisor_size(::censys_definitions::LintResult* e_dsa_improper_modulus_or_divisor_size);
+  const ::zsearch::LintResult& e_dsa_improper_modulus_or_divisor_size() const;
+  ::zsearch::LintResult* mutable_e_dsa_improper_modulus_or_divisor_size();
+  ::zsearch::LintResult* release_e_dsa_improper_modulus_or_divisor_size();
+  void set_allocated_e_dsa_improper_modulus_or_divisor_size(::zsearch::LintResult* e_dsa_improper_modulus_or_divisor_size);
 
-  // .censys_definitions.LintResult e_dsa_shorter_than_2048_bits = 33;
+  // .zsearch.LintResult e_dsa_shorter_than_2048_bits = 33;
   bool has_e_dsa_shorter_than_2048_bits() const;
   void clear_e_dsa_shorter_than_2048_bits();
   static const int kEDsaShorterThan2048BitsFieldNumber = 33;
-  const ::censys_definitions::LintResult& e_dsa_shorter_than_2048_bits() const;
-  ::censys_definitions::LintResult* mutable_e_dsa_shorter_than_2048_bits();
-  ::censys_definitions::LintResult* release_e_dsa_shorter_than_2048_bits();
-  void set_allocated_e_dsa_shorter_than_2048_bits(::censys_definitions::LintResult* e_dsa_shorter_than_2048_bits);
+  const ::zsearch::LintResult& e_dsa_shorter_than_2048_bits() const;
+  ::zsearch::LintResult* mutable_e_dsa_shorter_than_2048_bits();
+  ::zsearch::LintResult* release_e_dsa_shorter_than_2048_bits();
+  void set_allocated_e_dsa_shorter_than_2048_bits(::zsearch::LintResult* e_dsa_shorter_than_2048_bits);
 
-  // .censys_definitions.LintResult e_ec_improper_curves = 34;
+  // .zsearch.LintResult e_ec_improper_curves = 34;
   bool has_e_ec_improper_curves() const;
   void clear_e_ec_improper_curves();
   static const int kEEcImproperCurvesFieldNumber = 34;
-  const ::censys_definitions::LintResult& e_ec_improper_curves() const;
-  ::censys_definitions::LintResult* mutable_e_ec_improper_curves();
-  ::censys_definitions::LintResult* release_e_ec_improper_curves();
-  void set_allocated_e_ec_improper_curves(::censys_definitions::LintResult* e_ec_improper_curves);
+  const ::zsearch::LintResult& e_ec_improper_curves() const;
+  ::zsearch::LintResult* mutable_e_ec_improper_curves();
+  ::zsearch::LintResult* release_e_ec_improper_curves();
+  void set_allocated_e_ec_improper_curves(::zsearch::LintResult* e_ec_improper_curves);
 
-  // .censys_definitions.LintResult w_eku_critical_improperly = 35;
+  // .zsearch.LintResult w_eku_critical_improperly = 35;
   bool has_w_eku_critical_improperly() const;
   void clear_w_eku_critical_improperly();
   static const int kWEkuCriticalImproperlyFieldNumber = 35;
-  const ::censys_definitions::LintResult& w_eku_critical_improperly() const;
-  ::censys_definitions::LintResult* mutable_w_eku_critical_improperly();
-  ::censys_definitions::LintResult* release_w_eku_critical_improperly();
-  void set_allocated_w_eku_critical_improperly(::censys_definitions::LintResult* w_eku_critical_improperly);
+  const ::zsearch::LintResult& w_eku_critical_improperly() const;
+  ::zsearch::LintResult* mutable_w_eku_critical_improperly();
+  ::zsearch::LintResult* release_w_eku_critical_improperly();
+  void set_allocated_w_eku_critical_improperly(::zsearch::LintResult* w_eku_critical_improperly);
 
-  // .censys_definitions.LintResult e_ev_business_category_missing = 36;
+  // .zsearch.LintResult e_ev_business_category_missing = 36;
   bool has_e_ev_business_category_missing() const;
   void clear_e_ev_business_category_missing();
   static const int kEEvBusinessCategoryMissingFieldNumber = 36;
-  const ::censys_definitions::LintResult& e_ev_business_category_missing() const;
-  ::censys_definitions::LintResult* mutable_e_ev_business_category_missing();
-  ::censys_definitions::LintResult* release_e_ev_business_category_missing();
-  void set_allocated_e_ev_business_category_missing(::censys_definitions::LintResult* e_ev_business_category_missing);
+  const ::zsearch::LintResult& e_ev_business_category_missing() const;
+  ::zsearch::LintResult* mutable_e_ev_business_category_missing();
+  ::zsearch::LintResult* release_e_ev_business_category_missing();
+  void set_allocated_e_ev_business_category_missing(::zsearch::LintResult* e_ev_business_category_missing);
 
-  // .censys_definitions.LintResult e_ev_country_name_missing = 37;
+  // .zsearch.LintResult e_ev_country_name_missing = 37;
   bool has_e_ev_country_name_missing() const;
   void clear_e_ev_country_name_missing();
   static const int kEEvCountryNameMissingFieldNumber = 37;
-  const ::censys_definitions::LintResult& e_ev_country_name_missing() const;
-  ::censys_definitions::LintResult* mutable_e_ev_country_name_missing();
-  ::censys_definitions::LintResult* release_e_ev_country_name_missing();
-  void set_allocated_e_ev_country_name_missing(::censys_definitions::LintResult* e_ev_country_name_missing);
+  const ::zsearch::LintResult& e_ev_country_name_missing() const;
+  ::zsearch::LintResult* mutable_e_ev_country_name_missing();
+  ::zsearch::LintResult* release_e_ev_country_name_missing();
+  void set_allocated_e_ev_country_name_missing(::zsearch::LintResult* e_ev_country_name_missing);
 
-  // .censys_definitions.LintResult e_ev_locality_name_missing = 38;
+  // .zsearch.LintResult e_ev_locality_name_missing = 38;
   bool has_e_ev_locality_name_missing() const;
   void clear_e_ev_locality_name_missing();
   static const int kEEvLocalityNameMissingFieldNumber = 38;
-  const ::censys_definitions::LintResult& e_ev_locality_name_missing() const;
-  ::censys_definitions::LintResult* mutable_e_ev_locality_name_missing();
-  ::censys_definitions::LintResult* release_e_ev_locality_name_missing();
-  void set_allocated_e_ev_locality_name_missing(::censys_definitions::LintResult* e_ev_locality_name_missing);
+  const ::zsearch::LintResult& e_ev_locality_name_missing() const;
+  ::zsearch::LintResult* mutable_e_ev_locality_name_missing();
+  ::zsearch::LintResult* release_e_ev_locality_name_missing();
+  void set_allocated_e_ev_locality_name_missing(::zsearch::LintResult* e_ev_locality_name_missing);
 
-  // .censys_definitions.LintResult e_ev_organization_name_missing = 39;
+  // .zsearch.LintResult e_ev_organization_name_missing = 39;
   bool has_e_ev_organization_name_missing() const;
   void clear_e_ev_organization_name_missing();
   static const int kEEvOrganizationNameMissingFieldNumber = 39;
-  const ::censys_definitions::LintResult& e_ev_organization_name_missing() const;
-  ::censys_definitions::LintResult* mutable_e_ev_organization_name_missing();
-  ::censys_definitions::LintResult* release_e_ev_organization_name_missing();
-  void set_allocated_e_ev_organization_name_missing(::censys_definitions::LintResult* e_ev_organization_name_missing);
+  const ::zsearch::LintResult& e_ev_organization_name_missing() const;
+  ::zsearch::LintResult* mutable_e_ev_organization_name_missing();
+  ::zsearch::LintResult* release_e_ev_organization_name_missing();
+  void set_allocated_e_ev_organization_name_missing(::zsearch::LintResult* e_ev_organization_name_missing);
 
-  // .censys_definitions.LintResult e_ev_serial_number_missing = 40;
+  // .zsearch.LintResult e_ev_serial_number_missing = 40;
   bool has_e_ev_serial_number_missing() const;
   void clear_e_ev_serial_number_missing();
   static const int kEEvSerialNumberMissingFieldNumber = 40;
-  const ::censys_definitions::LintResult& e_ev_serial_number_missing() const;
-  ::censys_definitions::LintResult* mutable_e_ev_serial_number_missing();
-  ::censys_definitions::LintResult* release_e_ev_serial_number_missing();
-  void set_allocated_e_ev_serial_number_missing(::censys_definitions::LintResult* e_ev_serial_number_missing);
+  const ::zsearch::LintResult& e_ev_serial_number_missing() const;
+  ::zsearch::LintResult* mutable_e_ev_serial_number_missing();
+  ::zsearch::LintResult* release_e_ev_serial_number_missing();
+  void set_allocated_e_ev_serial_number_missing(::zsearch::LintResult* e_ev_serial_number_missing);
 
-  // .censys_definitions.LintResult e_ev_valid_time_too_long = 41;
+  // .zsearch.LintResult e_ev_valid_time_too_long = 41;
   bool has_e_ev_valid_time_too_long() const;
   void clear_e_ev_valid_time_too_long();
   static const int kEEvValidTimeTooLongFieldNumber = 41;
-  const ::censys_definitions::LintResult& e_ev_valid_time_too_long() const;
-  ::censys_definitions::LintResult* mutable_e_ev_valid_time_too_long();
-  ::censys_definitions::LintResult* release_e_ev_valid_time_too_long();
-  void set_allocated_e_ev_valid_time_too_long(::censys_definitions::LintResult* e_ev_valid_time_too_long);
+  const ::zsearch::LintResult& e_ev_valid_time_too_long() const;
+  ::zsearch::LintResult* mutable_e_ev_valid_time_too_long();
+  ::zsearch::LintResult* release_e_ev_valid_time_too_long();
+  void set_allocated_e_ev_valid_time_too_long(::zsearch::LintResult* e_ev_valid_time_too_long);
 
-  // .censys_definitions.LintResult w_ext_aia_access_location_missing = 42;
+  // .zsearch.LintResult w_ext_aia_access_location_missing = 42;
   bool has_w_ext_aia_access_location_missing() const;
   void clear_w_ext_aia_access_location_missing();
   static const int kWExtAiaAccessLocationMissingFieldNumber = 42;
-  const ::censys_definitions::LintResult& w_ext_aia_access_location_missing() const;
-  ::censys_definitions::LintResult* mutable_w_ext_aia_access_location_missing();
-  ::censys_definitions::LintResult* release_w_ext_aia_access_location_missing();
-  void set_allocated_w_ext_aia_access_location_missing(::censys_definitions::LintResult* w_ext_aia_access_location_missing);
+  const ::zsearch::LintResult& w_ext_aia_access_location_missing() const;
+  ::zsearch::LintResult* mutable_w_ext_aia_access_location_missing();
+  ::zsearch::LintResult* release_w_ext_aia_access_location_missing();
+  void set_allocated_w_ext_aia_access_location_missing(::zsearch::LintResult* w_ext_aia_access_location_missing);
 
-  // .censys_definitions.LintResult e_ext_aia_marked_critical = 43;
+  // .zsearch.LintResult e_ext_aia_marked_critical = 43;
   bool has_e_ext_aia_marked_critical() const;
   void clear_e_ext_aia_marked_critical();
   static const int kEExtAiaMarkedCriticalFieldNumber = 43;
-  const ::censys_definitions::LintResult& e_ext_aia_marked_critical() const;
-  ::censys_definitions::LintResult* mutable_e_ext_aia_marked_critical();
-  ::censys_definitions::LintResult* release_e_ext_aia_marked_critical();
-  void set_allocated_e_ext_aia_marked_critical(::censys_definitions::LintResult* e_ext_aia_marked_critical);
+  const ::zsearch::LintResult& e_ext_aia_marked_critical() const;
+  ::zsearch::LintResult* mutable_e_ext_aia_marked_critical();
+  ::zsearch::LintResult* release_e_ext_aia_marked_critical();
+  void set_allocated_e_ext_aia_marked_critical(::zsearch::LintResult* e_ext_aia_marked_critical);
 
-  // .censys_definitions.LintResult e_ext_authority_key_identifier_critical = 44;
+  // .zsearch.LintResult e_ext_authority_key_identifier_critical = 44;
   bool has_e_ext_authority_key_identifier_critical() const;
   void clear_e_ext_authority_key_identifier_critical();
   static const int kEExtAuthorityKeyIdentifierCriticalFieldNumber = 44;
-  const ::censys_definitions::LintResult& e_ext_authority_key_identifier_critical() const;
-  ::censys_definitions::LintResult* mutable_e_ext_authority_key_identifier_critical();
-  ::censys_definitions::LintResult* release_e_ext_authority_key_identifier_critical();
-  void set_allocated_e_ext_authority_key_identifier_critical(::censys_definitions::LintResult* e_ext_authority_key_identifier_critical);
+  const ::zsearch::LintResult& e_ext_authority_key_identifier_critical() const;
+  ::zsearch::LintResult* mutable_e_ext_authority_key_identifier_critical();
+  ::zsearch::LintResult* release_e_ext_authority_key_identifier_critical();
+  void set_allocated_e_ext_authority_key_identifier_critical(::zsearch::LintResult* e_ext_authority_key_identifier_critical);
 
-  // .censys_definitions.LintResult e_ext_authority_key_identifier_missing = 45;
+  // .zsearch.LintResult e_ext_authority_key_identifier_missing = 45;
   bool has_e_ext_authority_key_identifier_missing() const;
   void clear_e_ext_authority_key_identifier_missing();
   static const int kEExtAuthorityKeyIdentifierMissingFieldNumber = 45;
-  const ::censys_definitions::LintResult& e_ext_authority_key_identifier_missing() const;
-  ::censys_definitions::LintResult* mutable_e_ext_authority_key_identifier_missing();
-  ::censys_definitions::LintResult* release_e_ext_authority_key_identifier_missing();
-  void set_allocated_e_ext_authority_key_identifier_missing(::censys_definitions::LintResult* e_ext_authority_key_identifier_missing);
+  const ::zsearch::LintResult& e_ext_authority_key_identifier_missing() const;
+  ::zsearch::LintResult* mutable_e_ext_authority_key_identifier_missing();
+  ::zsearch::LintResult* release_e_ext_authority_key_identifier_missing();
+  void set_allocated_e_ext_authority_key_identifier_missing(::zsearch::LintResult* e_ext_authority_key_identifier_missing);
 
-  // .censys_definitions.LintResult e_ext_authority_key_identifier_no_key_identifier = 46;
+  // .zsearch.LintResult e_ext_authority_key_identifier_no_key_identifier = 46;
   bool has_e_ext_authority_key_identifier_no_key_identifier() const;
   void clear_e_ext_authority_key_identifier_no_key_identifier();
   static const int kEExtAuthorityKeyIdentifierNoKeyIdentifierFieldNumber = 46;
-  const ::censys_definitions::LintResult& e_ext_authority_key_identifier_no_key_identifier() const;
-  ::censys_definitions::LintResult* mutable_e_ext_authority_key_identifier_no_key_identifier();
-  ::censys_definitions::LintResult* release_e_ext_authority_key_identifier_no_key_identifier();
-  void set_allocated_e_ext_authority_key_identifier_no_key_identifier(::censys_definitions::LintResult* e_ext_authority_key_identifier_no_key_identifier);
+  const ::zsearch::LintResult& e_ext_authority_key_identifier_no_key_identifier() const;
+  ::zsearch::LintResult* mutable_e_ext_authority_key_identifier_no_key_identifier();
+  ::zsearch::LintResult* release_e_ext_authority_key_identifier_no_key_identifier();
+  void set_allocated_e_ext_authority_key_identifier_no_key_identifier(::zsearch::LintResult* e_ext_authority_key_identifier_no_key_identifier);
 
-  // .censys_definitions.LintResult w_ext_cert_policy_contains_noticeref = 47;
+  // .zsearch.LintResult w_ext_cert_policy_contains_noticeref = 47;
   bool has_w_ext_cert_policy_contains_noticeref() const;
   void clear_w_ext_cert_policy_contains_noticeref();
   static const int kWExtCertPolicyContainsNoticerefFieldNumber = 47;
-  const ::censys_definitions::LintResult& w_ext_cert_policy_contains_noticeref() const;
-  ::censys_definitions::LintResult* mutable_w_ext_cert_policy_contains_noticeref();
-  ::censys_definitions::LintResult* release_w_ext_cert_policy_contains_noticeref();
-  void set_allocated_w_ext_cert_policy_contains_noticeref(::censys_definitions::LintResult* w_ext_cert_policy_contains_noticeref);
+  const ::zsearch::LintResult& w_ext_cert_policy_contains_noticeref() const;
+  ::zsearch::LintResult* mutable_w_ext_cert_policy_contains_noticeref();
+  ::zsearch::LintResult* release_w_ext_cert_policy_contains_noticeref();
+  void set_allocated_w_ext_cert_policy_contains_noticeref(::zsearch::LintResult* w_ext_cert_policy_contains_noticeref);
 
-  // .censys_definitions.LintResult e_ext_cert_policy_disallowed_any_policy_qualifier = 48;
+  // .zsearch.LintResult e_ext_cert_policy_disallowed_any_policy_qualifier = 48;
   bool has_e_ext_cert_policy_disallowed_any_policy_qualifier() const;
   void clear_e_ext_cert_policy_disallowed_any_policy_qualifier();
   static const int kEExtCertPolicyDisallowedAnyPolicyQualifierFieldNumber = 48;
-  const ::censys_definitions::LintResult& e_ext_cert_policy_disallowed_any_policy_qualifier() const;
-  ::censys_definitions::LintResult* mutable_e_ext_cert_policy_disallowed_any_policy_qualifier();
-  ::censys_definitions::LintResult* release_e_ext_cert_policy_disallowed_any_policy_qualifier();
-  void set_allocated_e_ext_cert_policy_disallowed_any_policy_qualifier(::censys_definitions::LintResult* e_ext_cert_policy_disallowed_any_policy_qualifier);
+  const ::zsearch::LintResult& e_ext_cert_policy_disallowed_any_policy_qualifier() const;
+  ::zsearch::LintResult* mutable_e_ext_cert_policy_disallowed_any_policy_qualifier();
+  ::zsearch::LintResult* release_e_ext_cert_policy_disallowed_any_policy_qualifier();
+  void set_allocated_e_ext_cert_policy_disallowed_any_policy_qualifier(::zsearch::LintResult* e_ext_cert_policy_disallowed_any_policy_qualifier);
 
-  // .censys_definitions.LintResult e_ext_cert_policy_duplicate = 49;
+  // .zsearch.LintResult e_ext_cert_policy_duplicate = 49;
   bool has_e_ext_cert_policy_duplicate() const;
   void clear_e_ext_cert_policy_duplicate();
   static const int kEExtCertPolicyDuplicateFieldNumber = 49;
-  const ::censys_definitions::LintResult& e_ext_cert_policy_duplicate() const;
-  ::censys_definitions::LintResult* mutable_e_ext_cert_policy_duplicate();
-  ::censys_definitions::LintResult* release_e_ext_cert_policy_duplicate();
-  void set_allocated_e_ext_cert_policy_duplicate(::censys_definitions::LintResult* e_ext_cert_policy_duplicate);
+  const ::zsearch::LintResult& e_ext_cert_policy_duplicate() const;
+  ::zsearch::LintResult* mutable_e_ext_cert_policy_duplicate();
+  ::zsearch::LintResult* release_e_ext_cert_policy_duplicate();
+  void set_allocated_e_ext_cert_policy_duplicate(::zsearch::LintResult* e_ext_cert_policy_duplicate);
 
-  // .censys_definitions.LintResult e_ext_cert_policy_explicit_text_ia5_string = 50;
+  // .zsearch.LintResult e_ext_cert_policy_explicit_text_ia5_string = 50;
   bool has_e_ext_cert_policy_explicit_text_ia5_string() const;
   void clear_e_ext_cert_policy_explicit_text_ia5_string();
   static const int kEExtCertPolicyExplicitTextIa5StringFieldNumber = 50;
-  const ::censys_definitions::LintResult& e_ext_cert_policy_explicit_text_ia5_string() const;
-  ::censys_definitions::LintResult* mutable_e_ext_cert_policy_explicit_text_ia5_string();
-  ::censys_definitions::LintResult* release_e_ext_cert_policy_explicit_text_ia5_string();
-  void set_allocated_e_ext_cert_policy_explicit_text_ia5_string(::censys_definitions::LintResult* e_ext_cert_policy_explicit_text_ia5_string);
+  const ::zsearch::LintResult& e_ext_cert_policy_explicit_text_ia5_string() const;
+  ::zsearch::LintResult* mutable_e_ext_cert_policy_explicit_text_ia5_string();
+  ::zsearch::LintResult* release_e_ext_cert_policy_explicit_text_ia5_string();
+  void set_allocated_e_ext_cert_policy_explicit_text_ia5_string(::zsearch::LintResult* e_ext_cert_policy_explicit_text_ia5_string);
 
-  // .censys_definitions.LintResult w_ext_cert_policy_explicit_text_includes_control = 51;
+  // .zsearch.LintResult w_ext_cert_policy_explicit_text_includes_control = 51;
   bool has_w_ext_cert_policy_explicit_text_includes_control() const;
   void clear_w_ext_cert_policy_explicit_text_includes_control();
   static const int kWExtCertPolicyExplicitTextIncludesControlFieldNumber = 51;
-  const ::censys_definitions::LintResult& w_ext_cert_policy_explicit_text_includes_control() const;
-  ::censys_definitions::LintResult* mutable_w_ext_cert_policy_explicit_text_includes_control();
-  ::censys_definitions::LintResult* release_w_ext_cert_policy_explicit_text_includes_control();
-  void set_allocated_w_ext_cert_policy_explicit_text_includes_control(::censys_definitions::LintResult* w_ext_cert_policy_explicit_text_includes_control);
+  const ::zsearch::LintResult& w_ext_cert_policy_explicit_text_includes_control() const;
+  ::zsearch::LintResult* mutable_w_ext_cert_policy_explicit_text_includes_control();
+  ::zsearch::LintResult* release_w_ext_cert_policy_explicit_text_includes_control();
+  void set_allocated_w_ext_cert_policy_explicit_text_includes_control(::zsearch::LintResult* w_ext_cert_policy_explicit_text_includes_control);
 
-  // .censys_definitions.LintResult w_ext_cert_policy_explicit_text_not_nfc = 52;
+  // .zsearch.LintResult w_ext_cert_policy_explicit_text_not_nfc = 52;
   bool has_w_ext_cert_policy_explicit_text_not_nfc() const;
   void clear_w_ext_cert_policy_explicit_text_not_nfc();
   static const int kWExtCertPolicyExplicitTextNotNfcFieldNumber = 52;
-  const ::censys_definitions::LintResult& w_ext_cert_policy_explicit_text_not_nfc() const;
-  ::censys_definitions::LintResult* mutable_w_ext_cert_policy_explicit_text_not_nfc();
-  ::censys_definitions::LintResult* release_w_ext_cert_policy_explicit_text_not_nfc();
-  void set_allocated_w_ext_cert_policy_explicit_text_not_nfc(::censys_definitions::LintResult* w_ext_cert_policy_explicit_text_not_nfc);
+  const ::zsearch::LintResult& w_ext_cert_policy_explicit_text_not_nfc() const;
+  ::zsearch::LintResult* mutable_w_ext_cert_policy_explicit_text_not_nfc();
+  ::zsearch::LintResult* release_w_ext_cert_policy_explicit_text_not_nfc();
+  void set_allocated_w_ext_cert_policy_explicit_text_not_nfc(::zsearch::LintResult* w_ext_cert_policy_explicit_text_not_nfc);
 
-  // .censys_definitions.LintResult w_ext_cert_policy_explicit_text_not_utf8 = 53;
+  // .zsearch.LintResult w_ext_cert_policy_explicit_text_not_utf8 = 53;
   bool has_w_ext_cert_policy_explicit_text_not_utf8() const;
   void clear_w_ext_cert_policy_explicit_text_not_utf8();
   static const int kWExtCertPolicyExplicitTextNotUtf8FieldNumber = 53;
-  const ::censys_definitions::LintResult& w_ext_cert_policy_explicit_text_not_utf8() const;
-  ::censys_definitions::LintResult* mutable_w_ext_cert_policy_explicit_text_not_utf8();
-  ::censys_definitions::LintResult* release_w_ext_cert_policy_explicit_text_not_utf8();
-  void set_allocated_w_ext_cert_policy_explicit_text_not_utf8(::censys_definitions::LintResult* w_ext_cert_policy_explicit_text_not_utf8);
+  const ::zsearch::LintResult& w_ext_cert_policy_explicit_text_not_utf8() const;
+  ::zsearch::LintResult* mutable_w_ext_cert_policy_explicit_text_not_utf8();
+  ::zsearch::LintResult* release_w_ext_cert_policy_explicit_text_not_utf8();
+  void set_allocated_w_ext_cert_policy_explicit_text_not_utf8(::zsearch::LintResult* w_ext_cert_policy_explicit_text_not_utf8);
 
-  // .censys_definitions.LintResult e_ext_cert_policy_explicit_text_too_long = 54;
+  // .zsearch.LintResult e_ext_cert_policy_explicit_text_too_long = 54;
   bool has_e_ext_cert_policy_explicit_text_too_long() const;
   void clear_e_ext_cert_policy_explicit_text_too_long();
   static const int kEExtCertPolicyExplicitTextTooLongFieldNumber = 54;
-  const ::censys_definitions::LintResult& e_ext_cert_policy_explicit_text_too_long() const;
-  ::censys_definitions::LintResult* mutable_e_ext_cert_policy_explicit_text_too_long();
-  ::censys_definitions::LintResult* release_e_ext_cert_policy_explicit_text_too_long();
-  void set_allocated_e_ext_cert_policy_explicit_text_too_long(::censys_definitions::LintResult* e_ext_cert_policy_explicit_text_too_long);
+  const ::zsearch::LintResult& e_ext_cert_policy_explicit_text_too_long() const;
+  ::zsearch::LintResult* mutable_e_ext_cert_policy_explicit_text_too_long();
+  ::zsearch::LintResult* release_e_ext_cert_policy_explicit_text_too_long();
+  void set_allocated_e_ext_cert_policy_explicit_text_too_long(::zsearch::LintResult* e_ext_cert_policy_explicit_text_too_long);
 
-  // .censys_definitions.LintResult w_ext_crl_distribution_marked_critical = 55;
+  // .zsearch.LintResult w_ext_crl_distribution_marked_critical = 55;
   bool has_w_ext_crl_distribution_marked_critical() const;
   void clear_w_ext_crl_distribution_marked_critical();
   static const int kWExtCrlDistributionMarkedCriticalFieldNumber = 55;
-  const ::censys_definitions::LintResult& w_ext_crl_distribution_marked_critical() const;
-  ::censys_definitions::LintResult* mutable_w_ext_crl_distribution_marked_critical();
-  ::censys_definitions::LintResult* release_w_ext_crl_distribution_marked_critical();
-  void set_allocated_w_ext_crl_distribution_marked_critical(::censys_definitions::LintResult* w_ext_crl_distribution_marked_critical);
+  const ::zsearch::LintResult& w_ext_crl_distribution_marked_critical() const;
+  ::zsearch::LintResult* mutable_w_ext_crl_distribution_marked_critical();
+  ::zsearch::LintResult* release_w_ext_crl_distribution_marked_critical();
+  void set_allocated_w_ext_crl_distribution_marked_critical(::zsearch::LintResult* w_ext_crl_distribution_marked_critical);
 
-  // .censys_definitions.LintResult e_ext_duplicate_extension = 56;
+  // .zsearch.LintResult e_ext_duplicate_extension = 56;
   bool has_e_ext_duplicate_extension() const;
   void clear_e_ext_duplicate_extension();
   static const int kEExtDuplicateExtensionFieldNumber = 56;
-  const ::censys_definitions::LintResult& e_ext_duplicate_extension() const;
-  ::censys_definitions::LintResult* mutable_e_ext_duplicate_extension();
-  ::censys_definitions::LintResult* release_e_ext_duplicate_extension();
-  void set_allocated_e_ext_duplicate_extension(::censys_definitions::LintResult* e_ext_duplicate_extension);
+  const ::zsearch::LintResult& e_ext_duplicate_extension() const;
+  ::zsearch::LintResult* mutable_e_ext_duplicate_extension();
+  ::zsearch::LintResult* release_e_ext_duplicate_extension();
+  void set_allocated_e_ext_duplicate_extension(::zsearch::LintResult* e_ext_duplicate_extension);
 
-  // .censys_definitions.LintResult e_ext_freshest_crl_marked_critical = 57;
+  // .zsearch.LintResult e_ext_freshest_crl_marked_critical = 57;
   bool has_e_ext_freshest_crl_marked_critical() const;
   void clear_e_ext_freshest_crl_marked_critical();
   static const int kEExtFreshestCrlMarkedCriticalFieldNumber = 57;
-  const ::censys_definitions::LintResult& e_ext_freshest_crl_marked_critical() const;
-  ::censys_definitions::LintResult* mutable_e_ext_freshest_crl_marked_critical();
-  ::censys_definitions::LintResult* release_e_ext_freshest_crl_marked_critical();
-  void set_allocated_e_ext_freshest_crl_marked_critical(::censys_definitions::LintResult* e_ext_freshest_crl_marked_critical);
+  const ::zsearch::LintResult& e_ext_freshest_crl_marked_critical() const;
+  ::zsearch::LintResult* mutable_e_ext_freshest_crl_marked_critical();
+  ::zsearch::LintResult* release_e_ext_freshest_crl_marked_critical();
+  void set_allocated_e_ext_freshest_crl_marked_critical(::zsearch::LintResult* e_ext_freshest_crl_marked_critical);
 
-  // .censys_definitions.LintResult w_ext_ian_critical = 58;
+  // .zsearch.LintResult w_ext_ian_critical = 58;
   bool has_w_ext_ian_critical() const;
   void clear_w_ext_ian_critical();
   static const int kWExtIanCriticalFieldNumber = 58;
-  const ::censys_definitions::LintResult& w_ext_ian_critical() const;
-  ::censys_definitions::LintResult* mutable_w_ext_ian_critical();
-  ::censys_definitions::LintResult* release_w_ext_ian_critical();
-  void set_allocated_w_ext_ian_critical(::censys_definitions::LintResult* w_ext_ian_critical);
+  const ::zsearch::LintResult& w_ext_ian_critical() const;
+  ::zsearch::LintResult* mutable_w_ext_ian_critical();
+  ::zsearch::LintResult* release_w_ext_ian_critical();
+  void set_allocated_w_ext_ian_critical(::zsearch::LintResult* w_ext_ian_critical);
 
-  // .censys_definitions.LintResult e_ext_ian_dns_not_ia5_string = 59;
+  // .zsearch.LintResult e_ext_ian_dns_not_ia5_string = 59;
   bool has_e_ext_ian_dns_not_ia5_string() const;
   void clear_e_ext_ian_dns_not_ia5_string();
   static const int kEExtIanDnsNotIa5StringFieldNumber = 59;
-  const ::censys_definitions::LintResult& e_ext_ian_dns_not_ia5_string() const;
-  ::censys_definitions::LintResult* mutable_e_ext_ian_dns_not_ia5_string();
-  ::censys_definitions::LintResult* release_e_ext_ian_dns_not_ia5_string();
-  void set_allocated_e_ext_ian_dns_not_ia5_string(::censys_definitions::LintResult* e_ext_ian_dns_not_ia5_string);
+  const ::zsearch::LintResult& e_ext_ian_dns_not_ia5_string() const;
+  ::zsearch::LintResult* mutable_e_ext_ian_dns_not_ia5_string();
+  ::zsearch::LintResult* release_e_ext_ian_dns_not_ia5_string();
+  void set_allocated_e_ext_ian_dns_not_ia5_string(::zsearch::LintResult* e_ext_ian_dns_not_ia5_string);
 
-  // .censys_definitions.LintResult e_ext_ian_empty_name = 60;
+  // .zsearch.LintResult e_ext_ian_empty_name = 60;
   bool has_e_ext_ian_empty_name() const;
   void clear_e_ext_ian_empty_name();
   static const int kEExtIanEmptyNameFieldNumber = 60;
-  const ::censys_definitions::LintResult& e_ext_ian_empty_name() const;
-  ::censys_definitions::LintResult* mutable_e_ext_ian_empty_name();
-  ::censys_definitions::LintResult* release_e_ext_ian_empty_name();
-  void set_allocated_e_ext_ian_empty_name(::censys_definitions::LintResult* e_ext_ian_empty_name);
+  const ::zsearch::LintResult& e_ext_ian_empty_name() const;
+  ::zsearch::LintResult* mutable_e_ext_ian_empty_name();
+  ::zsearch::LintResult* release_e_ext_ian_empty_name();
+  void set_allocated_e_ext_ian_empty_name(::zsearch::LintResult* e_ext_ian_empty_name);
 
-  // .censys_definitions.LintResult e_ext_ian_no_entries = 61;
+  // .zsearch.LintResult e_ext_ian_no_entries = 61;
   bool has_e_ext_ian_no_entries() const;
   void clear_e_ext_ian_no_entries();
   static const int kEExtIanNoEntriesFieldNumber = 61;
-  const ::censys_definitions::LintResult& e_ext_ian_no_entries() const;
-  ::censys_definitions::LintResult* mutable_e_ext_ian_no_entries();
-  ::censys_definitions::LintResult* release_e_ext_ian_no_entries();
-  void set_allocated_e_ext_ian_no_entries(::censys_definitions::LintResult* e_ext_ian_no_entries);
+  const ::zsearch::LintResult& e_ext_ian_no_entries() const;
+  ::zsearch::LintResult* mutable_e_ext_ian_no_entries();
+  ::zsearch::LintResult* release_e_ext_ian_no_entries();
+  void set_allocated_e_ext_ian_no_entries(::zsearch::LintResult* e_ext_ian_no_entries);
 
-  // .censys_definitions.LintResult e_ext_ian_rfc822_format_invalid = 62;
+  // .zsearch.LintResult e_ext_ian_rfc822_format_invalid = 62;
   bool has_e_ext_ian_rfc822_format_invalid() const;
   void clear_e_ext_ian_rfc822_format_invalid();
   static const int kEExtIanRfc822FormatInvalidFieldNumber = 62;
-  const ::censys_definitions::LintResult& e_ext_ian_rfc822_format_invalid() const;
-  ::censys_definitions::LintResult* mutable_e_ext_ian_rfc822_format_invalid();
-  ::censys_definitions::LintResult* release_e_ext_ian_rfc822_format_invalid();
-  void set_allocated_e_ext_ian_rfc822_format_invalid(::censys_definitions::LintResult* e_ext_ian_rfc822_format_invalid);
+  const ::zsearch::LintResult& e_ext_ian_rfc822_format_invalid() const;
+  ::zsearch::LintResult* mutable_e_ext_ian_rfc822_format_invalid();
+  ::zsearch::LintResult* release_e_ext_ian_rfc822_format_invalid();
+  void set_allocated_e_ext_ian_rfc822_format_invalid(::zsearch::LintResult* e_ext_ian_rfc822_format_invalid);
 
-  // .censys_definitions.LintResult e_ext_ian_space_dns_name = 63;
+  // .zsearch.LintResult e_ext_ian_space_dns_name = 63;
   bool has_e_ext_ian_space_dns_name() const;
   void clear_e_ext_ian_space_dns_name();
   static const int kEExtIanSpaceDnsNameFieldNumber = 63;
-  const ::censys_definitions::LintResult& e_ext_ian_space_dns_name() const;
-  ::censys_definitions::LintResult* mutable_e_ext_ian_space_dns_name();
-  ::censys_definitions::LintResult* release_e_ext_ian_space_dns_name();
-  void set_allocated_e_ext_ian_space_dns_name(::censys_definitions::LintResult* e_ext_ian_space_dns_name);
+  const ::zsearch::LintResult& e_ext_ian_space_dns_name() const;
+  ::zsearch::LintResult* mutable_e_ext_ian_space_dns_name();
+  ::zsearch::LintResult* release_e_ext_ian_space_dns_name();
+  void set_allocated_e_ext_ian_space_dns_name(::zsearch::LintResult* e_ext_ian_space_dns_name);
 
-  // .censys_definitions.LintResult e_ext_ian_uri_format_invalid = 64;
+  // .zsearch.LintResult e_ext_ian_uri_format_invalid = 64;
   bool has_e_ext_ian_uri_format_invalid() const;
   void clear_e_ext_ian_uri_format_invalid();
   static const int kEExtIanUriFormatInvalidFieldNumber = 64;
-  const ::censys_definitions::LintResult& e_ext_ian_uri_format_invalid() const;
-  ::censys_definitions::LintResult* mutable_e_ext_ian_uri_format_invalid();
-  ::censys_definitions::LintResult* release_e_ext_ian_uri_format_invalid();
-  void set_allocated_e_ext_ian_uri_format_invalid(::censys_definitions::LintResult* e_ext_ian_uri_format_invalid);
+  const ::zsearch::LintResult& e_ext_ian_uri_format_invalid() const;
+  ::zsearch::LintResult* mutable_e_ext_ian_uri_format_invalid();
+  ::zsearch::LintResult* release_e_ext_ian_uri_format_invalid();
+  void set_allocated_e_ext_ian_uri_format_invalid(::zsearch::LintResult* e_ext_ian_uri_format_invalid);
 
-  // .censys_definitions.LintResult e_ext_ian_uri_host_not_fqdn_or_ip = 65;
+  // .zsearch.LintResult e_ext_ian_uri_host_not_fqdn_or_ip = 65;
   bool has_e_ext_ian_uri_host_not_fqdn_or_ip() const;
   void clear_e_ext_ian_uri_host_not_fqdn_or_ip();
   static const int kEExtIanUriHostNotFqdnOrIpFieldNumber = 65;
-  const ::censys_definitions::LintResult& e_ext_ian_uri_host_not_fqdn_or_ip() const;
-  ::censys_definitions::LintResult* mutable_e_ext_ian_uri_host_not_fqdn_or_ip();
-  ::censys_definitions::LintResult* release_e_ext_ian_uri_host_not_fqdn_or_ip();
-  void set_allocated_e_ext_ian_uri_host_not_fqdn_or_ip(::censys_definitions::LintResult* e_ext_ian_uri_host_not_fqdn_or_ip);
+  const ::zsearch::LintResult& e_ext_ian_uri_host_not_fqdn_or_ip() const;
+  ::zsearch::LintResult* mutable_e_ext_ian_uri_host_not_fqdn_or_ip();
+  ::zsearch::LintResult* release_e_ext_ian_uri_host_not_fqdn_or_ip();
+  void set_allocated_e_ext_ian_uri_host_not_fqdn_or_ip(::zsearch::LintResult* e_ext_ian_uri_host_not_fqdn_or_ip);
 
-  // .censys_definitions.LintResult e_ext_ian_uri_not_ia5 = 66;
+  // .zsearch.LintResult e_ext_ian_uri_not_ia5 = 66;
   bool has_e_ext_ian_uri_not_ia5() const;
   void clear_e_ext_ian_uri_not_ia5();
   static const int kEExtIanUriNotIa5FieldNumber = 66;
-  const ::censys_definitions::LintResult& e_ext_ian_uri_not_ia5() const;
-  ::censys_definitions::LintResult* mutable_e_ext_ian_uri_not_ia5();
-  ::censys_definitions::LintResult* release_e_ext_ian_uri_not_ia5();
-  void set_allocated_e_ext_ian_uri_not_ia5(::censys_definitions::LintResult* e_ext_ian_uri_not_ia5);
+  const ::zsearch::LintResult& e_ext_ian_uri_not_ia5() const;
+  ::zsearch::LintResult* mutable_e_ext_ian_uri_not_ia5();
+  ::zsearch::LintResult* release_e_ext_ian_uri_not_ia5();
+  void set_allocated_e_ext_ian_uri_not_ia5(::zsearch::LintResult* e_ext_ian_uri_not_ia5);
 
-  // .censys_definitions.LintResult e_ext_ian_uri_relative = 67;
+  // .zsearch.LintResult e_ext_ian_uri_relative = 67;
   bool has_e_ext_ian_uri_relative() const;
   void clear_e_ext_ian_uri_relative();
   static const int kEExtIanUriRelativeFieldNumber = 67;
-  const ::censys_definitions::LintResult& e_ext_ian_uri_relative() const;
-  ::censys_definitions::LintResult* mutable_e_ext_ian_uri_relative();
-  ::censys_definitions::LintResult* release_e_ext_ian_uri_relative();
-  void set_allocated_e_ext_ian_uri_relative(::censys_definitions::LintResult* e_ext_ian_uri_relative);
+  const ::zsearch::LintResult& e_ext_ian_uri_relative() const;
+  ::zsearch::LintResult* mutable_e_ext_ian_uri_relative();
+  ::zsearch::LintResult* release_e_ext_ian_uri_relative();
+  void set_allocated_e_ext_ian_uri_relative(::zsearch::LintResult* e_ext_ian_uri_relative);
 
-  // .censys_definitions.LintResult e_ext_key_usage_cert_sign_without_ca = 68;
+  // .zsearch.LintResult e_ext_key_usage_cert_sign_without_ca = 68;
   bool has_e_ext_key_usage_cert_sign_without_ca() const;
   void clear_e_ext_key_usage_cert_sign_without_ca();
   static const int kEExtKeyUsageCertSignWithoutCaFieldNumber = 68;
-  const ::censys_definitions::LintResult& e_ext_key_usage_cert_sign_without_ca() const;
-  ::censys_definitions::LintResult* mutable_e_ext_key_usage_cert_sign_without_ca();
-  ::censys_definitions::LintResult* release_e_ext_key_usage_cert_sign_without_ca();
-  void set_allocated_e_ext_key_usage_cert_sign_without_ca(::censys_definitions::LintResult* e_ext_key_usage_cert_sign_without_ca);
+  const ::zsearch::LintResult& e_ext_key_usage_cert_sign_without_ca() const;
+  ::zsearch::LintResult* mutable_e_ext_key_usage_cert_sign_without_ca();
+  ::zsearch::LintResult* release_e_ext_key_usage_cert_sign_without_ca();
+  void set_allocated_e_ext_key_usage_cert_sign_without_ca(::zsearch::LintResult* e_ext_key_usage_cert_sign_without_ca);
 
-  // .censys_definitions.LintResult w_ext_key_usage_not_critical = 69;
+  // .zsearch.LintResult w_ext_key_usage_not_critical = 69;
   bool has_w_ext_key_usage_not_critical() const;
   void clear_w_ext_key_usage_not_critical();
   static const int kWExtKeyUsageNotCriticalFieldNumber = 69;
-  const ::censys_definitions::LintResult& w_ext_key_usage_not_critical() const;
-  ::censys_definitions::LintResult* mutable_w_ext_key_usage_not_critical();
-  ::censys_definitions::LintResult* release_w_ext_key_usage_not_critical();
-  void set_allocated_w_ext_key_usage_not_critical(::censys_definitions::LintResult* w_ext_key_usage_not_critical);
+  const ::zsearch::LintResult& w_ext_key_usage_not_critical() const;
+  ::zsearch::LintResult* mutable_w_ext_key_usage_not_critical();
+  ::zsearch::LintResult* release_w_ext_key_usage_not_critical();
+  void set_allocated_w_ext_key_usage_not_critical(::zsearch::LintResult* w_ext_key_usage_not_critical);
 
-  // .censys_definitions.LintResult e_ext_key_usage_without_bits = 70;
+  // .zsearch.LintResult e_ext_key_usage_without_bits = 70;
   bool has_e_ext_key_usage_without_bits() const;
   void clear_e_ext_key_usage_without_bits();
   static const int kEExtKeyUsageWithoutBitsFieldNumber = 70;
-  const ::censys_definitions::LintResult& e_ext_key_usage_without_bits() const;
-  ::censys_definitions::LintResult* mutable_e_ext_key_usage_without_bits();
-  ::censys_definitions::LintResult* release_e_ext_key_usage_without_bits();
-  void set_allocated_e_ext_key_usage_without_bits(::censys_definitions::LintResult* e_ext_key_usage_without_bits);
+  const ::zsearch::LintResult& e_ext_key_usage_without_bits() const;
+  ::zsearch::LintResult* mutable_e_ext_key_usage_without_bits();
+  ::zsearch::LintResult* release_e_ext_key_usage_without_bits();
+  void set_allocated_e_ext_key_usage_without_bits(::zsearch::LintResult* e_ext_key_usage_without_bits);
 
-  // .censys_definitions.LintResult e_ext_name_constraints_not_critical = 71;
+  // .zsearch.LintResult e_ext_name_constraints_not_critical = 71;
   bool has_e_ext_name_constraints_not_critical() const;
   void clear_e_ext_name_constraints_not_critical();
   static const int kEExtNameConstraintsNotCriticalFieldNumber = 71;
-  const ::censys_definitions::LintResult& e_ext_name_constraints_not_critical() const;
-  ::censys_definitions::LintResult* mutable_e_ext_name_constraints_not_critical();
-  ::censys_definitions::LintResult* release_e_ext_name_constraints_not_critical();
-  void set_allocated_e_ext_name_constraints_not_critical(::censys_definitions::LintResult* e_ext_name_constraints_not_critical);
+  const ::zsearch::LintResult& e_ext_name_constraints_not_critical() const;
+  ::zsearch::LintResult* mutable_e_ext_name_constraints_not_critical();
+  ::zsearch::LintResult* release_e_ext_name_constraints_not_critical();
+  void set_allocated_e_ext_name_constraints_not_critical(::zsearch::LintResult* e_ext_name_constraints_not_critical);
 
-  // .censys_definitions.LintResult e_ext_name_constraints_not_in_ca = 72;
+  // .zsearch.LintResult e_ext_name_constraints_not_in_ca = 72;
   bool has_e_ext_name_constraints_not_in_ca() const;
   void clear_e_ext_name_constraints_not_in_ca();
   static const int kEExtNameConstraintsNotInCaFieldNumber = 72;
-  const ::censys_definitions::LintResult& e_ext_name_constraints_not_in_ca() const;
-  ::censys_definitions::LintResult* mutable_e_ext_name_constraints_not_in_ca();
-  ::censys_definitions::LintResult* release_e_ext_name_constraints_not_in_ca();
-  void set_allocated_e_ext_name_constraints_not_in_ca(::censys_definitions::LintResult* e_ext_name_constraints_not_in_ca);
+  const ::zsearch::LintResult& e_ext_name_constraints_not_in_ca() const;
+  ::zsearch::LintResult* mutable_e_ext_name_constraints_not_in_ca();
+  ::zsearch::LintResult* release_e_ext_name_constraints_not_in_ca();
+  void set_allocated_e_ext_name_constraints_not_in_ca(::zsearch::LintResult* e_ext_name_constraints_not_in_ca);
 
-  // .censys_definitions.LintResult e_ext_policy_constraints_empty = 73;
+  // .zsearch.LintResult e_ext_policy_constraints_empty = 73;
   bool has_e_ext_policy_constraints_empty() const;
   void clear_e_ext_policy_constraints_empty();
   static const int kEExtPolicyConstraintsEmptyFieldNumber = 73;
-  const ::censys_definitions::LintResult& e_ext_policy_constraints_empty() const;
-  ::censys_definitions::LintResult* mutable_e_ext_policy_constraints_empty();
-  ::censys_definitions::LintResult* release_e_ext_policy_constraints_empty();
-  void set_allocated_e_ext_policy_constraints_empty(::censys_definitions::LintResult* e_ext_policy_constraints_empty);
+  const ::zsearch::LintResult& e_ext_policy_constraints_empty() const;
+  ::zsearch::LintResult* mutable_e_ext_policy_constraints_empty();
+  ::zsearch::LintResult* release_e_ext_policy_constraints_empty();
+  void set_allocated_e_ext_policy_constraints_empty(::zsearch::LintResult* e_ext_policy_constraints_empty);
 
-  // .censys_definitions.LintResult e_ext_policy_constraints_not_critical = 74;
+  // .zsearch.LintResult e_ext_policy_constraints_not_critical = 74;
   bool has_e_ext_policy_constraints_not_critical() const;
   void clear_e_ext_policy_constraints_not_critical();
   static const int kEExtPolicyConstraintsNotCriticalFieldNumber = 74;
-  const ::censys_definitions::LintResult& e_ext_policy_constraints_not_critical() const;
-  ::censys_definitions::LintResult* mutable_e_ext_policy_constraints_not_critical();
-  ::censys_definitions::LintResult* release_e_ext_policy_constraints_not_critical();
-  void set_allocated_e_ext_policy_constraints_not_critical(::censys_definitions::LintResult* e_ext_policy_constraints_not_critical);
+  const ::zsearch::LintResult& e_ext_policy_constraints_not_critical() const;
+  ::zsearch::LintResult* mutable_e_ext_policy_constraints_not_critical();
+  ::zsearch::LintResult* release_e_ext_policy_constraints_not_critical();
+  void set_allocated_e_ext_policy_constraints_not_critical(::zsearch::LintResult* e_ext_policy_constraints_not_critical);
 
-  // .censys_definitions.LintResult e_ext_policy_map_any_policy = 75;
+  // .zsearch.LintResult e_ext_policy_map_any_policy = 75;
   bool has_e_ext_policy_map_any_policy() const;
   void clear_e_ext_policy_map_any_policy();
   static const int kEExtPolicyMapAnyPolicyFieldNumber = 75;
-  const ::censys_definitions::LintResult& e_ext_policy_map_any_policy() const;
-  ::censys_definitions::LintResult* mutable_e_ext_policy_map_any_policy();
-  ::censys_definitions::LintResult* release_e_ext_policy_map_any_policy();
-  void set_allocated_e_ext_policy_map_any_policy(::censys_definitions::LintResult* e_ext_policy_map_any_policy);
+  const ::zsearch::LintResult& e_ext_policy_map_any_policy() const;
+  ::zsearch::LintResult* mutable_e_ext_policy_map_any_policy();
+  ::zsearch::LintResult* release_e_ext_policy_map_any_policy();
+  void set_allocated_e_ext_policy_map_any_policy(::zsearch::LintResult* e_ext_policy_map_any_policy);
 
-  // .censys_definitions.LintResult w_ext_policy_map_not_critical = 76;
+  // .zsearch.LintResult w_ext_policy_map_not_critical = 76;
   bool has_w_ext_policy_map_not_critical() const;
   void clear_w_ext_policy_map_not_critical();
   static const int kWExtPolicyMapNotCriticalFieldNumber = 76;
-  const ::censys_definitions::LintResult& w_ext_policy_map_not_critical() const;
-  ::censys_definitions::LintResult* mutable_w_ext_policy_map_not_critical();
-  ::censys_definitions::LintResult* release_w_ext_policy_map_not_critical();
-  void set_allocated_w_ext_policy_map_not_critical(::censys_definitions::LintResult* w_ext_policy_map_not_critical);
+  const ::zsearch::LintResult& w_ext_policy_map_not_critical() const;
+  ::zsearch::LintResult* mutable_w_ext_policy_map_not_critical();
+  ::zsearch::LintResult* release_w_ext_policy_map_not_critical();
+  void set_allocated_w_ext_policy_map_not_critical(::zsearch::LintResult* w_ext_policy_map_not_critical);
 
-  // .censys_definitions.LintResult w_ext_policy_map_not_in_cert_policy = 77;
+  // .zsearch.LintResult w_ext_policy_map_not_in_cert_policy = 77;
   bool has_w_ext_policy_map_not_in_cert_policy() const;
   void clear_w_ext_policy_map_not_in_cert_policy();
   static const int kWExtPolicyMapNotInCertPolicyFieldNumber = 77;
-  const ::censys_definitions::LintResult& w_ext_policy_map_not_in_cert_policy() const;
-  ::censys_definitions::LintResult* mutable_w_ext_policy_map_not_in_cert_policy();
-  ::censys_definitions::LintResult* release_w_ext_policy_map_not_in_cert_policy();
-  void set_allocated_w_ext_policy_map_not_in_cert_policy(::censys_definitions::LintResult* w_ext_policy_map_not_in_cert_policy);
+  const ::zsearch::LintResult& w_ext_policy_map_not_in_cert_policy() const;
+  ::zsearch::LintResult* mutable_w_ext_policy_map_not_in_cert_policy();
+  ::zsearch::LintResult* release_w_ext_policy_map_not_in_cert_policy();
+  void set_allocated_w_ext_policy_map_not_in_cert_policy(::zsearch::LintResult* w_ext_policy_map_not_in_cert_policy);
 
-  // .censys_definitions.LintResult e_ext_san_contains_reserved_ip = 78;
+  // .zsearch.LintResult e_ext_san_contains_reserved_ip = 78;
   bool has_e_ext_san_contains_reserved_ip() const;
   void clear_e_ext_san_contains_reserved_ip();
   static const int kEExtSanContainsReservedIpFieldNumber = 78;
-  const ::censys_definitions::LintResult& e_ext_san_contains_reserved_ip() const;
-  ::censys_definitions::LintResult* mutable_e_ext_san_contains_reserved_ip();
-  ::censys_definitions::LintResult* release_e_ext_san_contains_reserved_ip();
-  void set_allocated_e_ext_san_contains_reserved_ip(::censys_definitions::LintResult* e_ext_san_contains_reserved_ip);
+  const ::zsearch::LintResult& e_ext_san_contains_reserved_ip() const;
+  ::zsearch::LintResult* mutable_e_ext_san_contains_reserved_ip();
+  ::zsearch::LintResult* release_e_ext_san_contains_reserved_ip();
+  void set_allocated_e_ext_san_contains_reserved_ip(::zsearch::LintResult* e_ext_san_contains_reserved_ip);
 
-  // .censys_definitions.LintResult w_ext_san_critical_with_subject_dn = 79;
+  // .zsearch.LintResult w_ext_san_critical_with_subject_dn = 79;
   bool has_w_ext_san_critical_with_subject_dn() const;
   void clear_w_ext_san_critical_with_subject_dn();
   static const int kWExtSanCriticalWithSubjectDnFieldNumber = 79;
-  const ::censys_definitions::LintResult& w_ext_san_critical_with_subject_dn() const;
-  ::censys_definitions::LintResult* mutable_w_ext_san_critical_with_subject_dn();
-  ::censys_definitions::LintResult* release_w_ext_san_critical_with_subject_dn();
-  void set_allocated_w_ext_san_critical_with_subject_dn(::censys_definitions::LintResult* w_ext_san_critical_with_subject_dn);
+  const ::zsearch::LintResult& w_ext_san_critical_with_subject_dn() const;
+  ::zsearch::LintResult* mutable_w_ext_san_critical_with_subject_dn();
+  ::zsearch::LintResult* release_w_ext_san_critical_with_subject_dn();
+  void set_allocated_w_ext_san_critical_with_subject_dn(::zsearch::LintResult* w_ext_san_critical_with_subject_dn);
 
-  // .censys_definitions.LintResult e_ext_san_directory_name_present = 80;
+  // .zsearch.LintResult e_ext_san_directory_name_present = 80;
   bool has_e_ext_san_directory_name_present() const;
   void clear_e_ext_san_directory_name_present();
   static const int kEExtSanDirectoryNamePresentFieldNumber = 80;
-  const ::censys_definitions::LintResult& e_ext_san_directory_name_present() const;
-  ::censys_definitions::LintResult* mutable_e_ext_san_directory_name_present();
-  ::censys_definitions::LintResult* release_e_ext_san_directory_name_present();
-  void set_allocated_e_ext_san_directory_name_present(::censys_definitions::LintResult* e_ext_san_directory_name_present);
+  const ::zsearch::LintResult& e_ext_san_directory_name_present() const;
+  ::zsearch::LintResult* mutable_e_ext_san_directory_name_present();
+  ::zsearch::LintResult* release_e_ext_san_directory_name_present();
+  void set_allocated_e_ext_san_directory_name_present(::zsearch::LintResult* e_ext_san_directory_name_present);
 
-  // .censys_definitions.LintResult e_ext_san_dns_not_ia5_string = 81;
+  // .zsearch.LintResult e_ext_san_dns_not_ia5_string = 81;
   bool has_e_ext_san_dns_not_ia5_string() const;
   void clear_e_ext_san_dns_not_ia5_string();
   static const int kEExtSanDnsNotIa5StringFieldNumber = 81;
-  const ::censys_definitions::LintResult& e_ext_san_dns_not_ia5_string() const;
-  ::censys_definitions::LintResult* mutable_e_ext_san_dns_not_ia5_string();
-  ::censys_definitions::LintResult* release_e_ext_san_dns_not_ia5_string();
-  void set_allocated_e_ext_san_dns_not_ia5_string(::censys_definitions::LintResult* e_ext_san_dns_not_ia5_string);
+  const ::zsearch::LintResult& e_ext_san_dns_not_ia5_string() const;
+  ::zsearch::LintResult* mutable_e_ext_san_dns_not_ia5_string();
+  ::zsearch::LintResult* release_e_ext_san_dns_not_ia5_string();
+  void set_allocated_e_ext_san_dns_not_ia5_string(::zsearch::LintResult* e_ext_san_dns_not_ia5_string);
 
-  // .censys_definitions.LintResult e_ext_san_dns_syntax_incorrect = 82;
+  // .zsearch.LintResult e_ext_san_dns_syntax_incorrect = 82;
   bool has_e_ext_san_dns_syntax_incorrect() const;
   void clear_e_ext_san_dns_syntax_incorrect();
   static const int kEExtSanDnsSyntaxIncorrectFieldNumber = 82;
-  const ::censys_definitions::LintResult& e_ext_san_dns_syntax_incorrect() const;
-  ::censys_definitions::LintResult* mutable_e_ext_san_dns_syntax_incorrect();
-  ::censys_definitions::LintResult* release_e_ext_san_dns_syntax_incorrect();
-  void set_allocated_e_ext_san_dns_syntax_incorrect(::censys_definitions::LintResult* e_ext_san_dns_syntax_incorrect);
+  const ::zsearch::LintResult& e_ext_san_dns_syntax_incorrect() const;
+  ::zsearch::LintResult* mutable_e_ext_san_dns_syntax_incorrect();
+  ::zsearch::LintResult* release_e_ext_san_dns_syntax_incorrect();
+  void set_allocated_e_ext_san_dns_syntax_incorrect(::zsearch::LintResult* e_ext_san_dns_syntax_incorrect);
 
-  // .censys_definitions.LintResult e_ext_san_dnsname_not_fqdn = 83;
+  // .zsearch.LintResult e_ext_san_dnsname_not_fqdn = 83;
   bool has_e_ext_san_dnsname_not_fqdn() const;
   void clear_e_ext_san_dnsname_not_fqdn();
   static const int kEExtSanDnsnameNotFqdnFieldNumber = 83;
-  const ::censys_definitions::LintResult& e_ext_san_dnsname_not_fqdn() const;
-  ::censys_definitions::LintResult* mutable_e_ext_san_dnsname_not_fqdn();
-  ::censys_definitions::LintResult* release_e_ext_san_dnsname_not_fqdn();
-  void set_allocated_e_ext_san_dnsname_not_fqdn(::censys_definitions::LintResult* e_ext_san_dnsname_not_fqdn);
+  const ::zsearch::LintResult& e_ext_san_dnsname_not_fqdn() const;
+  ::zsearch::LintResult* mutable_e_ext_san_dnsname_not_fqdn();
+  ::zsearch::LintResult* release_e_ext_san_dnsname_not_fqdn();
+  void set_allocated_e_ext_san_dnsname_not_fqdn(::zsearch::LintResult* e_ext_san_dnsname_not_fqdn);
 
-  // .censys_definitions.LintResult e_ext_san_edi_party_name_present = 84;
+  // .zsearch.LintResult e_ext_san_edi_party_name_present = 84;
   bool has_e_ext_san_edi_party_name_present() const;
   void clear_e_ext_san_edi_party_name_present();
   static const int kEExtSanEdiPartyNamePresentFieldNumber = 84;
-  const ::censys_definitions::LintResult& e_ext_san_edi_party_name_present() const;
-  ::censys_definitions::LintResult* mutable_e_ext_san_edi_party_name_present();
-  ::censys_definitions::LintResult* release_e_ext_san_edi_party_name_present();
-  void set_allocated_e_ext_san_edi_party_name_present(::censys_definitions::LintResult* e_ext_san_edi_party_name_present);
+  const ::zsearch::LintResult& e_ext_san_edi_party_name_present() const;
+  ::zsearch::LintResult* mutable_e_ext_san_edi_party_name_present();
+  ::zsearch::LintResult* release_e_ext_san_edi_party_name_present();
+  void set_allocated_e_ext_san_edi_party_name_present(::zsearch::LintResult* e_ext_san_edi_party_name_present);
 
-  // .censys_definitions.LintResult e_ext_san_empty_name = 85;
+  // .zsearch.LintResult e_ext_san_empty_name = 85;
   bool has_e_ext_san_empty_name() const;
   void clear_e_ext_san_empty_name();
   static const int kEExtSanEmptyNameFieldNumber = 85;
-  const ::censys_definitions::LintResult& e_ext_san_empty_name() const;
-  ::censys_definitions::LintResult* mutable_e_ext_san_empty_name();
-  ::censys_definitions::LintResult* release_e_ext_san_empty_name();
-  void set_allocated_e_ext_san_empty_name(::censys_definitions::LintResult* e_ext_san_empty_name);
+  const ::zsearch::LintResult& e_ext_san_empty_name() const;
+  ::zsearch::LintResult* mutable_e_ext_san_empty_name();
+  ::zsearch::LintResult* release_e_ext_san_empty_name();
+  void set_allocated_e_ext_san_empty_name(::zsearch::LintResult* e_ext_san_empty_name);
 
-  // .censys_definitions.LintResult e_ext_san_missing = 86;
+  // .zsearch.LintResult e_ext_san_missing = 86;
   bool has_e_ext_san_missing() const;
   void clear_e_ext_san_missing();
   static const int kEExtSanMissingFieldNumber = 86;
-  const ::censys_definitions::LintResult& e_ext_san_missing() const;
-  ::censys_definitions::LintResult* mutable_e_ext_san_missing();
-  ::censys_definitions::LintResult* release_e_ext_san_missing();
-  void set_allocated_e_ext_san_missing(::censys_definitions::LintResult* e_ext_san_missing);
+  const ::zsearch::LintResult& e_ext_san_missing() const;
+  ::zsearch::LintResult* mutable_e_ext_san_missing();
+  ::zsearch::LintResult* release_e_ext_san_missing();
+  void set_allocated_e_ext_san_missing(::zsearch::LintResult* e_ext_san_missing);
 
-  // .censys_definitions.LintResult e_ext_san_no_entries = 87;
+  // .zsearch.LintResult e_ext_san_no_entries = 87;
   bool has_e_ext_san_no_entries() const;
   void clear_e_ext_san_no_entries();
   static const int kEExtSanNoEntriesFieldNumber = 87;
-  const ::censys_definitions::LintResult& e_ext_san_no_entries() const;
-  ::censys_definitions::LintResult* mutable_e_ext_san_no_entries();
-  ::censys_definitions::LintResult* release_e_ext_san_no_entries();
-  void set_allocated_e_ext_san_no_entries(::censys_definitions::LintResult* e_ext_san_no_entries);
+  const ::zsearch::LintResult& e_ext_san_no_entries() const;
+  ::zsearch::LintResult* mutable_e_ext_san_no_entries();
+  ::zsearch::LintResult* release_e_ext_san_no_entries();
+  void set_allocated_e_ext_san_no_entries(::zsearch::LintResult* e_ext_san_no_entries);
 
-  // .censys_definitions.LintResult e_ext_san_not_critical_without_subject = 88;
+  // .zsearch.LintResult e_ext_san_not_critical_without_subject = 88;
   bool has_e_ext_san_not_critical_without_subject() const;
   void clear_e_ext_san_not_critical_without_subject();
   static const int kEExtSanNotCriticalWithoutSubjectFieldNumber = 88;
-  const ::censys_definitions::LintResult& e_ext_san_not_critical_without_subject() const;
-  ::censys_definitions::LintResult* mutable_e_ext_san_not_critical_without_subject();
-  ::censys_definitions::LintResult* release_e_ext_san_not_critical_without_subject();
-  void set_allocated_e_ext_san_not_critical_without_subject(::censys_definitions::LintResult* e_ext_san_not_critical_without_subject);
+  const ::zsearch::LintResult& e_ext_san_not_critical_without_subject() const;
+  ::zsearch::LintResult* mutable_e_ext_san_not_critical_without_subject();
+  ::zsearch::LintResult* release_e_ext_san_not_critical_without_subject();
+  void set_allocated_e_ext_san_not_critical_without_subject(::zsearch::LintResult* e_ext_san_not_critical_without_subject);
 
-  // .censys_definitions.LintResult e_ext_san_other_name_present = 89;
+  // .zsearch.LintResult e_ext_san_other_name_present = 89;
   bool has_e_ext_san_other_name_present() const;
   void clear_e_ext_san_other_name_present();
   static const int kEExtSanOtherNamePresentFieldNumber = 89;
-  const ::censys_definitions::LintResult& e_ext_san_other_name_present() const;
-  ::censys_definitions::LintResult* mutable_e_ext_san_other_name_present();
-  ::censys_definitions::LintResult* release_e_ext_san_other_name_present();
-  void set_allocated_e_ext_san_other_name_present(::censys_definitions::LintResult* e_ext_san_other_name_present);
+  const ::zsearch::LintResult& e_ext_san_other_name_present() const;
+  ::zsearch::LintResult* mutable_e_ext_san_other_name_present();
+  ::zsearch::LintResult* release_e_ext_san_other_name_present();
+  void set_allocated_e_ext_san_other_name_present(::zsearch::LintResult* e_ext_san_other_name_present);
 
-  // .censys_definitions.LintResult e_ext_san_registered_id_present = 90;
+  // .zsearch.LintResult e_ext_san_registered_id_present = 90;
   bool has_e_ext_san_registered_id_present() const;
   void clear_e_ext_san_registered_id_present();
   static const int kEExtSanRegisteredIdPresentFieldNumber = 90;
-  const ::censys_definitions::LintResult& e_ext_san_registered_id_present() const;
-  ::censys_definitions::LintResult* mutable_e_ext_san_registered_id_present();
-  ::censys_definitions::LintResult* release_e_ext_san_registered_id_present();
-  void set_allocated_e_ext_san_registered_id_present(::censys_definitions::LintResult* e_ext_san_registered_id_present);
+  const ::zsearch::LintResult& e_ext_san_registered_id_present() const;
+  ::zsearch::LintResult* mutable_e_ext_san_registered_id_present();
+  ::zsearch::LintResult* release_e_ext_san_registered_id_present();
+  void set_allocated_e_ext_san_registered_id_present(::zsearch::LintResult* e_ext_san_registered_id_present);
 
-  // .censys_definitions.LintResult e_ext_san_rfc822_format_invalid = 91;
+  // .zsearch.LintResult e_ext_san_rfc822_format_invalid = 91;
   bool has_e_ext_san_rfc822_format_invalid() const;
   void clear_e_ext_san_rfc822_format_invalid();
   static const int kEExtSanRfc822FormatInvalidFieldNumber = 91;
-  const ::censys_definitions::LintResult& e_ext_san_rfc822_format_invalid() const;
-  ::censys_definitions::LintResult* mutable_e_ext_san_rfc822_format_invalid();
-  ::censys_definitions::LintResult* release_e_ext_san_rfc822_format_invalid();
-  void set_allocated_e_ext_san_rfc822_format_invalid(::censys_definitions::LintResult* e_ext_san_rfc822_format_invalid);
+  const ::zsearch::LintResult& e_ext_san_rfc822_format_invalid() const;
+  ::zsearch::LintResult* mutable_e_ext_san_rfc822_format_invalid();
+  ::zsearch::LintResult* release_e_ext_san_rfc822_format_invalid();
+  void set_allocated_e_ext_san_rfc822_format_invalid(::zsearch::LintResult* e_ext_san_rfc822_format_invalid);
 
-  // .censys_definitions.LintResult e_ext_san_rfc822_name_present = 92;
+  // .zsearch.LintResult e_ext_san_rfc822_name_present = 92;
   bool has_e_ext_san_rfc822_name_present() const;
   void clear_e_ext_san_rfc822_name_present();
   static const int kEExtSanRfc822NamePresentFieldNumber = 92;
-  const ::censys_definitions::LintResult& e_ext_san_rfc822_name_present() const;
-  ::censys_definitions::LintResult* mutable_e_ext_san_rfc822_name_present();
-  ::censys_definitions::LintResult* release_e_ext_san_rfc822_name_present();
-  void set_allocated_e_ext_san_rfc822_name_present(::censys_definitions::LintResult* e_ext_san_rfc822_name_present);
+  const ::zsearch::LintResult& e_ext_san_rfc822_name_present() const;
+  ::zsearch::LintResult* mutable_e_ext_san_rfc822_name_present();
+  ::zsearch::LintResult* release_e_ext_san_rfc822_name_present();
+  void set_allocated_e_ext_san_rfc822_name_present(::zsearch::LintResult* e_ext_san_rfc822_name_present);
 
-  // .censys_definitions.LintResult e_ext_san_space_dns_name = 93;
+  // .zsearch.LintResult e_ext_san_space_dns_name = 93;
   bool has_e_ext_san_space_dns_name() const;
   void clear_e_ext_san_space_dns_name();
   static const int kEExtSanSpaceDnsNameFieldNumber = 93;
-  const ::censys_definitions::LintResult& e_ext_san_space_dns_name() const;
-  ::censys_definitions::LintResult* mutable_e_ext_san_space_dns_name();
-  ::censys_definitions::LintResult* release_e_ext_san_space_dns_name();
-  void set_allocated_e_ext_san_space_dns_name(::censys_definitions::LintResult* e_ext_san_space_dns_name);
+  const ::zsearch::LintResult& e_ext_san_space_dns_name() const;
+  ::zsearch::LintResult* mutable_e_ext_san_space_dns_name();
+  ::zsearch::LintResult* release_e_ext_san_space_dns_name();
+  void set_allocated_e_ext_san_space_dns_name(::zsearch::LintResult* e_ext_san_space_dns_name);
 
-  // .censys_definitions.LintResult e_ext_san_uniform_resource_identifier_present = 94;
+  // .zsearch.LintResult e_ext_san_uniform_resource_identifier_present = 94;
   bool has_e_ext_san_uniform_resource_identifier_present() const;
   void clear_e_ext_san_uniform_resource_identifier_present();
   static const int kEExtSanUniformResourceIdentifierPresentFieldNumber = 94;
-  const ::censys_definitions::LintResult& e_ext_san_uniform_resource_identifier_present() const;
-  ::censys_definitions::LintResult* mutable_e_ext_san_uniform_resource_identifier_present();
-  ::censys_definitions::LintResult* release_e_ext_san_uniform_resource_identifier_present();
-  void set_allocated_e_ext_san_uniform_resource_identifier_present(::censys_definitions::LintResult* e_ext_san_uniform_resource_identifier_present);
+  const ::zsearch::LintResult& e_ext_san_uniform_resource_identifier_present() const;
+  ::zsearch::LintResult* mutable_e_ext_san_uniform_resource_identifier_present();
+  ::zsearch::LintResult* release_e_ext_san_uniform_resource_identifier_present();
+  void set_allocated_e_ext_san_uniform_resource_identifier_present(::zsearch::LintResult* e_ext_san_uniform_resource_identifier_present);
 
-  // .censys_definitions.LintResult e_ext_san_uri_format_invalid = 95;
+  // .zsearch.LintResult e_ext_san_uri_format_invalid = 95;
   bool has_e_ext_san_uri_format_invalid() const;
   void clear_e_ext_san_uri_format_invalid();
   static const int kEExtSanUriFormatInvalidFieldNumber = 95;
-  const ::censys_definitions::LintResult& e_ext_san_uri_format_invalid() const;
-  ::censys_definitions::LintResult* mutable_e_ext_san_uri_format_invalid();
-  ::censys_definitions::LintResult* release_e_ext_san_uri_format_invalid();
-  void set_allocated_e_ext_san_uri_format_invalid(::censys_definitions::LintResult* e_ext_san_uri_format_invalid);
+  const ::zsearch::LintResult& e_ext_san_uri_format_invalid() const;
+  ::zsearch::LintResult* mutable_e_ext_san_uri_format_invalid();
+  ::zsearch::LintResult* release_e_ext_san_uri_format_invalid();
+  void set_allocated_e_ext_san_uri_format_invalid(::zsearch::LintResult* e_ext_san_uri_format_invalid);
 
-  // .censys_definitions.LintResult e_ext_san_uri_host_not_fqdn_or_ip = 96;
+  // .zsearch.LintResult e_ext_san_uri_host_not_fqdn_or_ip = 96;
   bool has_e_ext_san_uri_host_not_fqdn_or_ip() const;
   void clear_e_ext_san_uri_host_not_fqdn_or_ip();
   static const int kEExtSanUriHostNotFqdnOrIpFieldNumber = 96;
-  const ::censys_definitions::LintResult& e_ext_san_uri_host_not_fqdn_or_ip() const;
-  ::censys_definitions::LintResult* mutable_e_ext_san_uri_host_not_fqdn_or_ip();
-  ::censys_definitions::LintResult* release_e_ext_san_uri_host_not_fqdn_or_ip();
-  void set_allocated_e_ext_san_uri_host_not_fqdn_or_ip(::censys_definitions::LintResult* e_ext_san_uri_host_not_fqdn_or_ip);
+  const ::zsearch::LintResult& e_ext_san_uri_host_not_fqdn_or_ip() const;
+  ::zsearch::LintResult* mutable_e_ext_san_uri_host_not_fqdn_or_ip();
+  ::zsearch::LintResult* release_e_ext_san_uri_host_not_fqdn_or_ip();
+  void set_allocated_e_ext_san_uri_host_not_fqdn_or_ip(::zsearch::LintResult* e_ext_san_uri_host_not_fqdn_or_ip);
 
-  // .censys_definitions.LintResult e_ext_san_uri_not_ia5 = 97;
+  // .zsearch.LintResult e_ext_san_uri_not_ia5 = 97;
   bool has_e_ext_san_uri_not_ia5() const;
   void clear_e_ext_san_uri_not_ia5();
   static const int kEExtSanUriNotIa5FieldNumber = 97;
-  const ::censys_definitions::LintResult& e_ext_san_uri_not_ia5() const;
-  ::censys_definitions::LintResult* mutable_e_ext_san_uri_not_ia5();
-  ::censys_definitions::LintResult* release_e_ext_san_uri_not_ia5();
-  void set_allocated_e_ext_san_uri_not_ia5(::censys_definitions::LintResult* e_ext_san_uri_not_ia5);
+  const ::zsearch::LintResult& e_ext_san_uri_not_ia5() const;
+  ::zsearch::LintResult* mutable_e_ext_san_uri_not_ia5();
+  ::zsearch::LintResult* release_e_ext_san_uri_not_ia5();
+  void set_allocated_e_ext_san_uri_not_ia5(::zsearch::LintResult* e_ext_san_uri_not_ia5);
 
-  // .censys_definitions.LintResult e_ext_san_uri_relative = 98;
+  // .zsearch.LintResult e_ext_san_uri_relative = 98;
   bool has_e_ext_san_uri_relative() const;
   void clear_e_ext_san_uri_relative();
   static const int kEExtSanUriRelativeFieldNumber = 98;
-  const ::censys_definitions::LintResult& e_ext_san_uri_relative() const;
-  ::censys_definitions::LintResult* mutable_e_ext_san_uri_relative();
-  ::censys_definitions::LintResult* release_e_ext_san_uri_relative();
-  void set_allocated_e_ext_san_uri_relative(::censys_definitions::LintResult* e_ext_san_uri_relative);
+  const ::zsearch::LintResult& e_ext_san_uri_relative() const;
+  ::zsearch::LintResult* mutable_e_ext_san_uri_relative();
+  ::zsearch::LintResult* release_e_ext_san_uri_relative();
+  void set_allocated_e_ext_san_uri_relative(::zsearch::LintResult* e_ext_san_uri_relative);
 
-  // .censys_definitions.LintResult e_ext_subject_directory_attr_critical = 99;
+  // .zsearch.LintResult e_ext_subject_directory_attr_critical = 99;
   bool has_e_ext_subject_directory_attr_critical() const;
   void clear_e_ext_subject_directory_attr_critical();
   static const int kEExtSubjectDirectoryAttrCriticalFieldNumber = 99;
-  const ::censys_definitions::LintResult& e_ext_subject_directory_attr_critical() const;
-  ::censys_definitions::LintResult* mutable_e_ext_subject_directory_attr_critical();
-  ::censys_definitions::LintResult* release_e_ext_subject_directory_attr_critical();
-  void set_allocated_e_ext_subject_directory_attr_critical(::censys_definitions::LintResult* e_ext_subject_directory_attr_critical);
+  const ::zsearch::LintResult& e_ext_subject_directory_attr_critical() const;
+  ::zsearch::LintResult* mutable_e_ext_subject_directory_attr_critical();
+  ::zsearch::LintResult* release_e_ext_subject_directory_attr_critical();
+  void set_allocated_e_ext_subject_directory_attr_critical(::zsearch::LintResult* e_ext_subject_directory_attr_critical);
 
-  // .censys_definitions.LintResult e_ext_subject_key_identifier_critical = 100;
+  // .zsearch.LintResult e_ext_subject_key_identifier_critical = 100;
   bool has_e_ext_subject_key_identifier_critical() const;
   void clear_e_ext_subject_key_identifier_critical();
   static const int kEExtSubjectKeyIdentifierCriticalFieldNumber = 100;
-  const ::censys_definitions::LintResult& e_ext_subject_key_identifier_critical() const;
-  ::censys_definitions::LintResult* mutable_e_ext_subject_key_identifier_critical();
-  ::censys_definitions::LintResult* release_e_ext_subject_key_identifier_critical();
-  void set_allocated_e_ext_subject_key_identifier_critical(::censys_definitions::LintResult* e_ext_subject_key_identifier_critical);
+  const ::zsearch::LintResult& e_ext_subject_key_identifier_critical() const;
+  ::zsearch::LintResult* mutable_e_ext_subject_key_identifier_critical();
+  ::zsearch::LintResult* release_e_ext_subject_key_identifier_critical();
+  void set_allocated_e_ext_subject_key_identifier_critical(::zsearch::LintResult* e_ext_subject_key_identifier_critical);
 
-  // .censys_definitions.LintResult e_ext_subject_key_identifier_missing_ca = 101;
+  // .zsearch.LintResult e_ext_subject_key_identifier_missing_ca = 101;
   bool has_e_ext_subject_key_identifier_missing_ca() const;
   void clear_e_ext_subject_key_identifier_missing_ca();
   static const int kEExtSubjectKeyIdentifierMissingCaFieldNumber = 101;
-  const ::censys_definitions::LintResult& e_ext_subject_key_identifier_missing_ca() const;
-  ::censys_definitions::LintResult* mutable_e_ext_subject_key_identifier_missing_ca();
-  ::censys_definitions::LintResult* release_e_ext_subject_key_identifier_missing_ca();
-  void set_allocated_e_ext_subject_key_identifier_missing_ca(::censys_definitions::LintResult* e_ext_subject_key_identifier_missing_ca);
+  const ::zsearch::LintResult& e_ext_subject_key_identifier_missing_ca() const;
+  ::zsearch::LintResult* mutable_e_ext_subject_key_identifier_missing_ca();
+  ::zsearch::LintResult* release_e_ext_subject_key_identifier_missing_ca();
+  void set_allocated_e_ext_subject_key_identifier_missing_ca(::zsearch::LintResult* e_ext_subject_key_identifier_missing_ca);
 
-  // .censys_definitions.LintResult w_ext_subject_key_identifier_missing_sub_cert = 102;
+  // .zsearch.LintResult w_ext_subject_key_identifier_missing_sub_cert = 102;
   bool has_w_ext_subject_key_identifier_missing_sub_cert() const;
   void clear_w_ext_subject_key_identifier_missing_sub_cert();
   static const int kWExtSubjectKeyIdentifierMissingSubCertFieldNumber = 102;
-  const ::censys_definitions::LintResult& w_ext_subject_key_identifier_missing_sub_cert() const;
-  ::censys_definitions::LintResult* mutable_w_ext_subject_key_identifier_missing_sub_cert();
-  ::censys_definitions::LintResult* release_w_ext_subject_key_identifier_missing_sub_cert();
-  void set_allocated_w_ext_subject_key_identifier_missing_sub_cert(::censys_definitions::LintResult* w_ext_subject_key_identifier_missing_sub_cert);
+  const ::zsearch::LintResult& w_ext_subject_key_identifier_missing_sub_cert() const;
+  ::zsearch::LintResult* mutable_w_ext_subject_key_identifier_missing_sub_cert();
+  ::zsearch::LintResult* release_w_ext_subject_key_identifier_missing_sub_cert();
+  void set_allocated_w_ext_subject_key_identifier_missing_sub_cert(::zsearch::LintResult* w_ext_subject_key_identifier_missing_sub_cert);
 
-  // .censys_definitions.LintResult e_generalized_time_does_not_include_seconds = 103;
+  // .zsearch.LintResult e_generalized_time_does_not_include_seconds = 103;
   bool has_e_generalized_time_does_not_include_seconds() const;
   void clear_e_generalized_time_does_not_include_seconds();
   static const int kEGeneralizedTimeDoesNotIncludeSecondsFieldNumber = 103;
-  const ::censys_definitions::LintResult& e_generalized_time_does_not_include_seconds() const;
-  ::censys_definitions::LintResult* mutable_e_generalized_time_does_not_include_seconds();
-  ::censys_definitions::LintResult* release_e_generalized_time_does_not_include_seconds();
-  void set_allocated_e_generalized_time_does_not_include_seconds(::censys_definitions::LintResult* e_generalized_time_does_not_include_seconds);
+  const ::zsearch::LintResult& e_generalized_time_does_not_include_seconds() const;
+  ::zsearch::LintResult* mutable_e_generalized_time_does_not_include_seconds();
+  ::zsearch::LintResult* release_e_generalized_time_does_not_include_seconds();
+  void set_allocated_e_generalized_time_does_not_include_seconds(::zsearch::LintResult* e_generalized_time_does_not_include_seconds);
 
-  // .censys_definitions.LintResult e_generalized_time_includes_fraction_seconds = 104;
+  // .zsearch.LintResult e_generalized_time_includes_fraction_seconds = 104;
   bool has_e_generalized_time_includes_fraction_seconds() const;
   void clear_e_generalized_time_includes_fraction_seconds();
   static const int kEGeneralizedTimeIncludesFractionSecondsFieldNumber = 104;
-  const ::censys_definitions::LintResult& e_generalized_time_includes_fraction_seconds() const;
-  ::censys_definitions::LintResult* mutable_e_generalized_time_includes_fraction_seconds();
-  ::censys_definitions::LintResult* release_e_generalized_time_includes_fraction_seconds();
-  void set_allocated_e_generalized_time_includes_fraction_seconds(::censys_definitions::LintResult* e_generalized_time_includes_fraction_seconds);
+  const ::zsearch::LintResult& e_generalized_time_includes_fraction_seconds() const;
+  ::zsearch::LintResult* mutable_e_generalized_time_includes_fraction_seconds();
+  ::zsearch::LintResult* release_e_generalized_time_includes_fraction_seconds();
+  void set_allocated_e_generalized_time_includes_fraction_seconds(::zsearch::LintResult* e_generalized_time_includes_fraction_seconds);
 
-  // .censys_definitions.LintResult e_generalized_time_not_in_zulu = 105;
+  // .zsearch.LintResult e_generalized_time_not_in_zulu = 105;
   bool has_e_generalized_time_not_in_zulu() const;
   void clear_e_generalized_time_not_in_zulu();
   static const int kEGeneralizedTimeNotInZuluFieldNumber = 105;
-  const ::censys_definitions::LintResult& e_generalized_time_not_in_zulu() const;
-  ::censys_definitions::LintResult* mutable_e_generalized_time_not_in_zulu();
-  ::censys_definitions::LintResult* release_e_generalized_time_not_in_zulu();
-  void set_allocated_e_generalized_time_not_in_zulu(::censys_definitions::LintResult* e_generalized_time_not_in_zulu);
+  const ::zsearch::LintResult& e_generalized_time_not_in_zulu() const;
+  ::zsearch::LintResult* mutable_e_generalized_time_not_in_zulu();
+  ::zsearch::LintResult* release_e_generalized_time_not_in_zulu();
+  void set_allocated_e_generalized_time_not_in_zulu(::zsearch::LintResult* e_generalized_time_not_in_zulu);
 
-  // .censys_definitions.LintResult w_gtld_under_consideration = 106;
+  // .zsearch.LintResult w_gtld_under_consideration = 106;
   bool has_w_gtld_under_consideration() const;
   void clear_w_gtld_under_consideration();
   static const int kWGtldUnderConsiderationFieldNumber = 106;
-  const ::censys_definitions::LintResult& w_gtld_under_consideration() const;
-  ::censys_definitions::LintResult* mutable_w_gtld_under_consideration();
-  ::censys_definitions::LintResult* release_w_gtld_under_consideration();
-  void set_allocated_w_gtld_under_consideration(::censys_definitions::LintResult* w_gtld_under_consideration);
+  const ::zsearch::LintResult& w_gtld_under_consideration() const;
+  ::zsearch::LintResult* mutable_w_gtld_under_consideration();
+  ::zsearch::LintResult* release_w_gtld_under_consideration();
+  void set_allocated_w_gtld_under_consideration(::zsearch::LintResult* w_gtld_under_consideration);
 
-  // .censys_definitions.LintResult e_ian_dns_name_includes_null_char = 107;
+  // .zsearch.LintResult e_ian_dns_name_includes_null_char = 107;
   bool has_e_ian_dns_name_includes_null_char() const;
   void clear_e_ian_dns_name_includes_null_char();
   static const int kEIanDnsNameIncludesNullCharFieldNumber = 107;
-  const ::censys_definitions::LintResult& e_ian_dns_name_includes_null_char() const;
-  ::censys_definitions::LintResult* mutable_e_ian_dns_name_includes_null_char();
-  ::censys_definitions::LintResult* release_e_ian_dns_name_includes_null_char();
-  void set_allocated_e_ian_dns_name_includes_null_char(::censys_definitions::LintResult* e_ian_dns_name_includes_null_char);
+  const ::zsearch::LintResult& e_ian_dns_name_includes_null_char() const;
+  ::zsearch::LintResult* mutable_e_ian_dns_name_includes_null_char();
+  ::zsearch::LintResult* release_e_ian_dns_name_includes_null_char();
+  void set_allocated_e_ian_dns_name_includes_null_char(::zsearch::LintResult* e_ian_dns_name_includes_null_char);
 
-  // .censys_definitions.LintResult e_ian_dns_name_starts_with_period = 108;
+  // .zsearch.LintResult e_ian_dns_name_starts_with_period = 108;
   bool has_e_ian_dns_name_starts_with_period() const;
   void clear_e_ian_dns_name_starts_with_period();
   static const int kEIanDnsNameStartsWithPeriodFieldNumber = 108;
-  const ::censys_definitions::LintResult& e_ian_dns_name_starts_with_period() const;
-  ::censys_definitions::LintResult* mutable_e_ian_dns_name_starts_with_period();
-  ::censys_definitions::LintResult* release_e_ian_dns_name_starts_with_period();
-  void set_allocated_e_ian_dns_name_starts_with_period(::censys_definitions::LintResult* e_ian_dns_name_starts_with_period);
+  const ::zsearch::LintResult& e_ian_dns_name_starts_with_period() const;
+  ::zsearch::LintResult* mutable_e_ian_dns_name_starts_with_period();
+  ::zsearch::LintResult* release_e_ian_dns_name_starts_with_period();
+  void set_allocated_e_ian_dns_name_starts_with_period(::zsearch::LintResult* e_ian_dns_name_starts_with_period);
 
-  // .censys_definitions.LintResult w_ian_iana_pub_suffix_empty = 109;
+  // .zsearch.LintResult w_ian_iana_pub_suffix_empty = 109;
   bool has_w_ian_iana_pub_suffix_empty() const;
   void clear_w_ian_iana_pub_suffix_empty();
   static const int kWIanIanaPubSuffixEmptyFieldNumber = 109;
-  const ::censys_definitions::LintResult& w_ian_iana_pub_suffix_empty() const;
-  ::censys_definitions::LintResult* mutable_w_ian_iana_pub_suffix_empty();
-  ::censys_definitions::LintResult* release_w_ian_iana_pub_suffix_empty();
-  void set_allocated_w_ian_iana_pub_suffix_empty(::censys_definitions::LintResult* w_ian_iana_pub_suffix_empty);
+  const ::zsearch::LintResult& w_ian_iana_pub_suffix_empty() const;
+  ::zsearch::LintResult* mutable_w_ian_iana_pub_suffix_empty();
+  ::zsearch::LintResult* release_w_ian_iana_pub_suffix_empty();
+  void set_allocated_w_ian_iana_pub_suffix_empty(::zsearch::LintResult* w_ian_iana_pub_suffix_empty);
 
-  // .censys_definitions.LintResult e_inhibit_any_policy_not_critical = 110;
+  // .zsearch.LintResult e_inhibit_any_policy_not_critical = 110;
   bool has_e_inhibit_any_policy_not_critical() const;
   void clear_e_inhibit_any_policy_not_critical();
   static const int kEInhibitAnyPolicyNotCriticalFieldNumber = 110;
-  const ::censys_definitions::LintResult& e_inhibit_any_policy_not_critical() const;
-  ::censys_definitions::LintResult* mutable_e_inhibit_any_policy_not_critical();
-  ::censys_definitions::LintResult* release_e_inhibit_any_policy_not_critical();
-  void set_allocated_e_inhibit_any_policy_not_critical(::censys_definitions::LintResult* e_inhibit_any_policy_not_critical);
+  const ::zsearch::LintResult& e_inhibit_any_policy_not_critical() const;
+  ::zsearch::LintResult* mutable_e_inhibit_any_policy_not_critical();
+  ::zsearch::LintResult* release_e_inhibit_any_policy_not_critical();
+  void set_allocated_e_inhibit_any_policy_not_critical(::zsearch::LintResult* e_inhibit_any_policy_not_critical);
 
-  // .censys_definitions.LintResult e_invalid_certificate_version = 111;
+  // .zsearch.LintResult e_invalid_certificate_version = 111;
   bool has_e_invalid_certificate_version() const;
   void clear_e_invalid_certificate_version();
   static const int kEInvalidCertificateVersionFieldNumber = 111;
-  const ::censys_definitions::LintResult& e_invalid_certificate_version() const;
-  ::censys_definitions::LintResult* mutable_e_invalid_certificate_version();
-  ::censys_definitions::LintResult* release_e_invalid_certificate_version();
-  void set_allocated_e_invalid_certificate_version(::censys_definitions::LintResult* e_invalid_certificate_version);
+  const ::zsearch::LintResult& e_invalid_certificate_version() const;
+  ::zsearch::LintResult* mutable_e_invalid_certificate_version();
+  ::zsearch::LintResult* release_e_invalid_certificate_version();
+  void set_allocated_e_invalid_certificate_version(::zsearch::LintResult* e_invalid_certificate_version);
 
-  // .censys_definitions.LintResult e_issuer_field_empty = 112;
+  // .zsearch.LintResult e_issuer_field_empty = 112;
   bool has_e_issuer_field_empty() const;
   void clear_e_issuer_field_empty();
   static const int kEIssuerFieldEmptyFieldNumber = 112;
-  const ::censys_definitions::LintResult& e_issuer_field_empty() const;
-  ::censys_definitions::LintResult* mutable_e_issuer_field_empty();
-  ::censys_definitions::LintResult* release_e_issuer_field_empty();
-  void set_allocated_e_issuer_field_empty(::censys_definitions::LintResult* e_issuer_field_empty);
+  const ::zsearch::LintResult& e_issuer_field_empty() const;
+  ::zsearch::LintResult* mutable_e_issuer_field_empty();
+  ::zsearch::LintResult* release_e_issuer_field_empty();
+  void set_allocated_e_issuer_field_empty(::zsearch::LintResult* e_issuer_field_empty);
 
-  // .censys_definitions.LintResult e_name_constraint_empty = 113;
+  // .zsearch.LintResult e_name_constraint_empty = 113;
   bool has_e_name_constraint_empty() const;
   void clear_e_name_constraint_empty();
   static const int kENameConstraintEmptyFieldNumber = 113;
-  const ::censys_definitions::LintResult& e_name_constraint_empty() const;
-  ::censys_definitions::LintResult* mutable_e_name_constraint_empty();
-  ::censys_definitions::LintResult* release_e_name_constraint_empty();
-  void set_allocated_e_name_constraint_empty(::censys_definitions::LintResult* e_name_constraint_empty);
+  const ::zsearch::LintResult& e_name_constraint_empty() const;
+  ::zsearch::LintResult* mutable_e_name_constraint_empty();
+  ::zsearch::LintResult* release_e_name_constraint_empty();
+  void set_allocated_e_name_constraint_empty(::zsearch::LintResult* e_name_constraint_empty);
 
-  // .censys_definitions.LintResult e_name_constraint_maximum_not_absent = 114;
+  // .zsearch.LintResult e_name_constraint_maximum_not_absent = 114;
   bool has_e_name_constraint_maximum_not_absent() const;
   void clear_e_name_constraint_maximum_not_absent();
   static const int kENameConstraintMaximumNotAbsentFieldNumber = 114;
-  const ::censys_definitions::LintResult& e_name_constraint_maximum_not_absent() const;
-  ::censys_definitions::LintResult* mutable_e_name_constraint_maximum_not_absent();
-  ::censys_definitions::LintResult* release_e_name_constraint_maximum_not_absent();
-  void set_allocated_e_name_constraint_maximum_not_absent(::censys_definitions::LintResult* e_name_constraint_maximum_not_absent);
+  const ::zsearch::LintResult& e_name_constraint_maximum_not_absent() const;
+  ::zsearch::LintResult* mutable_e_name_constraint_maximum_not_absent();
+  ::zsearch::LintResult* release_e_name_constraint_maximum_not_absent();
+  void set_allocated_e_name_constraint_maximum_not_absent(::zsearch::LintResult* e_name_constraint_maximum_not_absent);
 
-  // .censys_definitions.LintResult e_name_constraint_minimum_non_zero = 115;
+  // .zsearch.LintResult e_name_constraint_minimum_non_zero = 115;
   bool has_e_name_constraint_minimum_non_zero() const;
   void clear_e_name_constraint_minimum_non_zero();
   static const int kENameConstraintMinimumNonZeroFieldNumber = 115;
-  const ::censys_definitions::LintResult& e_name_constraint_minimum_non_zero() const;
-  ::censys_definitions::LintResult* mutable_e_name_constraint_minimum_non_zero();
-  ::censys_definitions::LintResult* release_e_name_constraint_minimum_non_zero();
-  void set_allocated_e_name_constraint_minimum_non_zero(::censys_definitions::LintResult* e_name_constraint_minimum_non_zero);
+  const ::zsearch::LintResult& e_name_constraint_minimum_non_zero() const;
+  ::zsearch::LintResult* mutable_e_name_constraint_minimum_non_zero();
+  ::zsearch::LintResult* release_e_name_constraint_minimum_non_zero();
+  void set_allocated_e_name_constraint_minimum_non_zero(::zsearch::LintResult* e_name_constraint_minimum_non_zero);
 
-  // .censys_definitions.LintResult w_name_constraint_on_edi_party_name = 116;
+  // .zsearch.LintResult w_name_constraint_on_edi_party_name = 116;
   bool has_w_name_constraint_on_edi_party_name() const;
   void clear_w_name_constraint_on_edi_party_name();
   static const int kWNameConstraintOnEdiPartyNameFieldNumber = 116;
-  const ::censys_definitions::LintResult& w_name_constraint_on_edi_party_name() const;
-  ::censys_definitions::LintResult* mutable_w_name_constraint_on_edi_party_name();
-  ::censys_definitions::LintResult* release_w_name_constraint_on_edi_party_name();
-  void set_allocated_w_name_constraint_on_edi_party_name(::censys_definitions::LintResult* w_name_constraint_on_edi_party_name);
+  const ::zsearch::LintResult& w_name_constraint_on_edi_party_name() const;
+  ::zsearch::LintResult* mutable_w_name_constraint_on_edi_party_name();
+  ::zsearch::LintResult* release_w_name_constraint_on_edi_party_name();
+  void set_allocated_w_name_constraint_on_edi_party_name(::zsearch::LintResult* w_name_constraint_on_edi_party_name);
 
-  // .censys_definitions.LintResult w_name_constraint_on_registered_id = 117;
+  // .zsearch.LintResult w_name_constraint_on_registered_id = 117;
   bool has_w_name_constraint_on_registered_id() const;
   void clear_w_name_constraint_on_registered_id();
   static const int kWNameConstraintOnRegisteredIdFieldNumber = 117;
-  const ::censys_definitions::LintResult& w_name_constraint_on_registered_id() const;
-  ::censys_definitions::LintResult* mutable_w_name_constraint_on_registered_id();
-  ::censys_definitions::LintResult* release_w_name_constraint_on_registered_id();
-  void set_allocated_w_name_constraint_on_registered_id(::censys_definitions::LintResult* w_name_constraint_on_registered_id);
+  const ::zsearch::LintResult& w_name_constraint_on_registered_id() const;
+  ::zsearch::LintResult* mutable_w_name_constraint_on_registered_id();
+  ::zsearch::LintResult* release_w_name_constraint_on_registered_id();
+  void set_allocated_w_name_constraint_on_registered_id(::zsearch::LintResult* w_name_constraint_on_registered_id);
 
-  // .censys_definitions.LintResult w_name_constraint_on_x400 = 118;
+  // .zsearch.LintResult w_name_constraint_on_x400 = 118;
   bool has_w_name_constraint_on_x400() const;
   void clear_w_name_constraint_on_x400();
   static const int kWNameConstraintOnX400FieldNumber = 118;
-  const ::censys_definitions::LintResult& w_name_constraint_on_x400() const;
-  ::censys_definitions::LintResult* mutable_w_name_constraint_on_x400();
-  ::censys_definitions::LintResult* release_w_name_constraint_on_x400();
-  void set_allocated_w_name_constraint_on_x400(::censys_definitions::LintResult* w_name_constraint_on_x400);
+  const ::zsearch::LintResult& w_name_constraint_on_x400() const;
+  ::zsearch::LintResult* mutable_w_name_constraint_on_x400();
+  ::zsearch::LintResult* release_w_name_constraint_on_x400();
+  void set_allocated_w_name_constraint_on_x400(::zsearch::LintResult* w_name_constraint_on_x400);
 
-  // .censys_definitions.LintResult e_old_root_ca_rsa_mod_less_than_2048_bits = 119;
+  // .zsearch.LintResult e_old_root_ca_rsa_mod_less_than_2048_bits = 119;
   bool has_e_old_root_ca_rsa_mod_less_than_2048_bits() const;
   void clear_e_old_root_ca_rsa_mod_less_than_2048_bits();
   static const int kEOldRootCaRsaModLessThan2048BitsFieldNumber = 119;
-  const ::censys_definitions::LintResult& e_old_root_ca_rsa_mod_less_than_2048_bits() const;
-  ::censys_definitions::LintResult* mutable_e_old_root_ca_rsa_mod_less_than_2048_bits();
-  ::censys_definitions::LintResult* release_e_old_root_ca_rsa_mod_less_than_2048_bits();
-  void set_allocated_e_old_root_ca_rsa_mod_less_than_2048_bits(::censys_definitions::LintResult* e_old_root_ca_rsa_mod_less_than_2048_bits);
+  const ::zsearch::LintResult& e_old_root_ca_rsa_mod_less_than_2048_bits() const;
+  ::zsearch::LintResult* mutable_e_old_root_ca_rsa_mod_less_than_2048_bits();
+  ::zsearch::LintResult* release_e_old_root_ca_rsa_mod_less_than_2048_bits();
+  void set_allocated_e_old_root_ca_rsa_mod_less_than_2048_bits(::zsearch::LintResult* e_old_root_ca_rsa_mod_less_than_2048_bits);
 
-  // .censys_definitions.LintResult e_old_sub_ca_rsa_mod_less_than_1024_bits = 120;
+  // .zsearch.LintResult e_old_sub_ca_rsa_mod_less_than_1024_bits = 120;
   bool has_e_old_sub_ca_rsa_mod_less_than_1024_bits() const;
   void clear_e_old_sub_ca_rsa_mod_less_than_1024_bits();
   static const int kEOldSubCaRsaModLessThan1024BitsFieldNumber = 120;
-  const ::censys_definitions::LintResult& e_old_sub_ca_rsa_mod_less_than_1024_bits() const;
-  ::censys_definitions::LintResult* mutable_e_old_sub_ca_rsa_mod_less_than_1024_bits();
-  ::censys_definitions::LintResult* release_e_old_sub_ca_rsa_mod_less_than_1024_bits();
-  void set_allocated_e_old_sub_ca_rsa_mod_less_than_1024_bits(::censys_definitions::LintResult* e_old_sub_ca_rsa_mod_less_than_1024_bits);
+  const ::zsearch::LintResult& e_old_sub_ca_rsa_mod_less_than_1024_bits() const;
+  ::zsearch::LintResult* mutable_e_old_sub_ca_rsa_mod_less_than_1024_bits();
+  ::zsearch::LintResult* release_e_old_sub_ca_rsa_mod_less_than_1024_bits();
+  void set_allocated_e_old_sub_ca_rsa_mod_less_than_1024_bits(::zsearch::LintResult* e_old_sub_ca_rsa_mod_less_than_1024_bits);
 
-  // .censys_definitions.LintResult e_old_sub_cert_rsa_mod_less_than_1024_bits = 121;
+  // .zsearch.LintResult e_old_sub_cert_rsa_mod_less_than_1024_bits = 121;
   bool has_e_old_sub_cert_rsa_mod_less_than_1024_bits() const;
   void clear_e_old_sub_cert_rsa_mod_less_than_1024_bits();
   static const int kEOldSubCertRsaModLessThan1024BitsFieldNumber = 121;
-  const ::censys_definitions::LintResult& e_old_sub_cert_rsa_mod_less_than_1024_bits() const;
-  ::censys_definitions::LintResult* mutable_e_old_sub_cert_rsa_mod_less_than_1024_bits();
-  ::censys_definitions::LintResult* release_e_old_sub_cert_rsa_mod_less_than_1024_bits();
-  void set_allocated_e_old_sub_cert_rsa_mod_less_than_1024_bits(::censys_definitions::LintResult* e_old_sub_cert_rsa_mod_less_than_1024_bits);
+  const ::zsearch::LintResult& e_old_sub_cert_rsa_mod_less_than_1024_bits() const;
+  ::zsearch::LintResult* mutable_e_old_sub_cert_rsa_mod_less_than_1024_bits();
+  ::zsearch::LintResult* release_e_old_sub_cert_rsa_mod_less_than_1024_bits();
+  void set_allocated_e_old_sub_cert_rsa_mod_less_than_1024_bits(::zsearch::LintResult* e_old_sub_cert_rsa_mod_less_than_1024_bits);
 
-  // .censys_definitions.LintResult e_path_len_constraint_improperly_included = 122;
+  // .zsearch.LintResult e_path_len_constraint_improperly_included = 122;
   bool has_e_path_len_constraint_improperly_included() const;
   void clear_e_path_len_constraint_improperly_included();
   static const int kEPathLenConstraintImproperlyIncludedFieldNumber = 122;
-  const ::censys_definitions::LintResult& e_path_len_constraint_improperly_included() const;
-  ::censys_definitions::LintResult* mutable_e_path_len_constraint_improperly_included();
-  ::censys_definitions::LintResult* release_e_path_len_constraint_improperly_included();
-  void set_allocated_e_path_len_constraint_improperly_included(::censys_definitions::LintResult* e_path_len_constraint_improperly_included);
+  const ::zsearch::LintResult& e_path_len_constraint_improperly_included() const;
+  ::zsearch::LintResult* mutable_e_path_len_constraint_improperly_included();
+  ::zsearch::LintResult* release_e_path_len_constraint_improperly_included();
+  void set_allocated_e_path_len_constraint_improperly_included(::zsearch::LintResult* e_path_len_constraint_improperly_included);
 
-  // .censys_definitions.LintResult e_path_len_constraint_zero_or_less = 123;
+  // .zsearch.LintResult e_path_len_constraint_zero_or_less = 123;
   bool has_e_path_len_constraint_zero_or_less() const;
   void clear_e_path_len_constraint_zero_or_less();
   static const int kEPathLenConstraintZeroOrLessFieldNumber = 123;
-  const ::censys_definitions::LintResult& e_path_len_constraint_zero_or_less() const;
-  ::censys_definitions::LintResult* mutable_e_path_len_constraint_zero_or_less();
-  ::censys_definitions::LintResult* release_e_path_len_constraint_zero_or_less();
-  void set_allocated_e_path_len_constraint_zero_or_less(::censys_definitions::LintResult* e_path_len_constraint_zero_or_less);
+  const ::zsearch::LintResult& e_path_len_constraint_zero_or_less() const;
+  ::zsearch::LintResult* mutable_e_path_len_constraint_zero_or_less();
+  ::zsearch::LintResult* release_e_path_len_constraint_zero_or_less();
+  void set_allocated_e_path_len_constraint_zero_or_less(::zsearch::LintResult* e_path_len_constraint_zero_or_less);
 
-  // .censys_definitions.LintResult e_public_key_type_not_allowed = 124;
+  // .zsearch.LintResult e_public_key_type_not_allowed = 124;
   bool has_e_public_key_type_not_allowed() const;
   void clear_e_public_key_type_not_allowed();
   static const int kEPublicKeyTypeNotAllowedFieldNumber = 124;
-  const ::censys_definitions::LintResult& e_public_key_type_not_allowed() const;
-  ::censys_definitions::LintResult* mutable_e_public_key_type_not_allowed();
-  ::censys_definitions::LintResult* release_e_public_key_type_not_allowed();
-  void set_allocated_e_public_key_type_not_allowed(::censys_definitions::LintResult* e_public_key_type_not_allowed);
+  const ::zsearch::LintResult& e_public_key_type_not_allowed() const;
+  ::zsearch::LintResult* mutable_e_public_key_type_not_allowed();
+  ::zsearch::LintResult* release_e_public_key_type_not_allowed();
+  void set_allocated_e_public_key_type_not_allowed(::zsearch::LintResult* e_public_key_type_not_allowed);
 
-  // .censys_definitions.LintResult w_root_ca_basic_constraints_path_len_constraint_field_present = 125;
+  // .zsearch.LintResult w_root_ca_basic_constraints_path_len_constraint_field_present = 125;
   bool has_w_root_ca_basic_constraints_path_len_constraint_field_present() const;
   void clear_w_root_ca_basic_constraints_path_len_constraint_field_present();
   static const int kWRootCaBasicConstraintsPathLenConstraintFieldPresentFieldNumber = 125;
-  const ::censys_definitions::LintResult& w_root_ca_basic_constraints_path_len_constraint_field_present() const;
-  ::censys_definitions::LintResult* mutable_w_root_ca_basic_constraints_path_len_constraint_field_present();
-  ::censys_definitions::LintResult* release_w_root_ca_basic_constraints_path_len_constraint_field_present();
-  void set_allocated_w_root_ca_basic_constraints_path_len_constraint_field_present(::censys_definitions::LintResult* w_root_ca_basic_constraints_path_len_constraint_field_present);
+  const ::zsearch::LintResult& w_root_ca_basic_constraints_path_len_constraint_field_present() const;
+  ::zsearch::LintResult* mutable_w_root_ca_basic_constraints_path_len_constraint_field_present();
+  ::zsearch::LintResult* release_w_root_ca_basic_constraints_path_len_constraint_field_present();
+  void set_allocated_w_root_ca_basic_constraints_path_len_constraint_field_present(::zsearch::LintResult* w_root_ca_basic_constraints_path_len_constraint_field_present);
 
-  // .censys_definitions.LintResult w_root_ca_contains_cert_policy = 126;
+  // .zsearch.LintResult w_root_ca_contains_cert_policy = 126;
   bool has_w_root_ca_contains_cert_policy() const;
   void clear_w_root_ca_contains_cert_policy();
   static const int kWRootCaContainsCertPolicyFieldNumber = 126;
-  const ::censys_definitions::LintResult& w_root_ca_contains_cert_policy() const;
-  ::censys_definitions::LintResult* mutable_w_root_ca_contains_cert_policy();
-  ::censys_definitions::LintResult* release_w_root_ca_contains_cert_policy();
-  void set_allocated_w_root_ca_contains_cert_policy(::censys_definitions::LintResult* w_root_ca_contains_cert_policy);
+  const ::zsearch::LintResult& w_root_ca_contains_cert_policy() const;
+  ::zsearch::LintResult* mutable_w_root_ca_contains_cert_policy();
+  ::zsearch::LintResult* release_w_root_ca_contains_cert_policy();
+  void set_allocated_w_root_ca_contains_cert_policy(::zsearch::LintResult* w_root_ca_contains_cert_policy);
 
-  // .censys_definitions.LintResult e_root_ca_extended_key_usage_present = 127;
+  // .zsearch.LintResult e_root_ca_extended_key_usage_present = 127;
   bool has_e_root_ca_extended_key_usage_present() const;
   void clear_e_root_ca_extended_key_usage_present();
   static const int kERootCaExtendedKeyUsagePresentFieldNumber = 127;
-  const ::censys_definitions::LintResult& e_root_ca_extended_key_usage_present() const;
-  ::censys_definitions::LintResult* mutable_e_root_ca_extended_key_usage_present();
-  ::censys_definitions::LintResult* release_e_root_ca_extended_key_usage_present();
-  void set_allocated_e_root_ca_extended_key_usage_present(::censys_definitions::LintResult* e_root_ca_extended_key_usage_present);
+  const ::zsearch::LintResult& e_root_ca_extended_key_usage_present() const;
+  ::zsearch::LintResult* mutable_e_root_ca_extended_key_usage_present();
+  ::zsearch::LintResult* release_e_root_ca_extended_key_usage_present();
+  void set_allocated_e_root_ca_extended_key_usage_present(::zsearch::LintResult* e_root_ca_extended_key_usage_present);
 
-  // .censys_definitions.LintResult e_rsa_exp_negative = 128;
+  // .zsearch.LintResult e_rsa_exp_negative = 128;
   bool has_e_rsa_exp_negative() const;
   void clear_e_rsa_exp_negative();
   static const int kERsaExpNegativeFieldNumber = 128;
-  const ::censys_definitions::LintResult& e_rsa_exp_negative() const;
-  ::censys_definitions::LintResult* mutable_e_rsa_exp_negative();
-  ::censys_definitions::LintResult* release_e_rsa_exp_negative();
-  void set_allocated_e_rsa_exp_negative(::censys_definitions::LintResult* e_rsa_exp_negative);
+  const ::zsearch::LintResult& e_rsa_exp_negative() const;
+  ::zsearch::LintResult* mutable_e_rsa_exp_negative();
+  ::zsearch::LintResult* release_e_rsa_exp_negative();
+  void set_allocated_e_rsa_exp_negative(::zsearch::LintResult* e_rsa_exp_negative);
 
-  // .censys_definitions.LintResult w_rsa_mod_factors_smaller_than_752 = 129;
+  // .zsearch.LintResult w_rsa_mod_factors_smaller_than_752 = 129;
   bool has_w_rsa_mod_factors_smaller_than_752() const;
   void clear_w_rsa_mod_factors_smaller_than_752();
   static const int kWRsaModFactorsSmallerThan752FieldNumber = 129;
-  const ::censys_definitions::LintResult& w_rsa_mod_factors_smaller_than_752() const;
-  ::censys_definitions::LintResult* mutable_w_rsa_mod_factors_smaller_than_752();
-  ::censys_definitions::LintResult* release_w_rsa_mod_factors_smaller_than_752();
-  void set_allocated_w_rsa_mod_factors_smaller_than_752(::censys_definitions::LintResult* w_rsa_mod_factors_smaller_than_752);
+  const ::zsearch::LintResult& w_rsa_mod_factors_smaller_than_752() const;
+  ::zsearch::LintResult* mutable_w_rsa_mod_factors_smaller_than_752();
+  ::zsearch::LintResult* release_w_rsa_mod_factors_smaller_than_752();
+  void set_allocated_w_rsa_mod_factors_smaller_than_752(::zsearch::LintResult* w_rsa_mod_factors_smaller_than_752);
 
-  // .censys_definitions.LintResult e_rsa_mod_less_than_2048_bits = 130;
+  // .zsearch.LintResult e_rsa_mod_less_than_2048_bits = 130;
   bool has_e_rsa_mod_less_than_2048_bits() const;
   void clear_e_rsa_mod_less_than_2048_bits();
   static const int kERsaModLessThan2048BitsFieldNumber = 130;
-  const ::censys_definitions::LintResult& e_rsa_mod_less_than_2048_bits() const;
-  ::censys_definitions::LintResult* mutable_e_rsa_mod_less_than_2048_bits();
-  ::censys_definitions::LintResult* release_e_rsa_mod_less_than_2048_bits();
-  void set_allocated_e_rsa_mod_less_than_2048_bits(::censys_definitions::LintResult* e_rsa_mod_less_than_2048_bits);
+  const ::zsearch::LintResult& e_rsa_mod_less_than_2048_bits() const;
+  ::zsearch::LintResult* mutable_e_rsa_mod_less_than_2048_bits();
+  ::zsearch::LintResult* release_e_rsa_mod_less_than_2048_bits();
+  void set_allocated_e_rsa_mod_less_than_2048_bits(::zsearch::LintResult* e_rsa_mod_less_than_2048_bits);
 
-  // .censys_definitions.LintResult w_rsa_mod_not_odd = 131;
+  // .zsearch.LintResult w_rsa_mod_not_odd = 131;
   bool has_w_rsa_mod_not_odd() const;
   void clear_w_rsa_mod_not_odd();
   static const int kWRsaModNotOddFieldNumber = 131;
-  const ::censys_definitions::LintResult& w_rsa_mod_not_odd() const;
-  ::censys_definitions::LintResult* mutable_w_rsa_mod_not_odd();
-  ::censys_definitions::LintResult* release_w_rsa_mod_not_odd();
-  void set_allocated_w_rsa_mod_not_odd(::censys_definitions::LintResult* w_rsa_mod_not_odd);
+  const ::zsearch::LintResult& w_rsa_mod_not_odd() const;
+  ::zsearch::LintResult* mutable_w_rsa_mod_not_odd();
+  ::zsearch::LintResult* release_w_rsa_mod_not_odd();
+  void set_allocated_w_rsa_mod_not_odd(::zsearch::LintResult* w_rsa_mod_not_odd);
 
-  // .censys_definitions.LintResult w_rsa_public_exponent_not_in_range = 132;
+  // .zsearch.LintResult w_rsa_public_exponent_not_in_range = 132;
   bool has_w_rsa_public_exponent_not_in_range() const;
   void clear_w_rsa_public_exponent_not_in_range();
   static const int kWRsaPublicExponentNotInRangeFieldNumber = 132;
-  const ::censys_definitions::LintResult& w_rsa_public_exponent_not_in_range() const;
-  ::censys_definitions::LintResult* mutable_w_rsa_public_exponent_not_in_range();
-  ::censys_definitions::LintResult* release_w_rsa_public_exponent_not_in_range();
-  void set_allocated_w_rsa_public_exponent_not_in_range(::censys_definitions::LintResult* w_rsa_public_exponent_not_in_range);
+  const ::zsearch::LintResult& w_rsa_public_exponent_not_in_range() const;
+  ::zsearch::LintResult* mutable_w_rsa_public_exponent_not_in_range();
+  ::zsearch::LintResult* release_w_rsa_public_exponent_not_in_range();
+  void set_allocated_w_rsa_public_exponent_not_in_range(::zsearch::LintResult* w_rsa_public_exponent_not_in_range);
 
-  // .censys_definitions.LintResult e_rsa_public_exponent_not_odd = 133;
+  // .zsearch.LintResult e_rsa_public_exponent_not_odd = 133;
   bool has_e_rsa_public_exponent_not_odd() const;
   void clear_e_rsa_public_exponent_not_odd();
   static const int kERsaPublicExponentNotOddFieldNumber = 133;
-  const ::censys_definitions::LintResult& e_rsa_public_exponent_not_odd() const;
-  ::censys_definitions::LintResult* mutable_e_rsa_public_exponent_not_odd();
-  ::censys_definitions::LintResult* release_e_rsa_public_exponent_not_odd();
-  void set_allocated_e_rsa_public_exponent_not_odd(::censys_definitions::LintResult* e_rsa_public_exponent_not_odd);
+  const ::zsearch::LintResult& e_rsa_public_exponent_not_odd() const;
+  ::zsearch::LintResult* mutable_e_rsa_public_exponent_not_odd();
+  ::zsearch::LintResult* release_e_rsa_public_exponent_not_odd();
+  void set_allocated_e_rsa_public_exponent_not_odd(::zsearch::LintResult* e_rsa_public_exponent_not_odd);
 
-  // .censys_definitions.LintResult e_rsa_public_exponent_too_small = 134;
+  // .zsearch.LintResult e_rsa_public_exponent_too_small = 134;
   bool has_e_rsa_public_exponent_too_small() const;
   void clear_e_rsa_public_exponent_too_small();
   static const int kERsaPublicExponentTooSmallFieldNumber = 134;
-  const ::censys_definitions::LintResult& e_rsa_public_exponent_too_small() const;
-  ::censys_definitions::LintResult* mutable_e_rsa_public_exponent_too_small();
-  ::censys_definitions::LintResult* release_e_rsa_public_exponent_too_small();
-  void set_allocated_e_rsa_public_exponent_too_small(::censys_definitions::LintResult* e_rsa_public_exponent_too_small);
+  const ::zsearch::LintResult& e_rsa_public_exponent_too_small() const;
+  ::zsearch::LintResult* mutable_e_rsa_public_exponent_too_small();
+  ::zsearch::LintResult* release_e_rsa_public_exponent_too_small();
+  void set_allocated_e_rsa_public_exponent_too_small(::zsearch::LintResult* e_rsa_public_exponent_too_small);
 
-  // .censys_definitions.LintResult e_san_dns_name_includes_null_char = 135;
+  // .zsearch.LintResult e_san_dns_name_includes_null_char = 135;
   bool has_e_san_dns_name_includes_null_char() const;
   void clear_e_san_dns_name_includes_null_char();
   static const int kESanDnsNameIncludesNullCharFieldNumber = 135;
-  const ::censys_definitions::LintResult& e_san_dns_name_includes_null_char() const;
-  ::censys_definitions::LintResult* mutable_e_san_dns_name_includes_null_char();
-  ::censys_definitions::LintResult* release_e_san_dns_name_includes_null_char();
-  void set_allocated_e_san_dns_name_includes_null_char(::censys_definitions::LintResult* e_san_dns_name_includes_null_char);
+  const ::zsearch::LintResult& e_san_dns_name_includes_null_char() const;
+  ::zsearch::LintResult* mutable_e_san_dns_name_includes_null_char();
+  ::zsearch::LintResult* release_e_san_dns_name_includes_null_char();
+  void set_allocated_e_san_dns_name_includes_null_char(::zsearch::LintResult* e_san_dns_name_includes_null_char);
 
-  // .censys_definitions.LintResult e_san_dns_name_starts_with_period = 136;
+  // .zsearch.LintResult e_san_dns_name_starts_with_period = 136;
   bool has_e_san_dns_name_starts_with_period() const;
   void clear_e_san_dns_name_starts_with_period();
   static const int kESanDnsNameStartsWithPeriodFieldNumber = 136;
-  const ::censys_definitions::LintResult& e_san_dns_name_starts_with_period() const;
-  ::censys_definitions::LintResult* mutable_e_san_dns_name_starts_with_period();
-  ::censys_definitions::LintResult* release_e_san_dns_name_starts_with_period();
-  void set_allocated_e_san_dns_name_starts_with_period(::censys_definitions::LintResult* e_san_dns_name_starts_with_period);
+  const ::zsearch::LintResult& e_san_dns_name_starts_with_period() const;
+  ::zsearch::LintResult* mutable_e_san_dns_name_starts_with_period();
+  ::zsearch::LintResult* release_e_san_dns_name_starts_with_period();
+  void set_allocated_e_san_dns_name_starts_with_period(::zsearch::LintResult* e_san_dns_name_starts_with_period);
 
-  // .censys_definitions.LintResult w_san_iana_pub_suffix_empty = 137;
+  // .zsearch.LintResult w_san_iana_pub_suffix_empty = 137;
   bool has_w_san_iana_pub_suffix_empty() const;
   void clear_w_san_iana_pub_suffix_empty();
   static const int kWSanIanaPubSuffixEmptyFieldNumber = 137;
-  const ::censys_definitions::LintResult& w_san_iana_pub_suffix_empty() const;
-  ::censys_definitions::LintResult* mutable_w_san_iana_pub_suffix_empty();
-  ::censys_definitions::LintResult* release_w_san_iana_pub_suffix_empty();
-  void set_allocated_w_san_iana_pub_suffix_empty(::censys_definitions::LintResult* w_san_iana_pub_suffix_empty);
+  const ::zsearch::LintResult& w_san_iana_pub_suffix_empty() const;
+  ::zsearch::LintResult* mutable_w_san_iana_pub_suffix_empty();
+  ::zsearch::LintResult* release_w_san_iana_pub_suffix_empty();
+  void set_allocated_w_san_iana_pub_suffix_empty(::zsearch::LintResult* w_san_iana_pub_suffix_empty);
 
-  // .censys_definitions.LintResult e_serial_number_longer_than_20_octets = 138;
+  // .zsearch.LintResult e_serial_number_longer_than_20_octets = 138;
   bool has_e_serial_number_longer_than_20_octets() const;
   void clear_e_serial_number_longer_than_20_octets();
   static const int kESerialNumberLongerThan20OctetsFieldNumber = 138;
-  const ::censys_definitions::LintResult& e_serial_number_longer_than_20_octets() const;
-  ::censys_definitions::LintResult* mutable_e_serial_number_longer_than_20_octets();
-  ::censys_definitions::LintResult* release_e_serial_number_longer_than_20_octets();
-  void set_allocated_e_serial_number_longer_than_20_octets(::censys_definitions::LintResult* e_serial_number_longer_than_20_octets);
+  const ::zsearch::LintResult& e_serial_number_longer_than_20_octets() const;
+  ::zsearch::LintResult* mutable_e_serial_number_longer_than_20_octets();
+  ::zsearch::LintResult* release_e_serial_number_longer_than_20_octets();
+  void set_allocated_e_serial_number_longer_than_20_octets(::zsearch::LintResult* e_serial_number_longer_than_20_octets);
 
-  // .censys_definitions.LintResult e_serial_number_not_positive = 139;
+  // .zsearch.LintResult e_serial_number_not_positive = 139;
   bool has_e_serial_number_not_positive() const;
   void clear_e_serial_number_not_positive();
   static const int kESerialNumberNotPositiveFieldNumber = 139;
-  const ::censys_definitions::LintResult& e_serial_number_not_positive() const;
-  ::censys_definitions::LintResult* mutable_e_serial_number_not_positive();
-  ::censys_definitions::LintResult* release_e_serial_number_not_positive();
-  void set_allocated_e_serial_number_not_positive(::censys_definitions::LintResult* e_serial_number_not_positive);
+  const ::zsearch::LintResult& e_serial_number_not_positive() const;
+  ::zsearch::LintResult* mutable_e_serial_number_not_positive();
+  ::zsearch::LintResult* release_e_serial_number_not_positive();
+  void set_allocated_e_serial_number_not_positive(::zsearch::LintResult* e_serial_number_not_positive);
 
-  // .censys_definitions.LintResult w_sub_ca_aia_does_not_contain_issuing_ca_url = 140;
+  // .zsearch.LintResult w_sub_ca_aia_does_not_contain_issuing_ca_url = 140;
   bool has_w_sub_ca_aia_does_not_contain_issuing_ca_url() const;
   void clear_w_sub_ca_aia_does_not_contain_issuing_ca_url();
   static const int kWSubCaAiaDoesNotContainIssuingCaUrlFieldNumber = 140;
-  const ::censys_definitions::LintResult& w_sub_ca_aia_does_not_contain_issuing_ca_url() const;
-  ::censys_definitions::LintResult* mutable_w_sub_ca_aia_does_not_contain_issuing_ca_url();
-  ::censys_definitions::LintResult* release_w_sub_ca_aia_does_not_contain_issuing_ca_url();
-  void set_allocated_w_sub_ca_aia_does_not_contain_issuing_ca_url(::censys_definitions::LintResult* w_sub_ca_aia_does_not_contain_issuing_ca_url);
+  const ::zsearch::LintResult& w_sub_ca_aia_does_not_contain_issuing_ca_url() const;
+  ::zsearch::LintResult* mutable_w_sub_ca_aia_does_not_contain_issuing_ca_url();
+  ::zsearch::LintResult* release_w_sub_ca_aia_does_not_contain_issuing_ca_url();
+  void set_allocated_w_sub_ca_aia_does_not_contain_issuing_ca_url(::zsearch::LintResult* w_sub_ca_aia_does_not_contain_issuing_ca_url);
 
-  // .censys_definitions.LintResult e_sub_ca_aia_does_not_contain_ocsp_url = 141;
+  // .zsearch.LintResult e_sub_ca_aia_does_not_contain_ocsp_url = 141;
   bool has_e_sub_ca_aia_does_not_contain_ocsp_url() const;
   void clear_e_sub_ca_aia_does_not_contain_ocsp_url();
   static const int kESubCaAiaDoesNotContainOcspUrlFieldNumber = 141;
-  const ::censys_definitions::LintResult& e_sub_ca_aia_does_not_contain_ocsp_url() const;
-  ::censys_definitions::LintResult* mutable_e_sub_ca_aia_does_not_contain_ocsp_url();
-  ::censys_definitions::LintResult* release_e_sub_ca_aia_does_not_contain_ocsp_url();
-  void set_allocated_e_sub_ca_aia_does_not_contain_ocsp_url(::censys_definitions::LintResult* e_sub_ca_aia_does_not_contain_ocsp_url);
+  const ::zsearch::LintResult& e_sub_ca_aia_does_not_contain_ocsp_url() const;
+  ::zsearch::LintResult* mutable_e_sub_ca_aia_does_not_contain_ocsp_url();
+  ::zsearch::LintResult* release_e_sub_ca_aia_does_not_contain_ocsp_url();
+  void set_allocated_e_sub_ca_aia_does_not_contain_ocsp_url(::zsearch::LintResult* e_sub_ca_aia_does_not_contain_ocsp_url);
 
-  // .censys_definitions.LintResult e_sub_ca_aia_missing = 142;
+  // .zsearch.LintResult e_sub_ca_aia_missing = 142;
   bool has_e_sub_ca_aia_missing() const;
   void clear_e_sub_ca_aia_missing();
   static const int kESubCaAiaMissingFieldNumber = 142;
-  const ::censys_definitions::LintResult& e_sub_ca_aia_missing() const;
-  ::censys_definitions::LintResult* mutable_e_sub_ca_aia_missing();
-  ::censys_definitions::LintResult* release_e_sub_ca_aia_missing();
-  void set_allocated_e_sub_ca_aia_missing(::censys_definitions::LintResult* e_sub_ca_aia_missing);
+  const ::zsearch::LintResult& e_sub_ca_aia_missing() const;
+  ::zsearch::LintResult* mutable_e_sub_ca_aia_missing();
+  ::zsearch::LintResult* release_e_sub_ca_aia_missing();
+  void set_allocated_e_sub_ca_aia_missing(::zsearch::LintResult* e_sub_ca_aia_missing);
 
-  // .censys_definitions.LintResult w_sub_ca_certificate_policies_marked_critical = 143;
+  // .zsearch.LintResult w_sub_ca_certificate_policies_marked_critical = 143;
   bool has_w_sub_ca_certificate_policies_marked_critical() const;
   void clear_w_sub_ca_certificate_policies_marked_critical();
   static const int kWSubCaCertificatePoliciesMarkedCriticalFieldNumber = 143;
-  const ::censys_definitions::LintResult& w_sub_ca_certificate_policies_marked_critical() const;
-  ::censys_definitions::LintResult* mutable_w_sub_ca_certificate_policies_marked_critical();
-  ::censys_definitions::LintResult* release_w_sub_ca_certificate_policies_marked_critical();
-  void set_allocated_w_sub_ca_certificate_policies_marked_critical(::censys_definitions::LintResult* w_sub_ca_certificate_policies_marked_critical);
+  const ::zsearch::LintResult& w_sub_ca_certificate_policies_marked_critical() const;
+  ::zsearch::LintResult* mutable_w_sub_ca_certificate_policies_marked_critical();
+  ::zsearch::LintResult* release_w_sub_ca_certificate_policies_marked_critical();
+  void set_allocated_w_sub_ca_certificate_policies_marked_critical(::zsearch::LintResult* w_sub_ca_certificate_policies_marked_critical);
 
-  // .censys_definitions.LintResult e_sub_ca_certificate_policies_missing = 144;
+  // .zsearch.LintResult e_sub_ca_certificate_policies_missing = 144;
   bool has_e_sub_ca_certificate_policies_missing() const;
   void clear_e_sub_ca_certificate_policies_missing();
   static const int kESubCaCertificatePoliciesMissingFieldNumber = 144;
-  const ::censys_definitions::LintResult& e_sub_ca_certificate_policies_missing() const;
-  ::censys_definitions::LintResult* mutable_e_sub_ca_certificate_policies_missing();
-  ::censys_definitions::LintResult* release_e_sub_ca_certificate_policies_missing();
-  void set_allocated_e_sub_ca_certificate_policies_missing(::censys_definitions::LintResult* e_sub_ca_certificate_policies_missing);
+  const ::zsearch::LintResult& e_sub_ca_certificate_policies_missing() const;
+  ::zsearch::LintResult* mutable_e_sub_ca_certificate_policies_missing();
+  ::zsearch::LintResult* release_e_sub_ca_certificate_policies_missing();
+  void set_allocated_e_sub_ca_certificate_policies_missing(::zsearch::LintResult* e_sub_ca_certificate_policies_missing);
 
-  // .censys_definitions.LintResult e_sub_ca_crl_distribution_points_does_not_contain_url = 145;
+  // .zsearch.LintResult e_sub_ca_crl_distribution_points_does_not_contain_url = 145;
   bool has_e_sub_ca_crl_distribution_points_does_not_contain_url() const;
   void clear_e_sub_ca_crl_distribution_points_does_not_contain_url();
   static const int kESubCaCrlDistributionPointsDoesNotContainUrlFieldNumber = 145;
-  const ::censys_definitions::LintResult& e_sub_ca_crl_distribution_points_does_not_contain_url() const;
-  ::censys_definitions::LintResult* mutable_e_sub_ca_crl_distribution_points_does_not_contain_url();
-  ::censys_definitions::LintResult* release_e_sub_ca_crl_distribution_points_does_not_contain_url();
-  void set_allocated_e_sub_ca_crl_distribution_points_does_not_contain_url(::censys_definitions::LintResult* e_sub_ca_crl_distribution_points_does_not_contain_url);
+  const ::zsearch::LintResult& e_sub_ca_crl_distribution_points_does_not_contain_url() const;
+  ::zsearch::LintResult* mutable_e_sub_ca_crl_distribution_points_does_not_contain_url();
+  ::zsearch::LintResult* release_e_sub_ca_crl_distribution_points_does_not_contain_url();
+  void set_allocated_e_sub_ca_crl_distribution_points_does_not_contain_url(::zsearch::LintResult* e_sub_ca_crl_distribution_points_does_not_contain_url);
 
-  // .censys_definitions.LintResult e_sub_ca_crl_distribution_points_marked_critical = 146;
+  // .zsearch.LintResult e_sub_ca_crl_distribution_points_marked_critical = 146;
   bool has_e_sub_ca_crl_distribution_points_marked_critical() const;
   void clear_e_sub_ca_crl_distribution_points_marked_critical();
   static const int kESubCaCrlDistributionPointsMarkedCriticalFieldNumber = 146;
-  const ::censys_definitions::LintResult& e_sub_ca_crl_distribution_points_marked_critical() const;
-  ::censys_definitions::LintResult* mutable_e_sub_ca_crl_distribution_points_marked_critical();
-  ::censys_definitions::LintResult* release_e_sub_ca_crl_distribution_points_marked_critical();
-  void set_allocated_e_sub_ca_crl_distribution_points_marked_critical(::censys_definitions::LintResult* e_sub_ca_crl_distribution_points_marked_critical);
+  const ::zsearch::LintResult& e_sub_ca_crl_distribution_points_marked_critical() const;
+  ::zsearch::LintResult* mutable_e_sub_ca_crl_distribution_points_marked_critical();
+  ::zsearch::LintResult* release_e_sub_ca_crl_distribution_points_marked_critical();
+  void set_allocated_e_sub_ca_crl_distribution_points_marked_critical(::zsearch::LintResult* e_sub_ca_crl_distribution_points_marked_critical);
 
-  // .censys_definitions.LintResult e_sub_ca_crl_distribution_points_missing = 147;
+  // .zsearch.LintResult e_sub_ca_crl_distribution_points_missing = 147;
   bool has_e_sub_ca_crl_distribution_points_missing() const;
   void clear_e_sub_ca_crl_distribution_points_missing();
   static const int kESubCaCrlDistributionPointsMissingFieldNumber = 147;
-  const ::censys_definitions::LintResult& e_sub_ca_crl_distribution_points_missing() const;
-  ::censys_definitions::LintResult* mutable_e_sub_ca_crl_distribution_points_missing();
-  ::censys_definitions::LintResult* release_e_sub_ca_crl_distribution_points_missing();
-  void set_allocated_e_sub_ca_crl_distribution_points_missing(::censys_definitions::LintResult* e_sub_ca_crl_distribution_points_missing);
+  const ::zsearch::LintResult& e_sub_ca_crl_distribution_points_missing() const;
+  ::zsearch::LintResult* mutable_e_sub_ca_crl_distribution_points_missing();
+  ::zsearch::LintResult* release_e_sub_ca_crl_distribution_points_missing();
+  void set_allocated_e_sub_ca_crl_distribution_points_missing(::zsearch::LintResult* e_sub_ca_crl_distribution_points_missing);
 
-  // .censys_definitions.LintResult w_sub_ca_eku_critical = 148;
+  // .zsearch.LintResult w_sub_ca_eku_critical = 148;
   bool has_w_sub_ca_eku_critical() const;
   void clear_w_sub_ca_eku_critical();
   static const int kWSubCaEkuCriticalFieldNumber = 148;
-  const ::censys_definitions::LintResult& w_sub_ca_eku_critical() const;
-  ::censys_definitions::LintResult* mutable_w_sub_ca_eku_critical();
-  ::censys_definitions::LintResult* release_w_sub_ca_eku_critical();
-  void set_allocated_w_sub_ca_eku_critical(::censys_definitions::LintResult* w_sub_ca_eku_critical);
+  const ::zsearch::LintResult& w_sub_ca_eku_critical() const;
+  ::zsearch::LintResult* mutable_w_sub_ca_eku_critical();
+  ::zsearch::LintResult* release_w_sub_ca_eku_critical();
+  void set_allocated_w_sub_ca_eku_critical(::zsearch::LintResult* w_sub_ca_eku_critical);
 
-  // .censys_definitions.LintResult w_sub_ca_name_constraints_not_critical = 149;
+  // .zsearch.LintResult w_sub_ca_name_constraints_not_critical = 149;
   bool has_w_sub_ca_name_constraints_not_critical() const;
   void clear_w_sub_ca_name_constraints_not_critical();
   static const int kWSubCaNameConstraintsNotCriticalFieldNumber = 149;
-  const ::censys_definitions::LintResult& w_sub_ca_name_constraints_not_critical() const;
-  ::censys_definitions::LintResult* mutable_w_sub_ca_name_constraints_not_critical();
-  ::censys_definitions::LintResult* release_w_sub_ca_name_constraints_not_critical();
-  void set_allocated_w_sub_ca_name_constraints_not_critical(::censys_definitions::LintResult* w_sub_ca_name_constraints_not_critical);
+  const ::zsearch::LintResult& w_sub_ca_name_constraints_not_critical() const;
+  ::zsearch::LintResult* mutable_w_sub_ca_name_constraints_not_critical();
+  ::zsearch::LintResult* release_w_sub_ca_name_constraints_not_critical();
+  void set_allocated_w_sub_ca_name_constraints_not_critical(::zsearch::LintResult* w_sub_ca_name_constraints_not_critical);
 
-  // .censys_definitions.LintResult e_sub_ca_no_dns_name_constraints = 150;
+  // .zsearch.LintResult e_sub_ca_no_dns_name_constraints = 150;
   bool has_e_sub_ca_no_dns_name_constraints() const;
   void clear_e_sub_ca_no_dns_name_constraints();
   static const int kESubCaNoDnsNameConstraintsFieldNumber = 150;
-  const ::censys_definitions::LintResult& e_sub_ca_no_dns_name_constraints() const;
-  ::censys_definitions::LintResult* mutable_e_sub_ca_no_dns_name_constraints();
-  ::censys_definitions::LintResult* release_e_sub_ca_no_dns_name_constraints();
-  void set_allocated_e_sub_ca_no_dns_name_constraints(::censys_definitions::LintResult* e_sub_ca_no_dns_name_constraints);
+  const ::zsearch::LintResult& e_sub_ca_no_dns_name_constraints() const;
+  ::zsearch::LintResult* mutable_e_sub_ca_no_dns_name_constraints();
+  ::zsearch::LintResult* release_e_sub_ca_no_dns_name_constraints();
+  void set_allocated_e_sub_ca_no_dns_name_constraints(::zsearch::LintResult* e_sub_ca_no_dns_name_constraints);
 
-  // .censys_definitions.LintResult e_sub_ca_no_ip_name_constraints = 151;
+  // .zsearch.LintResult e_sub_ca_no_ip_name_constraints = 151;
   bool has_e_sub_ca_no_ip_name_constraints() const;
   void clear_e_sub_ca_no_ip_name_constraints();
   static const int kESubCaNoIpNameConstraintsFieldNumber = 151;
-  const ::censys_definitions::LintResult& e_sub_ca_no_ip_name_constraints() const;
-  ::censys_definitions::LintResult* mutable_e_sub_ca_no_ip_name_constraints();
-  ::censys_definitions::LintResult* release_e_sub_ca_no_ip_name_constraints();
-  void set_allocated_e_sub_ca_no_ip_name_constraints(::censys_definitions::LintResult* e_sub_ca_no_ip_name_constraints);
+  const ::zsearch::LintResult& e_sub_ca_no_ip_name_constraints() const;
+  ::zsearch::LintResult* mutable_e_sub_ca_no_ip_name_constraints();
+  ::zsearch::LintResult* release_e_sub_ca_no_ip_name_constraints();
+  void set_allocated_e_sub_ca_no_ip_name_constraints(::zsearch::LintResult* e_sub_ca_no_ip_name_constraints);
 
-  // .censys_definitions.LintResult w_sub_cert_aia_does_not_contain_issuing_ca_url = 152;
+  // .zsearch.LintResult w_sub_cert_aia_does_not_contain_issuing_ca_url = 152;
   bool has_w_sub_cert_aia_does_not_contain_issuing_ca_url() const;
   void clear_w_sub_cert_aia_does_not_contain_issuing_ca_url();
   static const int kWSubCertAiaDoesNotContainIssuingCaUrlFieldNumber = 152;
-  const ::censys_definitions::LintResult& w_sub_cert_aia_does_not_contain_issuing_ca_url() const;
-  ::censys_definitions::LintResult* mutable_w_sub_cert_aia_does_not_contain_issuing_ca_url();
-  ::censys_definitions::LintResult* release_w_sub_cert_aia_does_not_contain_issuing_ca_url();
-  void set_allocated_w_sub_cert_aia_does_not_contain_issuing_ca_url(::censys_definitions::LintResult* w_sub_cert_aia_does_not_contain_issuing_ca_url);
+  const ::zsearch::LintResult& w_sub_cert_aia_does_not_contain_issuing_ca_url() const;
+  ::zsearch::LintResult* mutable_w_sub_cert_aia_does_not_contain_issuing_ca_url();
+  ::zsearch::LintResult* release_w_sub_cert_aia_does_not_contain_issuing_ca_url();
+  void set_allocated_w_sub_cert_aia_does_not_contain_issuing_ca_url(::zsearch::LintResult* w_sub_cert_aia_does_not_contain_issuing_ca_url);
 
-  // .censys_definitions.LintResult e_sub_cert_aia_does_not_contain_ocsp_url = 153;
+  // .zsearch.LintResult e_sub_cert_aia_does_not_contain_ocsp_url = 153;
   bool has_e_sub_cert_aia_does_not_contain_ocsp_url() const;
   void clear_e_sub_cert_aia_does_not_contain_ocsp_url();
   static const int kESubCertAiaDoesNotContainOcspUrlFieldNumber = 153;
-  const ::censys_definitions::LintResult& e_sub_cert_aia_does_not_contain_ocsp_url() const;
-  ::censys_definitions::LintResult* mutable_e_sub_cert_aia_does_not_contain_ocsp_url();
-  ::censys_definitions::LintResult* release_e_sub_cert_aia_does_not_contain_ocsp_url();
-  void set_allocated_e_sub_cert_aia_does_not_contain_ocsp_url(::censys_definitions::LintResult* e_sub_cert_aia_does_not_contain_ocsp_url);
+  const ::zsearch::LintResult& e_sub_cert_aia_does_not_contain_ocsp_url() const;
+  ::zsearch::LintResult* mutable_e_sub_cert_aia_does_not_contain_ocsp_url();
+  ::zsearch::LintResult* release_e_sub_cert_aia_does_not_contain_ocsp_url();
+  void set_allocated_e_sub_cert_aia_does_not_contain_ocsp_url(::zsearch::LintResult* e_sub_cert_aia_does_not_contain_ocsp_url);
 
-  // .censys_definitions.LintResult e_sub_cert_aia_missing = 154;
+  // .zsearch.LintResult e_sub_cert_aia_missing = 154;
   bool has_e_sub_cert_aia_missing() const;
   void clear_e_sub_cert_aia_missing();
   static const int kESubCertAiaMissingFieldNumber = 154;
-  const ::censys_definitions::LintResult& e_sub_cert_aia_missing() const;
-  ::censys_definitions::LintResult* mutable_e_sub_cert_aia_missing();
-  ::censys_definitions::LintResult* release_e_sub_cert_aia_missing();
-  void set_allocated_e_sub_cert_aia_missing(::censys_definitions::LintResult* e_sub_cert_aia_missing);
+  const ::zsearch::LintResult& e_sub_cert_aia_missing() const;
+  ::zsearch::LintResult* mutable_e_sub_cert_aia_missing();
+  ::zsearch::LintResult* release_e_sub_cert_aia_missing();
+  void set_allocated_e_sub_cert_aia_missing(::zsearch::LintResult* e_sub_cert_aia_missing);
 
-  // .censys_definitions.LintResult w_sub_cert_cert_policy_empty = 155;
+  // .zsearch.LintResult w_sub_cert_cert_policy_empty = 155;
   bool has_w_sub_cert_cert_policy_empty() const;
   void clear_w_sub_cert_cert_policy_empty();
   static const int kWSubCertCertPolicyEmptyFieldNumber = 155;
-  const ::censys_definitions::LintResult& w_sub_cert_cert_policy_empty() const;
-  ::censys_definitions::LintResult* mutable_w_sub_cert_cert_policy_empty();
-  ::censys_definitions::LintResult* release_w_sub_cert_cert_policy_empty();
-  void set_allocated_w_sub_cert_cert_policy_empty(::censys_definitions::LintResult* w_sub_cert_cert_policy_empty);
+  const ::zsearch::LintResult& w_sub_cert_cert_policy_empty() const;
+  ::zsearch::LintResult* mutable_w_sub_cert_cert_policy_empty();
+  ::zsearch::LintResult* release_w_sub_cert_cert_policy_empty();
+  void set_allocated_w_sub_cert_cert_policy_empty(::zsearch::LintResult* w_sub_cert_cert_policy_empty);
 
-  // .censys_definitions.LintResult w_sub_cert_certificate_policies_marked_critical = 156;
+  // .zsearch.LintResult w_sub_cert_certificate_policies_marked_critical = 156;
   bool has_w_sub_cert_certificate_policies_marked_critical() const;
   void clear_w_sub_cert_certificate_policies_marked_critical();
   static const int kWSubCertCertificatePoliciesMarkedCriticalFieldNumber = 156;
-  const ::censys_definitions::LintResult& w_sub_cert_certificate_policies_marked_critical() const;
-  ::censys_definitions::LintResult* mutable_w_sub_cert_certificate_policies_marked_critical();
-  ::censys_definitions::LintResult* release_w_sub_cert_certificate_policies_marked_critical();
-  void set_allocated_w_sub_cert_certificate_policies_marked_critical(::censys_definitions::LintResult* w_sub_cert_certificate_policies_marked_critical);
+  const ::zsearch::LintResult& w_sub_cert_certificate_policies_marked_critical() const;
+  ::zsearch::LintResult* mutable_w_sub_cert_certificate_policies_marked_critical();
+  ::zsearch::LintResult* release_w_sub_cert_certificate_policies_marked_critical();
+  void set_allocated_w_sub_cert_certificate_policies_marked_critical(::zsearch::LintResult* w_sub_cert_certificate_policies_marked_critical);
 
-  // .censys_definitions.LintResult e_sub_cert_crl_distribution_points_does_not_contain_url = 157;
+  // .zsearch.LintResult e_sub_cert_crl_distribution_points_does_not_contain_url = 157;
   bool has_e_sub_cert_crl_distribution_points_does_not_contain_url() const;
   void clear_e_sub_cert_crl_distribution_points_does_not_contain_url();
   static const int kESubCertCrlDistributionPointsDoesNotContainUrlFieldNumber = 157;
-  const ::censys_definitions::LintResult& e_sub_cert_crl_distribution_points_does_not_contain_url() const;
-  ::censys_definitions::LintResult* mutable_e_sub_cert_crl_distribution_points_does_not_contain_url();
-  ::censys_definitions::LintResult* release_e_sub_cert_crl_distribution_points_does_not_contain_url();
-  void set_allocated_e_sub_cert_crl_distribution_points_does_not_contain_url(::censys_definitions::LintResult* e_sub_cert_crl_distribution_points_does_not_contain_url);
+  const ::zsearch::LintResult& e_sub_cert_crl_distribution_points_does_not_contain_url() const;
+  ::zsearch::LintResult* mutable_e_sub_cert_crl_distribution_points_does_not_contain_url();
+  ::zsearch::LintResult* release_e_sub_cert_crl_distribution_points_does_not_contain_url();
+  void set_allocated_e_sub_cert_crl_distribution_points_does_not_contain_url(::zsearch::LintResult* e_sub_cert_crl_distribution_points_does_not_contain_url);
 
-  // .censys_definitions.LintResult e_sub_cert_crl_distribution_points_marked_critical = 158;
+  // .zsearch.LintResult e_sub_cert_crl_distribution_points_marked_critical = 158;
   bool has_e_sub_cert_crl_distribution_points_marked_critical() const;
   void clear_e_sub_cert_crl_distribution_points_marked_critical();
   static const int kESubCertCrlDistributionPointsMarkedCriticalFieldNumber = 158;
-  const ::censys_definitions::LintResult& e_sub_cert_crl_distribution_points_marked_critical() const;
-  ::censys_definitions::LintResult* mutable_e_sub_cert_crl_distribution_points_marked_critical();
-  ::censys_definitions::LintResult* release_e_sub_cert_crl_distribution_points_marked_critical();
-  void set_allocated_e_sub_cert_crl_distribution_points_marked_critical(::censys_definitions::LintResult* e_sub_cert_crl_distribution_points_marked_critical);
+  const ::zsearch::LintResult& e_sub_cert_crl_distribution_points_marked_critical() const;
+  ::zsearch::LintResult* mutable_e_sub_cert_crl_distribution_points_marked_critical();
+  ::zsearch::LintResult* release_e_sub_cert_crl_distribution_points_marked_critical();
+  void set_allocated_e_sub_cert_crl_distribution_points_marked_critical(::zsearch::LintResult* e_sub_cert_crl_distribution_points_marked_critical);
 
-  // .censys_definitions.LintResult w_sub_cert_eku_extra_values = 159;
+  // .zsearch.LintResult w_sub_cert_eku_extra_values = 159;
   bool has_w_sub_cert_eku_extra_values() const;
   void clear_w_sub_cert_eku_extra_values();
   static const int kWSubCertEkuExtraValuesFieldNumber = 159;
-  const ::censys_definitions::LintResult& w_sub_cert_eku_extra_values() const;
-  ::censys_definitions::LintResult* mutable_w_sub_cert_eku_extra_values();
-  ::censys_definitions::LintResult* release_w_sub_cert_eku_extra_values();
-  void set_allocated_w_sub_cert_eku_extra_values(::censys_definitions::LintResult* w_sub_cert_eku_extra_values);
+  const ::zsearch::LintResult& w_sub_cert_eku_extra_values() const;
+  ::zsearch::LintResult* mutable_w_sub_cert_eku_extra_values();
+  ::zsearch::LintResult* release_w_sub_cert_eku_extra_values();
+  void set_allocated_w_sub_cert_eku_extra_values(::zsearch::LintResult* w_sub_cert_eku_extra_values);
 
-  // .censys_definitions.LintResult e_sub_cert_eku_missing = 160;
+  // .zsearch.LintResult e_sub_cert_eku_missing = 160;
   bool has_e_sub_cert_eku_missing() const;
   void clear_e_sub_cert_eku_missing();
   static const int kESubCertEkuMissingFieldNumber = 160;
-  const ::censys_definitions::LintResult& e_sub_cert_eku_missing() const;
-  ::censys_definitions::LintResult* mutable_e_sub_cert_eku_missing();
-  ::censys_definitions::LintResult* release_e_sub_cert_eku_missing();
-  void set_allocated_e_sub_cert_eku_missing(::censys_definitions::LintResult* e_sub_cert_eku_missing);
+  const ::zsearch::LintResult& e_sub_cert_eku_missing() const;
+  ::zsearch::LintResult* mutable_e_sub_cert_eku_missing();
+  ::zsearch::LintResult* release_e_sub_cert_eku_missing();
+  void set_allocated_e_sub_cert_eku_missing(::zsearch::LintResult* e_sub_cert_eku_missing);
 
-  // .censys_definitions.LintResult e_sub_cert_eku_server_auth_client_auth_missing = 161;
+  // .zsearch.LintResult e_sub_cert_eku_server_auth_client_auth_missing = 161;
   bool has_e_sub_cert_eku_server_auth_client_auth_missing() const;
   void clear_e_sub_cert_eku_server_auth_client_auth_missing();
   static const int kESubCertEkuServerAuthClientAuthMissingFieldNumber = 161;
-  const ::censys_definitions::LintResult& e_sub_cert_eku_server_auth_client_auth_missing() const;
-  ::censys_definitions::LintResult* mutable_e_sub_cert_eku_server_auth_client_auth_missing();
-  ::censys_definitions::LintResult* release_e_sub_cert_eku_server_auth_client_auth_missing();
-  void set_allocated_e_sub_cert_eku_server_auth_client_auth_missing(::censys_definitions::LintResult* e_sub_cert_eku_server_auth_client_auth_missing);
+  const ::zsearch::LintResult& e_sub_cert_eku_server_auth_client_auth_missing() const;
+  ::zsearch::LintResult* mutable_e_sub_cert_eku_server_auth_client_auth_missing();
+  ::zsearch::LintResult* release_e_sub_cert_eku_server_auth_client_auth_missing();
+  void set_allocated_e_sub_cert_eku_server_auth_client_auth_missing(::zsearch::LintResult* e_sub_cert_eku_server_auth_client_auth_missing);
 
-  // .censys_definitions.LintResult e_sub_cert_key_usage_cert_sign_bit_set = 162;
+  // .zsearch.LintResult e_sub_cert_key_usage_cert_sign_bit_set = 162;
   bool has_e_sub_cert_key_usage_cert_sign_bit_set() const;
   void clear_e_sub_cert_key_usage_cert_sign_bit_set();
   static const int kESubCertKeyUsageCertSignBitSetFieldNumber = 162;
-  const ::censys_definitions::LintResult& e_sub_cert_key_usage_cert_sign_bit_set() const;
-  ::censys_definitions::LintResult* mutable_e_sub_cert_key_usage_cert_sign_bit_set();
-  ::censys_definitions::LintResult* release_e_sub_cert_key_usage_cert_sign_bit_set();
-  void set_allocated_e_sub_cert_key_usage_cert_sign_bit_set(::censys_definitions::LintResult* e_sub_cert_key_usage_cert_sign_bit_set);
+  const ::zsearch::LintResult& e_sub_cert_key_usage_cert_sign_bit_set() const;
+  ::zsearch::LintResult* mutable_e_sub_cert_key_usage_cert_sign_bit_set();
+  ::zsearch::LintResult* release_e_sub_cert_key_usage_cert_sign_bit_set();
+  void set_allocated_e_sub_cert_key_usage_cert_sign_bit_set(::zsearch::LintResult* e_sub_cert_key_usage_cert_sign_bit_set);
 
-  // .censys_definitions.LintResult e_sub_cert_or_sub_ca_using_sha1 = 163;
+  // .zsearch.LintResult e_sub_cert_or_sub_ca_using_sha1 = 163;
   bool has_e_sub_cert_or_sub_ca_using_sha1() const;
   void clear_e_sub_cert_or_sub_ca_using_sha1();
   static const int kESubCertOrSubCaUsingSha1FieldNumber = 163;
-  const ::censys_definitions::LintResult& e_sub_cert_or_sub_ca_using_sha1() const;
-  ::censys_definitions::LintResult* mutable_e_sub_cert_or_sub_ca_using_sha1();
-  ::censys_definitions::LintResult* release_e_sub_cert_or_sub_ca_using_sha1();
-  void set_allocated_e_sub_cert_or_sub_ca_using_sha1(::censys_definitions::LintResult* e_sub_cert_or_sub_ca_using_sha1);
+  const ::zsearch::LintResult& e_sub_cert_or_sub_ca_using_sha1() const;
+  ::zsearch::LintResult* mutable_e_sub_cert_or_sub_ca_using_sha1();
+  ::zsearch::LintResult* release_e_sub_cert_or_sub_ca_using_sha1();
+  void set_allocated_e_sub_cert_or_sub_ca_using_sha1(::zsearch::LintResult* e_sub_cert_or_sub_ca_using_sha1);
 
-  // .censys_definitions.LintResult w_sub_cert_sha1_expiration_too_long = 164;
+  // .zsearch.LintResult w_sub_cert_sha1_expiration_too_long = 164;
   bool has_w_sub_cert_sha1_expiration_too_long() const;
   void clear_w_sub_cert_sha1_expiration_too_long();
   static const int kWSubCertSha1ExpirationTooLongFieldNumber = 164;
-  const ::censys_definitions::LintResult& w_sub_cert_sha1_expiration_too_long() const;
-  ::censys_definitions::LintResult* mutable_w_sub_cert_sha1_expiration_too_long();
-  ::censys_definitions::LintResult* release_w_sub_cert_sha1_expiration_too_long();
-  void set_allocated_w_sub_cert_sha1_expiration_too_long(::censys_definitions::LintResult* w_sub_cert_sha1_expiration_too_long);
+  const ::zsearch::LintResult& w_sub_cert_sha1_expiration_too_long() const;
+  ::zsearch::LintResult* mutable_w_sub_cert_sha1_expiration_too_long();
+  ::zsearch::LintResult* release_w_sub_cert_sha1_expiration_too_long();
+  void set_allocated_w_sub_cert_sha1_expiration_too_long(::zsearch::LintResult* w_sub_cert_sha1_expiration_too_long);
 
-  // .censys_definitions.LintResult e_subject_common_name_disallowed = 165;
+  // .zsearch.LintResult e_subject_common_name_disallowed = 165;
   bool has_e_subject_common_name_disallowed() const;
   void clear_e_subject_common_name_disallowed();
   static const int kESubjectCommonNameDisallowedFieldNumber = 165;
-  const ::censys_definitions::LintResult& e_subject_common_name_disallowed() const;
-  ::censys_definitions::LintResult* mutable_e_subject_common_name_disallowed();
-  ::censys_definitions::LintResult* release_e_subject_common_name_disallowed();
-  void set_allocated_e_subject_common_name_disallowed(::censys_definitions::LintResult* e_subject_common_name_disallowed);
+  const ::zsearch::LintResult& e_subject_common_name_disallowed() const;
+  ::zsearch::LintResult* mutable_e_subject_common_name_disallowed();
+  ::zsearch::LintResult* release_e_subject_common_name_disallowed();
+  void set_allocated_e_subject_common_name_disallowed(::zsearch::LintResult* e_subject_common_name_disallowed);
 
-  // .censys_definitions.LintResult w_subject_common_name_included = 166;
+  // .zsearch.LintResult w_subject_common_name_included = 166;
   bool has_w_subject_common_name_included() const;
   void clear_w_subject_common_name_included();
   static const int kWSubjectCommonNameIncludedFieldNumber = 166;
-  const ::censys_definitions::LintResult& w_subject_common_name_included() const;
-  ::censys_definitions::LintResult* mutable_w_subject_common_name_included();
-  ::censys_definitions::LintResult* release_w_subject_common_name_included();
-  void set_allocated_w_subject_common_name_included(::censys_definitions::LintResult* w_subject_common_name_included);
+  const ::zsearch::LintResult& w_subject_common_name_included() const;
+  ::zsearch::LintResult* mutable_w_subject_common_name_included();
+  ::zsearch::LintResult* release_w_subject_common_name_included();
+  void set_allocated_w_subject_common_name_included(::zsearch::LintResult* w_subject_common_name_included);
 
-  // .censys_definitions.LintResult e_subject_common_name_not_from_san = 167;
+  // .zsearch.LintResult e_subject_common_name_not_from_san = 167;
   bool has_e_subject_common_name_not_from_san() const;
   void clear_e_subject_common_name_not_from_san();
   static const int kESubjectCommonNameNotFromSanFieldNumber = 167;
-  const ::censys_definitions::LintResult& e_subject_common_name_not_from_san() const;
-  ::censys_definitions::LintResult* mutable_e_subject_common_name_not_from_san();
-  ::censys_definitions::LintResult* release_e_subject_common_name_not_from_san();
-  void set_allocated_e_subject_common_name_not_from_san(::censys_definitions::LintResult* e_subject_common_name_not_from_san);
+  const ::zsearch::LintResult& e_subject_common_name_not_from_san() const;
+  ::zsearch::LintResult* mutable_e_subject_common_name_not_from_san();
+  ::zsearch::LintResult* release_e_subject_common_name_not_from_san();
+  void set_allocated_e_subject_common_name_not_from_san(::zsearch::LintResult* e_subject_common_name_not_from_san);
 
-  // .censys_definitions.LintResult e_subject_contains_noninformational_value = 168;
+  // .zsearch.LintResult e_subject_contains_noninformational_value = 168;
   bool has_e_subject_contains_noninformational_value() const;
   void clear_e_subject_contains_noninformational_value();
   static const int kESubjectContainsNoninformationalValueFieldNumber = 168;
-  const ::censys_definitions::LintResult& e_subject_contains_noninformational_value() const;
-  ::censys_definitions::LintResult* mutable_e_subject_contains_noninformational_value();
-  ::censys_definitions::LintResult* release_e_subject_contains_noninformational_value();
-  void set_allocated_e_subject_contains_noninformational_value(::censys_definitions::LintResult* e_subject_contains_noninformational_value);
+  const ::zsearch::LintResult& e_subject_contains_noninformational_value() const;
+  ::zsearch::LintResult* mutable_e_subject_contains_noninformational_value();
+  ::zsearch::LintResult* release_e_subject_contains_noninformational_value();
+  void set_allocated_e_subject_contains_noninformational_value(::zsearch::LintResult* e_subject_contains_noninformational_value);
 
-  // .censys_definitions.LintResult e_subject_contains_reserved_ip = 169;
+  // .zsearch.LintResult e_subject_contains_reserved_ip = 169;
   bool has_e_subject_contains_reserved_ip() const;
   void clear_e_subject_contains_reserved_ip();
   static const int kESubjectContainsReservedIpFieldNumber = 169;
-  const ::censys_definitions::LintResult& e_subject_contains_reserved_ip() const;
-  ::censys_definitions::LintResult* mutable_e_subject_contains_reserved_ip();
-  ::censys_definitions::LintResult* release_e_subject_contains_reserved_ip();
-  void set_allocated_e_subject_contains_reserved_ip(::censys_definitions::LintResult* e_subject_contains_reserved_ip);
+  const ::zsearch::LintResult& e_subject_contains_reserved_ip() const;
+  ::zsearch::LintResult* mutable_e_subject_contains_reserved_ip();
+  ::zsearch::LintResult* release_e_subject_contains_reserved_ip();
+  void set_allocated_e_subject_contains_reserved_ip(::zsearch::LintResult* e_subject_contains_reserved_ip);
 
-  // .censys_definitions.LintResult e_subject_country_not_iso = 170;
+  // .zsearch.LintResult e_subject_country_not_iso = 170;
   bool has_e_subject_country_not_iso() const;
   void clear_e_subject_country_not_iso();
   static const int kESubjectCountryNotIsoFieldNumber = 170;
-  const ::censys_definitions::LintResult& e_subject_country_not_iso() const;
-  ::censys_definitions::LintResult* mutable_e_subject_country_not_iso();
-  ::censys_definitions::LintResult* release_e_subject_country_not_iso();
-  void set_allocated_e_subject_country_not_iso(::censys_definitions::LintResult* e_subject_country_not_iso);
+  const ::zsearch::LintResult& e_subject_country_not_iso() const;
+  ::zsearch::LintResult* mutable_e_subject_country_not_iso();
+  ::zsearch::LintResult* release_e_subject_country_not_iso();
+  void set_allocated_e_subject_country_not_iso(::zsearch::LintResult* e_subject_country_not_iso);
 
-  // .censys_definitions.LintResult e_subject_empty_without_san = 171;
+  // .zsearch.LintResult e_subject_empty_without_san = 171;
   bool has_e_subject_empty_without_san() const;
   void clear_e_subject_empty_without_san();
   static const int kESubjectEmptyWithoutSanFieldNumber = 171;
-  const ::censys_definitions::LintResult& e_subject_empty_without_san() const;
-  ::censys_definitions::LintResult* mutable_e_subject_empty_without_san();
-  ::censys_definitions::LintResult* release_e_subject_empty_without_san();
-  void set_allocated_e_subject_empty_without_san(::censys_definitions::LintResult* e_subject_empty_without_san);
+  const ::zsearch::LintResult& e_subject_empty_without_san() const;
+  ::zsearch::LintResult* mutable_e_subject_empty_without_san();
+  ::zsearch::LintResult* release_e_subject_empty_without_san();
+  void set_allocated_e_subject_empty_without_san(::zsearch::LintResult* e_subject_empty_without_san);
 
-  // .censys_definitions.LintResult e_subject_info_access_marked_critical = 172;
+  // .zsearch.LintResult e_subject_info_access_marked_critical = 172;
   bool has_e_subject_info_access_marked_critical() const;
   void clear_e_subject_info_access_marked_critical();
   static const int kESubjectInfoAccessMarkedCriticalFieldNumber = 172;
-  const ::censys_definitions::LintResult& e_subject_info_access_marked_critical() const;
-  ::censys_definitions::LintResult* mutable_e_subject_info_access_marked_critical();
-  ::censys_definitions::LintResult* release_e_subject_info_access_marked_critical();
-  void set_allocated_e_subject_info_access_marked_critical(::censys_definitions::LintResult* e_subject_info_access_marked_critical);
+  const ::zsearch::LintResult& e_subject_info_access_marked_critical() const;
+  ::zsearch::LintResult* mutable_e_subject_info_access_marked_critical();
+  ::zsearch::LintResult* release_e_subject_info_access_marked_critical();
+  void set_allocated_e_subject_info_access_marked_critical(::zsearch::LintResult* e_subject_info_access_marked_critical);
 
-  // .censys_definitions.LintResult e_subject_locality_without_org = 173;
+  // .zsearch.LintResult e_subject_locality_without_org = 173;
   bool has_e_subject_locality_without_org() const;
   void clear_e_subject_locality_without_org();
   static const int kESubjectLocalityWithoutOrgFieldNumber = 173;
-  const ::censys_definitions::LintResult& e_subject_locality_without_org() const;
-  ::censys_definitions::LintResult* mutable_e_subject_locality_without_org();
-  ::censys_definitions::LintResult* release_e_subject_locality_without_org();
-  void set_allocated_e_subject_locality_without_org(::censys_definitions::LintResult* e_subject_locality_without_org);
+  const ::zsearch::LintResult& e_subject_locality_without_org() const;
+  ::zsearch::LintResult* mutable_e_subject_locality_without_org();
+  ::zsearch::LintResult* release_e_subject_locality_without_org();
+  void set_allocated_e_subject_locality_without_org(::zsearch::LintResult* e_subject_locality_without_org);
 
-  // .censys_definitions.LintResult e_subject_not_dn = 174;
+  // .zsearch.LintResult e_subject_not_dn = 174;
   bool has_e_subject_not_dn() const;
   void clear_e_subject_not_dn();
   static const int kESubjectNotDnFieldNumber = 174;
-  const ::censys_definitions::LintResult& e_subject_not_dn() const;
-  ::censys_definitions::LintResult* mutable_e_subject_not_dn();
-  ::censys_definitions::LintResult* release_e_subject_not_dn();
-  void set_allocated_e_subject_not_dn(::censys_definitions::LintResult* e_subject_not_dn);
+  const ::zsearch::LintResult& e_subject_not_dn() const;
+  ::zsearch::LintResult* mutable_e_subject_not_dn();
+  ::zsearch::LintResult* release_e_subject_not_dn();
+  void set_allocated_e_subject_not_dn(::zsearch::LintResult* e_subject_not_dn);
 
-  // .censys_definitions.LintResult e_subject_org_without_country = 175;
+  // .zsearch.LintResult e_subject_org_without_country = 175;
   bool has_e_subject_org_without_country() const;
   void clear_e_subject_org_without_country();
   static const int kESubjectOrgWithoutCountryFieldNumber = 175;
-  const ::censys_definitions::LintResult& e_subject_org_without_country() const;
-  ::censys_definitions::LintResult* mutable_e_subject_org_without_country();
-  ::censys_definitions::LintResult* release_e_subject_org_without_country();
-  void set_allocated_e_subject_org_without_country(::censys_definitions::LintResult* e_subject_org_without_country);
+  const ::zsearch::LintResult& e_subject_org_without_country() const;
+  ::zsearch::LintResult* mutable_e_subject_org_without_country();
+  ::zsearch::LintResult* release_e_subject_org_without_country();
+  void set_allocated_e_subject_org_without_country(::zsearch::LintResult* e_subject_org_without_country);
 
-  // .censys_definitions.LintResult e_subject_org_without_locality_or_province = 176;
+  // .zsearch.LintResult e_subject_org_without_locality_or_province = 176;
   bool has_e_subject_org_without_locality_or_province() const;
   void clear_e_subject_org_without_locality_or_province();
   static const int kESubjectOrgWithoutLocalityOrProvinceFieldNumber = 176;
-  const ::censys_definitions::LintResult& e_subject_org_without_locality_or_province() const;
-  ::censys_definitions::LintResult* mutable_e_subject_org_without_locality_or_province();
-  ::censys_definitions::LintResult* release_e_subject_org_without_locality_or_province();
-  void set_allocated_e_subject_org_without_locality_or_province(::censys_definitions::LintResult* e_subject_org_without_locality_or_province);
+  const ::zsearch::LintResult& e_subject_org_without_locality_or_province() const;
+  ::zsearch::LintResult* mutable_e_subject_org_without_locality_or_province();
+  ::zsearch::LintResult* release_e_subject_org_without_locality_or_province();
+  void set_allocated_e_subject_org_without_locality_or_province(::zsearch::LintResult* e_subject_org_without_locality_or_province);
 
-  // .censys_definitions.LintResult e_subject_postal_without_org = 177;
+  // .zsearch.LintResult e_subject_postal_without_org = 177;
   bool has_e_subject_postal_without_org() const;
   void clear_e_subject_postal_without_org();
   static const int kESubjectPostalWithoutOrgFieldNumber = 177;
-  const ::censys_definitions::LintResult& e_subject_postal_without_org() const;
-  ::censys_definitions::LintResult* mutable_e_subject_postal_without_org();
-  ::censys_definitions::LintResult* release_e_subject_postal_without_org();
-  void set_allocated_e_subject_postal_without_org(::censys_definitions::LintResult* e_subject_postal_without_org);
+  const ::zsearch::LintResult& e_subject_postal_without_org() const;
+  ::zsearch::LintResult* mutable_e_subject_postal_without_org();
+  ::zsearch::LintResult* release_e_subject_postal_without_org();
+  void set_allocated_e_subject_postal_without_org(::zsearch::LintResult* e_subject_postal_without_org);
 
-  // .censys_definitions.LintResult e_subject_province_without_org = 178;
+  // .zsearch.LintResult e_subject_province_without_org = 178;
   bool has_e_subject_province_without_org() const;
   void clear_e_subject_province_without_org();
   static const int kESubjectProvinceWithoutOrgFieldNumber = 178;
-  const ::censys_definitions::LintResult& e_subject_province_without_org() const;
-  ::censys_definitions::LintResult* mutable_e_subject_province_without_org();
-  ::censys_definitions::LintResult* release_e_subject_province_without_org();
-  void set_allocated_e_subject_province_without_org(::censys_definitions::LintResult* e_subject_province_without_org);
+  const ::zsearch::LintResult& e_subject_province_without_org() const;
+  ::zsearch::LintResult* mutable_e_subject_province_without_org();
+  ::zsearch::LintResult* release_e_subject_province_without_org();
+  void set_allocated_e_subject_province_without_org(::zsearch::LintResult* e_subject_province_without_org);
 
-  // .censys_definitions.LintResult e_subject_street_without_org = 179;
+  // .zsearch.LintResult e_subject_street_without_org = 179;
   bool has_e_subject_street_without_org() const;
   void clear_e_subject_street_without_org();
   static const int kESubjectStreetWithoutOrgFieldNumber = 179;
-  const ::censys_definitions::LintResult& e_subject_street_without_org() const;
-  ::censys_definitions::LintResult* mutable_e_subject_street_without_org();
-  ::censys_definitions::LintResult* release_e_subject_street_without_org();
-  void set_allocated_e_subject_street_without_org(::censys_definitions::LintResult* e_subject_street_without_org);
+  const ::zsearch::LintResult& e_subject_street_without_org() const;
+  ::zsearch::LintResult* mutable_e_subject_street_without_org();
+  ::zsearch::LintResult* release_e_subject_street_without_org();
+  void set_allocated_e_subject_street_without_org(::zsearch::LintResult* e_subject_street_without_org);
 
-  // .censys_definitions.LintResult e_utc_time_does_not_include_seconds = 180;
+  // .zsearch.LintResult e_utc_time_does_not_include_seconds = 180;
   bool has_e_utc_time_does_not_include_seconds() const;
   void clear_e_utc_time_does_not_include_seconds();
   static const int kEUtcTimeDoesNotIncludeSecondsFieldNumber = 180;
-  const ::censys_definitions::LintResult& e_utc_time_does_not_include_seconds() const;
-  ::censys_definitions::LintResult* mutable_e_utc_time_does_not_include_seconds();
-  ::censys_definitions::LintResult* release_e_utc_time_does_not_include_seconds();
-  void set_allocated_e_utc_time_does_not_include_seconds(::censys_definitions::LintResult* e_utc_time_does_not_include_seconds);
+  const ::zsearch::LintResult& e_utc_time_does_not_include_seconds() const;
+  ::zsearch::LintResult* mutable_e_utc_time_does_not_include_seconds();
+  ::zsearch::LintResult* release_e_utc_time_does_not_include_seconds();
+  void set_allocated_e_utc_time_does_not_include_seconds(::zsearch::LintResult* e_utc_time_does_not_include_seconds);
 
-  // .censys_definitions.LintResult e_utc_time_not_in_zulu = 181;
+  // .zsearch.LintResult e_utc_time_not_in_zulu = 181;
   bool has_e_utc_time_not_in_zulu() const;
   void clear_e_utc_time_not_in_zulu();
   static const int kEUtcTimeNotInZuluFieldNumber = 181;
-  const ::censys_definitions::LintResult& e_utc_time_not_in_zulu() const;
-  ::censys_definitions::LintResult* mutable_e_utc_time_not_in_zulu();
-  ::censys_definitions::LintResult* release_e_utc_time_not_in_zulu();
-  void set_allocated_e_utc_time_not_in_zulu(::censys_definitions::LintResult* e_utc_time_not_in_zulu);
+  const ::zsearch::LintResult& e_utc_time_not_in_zulu() const;
+  ::zsearch::LintResult* mutable_e_utc_time_not_in_zulu();
+  ::zsearch::LintResult* release_e_utc_time_not_in_zulu();
+  void set_allocated_e_utc_time_not_in_zulu(::zsearch::LintResult* e_utc_time_not_in_zulu);
 
-  // .censys_definitions.LintResult e_validity_time_not_positive = 182;
+  // .zsearch.LintResult e_validity_time_not_positive = 182;
   bool has_e_validity_time_not_positive() const;
   void clear_e_validity_time_not_positive();
   static const int kEValidityTimeNotPositiveFieldNumber = 182;
-  const ::censys_definitions::LintResult& e_validity_time_not_positive() const;
-  ::censys_definitions::LintResult* mutable_e_validity_time_not_positive();
-  ::censys_definitions::LintResult* release_e_validity_time_not_positive();
-  void set_allocated_e_validity_time_not_positive(::censys_definitions::LintResult* e_validity_time_not_positive);
+  const ::zsearch::LintResult& e_validity_time_not_positive() const;
+  ::zsearch::LintResult* mutable_e_validity_time_not_positive();
+  ::zsearch::LintResult* release_e_validity_time_not_positive();
+  void set_allocated_e_validity_time_not_positive(::zsearch::LintResult* e_validity_time_not_positive);
 
-  // .censys_definitions.LintResult e_wrong_time_format_pre2050 = 183;
+  // .zsearch.LintResult e_wrong_time_format_pre2050 = 183;
   bool has_e_wrong_time_format_pre2050() const;
   void clear_e_wrong_time_format_pre2050();
   static const int kEWrongTimeFormatPre2050FieldNumber = 183;
-  const ::censys_definitions::LintResult& e_wrong_time_format_pre2050() const;
-  ::censys_definitions::LintResult* mutable_e_wrong_time_format_pre2050();
-  ::censys_definitions::LintResult* release_e_wrong_time_format_pre2050();
-  void set_allocated_e_wrong_time_format_pre2050(::censys_definitions::LintResult* e_wrong_time_format_pre2050);
+  const ::zsearch::LintResult& e_wrong_time_format_pre2050() const;
+  ::zsearch::LintResult* mutable_e_wrong_time_format_pre2050();
+  ::zsearch::LintResult* release_e_wrong_time_format_pre2050();
+  void set_allocated_e_wrong_time_format_pre2050(::zsearch::LintResult* e_wrong_time_format_pre2050);
 
-  // .censys_definitions.LintResult e_rsa_no_public_key = 184;
+  // .zsearch.LintResult e_rsa_no_public_key = 184;
   bool has_e_rsa_no_public_key() const;
   void clear_e_rsa_no_public_key();
   static const int kERsaNoPublicKeyFieldNumber = 184;
-  const ::censys_definitions::LintResult& e_rsa_no_public_key() const;
-  ::censys_definitions::LintResult* mutable_e_rsa_no_public_key();
-  ::censys_definitions::LintResult* release_e_rsa_no_public_key();
-  void set_allocated_e_rsa_no_public_key(::censys_definitions::LintResult* e_rsa_no_public_key);
+  const ::zsearch::LintResult& e_rsa_no_public_key() const;
+  ::zsearch::LintResult* mutable_e_rsa_no_public_key();
+  ::zsearch::LintResult* release_e_rsa_no_public_key();
+  void set_allocated_e_rsa_no_public_key(::zsearch::LintResult* e_rsa_no_public_key);
 
-  // .censys_definitions.LintResult e_sub_cert_certificate_policies_missing = 185;
+  // .zsearch.LintResult e_sub_cert_certificate_policies_missing = 185;
   bool has_e_sub_cert_certificate_policies_missing() const;
   void clear_e_sub_cert_certificate_policies_missing();
   static const int kESubCertCertificatePoliciesMissingFieldNumber = 185;
-  const ::censys_definitions::LintResult& e_sub_cert_certificate_policies_missing() const;
-  ::censys_definitions::LintResult* mutable_e_sub_cert_certificate_policies_missing();
-  ::censys_definitions::LintResult* release_e_sub_cert_certificate_policies_missing();
-  void set_allocated_e_sub_cert_certificate_policies_missing(::censys_definitions::LintResult* e_sub_cert_certificate_policies_missing);
+  const ::zsearch::LintResult& e_sub_cert_certificate_policies_missing() const;
+  ::zsearch::LintResult* mutable_e_sub_cert_certificate_policies_missing();
+  ::zsearch::LintResult* release_e_sub_cert_certificate_policies_missing();
+  void set_allocated_e_sub_cert_certificate_policies_missing(::zsearch::LintResult* e_sub_cert_certificate_policies_missing);
 
-  // .censys_definitions.LintResult e_sub_cert_key_usage_crl_sign_bit_set = 186;
+  // .zsearch.LintResult e_sub_cert_key_usage_crl_sign_bit_set = 186;
   bool has_e_sub_cert_key_usage_crl_sign_bit_set() const;
   void clear_e_sub_cert_key_usage_crl_sign_bit_set();
   static const int kESubCertKeyUsageCrlSignBitSetFieldNumber = 186;
-  const ::censys_definitions::LintResult& e_sub_cert_key_usage_crl_sign_bit_set() const;
-  ::censys_definitions::LintResult* mutable_e_sub_cert_key_usage_crl_sign_bit_set();
-  ::censys_definitions::LintResult* release_e_sub_cert_key_usage_crl_sign_bit_set();
-  void set_allocated_e_sub_cert_key_usage_crl_sign_bit_set(::censys_definitions::LintResult* e_sub_cert_key_usage_crl_sign_bit_set);
+  const ::zsearch::LintResult& e_sub_cert_key_usage_crl_sign_bit_set() const;
+  ::zsearch::LintResult* mutable_e_sub_cert_key_usage_crl_sign_bit_set();
+  ::zsearch::LintResult* release_e_sub_cert_key_usage_crl_sign_bit_set();
+  void set_allocated_e_sub_cert_key_usage_crl_sign_bit_set(::zsearch::LintResult* e_sub_cert_key_usage_crl_sign_bit_set);
 
-  // @@protoc_insertion_point(class_scope:censys_definitions.Lints)
+  // @@protoc_insertion_point(class_scope:zsearch.Lints)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::censys_definitions::LintResult* e_basic_constraints_not_critical_;
-  ::censys_definitions::LintResult* e_ian_bare_wildcard_;
-  ::censys_definitions::LintResult* e_ian_wildcard_not_first_;
-  ::censys_definitions::LintResult* e_san_bare_wildcard_;
-  ::censys_definitions::LintResult* e_san_wildcard_not_first_;
-  ::censys_definitions::LintResult* e_ca_country_name_invalid_;
-  ::censys_definitions::LintResult* e_ca_country_name_missing_;
-  ::censys_definitions::LintResult* e_ca_crl_sign_not_set_;
-  ::censys_definitions::LintResult* w_ca_digital_signature_not_set_;
-  ::censys_definitions::LintResult* e_ca_key_cert_sign_not_set_;
-  ::censys_definitions::LintResult* e_ca_key_usage_missing_;
-  ::censys_definitions::LintResult* e_ca_key_usage_not_critical_;
-  ::censys_definitions::LintResult* e_ca_organization_name_missing_;
-  ::censys_definitions::LintResult* e_ca_subject_field_empty_;
-  ::censys_definitions::LintResult* e_cert_contains_unique_identifier_;
-  ::censys_definitions::LintResult* e_cert_extensions_version_not_3_;
-  ::censys_definitions::LintResult* e_cab_dv_conflicts_with_locality_;
-  ::censys_definitions::LintResult* e_cab_dv_conflicts_with_org_;
-  ::censys_definitions::LintResult* e_cab_dv_conflicts_with_postal_;
-  ::censys_definitions::LintResult* e_cab_dv_conflicts_with_province_;
-  ::censys_definitions::LintResult* e_cab_dv_conflicts_with_street_;
-  ::censys_definitions::LintResult* e_cert_policy_iv_requires_country_;
-  ::censys_definitions::LintResult* e_cert_policy_iv_requires_province_or_locality_;
-  ::censys_definitions::LintResult* e_cert_policy_ov_requires_country_;
-  ::censys_definitions::LintResult* e_cert_policy_ov_requires_province_or_locality_;
-  ::censys_definitions::LintResult* e_cab_ov_requires_org_;
-  ::censys_definitions::LintResult* e_cab_iv_requires_personal_name_;
-  ::censys_definitions::LintResult* e_cert_unique_identifier_version_not_2_or_3_;
-  ::censys_definitions::LintResult* e_dh_params_missing_;
-  ::censys_definitions::LintResult* e_distribution_point_incomplete_;
-  ::censys_definitions::LintResult* w_distribution_point_missing_ldap_or_uri_;
-  ::censys_definitions::LintResult* e_dsa_improper_modulus_or_divisor_size_;
-  ::censys_definitions::LintResult* e_dsa_shorter_than_2048_bits_;
-  ::censys_definitions::LintResult* e_ec_improper_curves_;
-  ::censys_definitions::LintResult* w_eku_critical_improperly_;
-  ::censys_definitions::LintResult* e_ev_business_category_missing_;
-  ::censys_definitions::LintResult* e_ev_country_name_missing_;
-  ::censys_definitions::LintResult* e_ev_locality_name_missing_;
-  ::censys_definitions::LintResult* e_ev_organization_name_missing_;
-  ::censys_definitions::LintResult* e_ev_serial_number_missing_;
-  ::censys_definitions::LintResult* e_ev_valid_time_too_long_;
-  ::censys_definitions::LintResult* w_ext_aia_access_location_missing_;
-  ::censys_definitions::LintResult* e_ext_aia_marked_critical_;
-  ::censys_definitions::LintResult* e_ext_authority_key_identifier_critical_;
-  ::censys_definitions::LintResult* e_ext_authority_key_identifier_missing_;
-  ::censys_definitions::LintResult* e_ext_authority_key_identifier_no_key_identifier_;
-  ::censys_definitions::LintResult* w_ext_cert_policy_contains_noticeref_;
-  ::censys_definitions::LintResult* e_ext_cert_policy_disallowed_any_policy_qualifier_;
-  ::censys_definitions::LintResult* e_ext_cert_policy_duplicate_;
-  ::censys_definitions::LintResult* e_ext_cert_policy_explicit_text_ia5_string_;
-  ::censys_definitions::LintResult* w_ext_cert_policy_explicit_text_includes_control_;
-  ::censys_definitions::LintResult* w_ext_cert_policy_explicit_text_not_nfc_;
-  ::censys_definitions::LintResult* w_ext_cert_policy_explicit_text_not_utf8_;
-  ::censys_definitions::LintResult* e_ext_cert_policy_explicit_text_too_long_;
-  ::censys_definitions::LintResult* w_ext_crl_distribution_marked_critical_;
-  ::censys_definitions::LintResult* e_ext_duplicate_extension_;
-  ::censys_definitions::LintResult* e_ext_freshest_crl_marked_critical_;
-  ::censys_definitions::LintResult* w_ext_ian_critical_;
-  ::censys_definitions::LintResult* e_ext_ian_dns_not_ia5_string_;
-  ::censys_definitions::LintResult* e_ext_ian_empty_name_;
-  ::censys_definitions::LintResult* e_ext_ian_no_entries_;
-  ::censys_definitions::LintResult* e_ext_ian_rfc822_format_invalid_;
-  ::censys_definitions::LintResult* e_ext_ian_space_dns_name_;
-  ::censys_definitions::LintResult* e_ext_ian_uri_format_invalid_;
-  ::censys_definitions::LintResult* e_ext_ian_uri_host_not_fqdn_or_ip_;
-  ::censys_definitions::LintResult* e_ext_ian_uri_not_ia5_;
-  ::censys_definitions::LintResult* e_ext_ian_uri_relative_;
-  ::censys_definitions::LintResult* e_ext_key_usage_cert_sign_without_ca_;
-  ::censys_definitions::LintResult* w_ext_key_usage_not_critical_;
-  ::censys_definitions::LintResult* e_ext_key_usage_without_bits_;
-  ::censys_definitions::LintResult* e_ext_name_constraints_not_critical_;
-  ::censys_definitions::LintResult* e_ext_name_constraints_not_in_ca_;
-  ::censys_definitions::LintResult* e_ext_policy_constraints_empty_;
-  ::censys_definitions::LintResult* e_ext_policy_constraints_not_critical_;
-  ::censys_definitions::LintResult* e_ext_policy_map_any_policy_;
-  ::censys_definitions::LintResult* w_ext_policy_map_not_critical_;
-  ::censys_definitions::LintResult* w_ext_policy_map_not_in_cert_policy_;
-  ::censys_definitions::LintResult* e_ext_san_contains_reserved_ip_;
-  ::censys_definitions::LintResult* w_ext_san_critical_with_subject_dn_;
-  ::censys_definitions::LintResult* e_ext_san_directory_name_present_;
-  ::censys_definitions::LintResult* e_ext_san_dns_not_ia5_string_;
-  ::censys_definitions::LintResult* e_ext_san_dns_syntax_incorrect_;
-  ::censys_definitions::LintResult* e_ext_san_dnsname_not_fqdn_;
-  ::censys_definitions::LintResult* e_ext_san_edi_party_name_present_;
-  ::censys_definitions::LintResult* e_ext_san_empty_name_;
-  ::censys_definitions::LintResult* e_ext_san_missing_;
-  ::censys_definitions::LintResult* e_ext_san_no_entries_;
-  ::censys_definitions::LintResult* e_ext_san_not_critical_without_subject_;
-  ::censys_definitions::LintResult* e_ext_san_other_name_present_;
-  ::censys_definitions::LintResult* e_ext_san_registered_id_present_;
-  ::censys_definitions::LintResult* e_ext_san_rfc822_format_invalid_;
-  ::censys_definitions::LintResult* e_ext_san_rfc822_name_present_;
-  ::censys_definitions::LintResult* e_ext_san_space_dns_name_;
-  ::censys_definitions::LintResult* e_ext_san_uniform_resource_identifier_present_;
-  ::censys_definitions::LintResult* e_ext_san_uri_format_invalid_;
-  ::censys_definitions::LintResult* e_ext_san_uri_host_not_fqdn_or_ip_;
-  ::censys_definitions::LintResult* e_ext_san_uri_not_ia5_;
-  ::censys_definitions::LintResult* e_ext_san_uri_relative_;
-  ::censys_definitions::LintResult* e_ext_subject_directory_attr_critical_;
-  ::censys_definitions::LintResult* e_ext_subject_key_identifier_critical_;
-  ::censys_definitions::LintResult* e_ext_subject_key_identifier_missing_ca_;
-  ::censys_definitions::LintResult* w_ext_subject_key_identifier_missing_sub_cert_;
-  ::censys_definitions::LintResult* e_generalized_time_does_not_include_seconds_;
-  ::censys_definitions::LintResult* e_generalized_time_includes_fraction_seconds_;
-  ::censys_definitions::LintResult* e_generalized_time_not_in_zulu_;
-  ::censys_definitions::LintResult* w_gtld_under_consideration_;
-  ::censys_definitions::LintResult* e_ian_dns_name_includes_null_char_;
-  ::censys_definitions::LintResult* e_ian_dns_name_starts_with_period_;
-  ::censys_definitions::LintResult* w_ian_iana_pub_suffix_empty_;
-  ::censys_definitions::LintResult* e_inhibit_any_policy_not_critical_;
-  ::censys_definitions::LintResult* e_invalid_certificate_version_;
-  ::censys_definitions::LintResult* e_issuer_field_empty_;
-  ::censys_definitions::LintResult* e_name_constraint_empty_;
-  ::censys_definitions::LintResult* e_name_constraint_maximum_not_absent_;
-  ::censys_definitions::LintResult* e_name_constraint_minimum_non_zero_;
-  ::censys_definitions::LintResult* w_name_constraint_on_edi_party_name_;
-  ::censys_definitions::LintResult* w_name_constraint_on_registered_id_;
-  ::censys_definitions::LintResult* w_name_constraint_on_x400_;
-  ::censys_definitions::LintResult* e_old_root_ca_rsa_mod_less_than_2048_bits_;
-  ::censys_definitions::LintResult* e_old_sub_ca_rsa_mod_less_than_1024_bits_;
-  ::censys_definitions::LintResult* e_old_sub_cert_rsa_mod_less_than_1024_bits_;
-  ::censys_definitions::LintResult* e_path_len_constraint_improperly_included_;
-  ::censys_definitions::LintResult* e_path_len_constraint_zero_or_less_;
-  ::censys_definitions::LintResult* e_public_key_type_not_allowed_;
-  ::censys_definitions::LintResult* w_root_ca_basic_constraints_path_len_constraint_field_present_;
-  ::censys_definitions::LintResult* w_root_ca_contains_cert_policy_;
-  ::censys_definitions::LintResult* e_root_ca_extended_key_usage_present_;
-  ::censys_definitions::LintResult* e_rsa_exp_negative_;
-  ::censys_definitions::LintResult* w_rsa_mod_factors_smaller_than_752_;
-  ::censys_definitions::LintResult* e_rsa_mod_less_than_2048_bits_;
-  ::censys_definitions::LintResult* w_rsa_mod_not_odd_;
-  ::censys_definitions::LintResult* w_rsa_public_exponent_not_in_range_;
-  ::censys_definitions::LintResult* e_rsa_public_exponent_not_odd_;
-  ::censys_definitions::LintResult* e_rsa_public_exponent_too_small_;
-  ::censys_definitions::LintResult* e_san_dns_name_includes_null_char_;
-  ::censys_definitions::LintResult* e_san_dns_name_starts_with_period_;
-  ::censys_definitions::LintResult* w_san_iana_pub_suffix_empty_;
-  ::censys_definitions::LintResult* e_serial_number_longer_than_20_octets_;
-  ::censys_definitions::LintResult* e_serial_number_not_positive_;
-  ::censys_definitions::LintResult* w_sub_ca_aia_does_not_contain_issuing_ca_url_;
-  ::censys_definitions::LintResult* e_sub_ca_aia_does_not_contain_ocsp_url_;
-  ::censys_definitions::LintResult* e_sub_ca_aia_missing_;
-  ::censys_definitions::LintResult* w_sub_ca_certificate_policies_marked_critical_;
-  ::censys_definitions::LintResult* e_sub_ca_certificate_policies_missing_;
-  ::censys_definitions::LintResult* e_sub_ca_crl_distribution_points_does_not_contain_url_;
-  ::censys_definitions::LintResult* e_sub_ca_crl_distribution_points_marked_critical_;
-  ::censys_definitions::LintResult* e_sub_ca_crl_distribution_points_missing_;
-  ::censys_definitions::LintResult* w_sub_ca_eku_critical_;
-  ::censys_definitions::LintResult* w_sub_ca_name_constraints_not_critical_;
-  ::censys_definitions::LintResult* e_sub_ca_no_dns_name_constraints_;
-  ::censys_definitions::LintResult* e_sub_ca_no_ip_name_constraints_;
-  ::censys_definitions::LintResult* w_sub_cert_aia_does_not_contain_issuing_ca_url_;
-  ::censys_definitions::LintResult* e_sub_cert_aia_does_not_contain_ocsp_url_;
-  ::censys_definitions::LintResult* e_sub_cert_aia_missing_;
-  ::censys_definitions::LintResult* w_sub_cert_cert_policy_empty_;
-  ::censys_definitions::LintResult* w_sub_cert_certificate_policies_marked_critical_;
-  ::censys_definitions::LintResult* e_sub_cert_crl_distribution_points_does_not_contain_url_;
-  ::censys_definitions::LintResult* e_sub_cert_crl_distribution_points_marked_critical_;
-  ::censys_definitions::LintResult* w_sub_cert_eku_extra_values_;
-  ::censys_definitions::LintResult* e_sub_cert_eku_missing_;
-  ::censys_definitions::LintResult* e_sub_cert_eku_server_auth_client_auth_missing_;
-  ::censys_definitions::LintResult* e_sub_cert_key_usage_cert_sign_bit_set_;
-  ::censys_definitions::LintResult* e_sub_cert_or_sub_ca_using_sha1_;
-  ::censys_definitions::LintResult* w_sub_cert_sha1_expiration_too_long_;
-  ::censys_definitions::LintResult* e_subject_common_name_disallowed_;
-  ::censys_definitions::LintResult* w_subject_common_name_included_;
-  ::censys_definitions::LintResult* e_subject_common_name_not_from_san_;
-  ::censys_definitions::LintResult* e_subject_contains_noninformational_value_;
-  ::censys_definitions::LintResult* e_subject_contains_reserved_ip_;
-  ::censys_definitions::LintResult* e_subject_country_not_iso_;
-  ::censys_definitions::LintResult* e_subject_empty_without_san_;
-  ::censys_definitions::LintResult* e_subject_info_access_marked_critical_;
-  ::censys_definitions::LintResult* e_subject_locality_without_org_;
-  ::censys_definitions::LintResult* e_subject_not_dn_;
-  ::censys_definitions::LintResult* e_subject_org_without_country_;
-  ::censys_definitions::LintResult* e_subject_org_without_locality_or_province_;
-  ::censys_definitions::LintResult* e_subject_postal_without_org_;
-  ::censys_definitions::LintResult* e_subject_province_without_org_;
-  ::censys_definitions::LintResult* e_subject_street_without_org_;
-  ::censys_definitions::LintResult* e_utc_time_does_not_include_seconds_;
-  ::censys_definitions::LintResult* e_utc_time_not_in_zulu_;
-  ::censys_definitions::LintResult* e_validity_time_not_positive_;
-  ::censys_definitions::LintResult* e_wrong_time_format_pre2050_;
-  ::censys_definitions::LintResult* e_rsa_no_public_key_;
-  ::censys_definitions::LintResult* e_sub_cert_certificate_policies_missing_;
-  ::censys_definitions::LintResult* e_sub_cert_key_usage_crl_sign_bit_set_;
+  ::zsearch::LintResult* e_basic_constraints_not_critical_;
+  ::zsearch::LintResult* e_ian_bare_wildcard_;
+  ::zsearch::LintResult* e_ian_wildcard_not_first_;
+  ::zsearch::LintResult* e_san_bare_wildcard_;
+  ::zsearch::LintResult* e_san_wildcard_not_first_;
+  ::zsearch::LintResult* e_ca_country_name_invalid_;
+  ::zsearch::LintResult* e_ca_country_name_missing_;
+  ::zsearch::LintResult* e_ca_crl_sign_not_set_;
+  ::zsearch::LintResult* w_ca_digital_signature_not_set_;
+  ::zsearch::LintResult* e_ca_key_cert_sign_not_set_;
+  ::zsearch::LintResult* e_ca_key_usage_missing_;
+  ::zsearch::LintResult* e_ca_key_usage_not_critical_;
+  ::zsearch::LintResult* e_ca_organization_name_missing_;
+  ::zsearch::LintResult* e_ca_subject_field_empty_;
+  ::zsearch::LintResult* e_cert_contains_unique_identifier_;
+  ::zsearch::LintResult* e_cert_extensions_version_not_3_;
+  ::zsearch::LintResult* e_cab_dv_conflicts_with_locality_;
+  ::zsearch::LintResult* e_cab_dv_conflicts_with_org_;
+  ::zsearch::LintResult* e_cab_dv_conflicts_with_postal_;
+  ::zsearch::LintResult* e_cab_dv_conflicts_with_province_;
+  ::zsearch::LintResult* e_cab_dv_conflicts_with_street_;
+  ::zsearch::LintResult* e_cert_policy_iv_requires_country_;
+  ::zsearch::LintResult* e_cert_policy_iv_requires_province_or_locality_;
+  ::zsearch::LintResult* e_cert_policy_ov_requires_country_;
+  ::zsearch::LintResult* e_cert_policy_ov_requires_province_or_locality_;
+  ::zsearch::LintResult* e_cab_ov_requires_org_;
+  ::zsearch::LintResult* e_cab_iv_requires_personal_name_;
+  ::zsearch::LintResult* e_cert_unique_identifier_version_not_2_or_3_;
+  ::zsearch::LintResult* e_dh_params_missing_;
+  ::zsearch::LintResult* e_distribution_point_incomplete_;
+  ::zsearch::LintResult* w_distribution_point_missing_ldap_or_uri_;
+  ::zsearch::LintResult* e_dsa_improper_modulus_or_divisor_size_;
+  ::zsearch::LintResult* e_dsa_shorter_than_2048_bits_;
+  ::zsearch::LintResult* e_ec_improper_curves_;
+  ::zsearch::LintResult* w_eku_critical_improperly_;
+  ::zsearch::LintResult* e_ev_business_category_missing_;
+  ::zsearch::LintResult* e_ev_country_name_missing_;
+  ::zsearch::LintResult* e_ev_locality_name_missing_;
+  ::zsearch::LintResult* e_ev_organization_name_missing_;
+  ::zsearch::LintResult* e_ev_serial_number_missing_;
+  ::zsearch::LintResult* e_ev_valid_time_too_long_;
+  ::zsearch::LintResult* w_ext_aia_access_location_missing_;
+  ::zsearch::LintResult* e_ext_aia_marked_critical_;
+  ::zsearch::LintResult* e_ext_authority_key_identifier_critical_;
+  ::zsearch::LintResult* e_ext_authority_key_identifier_missing_;
+  ::zsearch::LintResult* e_ext_authority_key_identifier_no_key_identifier_;
+  ::zsearch::LintResult* w_ext_cert_policy_contains_noticeref_;
+  ::zsearch::LintResult* e_ext_cert_policy_disallowed_any_policy_qualifier_;
+  ::zsearch::LintResult* e_ext_cert_policy_duplicate_;
+  ::zsearch::LintResult* e_ext_cert_policy_explicit_text_ia5_string_;
+  ::zsearch::LintResult* w_ext_cert_policy_explicit_text_includes_control_;
+  ::zsearch::LintResult* w_ext_cert_policy_explicit_text_not_nfc_;
+  ::zsearch::LintResult* w_ext_cert_policy_explicit_text_not_utf8_;
+  ::zsearch::LintResult* e_ext_cert_policy_explicit_text_too_long_;
+  ::zsearch::LintResult* w_ext_crl_distribution_marked_critical_;
+  ::zsearch::LintResult* e_ext_duplicate_extension_;
+  ::zsearch::LintResult* e_ext_freshest_crl_marked_critical_;
+  ::zsearch::LintResult* w_ext_ian_critical_;
+  ::zsearch::LintResult* e_ext_ian_dns_not_ia5_string_;
+  ::zsearch::LintResult* e_ext_ian_empty_name_;
+  ::zsearch::LintResult* e_ext_ian_no_entries_;
+  ::zsearch::LintResult* e_ext_ian_rfc822_format_invalid_;
+  ::zsearch::LintResult* e_ext_ian_space_dns_name_;
+  ::zsearch::LintResult* e_ext_ian_uri_format_invalid_;
+  ::zsearch::LintResult* e_ext_ian_uri_host_not_fqdn_or_ip_;
+  ::zsearch::LintResult* e_ext_ian_uri_not_ia5_;
+  ::zsearch::LintResult* e_ext_ian_uri_relative_;
+  ::zsearch::LintResult* e_ext_key_usage_cert_sign_without_ca_;
+  ::zsearch::LintResult* w_ext_key_usage_not_critical_;
+  ::zsearch::LintResult* e_ext_key_usage_without_bits_;
+  ::zsearch::LintResult* e_ext_name_constraints_not_critical_;
+  ::zsearch::LintResult* e_ext_name_constraints_not_in_ca_;
+  ::zsearch::LintResult* e_ext_policy_constraints_empty_;
+  ::zsearch::LintResult* e_ext_policy_constraints_not_critical_;
+  ::zsearch::LintResult* e_ext_policy_map_any_policy_;
+  ::zsearch::LintResult* w_ext_policy_map_not_critical_;
+  ::zsearch::LintResult* w_ext_policy_map_not_in_cert_policy_;
+  ::zsearch::LintResult* e_ext_san_contains_reserved_ip_;
+  ::zsearch::LintResult* w_ext_san_critical_with_subject_dn_;
+  ::zsearch::LintResult* e_ext_san_directory_name_present_;
+  ::zsearch::LintResult* e_ext_san_dns_not_ia5_string_;
+  ::zsearch::LintResult* e_ext_san_dns_syntax_incorrect_;
+  ::zsearch::LintResult* e_ext_san_dnsname_not_fqdn_;
+  ::zsearch::LintResult* e_ext_san_edi_party_name_present_;
+  ::zsearch::LintResult* e_ext_san_empty_name_;
+  ::zsearch::LintResult* e_ext_san_missing_;
+  ::zsearch::LintResult* e_ext_san_no_entries_;
+  ::zsearch::LintResult* e_ext_san_not_critical_without_subject_;
+  ::zsearch::LintResult* e_ext_san_other_name_present_;
+  ::zsearch::LintResult* e_ext_san_registered_id_present_;
+  ::zsearch::LintResult* e_ext_san_rfc822_format_invalid_;
+  ::zsearch::LintResult* e_ext_san_rfc822_name_present_;
+  ::zsearch::LintResult* e_ext_san_space_dns_name_;
+  ::zsearch::LintResult* e_ext_san_uniform_resource_identifier_present_;
+  ::zsearch::LintResult* e_ext_san_uri_format_invalid_;
+  ::zsearch::LintResult* e_ext_san_uri_host_not_fqdn_or_ip_;
+  ::zsearch::LintResult* e_ext_san_uri_not_ia5_;
+  ::zsearch::LintResult* e_ext_san_uri_relative_;
+  ::zsearch::LintResult* e_ext_subject_directory_attr_critical_;
+  ::zsearch::LintResult* e_ext_subject_key_identifier_critical_;
+  ::zsearch::LintResult* e_ext_subject_key_identifier_missing_ca_;
+  ::zsearch::LintResult* w_ext_subject_key_identifier_missing_sub_cert_;
+  ::zsearch::LintResult* e_generalized_time_does_not_include_seconds_;
+  ::zsearch::LintResult* e_generalized_time_includes_fraction_seconds_;
+  ::zsearch::LintResult* e_generalized_time_not_in_zulu_;
+  ::zsearch::LintResult* w_gtld_under_consideration_;
+  ::zsearch::LintResult* e_ian_dns_name_includes_null_char_;
+  ::zsearch::LintResult* e_ian_dns_name_starts_with_period_;
+  ::zsearch::LintResult* w_ian_iana_pub_suffix_empty_;
+  ::zsearch::LintResult* e_inhibit_any_policy_not_critical_;
+  ::zsearch::LintResult* e_invalid_certificate_version_;
+  ::zsearch::LintResult* e_issuer_field_empty_;
+  ::zsearch::LintResult* e_name_constraint_empty_;
+  ::zsearch::LintResult* e_name_constraint_maximum_not_absent_;
+  ::zsearch::LintResult* e_name_constraint_minimum_non_zero_;
+  ::zsearch::LintResult* w_name_constraint_on_edi_party_name_;
+  ::zsearch::LintResult* w_name_constraint_on_registered_id_;
+  ::zsearch::LintResult* w_name_constraint_on_x400_;
+  ::zsearch::LintResult* e_old_root_ca_rsa_mod_less_than_2048_bits_;
+  ::zsearch::LintResult* e_old_sub_ca_rsa_mod_less_than_1024_bits_;
+  ::zsearch::LintResult* e_old_sub_cert_rsa_mod_less_than_1024_bits_;
+  ::zsearch::LintResult* e_path_len_constraint_improperly_included_;
+  ::zsearch::LintResult* e_path_len_constraint_zero_or_less_;
+  ::zsearch::LintResult* e_public_key_type_not_allowed_;
+  ::zsearch::LintResult* w_root_ca_basic_constraints_path_len_constraint_field_present_;
+  ::zsearch::LintResult* w_root_ca_contains_cert_policy_;
+  ::zsearch::LintResult* e_root_ca_extended_key_usage_present_;
+  ::zsearch::LintResult* e_rsa_exp_negative_;
+  ::zsearch::LintResult* w_rsa_mod_factors_smaller_than_752_;
+  ::zsearch::LintResult* e_rsa_mod_less_than_2048_bits_;
+  ::zsearch::LintResult* w_rsa_mod_not_odd_;
+  ::zsearch::LintResult* w_rsa_public_exponent_not_in_range_;
+  ::zsearch::LintResult* e_rsa_public_exponent_not_odd_;
+  ::zsearch::LintResult* e_rsa_public_exponent_too_small_;
+  ::zsearch::LintResult* e_san_dns_name_includes_null_char_;
+  ::zsearch::LintResult* e_san_dns_name_starts_with_period_;
+  ::zsearch::LintResult* w_san_iana_pub_suffix_empty_;
+  ::zsearch::LintResult* e_serial_number_longer_than_20_octets_;
+  ::zsearch::LintResult* e_serial_number_not_positive_;
+  ::zsearch::LintResult* w_sub_ca_aia_does_not_contain_issuing_ca_url_;
+  ::zsearch::LintResult* e_sub_ca_aia_does_not_contain_ocsp_url_;
+  ::zsearch::LintResult* e_sub_ca_aia_missing_;
+  ::zsearch::LintResult* w_sub_ca_certificate_policies_marked_critical_;
+  ::zsearch::LintResult* e_sub_ca_certificate_policies_missing_;
+  ::zsearch::LintResult* e_sub_ca_crl_distribution_points_does_not_contain_url_;
+  ::zsearch::LintResult* e_sub_ca_crl_distribution_points_marked_critical_;
+  ::zsearch::LintResult* e_sub_ca_crl_distribution_points_missing_;
+  ::zsearch::LintResult* w_sub_ca_eku_critical_;
+  ::zsearch::LintResult* w_sub_ca_name_constraints_not_critical_;
+  ::zsearch::LintResult* e_sub_ca_no_dns_name_constraints_;
+  ::zsearch::LintResult* e_sub_ca_no_ip_name_constraints_;
+  ::zsearch::LintResult* w_sub_cert_aia_does_not_contain_issuing_ca_url_;
+  ::zsearch::LintResult* e_sub_cert_aia_does_not_contain_ocsp_url_;
+  ::zsearch::LintResult* e_sub_cert_aia_missing_;
+  ::zsearch::LintResult* w_sub_cert_cert_policy_empty_;
+  ::zsearch::LintResult* w_sub_cert_certificate_policies_marked_critical_;
+  ::zsearch::LintResult* e_sub_cert_crl_distribution_points_does_not_contain_url_;
+  ::zsearch::LintResult* e_sub_cert_crl_distribution_points_marked_critical_;
+  ::zsearch::LintResult* w_sub_cert_eku_extra_values_;
+  ::zsearch::LintResult* e_sub_cert_eku_missing_;
+  ::zsearch::LintResult* e_sub_cert_eku_server_auth_client_auth_missing_;
+  ::zsearch::LintResult* e_sub_cert_key_usage_cert_sign_bit_set_;
+  ::zsearch::LintResult* e_sub_cert_or_sub_ca_using_sha1_;
+  ::zsearch::LintResult* w_sub_cert_sha1_expiration_too_long_;
+  ::zsearch::LintResult* e_subject_common_name_disallowed_;
+  ::zsearch::LintResult* w_subject_common_name_included_;
+  ::zsearch::LintResult* e_subject_common_name_not_from_san_;
+  ::zsearch::LintResult* e_subject_contains_noninformational_value_;
+  ::zsearch::LintResult* e_subject_contains_reserved_ip_;
+  ::zsearch::LintResult* e_subject_country_not_iso_;
+  ::zsearch::LintResult* e_subject_empty_without_san_;
+  ::zsearch::LintResult* e_subject_info_access_marked_critical_;
+  ::zsearch::LintResult* e_subject_locality_without_org_;
+  ::zsearch::LintResult* e_subject_not_dn_;
+  ::zsearch::LintResult* e_subject_org_without_country_;
+  ::zsearch::LintResult* e_subject_org_without_locality_or_province_;
+  ::zsearch::LintResult* e_subject_postal_without_org_;
+  ::zsearch::LintResult* e_subject_province_without_org_;
+  ::zsearch::LintResult* e_subject_street_without_org_;
+  ::zsearch::LintResult* e_utc_time_does_not_include_seconds_;
+  ::zsearch::LintResult* e_utc_time_not_in_zulu_;
+  ::zsearch::LintResult* e_validity_time_not_positive_;
+  ::zsearch::LintResult* e_wrong_time_format_pre2050_;
+  ::zsearch::LintResult* e_rsa_no_public_key_;
+  ::zsearch::LintResult* e_sub_cert_certificate_policies_missing_;
+  ::zsearch::LintResult* e_sub_cert_key_usage_crl_sign_bit_set_;
   mutable int _cached_size_;
   friend struct  protobuf_zlint_2eproto::TableStruct;
 };
@@ -2280,18 +2280,18 @@ class Lints : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
 #if !PROTOBUF_INLINE_NOT_IN_HEADERS
 // LintResult
 
-// .censys_definitions.LintResultStatus result = 1;
+// .zsearch.LintResultStatus result = 1;
 inline void LintResult::clear_result() {
   result_ = 0;
 }
-inline ::censys_definitions::LintResultStatus LintResult::result() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.LintResult.result)
-  return static_cast< ::censys_definitions::LintResultStatus >(result_);
+inline ::zsearch::LintResultStatus LintResult::result() const {
+  // @@protoc_insertion_point(field_get:zsearch.LintResult.result)
+  return static_cast< ::zsearch::LintResultStatus >(result_);
 }
-inline void LintResult::set_result(::censys_definitions::LintResultStatus value) {
+inline void LintResult::set_result(::zsearch::LintResultStatus value) {
   
   result_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.LintResult.result)
+  // @@protoc_insertion_point(field_set:zsearch.LintResult.result)
 }
 
 // string details = 2;
@@ -2299,40 +2299,40 @@ inline void LintResult::clear_details() {
   details_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& LintResult::details() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.LintResult.details)
+  // @@protoc_insertion_point(field_get:zsearch.LintResult.details)
   return details_.GetNoArena();
 }
 inline void LintResult::set_details(const ::std::string& value) {
   
   details_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:censys_definitions.LintResult.details)
+  // @@protoc_insertion_point(field_set:zsearch.LintResult.details)
 }
 #if LANG_CXX11
 inline void LintResult::set_details(::std::string&& value) {
   
   details_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:censys_definitions.LintResult.details)
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.LintResult.details)
 }
 #endif
 inline void LintResult::set_details(const char* value) {
   
   details_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:censys_definitions.LintResult.details)
+  // @@protoc_insertion_point(field_set_char:zsearch.LintResult.details)
 }
 inline void LintResult::set_details(const char* value, size_t size) {
   
   details_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.LintResult.details)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.LintResult.details)
 }
 inline ::std::string* LintResult::mutable_details() {
   
-  // @@protoc_insertion_point(field_mutable:censys_definitions.LintResult.details)
+  // @@protoc_insertion_point(field_mutable:zsearch.LintResult.details)
   return details_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* LintResult::release_details() {
-  // @@protoc_insertion_point(field_release:censys_definitions.LintResult.details)
+  // @@protoc_insertion_point(field_release:zsearch.LintResult.details)
   
   return details_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -2343,7 +2343,7 @@ inline void LintResult::set_allocated_details(::std::string* details) {
     
   }
   details_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), details);
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.LintResult.details)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.LintResult.details)
 }
 
 // -------------------------------------------------------------------
@@ -2355,13 +2355,13 @@ inline void ZLint::clear_version() {
   version_ = GOOGLE_LONGLONG(0);
 }
 inline ::google::protobuf::int64 ZLint::version() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.ZLint.version)
+  // @@protoc_insertion_point(field_get:zsearch.ZLint.version)
   return version_;
 }
 inline void ZLint::set_version(::google::protobuf::int64 value) {
   
   version_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.ZLint.version)
+  // @@protoc_insertion_point(field_set:zsearch.ZLint.version)
 }
 
 // int64 timestamp = 2;
@@ -2369,27 +2369,27 @@ inline void ZLint::clear_timestamp() {
   timestamp_ = GOOGLE_LONGLONG(0);
 }
 inline ::google::protobuf::int64 ZLint::timestamp() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.ZLint.timestamp)
+  // @@protoc_insertion_point(field_get:zsearch.ZLint.timestamp)
   return timestamp_;
 }
 inline void ZLint::set_timestamp(::google::protobuf::int64 value) {
   
   timestamp_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.ZLint.timestamp)
+  // @@protoc_insertion_point(field_set:zsearch.ZLint.timestamp)
 }
 
-// .censys_definitions.ZLintStatus status = 3;
+// .zsearch.ZLintStatus status = 3;
 inline void ZLint::clear_status() {
   status_ = 0;
 }
-inline ::censys_definitions::ZLintStatus ZLint::status() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.ZLint.status)
-  return static_cast< ::censys_definitions::ZLintStatus >(status_);
+inline ::zsearch::ZLintStatus ZLint::status() const {
+  // @@protoc_insertion_point(field_get:zsearch.ZLint.status)
+  return static_cast< ::zsearch::ZLintStatus >(status_);
 }
-inline void ZLint::set_status(::censys_definitions::ZLintStatus value) {
+inline void ZLint::set_status(::zsearch::ZLintStatus value) {
   
   status_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.ZLint.status)
+  // @@protoc_insertion_point(field_set:zsearch.ZLint.status)
 }
 
 // bool infos_present = 4;
@@ -2397,13 +2397,13 @@ inline void ZLint::clear_infos_present() {
   infos_present_ = false;
 }
 inline bool ZLint::infos_present() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.ZLint.infos_present)
+  // @@protoc_insertion_point(field_get:zsearch.ZLint.infos_present)
   return infos_present_;
 }
 inline void ZLint::set_infos_present(bool value) {
   
   infos_present_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.ZLint.infos_present)
+  // @@protoc_insertion_point(field_set:zsearch.ZLint.infos_present)
 }
 
 // bool warnings_present = 5;
@@ -2411,13 +2411,13 @@ inline void ZLint::clear_warnings_present() {
   warnings_present_ = false;
 }
 inline bool ZLint::warnings_present() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.ZLint.warnings_present)
+  // @@protoc_insertion_point(field_get:zsearch.ZLint.warnings_present)
   return warnings_present_;
 }
 inline void ZLint::set_warnings_present(bool value) {
   
   warnings_present_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.ZLint.warnings_present)
+  // @@protoc_insertion_point(field_set:zsearch.ZLint.warnings_present)
 }
 
 // bool errors_present = 6;
@@ -2425,13 +2425,13 @@ inline void ZLint::clear_errors_present() {
   errors_present_ = false;
 }
 inline bool ZLint::errors_present() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.ZLint.errors_present)
+  // @@protoc_insertion_point(field_get:zsearch.ZLint.errors_present)
   return errors_present_;
 }
 inline void ZLint::set_errors_present(bool value) {
   
   errors_present_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.ZLint.errors_present)
+  // @@protoc_insertion_point(field_set:zsearch.ZLint.errors_present)
 }
 
 // bool fatals_present = 7;
@@ -2439,16 +2439,16 @@ inline void ZLint::clear_fatals_present() {
   fatals_present_ = false;
 }
 inline bool ZLint::fatals_present() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.ZLint.fatals_present)
+  // @@protoc_insertion_point(field_get:zsearch.ZLint.fatals_present)
   return fatals_present_;
 }
 inline void ZLint::set_fatals_present(bool value) {
   
   fatals_present_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.ZLint.fatals_present)
+  // @@protoc_insertion_point(field_set:zsearch.ZLint.fatals_present)
 }
 
-// .censys_definitions.Lints lints = 8;
+// .zsearch.Lints lints = 8;
 inline bool ZLint::has_lints() const {
   return this != internal_default_instance() && lints_ != NULL;
 }
@@ -2456,27 +2456,27 @@ inline void ZLint::clear_lints() {
   if (GetArenaNoVirtual() == NULL && lints_ != NULL) delete lints_;
   lints_ = NULL;
 }
-inline const ::censys_definitions::Lints& ZLint::lints() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.ZLint.lints)
+inline const ::zsearch::Lints& ZLint::lints() const {
+  // @@protoc_insertion_point(field_get:zsearch.ZLint.lints)
   return lints_ != NULL ? *lints_
-                         : *::censys_definitions::Lints::internal_default_instance();
+                         : *::zsearch::Lints::internal_default_instance();
 }
-inline ::censys_definitions::Lints* ZLint::mutable_lints() {
+inline ::zsearch::Lints* ZLint::mutable_lints() {
   
   if (lints_ == NULL) {
-    lints_ = new ::censys_definitions::Lints;
+    lints_ = new ::zsearch::Lints;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.ZLint.lints)
+  // @@protoc_insertion_point(field_mutable:zsearch.ZLint.lints)
   return lints_;
 }
-inline ::censys_definitions::Lints* ZLint::release_lints() {
-  // @@protoc_insertion_point(field_release:censys_definitions.ZLint.lints)
+inline ::zsearch::Lints* ZLint::release_lints() {
+  // @@protoc_insertion_point(field_release:zsearch.ZLint.lints)
   
-  ::censys_definitions::Lints* temp = lints_;
+  ::zsearch::Lints* temp = lints_;
   lints_ = NULL;
   return temp;
 }
-inline void ZLint::set_allocated_lints(::censys_definitions::Lints* lints) {
+inline void ZLint::set_allocated_lints(::zsearch::Lints* lints) {
   delete lints_;
   lints_ = lints;
   if (lints) {
@@ -2484,14 +2484,14 @@ inline void ZLint::set_allocated_lints(::censys_definitions::Lints* lints) {
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.ZLint.lints)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.ZLint.lints)
 }
 
 // -------------------------------------------------------------------
 
 // Lints
 
-// .censys_definitions.LintResult e_basic_constraints_not_critical = 1;
+// .zsearch.LintResult e_basic_constraints_not_critical = 1;
 inline bool Lints::has_e_basic_constraints_not_critical() const {
   return this != internal_default_instance() && e_basic_constraints_not_critical_ != NULL;
 }
@@ -2499,27 +2499,27 @@ inline void Lints::clear_e_basic_constraints_not_critical() {
   if (GetArenaNoVirtual() == NULL && e_basic_constraints_not_critical_ != NULL) delete e_basic_constraints_not_critical_;
   e_basic_constraints_not_critical_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_basic_constraints_not_critical() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_basic_constraints_not_critical)
+inline const ::zsearch::LintResult& Lints::e_basic_constraints_not_critical() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_basic_constraints_not_critical)
   return e_basic_constraints_not_critical_ != NULL ? *e_basic_constraints_not_critical_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_basic_constraints_not_critical() {
+inline ::zsearch::LintResult* Lints::mutable_e_basic_constraints_not_critical() {
   
   if (e_basic_constraints_not_critical_ == NULL) {
-    e_basic_constraints_not_critical_ = new ::censys_definitions::LintResult;
+    e_basic_constraints_not_critical_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_basic_constraints_not_critical)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_basic_constraints_not_critical)
   return e_basic_constraints_not_critical_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_basic_constraints_not_critical() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_basic_constraints_not_critical)
+inline ::zsearch::LintResult* Lints::release_e_basic_constraints_not_critical() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_basic_constraints_not_critical)
   
-  ::censys_definitions::LintResult* temp = e_basic_constraints_not_critical_;
+  ::zsearch::LintResult* temp = e_basic_constraints_not_critical_;
   e_basic_constraints_not_critical_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_basic_constraints_not_critical(::censys_definitions::LintResult* e_basic_constraints_not_critical) {
+inline void Lints::set_allocated_e_basic_constraints_not_critical(::zsearch::LintResult* e_basic_constraints_not_critical) {
   delete e_basic_constraints_not_critical_;
   e_basic_constraints_not_critical_ = e_basic_constraints_not_critical;
   if (e_basic_constraints_not_critical) {
@@ -2527,10 +2527,10 @@ inline void Lints::set_allocated_e_basic_constraints_not_critical(::censys_defin
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_basic_constraints_not_critical)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_basic_constraints_not_critical)
 }
 
-// .censys_definitions.LintResult e_ian_bare_wildcard = 2;
+// .zsearch.LintResult e_ian_bare_wildcard = 2;
 inline bool Lints::has_e_ian_bare_wildcard() const {
   return this != internal_default_instance() && e_ian_bare_wildcard_ != NULL;
 }
@@ -2538,27 +2538,27 @@ inline void Lints::clear_e_ian_bare_wildcard() {
   if (GetArenaNoVirtual() == NULL && e_ian_bare_wildcard_ != NULL) delete e_ian_bare_wildcard_;
   e_ian_bare_wildcard_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ian_bare_wildcard() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ian_bare_wildcard)
+inline const ::zsearch::LintResult& Lints::e_ian_bare_wildcard() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ian_bare_wildcard)
   return e_ian_bare_wildcard_ != NULL ? *e_ian_bare_wildcard_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ian_bare_wildcard() {
+inline ::zsearch::LintResult* Lints::mutable_e_ian_bare_wildcard() {
   
   if (e_ian_bare_wildcard_ == NULL) {
-    e_ian_bare_wildcard_ = new ::censys_definitions::LintResult;
+    e_ian_bare_wildcard_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ian_bare_wildcard)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ian_bare_wildcard)
   return e_ian_bare_wildcard_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ian_bare_wildcard() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ian_bare_wildcard)
+inline ::zsearch::LintResult* Lints::release_e_ian_bare_wildcard() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ian_bare_wildcard)
   
-  ::censys_definitions::LintResult* temp = e_ian_bare_wildcard_;
+  ::zsearch::LintResult* temp = e_ian_bare_wildcard_;
   e_ian_bare_wildcard_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ian_bare_wildcard(::censys_definitions::LintResult* e_ian_bare_wildcard) {
+inline void Lints::set_allocated_e_ian_bare_wildcard(::zsearch::LintResult* e_ian_bare_wildcard) {
   delete e_ian_bare_wildcard_;
   e_ian_bare_wildcard_ = e_ian_bare_wildcard;
   if (e_ian_bare_wildcard) {
@@ -2566,10 +2566,10 @@ inline void Lints::set_allocated_e_ian_bare_wildcard(::censys_definitions::LintR
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ian_bare_wildcard)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ian_bare_wildcard)
 }
 
-// .censys_definitions.LintResult e_ian_wildcard_not_first = 3;
+// .zsearch.LintResult e_ian_wildcard_not_first = 3;
 inline bool Lints::has_e_ian_wildcard_not_first() const {
   return this != internal_default_instance() && e_ian_wildcard_not_first_ != NULL;
 }
@@ -2577,27 +2577,27 @@ inline void Lints::clear_e_ian_wildcard_not_first() {
   if (GetArenaNoVirtual() == NULL && e_ian_wildcard_not_first_ != NULL) delete e_ian_wildcard_not_first_;
   e_ian_wildcard_not_first_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ian_wildcard_not_first() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ian_wildcard_not_first)
+inline const ::zsearch::LintResult& Lints::e_ian_wildcard_not_first() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ian_wildcard_not_first)
   return e_ian_wildcard_not_first_ != NULL ? *e_ian_wildcard_not_first_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ian_wildcard_not_first() {
+inline ::zsearch::LintResult* Lints::mutable_e_ian_wildcard_not_first() {
   
   if (e_ian_wildcard_not_first_ == NULL) {
-    e_ian_wildcard_not_first_ = new ::censys_definitions::LintResult;
+    e_ian_wildcard_not_first_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ian_wildcard_not_first)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ian_wildcard_not_first)
   return e_ian_wildcard_not_first_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ian_wildcard_not_first() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ian_wildcard_not_first)
+inline ::zsearch::LintResult* Lints::release_e_ian_wildcard_not_first() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ian_wildcard_not_first)
   
-  ::censys_definitions::LintResult* temp = e_ian_wildcard_not_first_;
+  ::zsearch::LintResult* temp = e_ian_wildcard_not_first_;
   e_ian_wildcard_not_first_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ian_wildcard_not_first(::censys_definitions::LintResult* e_ian_wildcard_not_first) {
+inline void Lints::set_allocated_e_ian_wildcard_not_first(::zsearch::LintResult* e_ian_wildcard_not_first) {
   delete e_ian_wildcard_not_first_;
   e_ian_wildcard_not_first_ = e_ian_wildcard_not_first;
   if (e_ian_wildcard_not_first) {
@@ -2605,10 +2605,10 @@ inline void Lints::set_allocated_e_ian_wildcard_not_first(::censys_definitions::
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ian_wildcard_not_first)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ian_wildcard_not_first)
 }
 
-// .censys_definitions.LintResult e_san_bare_wildcard = 4;
+// .zsearch.LintResult e_san_bare_wildcard = 4;
 inline bool Lints::has_e_san_bare_wildcard() const {
   return this != internal_default_instance() && e_san_bare_wildcard_ != NULL;
 }
@@ -2616,27 +2616,27 @@ inline void Lints::clear_e_san_bare_wildcard() {
   if (GetArenaNoVirtual() == NULL && e_san_bare_wildcard_ != NULL) delete e_san_bare_wildcard_;
   e_san_bare_wildcard_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_san_bare_wildcard() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_san_bare_wildcard)
+inline const ::zsearch::LintResult& Lints::e_san_bare_wildcard() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_san_bare_wildcard)
   return e_san_bare_wildcard_ != NULL ? *e_san_bare_wildcard_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_san_bare_wildcard() {
+inline ::zsearch::LintResult* Lints::mutable_e_san_bare_wildcard() {
   
   if (e_san_bare_wildcard_ == NULL) {
-    e_san_bare_wildcard_ = new ::censys_definitions::LintResult;
+    e_san_bare_wildcard_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_san_bare_wildcard)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_san_bare_wildcard)
   return e_san_bare_wildcard_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_san_bare_wildcard() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_san_bare_wildcard)
+inline ::zsearch::LintResult* Lints::release_e_san_bare_wildcard() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_san_bare_wildcard)
   
-  ::censys_definitions::LintResult* temp = e_san_bare_wildcard_;
+  ::zsearch::LintResult* temp = e_san_bare_wildcard_;
   e_san_bare_wildcard_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_san_bare_wildcard(::censys_definitions::LintResult* e_san_bare_wildcard) {
+inline void Lints::set_allocated_e_san_bare_wildcard(::zsearch::LintResult* e_san_bare_wildcard) {
   delete e_san_bare_wildcard_;
   e_san_bare_wildcard_ = e_san_bare_wildcard;
   if (e_san_bare_wildcard) {
@@ -2644,10 +2644,10 @@ inline void Lints::set_allocated_e_san_bare_wildcard(::censys_definitions::LintR
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_san_bare_wildcard)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_san_bare_wildcard)
 }
 
-// .censys_definitions.LintResult e_san_wildcard_not_first = 5;
+// .zsearch.LintResult e_san_wildcard_not_first = 5;
 inline bool Lints::has_e_san_wildcard_not_first() const {
   return this != internal_default_instance() && e_san_wildcard_not_first_ != NULL;
 }
@@ -2655,27 +2655,27 @@ inline void Lints::clear_e_san_wildcard_not_first() {
   if (GetArenaNoVirtual() == NULL && e_san_wildcard_not_first_ != NULL) delete e_san_wildcard_not_first_;
   e_san_wildcard_not_first_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_san_wildcard_not_first() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_san_wildcard_not_first)
+inline const ::zsearch::LintResult& Lints::e_san_wildcard_not_first() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_san_wildcard_not_first)
   return e_san_wildcard_not_first_ != NULL ? *e_san_wildcard_not_first_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_san_wildcard_not_first() {
+inline ::zsearch::LintResult* Lints::mutable_e_san_wildcard_not_first() {
   
   if (e_san_wildcard_not_first_ == NULL) {
-    e_san_wildcard_not_first_ = new ::censys_definitions::LintResult;
+    e_san_wildcard_not_first_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_san_wildcard_not_first)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_san_wildcard_not_first)
   return e_san_wildcard_not_first_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_san_wildcard_not_first() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_san_wildcard_not_first)
+inline ::zsearch::LintResult* Lints::release_e_san_wildcard_not_first() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_san_wildcard_not_first)
   
-  ::censys_definitions::LintResult* temp = e_san_wildcard_not_first_;
+  ::zsearch::LintResult* temp = e_san_wildcard_not_first_;
   e_san_wildcard_not_first_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_san_wildcard_not_first(::censys_definitions::LintResult* e_san_wildcard_not_first) {
+inline void Lints::set_allocated_e_san_wildcard_not_first(::zsearch::LintResult* e_san_wildcard_not_first) {
   delete e_san_wildcard_not_first_;
   e_san_wildcard_not_first_ = e_san_wildcard_not_first;
   if (e_san_wildcard_not_first) {
@@ -2683,10 +2683,10 @@ inline void Lints::set_allocated_e_san_wildcard_not_first(::censys_definitions::
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_san_wildcard_not_first)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_san_wildcard_not_first)
 }
 
-// .censys_definitions.LintResult e_ca_country_name_invalid = 6;
+// .zsearch.LintResult e_ca_country_name_invalid = 6;
 inline bool Lints::has_e_ca_country_name_invalid() const {
   return this != internal_default_instance() && e_ca_country_name_invalid_ != NULL;
 }
@@ -2694,27 +2694,27 @@ inline void Lints::clear_e_ca_country_name_invalid() {
   if (GetArenaNoVirtual() == NULL && e_ca_country_name_invalid_ != NULL) delete e_ca_country_name_invalid_;
   e_ca_country_name_invalid_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ca_country_name_invalid() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ca_country_name_invalid)
+inline const ::zsearch::LintResult& Lints::e_ca_country_name_invalid() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ca_country_name_invalid)
   return e_ca_country_name_invalid_ != NULL ? *e_ca_country_name_invalid_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ca_country_name_invalid() {
+inline ::zsearch::LintResult* Lints::mutable_e_ca_country_name_invalid() {
   
   if (e_ca_country_name_invalid_ == NULL) {
-    e_ca_country_name_invalid_ = new ::censys_definitions::LintResult;
+    e_ca_country_name_invalid_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ca_country_name_invalid)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ca_country_name_invalid)
   return e_ca_country_name_invalid_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ca_country_name_invalid() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ca_country_name_invalid)
+inline ::zsearch::LintResult* Lints::release_e_ca_country_name_invalid() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ca_country_name_invalid)
   
-  ::censys_definitions::LintResult* temp = e_ca_country_name_invalid_;
+  ::zsearch::LintResult* temp = e_ca_country_name_invalid_;
   e_ca_country_name_invalid_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ca_country_name_invalid(::censys_definitions::LintResult* e_ca_country_name_invalid) {
+inline void Lints::set_allocated_e_ca_country_name_invalid(::zsearch::LintResult* e_ca_country_name_invalid) {
   delete e_ca_country_name_invalid_;
   e_ca_country_name_invalid_ = e_ca_country_name_invalid;
   if (e_ca_country_name_invalid) {
@@ -2722,10 +2722,10 @@ inline void Lints::set_allocated_e_ca_country_name_invalid(::censys_definitions:
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ca_country_name_invalid)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ca_country_name_invalid)
 }
 
-// .censys_definitions.LintResult e_ca_country_name_missing = 7;
+// .zsearch.LintResult e_ca_country_name_missing = 7;
 inline bool Lints::has_e_ca_country_name_missing() const {
   return this != internal_default_instance() && e_ca_country_name_missing_ != NULL;
 }
@@ -2733,27 +2733,27 @@ inline void Lints::clear_e_ca_country_name_missing() {
   if (GetArenaNoVirtual() == NULL && e_ca_country_name_missing_ != NULL) delete e_ca_country_name_missing_;
   e_ca_country_name_missing_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ca_country_name_missing() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ca_country_name_missing)
+inline const ::zsearch::LintResult& Lints::e_ca_country_name_missing() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ca_country_name_missing)
   return e_ca_country_name_missing_ != NULL ? *e_ca_country_name_missing_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ca_country_name_missing() {
+inline ::zsearch::LintResult* Lints::mutable_e_ca_country_name_missing() {
   
   if (e_ca_country_name_missing_ == NULL) {
-    e_ca_country_name_missing_ = new ::censys_definitions::LintResult;
+    e_ca_country_name_missing_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ca_country_name_missing)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ca_country_name_missing)
   return e_ca_country_name_missing_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ca_country_name_missing() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ca_country_name_missing)
+inline ::zsearch::LintResult* Lints::release_e_ca_country_name_missing() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ca_country_name_missing)
   
-  ::censys_definitions::LintResult* temp = e_ca_country_name_missing_;
+  ::zsearch::LintResult* temp = e_ca_country_name_missing_;
   e_ca_country_name_missing_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ca_country_name_missing(::censys_definitions::LintResult* e_ca_country_name_missing) {
+inline void Lints::set_allocated_e_ca_country_name_missing(::zsearch::LintResult* e_ca_country_name_missing) {
   delete e_ca_country_name_missing_;
   e_ca_country_name_missing_ = e_ca_country_name_missing;
   if (e_ca_country_name_missing) {
@@ -2761,10 +2761,10 @@ inline void Lints::set_allocated_e_ca_country_name_missing(::censys_definitions:
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ca_country_name_missing)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ca_country_name_missing)
 }
 
-// .censys_definitions.LintResult e_ca_crl_sign_not_set = 8;
+// .zsearch.LintResult e_ca_crl_sign_not_set = 8;
 inline bool Lints::has_e_ca_crl_sign_not_set() const {
   return this != internal_default_instance() && e_ca_crl_sign_not_set_ != NULL;
 }
@@ -2772,27 +2772,27 @@ inline void Lints::clear_e_ca_crl_sign_not_set() {
   if (GetArenaNoVirtual() == NULL && e_ca_crl_sign_not_set_ != NULL) delete e_ca_crl_sign_not_set_;
   e_ca_crl_sign_not_set_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ca_crl_sign_not_set() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ca_crl_sign_not_set)
+inline const ::zsearch::LintResult& Lints::e_ca_crl_sign_not_set() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ca_crl_sign_not_set)
   return e_ca_crl_sign_not_set_ != NULL ? *e_ca_crl_sign_not_set_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ca_crl_sign_not_set() {
+inline ::zsearch::LintResult* Lints::mutable_e_ca_crl_sign_not_set() {
   
   if (e_ca_crl_sign_not_set_ == NULL) {
-    e_ca_crl_sign_not_set_ = new ::censys_definitions::LintResult;
+    e_ca_crl_sign_not_set_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ca_crl_sign_not_set)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ca_crl_sign_not_set)
   return e_ca_crl_sign_not_set_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ca_crl_sign_not_set() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ca_crl_sign_not_set)
+inline ::zsearch::LintResult* Lints::release_e_ca_crl_sign_not_set() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ca_crl_sign_not_set)
   
-  ::censys_definitions::LintResult* temp = e_ca_crl_sign_not_set_;
+  ::zsearch::LintResult* temp = e_ca_crl_sign_not_set_;
   e_ca_crl_sign_not_set_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ca_crl_sign_not_set(::censys_definitions::LintResult* e_ca_crl_sign_not_set) {
+inline void Lints::set_allocated_e_ca_crl_sign_not_set(::zsearch::LintResult* e_ca_crl_sign_not_set) {
   delete e_ca_crl_sign_not_set_;
   e_ca_crl_sign_not_set_ = e_ca_crl_sign_not_set;
   if (e_ca_crl_sign_not_set) {
@@ -2800,10 +2800,10 @@ inline void Lints::set_allocated_e_ca_crl_sign_not_set(::censys_definitions::Lin
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ca_crl_sign_not_set)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ca_crl_sign_not_set)
 }
 
-// .censys_definitions.LintResult w_ca_digital_signature_not_set = 9;
+// .zsearch.LintResult w_ca_digital_signature_not_set = 9;
 inline bool Lints::has_w_ca_digital_signature_not_set() const {
   return this != internal_default_instance() && w_ca_digital_signature_not_set_ != NULL;
 }
@@ -2811,27 +2811,27 @@ inline void Lints::clear_w_ca_digital_signature_not_set() {
   if (GetArenaNoVirtual() == NULL && w_ca_digital_signature_not_set_ != NULL) delete w_ca_digital_signature_not_set_;
   w_ca_digital_signature_not_set_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::w_ca_digital_signature_not_set() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.w_ca_digital_signature_not_set)
+inline const ::zsearch::LintResult& Lints::w_ca_digital_signature_not_set() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.w_ca_digital_signature_not_set)
   return w_ca_digital_signature_not_set_ != NULL ? *w_ca_digital_signature_not_set_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_w_ca_digital_signature_not_set() {
+inline ::zsearch::LintResult* Lints::mutable_w_ca_digital_signature_not_set() {
   
   if (w_ca_digital_signature_not_set_ == NULL) {
-    w_ca_digital_signature_not_set_ = new ::censys_definitions::LintResult;
+    w_ca_digital_signature_not_set_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.w_ca_digital_signature_not_set)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.w_ca_digital_signature_not_set)
   return w_ca_digital_signature_not_set_;
 }
-inline ::censys_definitions::LintResult* Lints::release_w_ca_digital_signature_not_set() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.w_ca_digital_signature_not_set)
+inline ::zsearch::LintResult* Lints::release_w_ca_digital_signature_not_set() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.w_ca_digital_signature_not_set)
   
-  ::censys_definitions::LintResult* temp = w_ca_digital_signature_not_set_;
+  ::zsearch::LintResult* temp = w_ca_digital_signature_not_set_;
   w_ca_digital_signature_not_set_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_w_ca_digital_signature_not_set(::censys_definitions::LintResult* w_ca_digital_signature_not_set) {
+inline void Lints::set_allocated_w_ca_digital_signature_not_set(::zsearch::LintResult* w_ca_digital_signature_not_set) {
   delete w_ca_digital_signature_not_set_;
   w_ca_digital_signature_not_set_ = w_ca_digital_signature_not_set;
   if (w_ca_digital_signature_not_set) {
@@ -2839,10 +2839,10 @@ inline void Lints::set_allocated_w_ca_digital_signature_not_set(::censys_definit
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.w_ca_digital_signature_not_set)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.w_ca_digital_signature_not_set)
 }
 
-// .censys_definitions.LintResult e_ca_key_cert_sign_not_set = 10;
+// .zsearch.LintResult e_ca_key_cert_sign_not_set = 10;
 inline bool Lints::has_e_ca_key_cert_sign_not_set() const {
   return this != internal_default_instance() && e_ca_key_cert_sign_not_set_ != NULL;
 }
@@ -2850,27 +2850,27 @@ inline void Lints::clear_e_ca_key_cert_sign_not_set() {
   if (GetArenaNoVirtual() == NULL && e_ca_key_cert_sign_not_set_ != NULL) delete e_ca_key_cert_sign_not_set_;
   e_ca_key_cert_sign_not_set_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ca_key_cert_sign_not_set() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ca_key_cert_sign_not_set)
+inline const ::zsearch::LintResult& Lints::e_ca_key_cert_sign_not_set() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ca_key_cert_sign_not_set)
   return e_ca_key_cert_sign_not_set_ != NULL ? *e_ca_key_cert_sign_not_set_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ca_key_cert_sign_not_set() {
+inline ::zsearch::LintResult* Lints::mutable_e_ca_key_cert_sign_not_set() {
   
   if (e_ca_key_cert_sign_not_set_ == NULL) {
-    e_ca_key_cert_sign_not_set_ = new ::censys_definitions::LintResult;
+    e_ca_key_cert_sign_not_set_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ca_key_cert_sign_not_set)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ca_key_cert_sign_not_set)
   return e_ca_key_cert_sign_not_set_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ca_key_cert_sign_not_set() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ca_key_cert_sign_not_set)
+inline ::zsearch::LintResult* Lints::release_e_ca_key_cert_sign_not_set() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ca_key_cert_sign_not_set)
   
-  ::censys_definitions::LintResult* temp = e_ca_key_cert_sign_not_set_;
+  ::zsearch::LintResult* temp = e_ca_key_cert_sign_not_set_;
   e_ca_key_cert_sign_not_set_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ca_key_cert_sign_not_set(::censys_definitions::LintResult* e_ca_key_cert_sign_not_set) {
+inline void Lints::set_allocated_e_ca_key_cert_sign_not_set(::zsearch::LintResult* e_ca_key_cert_sign_not_set) {
   delete e_ca_key_cert_sign_not_set_;
   e_ca_key_cert_sign_not_set_ = e_ca_key_cert_sign_not_set;
   if (e_ca_key_cert_sign_not_set) {
@@ -2878,10 +2878,10 @@ inline void Lints::set_allocated_e_ca_key_cert_sign_not_set(::censys_definitions
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ca_key_cert_sign_not_set)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ca_key_cert_sign_not_set)
 }
 
-// .censys_definitions.LintResult e_ca_key_usage_missing = 11;
+// .zsearch.LintResult e_ca_key_usage_missing = 11;
 inline bool Lints::has_e_ca_key_usage_missing() const {
   return this != internal_default_instance() && e_ca_key_usage_missing_ != NULL;
 }
@@ -2889,27 +2889,27 @@ inline void Lints::clear_e_ca_key_usage_missing() {
   if (GetArenaNoVirtual() == NULL && e_ca_key_usage_missing_ != NULL) delete e_ca_key_usage_missing_;
   e_ca_key_usage_missing_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ca_key_usage_missing() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ca_key_usage_missing)
+inline const ::zsearch::LintResult& Lints::e_ca_key_usage_missing() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ca_key_usage_missing)
   return e_ca_key_usage_missing_ != NULL ? *e_ca_key_usage_missing_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ca_key_usage_missing() {
+inline ::zsearch::LintResult* Lints::mutable_e_ca_key_usage_missing() {
   
   if (e_ca_key_usage_missing_ == NULL) {
-    e_ca_key_usage_missing_ = new ::censys_definitions::LintResult;
+    e_ca_key_usage_missing_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ca_key_usage_missing)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ca_key_usage_missing)
   return e_ca_key_usage_missing_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ca_key_usage_missing() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ca_key_usage_missing)
+inline ::zsearch::LintResult* Lints::release_e_ca_key_usage_missing() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ca_key_usage_missing)
   
-  ::censys_definitions::LintResult* temp = e_ca_key_usage_missing_;
+  ::zsearch::LintResult* temp = e_ca_key_usage_missing_;
   e_ca_key_usage_missing_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ca_key_usage_missing(::censys_definitions::LintResult* e_ca_key_usage_missing) {
+inline void Lints::set_allocated_e_ca_key_usage_missing(::zsearch::LintResult* e_ca_key_usage_missing) {
   delete e_ca_key_usage_missing_;
   e_ca_key_usage_missing_ = e_ca_key_usage_missing;
   if (e_ca_key_usage_missing) {
@@ -2917,10 +2917,10 @@ inline void Lints::set_allocated_e_ca_key_usage_missing(::censys_definitions::Li
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ca_key_usage_missing)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ca_key_usage_missing)
 }
 
-// .censys_definitions.LintResult e_ca_key_usage_not_critical = 12;
+// .zsearch.LintResult e_ca_key_usage_not_critical = 12;
 inline bool Lints::has_e_ca_key_usage_not_critical() const {
   return this != internal_default_instance() && e_ca_key_usage_not_critical_ != NULL;
 }
@@ -2928,27 +2928,27 @@ inline void Lints::clear_e_ca_key_usage_not_critical() {
   if (GetArenaNoVirtual() == NULL && e_ca_key_usage_not_critical_ != NULL) delete e_ca_key_usage_not_critical_;
   e_ca_key_usage_not_critical_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ca_key_usage_not_critical() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ca_key_usage_not_critical)
+inline const ::zsearch::LintResult& Lints::e_ca_key_usage_not_critical() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ca_key_usage_not_critical)
   return e_ca_key_usage_not_critical_ != NULL ? *e_ca_key_usage_not_critical_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ca_key_usage_not_critical() {
+inline ::zsearch::LintResult* Lints::mutable_e_ca_key_usage_not_critical() {
   
   if (e_ca_key_usage_not_critical_ == NULL) {
-    e_ca_key_usage_not_critical_ = new ::censys_definitions::LintResult;
+    e_ca_key_usage_not_critical_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ca_key_usage_not_critical)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ca_key_usage_not_critical)
   return e_ca_key_usage_not_critical_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ca_key_usage_not_critical() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ca_key_usage_not_critical)
+inline ::zsearch::LintResult* Lints::release_e_ca_key_usage_not_critical() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ca_key_usage_not_critical)
   
-  ::censys_definitions::LintResult* temp = e_ca_key_usage_not_critical_;
+  ::zsearch::LintResult* temp = e_ca_key_usage_not_critical_;
   e_ca_key_usage_not_critical_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ca_key_usage_not_critical(::censys_definitions::LintResult* e_ca_key_usage_not_critical) {
+inline void Lints::set_allocated_e_ca_key_usage_not_critical(::zsearch::LintResult* e_ca_key_usage_not_critical) {
   delete e_ca_key_usage_not_critical_;
   e_ca_key_usage_not_critical_ = e_ca_key_usage_not_critical;
   if (e_ca_key_usage_not_critical) {
@@ -2956,10 +2956,10 @@ inline void Lints::set_allocated_e_ca_key_usage_not_critical(::censys_definition
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ca_key_usage_not_critical)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ca_key_usage_not_critical)
 }
 
-// .censys_definitions.LintResult e_ca_organization_name_missing = 13;
+// .zsearch.LintResult e_ca_organization_name_missing = 13;
 inline bool Lints::has_e_ca_organization_name_missing() const {
   return this != internal_default_instance() && e_ca_organization_name_missing_ != NULL;
 }
@@ -2967,27 +2967,27 @@ inline void Lints::clear_e_ca_organization_name_missing() {
   if (GetArenaNoVirtual() == NULL && e_ca_organization_name_missing_ != NULL) delete e_ca_organization_name_missing_;
   e_ca_organization_name_missing_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ca_organization_name_missing() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ca_organization_name_missing)
+inline const ::zsearch::LintResult& Lints::e_ca_organization_name_missing() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ca_organization_name_missing)
   return e_ca_organization_name_missing_ != NULL ? *e_ca_organization_name_missing_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ca_organization_name_missing() {
+inline ::zsearch::LintResult* Lints::mutable_e_ca_organization_name_missing() {
   
   if (e_ca_organization_name_missing_ == NULL) {
-    e_ca_organization_name_missing_ = new ::censys_definitions::LintResult;
+    e_ca_organization_name_missing_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ca_organization_name_missing)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ca_organization_name_missing)
   return e_ca_organization_name_missing_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ca_organization_name_missing() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ca_organization_name_missing)
+inline ::zsearch::LintResult* Lints::release_e_ca_organization_name_missing() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ca_organization_name_missing)
   
-  ::censys_definitions::LintResult* temp = e_ca_organization_name_missing_;
+  ::zsearch::LintResult* temp = e_ca_organization_name_missing_;
   e_ca_organization_name_missing_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ca_organization_name_missing(::censys_definitions::LintResult* e_ca_organization_name_missing) {
+inline void Lints::set_allocated_e_ca_organization_name_missing(::zsearch::LintResult* e_ca_organization_name_missing) {
   delete e_ca_organization_name_missing_;
   e_ca_organization_name_missing_ = e_ca_organization_name_missing;
   if (e_ca_organization_name_missing) {
@@ -2995,10 +2995,10 @@ inline void Lints::set_allocated_e_ca_organization_name_missing(::censys_definit
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ca_organization_name_missing)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ca_organization_name_missing)
 }
 
-// .censys_definitions.LintResult e_ca_subject_field_empty = 14;
+// .zsearch.LintResult e_ca_subject_field_empty = 14;
 inline bool Lints::has_e_ca_subject_field_empty() const {
   return this != internal_default_instance() && e_ca_subject_field_empty_ != NULL;
 }
@@ -3006,27 +3006,27 @@ inline void Lints::clear_e_ca_subject_field_empty() {
   if (GetArenaNoVirtual() == NULL && e_ca_subject_field_empty_ != NULL) delete e_ca_subject_field_empty_;
   e_ca_subject_field_empty_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ca_subject_field_empty() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ca_subject_field_empty)
+inline const ::zsearch::LintResult& Lints::e_ca_subject_field_empty() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ca_subject_field_empty)
   return e_ca_subject_field_empty_ != NULL ? *e_ca_subject_field_empty_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ca_subject_field_empty() {
+inline ::zsearch::LintResult* Lints::mutable_e_ca_subject_field_empty() {
   
   if (e_ca_subject_field_empty_ == NULL) {
-    e_ca_subject_field_empty_ = new ::censys_definitions::LintResult;
+    e_ca_subject_field_empty_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ca_subject_field_empty)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ca_subject_field_empty)
   return e_ca_subject_field_empty_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ca_subject_field_empty() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ca_subject_field_empty)
+inline ::zsearch::LintResult* Lints::release_e_ca_subject_field_empty() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ca_subject_field_empty)
   
-  ::censys_definitions::LintResult* temp = e_ca_subject_field_empty_;
+  ::zsearch::LintResult* temp = e_ca_subject_field_empty_;
   e_ca_subject_field_empty_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ca_subject_field_empty(::censys_definitions::LintResult* e_ca_subject_field_empty) {
+inline void Lints::set_allocated_e_ca_subject_field_empty(::zsearch::LintResult* e_ca_subject_field_empty) {
   delete e_ca_subject_field_empty_;
   e_ca_subject_field_empty_ = e_ca_subject_field_empty;
   if (e_ca_subject_field_empty) {
@@ -3034,10 +3034,10 @@ inline void Lints::set_allocated_e_ca_subject_field_empty(::censys_definitions::
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ca_subject_field_empty)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ca_subject_field_empty)
 }
 
-// .censys_definitions.LintResult e_cert_contains_unique_identifier = 15;
+// .zsearch.LintResult e_cert_contains_unique_identifier = 15;
 inline bool Lints::has_e_cert_contains_unique_identifier() const {
   return this != internal_default_instance() && e_cert_contains_unique_identifier_ != NULL;
 }
@@ -3045,27 +3045,27 @@ inline void Lints::clear_e_cert_contains_unique_identifier() {
   if (GetArenaNoVirtual() == NULL && e_cert_contains_unique_identifier_ != NULL) delete e_cert_contains_unique_identifier_;
   e_cert_contains_unique_identifier_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_cert_contains_unique_identifier() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_cert_contains_unique_identifier)
+inline const ::zsearch::LintResult& Lints::e_cert_contains_unique_identifier() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_cert_contains_unique_identifier)
   return e_cert_contains_unique_identifier_ != NULL ? *e_cert_contains_unique_identifier_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_cert_contains_unique_identifier() {
+inline ::zsearch::LintResult* Lints::mutable_e_cert_contains_unique_identifier() {
   
   if (e_cert_contains_unique_identifier_ == NULL) {
-    e_cert_contains_unique_identifier_ = new ::censys_definitions::LintResult;
+    e_cert_contains_unique_identifier_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_cert_contains_unique_identifier)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_cert_contains_unique_identifier)
   return e_cert_contains_unique_identifier_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_cert_contains_unique_identifier() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_cert_contains_unique_identifier)
+inline ::zsearch::LintResult* Lints::release_e_cert_contains_unique_identifier() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_cert_contains_unique_identifier)
   
-  ::censys_definitions::LintResult* temp = e_cert_contains_unique_identifier_;
+  ::zsearch::LintResult* temp = e_cert_contains_unique_identifier_;
   e_cert_contains_unique_identifier_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_cert_contains_unique_identifier(::censys_definitions::LintResult* e_cert_contains_unique_identifier) {
+inline void Lints::set_allocated_e_cert_contains_unique_identifier(::zsearch::LintResult* e_cert_contains_unique_identifier) {
   delete e_cert_contains_unique_identifier_;
   e_cert_contains_unique_identifier_ = e_cert_contains_unique_identifier;
   if (e_cert_contains_unique_identifier) {
@@ -3073,10 +3073,10 @@ inline void Lints::set_allocated_e_cert_contains_unique_identifier(::censys_defi
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_cert_contains_unique_identifier)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_cert_contains_unique_identifier)
 }
 
-// .censys_definitions.LintResult e_cert_extensions_version_not_3 = 16;
+// .zsearch.LintResult e_cert_extensions_version_not_3 = 16;
 inline bool Lints::has_e_cert_extensions_version_not_3() const {
   return this != internal_default_instance() && e_cert_extensions_version_not_3_ != NULL;
 }
@@ -3084,27 +3084,27 @@ inline void Lints::clear_e_cert_extensions_version_not_3() {
   if (GetArenaNoVirtual() == NULL && e_cert_extensions_version_not_3_ != NULL) delete e_cert_extensions_version_not_3_;
   e_cert_extensions_version_not_3_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_cert_extensions_version_not_3() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_cert_extensions_version_not_3)
+inline const ::zsearch::LintResult& Lints::e_cert_extensions_version_not_3() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_cert_extensions_version_not_3)
   return e_cert_extensions_version_not_3_ != NULL ? *e_cert_extensions_version_not_3_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_cert_extensions_version_not_3() {
+inline ::zsearch::LintResult* Lints::mutable_e_cert_extensions_version_not_3() {
   
   if (e_cert_extensions_version_not_3_ == NULL) {
-    e_cert_extensions_version_not_3_ = new ::censys_definitions::LintResult;
+    e_cert_extensions_version_not_3_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_cert_extensions_version_not_3)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_cert_extensions_version_not_3)
   return e_cert_extensions_version_not_3_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_cert_extensions_version_not_3() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_cert_extensions_version_not_3)
+inline ::zsearch::LintResult* Lints::release_e_cert_extensions_version_not_3() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_cert_extensions_version_not_3)
   
-  ::censys_definitions::LintResult* temp = e_cert_extensions_version_not_3_;
+  ::zsearch::LintResult* temp = e_cert_extensions_version_not_3_;
   e_cert_extensions_version_not_3_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_cert_extensions_version_not_3(::censys_definitions::LintResult* e_cert_extensions_version_not_3) {
+inline void Lints::set_allocated_e_cert_extensions_version_not_3(::zsearch::LintResult* e_cert_extensions_version_not_3) {
   delete e_cert_extensions_version_not_3_;
   e_cert_extensions_version_not_3_ = e_cert_extensions_version_not_3;
   if (e_cert_extensions_version_not_3) {
@@ -3112,10 +3112,10 @@ inline void Lints::set_allocated_e_cert_extensions_version_not_3(::censys_defini
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_cert_extensions_version_not_3)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_cert_extensions_version_not_3)
 }
 
-// .censys_definitions.LintResult e_cab_dv_conflicts_with_locality = 17;
+// .zsearch.LintResult e_cab_dv_conflicts_with_locality = 17;
 inline bool Lints::has_e_cab_dv_conflicts_with_locality() const {
   return this != internal_default_instance() && e_cab_dv_conflicts_with_locality_ != NULL;
 }
@@ -3123,27 +3123,27 @@ inline void Lints::clear_e_cab_dv_conflicts_with_locality() {
   if (GetArenaNoVirtual() == NULL && e_cab_dv_conflicts_with_locality_ != NULL) delete e_cab_dv_conflicts_with_locality_;
   e_cab_dv_conflicts_with_locality_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_cab_dv_conflicts_with_locality() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_cab_dv_conflicts_with_locality)
+inline const ::zsearch::LintResult& Lints::e_cab_dv_conflicts_with_locality() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_cab_dv_conflicts_with_locality)
   return e_cab_dv_conflicts_with_locality_ != NULL ? *e_cab_dv_conflicts_with_locality_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_cab_dv_conflicts_with_locality() {
+inline ::zsearch::LintResult* Lints::mutable_e_cab_dv_conflicts_with_locality() {
   
   if (e_cab_dv_conflicts_with_locality_ == NULL) {
-    e_cab_dv_conflicts_with_locality_ = new ::censys_definitions::LintResult;
+    e_cab_dv_conflicts_with_locality_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_cab_dv_conflicts_with_locality)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_cab_dv_conflicts_with_locality)
   return e_cab_dv_conflicts_with_locality_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_cab_dv_conflicts_with_locality() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_cab_dv_conflicts_with_locality)
+inline ::zsearch::LintResult* Lints::release_e_cab_dv_conflicts_with_locality() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_cab_dv_conflicts_with_locality)
   
-  ::censys_definitions::LintResult* temp = e_cab_dv_conflicts_with_locality_;
+  ::zsearch::LintResult* temp = e_cab_dv_conflicts_with_locality_;
   e_cab_dv_conflicts_with_locality_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_cab_dv_conflicts_with_locality(::censys_definitions::LintResult* e_cab_dv_conflicts_with_locality) {
+inline void Lints::set_allocated_e_cab_dv_conflicts_with_locality(::zsearch::LintResult* e_cab_dv_conflicts_with_locality) {
   delete e_cab_dv_conflicts_with_locality_;
   e_cab_dv_conflicts_with_locality_ = e_cab_dv_conflicts_with_locality;
   if (e_cab_dv_conflicts_with_locality) {
@@ -3151,10 +3151,10 @@ inline void Lints::set_allocated_e_cab_dv_conflicts_with_locality(::censys_defin
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_cab_dv_conflicts_with_locality)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_cab_dv_conflicts_with_locality)
 }
 
-// .censys_definitions.LintResult e_cab_dv_conflicts_with_org = 18;
+// .zsearch.LintResult e_cab_dv_conflicts_with_org = 18;
 inline bool Lints::has_e_cab_dv_conflicts_with_org() const {
   return this != internal_default_instance() && e_cab_dv_conflicts_with_org_ != NULL;
 }
@@ -3162,27 +3162,27 @@ inline void Lints::clear_e_cab_dv_conflicts_with_org() {
   if (GetArenaNoVirtual() == NULL && e_cab_dv_conflicts_with_org_ != NULL) delete e_cab_dv_conflicts_with_org_;
   e_cab_dv_conflicts_with_org_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_cab_dv_conflicts_with_org() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_cab_dv_conflicts_with_org)
+inline const ::zsearch::LintResult& Lints::e_cab_dv_conflicts_with_org() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_cab_dv_conflicts_with_org)
   return e_cab_dv_conflicts_with_org_ != NULL ? *e_cab_dv_conflicts_with_org_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_cab_dv_conflicts_with_org() {
+inline ::zsearch::LintResult* Lints::mutable_e_cab_dv_conflicts_with_org() {
   
   if (e_cab_dv_conflicts_with_org_ == NULL) {
-    e_cab_dv_conflicts_with_org_ = new ::censys_definitions::LintResult;
+    e_cab_dv_conflicts_with_org_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_cab_dv_conflicts_with_org)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_cab_dv_conflicts_with_org)
   return e_cab_dv_conflicts_with_org_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_cab_dv_conflicts_with_org() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_cab_dv_conflicts_with_org)
+inline ::zsearch::LintResult* Lints::release_e_cab_dv_conflicts_with_org() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_cab_dv_conflicts_with_org)
   
-  ::censys_definitions::LintResult* temp = e_cab_dv_conflicts_with_org_;
+  ::zsearch::LintResult* temp = e_cab_dv_conflicts_with_org_;
   e_cab_dv_conflicts_with_org_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_cab_dv_conflicts_with_org(::censys_definitions::LintResult* e_cab_dv_conflicts_with_org) {
+inline void Lints::set_allocated_e_cab_dv_conflicts_with_org(::zsearch::LintResult* e_cab_dv_conflicts_with_org) {
   delete e_cab_dv_conflicts_with_org_;
   e_cab_dv_conflicts_with_org_ = e_cab_dv_conflicts_with_org;
   if (e_cab_dv_conflicts_with_org) {
@@ -3190,10 +3190,10 @@ inline void Lints::set_allocated_e_cab_dv_conflicts_with_org(::censys_definition
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_cab_dv_conflicts_with_org)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_cab_dv_conflicts_with_org)
 }
 
-// .censys_definitions.LintResult e_cab_dv_conflicts_with_postal = 19;
+// .zsearch.LintResult e_cab_dv_conflicts_with_postal = 19;
 inline bool Lints::has_e_cab_dv_conflicts_with_postal() const {
   return this != internal_default_instance() && e_cab_dv_conflicts_with_postal_ != NULL;
 }
@@ -3201,27 +3201,27 @@ inline void Lints::clear_e_cab_dv_conflicts_with_postal() {
   if (GetArenaNoVirtual() == NULL && e_cab_dv_conflicts_with_postal_ != NULL) delete e_cab_dv_conflicts_with_postal_;
   e_cab_dv_conflicts_with_postal_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_cab_dv_conflicts_with_postal() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_cab_dv_conflicts_with_postal)
+inline const ::zsearch::LintResult& Lints::e_cab_dv_conflicts_with_postal() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_cab_dv_conflicts_with_postal)
   return e_cab_dv_conflicts_with_postal_ != NULL ? *e_cab_dv_conflicts_with_postal_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_cab_dv_conflicts_with_postal() {
+inline ::zsearch::LintResult* Lints::mutable_e_cab_dv_conflicts_with_postal() {
   
   if (e_cab_dv_conflicts_with_postal_ == NULL) {
-    e_cab_dv_conflicts_with_postal_ = new ::censys_definitions::LintResult;
+    e_cab_dv_conflicts_with_postal_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_cab_dv_conflicts_with_postal)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_cab_dv_conflicts_with_postal)
   return e_cab_dv_conflicts_with_postal_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_cab_dv_conflicts_with_postal() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_cab_dv_conflicts_with_postal)
+inline ::zsearch::LintResult* Lints::release_e_cab_dv_conflicts_with_postal() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_cab_dv_conflicts_with_postal)
   
-  ::censys_definitions::LintResult* temp = e_cab_dv_conflicts_with_postal_;
+  ::zsearch::LintResult* temp = e_cab_dv_conflicts_with_postal_;
   e_cab_dv_conflicts_with_postal_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_cab_dv_conflicts_with_postal(::censys_definitions::LintResult* e_cab_dv_conflicts_with_postal) {
+inline void Lints::set_allocated_e_cab_dv_conflicts_with_postal(::zsearch::LintResult* e_cab_dv_conflicts_with_postal) {
   delete e_cab_dv_conflicts_with_postal_;
   e_cab_dv_conflicts_with_postal_ = e_cab_dv_conflicts_with_postal;
   if (e_cab_dv_conflicts_with_postal) {
@@ -3229,10 +3229,10 @@ inline void Lints::set_allocated_e_cab_dv_conflicts_with_postal(::censys_definit
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_cab_dv_conflicts_with_postal)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_cab_dv_conflicts_with_postal)
 }
 
-// .censys_definitions.LintResult e_cab_dv_conflicts_with_province = 20;
+// .zsearch.LintResult e_cab_dv_conflicts_with_province = 20;
 inline bool Lints::has_e_cab_dv_conflicts_with_province() const {
   return this != internal_default_instance() && e_cab_dv_conflicts_with_province_ != NULL;
 }
@@ -3240,27 +3240,27 @@ inline void Lints::clear_e_cab_dv_conflicts_with_province() {
   if (GetArenaNoVirtual() == NULL && e_cab_dv_conflicts_with_province_ != NULL) delete e_cab_dv_conflicts_with_province_;
   e_cab_dv_conflicts_with_province_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_cab_dv_conflicts_with_province() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_cab_dv_conflicts_with_province)
+inline const ::zsearch::LintResult& Lints::e_cab_dv_conflicts_with_province() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_cab_dv_conflicts_with_province)
   return e_cab_dv_conflicts_with_province_ != NULL ? *e_cab_dv_conflicts_with_province_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_cab_dv_conflicts_with_province() {
+inline ::zsearch::LintResult* Lints::mutable_e_cab_dv_conflicts_with_province() {
   
   if (e_cab_dv_conflicts_with_province_ == NULL) {
-    e_cab_dv_conflicts_with_province_ = new ::censys_definitions::LintResult;
+    e_cab_dv_conflicts_with_province_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_cab_dv_conflicts_with_province)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_cab_dv_conflicts_with_province)
   return e_cab_dv_conflicts_with_province_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_cab_dv_conflicts_with_province() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_cab_dv_conflicts_with_province)
+inline ::zsearch::LintResult* Lints::release_e_cab_dv_conflicts_with_province() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_cab_dv_conflicts_with_province)
   
-  ::censys_definitions::LintResult* temp = e_cab_dv_conflicts_with_province_;
+  ::zsearch::LintResult* temp = e_cab_dv_conflicts_with_province_;
   e_cab_dv_conflicts_with_province_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_cab_dv_conflicts_with_province(::censys_definitions::LintResult* e_cab_dv_conflicts_with_province) {
+inline void Lints::set_allocated_e_cab_dv_conflicts_with_province(::zsearch::LintResult* e_cab_dv_conflicts_with_province) {
   delete e_cab_dv_conflicts_with_province_;
   e_cab_dv_conflicts_with_province_ = e_cab_dv_conflicts_with_province;
   if (e_cab_dv_conflicts_with_province) {
@@ -3268,10 +3268,10 @@ inline void Lints::set_allocated_e_cab_dv_conflicts_with_province(::censys_defin
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_cab_dv_conflicts_with_province)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_cab_dv_conflicts_with_province)
 }
 
-// .censys_definitions.LintResult e_cab_dv_conflicts_with_street = 21;
+// .zsearch.LintResult e_cab_dv_conflicts_with_street = 21;
 inline bool Lints::has_e_cab_dv_conflicts_with_street() const {
   return this != internal_default_instance() && e_cab_dv_conflicts_with_street_ != NULL;
 }
@@ -3279,27 +3279,27 @@ inline void Lints::clear_e_cab_dv_conflicts_with_street() {
   if (GetArenaNoVirtual() == NULL && e_cab_dv_conflicts_with_street_ != NULL) delete e_cab_dv_conflicts_with_street_;
   e_cab_dv_conflicts_with_street_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_cab_dv_conflicts_with_street() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_cab_dv_conflicts_with_street)
+inline const ::zsearch::LintResult& Lints::e_cab_dv_conflicts_with_street() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_cab_dv_conflicts_with_street)
   return e_cab_dv_conflicts_with_street_ != NULL ? *e_cab_dv_conflicts_with_street_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_cab_dv_conflicts_with_street() {
+inline ::zsearch::LintResult* Lints::mutable_e_cab_dv_conflicts_with_street() {
   
   if (e_cab_dv_conflicts_with_street_ == NULL) {
-    e_cab_dv_conflicts_with_street_ = new ::censys_definitions::LintResult;
+    e_cab_dv_conflicts_with_street_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_cab_dv_conflicts_with_street)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_cab_dv_conflicts_with_street)
   return e_cab_dv_conflicts_with_street_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_cab_dv_conflicts_with_street() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_cab_dv_conflicts_with_street)
+inline ::zsearch::LintResult* Lints::release_e_cab_dv_conflicts_with_street() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_cab_dv_conflicts_with_street)
   
-  ::censys_definitions::LintResult* temp = e_cab_dv_conflicts_with_street_;
+  ::zsearch::LintResult* temp = e_cab_dv_conflicts_with_street_;
   e_cab_dv_conflicts_with_street_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_cab_dv_conflicts_with_street(::censys_definitions::LintResult* e_cab_dv_conflicts_with_street) {
+inline void Lints::set_allocated_e_cab_dv_conflicts_with_street(::zsearch::LintResult* e_cab_dv_conflicts_with_street) {
   delete e_cab_dv_conflicts_with_street_;
   e_cab_dv_conflicts_with_street_ = e_cab_dv_conflicts_with_street;
   if (e_cab_dv_conflicts_with_street) {
@@ -3307,10 +3307,10 @@ inline void Lints::set_allocated_e_cab_dv_conflicts_with_street(::censys_definit
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_cab_dv_conflicts_with_street)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_cab_dv_conflicts_with_street)
 }
 
-// .censys_definitions.LintResult e_cert_policy_iv_requires_country = 22;
+// .zsearch.LintResult e_cert_policy_iv_requires_country = 22;
 inline bool Lints::has_e_cert_policy_iv_requires_country() const {
   return this != internal_default_instance() && e_cert_policy_iv_requires_country_ != NULL;
 }
@@ -3318,27 +3318,27 @@ inline void Lints::clear_e_cert_policy_iv_requires_country() {
   if (GetArenaNoVirtual() == NULL && e_cert_policy_iv_requires_country_ != NULL) delete e_cert_policy_iv_requires_country_;
   e_cert_policy_iv_requires_country_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_cert_policy_iv_requires_country() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_cert_policy_iv_requires_country)
+inline const ::zsearch::LintResult& Lints::e_cert_policy_iv_requires_country() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_cert_policy_iv_requires_country)
   return e_cert_policy_iv_requires_country_ != NULL ? *e_cert_policy_iv_requires_country_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_cert_policy_iv_requires_country() {
+inline ::zsearch::LintResult* Lints::mutable_e_cert_policy_iv_requires_country() {
   
   if (e_cert_policy_iv_requires_country_ == NULL) {
-    e_cert_policy_iv_requires_country_ = new ::censys_definitions::LintResult;
+    e_cert_policy_iv_requires_country_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_cert_policy_iv_requires_country)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_cert_policy_iv_requires_country)
   return e_cert_policy_iv_requires_country_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_cert_policy_iv_requires_country() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_cert_policy_iv_requires_country)
+inline ::zsearch::LintResult* Lints::release_e_cert_policy_iv_requires_country() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_cert_policy_iv_requires_country)
   
-  ::censys_definitions::LintResult* temp = e_cert_policy_iv_requires_country_;
+  ::zsearch::LintResult* temp = e_cert_policy_iv_requires_country_;
   e_cert_policy_iv_requires_country_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_cert_policy_iv_requires_country(::censys_definitions::LintResult* e_cert_policy_iv_requires_country) {
+inline void Lints::set_allocated_e_cert_policy_iv_requires_country(::zsearch::LintResult* e_cert_policy_iv_requires_country) {
   delete e_cert_policy_iv_requires_country_;
   e_cert_policy_iv_requires_country_ = e_cert_policy_iv_requires_country;
   if (e_cert_policy_iv_requires_country) {
@@ -3346,10 +3346,10 @@ inline void Lints::set_allocated_e_cert_policy_iv_requires_country(::censys_defi
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_cert_policy_iv_requires_country)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_cert_policy_iv_requires_country)
 }
 
-// .censys_definitions.LintResult e_cert_policy_iv_requires_province_or_locality = 23;
+// .zsearch.LintResult e_cert_policy_iv_requires_province_or_locality = 23;
 inline bool Lints::has_e_cert_policy_iv_requires_province_or_locality() const {
   return this != internal_default_instance() && e_cert_policy_iv_requires_province_or_locality_ != NULL;
 }
@@ -3357,27 +3357,27 @@ inline void Lints::clear_e_cert_policy_iv_requires_province_or_locality() {
   if (GetArenaNoVirtual() == NULL && e_cert_policy_iv_requires_province_or_locality_ != NULL) delete e_cert_policy_iv_requires_province_or_locality_;
   e_cert_policy_iv_requires_province_or_locality_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_cert_policy_iv_requires_province_or_locality() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_cert_policy_iv_requires_province_or_locality)
+inline const ::zsearch::LintResult& Lints::e_cert_policy_iv_requires_province_or_locality() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_cert_policy_iv_requires_province_or_locality)
   return e_cert_policy_iv_requires_province_or_locality_ != NULL ? *e_cert_policy_iv_requires_province_or_locality_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_cert_policy_iv_requires_province_or_locality() {
+inline ::zsearch::LintResult* Lints::mutable_e_cert_policy_iv_requires_province_or_locality() {
   
   if (e_cert_policy_iv_requires_province_or_locality_ == NULL) {
-    e_cert_policy_iv_requires_province_or_locality_ = new ::censys_definitions::LintResult;
+    e_cert_policy_iv_requires_province_or_locality_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_cert_policy_iv_requires_province_or_locality)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_cert_policy_iv_requires_province_or_locality)
   return e_cert_policy_iv_requires_province_or_locality_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_cert_policy_iv_requires_province_or_locality() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_cert_policy_iv_requires_province_or_locality)
+inline ::zsearch::LintResult* Lints::release_e_cert_policy_iv_requires_province_or_locality() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_cert_policy_iv_requires_province_or_locality)
   
-  ::censys_definitions::LintResult* temp = e_cert_policy_iv_requires_province_or_locality_;
+  ::zsearch::LintResult* temp = e_cert_policy_iv_requires_province_or_locality_;
   e_cert_policy_iv_requires_province_or_locality_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_cert_policy_iv_requires_province_or_locality(::censys_definitions::LintResult* e_cert_policy_iv_requires_province_or_locality) {
+inline void Lints::set_allocated_e_cert_policy_iv_requires_province_or_locality(::zsearch::LintResult* e_cert_policy_iv_requires_province_or_locality) {
   delete e_cert_policy_iv_requires_province_or_locality_;
   e_cert_policy_iv_requires_province_or_locality_ = e_cert_policy_iv_requires_province_or_locality;
   if (e_cert_policy_iv_requires_province_or_locality) {
@@ -3385,10 +3385,10 @@ inline void Lints::set_allocated_e_cert_policy_iv_requires_province_or_locality(
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_cert_policy_iv_requires_province_or_locality)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_cert_policy_iv_requires_province_or_locality)
 }
 
-// .censys_definitions.LintResult e_cert_policy_ov_requires_country = 24;
+// .zsearch.LintResult e_cert_policy_ov_requires_country = 24;
 inline bool Lints::has_e_cert_policy_ov_requires_country() const {
   return this != internal_default_instance() && e_cert_policy_ov_requires_country_ != NULL;
 }
@@ -3396,27 +3396,27 @@ inline void Lints::clear_e_cert_policy_ov_requires_country() {
   if (GetArenaNoVirtual() == NULL && e_cert_policy_ov_requires_country_ != NULL) delete e_cert_policy_ov_requires_country_;
   e_cert_policy_ov_requires_country_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_cert_policy_ov_requires_country() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_cert_policy_ov_requires_country)
+inline const ::zsearch::LintResult& Lints::e_cert_policy_ov_requires_country() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_cert_policy_ov_requires_country)
   return e_cert_policy_ov_requires_country_ != NULL ? *e_cert_policy_ov_requires_country_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_cert_policy_ov_requires_country() {
+inline ::zsearch::LintResult* Lints::mutable_e_cert_policy_ov_requires_country() {
   
   if (e_cert_policy_ov_requires_country_ == NULL) {
-    e_cert_policy_ov_requires_country_ = new ::censys_definitions::LintResult;
+    e_cert_policy_ov_requires_country_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_cert_policy_ov_requires_country)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_cert_policy_ov_requires_country)
   return e_cert_policy_ov_requires_country_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_cert_policy_ov_requires_country() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_cert_policy_ov_requires_country)
+inline ::zsearch::LintResult* Lints::release_e_cert_policy_ov_requires_country() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_cert_policy_ov_requires_country)
   
-  ::censys_definitions::LintResult* temp = e_cert_policy_ov_requires_country_;
+  ::zsearch::LintResult* temp = e_cert_policy_ov_requires_country_;
   e_cert_policy_ov_requires_country_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_cert_policy_ov_requires_country(::censys_definitions::LintResult* e_cert_policy_ov_requires_country) {
+inline void Lints::set_allocated_e_cert_policy_ov_requires_country(::zsearch::LintResult* e_cert_policy_ov_requires_country) {
   delete e_cert_policy_ov_requires_country_;
   e_cert_policy_ov_requires_country_ = e_cert_policy_ov_requires_country;
   if (e_cert_policy_ov_requires_country) {
@@ -3424,10 +3424,10 @@ inline void Lints::set_allocated_e_cert_policy_ov_requires_country(::censys_defi
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_cert_policy_ov_requires_country)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_cert_policy_ov_requires_country)
 }
 
-// .censys_definitions.LintResult e_cert_policy_ov_requires_province_or_locality = 25;
+// .zsearch.LintResult e_cert_policy_ov_requires_province_or_locality = 25;
 inline bool Lints::has_e_cert_policy_ov_requires_province_or_locality() const {
   return this != internal_default_instance() && e_cert_policy_ov_requires_province_or_locality_ != NULL;
 }
@@ -3435,27 +3435,27 @@ inline void Lints::clear_e_cert_policy_ov_requires_province_or_locality() {
   if (GetArenaNoVirtual() == NULL && e_cert_policy_ov_requires_province_or_locality_ != NULL) delete e_cert_policy_ov_requires_province_or_locality_;
   e_cert_policy_ov_requires_province_or_locality_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_cert_policy_ov_requires_province_or_locality() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_cert_policy_ov_requires_province_or_locality)
+inline const ::zsearch::LintResult& Lints::e_cert_policy_ov_requires_province_or_locality() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_cert_policy_ov_requires_province_or_locality)
   return e_cert_policy_ov_requires_province_or_locality_ != NULL ? *e_cert_policy_ov_requires_province_or_locality_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_cert_policy_ov_requires_province_or_locality() {
+inline ::zsearch::LintResult* Lints::mutable_e_cert_policy_ov_requires_province_or_locality() {
   
   if (e_cert_policy_ov_requires_province_or_locality_ == NULL) {
-    e_cert_policy_ov_requires_province_or_locality_ = new ::censys_definitions::LintResult;
+    e_cert_policy_ov_requires_province_or_locality_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_cert_policy_ov_requires_province_or_locality)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_cert_policy_ov_requires_province_or_locality)
   return e_cert_policy_ov_requires_province_or_locality_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_cert_policy_ov_requires_province_or_locality() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_cert_policy_ov_requires_province_or_locality)
+inline ::zsearch::LintResult* Lints::release_e_cert_policy_ov_requires_province_or_locality() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_cert_policy_ov_requires_province_or_locality)
   
-  ::censys_definitions::LintResult* temp = e_cert_policy_ov_requires_province_or_locality_;
+  ::zsearch::LintResult* temp = e_cert_policy_ov_requires_province_or_locality_;
   e_cert_policy_ov_requires_province_or_locality_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_cert_policy_ov_requires_province_or_locality(::censys_definitions::LintResult* e_cert_policy_ov_requires_province_or_locality) {
+inline void Lints::set_allocated_e_cert_policy_ov_requires_province_or_locality(::zsearch::LintResult* e_cert_policy_ov_requires_province_or_locality) {
   delete e_cert_policy_ov_requires_province_or_locality_;
   e_cert_policy_ov_requires_province_or_locality_ = e_cert_policy_ov_requires_province_or_locality;
   if (e_cert_policy_ov_requires_province_or_locality) {
@@ -3463,10 +3463,10 @@ inline void Lints::set_allocated_e_cert_policy_ov_requires_province_or_locality(
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_cert_policy_ov_requires_province_or_locality)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_cert_policy_ov_requires_province_or_locality)
 }
 
-// .censys_definitions.LintResult e_cab_ov_requires_org = 26;
+// .zsearch.LintResult e_cab_ov_requires_org = 26;
 inline bool Lints::has_e_cab_ov_requires_org() const {
   return this != internal_default_instance() && e_cab_ov_requires_org_ != NULL;
 }
@@ -3474,27 +3474,27 @@ inline void Lints::clear_e_cab_ov_requires_org() {
   if (GetArenaNoVirtual() == NULL && e_cab_ov_requires_org_ != NULL) delete e_cab_ov_requires_org_;
   e_cab_ov_requires_org_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_cab_ov_requires_org() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_cab_ov_requires_org)
+inline const ::zsearch::LintResult& Lints::e_cab_ov_requires_org() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_cab_ov_requires_org)
   return e_cab_ov_requires_org_ != NULL ? *e_cab_ov_requires_org_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_cab_ov_requires_org() {
+inline ::zsearch::LintResult* Lints::mutable_e_cab_ov_requires_org() {
   
   if (e_cab_ov_requires_org_ == NULL) {
-    e_cab_ov_requires_org_ = new ::censys_definitions::LintResult;
+    e_cab_ov_requires_org_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_cab_ov_requires_org)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_cab_ov_requires_org)
   return e_cab_ov_requires_org_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_cab_ov_requires_org() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_cab_ov_requires_org)
+inline ::zsearch::LintResult* Lints::release_e_cab_ov_requires_org() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_cab_ov_requires_org)
   
-  ::censys_definitions::LintResult* temp = e_cab_ov_requires_org_;
+  ::zsearch::LintResult* temp = e_cab_ov_requires_org_;
   e_cab_ov_requires_org_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_cab_ov_requires_org(::censys_definitions::LintResult* e_cab_ov_requires_org) {
+inline void Lints::set_allocated_e_cab_ov_requires_org(::zsearch::LintResult* e_cab_ov_requires_org) {
   delete e_cab_ov_requires_org_;
   e_cab_ov_requires_org_ = e_cab_ov_requires_org;
   if (e_cab_ov_requires_org) {
@@ -3502,10 +3502,10 @@ inline void Lints::set_allocated_e_cab_ov_requires_org(::censys_definitions::Lin
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_cab_ov_requires_org)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_cab_ov_requires_org)
 }
 
-// .censys_definitions.LintResult e_cab_iv_requires_personal_name = 27;
+// .zsearch.LintResult e_cab_iv_requires_personal_name = 27;
 inline bool Lints::has_e_cab_iv_requires_personal_name() const {
   return this != internal_default_instance() && e_cab_iv_requires_personal_name_ != NULL;
 }
@@ -3513,27 +3513,27 @@ inline void Lints::clear_e_cab_iv_requires_personal_name() {
   if (GetArenaNoVirtual() == NULL && e_cab_iv_requires_personal_name_ != NULL) delete e_cab_iv_requires_personal_name_;
   e_cab_iv_requires_personal_name_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_cab_iv_requires_personal_name() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_cab_iv_requires_personal_name)
+inline const ::zsearch::LintResult& Lints::e_cab_iv_requires_personal_name() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_cab_iv_requires_personal_name)
   return e_cab_iv_requires_personal_name_ != NULL ? *e_cab_iv_requires_personal_name_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_cab_iv_requires_personal_name() {
+inline ::zsearch::LintResult* Lints::mutable_e_cab_iv_requires_personal_name() {
   
   if (e_cab_iv_requires_personal_name_ == NULL) {
-    e_cab_iv_requires_personal_name_ = new ::censys_definitions::LintResult;
+    e_cab_iv_requires_personal_name_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_cab_iv_requires_personal_name)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_cab_iv_requires_personal_name)
   return e_cab_iv_requires_personal_name_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_cab_iv_requires_personal_name() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_cab_iv_requires_personal_name)
+inline ::zsearch::LintResult* Lints::release_e_cab_iv_requires_personal_name() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_cab_iv_requires_personal_name)
   
-  ::censys_definitions::LintResult* temp = e_cab_iv_requires_personal_name_;
+  ::zsearch::LintResult* temp = e_cab_iv_requires_personal_name_;
   e_cab_iv_requires_personal_name_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_cab_iv_requires_personal_name(::censys_definitions::LintResult* e_cab_iv_requires_personal_name) {
+inline void Lints::set_allocated_e_cab_iv_requires_personal_name(::zsearch::LintResult* e_cab_iv_requires_personal_name) {
   delete e_cab_iv_requires_personal_name_;
   e_cab_iv_requires_personal_name_ = e_cab_iv_requires_personal_name;
   if (e_cab_iv_requires_personal_name) {
@@ -3541,10 +3541,10 @@ inline void Lints::set_allocated_e_cab_iv_requires_personal_name(::censys_defini
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_cab_iv_requires_personal_name)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_cab_iv_requires_personal_name)
 }
 
-// .censys_definitions.LintResult e_cert_unique_identifier_version_not_2_or_3 = 28;
+// .zsearch.LintResult e_cert_unique_identifier_version_not_2_or_3 = 28;
 inline bool Lints::has_e_cert_unique_identifier_version_not_2_or_3() const {
   return this != internal_default_instance() && e_cert_unique_identifier_version_not_2_or_3_ != NULL;
 }
@@ -3552,27 +3552,27 @@ inline void Lints::clear_e_cert_unique_identifier_version_not_2_or_3() {
   if (GetArenaNoVirtual() == NULL && e_cert_unique_identifier_version_not_2_or_3_ != NULL) delete e_cert_unique_identifier_version_not_2_or_3_;
   e_cert_unique_identifier_version_not_2_or_3_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_cert_unique_identifier_version_not_2_or_3() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_cert_unique_identifier_version_not_2_or_3)
+inline const ::zsearch::LintResult& Lints::e_cert_unique_identifier_version_not_2_or_3() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_cert_unique_identifier_version_not_2_or_3)
   return e_cert_unique_identifier_version_not_2_or_3_ != NULL ? *e_cert_unique_identifier_version_not_2_or_3_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_cert_unique_identifier_version_not_2_or_3() {
+inline ::zsearch::LintResult* Lints::mutable_e_cert_unique_identifier_version_not_2_or_3() {
   
   if (e_cert_unique_identifier_version_not_2_or_3_ == NULL) {
-    e_cert_unique_identifier_version_not_2_or_3_ = new ::censys_definitions::LintResult;
+    e_cert_unique_identifier_version_not_2_or_3_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_cert_unique_identifier_version_not_2_or_3)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_cert_unique_identifier_version_not_2_or_3)
   return e_cert_unique_identifier_version_not_2_or_3_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_cert_unique_identifier_version_not_2_or_3() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_cert_unique_identifier_version_not_2_or_3)
+inline ::zsearch::LintResult* Lints::release_e_cert_unique_identifier_version_not_2_or_3() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_cert_unique_identifier_version_not_2_or_3)
   
-  ::censys_definitions::LintResult* temp = e_cert_unique_identifier_version_not_2_or_3_;
+  ::zsearch::LintResult* temp = e_cert_unique_identifier_version_not_2_or_3_;
   e_cert_unique_identifier_version_not_2_or_3_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_cert_unique_identifier_version_not_2_or_3(::censys_definitions::LintResult* e_cert_unique_identifier_version_not_2_or_3) {
+inline void Lints::set_allocated_e_cert_unique_identifier_version_not_2_or_3(::zsearch::LintResult* e_cert_unique_identifier_version_not_2_or_3) {
   delete e_cert_unique_identifier_version_not_2_or_3_;
   e_cert_unique_identifier_version_not_2_or_3_ = e_cert_unique_identifier_version_not_2_or_3;
   if (e_cert_unique_identifier_version_not_2_or_3) {
@@ -3580,10 +3580,10 @@ inline void Lints::set_allocated_e_cert_unique_identifier_version_not_2_or_3(::c
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_cert_unique_identifier_version_not_2_or_3)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_cert_unique_identifier_version_not_2_or_3)
 }
 
-// .censys_definitions.LintResult e_dh_params_missing = 29;
+// .zsearch.LintResult e_dh_params_missing = 29;
 inline bool Lints::has_e_dh_params_missing() const {
   return this != internal_default_instance() && e_dh_params_missing_ != NULL;
 }
@@ -3591,27 +3591,27 @@ inline void Lints::clear_e_dh_params_missing() {
   if (GetArenaNoVirtual() == NULL && e_dh_params_missing_ != NULL) delete e_dh_params_missing_;
   e_dh_params_missing_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_dh_params_missing() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_dh_params_missing)
+inline const ::zsearch::LintResult& Lints::e_dh_params_missing() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_dh_params_missing)
   return e_dh_params_missing_ != NULL ? *e_dh_params_missing_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_dh_params_missing() {
+inline ::zsearch::LintResult* Lints::mutable_e_dh_params_missing() {
   
   if (e_dh_params_missing_ == NULL) {
-    e_dh_params_missing_ = new ::censys_definitions::LintResult;
+    e_dh_params_missing_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_dh_params_missing)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_dh_params_missing)
   return e_dh_params_missing_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_dh_params_missing() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_dh_params_missing)
+inline ::zsearch::LintResult* Lints::release_e_dh_params_missing() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_dh_params_missing)
   
-  ::censys_definitions::LintResult* temp = e_dh_params_missing_;
+  ::zsearch::LintResult* temp = e_dh_params_missing_;
   e_dh_params_missing_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_dh_params_missing(::censys_definitions::LintResult* e_dh_params_missing) {
+inline void Lints::set_allocated_e_dh_params_missing(::zsearch::LintResult* e_dh_params_missing) {
   delete e_dh_params_missing_;
   e_dh_params_missing_ = e_dh_params_missing;
   if (e_dh_params_missing) {
@@ -3619,10 +3619,10 @@ inline void Lints::set_allocated_e_dh_params_missing(::censys_definitions::LintR
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_dh_params_missing)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_dh_params_missing)
 }
 
-// .censys_definitions.LintResult e_distribution_point_incomplete = 30;
+// .zsearch.LintResult e_distribution_point_incomplete = 30;
 inline bool Lints::has_e_distribution_point_incomplete() const {
   return this != internal_default_instance() && e_distribution_point_incomplete_ != NULL;
 }
@@ -3630,27 +3630,27 @@ inline void Lints::clear_e_distribution_point_incomplete() {
   if (GetArenaNoVirtual() == NULL && e_distribution_point_incomplete_ != NULL) delete e_distribution_point_incomplete_;
   e_distribution_point_incomplete_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_distribution_point_incomplete() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_distribution_point_incomplete)
+inline const ::zsearch::LintResult& Lints::e_distribution_point_incomplete() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_distribution_point_incomplete)
   return e_distribution_point_incomplete_ != NULL ? *e_distribution_point_incomplete_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_distribution_point_incomplete() {
+inline ::zsearch::LintResult* Lints::mutable_e_distribution_point_incomplete() {
   
   if (e_distribution_point_incomplete_ == NULL) {
-    e_distribution_point_incomplete_ = new ::censys_definitions::LintResult;
+    e_distribution_point_incomplete_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_distribution_point_incomplete)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_distribution_point_incomplete)
   return e_distribution_point_incomplete_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_distribution_point_incomplete() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_distribution_point_incomplete)
+inline ::zsearch::LintResult* Lints::release_e_distribution_point_incomplete() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_distribution_point_incomplete)
   
-  ::censys_definitions::LintResult* temp = e_distribution_point_incomplete_;
+  ::zsearch::LintResult* temp = e_distribution_point_incomplete_;
   e_distribution_point_incomplete_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_distribution_point_incomplete(::censys_definitions::LintResult* e_distribution_point_incomplete) {
+inline void Lints::set_allocated_e_distribution_point_incomplete(::zsearch::LintResult* e_distribution_point_incomplete) {
   delete e_distribution_point_incomplete_;
   e_distribution_point_incomplete_ = e_distribution_point_incomplete;
   if (e_distribution_point_incomplete) {
@@ -3658,10 +3658,10 @@ inline void Lints::set_allocated_e_distribution_point_incomplete(::censys_defini
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_distribution_point_incomplete)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_distribution_point_incomplete)
 }
 
-// .censys_definitions.LintResult w_distribution_point_missing_ldap_or_uri = 31;
+// .zsearch.LintResult w_distribution_point_missing_ldap_or_uri = 31;
 inline bool Lints::has_w_distribution_point_missing_ldap_or_uri() const {
   return this != internal_default_instance() && w_distribution_point_missing_ldap_or_uri_ != NULL;
 }
@@ -3669,27 +3669,27 @@ inline void Lints::clear_w_distribution_point_missing_ldap_or_uri() {
   if (GetArenaNoVirtual() == NULL && w_distribution_point_missing_ldap_or_uri_ != NULL) delete w_distribution_point_missing_ldap_or_uri_;
   w_distribution_point_missing_ldap_or_uri_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::w_distribution_point_missing_ldap_or_uri() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.w_distribution_point_missing_ldap_or_uri)
+inline const ::zsearch::LintResult& Lints::w_distribution_point_missing_ldap_or_uri() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.w_distribution_point_missing_ldap_or_uri)
   return w_distribution_point_missing_ldap_or_uri_ != NULL ? *w_distribution_point_missing_ldap_or_uri_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_w_distribution_point_missing_ldap_or_uri() {
+inline ::zsearch::LintResult* Lints::mutable_w_distribution_point_missing_ldap_or_uri() {
   
   if (w_distribution_point_missing_ldap_or_uri_ == NULL) {
-    w_distribution_point_missing_ldap_or_uri_ = new ::censys_definitions::LintResult;
+    w_distribution_point_missing_ldap_or_uri_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.w_distribution_point_missing_ldap_or_uri)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.w_distribution_point_missing_ldap_or_uri)
   return w_distribution_point_missing_ldap_or_uri_;
 }
-inline ::censys_definitions::LintResult* Lints::release_w_distribution_point_missing_ldap_or_uri() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.w_distribution_point_missing_ldap_or_uri)
+inline ::zsearch::LintResult* Lints::release_w_distribution_point_missing_ldap_or_uri() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.w_distribution_point_missing_ldap_or_uri)
   
-  ::censys_definitions::LintResult* temp = w_distribution_point_missing_ldap_or_uri_;
+  ::zsearch::LintResult* temp = w_distribution_point_missing_ldap_or_uri_;
   w_distribution_point_missing_ldap_or_uri_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_w_distribution_point_missing_ldap_or_uri(::censys_definitions::LintResult* w_distribution_point_missing_ldap_or_uri) {
+inline void Lints::set_allocated_w_distribution_point_missing_ldap_or_uri(::zsearch::LintResult* w_distribution_point_missing_ldap_or_uri) {
   delete w_distribution_point_missing_ldap_or_uri_;
   w_distribution_point_missing_ldap_or_uri_ = w_distribution_point_missing_ldap_or_uri;
   if (w_distribution_point_missing_ldap_or_uri) {
@@ -3697,10 +3697,10 @@ inline void Lints::set_allocated_w_distribution_point_missing_ldap_or_uri(::cens
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.w_distribution_point_missing_ldap_or_uri)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.w_distribution_point_missing_ldap_or_uri)
 }
 
-// .censys_definitions.LintResult e_dsa_improper_modulus_or_divisor_size = 32;
+// .zsearch.LintResult e_dsa_improper_modulus_or_divisor_size = 32;
 inline bool Lints::has_e_dsa_improper_modulus_or_divisor_size() const {
   return this != internal_default_instance() && e_dsa_improper_modulus_or_divisor_size_ != NULL;
 }
@@ -3708,27 +3708,27 @@ inline void Lints::clear_e_dsa_improper_modulus_or_divisor_size() {
   if (GetArenaNoVirtual() == NULL && e_dsa_improper_modulus_or_divisor_size_ != NULL) delete e_dsa_improper_modulus_or_divisor_size_;
   e_dsa_improper_modulus_or_divisor_size_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_dsa_improper_modulus_or_divisor_size() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_dsa_improper_modulus_or_divisor_size)
+inline const ::zsearch::LintResult& Lints::e_dsa_improper_modulus_or_divisor_size() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_dsa_improper_modulus_or_divisor_size)
   return e_dsa_improper_modulus_or_divisor_size_ != NULL ? *e_dsa_improper_modulus_or_divisor_size_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_dsa_improper_modulus_or_divisor_size() {
+inline ::zsearch::LintResult* Lints::mutable_e_dsa_improper_modulus_or_divisor_size() {
   
   if (e_dsa_improper_modulus_or_divisor_size_ == NULL) {
-    e_dsa_improper_modulus_or_divisor_size_ = new ::censys_definitions::LintResult;
+    e_dsa_improper_modulus_or_divisor_size_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_dsa_improper_modulus_or_divisor_size)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_dsa_improper_modulus_or_divisor_size)
   return e_dsa_improper_modulus_or_divisor_size_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_dsa_improper_modulus_or_divisor_size() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_dsa_improper_modulus_or_divisor_size)
+inline ::zsearch::LintResult* Lints::release_e_dsa_improper_modulus_or_divisor_size() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_dsa_improper_modulus_or_divisor_size)
   
-  ::censys_definitions::LintResult* temp = e_dsa_improper_modulus_or_divisor_size_;
+  ::zsearch::LintResult* temp = e_dsa_improper_modulus_or_divisor_size_;
   e_dsa_improper_modulus_or_divisor_size_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_dsa_improper_modulus_or_divisor_size(::censys_definitions::LintResult* e_dsa_improper_modulus_or_divisor_size) {
+inline void Lints::set_allocated_e_dsa_improper_modulus_or_divisor_size(::zsearch::LintResult* e_dsa_improper_modulus_or_divisor_size) {
   delete e_dsa_improper_modulus_or_divisor_size_;
   e_dsa_improper_modulus_or_divisor_size_ = e_dsa_improper_modulus_or_divisor_size;
   if (e_dsa_improper_modulus_or_divisor_size) {
@@ -3736,10 +3736,10 @@ inline void Lints::set_allocated_e_dsa_improper_modulus_or_divisor_size(::censys
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_dsa_improper_modulus_or_divisor_size)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_dsa_improper_modulus_or_divisor_size)
 }
 
-// .censys_definitions.LintResult e_dsa_shorter_than_2048_bits = 33;
+// .zsearch.LintResult e_dsa_shorter_than_2048_bits = 33;
 inline bool Lints::has_e_dsa_shorter_than_2048_bits() const {
   return this != internal_default_instance() && e_dsa_shorter_than_2048_bits_ != NULL;
 }
@@ -3747,27 +3747,27 @@ inline void Lints::clear_e_dsa_shorter_than_2048_bits() {
   if (GetArenaNoVirtual() == NULL && e_dsa_shorter_than_2048_bits_ != NULL) delete e_dsa_shorter_than_2048_bits_;
   e_dsa_shorter_than_2048_bits_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_dsa_shorter_than_2048_bits() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_dsa_shorter_than_2048_bits)
+inline const ::zsearch::LintResult& Lints::e_dsa_shorter_than_2048_bits() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_dsa_shorter_than_2048_bits)
   return e_dsa_shorter_than_2048_bits_ != NULL ? *e_dsa_shorter_than_2048_bits_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_dsa_shorter_than_2048_bits() {
+inline ::zsearch::LintResult* Lints::mutable_e_dsa_shorter_than_2048_bits() {
   
   if (e_dsa_shorter_than_2048_bits_ == NULL) {
-    e_dsa_shorter_than_2048_bits_ = new ::censys_definitions::LintResult;
+    e_dsa_shorter_than_2048_bits_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_dsa_shorter_than_2048_bits)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_dsa_shorter_than_2048_bits)
   return e_dsa_shorter_than_2048_bits_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_dsa_shorter_than_2048_bits() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_dsa_shorter_than_2048_bits)
+inline ::zsearch::LintResult* Lints::release_e_dsa_shorter_than_2048_bits() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_dsa_shorter_than_2048_bits)
   
-  ::censys_definitions::LintResult* temp = e_dsa_shorter_than_2048_bits_;
+  ::zsearch::LintResult* temp = e_dsa_shorter_than_2048_bits_;
   e_dsa_shorter_than_2048_bits_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_dsa_shorter_than_2048_bits(::censys_definitions::LintResult* e_dsa_shorter_than_2048_bits) {
+inline void Lints::set_allocated_e_dsa_shorter_than_2048_bits(::zsearch::LintResult* e_dsa_shorter_than_2048_bits) {
   delete e_dsa_shorter_than_2048_bits_;
   e_dsa_shorter_than_2048_bits_ = e_dsa_shorter_than_2048_bits;
   if (e_dsa_shorter_than_2048_bits) {
@@ -3775,10 +3775,10 @@ inline void Lints::set_allocated_e_dsa_shorter_than_2048_bits(::censys_definitio
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_dsa_shorter_than_2048_bits)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_dsa_shorter_than_2048_bits)
 }
 
-// .censys_definitions.LintResult e_ec_improper_curves = 34;
+// .zsearch.LintResult e_ec_improper_curves = 34;
 inline bool Lints::has_e_ec_improper_curves() const {
   return this != internal_default_instance() && e_ec_improper_curves_ != NULL;
 }
@@ -3786,27 +3786,27 @@ inline void Lints::clear_e_ec_improper_curves() {
   if (GetArenaNoVirtual() == NULL && e_ec_improper_curves_ != NULL) delete e_ec_improper_curves_;
   e_ec_improper_curves_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ec_improper_curves() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ec_improper_curves)
+inline const ::zsearch::LintResult& Lints::e_ec_improper_curves() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ec_improper_curves)
   return e_ec_improper_curves_ != NULL ? *e_ec_improper_curves_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ec_improper_curves() {
+inline ::zsearch::LintResult* Lints::mutable_e_ec_improper_curves() {
   
   if (e_ec_improper_curves_ == NULL) {
-    e_ec_improper_curves_ = new ::censys_definitions::LintResult;
+    e_ec_improper_curves_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ec_improper_curves)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ec_improper_curves)
   return e_ec_improper_curves_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ec_improper_curves() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ec_improper_curves)
+inline ::zsearch::LintResult* Lints::release_e_ec_improper_curves() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ec_improper_curves)
   
-  ::censys_definitions::LintResult* temp = e_ec_improper_curves_;
+  ::zsearch::LintResult* temp = e_ec_improper_curves_;
   e_ec_improper_curves_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ec_improper_curves(::censys_definitions::LintResult* e_ec_improper_curves) {
+inline void Lints::set_allocated_e_ec_improper_curves(::zsearch::LintResult* e_ec_improper_curves) {
   delete e_ec_improper_curves_;
   e_ec_improper_curves_ = e_ec_improper_curves;
   if (e_ec_improper_curves) {
@@ -3814,10 +3814,10 @@ inline void Lints::set_allocated_e_ec_improper_curves(::censys_definitions::Lint
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ec_improper_curves)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ec_improper_curves)
 }
 
-// .censys_definitions.LintResult w_eku_critical_improperly = 35;
+// .zsearch.LintResult w_eku_critical_improperly = 35;
 inline bool Lints::has_w_eku_critical_improperly() const {
   return this != internal_default_instance() && w_eku_critical_improperly_ != NULL;
 }
@@ -3825,27 +3825,27 @@ inline void Lints::clear_w_eku_critical_improperly() {
   if (GetArenaNoVirtual() == NULL && w_eku_critical_improperly_ != NULL) delete w_eku_critical_improperly_;
   w_eku_critical_improperly_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::w_eku_critical_improperly() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.w_eku_critical_improperly)
+inline const ::zsearch::LintResult& Lints::w_eku_critical_improperly() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.w_eku_critical_improperly)
   return w_eku_critical_improperly_ != NULL ? *w_eku_critical_improperly_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_w_eku_critical_improperly() {
+inline ::zsearch::LintResult* Lints::mutable_w_eku_critical_improperly() {
   
   if (w_eku_critical_improperly_ == NULL) {
-    w_eku_critical_improperly_ = new ::censys_definitions::LintResult;
+    w_eku_critical_improperly_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.w_eku_critical_improperly)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.w_eku_critical_improperly)
   return w_eku_critical_improperly_;
 }
-inline ::censys_definitions::LintResult* Lints::release_w_eku_critical_improperly() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.w_eku_critical_improperly)
+inline ::zsearch::LintResult* Lints::release_w_eku_critical_improperly() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.w_eku_critical_improperly)
   
-  ::censys_definitions::LintResult* temp = w_eku_critical_improperly_;
+  ::zsearch::LintResult* temp = w_eku_critical_improperly_;
   w_eku_critical_improperly_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_w_eku_critical_improperly(::censys_definitions::LintResult* w_eku_critical_improperly) {
+inline void Lints::set_allocated_w_eku_critical_improperly(::zsearch::LintResult* w_eku_critical_improperly) {
   delete w_eku_critical_improperly_;
   w_eku_critical_improperly_ = w_eku_critical_improperly;
   if (w_eku_critical_improperly) {
@@ -3853,10 +3853,10 @@ inline void Lints::set_allocated_w_eku_critical_improperly(::censys_definitions:
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.w_eku_critical_improperly)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.w_eku_critical_improperly)
 }
 
-// .censys_definitions.LintResult e_ev_business_category_missing = 36;
+// .zsearch.LintResult e_ev_business_category_missing = 36;
 inline bool Lints::has_e_ev_business_category_missing() const {
   return this != internal_default_instance() && e_ev_business_category_missing_ != NULL;
 }
@@ -3864,27 +3864,27 @@ inline void Lints::clear_e_ev_business_category_missing() {
   if (GetArenaNoVirtual() == NULL && e_ev_business_category_missing_ != NULL) delete e_ev_business_category_missing_;
   e_ev_business_category_missing_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ev_business_category_missing() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ev_business_category_missing)
+inline const ::zsearch::LintResult& Lints::e_ev_business_category_missing() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ev_business_category_missing)
   return e_ev_business_category_missing_ != NULL ? *e_ev_business_category_missing_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ev_business_category_missing() {
+inline ::zsearch::LintResult* Lints::mutable_e_ev_business_category_missing() {
   
   if (e_ev_business_category_missing_ == NULL) {
-    e_ev_business_category_missing_ = new ::censys_definitions::LintResult;
+    e_ev_business_category_missing_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ev_business_category_missing)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ev_business_category_missing)
   return e_ev_business_category_missing_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ev_business_category_missing() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ev_business_category_missing)
+inline ::zsearch::LintResult* Lints::release_e_ev_business_category_missing() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ev_business_category_missing)
   
-  ::censys_definitions::LintResult* temp = e_ev_business_category_missing_;
+  ::zsearch::LintResult* temp = e_ev_business_category_missing_;
   e_ev_business_category_missing_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ev_business_category_missing(::censys_definitions::LintResult* e_ev_business_category_missing) {
+inline void Lints::set_allocated_e_ev_business_category_missing(::zsearch::LintResult* e_ev_business_category_missing) {
   delete e_ev_business_category_missing_;
   e_ev_business_category_missing_ = e_ev_business_category_missing;
   if (e_ev_business_category_missing) {
@@ -3892,10 +3892,10 @@ inline void Lints::set_allocated_e_ev_business_category_missing(::censys_definit
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ev_business_category_missing)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ev_business_category_missing)
 }
 
-// .censys_definitions.LintResult e_ev_country_name_missing = 37;
+// .zsearch.LintResult e_ev_country_name_missing = 37;
 inline bool Lints::has_e_ev_country_name_missing() const {
   return this != internal_default_instance() && e_ev_country_name_missing_ != NULL;
 }
@@ -3903,27 +3903,27 @@ inline void Lints::clear_e_ev_country_name_missing() {
   if (GetArenaNoVirtual() == NULL && e_ev_country_name_missing_ != NULL) delete e_ev_country_name_missing_;
   e_ev_country_name_missing_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ev_country_name_missing() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ev_country_name_missing)
+inline const ::zsearch::LintResult& Lints::e_ev_country_name_missing() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ev_country_name_missing)
   return e_ev_country_name_missing_ != NULL ? *e_ev_country_name_missing_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ev_country_name_missing() {
+inline ::zsearch::LintResult* Lints::mutable_e_ev_country_name_missing() {
   
   if (e_ev_country_name_missing_ == NULL) {
-    e_ev_country_name_missing_ = new ::censys_definitions::LintResult;
+    e_ev_country_name_missing_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ev_country_name_missing)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ev_country_name_missing)
   return e_ev_country_name_missing_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ev_country_name_missing() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ev_country_name_missing)
+inline ::zsearch::LintResult* Lints::release_e_ev_country_name_missing() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ev_country_name_missing)
   
-  ::censys_definitions::LintResult* temp = e_ev_country_name_missing_;
+  ::zsearch::LintResult* temp = e_ev_country_name_missing_;
   e_ev_country_name_missing_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ev_country_name_missing(::censys_definitions::LintResult* e_ev_country_name_missing) {
+inline void Lints::set_allocated_e_ev_country_name_missing(::zsearch::LintResult* e_ev_country_name_missing) {
   delete e_ev_country_name_missing_;
   e_ev_country_name_missing_ = e_ev_country_name_missing;
   if (e_ev_country_name_missing) {
@@ -3931,10 +3931,10 @@ inline void Lints::set_allocated_e_ev_country_name_missing(::censys_definitions:
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ev_country_name_missing)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ev_country_name_missing)
 }
 
-// .censys_definitions.LintResult e_ev_locality_name_missing = 38;
+// .zsearch.LintResult e_ev_locality_name_missing = 38;
 inline bool Lints::has_e_ev_locality_name_missing() const {
   return this != internal_default_instance() && e_ev_locality_name_missing_ != NULL;
 }
@@ -3942,27 +3942,27 @@ inline void Lints::clear_e_ev_locality_name_missing() {
   if (GetArenaNoVirtual() == NULL && e_ev_locality_name_missing_ != NULL) delete e_ev_locality_name_missing_;
   e_ev_locality_name_missing_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ev_locality_name_missing() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ev_locality_name_missing)
+inline const ::zsearch::LintResult& Lints::e_ev_locality_name_missing() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ev_locality_name_missing)
   return e_ev_locality_name_missing_ != NULL ? *e_ev_locality_name_missing_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ev_locality_name_missing() {
+inline ::zsearch::LintResult* Lints::mutable_e_ev_locality_name_missing() {
   
   if (e_ev_locality_name_missing_ == NULL) {
-    e_ev_locality_name_missing_ = new ::censys_definitions::LintResult;
+    e_ev_locality_name_missing_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ev_locality_name_missing)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ev_locality_name_missing)
   return e_ev_locality_name_missing_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ev_locality_name_missing() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ev_locality_name_missing)
+inline ::zsearch::LintResult* Lints::release_e_ev_locality_name_missing() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ev_locality_name_missing)
   
-  ::censys_definitions::LintResult* temp = e_ev_locality_name_missing_;
+  ::zsearch::LintResult* temp = e_ev_locality_name_missing_;
   e_ev_locality_name_missing_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ev_locality_name_missing(::censys_definitions::LintResult* e_ev_locality_name_missing) {
+inline void Lints::set_allocated_e_ev_locality_name_missing(::zsearch::LintResult* e_ev_locality_name_missing) {
   delete e_ev_locality_name_missing_;
   e_ev_locality_name_missing_ = e_ev_locality_name_missing;
   if (e_ev_locality_name_missing) {
@@ -3970,10 +3970,10 @@ inline void Lints::set_allocated_e_ev_locality_name_missing(::censys_definitions
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ev_locality_name_missing)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ev_locality_name_missing)
 }
 
-// .censys_definitions.LintResult e_ev_organization_name_missing = 39;
+// .zsearch.LintResult e_ev_organization_name_missing = 39;
 inline bool Lints::has_e_ev_organization_name_missing() const {
   return this != internal_default_instance() && e_ev_organization_name_missing_ != NULL;
 }
@@ -3981,27 +3981,27 @@ inline void Lints::clear_e_ev_organization_name_missing() {
   if (GetArenaNoVirtual() == NULL && e_ev_organization_name_missing_ != NULL) delete e_ev_organization_name_missing_;
   e_ev_organization_name_missing_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ev_organization_name_missing() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ev_organization_name_missing)
+inline const ::zsearch::LintResult& Lints::e_ev_organization_name_missing() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ev_organization_name_missing)
   return e_ev_organization_name_missing_ != NULL ? *e_ev_organization_name_missing_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ev_organization_name_missing() {
+inline ::zsearch::LintResult* Lints::mutable_e_ev_organization_name_missing() {
   
   if (e_ev_organization_name_missing_ == NULL) {
-    e_ev_organization_name_missing_ = new ::censys_definitions::LintResult;
+    e_ev_organization_name_missing_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ev_organization_name_missing)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ev_organization_name_missing)
   return e_ev_organization_name_missing_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ev_organization_name_missing() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ev_organization_name_missing)
+inline ::zsearch::LintResult* Lints::release_e_ev_organization_name_missing() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ev_organization_name_missing)
   
-  ::censys_definitions::LintResult* temp = e_ev_organization_name_missing_;
+  ::zsearch::LintResult* temp = e_ev_organization_name_missing_;
   e_ev_organization_name_missing_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ev_organization_name_missing(::censys_definitions::LintResult* e_ev_organization_name_missing) {
+inline void Lints::set_allocated_e_ev_organization_name_missing(::zsearch::LintResult* e_ev_organization_name_missing) {
   delete e_ev_organization_name_missing_;
   e_ev_organization_name_missing_ = e_ev_organization_name_missing;
   if (e_ev_organization_name_missing) {
@@ -4009,10 +4009,10 @@ inline void Lints::set_allocated_e_ev_organization_name_missing(::censys_definit
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ev_organization_name_missing)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ev_organization_name_missing)
 }
 
-// .censys_definitions.LintResult e_ev_serial_number_missing = 40;
+// .zsearch.LintResult e_ev_serial_number_missing = 40;
 inline bool Lints::has_e_ev_serial_number_missing() const {
   return this != internal_default_instance() && e_ev_serial_number_missing_ != NULL;
 }
@@ -4020,27 +4020,27 @@ inline void Lints::clear_e_ev_serial_number_missing() {
   if (GetArenaNoVirtual() == NULL && e_ev_serial_number_missing_ != NULL) delete e_ev_serial_number_missing_;
   e_ev_serial_number_missing_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ev_serial_number_missing() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ev_serial_number_missing)
+inline const ::zsearch::LintResult& Lints::e_ev_serial_number_missing() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ev_serial_number_missing)
   return e_ev_serial_number_missing_ != NULL ? *e_ev_serial_number_missing_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ev_serial_number_missing() {
+inline ::zsearch::LintResult* Lints::mutable_e_ev_serial_number_missing() {
   
   if (e_ev_serial_number_missing_ == NULL) {
-    e_ev_serial_number_missing_ = new ::censys_definitions::LintResult;
+    e_ev_serial_number_missing_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ev_serial_number_missing)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ev_serial_number_missing)
   return e_ev_serial_number_missing_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ev_serial_number_missing() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ev_serial_number_missing)
+inline ::zsearch::LintResult* Lints::release_e_ev_serial_number_missing() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ev_serial_number_missing)
   
-  ::censys_definitions::LintResult* temp = e_ev_serial_number_missing_;
+  ::zsearch::LintResult* temp = e_ev_serial_number_missing_;
   e_ev_serial_number_missing_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ev_serial_number_missing(::censys_definitions::LintResult* e_ev_serial_number_missing) {
+inline void Lints::set_allocated_e_ev_serial_number_missing(::zsearch::LintResult* e_ev_serial_number_missing) {
   delete e_ev_serial_number_missing_;
   e_ev_serial_number_missing_ = e_ev_serial_number_missing;
   if (e_ev_serial_number_missing) {
@@ -4048,10 +4048,10 @@ inline void Lints::set_allocated_e_ev_serial_number_missing(::censys_definitions
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ev_serial_number_missing)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ev_serial_number_missing)
 }
 
-// .censys_definitions.LintResult e_ev_valid_time_too_long = 41;
+// .zsearch.LintResult e_ev_valid_time_too_long = 41;
 inline bool Lints::has_e_ev_valid_time_too_long() const {
   return this != internal_default_instance() && e_ev_valid_time_too_long_ != NULL;
 }
@@ -4059,27 +4059,27 @@ inline void Lints::clear_e_ev_valid_time_too_long() {
   if (GetArenaNoVirtual() == NULL && e_ev_valid_time_too_long_ != NULL) delete e_ev_valid_time_too_long_;
   e_ev_valid_time_too_long_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ev_valid_time_too_long() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ev_valid_time_too_long)
+inline const ::zsearch::LintResult& Lints::e_ev_valid_time_too_long() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ev_valid_time_too_long)
   return e_ev_valid_time_too_long_ != NULL ? *e_ev_valid_time_too_long_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ev_valid_time_too_long() {
+inline ::zsearch::LintResult* Lints::mutable_e_ev_valid_time_too_long() {
   
   if (e_ev_valid_time_too_long_ == NULL) {
-    e_ev_valid_time_too_long_ = new ::censys_definitions::LintResult;
+    e_ev_valid_time_too_long_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ev_valid_time_too_long)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ev_valid_time_too_long)
   return e_ev_valid_time_too_long_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ev_valid_time_too_long() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ev_valid_time_too_long)
+inline ::zsearch::LintResult* Lints::release_e_ev_valid_time_too_long() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ev_valid_time_too_long)
   
-  ::censys_definitions::LintResult* temp = e_ev_valid_time_too_long_;
+  ::zsearch::LintResult* temp = e_ev_valid_time_too_long_;
   e_ev_valid_time_too_long_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ev_valid_time_too_long(::censys_definitions::LintResult* e_ev_valid_time_too_long) {
+inline void Lints::set_allocated_e_ev_valid_time_too_long(::zsearch::LintResult* e_ev_valid_time_too_long) {
   delete e_ev_valid_time_too_long_;
   e_ev_valid_time_too_long_ = e_ev_valid_time_too_long;
   if (e_ev_valid_time_too_long) {
@@ -4087,10 +4087,10 @@ inline void Lints::set_allocated_e_ev_valid_time_too_long(::censys_definitions::
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ev_valid_time_too_long)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ev_valid_time_too_long)
 }
 
-// .censys_definitions.LintResult w_ext_aia_access_location_missing = 42;
+// .zsearch.LintResult w_ext_aia_access_location_missing = 42;
 inline bool Lints::has_w_ext_aia_access_location_missing() const {
   return this != internal_default_instance() && w_ext_aia_access_location_missing_ != NULL;
 }
@@ -4098,27 +4098,27 @@ inline void Lints::clear_w_ext_aia_access_location_missing() {
   if (GetArenaNoVirtual() == NULL && w_ext_aia_access_location_missing_ != NULL) delete w_ext_aia_access_location_missing_;
   w_ext_aia_access_location_missing_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::w_ext_aia_access_location_missing() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.w_ext_aia_access_location_missing)
+inline const ::zsearch::LintResult& Lints::w_ext_aia_access_location_missing() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.w_ext_aia_access_location_missing)
   return w_ext_aia_access_location_missing_ != NULL ? *w_ext_aia_access_location_missing_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_w_ext_aia_access_location_missing() {
+inline ::zsearch::LintResult* Lints::mutable_w_ext_aia_access_location_missing() {
   
   if (w_ext_aia_access_location_missing_ == NULL) {
-    w_ext_aia_access_location_missing_ = new ::censys_definitions::LintResult;
+    w_ext_aia_access_location_missing_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.w_ext_aia_access_location_missing)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.w_ext_aia_access_location_missing)
   return w_ext_aia_access_location_missing_;
 }
-inline ::censys_definitions::LintResult* Lints::release_w_ext_aia_access_location_missing() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.w_ext_aia_access_location_missing)
+inline ::zsearch::LintResult* Lints::release_w_ext_aia_access_location_missing() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.w_ext_aia_access_location_missing)
   
-  ::censys_definitions::LintResult* temp = w_ext_aia_access_location_missing_;
+  ::zsearch::LintResult* temp = w_ext_aia_access_location_missing_;
   w_ext_aia_access_location_missing_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_w_ext_aia_access_location_missing(::censys_definitions::LintResult* w_ext_aia_access_location_missing) {
+inline void Lints::set_allocated_w_ext_aia_access_location_missing(::zsearch::LintResult* w_ext_aia_access_location_missing) {
   delete w_ext_aia_access_location_missing_;
   w_ext_aia_access_location_missing_ = w_ext_aia_access_location_missing;
   if (w_ext_aia_access_location_missing) {
@@ -4126,10 +4126,10 @@ inline void Lints::set_allocated_w_ext_aia_access_location_missing(::censys_defi
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.w_ext_aia_access_location_missing)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.w_ext_aia_access_location_missing)
 }
 
-// .censys_definitions.LintResult e_ext_aia_marked_critical = 43;
+// .zsearch.LintResult e_ext_aia_marked_critical = 43;
 inline bool Lints::has_e_ext_aia_marked_critical() const {
   return this != internal_default_instance() && e_ext_aia_marked_critical_ != NULL;
 }
@@ -4137,27 +4137,27 @@ inline void Lints::clear_e_ext_aia_marked_critical() {
   if (GetArenaNoVirtual() == NULL && e_ext_aia_marked_critical_ != NULL) delete e_ext_aia_marked_critical_;
   e_ext_aia_marked_critical_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ext_aia_marked_critical() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ext_aia_marked_critical)
+inline const ::zsearch::LintResult& Lints::e_ext_aia_marked_critical() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ext_aia_marked_critical)
   return e_ext_aia_marked_critical_ != NULL ? *e_ext_aia_marked_critical_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ext_aia_marked_critical() {
+inline ::zsearch::LintResult* Lints::mutable_e_ext_aia_marked_critical() {
   
   if (e_ext_aia_marked_critical_ == NULL) {
-    e_ext_aia_marked_critical_ = new ::censys_definitions::LintResult;
+    e_ext_aia_marked_critical_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ext_aia_marked_critical)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ext_aia_marked_critical)
   return e_ext_aia_marked_critical_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ext_aia_marked_critical() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ext_aia_marked_critical)
+inline ::zsearch::LintResult* Lints::release_e_ext_aia_marked_critical() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ext_aia_marked_critical)
   
-  ::censys_definitions::LintResult* temp = e_ext_aia_marked_critical_;
+  ::zsearch::LintResult* temp = e_ext_aia_marked_critical_;
   e_ext_aia_marked_critical_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ext_aia_marked_critical(::censys_definitions::LintResult* e_ext_aia_marked_critical) {
+inline void Lints::set_allocated_e_ext_aia_marked_critical(::zsearch::LintResult* e_ext_aia_marked_critical) {
   delete e_ext_aia_marked_critical_;
   e_ext_aia_marked_critical_ = e_ext_aia_marked_critical;
   if (e_ext_aia_marked_critical) {
@@ -4165,10 +4165,10 @@ inline void Lints::set_allocated_e_ext_aia_marked_critical(::censys_definitions:
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ext_aia_marked_critical)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ext_aia_marked_critical)
 }
 
-// .censys_definitions.LintResult e_ext_authority_key_identifier_critical = 44;
+// .zsearch.LintResult e_ext_authority_key_identifier_critical = 44;
 inline bool Lints::has_e_ext_authority_key_identifier_critical() const {
   return this != internal_default_instance() && e_ext_authority_key_identifier_critical_ != NULL;
 }
@@ -4176,27 +4176,27 @@ inline void Lints::clear_e_ext_authority_key_identifier_critical() {
   if (GetArenaNoVirtual() == NULL && e_ext_authority_key_identifier_critical_ != NULL) delete e_ext_authority_key_identifier_critical_;
   e_ext_authority_key_identifier_critical_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ext_authority_key_identifier_critical() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ext_authority_key_identifier_critical)
+inline const ::zsearch::LintResult& Lints::e_ext_authority_key_identifier_critical() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ext_authority_key_identifier_critical)
   return e_ext_authority_key_identifier_critical_ != NULL ? *e_ext_authority_key_identifier_critical_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ext_authority_key_identifier_critical() {
+inline ::zsearch::LintResult* Lints::mutable_e_ext_authority_key_identifier_critical() {
   
   if (e_ext_authority_key_identifier_critical_ == NULL) {
-    e_ext_authority_key_identifier_critical_ = new ::censys_definitions::LintResult;
+    e_ext_authority_key_identifier_critical_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ext_authority_key_identifier_critical)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ext_authority_key_identifier_critical)
   return e_ext_authority_key_identifier_critical_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ext_authority_key_identifier_critical() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ext_authority_key_identifier_critical)
+inline ::zsearch::LintResult* Lints::release_e_ext_authority_key_identifier_critical() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ext_authority_key_identifier_critical)
   
-  ::censys_definitions::LintResult* temp = e_ext_authority_key_identifier_critical_;
+  ::zsearch::LintResult* temp = e_ext_authority_key_identifier_critical_;
   e_ext_authority_key_identifier_critical_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ext_authority_key_identifier_critical(::censys_definitions::LintResult* e_ext_authority_key_identifier_critical) {
+inline void Lints::set_allocated_e_ext_authority_key_identifier_critical(::zsearch::LintResult* e_ext_authority_key_identifier_critical) {
   delete e_ext_authority_key_identifier_critical_;
   e_ext_authority_key_identifier_critical_ = e_ext_authority_key_identifier_critical;
   if (e_ext_authority_key_identifier_critical) {
@@ -4204,10 +4204,10 @@ inline void Lints::set_allocated_e_ext_authority_key_identifier_critical(::censy
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ext_authority_key_identifier_critical)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ext_authority_key_identifier_critical)
 }
 
-// .censys_definitions.LintResult e_ext_authority_key_identifier_missing = 45;
+// .zsearch.LintResult e_ext_authority_key_identifier_missing = 45;
 inline bool Lints::has_e_ext_authority_key_identifier_missing() const {
   return this != internal_default_instance() && e_ext_authority_key_identifier_missing_ != NULL;
 }
@@ -4215,27 +4215,27 @@ inline void Lints::clear_e_ext_authority_key_identifier_missing() {
   if (GetArenaNoVirtual() == NULL && e_ext_authority_key_identifier_missing_ != NULL) delete e_ext_authority_key_identifier_missing_;
   e_ext_authority_key_identifier_missing_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ext_authority_key_identifier_missing() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ext_authority_key_identifier_missing)
+inline const ::zsearch::LintResult& Lints::e_ext_authority_key_identifier_missing() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ext_authority_key_identifier_missing)
   return e_ext_authority_key_identifier_missing_ != NULL ? *e_ext_authority_key_identifier_missing_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ext_authority_key_identifier_missing() {
+inline ::zsearch::LintResult* Lints::mutable_e_ext_authority_key_identifier_missing() {
   
   if (e_ext_authority_key_identifier_missing_ == NULL) {
-    e_ext_authority_key_identifier_missing_ = new ::censys_definitions::LintResult;
+    e_ext_authority_key_identifier_missing_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ext_authority_key_identifier_missing)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ext_authority_key_identifier_missing)
   return e_ext_authority_key_identifier_missing_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ext_authority_key_identifier_missing() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ext_authority_key_identifier_missing)
+inline ::zsearch::LintResult* Lints::release_e_ext_authority_key_identifier_missing() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ext_authority_key_identifier_missing)
   
-  ::censys_definitions::LintResult* temp = e_ext_authority_key_identifier_missing_;
+  ::zsearch::LintResult* temp = e_ext_authority_key_identifier_missing_;
   e_ext_authority_key_identifier_missing_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ext_authority_key_identifier_missing(::censys_definitions::LintResult* e_ext_authority_key_identifier_missing) {
+inline void Lints::set_allocated_e_ext_authority_key_identifier_missing(::zsearch::LintResult* e_ext_authority_key_identifier_missing) {
   delete e_ext_authority_key_identifier_missing_;
   e_ext_authority_key_identifier_missing_ = e_ext_authority_key_identifier_missing;
   if (e_ext_authority_key_identifier_missing) {
@@ -4243,10 +4243,10 @@ inline void Lints::set_allocated_e_ext_authority_key_identifier_missing(::censys
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ext_authority_key_identifier_missing)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ext_authority_key_identifier_missing)
 }
 
-// .censys_definitions.LintResult e_ext_authority_key_identifier_no_key_identifier = 46;
+// .zsearch.LintResult e_ext_authority_key_identifier_no_key_identifier = 46;
 inline bool Lints::has_e_ext_authority_key_identifier_no_key_identifier() const {
   return this != internal_default_instance() && e_ext_authority_key_identifier_no_key_identifier_ != NULL;
 }
@@ -4254,27 +4254,27 @@ inline void Lints::clear_e_ext_authority_key_identifier_no_key_identifier() {
   if (GetArenaNoVirtual() == NULL && e_ext_authority_key_identifier_no_key_identifier_ != NULL) delete e_ext_authority_key_identifier_no_key_identifier_;
   e_ext_authority_key_identifier_no_key_identifier_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ext_authority_key_identifier_no_key_identifier() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ext_authority_key_identifier_no_key_identifier)
+inline const ::zsearch::LintResult& Lints::e_ext_authority_key_identifier_no_key_identifier() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ext_authority_key_identifier_no_key_identifier)
   return e_ext_authority_key_identifier_no_key_identifier_ != NULL ? *e_ext_authority_key_identifier_no_key_identifier_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ext_authority_key_identifier_no_key_identifier() {
+inline ::zsearch::LintResult* Lints::mutable_e_ext_authority_key_identifier_no_key_identifier() {
   
   if (e_ext_authority_key_identifier_no_key_identifier_ == NULL) {
-    e_ext_authority_key_identifier_no_key_identifier_ = new ::censys_definitions::LintResult;
+    e_ext_authority_key_identifier_no_key_identifier_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ext_authority_key_identifier_no_key_identifier)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ext_authority_key_identifier_no_key_identifier)
   return e_ext_authority_key_identifier_no_key_identifier_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ext_authority_key_identifier_no_key_identifier() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ext_authority_key_identifier_no_key_identifier)
+inline ::zsearch::LintResult* Lints::release_e_ext_authority_key_identifier_no_key_identifier() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ext_authority_key_identifier_no_key_identifier)
   
-  ::censys_definitions::LintResult* temp = e_ext_authority_key_identifier_no_key_identifier_;
+  ::zsearch::LintResult* temp = e_ext_authority_key_identifier_no_key_identifier_;
   e_ext_authority_key_identifier_no_key_identifier_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ext_authority_key_identifier_no_key_identifier(::censys_definitions::LintResult* e_ext_authority_key_identifier_no_key_identifier) {
+inline void Lints::set_allocated_e_ext_authority_key_identifier_no_key_identifier(::zsearch::LintResult* e_ext_authority_key_identifier_no_key_identifier) {
   delete e_ext_authority_key_identifier_no_key_identifier_;
   e_ext_authority_key_identifier_no_key_identifier_ = e_ext_authority_key_identifier_no_key_identifier;
   if (e_ext_authority_key_identifier_no_key_identifier) {
@@ -4282,10 +4282,10 @@ inline void Lints::set_allocated_e_ext_authority_key_identifier_no_key_identifie
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ext_authority_key_identifier_no_key_identifier)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ext_authority_key_identifier_no_key_identifier)
 }
 
-// .censys_definitions.LintResult w_ext_cert_policy_contains_noticeref = 47;
+// .zsearch.LintResult w_ext_cert_policy_contains_noticeref = 47;
 inline bool Lints::has_w_ext_cert_policy_contains_noticeref() const {
   return this != internal_default_instance() && w_ext_cert_policy_contains_noticeref_ != NULL;
 }
@@ -4293,27 +4293,27 @@ inline void Lints::clear_w_ext_cert_policy_contains_noticeref() {
   if (GetArenaNoVirtual() == NULL && w_ext_cert_policy_contains_noticeref_ != NULL) delete w_ext_cert_policy_contains_noticeref_;
   w_ext_cert_policy_contains_noticeref_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::w_ext_cert_policy_contains_noticeref() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.w_ext_cert_policy_contains_noticeref)
+inline const ::zsearch::LintResult& Lints::w_ext_cert_policy_contains_noticeref() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.w_ext_cert_policy_contains_noticeref)
   return w_ext_cert_policy_contains_noticeref_ != NULL ? *w_ext_cert_policy_contains_noticeref_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_w_ext_cert_policy_contains_noticeref() {
+inline ::zsearch::LintResult* Lints::mutable_w_ext_cert_policy_contains_noticeref() {
   
   if (w_ext_cert_policy_contains_noticeref_ == NULL) {
-    w_ext_cert_policy_contains_noticeref_ = new ::censys_definitions::LintResult;
+    w_ext_cert_policy_contains_noticeref_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.w_ext_cert_policy_contains_noticeref)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.w_ext_cert_policy_contains_noticeref)
   return w_ext_cert_policy_contains_noticeref_;
 }
-inline ::censys_definitions::LintResult* Lints::release_w_ext_cert_policy_contains_noticeref() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.w_ext_cert_policy_contains_noticeref)
+inline ::zsearch::LintResult* Lints::release_w_ext_cert_policy_contains_noticeref() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.w_ext_cert_policy_contains_noticeref)
   
-  ::censys_definitions::LintResult* temp = w_ext_cert_policy_contains_noticeref_;
+  ::zsearch::LintResult* temp = w_ext_cert_policy_contains_noticeref_;
   w_ext_cert_policy_contains_noticeref_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_w_ext_cert_policy_contains_noticeref(::censys_definitions::LintResult* w_ext_cert_policy_contains_noticeref) {
+inline void Lints::set_allocated_w_ext_cert_policy_contains_noticeref(::zsearch::LintResult* w_ext_cert_policy_contains_noticeref) {
   delete w_ext_cert_policy_contains_noticeref_;
   w_ext_cert_policy_contains_noticeref_ = w_ext_cert_policy_contains_noticeref;
   if (w_ext_cert_policy_contains_noticeref) {
@@ -4321,10 +4321,10 @@ inline void Lints::set_allocated_w_ext_cert_policy_contains_noticeref(::censys_d
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.w_ext_cert_policy_contains_noticeref)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.w_ext_cert_policy_contains_noticeref)
 }
 
-// .censys_definitions.LintResult e_ext_cert_policy_disallowed_any_policy_qualifier = 48;
+// .zsearch.LintResult e_ext_cert_policy_disallowed_any_policy_qualifier = 48;
 inline bool Lints::has_e_ext_cert_policy_disallowed_any_policy_qualifier() const {
   return this != internal_default_instance() && e_ext_cert_policy_disallowed_any_policy_qualifier_ != NULL;
 }
@@ -4332,27 +4332,27 @@ inline void Lints::clear_e_ext_cert_policy_disallowed_any_policy_qualifier() {
   if (GetArenaNoVirtual() == NULL && e_ext_cert_policy_disallowed_any_policy_qualifier_ != NULL) delete e_ext_cert_policy_disallowed_any_policy_qualifier_;
   e_ext_cert_policy_disallowed_any_policy_qualifier_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ext_cert_policy_disallowed_any_policy_qualifier() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ext_cert_policy_disallowed_any_policy_qualifier)
+inline const ::zsearch::LintResult& Lints::e_ext_cert_policy_disallowed_any_policy_qualifier() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ext_cert_policy_disallowed_any_policy_qualifier)
   return e_ext_cert_policy_disallowed_any_policy_qualifier_ != NULL ? *e_ext_cert_policy_disallowed_any_policy_qualifier_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ext_cert_policy_disallowed_any_policy_qualifier() {
+inline ::zsearch::LintResult* Lints::mutable_e_ext_cert_policy_disallowed_any_policy_qualifier() {
   
   if (e_ext_cert_policy_disallowed_any_policy_qualifier_ == NULL) {
-    e_ext_cert_policy_disallowed_any_policy_qualifier_ = new ::censys_definitions::LintResult;
+    e_ext_cert_policy_disallowed_any_policy_qualifier_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ext_cert_policy_disallowed_any_policy_qualifier)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ext_cert_policy_disallowed_any_policy_qualifier)
   return e_ext_cert_policy_disallowed_any_policy_qualifier_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ext_cert_policy_disallowed_any_policy_qualifier() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ext_cert_policy_disallowed_any_policy_qualifier)
+inline ::zsearch::LintResult* Lints::release_e_ext_cert_policy_disallowed_any_policy_qualifier() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ext_cert_policy_disallowed_any_policy_qualifier)
   
-  ::censys_definitions::LintResult* temp = e_ext_cert_policy_disallowed_any_policy_qualifier_;
+  ::zsearch::LintResult* temp = e_ext_cert_policy_disallowed_any_policy_qualifier_;
   e_ext_cert_policy_disallowed_any_policy_qualifier_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ext_cert_policy_disallowed_any_policy_qualifier(::censys_definitions::LintResult* e_ext_cert_policy_disallowed_any_policy_qualifier) {
+inline void Lints::set_allocated_e_ext_cert_policy_disallowed_any_policy_qualifier(::zsearch::LintResult* e_ext_cert_policy_disallowed_any_policy_qualifier) {
   delete e_ext_cert_policy_disallowed_any_policy_qualifier_;
   e_ext_cert_policy_disallowed_any_policy_qualifier_ = e_ext_cert_policy_disallowed_any_policy_qualifier;
   if (e_ext_cert_policy_disallowed_any_policy_qualifier) {
@@ -4360,10 +4360,10 @@ inline void Lints::set_allocated_e_ext_cert_policy_disallowed_any_policy_qualifi
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ext_cert_policy_disallowed_any_policy_qualifier)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ext_cert_policy_disallowed_any_policy_qualifier)
 }
 
-// .censys_definitions.LintResult e_ext_cert_policy_duplicate = 49;
+// .zsearch.LintResult e_ext_cert_policy_duplicate = 49;
 inline bool Lints::has_e_ext_cert_policy_duplicate() const {
   return this != internal_default_instance() && e_ext_cert_policy_duplicate_ != NULL;
 }
@@ -4371,27 +4371,27 @@ inline void Lints::clear_e_ext_cert_policy_duplicate() {
   if (GetArenaNoVirtual() == NULL && e_ext_cert_policy_duplicate_ != NULL) delete e_ext_cert_policy_duplicate_;
   e_ext_cert_policy_duplicate_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ext_cert_policy_duplicate() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ext_cert_policy_duplicate)
+inline const ::zsearch::LintResult& Lints::e_ext_cert_policy_duplicate() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ext_cert_policy_duplicate)
   return e_ext_cert_policy_duplicate_ != NULL ? *e_ext_cert_policy_duplicate_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ext_cert_policy_duplicate() {
+inline ::zsearch::LintResult* Lints::mutable_e_ext_cert_policy_duplicate() {
   
   if (e_ext_cert_policy_duplicate_ == NULL) {
-    e_ext_cert_policy_duplicate_ = new ::censys_definitions::LintResult;
+    e_ext_cert_policy_duplicate_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ext_cert_policy_duplicate)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ext_cert_policy_duplicate)
   return e_ext_cert_policy_duplicate_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ext_cert_policy_duplicate() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ext_cert_policy_duplicate)
+inline ::zsearch::LintResult* Lints::release_e_ext_cert_policy_duplicate() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ext_cert_policy_duplicate)
   
-  ::censys_definitions::LintResult* temp = e_ext_cert_policy_duplicate_;
+  ::zsearch::LintResult* temp = e_ext_cert_policy_duplicate_;
   e_ext_cert_policy_duplicate_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ext_cert_policy_duplicate(::censys_definitions::LintResult* e_ext_cert_policy_duplicate) {
+inline void Lints::set_allocated_e_ext_cert_policy_duplicate(::zsearch::LintResult* e_ext_cert_policy_duplicate) {
   delete e_ext_cert_policy_duplicate_;
   e_ext_cert_policy_duplicate_ = e_ext_cert_policy_duplicate;
   if (e_ext_cert_policy_duplicate) {
@@ -4399,10 +4399,10 @@ inline void Lints::set_allocated_e_ext_cert_policy_duplicate(::censys_definition
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ext_cert_policy_duplicate)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ext_cert_policy_duplicate)
 }
 
-// .censys_definitions.LintResult e_ext_cert_policy_explicit_text_ia5_string = 50;
+// .zsearch.LintResult e_ext_cert_policy_explicit_text_ia5_string = 50;
 inline bool Lints::has_e_ext_cert_policy_explicit_text_ia5_string() const {
   return this != internal_default_instance() && e_ext_cert_policy_explicit_text_ia5_string_ != NULL;
 }
@@ -4410,27 +4410,27 @@ inline void Lints::clear_e_ext_cert_policy_explicit_text_ia5_string() {
   if (GetArenaNoVirtual() == NULL && e_ext_cert_policy_explicit_text_ia5_string_ != NULL) delete e_ext_cert_policy_explicit_text_ia5_string_;
   e_ext_cert_policy_explicit_text_ia5_string_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ext_cert_policy_explicit_text_ia5_string() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ext_cert_policy_explicit_text_ia5_string)
+inline const ::zsearch::LintResult& Lints::e_ext_cert_policy_explicit_text_ia5_string() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ext_cert_policy_explicit_text_ia5_string)
   return e_ext_cert_policy_explicit_text_ia5_string_ != NULL ? *e_ext_cert_policy_explicit_text_ia5_string_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ext_cert_policy_explicit_text_ia5_string() {
+inline ::zsearch::LintResult* Lints::mutable_e_ext_cert_policy_explicit_text_ia5_string() {
   
   if (e_ext_cert_policy_explicit_text_ia5_string_ == NULL) {
-    e_ext_cert_policy_explicit_text_ia5_string_ = new ::censys_definitions::LintResult;
+    e_ext_cert_policy_explicit_text_ia5_string_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ext_cert_policy_explicit_text_ia5_string)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ext_cert_policy_explicit_text_ia5_string)
   return e_ext_cert_policy_explicit_text_ia5_string_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ext_cert_policy_explicit_text_ia5_string() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ext_cert_policy_explicit_text_ia5_string)
+inline ::zsearch::LintResult* Lints::release_e_ext_cert_policy_explicit_text_ia5_string() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ext_cert_policy_explicit_text_ia5_string)
   
-  ::censys_definitions::LintResult* temp = e_ext_cert_policy_explicit_text_ia5_string_;
+  ::zsearch::LintResult* temp = e_ext_cert_policy_explicit_text_ia5_string_;
   e_ext_cert_policy_explicit_text_ia5_string_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ext_cert_policy_explicit_text_ia5_string(::censys_definitions::LintResult* e_ext_cert_policy_explicit_text_ia5_string) {
+inline void Lints::set_allocated_e_ext_cert_policy_explicit_text_ia5_string(::zsearch::LintResult* e_ext_cert_policy_explicit_text_ia5_string) {
   delete e_ext_cert_policy_explicit_text_ia5_string_;
   e_ext_cert_policy_explicit_text_ia5_string_ = e_ext_cert_policy_explicit_text_ia5_string;
   if (e_ext_cert_policy_explicit_text_ia5_string) {
@@ -4438,10 +4438,10 @@ inline void Lints::set_allocated_e_ext_cert_policy_explicit_text_ia5_string(::ce
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ext_cert_policy_explicit_text_ia5_string)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ext_cert_policy_explicit_text_ia5_string)
 }
 
-// .censys_definitions.LintResult w_ext_cert_policy_explicit_text_includes_control = 51;
+// .zsearch.LintResult w_ext_cert_policy_explicit_text_includes_control = 51;
 inline bool Lints::has_w_ext_cert_policy_explicit_text_includes_control() const {
   return this != internal_default_instance() && w_ext_cert_policy_explicit_text_includes_control_ != NULL;
 }
@@ -4449,27 +4449,27 @@ inline void Lints::clear_w_ext_cert_policy_explicit_text_includes_control() {
   if (GetArenaNoVirtual() == NULL && w_ext_cert_policy_explicit_text_includes_control_ != NULL) delete w_ext_cert_policy_explicit_text_includes_control_;
   w_ext_cert_policy_explicit_text_includes_control_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::w_ext_cert_policy_explicit_text_includes_control() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.w_ext_cert_policy_explicit_text_includes_control)
+inline const ::zsearch::LintResult& Lints::w_ext_cert_policy_explicit_text_includes_control() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.w_ext_cert_policy_explicit_text_includes_control)
   return w_ext_cert_policy_explicit_text_includes_control_ != NULL ? *w_ext_cert_policy_explicit_text_includes_control_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_w_ext_cert_policy_explicit_text_includes_control() {
+inline ::zsearch::LintResult* Lints::mutable_w_ext_cert_policy_explicit_text_includes_control() {
   
   if (w_ext_cert_policy_explicit_text_includes_control_ == NULL) {
-    w_ext_cert_policy_explicit_text_includes_control_ = new ::censys_definitions::LintResult;
+    w_ext_cert_policy_explicit_text_includes_control_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.w_ext_cert_policy_explicit_text_includes_control)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.w_ext_cert_policy_explicit_text_includes_control)
   return w_ext_cert_policy_explicit_text_includes_control_;
 }
-inline ::censys_definitions::LintResult* Lints::release_w_ext_cert_policy_explicit_text_includes_control() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.w_ext_cert_policy_explicit_text_includes_control)
+inline ::zsearch::LintResult* Lints::release_w_ext_cert_policy_explicit_text_includes_control() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.w_ext_cert_policy_explicit_text_includes_control)
   
-  ::censys_definitions::LintResult* temp = w_ext_cert_policy_explicit_text_includes_control_;
+  ::zsearch::LintResult* temp = w_ext_cert_policy_explicit_text_includes_control_;
   w_ext_cert_policy_explicit_text_includes_control_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_w_ext_cert_policy_explicit_text_includes_control(::censys_definitions::LintResult* w_ext_cert_policy_explicit_text_includes_control) {
+inline void Lints::set_allocated_w_ext_cert_policy_explicit_text_includes_control(::zsearch::LintResult* w_ext_cert_policy_explicit_text_includes_control) {
   delete w_ext_cert_policy_explicit_text_includes_control_;
   w_ext_cert_policy_explicit_text_includes_control_ = w_ext_cert_policy_explicit_text_includes_control;
   if (w_ext_cert_policy_explicit_text_includes_control) {
@@ -4477,10 +4477,10 @@ inline void Lints::set_allocated_w_ext_cert_policy_explicit_text_includes_contro
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.w_ext_cert_policy_explicit_text_includes_control)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.w_ext_cert_policy_explicit_text_includes_control)
 }
 
-// .censys_definitions.LintResult w_ext_cert_policy_explicit_text_not_nfc = 52;
+// .zsearch.LintResult w_ext_cert_policy_explicit_text_not_nfc = 52;
 inline bool Lints::has_w_ext_cert_policy_explicit_text_not_nfc() const {
   return this != internal_default_instance() && w_ext_cert_policy_explicit_text_not_nfc_ != NULL;
 }
@@ -4488,27 +4488,27 @@ inline void Lints::clear_w_ext_cert_policy_explicit_text_not_nfc() {
   if (GetArenaNoVirtual() == NULL && w_ext_cert_policy_explicit_text_not_nfc_ != NULL) delete w_ext_cert_policy_explicit_text_not_nfc_;
   w_ext_cert_policy_explicit_text_not_nfc_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::w_ext_cert_policy_explicit_text_not_nfc() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.w_ext_cert_policy_explicit_text_not_nfc)
+inline const ::zsearch::LintResult& Lints::w_ext_cert_policy_explicit_text_not_nfc() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.w_ext_cert_policy_explicit_text_not_nfc)
   return w_ext_cert_policy_explicit_text_not_nfc_ != NULL ? *w_ext_cert_policy_explicit_text_not_nfc_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_w_ext_cert_policy_explicit_text_not_nfc() {
+inline ::zsearch::LintResult* Lints::mutable_w_ext_cert_policy_explicit_text_not_nfc() {
   
   if (w_ext_cert_policy_explicit_text_not_nfc_ == NULL) {
-    w_ext_cert_policy_explicit_text_not_nfc_ = new ::censys_definitions::LintResult;
+    w_ext_cert_policy_explicit_text_not_nfc_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.w_ext_cert_policy_explicit_text_not_nfc)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.w_ext_cert_policy_explicit_text_not_nfc)
   return w_ext_cert_policy_explicit_text_not_nfc_;
 }
-inline ::censys_definitions::LintResult* Lints::release_w_ext_cert_policy_explicit_text_not_nfc() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.w_ext_cert_policy_explicit_text_not_nfc)
+inline ::zsearch::LintResult* Lints::release_w_ext_cert_policy_explicit_text_not_nfc() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.w_ext_cert_policy_explicit_text_not_nfc)
   
-  ::censys_definitions::LintResult* temp = w_ext_cert_policy_explicit_text_not_nfc_;
+  ::zsearch::LintResult* temp = w_ext_cert_policy_explicit_text_not_nfc_;
   w_ext_cert_policy_explicit_text_not_nfc_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_w_ext_cert_policy_explicit_text_not_nfc(::censys_definitions::LintResult* w_ext_cert_policy_explicit_text_not_nfc) {
+inline void Lints::set_allocated_w_ext_cert_policy_explicit_text_not_nfc(::zsearch::LintResult* w_ext_cert_policy_explicit_text_not_nfc) {
   delete w_ext_cert_policy_explicit_text_not_nfc_;
   w_ext_cert_policy_explicit_text_not_nfc_ = w_ext_cert_policy_explicit_text_not_nfc;
   if (w_ext_cert_policy_explicit_text_not_nfc) {
@@ -4516,10 +4516,10 @@ inline void Lints::set_allocated_w_ext_cert_policy_explicit_text_not_nfc(::censy
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.w_ext_cert_policy_explicit_text_not_nfc)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.w_ext_cert_policy_explicit_text_not_nfc)
 }
 
-// .censys_definitions.LintResult w_ext_cert_policy_explicit_text_not_utf8 = 53;
+// .zsearch.LintResult w_ext_cert_policy_explicit_text_not_utf8 = 53;
 inline bool Lints::has_w_ext_cert_policy_explicit_text_not_utf8() const {
   return this != internal_default_instance() && w_ext_cert_policy_explicit_text_not_utf8_ != NULL;
 }
@@ -4527,27 +4527,27 @@ inline void Lints::clear_w_ext_cert_policy_explicit_text_not_utf8() {
   if (GetArenaNoVirtual() == NULL && w_ext_cert_policy_explicit_text_not_utf8_ != NULL) delete w_ext_cert_policy_explicit_text_not_utf8_;
   w_ext_cert_policy_explicit_text_not_utf8_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::w_ext_cert_policy_explicit_text_not_utf8() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.w_ext_cert_policy_explicit_text_not_utf8)
+inline const ::zsearch::LintResult& Lints::w_ext_cert_policy_explicit_text_not_utf8() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.w_ext_cert_policy_explicit_text_not_utf8)
   return w_ext_cert_policy_explicit_text_not_utf8_ != NULL ? *w_ext_cert_policy_explicit_text_not_utf8_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_w_ext_cert_policy_explicit_text_not_utf8() {
+inline ::zsearch::LintResult* Lints::mutable_w_ext_cert_policy_explicit_text_not_utf8() {
   
   if (w_ext_cert_policy_explicit_text_not_utf8_ == NULL) {
-    w_ext_cert_policy_explicit_text_not_utf8_ = new ::censys_definitions::LintResult;
+    w_ext_cert_policy_explicit_text_not_utf8_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.w_ext_cert_policy_explicit_text_not_utf8)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.w_ext_cert_policy_explicit_text_not_utf8)
   return w_ext_cert_policy_explicit_text_not_utf8_;
 }
-inline ::censys_definitions::LintResult* Lints::release_w_ext_cert_policy_explicit_text_not_utf8() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.w_ext_cert_policy_explicit_text_not_utf8)
+inline ::zsearch::LintResult* Lints::release_w_ext_cert_policy_explicit_text_not_utf8() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.w_ext_cert_policy_explicit_text_not_utf8)
   
-  ::censys_definitions::LintResult* temp = w_ext_cert_policy_explicit_text_not_utf8_;
+  ::zsearch::LintResult* temp = w_ext_cert_policy_explicit_text_not_utf8_;
   w_ext_cert_policy_explicit_text_not_utf8_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_w_ext_cert_policy_explicit_text_not_utf8(::censys_definitions::LintResult* w_ext_cert_policy_explicit_text_not_utf8) {
+inline void Lints::set_allocated_w_ext_cert_policy_explicit_text_not_utf8(::zsearch::LintResult* w_ext_cert_policy_explicit_text_not_utf8) {
   delete w_ext_cert_policy_explicit_text_not_utf8_;
   w_ext_cert_policy_explicit_text_not_utf8_ = w_ext_cert_policy_explicit_text_not_utf8;
   if (w_ext_cert_policy_explicit_text_not_utf8) {
@@ -4555,10 +4555,10 @@ inline void Lints::set_allocated_w_ext_cert_policy_explicit_text_not_utf8(::cens
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.w_ext_cert_policy_explicit_text_not_utf8)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.w_ext_cert_policy_explicit_text_not_utf8)
 }
 
-// .censys_definitions.LintResult e_ext_cert_policy_explicit_text_too_long = 54;
+// .zsearch.LintResult e_ext_cert_policy_explicit_text_too_long = 54;
 inline bool Lints::has_e_ext_cert_policy_explicit_text_too_long() const {
   return this != internal_default_instance() && e_ext_cert_policy_explicit_text_too_long_ != NULL;
 }
@@ -4566,27 +4566,27 @@ inline void Lints::clear_e_ext_cert_policy_explicit_text_too_long() {
   if (GetArenaNoVirtual() == NULL && e_ext_cert_policy_explicit_text_too_long_ != NULL) delete e_ext_cert_policy_explicit_text_too_long_;
   e_ext_cert_policy_explicit_text_too_long_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ext_cert_policy_explicit_text_too_long() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ext_cert_policy_explicit_text_too_long)
+inline const ::zsearch::LintResult& Lints::e_ext_cert_policy_explicit_text_too_long() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ext_cert_policy_explicit_text_too_long)
   return e_ext_cert_policy_explicit_text_too_long_ != NULL ? *e_ext_cert_policy_explicit_text_too_long_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ext_cert_policy_explicit_text_too_long() {
+inline ::zsearch::LintResult* Lints::mutable_e_ext_cert_policy_explicit_text_too_long() {
   
   if (e_ext_cert_policy_explicit_text_too_long_ == NULL) {
-    e_ext_cert_policy_explicit_text_too_long_ = new ::censys_definitions::LintResult;
+    e_ext_cert_policy_explicit_text_too_long_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ext_cert_policy_explicit_text_too_long)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ext_cert_policy_explicit_text_too_long)
   return e_ext_cert_policy_explicit_text_too_long_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ext_cert_policy_explicit_text_too_long() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ext_cert_policy_explicit_text_too_long)
+inline ::zsearch::LintResult* Lints::release_e_ext_cert_policy_explicit_text_too_long() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ext_cert_policy_explicit_text_too_long)
   
-  ::censys_definitions::LintResult* temp = e_ext_cert_policy_explicit_text_too_long_;
+  ::zsearch::LintResult* temp = e_ext_cert_policy_explicit_text_too_long_;
   e_ext_cert_policy_explicit_text_too_long_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ext_cert_policy_explicit_text_too_long(::censys_definitions::LintResult* e_ext_cert_policy_explicit_text_too_long) {
+inline void Lints::set_allocated_e_ext_cert_policy_explicit_text_too_long(::zsearch::LintResult* e_ext_cert_policy_explicit_text_too_long) {
   delete e_ext_cert_policy_explicit_text_too_long_;
   e_ext_cert_policy_explicit_text_too_long_ = e_ext_cert_policy_explicit_text_too_long;
   if (e_ext_cert_policy_explicit_text_too_long) {
@@ -4594,10 +4594,10 @@ inline void Lints::set_allocated_e_ext_cert_policy_explicit_text_too_long(::cens
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ext_cert_policy_explicit_text_too_long)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ext_cert_policy_explicit_text_too_long)
 }
 
-// .censys_definitions.LintResult w_ext_crl_distribution_marked_critical = 55;
+// .zsearch.LintResult w_ext_crl_distribution_marked_critical = 55;
 inline bool Lints::has_w_ext_crl_distribution_marked_critical() const {
   return this != internal_default_instance() && w_ext_crl_distribution_marked_critical_ != NULL;
 }
@@ -4605,27 +4605,27 @@ inline void Lints::clear_w_ext_crl_distribution_marked_critical() {
   if (GetArenaNoVirtual() == NULL && w_ext_crl_distribution_marked_critical_ != NULL) delete w_ext_crl_distribution_marked_critical_;
   w_ext_crl_distribution_marked_critical_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::w_ext_crl_distribution_marked_critical() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.w_ext_crl_distribution_marked_critical)
+inline const ::zsearch::LintResult& Lints::w_ext_crl_distribution_marked_critical() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.w_ext_crl_distribution_marked_critical)
   return w_ext_crl_distribution_marked_critical_ != NULL ? *w_ext_crl_distribution_marked_critical_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_w_ext_crl_distribution_marked_critical() {
+inline ::zsearch::LintResult* Lints::mutable_w_ext_crl_distribution_marked_critical() {
   
   if (w_ext_crl_distribution_marked_critical_ == NULL) {
-    w_ext_crl_distribution_marked_critical_ = new ::censys_definitions::LintResult;
+    w_ext_crl_distribution_marked_critical_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.w_ext_crl_distribution_marked_critical)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.w_ext_crl_distribution_marked_critical)
   return w_ext_crl_distribution_marked_critical_;
 }
-inline ::censys_definitions::LintResult* Lints::release_w_ext_crl_distribution_marked_critical() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.w_ext_crl_distribution_marked_critical)
+inline ::zsearch::LintResult* Lints::release_w_ext_crl_distribution_marked_critical() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.w_ext_crl_distribution_marked_critical)
   
-  ::censys_definitions::LintResult* temp = w_ext_crl_distribution_marked_critical_;
+  ::zsearch::LintResult* temp = w_ext_crl_distribution_marked_critical_;
   w_ext_crl_distribution_marked_critical_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_w_ext_crl_distribution_marked_critical(::censys_definitions::LintResult* w_ext_crl_distribution_marked_critical) {
+inline void Lints::set_allocated_w_ext_crl_distribution_marked_critical(::zsearch::LintResult* w_ext_crl_distribution_marked_critical) {
   delete w_ext_crl_distribution_marked_critical_;
   w_ext_crl_distribution_marked_critical_ = w_ext_crl_distribution_marked_critical;
   if (w_ext_crl_distribution_marked_critical) {
@@ -4633,10 +4633,10 @@ inline void Lints::set_allocated_w_ext_crl_distribution_marked_critical(::censys
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.w_ext_crl_distribution_marked_critical)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.w_ext_crl_distribution_marked_critical)
 }
 
-// .censys_definitions.LintResult e_ext_duplicate_extension = 56;
+// .zsearch.LintResult e_ext_duplicate_extension = 56;
 inline bool Lints::has_e_ext_duplicate_extension() const {
   return this != internal_default_instance() && e_ext_duplicate_extension_ != NULL;
 }
@@ -4644,27 +4644,27 @@ inline void Lints::clear_e_ext_duplicate_extension() {
   if (GetArenaNoVirtual() == NULL && e_ext_duplicate_extension_ != NULL) delete e_ext_duplicate_extension_;
   e_ext_duplicate_extension_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ext_duplicate_extension() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ext_duplicate_extension)
+inline const ::zsearch::LintResult& Lints::e_ext_duplicate_extension() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ext_duplicate_extension)
   return e_ext_duplicate_extension_ != NULL ? *e_ext_duplicate_extension_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ext_duplicate_extension() {
+inline ::zsearch::LintResult* Lints::mutable_e_ext_duplicate_extension() {
   
   if (e_ext_duplicate_extension_ == NULL) {
-    e_ext_duplicate_extension_ = new ::censys_definitions::LintResult;
+    e_ext_duplicate_extension_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ext_duplicate_extension)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ext_duplicate_extension)
   return e_ext_duplicate_extension_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ext_duplicate_extension() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ext_duplicate_extension)
+inline ::zsearch::LintResult* Lints::release_e_ext_duplicate_extension() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ext_duplicate_extension)
   
-  ::censys_definitions::LintResult* temp = e_ext_duplicate_extension_;
+  ::zsearch::LintResult* temp = e_ext_duplicate_extension_;
   e_ext_duplicate_extension_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ext_duplicate_extension(::censys_definitions::LintResult* e_ext_duplicate_extension) {
+inline void Lints::set_allocated_e_ext_duplicate_extension(::zsearch::LintResult* e_ext_duplicate_extension) {
   delete e_ext_duplicate_extension_;
   e_ext_duplicate_extension_ = e_ext_duplicate_extension;
   if (e_ext_duplicate_extension) {
@@ -4672,10 +4672,10 @@ inline void Lints::set_allocated_e_ext_duplicate_extension(::censys_definitions:
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ext_duplicate_extension)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ext_duplicate_extension)
 }
 
-// .censys_definitions.LintResult e_ext_freshest_crl_marked_critical = 57;
+// .zsearch.LintResult e_ext_freshest_crl_marked_critical = 57;
 inline bool Lints::has_e_ext_freshest_crl_marked_critical() const {
   return this != internal_default_instance() && e_ext_freshest_crl_marked_critical_ != NULL;
 }
@@ -4683,27 +4683,27 @@ inline void Lints::clear_e_ext_freshest_crl_marked_critical() {
   if (GetArenaNoVirtual() == NULL && e_ext_freshest_crl_marked_critical_ != NULL) delete e_ext_freshest_crl_marked_critical_;
   e_ext_freshest_crl_marked_critical_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ext_freshest_crl_marked_critical() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ext_freshest_crl_marked_critical)
+inline const ::zsearch::LintResult& Lints::e_ext_freshest_crl_marked_critical() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ext_freshest_crl_marked_critical)
   return e_ext_freshest_crl_marked_critical_ != NULL ? *e_ext_freshest_crl_marked_critical_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ext_freshest_crl_marked_critical() {
+inline ::zsearch::LintResult* Lints::mutable_e_ext_freshest_crl_marked_critical() {
   
   if (e_ext_freshest_crl_marked_critical_ == NULL) {
-    e_ext_freshest_crl_marked_critical_ = new ::censys_definitions::LintResult;
+    e_ext_freshest_crl_marked_critical_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ext_freshest_crl_marked_critical)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ext_freshest_crl_marked_critical)
   return e_ext_freshest_crl_marked_critical_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ext_freshest_crl_marked_critical() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ext_freshest_crl_marked_critical)
+inline ::zsearch::LintResult* Lints::release_e_ext_freshest_crl_marked_critical() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ext_freshest_crl_marked_critical)
   
-  ::censys_definitions::LintResult* temp = e_ext_freshest_crl_marked_critical_;
+  ::zsearch::LintResult* temp = e_ext_freshest_crl_marked_critical_;
   e_ext_freshest_crl_marked_critical_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ext_freshest_crl_marked_critical(::censys_definitions::LintResult* e_ext_freshest_crl_marked_critical) {
+inline void Lints::set_allocated_e_ext_freshest_crl_marked_critical(::zsearch::LintResult* e_ext_freshest_crl_marked_critical) {
   delete e_ext_freshest_crl_marked_critical_;
   e_ext_freshest_crl_marked_critical_ = e_ext_freshest_crl_marked_critical;
   if (e_ext_freshest_crl_marked_critical) {
@@ -4711,10 +4711,10 @@ inline void Lints::set_allocated_e_ext_freshest_crl_marked_critical(::censys_def
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ext_freshest_crl_marked_critical)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ext_freshest_crl_marked_critical)
 }
 
-// .censys_definitions.LintResult w_ext_ian_critical = 58;
+// .zsearch.LintResult w_ext_ian_critical = 58;
 inline bool Lints::has_w_ext_ian_critical() const {
   return this != internal_default_instance() && w_ext_ian_critical_ != NULL;
 }
@@ -4722,27 +4722,27 @@ inline void Lints::clear_w_ext_ian_critical() {
   if (GetArenaNoVirtual() == NULL && w_ext_ian_critical_ != NULL) delete w_ext_ian_critical_;
   w_ext_ian_critical_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::w_ext_ian_critical() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.w_ext_ian_critical)
+inline const ::zsearch::LintResult& Lints::w_ext_ian_critical() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.w_ext_ian_critical)
   return w_ext_ian_critical_ != NULL ? *w_ext_ian_critical_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_w_ext_ian_critical() {
+inline ::zsearch::LintResult* Lints::mutable_w_ext_ian_critical() {
   
   if (w_ext_ian_critical_ == NULL) {
-    w_ext_ian_critical_ = new ::censys_definitions::LintResult;
+    w_ext_ian_critical_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.w_ext_ian_critical)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.w_ext_ian_critical)
   return w_ext_ian_critical_;
 }
-inline ::censys_definitions::LintResult* Lints::release_w_ext_ian_critical() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.w_ext_ian_critical)
+inline ::zsearch::LintResult* Lints::release_w_ext_ian_critical() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.w_ext_ian_critical)
   
-  ::censys_definitions::LintResult* temp = w_ext_ian_critical_;
+  ::zsearch::LintResult* temp = w_ext_ian_critical_;
   w_ext_ian_critical_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_w_ext_ian_critical(::censys_definitions::LintResult* w_ext_ian_critical) {
+inline void Lints::set_allocated_w_ext_ian_critical(::zsearch::LintResult* w_ext_ian_critical) {
   delete w_ext_ian_critical_;
   w_ext_ian_critical_ = w_ext_ian_critical;
   if (w_ext_ian_critical) {
@@ -4750,10 +4750,10 @@ inline void Lints::set_allocated_w_ext_ian_critical(::censys_definitions::LintRe
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.w_ext_ian_critical)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.w_ext_ian_critical)
 }
 
-// .censys_definitions.LintResult e_ext_ian_dns_not_ia5_string = 59;
+// .zsearch.LintResult e_ext_ian_dns_not_ia5_string = 59;
 inline bool Lints::has_e_ext_ian_dns_not_ia5_string() const {
   return this != internal_default_instance() && e_ext_ian_dns_not_ia5_string_ != NULL;
 }
@@ -4761,27 +4761,27 @@ inline void Lints::clear_e_ext_ian_dns_not_ia5_string() {
   if (GetArenaNoVirtual() == NULL && e_ext_ian_dns_not_ia5_string_ != NULL) delete e_ext_ian_dns_not_ia5_string_;
   e_ext_ian_dns_not_ia5_string_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ext_ian_dns_not_ia5_string() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ext_ian_dns_not_ia5_string)
+inline const ::zsearch::LintResult& Lints::e_ext_ian_dns_not_ia5_string() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ext_ian_dns_not_ia5_string)
   return e_ext_ian_dns_not_ia5_string_ != NULL ? *e_ext_ian_dns_not_ia5_string_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ext_ian_dns_not_ia5_string() {
+inline ::zsearch::LintResult* Lints::mutable_e_ext_ian_dns_not_ia5_string() {
   
   if (e_ext_ian_dns_not_ia5_string_ == NULL) {
-    e_ext_ian_dns_not_ia5_string_ = new ::censys_definitions::LintResult;
+    e_ext_ian_dns_not_ia5_string_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ext_ian_dns_not_ia5_string)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ext_ian_dns_not_ia5_string)
   return e_ext_ian_dns_not_ia5_string_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ext_ian_dns_not_ia5_string() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ext_ian_dns_not_ia5_string)
+inline ::zsearch::LintResult* Lints::release_e_ext_ian_dns_not_ia5_string() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ext_ian_dns_not_ia5_string)
   
-  ::censys_definitions::LintResult* temp = e_ext_ian_dns_not_ia5_string_;
+  ::zsearch::LintResult* temp = e_ext_ian_dns_not_ia5_string_;
   e_ext_ian_dns_not_ia5_string_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ext_ian_dns_not_ia5_string(::censys_definitions::LintResult* e_ext_ian_dns_not_ia5_string) {
+inline void Lints::set_allocated_e_ext_ian_dns_not_ia5_string(::zsearch::LintResult* e_ext_ian_dns_not_ia5_string) {
   delete e_ext_ian_dns_not_ia5_string_;
   e_ext_ian_dns_not_ia5_string_ = e_ext_ian_dns_not_ia5_string;
   if (e_ext_ian_dns_not_ia5_string) {
@@ -4789,10 +4789,10 @@ inline void Lints::set_allocated_e_ext_ian_dns_not_ia5_string(::censys_definitio
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ext_ian_dns_not_ia5_string)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ext_ian_dns_not_ia5_string)
 }
 
-// .censys_definitions.LintResult e_ext_ian_empty_name = 60;
+// .zsearch.LintResult e_ext_ian_empty_name = 60;
 inline bool Lints::has_e_ext_ian_empty_name() const {
   return this != internal_default_instance() && e_ext_ian_empty_name_ != NULL;
 }
@@ -4800,27 +4800,27 @@ inline void Lints::clear_e_ext_ian_empty_name() {
   if (GetArenaNoVirtual() == NULL && e_ext_ian_empty_name_ != NULL) delete e_ext_ian_empty_name_;
   e_ext_ian_empty_name_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ext_ian_empty_name() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ext_ian_empty_name)
+inline const ::zsearch::LintResult& Lints::e_ext_ian_empty_name() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ext_ian_empty_name)
   return e_ext_ian_empty_name_ != NULL ? *e_ext_ian_empty_name_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ext_ian_empty_name() {
+inline ::zsearch::LintResult* Lints::mutable_e_ext_ian_empty_name() {
   
   if (e_ext_ian_empty_name_ == NULL) {
-    e_ext_ian_empty_name_ = new ::censys_definitions::LintResult;
+    e_ext_ian_empty_name_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ext_ian_empty_name)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ext_ian_empty_name)
   return e_ext_ian_empty_name_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ext_ian_empty_name() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ext_ian_empty_name)
+inline ::zsearch::LintResult* Lints::release_e_ext_ian_empty_name() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ext_ian_empty_name)
   
-  ::censys_definitions::LintResult* temp = e_ext_ian_empty_name_;
+  ::zsearch::LintResult* temp = e_ext_ian_empty_name_;
   e_ext_ian_empty_name_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ext_ian_empty_name(::censys_definitions::LintResult* e_ext_ian_empty_name) {
+inline void Lints::set_allocated_e_ext_ian_empty_name(::zsearch::LintResult* e_ext_ian_empty_name) {
   delete e_ext_ian_empty_name_;
   e_ext_ian_empty_name_ = e_ext_ian_empty_name;
   if (e_ext_ian_empty_name) {
@@ -4828,10 +4828,10 @@ inline void Lints::set_allocated_e_ext_ian_empty_name(::censys_definitions::Lint
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ext_ian_empty_name)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ext_ian_empty_name)
 }
 
-// .censys_definitions.LintResult e_ext_ian_no_entries = 61;
+// .zsearch.LintResult e_ext_ian_no_entries = 61;
 inline bool Lints::has_e_ext_ian_no_entries() const {
   return this != internal_default_instance() && e_ext_ian_no_entries_ != NULL;
 }
@@ -4839,27 +4839,27 @@ inline void Lints::clear_e_ext_ian_no_entries() {
   if (GetArenaNoVirtual() == NULL && e_ext_ian_no_entries_ != NULL) delete e_ext_ian_no_entries_;
   e_ext_ian_no_entries_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ext_ian_no_entries() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ext_ian_no_entries)
+inline const ::zsearch::LintResult& Lints::e_ext_ian_no_entries() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ext_ian_no_entries)
   return e_ext_ian_no_entries_ != NULL ? *e_ext_ian_no_entries_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ext_ian_no_entries() {
+inline ::zsearch::LintResult* Lints::mutable_e_ext_ian_no_entries() {
   
   if (e_ext_ian_no_entries_ == NULL) {
-    e_ext_ian_no_entries_ = new ::censys_definitions::LintResult;
+    e_ext_ian_no_entries_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ext_ian_no_entries)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ext_ian_no_entries)
   return e_ext_ian_no_entries_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ext_ian_no_entries() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ext_ian_no_entries)
+inline ::zsearch::LintResult* Lints::release_e_ext_ian_no_entries() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ext_ian_no_entries)
   
-  ::censys_definitions::LintResult* temp = e_ext_ian_no_entries_;
+  ::zsearch::LintResult* temp = e_ext_ian_no_entries_;
   e_ext_ian_no_entries_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ext_ian_no_entries(::censys_definitions::LintResult* e_ext_ian_no_entries) {
+inline void Lints::set_allocated_e_ext_ian_no_entries(::zsearch::LintResult* e_ext_ian_no_entries) {
   delete e_ext_ian_no_entries_;
   e_ext_ian_no_entries_ = e_ext_ian_no_entries;
   if (e_ext_ian_no_entries) {
@@ -4867,10 +4867,10 @@ inline void Lints::set_allocated_e_ext_ian_no_entries(::censys_definitions::Lint
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ext_ian_no_entries)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ext_ian_no_entries)
 }
 
-// .censys_definitions.LintResult e_ext_ian_rfc822_format_invalid = 62;
+// .zsearch.LintResult e_ext_ian_rfc822_format_invalid = 62;
 inline bool Lints::has_e_ext_ian_rfc822_format_invalid() const {
   return this != internal_default_instance() && e_ext_ian_rfc822_format_invalid_ != NULL;
 }
@@ -4878,27 +4878,27 @@ inline void Lints::clear_e_ext_ian_rfc822_format_invalid() {
   if (GetArenaNoVirtual() == NULL && e_ext_ian_rfc822_format_invalid_ != NULL) delete e_ext_ian_rfc822_format_invalid_;
   e_ext_ian_rfc822_format_invalid_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ext_ian_rfc822_format_invalid() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ext_ian_rfc822_format_invalid)
+inline const ::zsearch::LintResult& Lints::e_ext_ian_rfc822_format_invalid() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ext_ian_rfc822_format_invalid)
   return e_ext_ian_rfc822_format_invalid_ != NULL ? *e_ext_ian_rfc822_format_invalid_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ext_ian_rfc822_format_invalid() {
+inline ::zsearch::LintResult* Lints::mutable_e_ext_ian_rfc822_format_invalid() {
   
   if (e_ext_ian_rfc822_format_invalid_ == NULL) {
-    e_ext_ian_rfc822_format_invalid_ = new ::censys_definitions::LintResult;
+    e_ext_ian_rfc822_format_invalid_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ext_ian_rfc822_format_invalid)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ext_ian_rfc822_format_invalid)
   return e_ext_ian_rfc822_format_invalid_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ext_ian_rfc822_format_invalid() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ext_ian_rfc822_format_invalid)
+inline ::zsearch::LintResult* Lints::release_e_ext_ian_rfc822_format_invalid() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ext_ian_rfc822_format_invalid)
   
-  ::censys_definitions::LintResult* temp = e_ext_ian_rfc822_format_invalid_;
+  ::zsearch::LintResult* temp = e_ext_ian_rfc822_format_invalid_;
   e_ext_ian_rfc822_format_invalid_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ext_ian_rfc822_format_invalid(::censys_definitions::LintResult* e_ext_ian_rfc822_format_invalid) {
+inline void Lints::set_allocated_e_ext_ian_rfc822_format_invalid(::zsearch::LintResult* e_ext_ian_rfc822_format_invalid) {
   delete e_ext_ian_rfc822_format_invalid_;
   e_ext_ian_rfc822_format_invalid_ = e_ext_ian_rfc822_format_invalid;
   if (e_ext_ian_rfc822_format_invalid) {
@@ -4906,10 +4906,10 @@ inline void Lints::set_allocated_e_ext_ian_rfc822_format_invalid(::censys_defini
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ext_ian_rfc822_format_invalid)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ext_ian_rfc822_format_invalid)
 }
 
-// .censys_definitions.LintResult e_ext_ian_space_dns_name = 63;
+// .zsearch.LintResult e_ext_ian_space_dns_name = 63;
 inline bool Lints::has_e_ext_ian_space_dns_name() const {
   return this != internal_default_instance() && e_ext_ian_space_dns_name_ != NULL;
 }
@@ -4917,27 +4917,27 @@ inline void Lints::clear_e_ext_ian_space_dns_name() {
   if (GetArenaNoVirtual() == NULL && e_ext_ian_space_dns_name_ != NULL) delete e_ext_ian_space_dns_name_;
   e_ext_ian_space_dns_name_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ext_ian_space_dns_name() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ext_ian_space_dns_name)
+inline const ::zsearch::LintResult& Lints::e_ext_ian_space_dns_name() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ext_ian_space_dns_name)
   return e_ext_ian_space_dns_name_ != NULL ? *e_ext_ian_space_dns_name_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ext_ian_space_dns_name() {
+inline ::zsearch::LintResult* Lints::mutable_e_ext_ian_space_dns_name() {
   
   if (e_ext_ian_space_dns_name_ == NULL) {
-    e_ext_ian_space_dns_name_ = new ::censys_definitions::LintResult;
+    e_ext_ian_space_dns_name_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ext_ian_space_dns_name)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ext_ian_space_dns_name)
   return e_ext_ian_space_dns_name_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ext_ian_space_dns_name() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ext_ian_space_dns_name)
+inline ::zsearch::LintResult* Lints::release_e_ext_ian_space_dns_name() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ext_ian_space_dns_name)
   
-  ::censys_definitions::LintResult* temp = e_ext_ian_space_dns_name_;
+  ::zsearch::LintResult* temp = e_ext_ian_space_dns_name_;
   e_ext_ian_space_dns_name_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ext_ian_space_dns_name(::censys_definitions::LintResult* e_ext_ian_space_dns_name) {
+inline void Lints::set_allocated_e_ext_ian_space_dns_name(::zsearch::LintResult* e_ext_ian_space_dns_name) {
   delete e_ext_ian_space_dns_name_;
   e_ext_ian_space_dns_name_ = e_ext_ian_space_dns_name;
   if (e_ext_ian_space_dns_name) {
@@ -4945,10 +4945,10 @@ inline void Lints::set_allocated_e_ext_ian_space_dns_name(::censys_definitions::
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ext_ian_space_dns_name)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ext_ian_space_dns_name)
 }
 
-// .censys_definitions.LintResult e_ext_ian_uri_format_invalid = 64;
+// .zsearch.LintResult e_ext_ian_uri_format_invalid = 64;
 inline bool Lints::has_e_ext_ian_uri_format_invalid() const {
   return this != internal_default_instance() && e_ext_ian_uri_format_invalid_ != NULL;
 }
@@ -4956,27 +4956,27 @@ inline void Lints::clear_e_ext_ian_uri_format_invalid() {
   if (GetArenaNoVirtual() == NULL && e_ext_ian_uri_format_invalid_ != NULL) delete e_ext_ian_uri_format_invalid_;
   e_ext_ian_uri_format_invalid_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ext_ian_uri_format_invalid() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ext_ian_uri_format_invalid)
+inline const ::zsearch::LintResult& Lints::e_ext_ian_uri_format_invalid() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ext_ian_uri_format_invalid)
   return e_ext_ian_uri_format_invalid_ != NULL ? *e_ext_ian_uri_format_invalid_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ext_ian_uri_format_invalid() {
+inline ::zsearch::LintResult* Lints::mutable_e_ext_ian_uri_format_invalid() {
   
   if (e_ext_ian_uri_format_invalid_ == NULL) {
-    e_ext_ian_uri_format_invalid_ = new ::censys_definitions::LintResult;
+    e_ext_ian_uri_format_invalid_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ext_ian_uri_format_invalid)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ext_ian_uri_format_invalid)
   return e_ext_ian_uri_format_invalid_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ext_ian_uri_format_invalid() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ext_ian_uri_format_invalid)
+inline ::zsearch::LintResult* Lints::release_e_ext_ian_uri_format_invalid() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ext_ian_uri_format_invalid)
   
-  ::censys_definitions::LintResult* temp = e_ext_ian_uri_format_invalid_;
+  ::zsearch::LintResult* temp = e_ext_ian_uri_format_invalid_;
   e_ext_ian_uri_format_invalid_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ext_ian_uri_format_invalid(::censys_definitions::LintResult* e_ext_ian_uri_format_invalid) {
+inline void Lints::set_allocated_e_ext_ian_uri_format_invalid(::zsearch::LintResult* e_ext_ian_uri_format_invalid) {
   delete e_ext_ian_uri_format_invalid_;
   e_ext_ian_uri_format_invalid_ = e_ext_ian_uri_format_invalid;
   if (e_ext_ian_uri_format_invalid) {
@@ -4984,10 +4984,10 @@ inline void Lints::set_allocated_e_ext_ian_uri_format_invalid(::censys_definitio
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ext_ian_uri_format_invalid)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ext_ian_uri_format_invalid)
 }
 
-// .censys_definitions.LintResult e_ext_ian_uri_host_not_fqdn_or_ip = 65;
+// .zsearch.LintResult e_ext_ian_uri_host_not_fqdn_or_ip = 65;
 inline bool Lints::has_e_ext_ian_uri_host_not_fqdn_or_ip() const {
   return this != internal_default_instance() && e_ext_ian_uri_host_not_fqdn_or_ip_ != NULL;
 }
@@ -4995,27 +4995,27 @@ inline void Lints::clear_e_ext_ian_uri_host_not_fqdn_or_ip() {
   if (GetArenaNoVirtual() == NULL && e_ext_ian_uri_host_not_fqdn_or_ip_ != NULL) delete e_ext_ian_uri_host_not_fqdn_or_ip_;
   e_ext_ian_uri_host_not_fqdn_or_ip_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ext_ian_uri_host_not_fqdn_or_ip() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ext_ian_uri_host_not_fqdn_or_ip)
+inline const ::zsearch::LintResult& Lints::e_ext_ian_uri_host_not_fqdn_or_ip() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ext_ian_uri_host_not_fqdn_or_ip)
   return e_ext_ian_uri_host_not_fqdn_or_ip_ != NULL ? *e_ext_ian_uri_host_not_fqdn_or_ip_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ext_ian_uri_host_not_fqdn_or_ip() {
+inline ::zsearch::LintResult* Lints::mutable_e_ext_ian_uri_host_not_fqdn_or_ip() {
   
   if (e_ext_ian_uri_host_not_fqdn_or_ip_ == NULL) {
-    e_ext_ian_uri_host_not_fqdn_or_ip_ = new ::censys_definitions::LintResult;
+    e_ext_ian_uri_host_not_fqdn_or_ip_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ext_ian_uri_host_not_fqdn_or_ip)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ext_ian_uri_host_not_fqdn_or_ip)
   return e_ext_ian_uri_host_not_fqdn_or_ip_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ext_ian_uri_host_not_fqdn_or_ip() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ext_ian_uri_host_not_fqdn_or_ip)
+inline ::zsearch::LintResult* Lints::release_e_ext_ian_uri_host_not_fqdn_or_ip() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ext_ian_uri_host_not_fqdn_or_ip)
   
-  ::censys_definitions::LintResult* temp = e_ext_ian_uri_host_not_fqdn_or_ip_;
+  ::zsearch::LintResult* temp = e_ext_ian_uri_host_not_fqdn_or_ip_;
   e_ext_ian_uri_host_not_fqdn_or_ip_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ext_ian_uri_host_not_fqdn_or_ip(::censys_definitions::LintResult* e_ext_ian_uri_host_not_fqdn_or_ip) {
+inline void Lints::set_allocated_e_ext_ian_uri_host_not_fqdn_or_ip(::zsearch::LintResult* e_ext_ian_uri_host_not_fqdn_or_ip) {
   delete e_ext_ian_uri_host_not_fqdn_or_ip_;
   e_ext_ian_uri_host_not_fqdn_or_ip_ = e_ext_ian_uri_host_not_fqdn_or_ip;
   if (e_ext_ian_uri_host_not_fqdn_or_ip) {
@@ -5023,10 +5023,10 @@ inline void Lints::set_allocated_e_ext_ian_uri_host_not_fqdn_or_ip(::censys_defi
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ext_ian_uri_host_not_fqdn_or_ip)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ext_ian_uri_host_not_fqdn_or_ip)
 }
 
-// .censys_definitions.LintResult e_ext_ian_uri_not_ia5 = 66;
+// .zsearch.LintResult e_ext_ian_uri_not_ia5 = 66;
 inline bool Lints::has_e_ext_ian_uri_not_ia5() const {
   return this != internal_default_instance() && e_ext_ian_uri_not_ia5_ != NULL;
 }
@@ -5034,27 +5034,27 @@ inline void Lints::clear_e_ext_ian_uri_not_ia5() {
   if (GetArenaNoVirtual() == NULL && e_ext_ian_uri_not_ia5_ != NULL) delete e_ext_ian_uri_not_ia5_;
   e_ext_ian_uri_not_ia5_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ext_ian_uri_not_ia5() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ext_ian_uri_not_ia5)
+inline const ::zsearch::LintResult& Lints::e_ext_ian_uri_not_ia5() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ext_ian_uri_not_ia5)
   return e_ext_ian_uri_not_ia5_ != NULL ? *e_ext_ian_uri_not_ia5_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ext_ian_uri_not_ia5() {
+inline ::zsearch::LintResult* Lints::mutable_e_ext_ian_uri_not_ia5() {
   
   if (e_ext_ian_uri_not_ia5_ == NULL) {
-    e_ext_ian_uri_not_ia5_ = new ::censys_definitions::LintResult;
+    e_ext_ian_uri_not_ia5_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ext_ian_uri_not_ia5)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ext_ian_uri_not_ia5)
   return e_ext_ian_uri_not_ia5_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ext_ian_uri_not_ia5() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ext_ian_uri_not_ia5)
+inline ::zsearch::LintResult* Lints::release_e_ext_ian_uri_not_ia5() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ext_ian_uri_not_ia5)
   
-  ::censys_definitions::LintResult* temp = e_ext_ian_uri_not_ia5_;
+  ::zsearch::LintResult* temp = e_ext_ian_uri_not_ia5_;
   e_ext_ian_uri_not_ia5_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ext_ian_uri_not_ia5(::censys_definitions::LintResult* e_ext_ian_uri_not_ia5) {
+inline void Lints::set_allocated_e_ext_ian_uri_not_ia5(::zsearch::LintResult* e_ext_ian_uri_not_ia5) {
   delete e_ext_ian_uri_not_ia5_;
   e_ext_ian_uri_not_ia5_ = e_ext_ian_uri_not_ia5;
   if (e_ext_ian_uri_not_ia5) {
@@ -5062,10 +5062,10 @@ inline void Lints::set_allocated_e_ext_ian_uri_not_ia5(::censys_definitions::Lin
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ext_ian_uri_not_ia5)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ext_ian_uri_not_ia5)
 }
 
-// .censys_definitions.LintResult e_ext_ian_uri_relative = 67;
+// .zsearch.LintResult e_ext_ian_uri_relative = 67;
 inline bool Lints::has_e_ext_ian_uri_relative() const {
   return this != internal_default_instance() && e_ext_ian_uri_relative_ != NULL;
 }
@@ -5073,27 +5073,27 @@ inline void Lints::clear_e_ext_ian_uri_relative() {
   if (GetArenaNoVirtual() == NULL && e_ext_ian_uri_relative_ != NULL) delete e_ext_ian_uri_relative_;
   e_ext_ian_uri_relative_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ext_ian_uri_relative() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ext_ian_uri_relative)
+inline const ::zsearch::LintResult& Lints::e_ext_ian_uri_relative() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ext_ian_uri_relative)
   return e_ext_ian_uri_relative_ != NULL ? *e_ext_ian_uri_relative_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ext_ian_uri_relative() {
+inline ::zsearch::LintResult* Lints::mutable_e_ext_ian_uri_relative() {
   
   if (e_ext_ian_uri_relative_ == NULL) {
-    e_ext_ian_uri_relative_ = new ::censys_definitions::LintResult;
+    e_ext_ian_uri_relative_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ext_ian_uri_relative)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ext_ian_uri_relative)
   return e_ext_ian_uri_relative_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ext_ian_uri_relative() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ext_ian_uri_relative)
+inline ::zsearch::LintResult* Lints::release_e_ext_ian_uri_relative() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ext_ian_uri_relative)
   
-  ::censys_definitions::LintResult* temp = e_ext_ian_uri_relative_;
+  ::zsearch::LintResult* temp = e_ext_ian_uri_relative_;
   e_ext_ian_uri_relative_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ext_ian_uri_relative(::censys_definitions::LintResult* e_ext_ian_uri_relative) {
+inline void Lints::set_allocated_e_ext_ian_uri_relative(::zsearch::LintResult* e_ext_ian_uri_relative) {
   delete e_ext_ian_uri_relative_;
   e_ext_ian_uri_relative_ = e_ext_ian_uri_relative;
   if (e_ext_ian_uri_relative) {
@@ -5101,10 +5101,10 @@ inline void Lints::set_allocated_e_ext_ian_uri_relative(::censys_definitions::Li
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ext_ian_uri_relative)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ext_ian_uri_relative)
 }
 
-// .censys_definitions.LintResult e_ext_key_usage_cert_sign_without_ca = 68;
+// .zsearch.LintResult e_ext_key_usage_cert_sign_without_ca = 68;
 inline bool Lints::has_e_ext_key_usage_cert_sign_without_ca() const {
   return this != internal_default_instance() && e_ext_key_usage_cert_sign_without_ca_ != NULL;
 }
@@ -5112,27 +5112,27 @@ inline void Lints::clear_e_ext_key_usage_cert_sign_without_ca() {
   if (GetArenaNoVirtual() == NULL && e_ext_key_usage_cert_sign_without_ca_ != NULL) delete e_ext_key_usage_cert_sign_without_ca_;
   e_ext_key_usage_cert_sign_without_ca_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ext_key_usage_cert_sign_without_ca() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ext_key_usage_cert_sign_without_ca)
+inline const ::zsearch::LintResult& Lints::e_ext_key_usage_cert_sign_without_ca() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ext_key_usage_cert_sign_without_ca)
   return e_ext_key_usage_cert_sign_without_ca_ != NULL ? *e_ext_key_usage_cert_sign_without_ca_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ext_key_usage_cert_sign_without_ca() {
+inline ::zsearch::LintResult* Lints::mutable_e_ext_key_usage_cert_sign_without_ca() {
   
   if (e_ext_key_usage_cert_sign_without_ca_ == NULL) {
-    e_ext_key_usage_cert_sign_without_ca_ = new ::censys_definitions::LintResult;
+    e_ext_key_usage_cert_sign_without_ca_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ext_key_usage_cert_sign_without_ca)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ext_key_usage_cert_sign_without_ca)
   return e_ext_key_usage_cert_sign_without_ca_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ext_key_usage_cert_sign_without_ca() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ext_key_usage_cert_sign_without_ca)
+inline ::zsearch::LintResult* Lints::release_e_ext_key_usage_cert_sign_without_ca() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ext_key_usage_cert_sign_without_ca)
   
-  ::censys_definitions::LintResult* temp = e_ext_key_usage_cert_sign_without_ca_;
+  ::zsearch::LintResult* temp = e_ext_key_usage_cert_sign_without_ca_;
   e_ext_key_usage_cert_sign_without_ca_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ext_key_usage_cert_sign_without_ca(::censys_definitions::LintResult* e_ext_key_usage_cert_sign_without_ca) {
+inline void Lints::set_allocated_e_ext_key_usage_cert_sign_without_ca(::zsearch::LintResult* e_ext_key_usage_cert_sign_without_ca) {
   delete e_ext_key_usage_cert_sign_without_ca_;
   e_ext_key_usage_cert_sign_without_ca_ = e_ext_key_usage_cert_sign_without_ca;
   if (e_ext_key_usage_cert_sign_without_ca) {
@@ -5140,10 +5140,10 @@ inline void Lints::set_allocated_e_ext_key_usage_cert_sign_without_ca(::censys_d
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ext_key_usage_cert_sign_without_ca)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ext_key_usage_cert_sign_without_ca)
 }
 
-// .censys_definitions.LintResult w_ext_key_usage_not_critical = 69;
+// .zsearch.LintResult w_ext_key_usage_not_critical = 69;
 inline bool Lints::has_w_ext_key_usage_not_critical() const {
   return this != internal_default_instance() && w_ext_key_usage_not_critical_ != NULL;
 }
@@ -5151,27 +5151,27 @@ inline void Lints::clear_w_ext_key_usage_not_critical() {
   if (GetArenaNoVirtual() == NULL && w_ext_key_usage_not_critical_ != NULL) delete w_ext_key_usage_not_critical_;
   w_ext_key_usage_not_critical_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::w_ext_key_usage_not_critical() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.w_ext_key_usage_not_critical)
+inline const ::zsearch::LintResult& Lints::w_ext_key_usage_not_critical() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.w_ext_key_usage_not_critical)
   return w_ext_key_usage_not_critical_ != NULL ? *w_ext_key_usage_not_critical_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_w_ext_key_usage_not_critical() {
+inline ::zsearch::LintResult* Lints::mutable_w_ext_key_usage_not_critical() {
   
   if (w_ext_key_usage_not_critical_ == NULL) {
-    w_ext_key_usage_not_critical_ = new ::censys_definitions::LintResult;
+    w_ext_key_usage_not_critical_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.w_ext_key_usage_not_critical)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.w_ext_key_usage_not_critical)
   return w_ext_key_usage_not_critical_;
 }
-inline ::censys_definitions::LintResult* Lints::release_w_ext_key_usage_not_critical() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.w_ext_key_usage_not_critical)
+inline ::zsearch::LintResult* Lints::release_w_ext_key_usage_not_critical() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.w_ext_key_usage_not_critical)
   
-  ::censys_definitions::LintResult* temp = w_ext_key_usage_not_critical_;
+  ::zsearch::LintResult* temp = w_ext_key_usage_not_critical_;
   w_ext_key_usage_not_critical_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_w_ext_key_usage_not_critical(::censys_definitions::LintResult* w_ext_key_usage_not_critical) {
+inline void Lints::set_allocated_w_ext_key_usage_not_critical(::zsearch::LintResult* w_ext_key_usage_not_critical) {
   delete w_ext_key_usage_not_critical_;
   w_ext_key_usage_not_critical_ = w_ext_key_usage_not_critical;
   if (w_ext_key_usage_not_critical) {
@@ -5179,10 +5179,10 @@ inline void Lints::set_allocated_w_ext_key_usage_not_critical(::censys_definitio
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.w_ext_key_usage_not_critical)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.w_ext_key_usage_not_critical)
 }
 
-// .censys_definitions.LintResult e_ext_key_usage_without_bits = 70;
+// .zsearch.LintResult e_ext_key_usage_without_bits = 70;
 inline bool Lints::has_e_ext_key_usage_without_bits() const {
   return this != internal_default_instance() && e_ext_key_usage_without_bits_ != NULL;
 }
@@ -5190,27 +5190,27 @@ inline void Lints::clear_e_ext_key_usage_without_bits() {
   if (GetArenaNoVirtual() == NULL && e_ext_key_usage_without_bits_ != NULL) delete e_ext_key_usage_without_bits_;
   e_ext_key_usage_without_bits_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ext_key_usage_without_bits() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ext_key_usage_without_bits)
+inline const ::zsearch::LintResult& Lints::e_ext_key_usage_without_bits() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ext_key_usage_without_bits)
   return e_ext_key_usage_without_bits_ != NULL ? *e_ext_key_usage_without_bits_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ext_key_usage_without_bits() {
+inline ::zsearch::LintResult* Lints::mutable_e_ext_key_usage_without_bits() {
   
   if (e_ext_key_usage_without_bits_ == NULL) {
-    e_ext_key_usage_without_bits_ = new ::censys_definitions::LintResult;
+    e_ext_key_usage_without_bits_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ext_key_usage_without_bits)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ext_key_usage_without_bits)
   return e_ext_key_usage_without_bits_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ext_key_usage_without_bits() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ext_key_usage_without_bits)
+inline ::zsearch::LintResult* Lints::release_e_ext_key_usage_without_bits() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ext_key_usage_without_bits)
   
-  ::censys_definitions::LintResult* temp = e_ext_key_usage_without_bits_;
+  ::zsearch::LintResult* temp = e_ext_key_usage_without_bits_;
   e_ext_key_usage_without_bits_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ext_key_usage_without_bits(::censys_definitions::LintResult* e_ext_key_usage_without_bits) {
+inline void Lints::set_allocated_e_ext_key_usage_without_bits(::zsearch::LintResult* e_ext_key_usage_without_bits) {
   delete e_ext_key_usage_without_bits_;
   e_ext_key_usage_without_bits_ = e_ext_key_usage_without_bits;
   if (e_ext_key_usage_without_bits) {
@@ -5218,10 +5218,10 @@ inline void Lints::set_allocated_e_ext_key_usage_without_bits(::censys_definitio
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ext_key_usage_without_bits)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ext_key_usage_without_bits)
 }
 
-// .censys_definitions.LintResult e_ext_name_constraints_not_critical = 71;
+// .zsearch.LintResult e_ext_name_constraints_not_critical = 71;
 inline bool Lints::has_e_ext_name_constraints_not_critical() const {
   return this != internal_default_instance() && e_ext_name_constraints_not_critical_ != NULL;
 }
@@ -5229,27 +5229,27 @@ inline void Lints::clear_e_ext_name_constraints_not_critical() {
   if (GetArenaNoVirtual() == NULL && e_ext_name_constraints_not_critical_ != NULL) delete e_ext_name_constraints_not_critical_;
   e_ext_name_constraints_not_critical_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ext_name_constraints_not_critical() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ext_name_constraints_not_critical)
+inline const ::zsearch::LintResult& Lints::e_ext_name_constraints_not_critical() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ext_name_constraints_not_critical)
   return e_ext_name_constraints_not_critical_ != NULL ? *e_ext_name_constraints_not_critical_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ext_name_constraints_not_critical() {
+inline ::zsearch::LintResult* Lints::mutable_e_ext_name_constraints_not_critical() {
   
   if (e_ext_name_constraints_not_critical_ == NULL) {
-    e_ext_name_constraints_not_critical_ = new ::censys_definitions::LintResult;
+    e_ext_name_constraints_not_critical_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ext_name_constraints_not_critical)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ext_name_constraints_not_critical)
   return e_ext_name_constraints_not_critical_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ext_name_constraints_not_critical() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ext_name_constraints_not_critical)
+inline ::zsearch::LintResult* Lints::release_e_ext_name_constraints_not_critical() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ext_name_constraints_not_critical)
   
-  ::censys_definitions::LintResult* temp = e_ext_name_constraints_not_critical_;
+  ::zsearch::LintResult* temp = e_ext_name_constraints_not_critical_;
   e_ext_name_constraints_not_critical_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ext_name_constraints_not_critical(::censys_definitions::LintResult* e_ext_name_constraints_not_critical) {
+inline void Lints::set_allocated_e_ext_name_constraints_not_critical(::zsearch::LintResult* e_ext_name_constraints_not_critical) {
   delete e_ext_name_constraints_not_critical_;
   e_ext_name_constraints_not_critical_ = e_ext_name_constraints_not_critical;
   if (e_ext_name_constraints_not_critical) {
@@ -5257,10 +5257,10 @@ inline void Lints::set_allocated_e_ext_name_constraints_not_critical(::censys_de
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ext_name_constraints_not_critical)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ext_name_constraints_not_critical)
 }
 
-// .censys_definitions.LintResult e_ext_name_constraints_not_in_ca = 72;
+// .zsearch.LintResult e_ext_name_constraints_not_in_ca = 72;
 inline bool Lints::has_e_ext_name_constraints_not_in_ca() const {
   return this != internal_default_instance() && e_ext_name_constraints_not_in_ca_ != NULL;
 }
@@ -5268,27 +5268,27 @@ inline void Lints::clear_e_ext_name_constraints_not_in_ca() {
   if (GetArenaNoVirtual() == NULL && e_ext_name_constraints_not_in_ca_ != NULL) delete e_ext_name_constraints_not_in_ca_;
   e_ext_name_constraints_not_in_ca_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ext_name_constraints_not_in_ca() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ext_name_constraints_not_in_ca)
+inline const ::zsearch::LintResult& Lints::e_ext_name_constraints_not_in_ca() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ext_name_constraints_not_in_ca)
   return e_ext_name_constraints_not_in_ca_ != NULL ? *e_ext_name_constraints_not_in_ca_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ext_name_constraints_not_in_ca() {
+inline ::zsearch::LintResult* Lints::mutable_e_ext_name_constraints_not_in_ca() {
   
   if (e_ext_name_constraints_not_in_ca_ == NULL) {
-    e_ext_name_constraints_not_in_ca_ = new ::censys_definitions::LintResult;
+    e_ext_name_constraints_not_in_ca_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ext_name_constraints_not_in_ca)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ext_name_constraints_not_in_ca)
   return e_ext_name_constraints_not_in_ca_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ext_name_constraints_not_in_ca() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ext_name_constraints_not_in_ca)
+inline ::zsearch::LintResult* Lints::release_e_ext_name_constraints_not_in_ca() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ext_name_constraints_not_in_ca)
   
-  ::censys_definitions::LintResult* temp = e_ext_name_constraints_not_in_ca_;
+  ::zsearch::LintResult* temp = e_ext_name_constraints_not_in_ca_;
   e_ext_name_constraints_not_in_ca_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ext_name_constraints_not_in_ca(::censys_definitions::LintResult* e_ext_name_constraints_not_in_ca) {
+inline void Lints::set_allocated_e_ext_name_constraints_not_in_ca(::zsearch::LintResult* e_ext_name_constraints_not_in_ca) {
   delete e_ext_name_constraints_not_in_ca_;
   e_ext_name_constraints_not_in_ca_ = e_ext_name_constraints_not_in_ca;
   if (e_ext_name_constraints_not_in_ca) {
@@ -5296,10 +5296,10 @@ inline void Lints::set_allocated_e_ext_name_constraints_not_in_ca(::censys_defin
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ext_name_constraints_not_in_ca)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ext_name_constraints_not_in_ca)
 }
 
-// .censys_definitions.LintResult e_ext_policy_constraints_empty = 73;
+// .zsearch.LintResult e_ext_policy_constraints_empty = 73;
 inline bool Lints::has_e_ext_policy_constraints_empty() const {
   return this != internal_default_instance() && e_ext_policy_constraints_empty_ != NULL;
 }
@@ -5307,27 +5307,27 @@ inline void Lints::clear_e_ext_policy_constraints_empty() {
   if (GetArenaNoVirtual() == NULL && e_ext_policy_constraints_empty_ != NULL) delete e_ext_policy_constraints_empty_;
   e_ext_policy_constraints_empty_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ext_policy_constraints_empty() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ext_policy_constraints_empty)
+inline const ::zsearch::LintResult& Lints::e_ext_policy_constraints_empty() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ext_policy_constraints_empty)
   return e_ext_policy_constraints_empty_ != NULL ? *e_ext_policy_constraints_empty_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ext_policy_constraints_empty() {
+inline ::zsearch::LintResult* Lints::mutable_e_ext_policy_constraints_empty() {
   
   if (e_ext_policy_constraints_empty_ == NULL) {
-    e_ext_policy_constraints_empty_ = new ::censys_definitions::LintResult;
+    e_ext_policy_constraints_empty_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ext_policy_constraints_empty)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ext_policy_constraints_empty)
   return e_ext_policy_constraints_empty_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ext_policy_constraints_empty() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ext_policy_constraints_empty)
+inline ::zsearch::LintResult* Lints::release_e_ext_policy_constraints_empty() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ext_policy_constraints_empty)
   
-  ::censys_definitions::LintResult* temp = e_ext_policy_constraints_empty_;
+  ::zsearch::LintResult* temp = e_ext_policy_constraints_empty_;
   e_ext_policy_constraints_empty_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ext_policy_constraints_empty(::censys_definitions::LintResult* e_ext_policy_constraints_empty) {
+inline void Lints::set_allocated_e_ext_policy_constraints_empty(::zsearch::LintResult* e_ext_policy_constraints_empty) {
   delete e_ext_policy_constraints_empty_;
   e_ext_policy_constraints_empty_ = e_ext_policy_constraints_empty;
   if (e_ext_policy_constraints_empty) {
@@ -5335,10 +5335,10 @@ inline void Lints::set_allocated_e_ext_policy_constraints_empty(::censys_definit
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ext_policy_constraints_empty)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ext_policy_constraints_empty)
 }
 
-// .censys_definitions.LintResult e_ext_policy_constraints_not_critical = 74;
+// .zsearch.LintResult e_ext_policy_constraints_not_critical = 74;
 inline bool Lints::has_e_ext_policy_constraints_not_critical() const {
   return this != internal_default_instance() && e_ext_policy_constraints_not_critical_ != NULL;
 }
@@ -5346,27 +5346,27 @@ inline void Lints::clear_e_ext_policy_constraints_not_critical() {
   if (GetArenaNoVirtual() == NULL && e_ext_policy_constraints_not_critical_ != NULL) delete e_ext_policy_constraints_not_critical_;
   e_ext_policy_constraints_not_critical_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ext_policy_constraints_not_critical() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ext_policy_constraints_not_critical)
+inline const ::zsearch::LintResult& Lints::e_ext_policy_constraints_not_critical() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ext_policy_constraints_not_critical)
   return e_ext_policy_constraints_not_critical_ != NULL ? *e_ext_policy_constraints_not_critical_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ext_policy_constraints_not_critical() {
+inline ::zsearch::LintResult* Lints::mutable_e_ext_policy_constraints_not_critical() {
   
   if (e_ext_policy_constraints_not_critical_ == NULL) {
-    e_ext_policy_constraints_not_critical_ = new ::censys_definitions::LintResult;
+    e_ext_policy_constraints_not_critical_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ext_policy_constraints_not_critical)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ext_policy_constraints_not_critical)
   return e_ext_policy_constraints_not_critical_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ext_policy_constraints_not_critical() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ext_policy_constraints_not_critical)
+inline ::zsearch::LintResult* Lints::release_e_ext_policy_constraints_not_critical() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ext_policy_constraints_not_critical)
   
-  ::censys_definitions::LintResult* temp = e_ext_policy_constraints_not_critical_;
+  ::zsearch::LintResult* temp = e_ext_policy_constraints_not_critical_;
   e_ext_policy_constraints_not_critical_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ext_policy_constraints_not_critical(::censys_definitions::LintResult* e_ext_policy_constraints_not_critical) {
+inline void Lints::set_allocated_e_ext_policy_constraints_not_critical(::zsearch::LintResult* e_ext_policy_constraints_not_critical) {
   delete e_ext_policy_constraints_not_critical_;
   e_ext_policy_constraints_not_critical_ = e_ext_policy_constraints_not_critical;
   if (e_ext_policy_constraints_not_critical) {
@@ -5374,10 +5374,10 @@ inline void Lints::set_allocated_e_ext_policy_constraints_not_critical(::censys_
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ext_policy_constraints_not_critical)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ext_policy_constraints_not_critical)
 }
 
-// .censys_definitions.LintResult e_ext_policy_map_any_policy = 75;
+// .zsearch.LintResult e_ext_policy_map_any_policy = 75;
 inline bool Lints::has_e_ext_policy_map_any_policy() const {
   return this != internal_default_instance() && e_ext_policy_map_any_policy_ != NULL;
 }
@@ -5385,27 +5385,27 @@ inline void Lints::clear_e_ext_policy_map_any_policy() {
   if (GetArenaNoVirtual() == NULL && e_ext_policy_map_any_policy_ != NULL) delete e_ext_policy_map_any_policy_;
   e_ext_policy_map_any_policy_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ext_policy_map_any_policy() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ext_policy_map_any_policy)
+inline const ::zsearch::LintResult& Lints::e_ext_policy_map_any_policy() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ext_policy_map_any_policy)
   return e_ext_policy_map_any_policy_ != NULL ? *e_ext_policy_map_any_policy_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ext_policy_map_any_policy() {
+inline ::zsearch::LintResult* Lints::mutable_e_ext_policy_map_any_policy() {
   
   if (e_ext_policy_map_any_policy_ == NULL) {
-    e_ext_policy_map_any_policy_ = new ::censys_definitions::LintResult;
+    e_ext_policy_map_any_policy_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ext_policy_map_any_policy)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ext_policy_map_any_policy)
   return e_ext_policy_map_any_policy_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ext_policy_map_any_policy() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ext_policy_map_any_policy)
+inline ::zsearch::LintResult* Lints::release_e_ext_policy_map_any_policy() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ext_policy_map_any_policy)
   
-  ::censys_definitions::LintResult* temp = e_ext_policy_map_any_policy_;
+  ::zsearch::LintResult* temp = e_ext_policy_map_any_policy_;
   e_ext_policy_map_any_policy_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ext_policy_map_any_policy(::censys_definitions::LintResult* e_ext_policy_map_any_policy) {
+inline void Lints::set_allocated_e_ext_policy_map_any_policy(::zsearch::LintResult* e_ext_policy_map_any_policy) {
   delete e_ext_policy_map_any_policy_;
   e_ext_policy_map_any_policy_ = e_ext_policy_map_any_policy;
   if (e_ext_policy_map_any_policy) {
@@ -5413,10 +5413,10 @@ inline void Lints::set_allocated_e_ext_policy_map_any_policy(::censys_definition
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ext_policy_map_any_policy)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ext_policy_map_any_policy)
 }
 
-// .censys_definitions.LintResult w_ext_policy_map_not_critical = 76;
+// .zsearch.LintResult w_ext_policy_map_not_critical = 76;
 inline bool Lints::has_w_ext_policy_map_not_critical() const {
   return this != internal_default_instance() && w_ext_policy_map_not_critical_ != NULL;
 }
@@ -5424,27 +5424,27 @@ inline void Lints::clear_w_ext_policy_map_not_critical() {
   if (GetArenaNoVirtual() == NULL && w_ext_policy_map_not_critical_ != NULL) delete w_ext_policy_map_not_critical_;
   w_ext_policy_map_not_critical_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::w_ext_policy_map_not_critical() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.w_ext_policy_map_not_critical)
+inline const ::zsearch::LintResult& Lints::w_ext_policy_map_not_critical() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.w_ext_policy_map_not_critical)
   return w_ext_policy_map_not_critical_ != NULL ? *w_ext_policy_map_not_critical_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_w_ext_policy_map_not_critical() {
+inline ::zsearch::LintResult* Lints::mutable_w_ext_policy_map_not_critical() {
   
   if (w_ext_policy_map_not_critical_ == NULL) {
-    w_ext_policy_map_not_critical_ = new ::censys_definitions::LintResult;
+    w_ext_policy_map_not_critical_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.w_ext_policy_map_not_critical)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.w_ext_policy_map_not_critical)
   return w_ext_policy_map_not_critical_;
 }
-inline ::censys_definitions::LintResult* Lints::release_w_ext_policy_map_not_critical() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.w_ext_policy_map_not_critical)
+inline ::zsearch::LintResult* Lints::release_w_ext_policy_map_not_critical() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.w_ext_policy_map_not_critical)
   
-  ::censys_definitions::LintResult* temp = w_ext_policy_map_not_critical_;
+  ::zsearch::LintResult* temp = w_ext_policy_map_not_critical_;
   w_ext_policy_map_not_critical_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_w_ext_policy_map_not_critical(::censys_definitions::LintResult* w_ext_policy_map_not_critical) {
+inline void Lints::set_allocated_w_ext_policy_map_not_critical(::zsearch::LintResult* w_ext_policy_map_not_critical) {
   delete w_ext_policy_map_not_critical_;
   w_ext_policy_map_not_critical_ = w_ext_policy_map_not_critical;
   if (w_ext_policy_map_not_critical) {
@@ -5452,10 +5452,10 @@ inline void Lints::set_allocated_w_ext_policy_map_not_critical(::censys_definiti
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.w_ext_policy_map_not_critical)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.w_ext_policy_map_not_critical)
 }
 
-// .censys_definitions.LintResult w_ext_policy_map_not_in_cert_policy = 77;
+// .zsearch.LintResult w_ext_policy_map_not_in_cert_policy = 77;
 inline bool Lints::has_w_ext_policy_map_not_in_cert_policy() const {
   return this != internal_default_instance() && w_ext_policy_map_not_in_cert_policy_ != NULL;
 }
@@ -5463,27 +5463,27 @@ inline void Lints::clear_w_ext_policy_map_not_in_cert_policy() {
   if (GetArenaNoVirtual() == NULL && w_ext_policy_map_not_in_cert_policy_ != NULL) delete w_ext_policy_map_not_in_cert_policy_;
   w_ext_policy_map_not_in_cert_policy_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::w_ext_policy_map_not_in_cert_policy() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.w_ext_policy_map_not_in_cert_policy)
+inline const ::zsearch::LintResult& Lints::w_ext_policy_map_not_in_cert_policy() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.w_ext_policy_map_not_in_cert_policy)
   return w_ext_policy_map_not_in_cert_policy_ != NULL ? *w_ext_policy_map_not_in_cert_policy_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_w_ext_policy_map_not_in_cert_policy() {
+inline ::zsearch::LintResult* Lints::mutable_w_ext_policy_map_not_in_cert_policy() {
   
   if (w_ext_policy_map_not_in_cert_policy_ == NULL) {
-    w_ext_policy_map_not_in_cert_policy_ = new ::censys_definitions::LintResult;
+    w_ext_policy_map_not_in_cert_policy_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.w_ext_policy_map_not_in_cert_policy)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.w_ext_policy_map_not_in_cert_policy)
   return w_ext_policy_map_not_in_cert_policy_;
 }
-inline ::censys_definitions::LintResult* Lints::release_w_ext_policy_map_not_in_cert_policy() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.w_ext_policy_map_not_in_cert_policy)
+inline ::zsearch::LintResult* Lints::release_w_ext_policy_map_not_in_cert_policy() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.w_ext_policy_map_not_in_cert_policy)
   
-  ::censys_definitions::LintResult* temp = w_ext_policy_map_not_in_cert_policy_;
+  ::zsearch::LintResult* temp = w_ext_policy_map_not_in_cert_policy_;
   w_ext_policy_map_not_in_cert_policy_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_w_ext_policy_map_not_in_cert_policy(::censys_definitions::LintResult* w_ext_policy_map_not_in_cert_policy) {
+inline void Lints::set_allocated_w_ext_policy_map_not_in_cert_policy(::zsearch::LintResult* w_ext_policy_map_not_in_cert_policy) {
   delete w_ext_policy_map_not_in_cert_policy_;
   w_ext_policy_map_not_in_cert_policy_ = w_ext_policy_map_not_in_cert_policy;
   if (w_ext_policy_map_not_in_cert_policy) {
@@ -5491,10 +5491,10 @@ inline void Lints::set_allocated_w_ext_policy_map_not_in_cert_policy(::censys_de
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.w_ext_policy_map_not_in_cert_policy)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.w_ext_policy_map_not_in_cert_policy)
 }
 
-// .censys_definitions.LintResult e_ext_san_contains_reserved_ip = 78;
+// .zsearch.LintResult e_ext_san_contains_reserved_ip = 78;
 inline bool Lints::has_e_ext_san_contains_reserved_ip() const {
   return this != internal_default_instance() && e_ext_san_contains_reserved_ip_ != NULL;
 }
@@ -5502,27 +5502,27 @@ inline void Lints::clear_e_ext_san_contains_reserved_ip() {
   if (GetArenaNoVirtual() == NULL && e_ext_san_contains_reserved_ip_ != NULL) delete e_ext_san_contains_reserved_ip_;
   e_ext_san_contains_reserved_ip_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ext_san_contains_reserved_ip() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ext_san_contains_reserved_ip)
+inline const ::zsearch::LintResult& Lints::e_ext_san_contains_reserved_ip() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ext_san_contains_reserved_ip)
   return e_ext_san_contains_reserved_ip_ != NULL ? *e_ext_san_contains_reserved_ip_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ext_san_contains_reserved_ip() {
+inline ::zsearch::LintResult* Lints::mutable_e_ext_san_contains_reserved_ip() {
   
   if (e_ext_san_contains_reserved_ip_ == NULL) {
-    e_ext_san_contains_reserved_ip_ = new ::censys_definitions::LintResult;
+    e_ext_san_contains_reserved_ip_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ext_san_contains_reserved_ip)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ext_san_contains_reserved_ip)
   return e_ext_san_contains_reserved_ip_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ext_san_contains_reserved_ip() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ext_san_contains_reserved_ip)
+inline ::zsearch::LintResult* Lints::release_e_ext_san_contains_reserved_ip() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ext_san_contains_reserved_ip)
   
-  ::censys_definitions::LintResult* temp = e_ext_san_contains_reserved_ip_;
+  ::zsearch::LintResult* temp = e_ext_san_contains_reserved_ip_;
   e_ext_san_contains_reserved_ip_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ext_san_contains_reserved_ip(::censys_definitions::LintResult* e_ext_san_contains_reserved_ip) {
+inline void Lints::set_allocated_e_ext_san_contains_reserved_ip(::zsearch::LintResult* e_ext_san_contains_reserved_ip) {
   delete e_ext_san_contains_reserved_ip_;
   e_ext_san_contains_reserved_ip_ = e_ext_san_contains_reserved_ip;
   if (e_ext_san_contains_reserved_ip) {
@@ -5530,10 +5530,10 @@ inline void Lints::set_allocated_e_ext_san_contains_reserved_ip(::censys_definit
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ext_san_contains_reserved_ip)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ext_san_contains_reserved_ip)
 }
 
-// .censys_definitions.LintResult w_ext_san_critical_with_subject_dn = 79;
+// .zsearch.LintResult w_ext_san_critical_with_subject_dn = 79;
 inline bool Lints::has_w_ext_san_critical_with_subject_dn() const {
   return this != internal_default_instance() && w_ext_san_critical_with_subject_dn_ != NULL;
 }
@@ -5541,27 +5541,27 @@ inline void Lints::clear_w_ext_san_critical_with_subject_dn() {
   if (GetArenaNoVirtual() == NULL && w_ext_san_critical_with_subject_dn_ != NULL) delete w_ext_san_critical_with_subject_dn_;
   w_ext_san_critical_with_subject_dn_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::w_ext_san_critical_with_subject_dn() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.w_ext_san_critical_with_subject_dn)
+inline const ::zsearch::LintResult& Lints::w_ext_san_critical_with_subject_dn() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.w_ext_san_critical_with_subject_dn)
   return w_ext_san_critical_with_subject_dn_ != NULL ? *w_ext_san_critical_with_subject_dn_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_w_ext_san_critical_with_subject_dn() {
+inline ::zsearch::LintResult* Lints::mutable_w_ext_san_critical_with_subject_dn() {
   
   if (w_ext_san_critical_with_subject_dn_ == NULL) {
-    w_ext_san_critical_with_subject_dn_ = new ::censys_definitions::LintResult;
+    w_ext_san_critical_with_subject_dn_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.w_ext_san_critical_with_subject_dn)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.w_ext_san_critical_with_subject_dn)
   return w_ext_san_critical_with_subject_dn_;
 }
-inline ::censys_definitions::LintResult* Lints::release_w_ext_san_critical_with_subject_dn() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.w_ext_san_critical_with_subject_dn)
+inline ::zsearch::LintResult* Lints::release_w_ext_san_critical_with_subject_dn() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.w_ext_san_critical_with_subject_dn)
   
-  ::censys_definitions::LintResult* temp = w_ext_san_critical_with_subject_dn_;
+  ::zsearch::LintResult* temp = w_ext_san_critical_with_subject_dn_;
   w_ext_san_critical_with_subject_dn_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_w_ext_san_critical_with_subject_dn(::censys_definitions::LintResult* w_ext_san_critical_with_subject_dn) {
+inline void Lints::set_allocated_w_ext_san_critical_with_subject_dn(::zsearch::LintResult* w_ext_san_critical_with_subject_dn) {
   delete w_ext_san_critical_with_subject_dn_;
   w_ext_san_critical_with_subject_dn_ = w_ext_san_critical_with_subject_dn;
   if (w_ext_san_critical_with_subject_dn) {
@@ -5569,10 +5569,10 @@ inline void Lints::set_allocated_w_ext_san_critical_with_subject_dn(::censys_def
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.w_ext_san_critical_with_subject_dn)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.w_ext_san_critical_with_subject_dn)
 }
 
-// .censys_definitions.LintResult e_ext_san_directory_name_present = 80;
+// .zsearch.LintResult e_ext_san_directory_name_present = 80;
 inline bool Lints::has_e_ext_san_directory_name_present() const {
   return this != internal_default_instance() && e_ext_san_directory_name_present_ != NULL;
 }
@@ -5580,27 +5580,27 @@ inline void Lints::clear_e_ext_san_directory_name_present() {
   if (GetArenaNoVirtual() == NULL && e_ext_san_directory_name_present_ != NULL) delete e_ext_san_directory_name_present_;
   e_ext_san_directory_name_present_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ext_san_directory_name_present() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ext_san_directory_name_present)
+inline const ::zsearch::LintResult& Lints::e_ext_san_directory_name_present() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ext_san_directory_name_present)
   return e_ext_san_directory_name_present_ != NULL ? *e_ext_san_directory_name_present_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ext_san_directory_name_present() {
+inline ::zsearch::LintResult* Lints::mutable_e_ext_san_directory_name_present() {
   
   if (e_ext_san_directory_name_present_ == NULL) {
-    e_ext_san_directory_name_present_ = new ::censys_definitions::LintResult;
+    e_ext_san_directory_name_present_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ext_san_directory_name_present)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ext_san_directory_name_present)
   return e_ext_san_directory_name_present_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ext_san_directory_name_present() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ext_san_directory_name_present)
+inline ::zsearch::LintResult* Lints::release_e_ext_san_directory_name_present() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ext_san_directory_name_present)
   
-  ::censys_definitions::LintResult* temp = e_ext_san_directory_name_present_;
+  ::zsearch::LintResult* temp = e_ext_san_directory_name_present_;
   e_ext_san_directory_name_present_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ext_san_directory_name_present(::censys_definitions::LintResult* e_ext_san_directory_name_present) {
+inline void Lints::set_allocated_e_ext_san_directory_name_present(::zsearch::LintResult* e_ext_san_directory_name_present) {
   delete e_ext_san_directory_name_present_;
   e_ext_san_directory_name_present_ = e_ext_san_directory_name_present;
   if (e_ext_san_directory_name_present) {
@@ -5608,10 +5608,10 @@ inline void Lints::set_allocated_e_ext_san_directory_name_present(::censys_defin
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ext_san_directory_name_present)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ext_san_directory_name_present)
 }
 
-// .censys_definitions.LintResult e_ext_san_dns_not_ia5_string = 81;
+// .zsearch.LintResult e_ext_san_dns_not_ia5_string = 81;
 inline bool Lints::has_e_ext_san_dns_not_ia5_string() const {
   return this != internal_default_instance() && e_ext_san_dns_not_ia5_string_ != NULL;
 }
@@ -5619,27 +5619,27 @@ inline void Lints::clear_e_ext_san_dns_not_ia5_string() {
   if (GetArenaNoVirtual() == NULL && e_ext_san_dns_not_ia5_string_ != NULL) delete e_ext_san_dns_not_ia5_string_;
   e_ext_san_dns_not_ia5_string_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ext_san_dns_not_ia5_string() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ext_san_dns_not_ia5_string)
+inline const ::zsearch::LintResult& Lints::e_ext_san_dns_not_ia5_string() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ext_san_dns_not_ia5_string)
   return e_ext_san_dns_not_ia5_string_ != NULL ? *e_ext_san_dns_not_ia5_string_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ext_san_dns_not_ia5_string() {
+inline ::zsearch::LintResult* Lints::mutable_e_ext_san_dns_not_ia5_string() {
   
   if (e_ext_san_dns_not_ia5_string_ == NULL) {
-    e_ext_san_dns_not_ia5_string_ = new ::censys_definitions::LintResult;
+    e_ext_san_dns_not_ia5_string_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ext_san_dns_not_ia5_string)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ext_san_dns_not_ia5_string)
   return e_ext_san_dns_not_ia5_string_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ext_san_dns_not_ia5_string() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ext_san_dns_not_ia5_string)
+inline ::zsearch::LintResult* Lints::release_e_ext_san_dns_not_ia5_string() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ext_san_dns_not_ia5_string)
   
-  ::censys_definitions::LintResult* temp = e_ext_san_dns_not_ia5_string_;
+  ::zsearch::LintResult* temp = e_ext_san_dns_not_ia5_string_;
   e_ext_san_dns_not_ia5_string_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ext_san_dns_not_ia5_string(::censys_definitions::LintResult* e_ext_san_dns_not_ia5_string) {
+inline void Lints::set_allocated_e_ext_san_dns_not_ia5_string(::zsearch::LintResult* e_ext_san_dns_not_ia5_string) {
   delete e_ext_san_dns_not_ia5_string_;
   e_ext_san_dns_not_ia5_string_ = e_ext_san_dns_not_ia5_string;
   if (e_ext_san_dns_not_ia5_string) {
@@ -5647,10 +5647,10 @@ inline void Lints::set_allocated_e_ext_san_dns_not_ia5_string(::censys_definitio
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ext_san_dns_not_ia5_string)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ext_san_dns_not_ia5_string)
 }
 
-// .censys_definitions.LintResult e_ext_san_dns_syntax_incorrect = 82;
+// .zsearch.LintResult e_ext_san_dns_syntax_incorrect = 82;
 inline bool Lints::has_e_ext_san_dns_syntax_incorrect() const {
   return this != internal_default_instance() && e_ext_san_dns_syntax_incorrect_ != NULL;
 }
@@ -5658,27 +5658,27 @@ inline void Lints::clear_e_ext_san_dns_syntax_incorrect() {
   if (GetArenaNoVirtual() == NULL && e_ext_san_dns_syntax_incorrect_ != NULL) delete e_ext_san_dns_syntax_incorrect_;
   e_ext_san_dns_syntax_incorrect_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ext_san_dns_syntax_incorrect() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ext_san_dns_syntax_incorrect)
+inline const ::zsearch::LintResult& Lints::e_ext_san_dns_syntax_incorrect() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ext_san_dns_syntax_incorrect)
   return e_ext_san_dns_syntax_incorrect_ != NULL ? *e_ext_san_dns_syntax_incorrect_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ext_san_dns_syntax_incorrect() {
+inline ::zsearch::LintResult* Lints::mutable_e_ext_san_dns_syntax_incorrect() {
   
   if (e_ext_san_dns_syntax_incorrect_ == NULL) {
-    e_ext_san_dns_syntax_incorrect_ = new ::censys_definitions::LintResult;
+    e_ext_san_dns_syntax_incorrect_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ext_san_dns_syntax_incorrect)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ext_san_dns_syntax_incorrect)
   return e_ext_san_dns_syntax_incorrect_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ext_san_dns_syntax_incorrect() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ext_san_dns_syntax_incorrect)
+inline ::zsearch::LintResult* Lints::release_e_ext_san_dns_syntax_incorrect() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ext_san_dns_syntax_incorrect)
   
-  ::censys_definitions::LintResult* temp = e_ext_san_dns_syntax_incorrect_;
+  ::zsearch::LintResult* temp = e_ext_san_dns_syntax_incorrect_;
   e_ext_san_dns_syntax_incorrect_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ext_san_dns_syntax_incorrect(::censys_definitions::LintResult* e_ext_san_dns_syntax_incorrect) {
+inline void Lints::set_allocated_e_ext_san_dns_syntax_incorrect(::zsearch::LintResult* e_ext_san_dns_syntax_incorrect) {
   delete e_ext_san_dns_syntax_incorrect_;
   e_ext_san_dns_syntax_incorrect_ = e_ext_san_dns_syntax_incorrect;
   if (e_ext_san_dns_syntax_incorrect) {
@@ -5686,10 +5686,10 @@ inline void Lints::set_allocated_e_ext_san_dns_syntax_incorrect(::censys_definit
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ext_san_dns_syntax_incorrect)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ext_san_dns_syntax_incorrect)
 }
 
-// .censys_definitions.LintResult e_ext_san_dnsname_not_fqdn = 83;
+// .zsearch.LintResult e_ext_san_dnsname_not_fqdn = 83;
 inline bool Lints::has_e_ext_san_dnsname_not_fqdn() const {
   return this != internal_default_instance() && e_ext_san_dnsname_not_fqdn_ != NULL;
 }
@@ -5697,27 +5697,27 @@ inline void Lints::clear_e_ext_san_dnsname_not_fqdn() {
   if (GetArenaNoVirtual() == NULL && e_ext_san_dnsname_not_fqdn_ != NULL) delete e_ext_san_dnsname_not_fqdn_;
   e_ext_san_dnsname_not_fqdn_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ext_san_dnsname_not_fqdn() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ext_san_dnsname_not_fqdn)
+inline const ::zsearch::LintResult& Lints::e_ext_san_dnsname_not_fqdn() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ext_san_dnsname_not_fqdn)
   return e_ext_san_dnsname_not_fqdn_ != NULL ? *e_ext_san_dnsname_not_fqdn_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ext_san_dnsname_not_fqdn() {
+inline ::zsearch::LintResult* Lints::mutable_e_ext_san_dnsname_not_fqdn() {
   
   if (e_ext_san_dnsname_not_fqdn_ == NULL) {
-    e_ext_san_dnsname_not_fqdn_ = new ::censys_definitions::LintResult;
+    e_ext_san_dnsname_not_fqdn_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ext_san_dnsname_not_fqdn)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ext_san_dnsname_not_fqdn)
   return e_ext_san_dnsname_not_fqdn_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ext_san_dnsname_not_fqdn() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ext_san_dnsname_not_fqdn)
+inline ::zsearch::LintResult* Lints::release_e_ext_san_dnsname_not_fqdn() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ext_san_dnsname_not_fqdn)
   
-  ::censys_definitions::LintResult* temp = e_ext_san_dnsname_not_fqdn_;
+  ::zsearch::LintResult* temp = e_ext_san_dnsname_not_fqdn_;
   e_ext_san_dnsname_not_fqdn_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ext_san_dnsname_not_fqdn(::censys_definitions::LintResult* e_ext_san_dnsname_not_fqdn) {
+inline void Lints::set_allocated_e_ext_san_dnsname_not_fqdn(::zsearch::LintResult* e_ext_san_dnsname_not_fqdn) {
   delete e_ext_san_dnsname_not_fqdn_;
   e_ext_san_dnsname_not_fqdn_ = e_ext_san_dnsname_not_fqdn;
   if (e_ext_san_dnsname_not_fqdn) {
@@ -5725,10 +5725,10 @@ inline void Lints::set_allocated_e_ext_san_dnsname_not_fqdn(::censys_definitions
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ext_san_dnsname_not_fqdn)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ext_san_dnsname_not_fqdn)
 }
 
-// .censys_definitions.LintResult e_ext_san_edi_party_name_present = 84;
+// .zsearch.LintResult e_ext_san_edi_party_name_present = 84;
 inline bool Lints::has_e_ext_san_edi_party_name_present() const {
   return this != internal_default_instance() && e_ext_san_edi_party_name_present_ != NULL;
 }
@@ -5736,27 +5736,27 @@ inline void Lints::clear_e_ext_san_edi_party_name_present() {
   if (GetArenaNoVirtual() == NULL && e_ext_san_edi_party_name_present_ != NULL) delete e_ext_san_edi_party_name_present_;
   e_ext_san_edi_party_name_present_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ext_san_edi_party_name_present() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ext_san_edi_party_name_present)
+inline const ::zsearch::LintResult& Lints::e_ext_san_edi_party_name_present() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ext_san_edi_party_name_present)
   return e_ext_san_edi_party_name_present_ != NULL ? *e_ext_san_edi_party_name_present_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ext_san_edi_party_name_present() {
+inline ::zsearch::LintResult* Lints::mutable_e_ext_san_edi_party_name_present() {
   
   if (e_ext_san_edi_party_name_present_ == NULL) {
-    e_ext_san_edi_party_name_present_ = new ::censys_definitions::LintResult;
+    e_ext_san_edi_party_name_present_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ext_san_edi_party_name_present)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ext_san_edi_party_name_present)
   return e_ext_san_edi_party_name_present_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ext_san_edi_party_name_present() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ext_san_edi_party_name_present)
+inline ::zsearch::LintResult* Lints::release_e_ext_san_edi_party_name_present() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ext_san_edi_party_name_present)
   
-  ::censys_definitions::LintResult* temp = e_ext_san_edi_party_name_present_;
+  ::zsearch::LintResult* temp = e_ext_san_edi_party_name_present_;
   e_ext_san_edi_party_name_present_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ext_san_edi_party_name_present(::censys_definitions::LintResult* e_ext_san_edi_party_name_present) {
+inline void Lints::set_allocated_e_ext_san_edi_party_name_present(::zsearch::LintResult* e_ext_san_edi_party_name_present) {
   delete e_ext_san_edi_party_name_present_;
   e_ext_san_edi_party_name_present_ = e_ext_san_edi_party_name_present;
   if (e_ext_san_edi_party_name_present) {
@@ -5764,10 +5764,10 @@ inline void Lints::set_allocated_e_ext_san_edi_party_name_present(::censys_defin
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ext_san_edi_party_name_present)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ext_san_edi_party_name_present)
 }
 
-// .censys_definitions.LintResult e_ext_san_empty_name = 85;
+// .zsearch.LintResult e_ext_san_empty_name = 85;
 inline bool Lints::has_e_ext_san_empty_name() const {
   return this != internal_default_instance() && e_ext_san_empty_name_ != NULL;
 }
@@ -5775,27 +5775,27 @@ inline void Lints::clear_e_ext_san_empty_name() {
   if (GetArenaNoVirtual() == NULL && e_ext_san_empty_name_ != NULL) delete e_ext_san_empty_name_;
   e_ext_san_empty_name_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ext_san_empty_name() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ext_san_empty_name)
+inline const ::zsearch::LintResult& Lints::e_ext_san_empty_name() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ext_san_empty_name)
   return e_ext_san_empty_name_ != NULL ? *e_ext_san_empty_name_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ext_san_empty_name() {
+inline ::zsearch::LintResult* Lints::mutable_e_ext_san_empty_name() {
   
   if (e_ext_san_empty_name_ == NULL) {
-    e_ext_san_empty_name_ = new ::censys_definitions::LintResult;
+    e_ext_san_empty_name_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ext_san_empty_name)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ext_san_empty_name)
   return e_ext_san_empty_name_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ext_san_empty_name() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ext_san_empty_name)
+inline ::zsearch::LintResult* Lints::release_e_ext_san_empty_name() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ext_san_empty_name)
   
-  ::censys_definitions::LintResult* temp = e_ext_san_empty_name_;
+  ::zsearch::LintResult* temp = e_ext_san_empty_name_;
   e_ext_san_empty_name_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ext_san_empty_name(::censys_definitions::LintResult* e_ext_san_empty_name) {
+inline void Lints::set_allocated_e_ext_san_empty_name(::zsearch::LintResult* e_ext_san_empty_name) {
   delete e_ext_san_empty_name_;
   e_ext_san_empty_name_ = e_ext_san_empty_name;
   if (e_ext_san_empty_name) {
@@ -5803,10 +5803,10 @@ inline void Lints::set_allocated_e_ext_san_empty_name(::censys_definitions::Lint
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ext_san_empty_name)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ext_san_empty_name)
 }
 
-// .censys_definitions.LintResult e_ext_san_missing = 86;
+// .zsearch.LintResult e_ext_san_missing = 86;
 inline bool Lints::has_e_ext_san_missing() const {
   return this != internal_default_instance() && e_ext_san_missing_ != NULL;
 }
@@ -5814,27 +5814,27 @@ inline void Lints::clear_e_ext_san_missing() {
   if (GetArenaNoVirtual() == NULL && e_ext_san_missing_ != NULL) delete e_ext_san_missing_;
   e_ext_san_missing_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ext_san_missing() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ext_san_missing)
+inline const ::zsearch::LintResult& Lints::e_ext_san_missing() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ext_san_missing)
   return e_ext_san_missing_ != NULL ? *e_ext_san_missing_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ext_san_missing() {
+inline ::zsearch::LintResult* Lints::mutable_e_ext_san_missing() {
   
   if (e_ext_san_missing_ == NULL) {
-    e_ext_san_missing_ = new ::censys_definitions::LintResult;
+    e_ext_san_missing_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ext_san_missing)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ext_san_missing)
   return e_ext_san_missing_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ext_san_missing() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ext_san_missing)
+inline ::zsearch::LintResult* Lints::release_e_ext_san_missing() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ext_san_missing)
   
-  ::censys_definitions::LintResult* temp = e_ext_san_missing_;
+  ::zsearch::LintResult* temp = e_ext_san_missing_;
   e_ext_san_missing_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ext_san_missing(::censys_definitions::LintResult* e_ext_san_missing) {
+inline void Lints::set_allocated_e_ext_san_missing(::zsearch::LintResult* e_ext_san_missing) {
   delete e_ext_san_missing_;
   e_ext_san_missing_ = e_ext_san_missing;
   if (e_ext_san_missing) {
@@ -5842,10 +5842,10 @@ inline void Lints::set_allocated_e_ext_san_missing(::censys_definitions::LintRes
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ext_san_missing)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ext_san_missing)
 }
 
-// .censys_definitions.LintResult e_ext_san_no_entries = 87;
+// .zsearch.LintResult e_ext_san_no_entries = 87;
 inline bool Lints::has_e_ext_san_no_entries() const {
   return this != internal_default_instance() && e_ext_san_no_entries_ != NULL;
 }
@@ -5853,27 +5853,27 @@ inline void Lints::clear_e_ext_san_no_entries() {
   if (GetArenaNoVirtual() == NULL && e_ext_san_no_entries_ != NULL) delete e_ext_san_no_entries_;
   e_ext_san_no_entries_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ext_san_no_entries() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ext_san_no_entries)
+inline const ::zsearch::LintResult& Lints::e_ext_san_no_entries() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ext_san_no_entries)
   return e_ext_san_no_entries_ != NULL ? *e_ext_san_no_entries_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ext_san_no_entries() {
+inline ::zsearch::LintResult* Lints::mutable_e_ext_san_no_entries() {
   
   if (e_ext_san_no_entries_ == NULL) {
-    e_ext_san_no_entries_ = new ::censys_definitions::LintResult;
+    e_ext_san_no_entries_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ext_san_no_entries)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ext_san_no_entries)
   return e_ext_san_no_entries_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ext_san_no_entries() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ext_san_no_entries)
+inline ::zsearch::LintResult* Lints::release_e_ext_san_no_entries() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ext_san_no_entries)
   
-  ::censys_definitions::LintResult* temp = e_ext_san_no_entries_;
+  ::zsearch::LintResult* temp = e_ext_san_no_entries_;
   e_ext_san_no_entries_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ext_san_no_entries(::censys_definitions::LintResult* e_ext_san_no_entries) {
+inline void Lints::set_allocated_e_ext_san_no_entries(::zsearch::LintResult* e_ext_san_no_entries) {
   delete e_ext_san_no_entries_;
   e_ext_san_no_entries_ = e_ext_san_no_entries;
   if (e_ext_san_no_entries) {
@@ -5881,10 +5881,10 @@ inline void Lints::set_allocated_e_ext_san_no_entries(::censys_definitions::Lint
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ext_san_no_entries)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ext_san_no_entries)
 }
 
-// .censys_definitions.LintResult e_ext_san_not_critical_without_subject = 88;
+// .zsearch.LintResult e_ext_san_not_critical_without_subject = 88;
 inline bool Lints::has_e_ext_san_not_critical_without_subject() const {
   return this != internal_default_instance() && e_ext_san_not_critical_without_subject_ != NULL;
 }
@@ -5892,27 +5892,27 @@ inline void Lints::clear_e_ext_san_not_critical_without_subject() {
   if (GetArenaNoVirtual() == NULL && e_ext_san_not_critical_without_subject_ != NULL) delete e_ext_san_not_critical_without_subject_;
   e_ext_san_not_critical_without_subject_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ext_san_not_critical_without_subject() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ext_san_not_critical_without_subject)
+inline const ::zsearch::LintResult& Lints::e_ext_san_not_critical_without_subject() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ext_san_not_critical_without_subject)
   return e_ext_san_not_critical_without_subject_ != NULL ? *e_ext_san_not_critical_without_subject_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ext_san_not_critical_without_subject() {
+inline ::zsearch::LintResult* Lints::mutable_e_ext_san_not_critical_without_subject() {
   
   if (e_ext_san_not_critical_without_subject_ == NULL) {
-    e_ext_san_not_critical_without_subject_ = new ::censys_definitions::LintResult;
+    e_ext_san_not_critical_without_subject_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ext_san_not_critical_without_subject)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ext_san_not_critical_without_subject)
   return e_ext_san_not_critical_without_subject_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ext_san_not_critical_without_subject() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ext_san_not_critical_without_subject)
+inline ::zsearch::LintResult* Lints::release_e_ext_san_not_critical_without_subject() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ext_san_not_critical_without_subject)
   
-  ::censys_definitions::LintResult* temp = e_ext_san_not_critical_without_subject_;
+  ::zsearch::LintResult* temp = e_ext_san_not_critical_without_subject_;
   e_ext_san_not_critical_without_subject_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ext_san_not_critical_without_subject(::censys_definitions::LintResult* e_ext_san_not_critical_without_subject) {
+inline void Lints::set_allocated_e_ext_san_not_critical_without_subject(::zsearch::LintResult* e_ext_san_not_critical_without_subject) {
   delete e_ext_san_not_critical_without_subject_;
   e_ext_san_not_critical_without_subject_ = e_ext_san_not_critical_without_subject;
   if (e_ext_san_not_critical_without_subject) {
@@ -5920,10 +5920,10 @@ inline void Lints::set_allocated_e_ext_san_not_critical_without_subject(::censys
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ext_san_not_critical_without_subject)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ext_san_not_critical_without_subject)
 }
 
-// .censys_definitions.LintResult e_ext_san_other_name_present = 89;
+// .zsearch.LintResult e_ext_san_other_name_present = 89;
 inline bool Lints::has_e_ext_san_other_name_present() const {
   return this != internal_default_instance() && e_ext_san_other_name_present_ != NULL;
 }
@@ -5931,27 +5931,27 @@ inline void Lints::clear_e_ext_san_other_name_present() {
   if (GetArenaNoVirtual() == NULL && e_ext_san_other_name_present_ != NULL) delete e_ext_san_other_name_present_;
   e_ext_san_other_name_present_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ext_san_other_name_present() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ext_san_other_name_present)
+inline const ::zsearch::LintResult& Lints::e_ext_san_other_name_present() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ext_san_other_name_present)
   return e_ext_san_other_name_present_ != NULL ? *e_ext_san_other_name_present_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ext_san_other_name_present() {
+inline ::zsearch::LintResult* Lints::mutable_e_ext_san_other_name_present() {
   
   if (e_ext_san_other_name_present_ == NULL) {
-    e_ext_san_other_name_present_ = new ::censys_definitions::LintResult;
+    e_ext_san_other_name_present_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ext_san_other_name_present)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ext_san_other_name_present)
   return e_ext_san_other_name_present_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ext_san_other_name_present() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ext_san_other_name_present)
+inline ::zsearch::LintResult* Lints::release_e_ext_san_other_name_present() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ext_san_other_name_present)
   
-  ::censys_definitions::LintResult* temp = e_ext_san_other_name_present_;
+  ::zsearch::LintResult* temp = e_ext_san_other_name_present_;
   e_ext_san_other_name_present_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ext_san_other_name_present(::censys_definitions::LintResult* e_ext_san_other_name_present) {
+inline void Lints::set_allocated_e_ext_san_other_name_present(::zsearch::LintResult* e_ext_san_other_name_present) {
   delete e_ext_san_other_name_present_;
   e_ext_san_other_name_present_ = e_ext_san_other_name_present;
   if (e_ext_san_other_name_present) {
@@ -5959,10 +5959,10 @@ inline void Lints::set_allocated_e_ext_san_other_name_present(::censys_definitio
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ext_san_other_name_present)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ext_san_other_name_present)
 }
 
-// .censys_definitions.LintResult e_ext_san_registered_id_present = 90;
+// .zsearch.LintResult e_ext_san_registered_id_present = 90;
 inline bool Lints::has_e_ext_san_registered_id_present() const {
   return this != internal_default_instance() && e_ext_san_registered_id_present_ != NULL;
 }
@@ -5970,27 +5970,27 @@ inline void Lints::clear_e_ext_san_registered_id_present() {
   if (GetArenaNoVirtual() == NULL && e_ext_san_registered_id_present_ != NULL) delete e_ext_san_registered_id_present_;
   e_ext_san_registered_id_present_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ext_san_registered_id_present() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ext_san_registered_id_present)
+inline const ::zsearch::LintResult& Lints::e_ext_san_registered_id_present() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ext_san_registered_id_present)
   return e_ext_san_registered_id_present_ != NULL ? *e_ext_san_registered_id_present_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ext_san_registered_id_present() {
+inline ::zsearch::LintResult* Lints::mutable_e_ext_san_registered_id_present() {
   
   if (e_ext_san_registered_id_present_ == NULL) {
-    e_ext_san_registered_id_present_ = new ::censys_definitions::LintResult;
+    e_ext_san_registered_id_present_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ext_san_registered_id_present)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ext_san_registered_id_present)
   return e_ext_san_registered_id_present_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ext_san_registered_id_present() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ext_san_registered_id_present)
+inline ::zsearch::LintResult* Lints::release_e_ext_san_registered_id_present() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ext_san_registered_id_present)
   
-  ::censys_definitions::LintResult* temp = e_ext_san_registered_id_present_;
+  ::zsearch::LintResult* temp = e_ext_san_registered_id_present_;
   e_ext_san_registered_id_present_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ext_san_registered_id_present(::censys_definitions::LintResult* e_ext_san_registered_id_present) {
+inline void Lints::set_allocated_e_ext_san_registered_id_present(::zsearch::LintResult* e_ext_san_registered_id_present) {
   delete e_ext_san_registered_id_present_;
   e_ext_san_registered_id_present_ = e_ext_san_registered_id_present;
   if (e_ext_san_registered_id_present) {
@@ -5998,10 +5998,10 @@ inline void Lints::set_allocated_e_ext_san_registered_id_present(::censys_defini
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ext_san_registered_id_present)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ext_san_registered_id_present)
 }
 
-// .censys_definitions.LintResult e_ext_san_rfc822_format_invalid = 91;
+// .zsearch.LintResult e_ext_san_rfc822_format_invalid = 91;
 inline bool Lints::has_e_ext_san_rfc822_format_invalid() const {
   return this != internal_default_instance() && e_ext_san_rfc822_format_invalid_ != NULL;
 }
@@ -6009,27 +6009,27 @@ inline void Lints::clear_e_ext_san_rfc822_format_invalid() {
   if (GetArenaNoVirtual() == NULL && e_ext_san_rfc822_format_invalid_ != NULL) delete e_ext_san_rfc822_format_invalid_;
   e_ext_san_rfc822_format_invalid_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ext_san_rfc822_format_invalid() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ext_san_rfc822_format_invalid)
+inline const ::zsearch::LintResult& Lints::e_ext_san_rfc822_format_invalid() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ext_san_rfc822_format_invalid)
   return e_ext_san_rfc822_format_invalid_ != NULL ? *e_ext_san_rfc822_format_invalid_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ext_san_rfc822_format_invalid() {
+inline ::zsearch::LintResult* Lints::mutable_e_ext_san_rfc822_format_invalid() {
   
   if (e_ext_san_rfc822_format_invalid_ == NULL) {
-    e_ext_san_rfc822_format_invalid_ = new ::censys_definitions::LintResult;
+    e_ext_san_rfc822_format_invalid_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ext_san_rfc822_format_invalid)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ext_san_rfc822_format_invalid)
   return e_ext_san_rfc822_format_invalid_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ext_san_rfc822_format_invalid() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ext_san_rfc822_format_invalid)
+inline ::zsearch::LintResult* Lints::release_e_ext_san_rfc822_format_invalid() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ext_san_rfc822_format_invalid)
   
-  ::censys_definitions::LintResult* temp = e_ext_san_rfc822_format_invalid_;
+  ::zsearch::LintResult* temp = e_ext_san_rfc822_format_invalid_;
   e_ext_san_rfc822_format_invalid_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ext_san_rfc822_format_invalid(::censys_definitions::LintResult* e_ext_san_rfc822_format_invalid) {
+inline void Lints::set_allocated_e_ext_san_rfc822_format_invalid(::zsearch::LintResult* e_ext_san_rfc822_format_invalid) {
   delete e_ext_san_rfc822_format_invalid_;
   e_ext_san_rfc822_format_invalid_ = e_ext_san_rfc822_format_invalid;
   if (e_ext_san_rfc822_format_invalid) {
@@ -6037,10 +6037,10 @@ inline void Lints::set_allocated_e_ext_san_rfc822_format_invalid(::censys_defini
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ext_san_rfc822_format_invalid)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ext_san_rfc822_format_invalid)
 }
 
-// .censys_definitions.LintResult e_ext_san_rfc822_name_present = 92;
+// .zsearch.LintResult e_ext_san_rfc822_name_present = 92;
 inline bool Lints::has_e_ext_san_rfc822_name_present() const {
   return this != internal_default_instance() && e_ext_san_rfc822_name_present_ != NULL;
 }
@@ -6048,27 +6048,27 @@ inline void Lints::clear_e_ext_san_rfc822_name_present() {
   if (GetArenaNoVirtual() == NULL && e_ext_san_rfc822_name_present_ != NULL) delete e_ext_san_rfc822_name_present_;
   e_ext_san_rfc822_name_present_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ext_san_rfc822_name_present() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ext_san_rfc822_name_present)
+inline const ::zsearch::LintResult& Lints::e_ext_san_rfc822_name_present() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ext_san_rfc822_name_present)
   return e_ext_san_rfc822_name_present_ != NULL ? *e_ext_san_rfc822_name_present_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ext_san_rfc822_name_present() {
+inline ::zsearch::LintResult* Lints::mutable_e_ext_san_rfc822_name_present() {
   
   if (e_ext_san_rfc822_name_present_ == NULL) {
-    e_ext_san_rfc822_name_present_ = new ::censys_definitions::LintResult;
+    e_ext_san_rfc822_name_present_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ext_san_rfc822_name_present)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ext_san_rfc822_name_present)
   return e_ext_san_rfc822_name_present_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ext_san_rfc822_name_present() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ext_san_rfc822_name_present)
+inline ::zsearch::LintResult* Lints::release_e_ext_san_rfc822_name_present() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ext_san_rfc822_name_present)
   
-  ::censys_definitions::LintResult* temp = e_ext_san_rfc822_name_present_;
+  ::zsearch::LintResult* temp = e_ext_san_rfc822_name_present_;
   e_ext_san_rfc822_name_present_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ext_san_rfc822_name_present(::censys_definitions::LintResult* e_ext_san_rfc822_name_present) {
+inline void Lints::set_allocated_e_ext_san_rfc822_name_present(::zsearch::LintResult* e_ext_san_rfc822_name_present) {
   delete e_ext_san_rfc822_name_present_;
   e_ext_san_rfc822_name_present_ = e_ext_san_rfc822_name_present;
   if (e_ext_san_rfc822_name_present) {
@@ -6076,10 +6076,10 @@ inline void Lints::set_allocated_e_ext_san_rfc822_name_present(::censys_definiti
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ext_san_rfc822_name_present)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ext_san_rfc822_name_present)
 }
 
-// .censys_definitions.LintResult e_ext_san_space_dns_name = 93;
+// .zsearch.LintResult e_ext_san_space_dns_name = 93;
 inline bool Lints::has_e_ext_san_space_dns_name() const {
   return this != internal_default_instance() && e_ext_san_space_dns_name_ != NULL;
 }
@@ -6087,27 +6087,27 @@ inline void Lints::clear_e_ext_san_space_dns_name() {
   if (GetArenaNoVirtual() == NULL && e_ext_san_space_dns_name_ != NULL) delete e_ext_san_space_dns_name_;
   e_ext_san_space_dns_name_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ext_san_space_dns_name() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ext_san_space_dns_name)
+inline const ::zsearch::LintResult& Lints::e_ext_san_space_dns_name() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ext_san_space_dns_name)
   return e_ext_san_space_dns_name_ != NULL ? *e_ext_san_space_dns_name_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ext_san_space_dns_name() {
+inline ::zsearch::LintResult* Lints::mutable_e_ext_san_space_dns_name() {
   
   if (e_ext_san_space_dns_name_ == NULL) {
-    e_ext_san_space_dns_name_ = new ::censys_definitions::LintResult;
+    e_ext_san_space_dns_name_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ext_san_space_dns_name)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ext_san_space_dns_name)
   return e_ext_san_space_dns_name_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ext_san_space_dns_name() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ext_san_space_dns_name)
+inline ::zsearch::LintResult* Lints::release_e_ext_san_space_dns_name() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ext_san_space_dns_name)
   
-  ::censys_definitions::LintResult* temp = e_ext_san_space_dns_name_;
+  ::zsearch::LintResult* temp = e_ext_san_space_dns_name_;
   e_ext_san_space_dns_name_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ext_san_space_dns_name(::censys_definitions::LintResult* e_ext_san_space_dns_name) {
+inline void Lints::set_allocated_e_ext_san_space_dns_name(::zsearch::LintResult* e_ext_san_space_dns_name) {
   delete e_ext_san_space_dns_name_;
   e_ext_san_space_dns_name_ = e_ext_san_space_dns_name;
   if (e_ext_san_space_dns_name) {
@@ -6115,10 +6115,10 @@ inline void Lints::set_allocated_e_ext_san_space_dns_name(::censys_definitions::
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ext_san_space_dns_name)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ext_san_space_dns_name)
 }
 
-// .censys_definitions.LintResult e_ext_san_uniform_resource_identifier_present = 94;
+// .zsearch.LintResult e_ext_san_uniform_resource_identifier_present = 94;
 inline bool Lints::has_e_ext_san_uniform_resource_identifier_present() const {
   return this != internal_default_instance() && e_ext_san_uniform_resource_identifier_present_ != NULL;
 }
@@ -6126,27 +6126,27 @@ inline void Lints::clear_e_ext_san_uniform_resource_identifier_present() {
   if (GetArenaNoVirtual() == NULL && e_ext_san_uniform_resource_identifier_present_ != NULL) delete e_ext_san_uniform_resource_identifier_present_;
   e_ext_san_uniform_resource_identifier_present_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ext_san_uniform_resource_identifier_present() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ext_san_uniform_resource_identifier_present)
+inline const ::zsearch::LintResult& Lints::e_ext_san_uniform_resource_identifier_present() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ext_san_uniform_resource_identifier_present)
   return e_ext_san_uniform_resource_identifier_present_ != NULL ? *e_ext_san_uniform_resource_identifier_present_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ext_san_uniform_resource_identifier_present() {
+inline ::zsearch::LintResult* Lints::mutable_e_ext_san_uniform_resource_identifier_present() {
   
   if (e_ext_san_uniform_resource_identifier_present_ == NULL) {
-    e_ext_san_uniform_resource_identifier_present_ = new ::censys_definitions::LintResult;
+    e_ext_san_uniform_resource_identifier_present_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ext_san_uniform_resource_identifier_present)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ext_san_uniform_resource_identifier_present)
   return e_ext_san_uniform_resource_identifier_present_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ext_san_uniform_resource_identifier_present() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ext_san_uniform_resource_identifier_present)
+inline ::zsearch::LintResult* Lints::release_e_ext_san_uniform_resource_identifier_present() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ext_san_uniform_resource_identifier_present)
   
-  ::censys_definitions::LintResult* temp = e_ext_san_uniform_resource_identifier_present_;
+  ::zsearch::LintResult* temp = e_ext_san_uniform_resource_identifier_present_;
   e_ext_san_uniform_resource_identifier_present_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ext_san_uniform_resource_identifier_present(::censys_definitions::LintResult* e_ext_san_uniform_resource_identifier_present) {
+inline void Lints::set_allocated_e_ext_san_uniform_resource_identifier_present(::zsearch::LintResult* e_ext_san_uniform_resource_identifier_present) {
   delete e_ext_san_uniform_resource_identifier_present_;
   e_ext_san_uniform_resource_identifier_present_ = e_ext_san_uniform_resource_identifier_present;
   if (e_ext_san_uniform_resource_identifier_present) {
@@ -6154,10 +6154,10 @@ inline void Lints::set_allocated_e_ext_san_uniform_resource_identifier_present(:
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ext_san_uniform_resource_identifier_present)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ext_san_uniform_resource_identifier_present)
 }
 
-// .censys_definitions.LintResult e_ext_san_uri_format_invalid = 95;
+// .zsearch.LintResult e_ext_san_uri_format_invalid = 95;
 inline bool Lints::has_e_ext_san_uri_format_invalid() const {
   return this != internal_default_instance() && e_ext_san_uri_format_invalid_ != NULL;
 }
@@ -6165,27 +6165,27 @@ inline void Lints::clear_e_ext_san_uri_format_invalid() {
   if (GetArenaNoVirtual() == NULL && e_ext_san_uri_format_invalid_ != NULL) delete e_ext_san_uri_format_invalid_;
   e_ext_san_uri_format_invalid_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ext_san_uri_format_invalid() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ext_san_uri_format_invalid)
+inline const ::zsearch::LintResult& Lints::e_ext_san_uri_format_invalid() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ext_san_uri_format_invalid)
   return e_ext_san_uri_format_invalid_ != NULL ? *e_ext_san_uri_format_invalid_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ext_san_uri_format_invalid() {
+inline ::zsearch::LintResult* Lints::mutable_e_ext_san_uri_format_invalid() {
   
   if (e_ext_san_uri_format_invalid_ == NULL) {
-    e_ext_san_uri_format_invalid_ = new ::censys_definitions::LintResult;
+    e_ext_san_uri_format_invalid_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ext_san_uri_format_invalid)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ext_san_uri_format_invalid)
   return e_ext_san_uri_format_invalid_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ext_san_uri_format_invalid() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ext_san_uri_format_invalid)
+inline ::zsearch::LintResult* Lints::release_e_ext_san_uri_format_invalid() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ext_san_uri_format_invalid)
   
-  ::censys_definitions::LintResult* temp = e_ext_san_uri_format_invalid_;
+  ::zsearch::LintResult* temp = e_ext_san_uri_format_invalid_;
   e_ext_san_uri_format_invalid_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ext_san_uri_format_invalid(::censys_definitions::LintResult* e_ext_san_uri_format_invalid) {
+inline void Lints::set_allocated_e_ext_san_uri_format_invalid(::zsearch::LintResult* e_ext_san_uri_format_invalid) {
   delete e_ext_san_uri_format_invalid_;
   e_ext_san_uri_format_invalid_ = e_ext_san_uri_format_invalid;
   if (e_ext_san_uri_format_invalid) {
@@ -6193,10 +6193,10 @@ inline void Lints::set_allocated_e_ext_san_uri_format_invalid(::censys_definitio
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ext_san_uri_format_invalid)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ext_san_uri_format_invalid)
 }
 
-// .censys_definitions.LintResult e_ext_san_uri_host_not_fqdn_or_ip = 96;
+// .zsearch.LintResult e_ext_san_uri_host_not_fqdn_or_ip = 96;
 inline bool Lints::has_e_ext_san_uri_host_not_fqdn_or_ip() const {
   return this != internal_default_instance() && e_ext_san_uri_host_not_fqdn_or_ip_ != NULL;
 }
@@ -6204,27 +6204,27 @@ inline void Lints::clear_e_ext_san_uri_host_not_fqdn_or_ip() {
   if (GetArenaNoVirtual() == NULL && e_ext_san_uri_host_not_fqdn_or_ip_ != NULL) delete e_ext_san_uri_host_not_fqdn_or_ip_;
   e_ext_san_uri_host_not_fqdn_or_ip_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ext_san_uri_host_not_fqdn_or_ip() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ext_san_uri_host_not_fqdn_or_ip)
+inline const ::zsearch::LintResult& Lints::e_ext_san_uri_host_not_fqdn_or_ip() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ext_san_uri_host_not_fqdn_or_ip)
   return e_ext_san_uri_host_not_fqdn_or_ip_ != NULL ? *e_ext_san_uri_host_not_fqdn_or_ip_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ext_san_uri_host_not_fqdn_or_ip() {
+inline ::zsearch::LintResult* Lints::mutable_e_ext_san_uri_host_not_fqdn_or_ip() {
   
   if (e_ext_san_uri_host_not_fqdn_or_ip_ == NULL) {
-    e_ext_san_uri_host_not_fqdn_or_ip_ = new ::censys_definitions::LintResult;
+    e_ext_san_uri_host_not_fqdn_or_ip_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ext_san_uri_host_not_fqdn_or_ip)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ext_san_uri_host_not_fqdn_or_ip)
   return e_ext_san_uri_host_not_fqdn_or_ip_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ext_san_uri_host_not_fqdn_or_ip() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ext_san_uri_host_not_fqdn_or_ip)
+inline ::zsearch::LintResult* Lints::release_e_ext_san_uri_host_not_fqdn_or_ip() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ext_san_uri_host_not_fqdn_or_ip)
   
-  ::censys_definitions::LintResult* temp = e_ext_san_uri_host_not_fqdn_or_ip_;
+  ::zsearch::LintResult* temp = e_ext_san_uri_host_not_fqdn_or_ip_;
   e_ext_san_uri_host_not_fqdn_or_ip_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ext_san_uri_host_not_fqdn_or_ip(::censys_definitions::LintResult* e_ext_san_uri_host_not_fqdn_or_ip) {
+inline void Lints::set_allocated_e_ext_san_uri_host_not_fqdn_or_ip(::zsearch::LintResult* e_ext_san_uri_host_not_fqdn_or_ip) {
   delete e_ext_san_uri_host_not_fqdn_or_ip_;
   e_ext_san_uri_host_not_fqdn_or_ip_ = e_ext_san_uri_host_not_fqdn_or_ip;
   if (e_ext_san_uri_host_not_fqdn_or_ip) {
@@ -6232,10 +6232,10 @@ inline void Lints::set_allocated_e_ext_san_uri_host_not_fqdn_or_ip(::censys_defi
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ext_san_uri_host_not_fqdn_or_ip)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ext_san_uri_host_not_fqdn_or_ip)
 }
 
-// .censys_definitions.LintResult e_ext_san_uri_not_ia5 = 97;
+// .zsearch.LintResult e_ext_san_uri_not_ia5 = 97;
 inline bool Lints::has_e_ext_san_uri_not_ia5() const {
   return this != internal_default_instance() && e_ext_san_uri_not_ia5_ != NULL;
 }
@@ -6243,27 +6243,27 @@ inline void Lints::clear_e_ext_san_uri_not_ia5() {
   if (GetArenaNoVirtual() == NULL && e_ext_san_uri_not_ia5_ != NULL) delete e_ext_san_uri_not_ia5_;
   e_ext_san_uri_not_ia5_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ext_san_uri_not_ia5() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ext_san_uri_not_ia5)
+inline const ::zsearch::LintResult& Lints::e_ext_san_uri_not_ia5() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ext_san_uri_not_ia5)
   return e_ext_san_uri_not_ia5_ != NULL ? *e_ext_san_uri_not_ia5_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ext_san_uri_not_ia5() {
+inline ::zsearch::LintResult* Lints::mutable_e_ext_san_uri_not_ia5() {
   
   if (e_ext_san_uri_not_ia5_ == NULL) {
-    e_ext_san_uri_not_ia5_ = new ::censys_definitions::LintResult;
+    e_ext_san_uri_not_ia5_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ext_san_uri_not_ia5)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ext_san_uri_not_ia5)
   return e_ext_san_uri_not_ia5_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ext_san_uri_not_ia5() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ext_san_uri_not_ia5)
+inline ::zsearch::LintResult* Lints::release_e_ext_san_uri_not_ia5() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ext_san_uri_not_ia5)
   
-  ::censys_definitions::LintResult* temp = e_ext_san_uri_not_ia5_;
+  ::zsearch::LintResult* temp = e_ext_san_uri_not_ia5_;
   e_ext_san_uri_not_ia5_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ext_san_uri_not_ia5(::censys_definitions::LintResult* e_ext_san_uri_not_ia5) {
+inline void Lints::set_allocated_e_ext_san_uri_not_ia5(::zsearch::LintResult* e_ext_san_uri_not_ia5) {
   delete e_ext_san_uri_not_ia5_;
   e_ext_san_uri_not_ia5_ = e_ext_san_uri_not_ia5;
   if (e_ext_san_uri_not_ia5) {
@@ -6271,10 +6271,10 @@ inline void Lints::set_allocated_e_ext_san_uri_not_ia5(::censys_definitions::Lin
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ext_san_uri_not_ia5)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ext_san_uri_not_ia5)
 }
 
-// .censys_definitions.LintResult e_ext_san_uri_relative = 98;
+// .zsearch.LintResult e_ext_san_uri_relative = 98;
 inline bool Lints::has_e_ext_san_uri_relative() const {
   return this != internal_default_instance() && e_ext_san_uri_relative_ != NULL;
 }
@@ -6282,27 +6282,27 @@ inline void Lints::clear_e_ext_san_uri_relative() {
   if (GetArenaNoVirtual() == NULL && e_ext_san_uri_relative_ != NULL) delete e_ext_san_uri_relative_;
   e_ext_san_uri_relative_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ext_san_uri_relative() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ext_san_uri_relative)
+inline const ::zsearch::LintResult& Lints::e_ext_san_uri_relative() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ext_san_uri_relative)
   return e_ext_san_uri_relative_ != NULL ? *e_ext_san_uri_relative_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ext_san_uri_relative() {
+inline ::zsearch::LintResult* Lints::mutable_e_ext_san_uri_relative() {
   
   if (e_ext_san_uri_relative_ == NULL) {
-    e_ext_san_uri_relative_ = new ::censys_definitions::LintResult;
+    e_ext_san_uri_relative_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ext_san_uri_relative)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ext_san_uri_relative)
   return e_ext_san_uri_relative_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ext_san_uri_relative() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ext_san_uri_relative)
+inline ::zsearch::LintResult* Lints::release_e_ext_san_uri_relative() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ext_san_uri_relative)
   
-  ::censys_definitions::LintResult* temp = e_ext_san_uri_relative_;
+  ::zsearch::LintResult* temp = e_ext_san_uri_relative_;
   e_ext_san_uri_relative_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ext_san_uri_relative(::censys_definitions::LintResult* e_ext_san_uri_relative) {
+inline void Lints::set_allocated_e_ext_san_uri_relative(::zsearch::LintResult* e_ext_san_uri_relative) {
   delete e_ext_san_uri_relative_;
   e_ext_san_uri_relative_ = e_ext_san_uri_relative;
   if (e_ext_san_uri_relative) {
@@ -6310,10 +6310,10 @@ inline void Lints::set_allocated_e_ext_san_uri_relative(::censys_definitions::Li
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ext_san_uri_relative)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ext_san_uri_relative)
 }
 
-// .censys_definitions.LintResult e_ext_subject_directory_attr_critical = 99;
+// .zsearch.LintResult e_ext_subject_directory_attr_critical = 99;
 inline bool Lints::has_e_ext_subject_directory_attr_critical() const {
   return this != internal_default_instance() && e_ext_subject_directory_attr_critical_ != NULL;
 }
@@ -6321,27 +6321,27 @@ inline void Lints::clear_e_ext_subject_directory_attr_critical() {
   if (GetArenaNoVirtual() == NULL && e_ext_subject_directory_attr_critical_ != NULL) delete e_ext_subject_directory_attr_critical_;
   e_ext_subject_directory_attr_critical_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ext_subject_directory_attr_critical() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ext_subject_directory_attr_critical)
+inline const ::zsearch::LintResult& Lints::e_ext_subject_directory_attr_critical() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ext_subject_directory_attr_critical)
   return e_ext_subject_directory_attr_critical_ != NULL ? *e_ext_subject_directory_attr_critical_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ext_subject_directory_attr_critical() {
+inline ::zsearch::LintResult* Lints::mutable_e_ext_subject_directory_attr_critical() {
   
   if (e_ext_subject_directory_attr_critical_ == NULL) {
-    e_ext_subject_directory_attr_critical_ = new ::censys_definitions::LintResult;
+    e_ext_subject_directory_attr_critical_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ext_subject_directory_attr_critical)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ext_subject_directory_attr_critical)
   return e_ext_subject_directory_attr_critical_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ext_subject_directory_attr_critical() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ext_subject_directory_attr_critical)
+inline ::zsearch::LintResult* Lints::release_e_ext_subject_directory_attr_critical() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ext_subject_directory_attr_critical)
   
-  ::censys_definitions::LintResult* temp = e_ext_subject_directory_attr_critical_;
+  ::zsearch::LintResult* temp = e_ext_subject_directory_attr_critical_;
   e_ext_subject_directory_attr_critical_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ext_subject_directory_attr_critical(::censys_definitions::LintResult* e_ext_subject_directory_attr_critical) {
+inline void Lints::set_allocated_e_ext_subject_directory_attr_critical(::zsearch::LintResult* e_ext_subject_directory_attr_critical) {
   delete e_ext_subject_directory_attr_critical_;
   e_ext_subject_directory_attr_critical_ = e_ext_subject_directory_attr_critical;
   if (e_ext_subject_directory_attr_critical) {
@@ -6349,10 +6349,10 @@ inline void Lints::set_allocated_e_ext_subject_directory_attr_critical(::censys_
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ext_subject_directory_attr_critical)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ext_subject_directory_attr_critical)
 }
 
-// .censys_definitions.LintResult e_ext_subject_key_identifier_critical = 100;
+// .zsearch.LintResult e_ext_subject_key_identifier_critical = 100;
 inline bool Lints::has_e_ext_subject_key_identifier_critical() const {
   return this != internal_default_instance() && e_ext_subject_key_identifier_critical_ != NULL;
 }
@@ -6360,27 +6360,27 @@ inline void Lints::clear_e_ext_subject_key_identifier_critical() {
   if (GetArenaNoVirtual() == NULL && e_ext_subject_key_identifier_critical_ != NULL) delete e_ext_subject_key_identifier_critical_;
   e_ext_subject_key_identifier_critical_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ext_subject_key_identifier_critical() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ext_subject_key_identifier_critical)
+inline const ::zsearch::LintResult& Lints::e_ext_subject_key_identifier_critical() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ext_subject_key_identifier_critical)
   return e_ext_subject_key_identifier_critical_ != NULL ? *e_ext_subject_key_identifier_critical_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ext_subject_key_identifier_critical() {
+inline ::zsearch::LintResult* Lints::mutable_e_ext_subject_key_identifier_critical() {
   
   if (e_ext_subject_key_identifier_critical_ == NULL) {
-    e_ext_subject_key_identifier_critical_ = new ::censys_definitions::LintResult;
+    e_ext_subject_key_identifier_critical_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ext_subject_key_identifier_critical)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ext_subject_key_identifier_critical)
   return e_ext_subject_key_identifier_critical_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ext_subject_key_identifier_critical() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ext_subject_key_identifier_critical)
+inline ::zsearch::LintResult* Lints::release_e_ext_subject_key_identifier_critical() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ext_subject_key_identifier_critical)
   
-  ::censys_definitions::LintResult* temp = e_ext_subject_key_identifier_critical_;
+  ::zsearch::LintResult* temp = e_ext_subject_key_identifier_critical_;
   e_ext_subject_key_identifier_critical_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ext_subject_key_identifier_critical(::censys_definitions::LintResult* e_ext_subject_key_identifier_critical) {
+inline void Lints::set_allocated_e_ext_subject_key_identifier_critical(::zsearch::LintResult* e_ext_subject_key_identifier_critical) {
   delete e_ext_subject_key_identifier_critical_;
   e_ext_subject_key_identifier_critical_ = e_ext_subject_key_identifier_critical;
   if (e_ext_subject_key_identifier_critical) {
@@ -6388,10 +6388,10 @@ inline void Lints::set_allocated_e_ext_subject_key_identifier_critical(::censys_
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ext_subject_key_identifier_critical)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ext_subject_key_identifier_critical)
 }
 
-// .censys_definitions.LintResult e_ext_subject_key_identifier_missing_ca = 101;
+// .zsearch.LintResult e_ext_subject_key_identifier_missing_ca = 101;
 inline bool Lints::has_e_ext_subject_key_identifier_missing_ca() const {
   return this != internal_default_instance() && e_ext_subject_key_identifier_missing_ca_ != NULL;
 }
@@ -6399,27 +6399,27 @@ inline void Lints::clear_e_ext_subject_key_identifier_missing_ca() {
   if (GetArenaNoVirtual() == NULL && e_ext_subject_key_identifier_missing_ca_ != NULL) delete e_ext_subject_key_identifier_missing_ca_;
   e_ext_subject_key_identifier_missing_ca_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ext_subject_key_identifier_missing_ca() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ext_subject_key_identifier_missing_ca)
+inline const ::zsearch::LintResult& Lints::e_ext_subject_key_identifier_missing_ca() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ext_subject_key_identifier_missing_ca)
   return e_ext_subject_key_identifier_missing_ca_ != NULL ? *e_ext_subject_key_identifier_missing_ca_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ext_subject_key_identifier_missing_ca() {
+inline ::zsearch::LintResult* Lints::mutable_e_ext_subject_key_identifier_missing_ca() {
   
   if (e_ext_subject_key_identifier_missing_ca_ == NULL) {
-    e_ext_subject_key_identifier_missing_ca_ = new ::censys_definitions::LintResult;
+    e_ext_subject_key_identifier_missing_ca_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ext_subject_key_identifier_missing_ca)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ext_subject_key_identifier_missing_ca)
   return e_ext_subject_key_identifier_missing_ca_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ext_subject_key_identifier_missing_ca() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ext_subject_key_identifier_missing_ca)
+inline ::zsearch::LintResult* Lints::release_e_ext_subject_key_identifier_missing_ca() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ext_subject_key_identifier_missing_ca)
   
-  ::censys_definitions::LintResult* temp = e_ext_subject_key_identifier_missing_ca_;
+  ::zsearch::LintResult* temp = e_ext_subject_key_identifier_missing_ca_;
   e_ext_subject_key_identifier_missing_ca_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ext_subject_key_identifier_missing_ca(::censys_definitions::LintResult* e_ext_subject_key_identifier_missing_ca) {
+inline void Lints::set_allocated_e_ext_subject_key_identifier_missing_ca(::zsearch::LintResult* e_ext_subject_key_identifier_missing_ca) {
   delete e_ext_subject_key_identifier_missing_ca_;
   e_ext_subject_key_identifier_missing_ca_ = e_ext_subject_key_identifier_missing_ca;
   if (e_ext_subject_key_identifier_missing_ca) {
@@ -6427,10 +6427,10 @@ inline void Lints::set_allocated_e_ext_subject_key_identifier_missing_ca(::censy
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ext_subject_key_identifier_missing_ca)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ext_subject_key_identifier_missing_ca)
 }
 
-// .censys_definitions.LintResult w_ext_subject_key_identifier_missing_sub_cert = 102;
+// .zsearch.LintResult w_ext_subject_key_identifier_missing_sub_cert = 102;
 inline bool Lints::has_w_ext_subject_key_identifier_missing_sub_cert() const {
   return this != internal_default_instance() && w_ext_subject_key_identifier_missing_sub_cert_ != NULL;
 }
@@ -6438,27 +6438,27 @@ inline void Lints::clear_w_ext_subject_key_identifier_missing_sub_cert() {
   if (GetArenaNoVirtual() == NULL && w_ext_subject_key_identifier_missing_sub_cert_ != NULL) delete w_ext_subject_key_identifier_missing_sub_cert_;
   w_ext_subject_key_identifier_missing_sub_cert_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::w_ext_subject_key_identifier_missing_sub_cert() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.w_ext_subject_key_identifier_missing_sub_cert)
+inline const ::zsearch::LintResult& Lints::w_ext_subject_key_identifier_missing_sub_cert() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.w_ext_subject_key_identifier_missing_sub_cert)
   return w_ext_subject_key_identifier_missing_sub_cert_ != NULL ? *w_ext_subject_key_identifier_missing_sub_cert_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_w_ext_subject_key_identifier_missing_sub_cert() {
+inline ::zsearch::LintResult* Lints::mutable_w_ext_subject_key_identifier_missing_sub_cert() {
   
   if (w_ext_subject_key_identifier_missing_sub_cert_ == NULL) {
-    w_ext_subject_key_identifier_missing_sub_cert_ = new ::censys_definitions::LintResult;
+    w_ext_subject_key_identifier_missing_sub_cert_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.w_ext_subject_key_identifier_missing_sub_cert)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.w_ext_subject_key_identifier_missing_sub_cert)
   return w_ext_subject_key_identifier_missing_sub_cert_;
 }
-inline ::censys_definitions::LintResult* Lints::release_w_ext_subject_key_identifier_missing_sub_cert() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.w_ext_subject_key_identifier_missing_sub_cert)
+inline ::zsearch::LintResult* Lints::release_w_ext_subject_key_identifier_missing_sub_cert() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.w_ext_subject_key_identifier_missing_sub_cert)
   
-  ::censys_definitions::LintResult* temp = w_ext_subject_key_identifier_missing_sub_cert_;
+  ::zsearch::LintResult* temp = w_ext_subject_key_identifier_missing_sub_cert_;
   w_ext_subject_key_identifier_missing_sub_cert_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_w_ext_subject_key_identifier_missing_sub_cert(::censys_definitions::LintResult* w_ext_subject_key_identifier_missing_sub_cert) {
+inline void Lints::set_allocated_w_ext_subject_key_identifier_missing_sub_cert(::zsearch::LintResult* w_ext_subject_key_identifier_missing_sub_cert) {
   delete w_ext_subject_key_identifier_missing_sub_cert_;
   w_ext_subject_key_identifier_missing_sub_cert_ = w_ext_subject_key_identifier_missing_sub_cert;
   if (w_ext_subject_key_identifier_missing_sub_cert) {
@@ -6466,10 +6466,10 @@ inline void Lints::set_allocated_w_ext_subject_key_identifier_missing_sub_cert(:
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.w_ext_subject_key_identifier_missing_sub_cert)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.w_ext_subject_key_identifier_missing_sub_cert)
 }
 
-// .censys_definitions.LintResult e_generalized_time_does_not_include_seconds = 103;
+// .zsearch.LintResult e_generalized_time_does_not_include_seconds = 103;
 inline bool Lints::has_e_generalized_time_does_not_include_seconds() const {
   return this != internal_default_instance() && e_generalized_time_does_not_include_seconds_ != NULL;
 }
@@ -6477,27 +6477,27 @@ inline void Lints::clear_e_generalized_time_does_not_include_seconds() {
   if (GetArenaNoVirtual() == NULL && e_generalized_time_does_not_include_seconds_ != NULL) delete e_generalized_time_does_not_include_seconds_;
   e_generalized_time_does_not_include_seconds_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_generalized_time_does_not_include_seconds() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_generalized_time_does_not_include_seconds)
+inline const ::zsearch::LintResult& Lints::e_generalized_time_does_not_include_seconds() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_generalized_time_does_not_include_seconds)
   return e_generalized_time_does_not_include_seconds_ != NULL ? *e_generalized_time_does_not_include_seconds_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_generalized_time_does_not_include_seconds() {
+inline ::zsearch::LintResult* Lints::mutable_e_generalized_time_does_not_include_seconds() {
   
   if (e_generalized_time_does_not_include_seconds_ == NULL) {
-    e_generalized_time_does_not_include_seconds_ = new ::censys_definitions::LintResult;
+    e_generalized_time_does_not_include_seconds_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_generalized_time_does_not_include_seconds)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_generalized_time_does_not_include_seconds)
   return e_generalized_time_does_not_include_seconds_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_generalized_time_does_not_include_seconds() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_generalized_time_does_not_include_seconds)
+inline ::zsearch::LintResult* Lints::release_e_generalized_time_does_not_include_seconds() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_generalized_time_does_not_include_seconds)
   
-  ::censys_definitions::LintResult* temp = e_generalized_time_does_not_include_seconds_;
+  ::zsearch::LintResult* temp = e_generalized_time_does_not_include_seconds_;
   e_generalized_time_does_not_include_seconds_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_generalized_time_does_not_include_seconds(::censys_definitions::LintResult* e_generalized_time_does_not_include_seconds) {
+inline void Lints::set_allocated_e_generalized_time_does_not_include_seconds(::zsearch::LintResult* e_generalized_time_does_not_include_seconds) {
   delete e_generalized_time_does_not_include_seconds_;
   e_generalized_time_does_not_include_seconds_ = e_generalized_time_does_not_include_seconds;
   if (e_generalized_time_does_not_include_seconds) {
@@ -6505,10 +6505,10 @@ inline void Lints::set_allocated_e_generalized_time_does_not_include_seconds(::c
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_generalized_time_does_not_include_seconds)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_generalized_time_does_not_include_seconds)
 }
 
-// .censys_definitions.LintResult e_generalized_time_includes_fraction_seconds = 104;
+// .zsearch.LintResult e_generalized_time_includes_fraction_seconds = 104;
 inline bool Lints::has_e_generalized_time_includes_fraction_seconds() const {
   return this != internal_default_instance() && e_generalized_time_includes_fraction_seconds_ != NULL;
 }
@@ -6516,27 +6516,27 @@ inline void Lints::clear_e_generalized_time_includes_fraction_seconds() {
   if (GetArenaNoVirtual() == NULL && e_generalized_time_includes_fraction_seconds_ != NULL) delete e_generalized_time_includes_fraction_seconds_;
   e_generalized_time_includes_fraction_seconds_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_generalized_time_includes_fraction_seconds() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_generalized_time_includes_fraction_seconds)
+inline const ::zsearch::LintResult& Lints::e_generalized_time_includes_fraction_seconds() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_generalized_time_includes_fraction_seconds)
   return e_generalized_time_includes_fraction_seconds_ != NULL ? *e_generalized_time_includes_fraction_seconds_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_generalized_time_includes_fraction_seconds() {
+inline ::zsearch::LintResult* Lints::mutable_e_generalized_time_includes_fraction_seconds() {
   
   if (e_generalized_time_includes_fraction_seconds_ == NULL) {
-    e_generalized_time_includes_fraction_seconds_ = new ::censys_definitions::LintResult;
+    e_generalized_time_includes_fraction_seconds_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_generalized_time_includes_fraction_seconds)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_generalized_time_includes_fraction_seconds)
   return e_generalized_time_includes_fraction_seconds_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_generalized_time_includes_fraction_seconds() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_generalized_time_includes_fraction_seconds)
+inline ::zsearch::LintResult* Lints::release_e_generalized_time_includes_fraction_seconds() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_generalized_time_includes_fraction_seconds)
   
-  ::censys_definitions::LintResult* temp = e_generalized_time_includes_fraction_seconds_;
+  ::zsearch::LintResult* temp = e_generalized_time_includes_fraction_seconds_;
   e_generalized_time_includes_fraction_seconds_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_generalized_time_includes_fraction_seconds(::censys_definitions::LintResult* e_generalized_time_includes_fraction_seconds) {
+inline void Lints::set_allocated_e_generalized_time_includes_fraction_seconds(::zsearch::LintResult* e_generalized_time_includes_fraction_seconds) {
   delete e_generalized_time_includes_fraction_seconds_;
   e_generalized_time_includes_fraction_seconds_ = e_generalized_time_includes_fraction_seconds;
   if (e_generalized_time_includes_fraction_seconds) {
@@ -6544,10 +6544,10 @@ inline void Lints::set_allocated_e_generalized_time_includes_fraction_seconds(::
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_generalized_time_includes_fraction_seconds)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_generalized_time_includes_fraction_seconds)
 }
 
-// .censys_definitions.LintResult e_generalized_time_not_in_zulu = 105;
+// .zsearch.LintResult e_generalized_time_not_in_zulu = 105;
 inline bool Lints::has_e_generalized_time_not_in_zulu() const {
   return this != internal_default_instance() && e_generalized_time_not_in_zulu_ != NULL;
 }
@@ -6555,27 +6555,27 @@ inline void Lints::clear_e_generalized_time_not_in_zulu() {
   if (GetArenaNoVirtual() == NULL && e_generalized_time_not_in_zulu_ != NULL) delete e_generalized_time_not_in_zulu_;
   e_generalized_time_not_in_zulu_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_generalized_time_not_in_zulu() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_generalized_time_not_in_zulu)
+inline const ::zsearch::LintResult& Lints::e_generalized_time_not_in_zulu() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_generalized_time_not_in_zulu)
   return e_generalized_time_not_in_zulu_ != NULL ? *e_generalized_time_not_in_zulu_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_generalized_time_not_in_zulu() {
+inline ::zsearch::LintResult* Lints::mutable_e_generalized_time_not_in_zulu() {
   
   if (e_generalized_time_not_in_zulu_ == NULL) {
-    e_generalized_time_not_in_zulu_ = new ::censys_definitions::LintResult;
+    e_generalized_time_not_in_zulu_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_generalized_time_not_in_zulu)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_generalized_time_not_in_zulu)
   return e_generalized_time_not_in_zulu_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_generalized_time_not_in_zulu() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_generalized_time_not_in_zulu)
+inline ::zsearch::LintResult* Lints::release_e_generalized_time_not_in_zulu() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_generalized_time_not_in_zulu)
   
-  ::censys_definitions::LintResult* temp = e_generalized_time_not_in_zulu_;
+  ::zsearch::LintResult* temp = e_generalized_time_not_in_zulu_;
   e_generalized_time_not_in_zulu_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_generalized_time_not_in_zulu(::censys_definitions::LintResult* e_generalized_time_not_in_zulu) {
+inline void Lints::set_allocated_e_generalized_time_not_in_zulu(::zsearch::LintResult* e_generalized_time_not_in_zulu) {
   delete e_generalized_time_not_in_zulu_;
   e_generalized_time_not_in_zulu_ = e_generalized_time_not_in_zulu;
   if (e_generalized_time_not_in_zulu) {
@@ -6583,10 +6583,10 @@ inline void Lints::set_allocated_e_generalized_time_not_in_zulu(::censys_definit
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_generalized_time_not_in_zulu)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_generalized_time_not_in_zulu)
 }
 
-// .censys_definitions.LintResult w_gtld_under_consideration = 106;
+// .zsearch.LintResult w_gtld_under_consideration = 106;
 inline bool Lints::has_w_gtld_under_consideration() const {
   return this != internal_default_instance() && w_gtld_under_consideration_ != NULL;
 }
@@ -6594,27 +6594,27 @@ inline void Lints::clear_w_gtld_under_consideration() {
   if (GetArenaNoVirtual() == NULL && w_gtld_under_consideration_ != NULL) delete w_gtld_under_consideration_;
   w_gtld_under_consideration_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::w_gtld_under_consideration() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.w_gtld_under_consideration)
+inline const ::zsearch::LintResult& Lints::w_gtld_under_consideration() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.w_gtld_under_consideration)
   return w_gtld_under_consideration_ != NULL ? *w_gtld_under_consideration_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_w_gtld_under_consideration() {
+inline ::zsearch::LintResult* Lints::mutable_w_gtld_under_consideration() {
   
   if (w_gtld_under_consideration_ == NULL) {
-    w_gtld_under_consideration_ = new ::censys_definitions::LintResult;
+    w_gtld_under_consideration_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.w_gtld_under_consideration)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.w_gtld_under_consideration)
   return w_gtld_under_consideration_;
 }
-inline ::censys_definitions::LintResult* Lints::release_w_gtld_under_consideration() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.w_gtld_under_consideration)
+inline ::zsearch::LintResult* Lints::release_w_gtld_under_consideration() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.w_gtld_under_consideration)
   
-  ::censys_definitions::LintResult* temp = w_gtld_under_consideration_;
+  ::zsearch::LintResult* temp = w_gtld_under_consideration_;
   w_gtld_under_consideration_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_w_gtld_under_consideration(::censys_definitions::LintResult* w_gtld_under_consideration) {
+inline void Lints::set_allocated_w_gtld_under_consideration(::zsearch::LintResult* w_gtld_under_consideration) {
   delete w_gtld_under_consideration_;
   w_gtld_under_consideration_ = w_gtld_under_consideration;
   if (w_gtld_under_consideration) {
@@ -6622,10 +6622,10 @@ inline void Lints::set_allocated_w_gtld_under_consideration(::censys_definitions
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.w_gtld_under_consideration)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.w_gtld_under_consideration)
 }
 
-// .censys_definitions.LintResult e_ian_dns_name_includes_null_char = 107;
+// .zsearch.LintResult e_ian_dns_name_includes_null_char = 107;
 inline bool Lints::has_e_ian_dns_name_includes_null_char() const {
   return this != internal_default_instance() && e_ian_dns_name_includes_null_char_ != NULL;
 }
@@ -6633,27 +6633,27 @@ inline void Lints::clear_e_ian_dns_name_includes_null_char() {
   if (GetArenaNoVirtual() == NULL && e_ian_dns_name_includes_null_char_ != NULL) delete e_ian_dns_name_includes_null_char_;
   e_ian_dns_name_includes_null_char_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ian_dns_name_includes_null_char() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ian_dns_name_includes_null_char)
+inline const ::zsearch::LintResult& Lints::e_ian_dns_name_includes_null_char() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ian_dns_name_includes_null_char)
   return e_ian_dns_name_includes_null_char_ != NULL ? *e_ian_dns_name_includes_null_char_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ian_dns_name_includes_null_char() {
+inline ::zsearch::LintResult* Lints::mutable_e_ian_dns_name_includes_null_char() {
   
   if (e_ian_dns_name_includes_null_char_ == NULL) {
-    e_ian_dns_name_includes_null_char_ = new ::censys_definitions::LintResult;
+    e_ian_dns_name_includes_null_char_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ian_dns_name_includes_null_char)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ian_dns_name_includes_null_char)
   return e_ian_dns_name_includes_null_char_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ian_dns_name_includes_null_char() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ian_dns_name_includes_null_char)
+inline ::zsearch::LintResult* Lints::release_e_ian_dns_name_includes_null_char() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ian_dns_name_includes_null_char)
   
-  ::censys_definitions::LintResult* temp = e_ian_dns_name_includes_null_char_;
+  ::zsearch::LintResult* temp = e_ian_dns_name_includes_null_char_;
   e_ian_dns_name_includes_null_char_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ian_dns_name_includes_null_char(::censys_definitions::LintResult* e_ian_dns_name_includes_null_char) {
+inline void Lints::set_allocated_e_ian_dns_name_includes_null_char(::zsearch::LintResult* e_ian_dns_name_includes_null_char) {
   delete e_ian_dns_name_includes_null_char_;
   e_ian_dns_name_includes_null_char_ = e_ian_dns_name_includes_null_char;
   if (e_ian_dns_name_includes_null_char) {
@@ -6661,10 +6661,10 @@ inline void Lints::set_allocated_e_ian_dns_name_includes_null_char(::censys_defi
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ian_dns_name_includes_null_char)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ian_dns_name_includes_null_char)
 }
 
-// .censys_definitions.LintResult e_ian_dns_name_starts_with_period = 108;
+// .zsearch.LintResult e_ian_dns_name_starts_with_period = 108;
 inline bool Lints::has_e_ian_dns_name_starts_with_period() const {
   return this != internal_default_instance() && e_ian_dns_name_starts_with_period_ != NULL;
 }
@@ -6672,27 +6672,27 @@ inline void Lints::clear_e_ian_dns_name_starts_with_period() {
   if (GetArenaNoVirtual() == NULL && e_ian_dns_name_starts_with_period_ != NULL) delete e_ian_dns_name_starts_with_period_;
   e_ian_dns_name_starts_with_period_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_ian_dns_name_starts_with_period() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_ian_dns_name_starts_with_period)
+inline const ::zsearch::LintResult& Lints::e_ian_dns_name_starts_with_period() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ian_dns_name_starts_with_period)
   return e_ian_dns_name_starts_with_period_ != NULL ? *e_ian_dns_name_starts_with_period_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_ian_dns_name_starts_with_period() {
+inline ::zsearch::LintResult* Lints::mutable_e_ian_dns_name_starts_with_period() {
   
   if (e_ian_dns_name_starts_with_period_ == NULL) {
-    e_ian_dns_name_starts_with_period_ = new ::censys_definitions::LintResult;
+    e_ian_dns_name_starts_with_period_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_ian_dns_name_starts_with_period)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ian_dns_name_starts_with_period)
   return e_ian_dns_name_starts_with_period_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_ian_dns_name_starts_with_period() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_ian_dns_name_starts_with_period)
+inline ::zsearch::LintResult* Lints::release_e_ian_dns_name_starts_with_period() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ian_dns_name_starts_with_period)
   
-  ::censys_definitions::LintResult* temp = e_ian_dns_name_starts_with_period_;
+  ::zsearch::LintResult* temp = e_ian_dns_name_starts_with_period_;
   e_ian_dns_name_starts_with_period_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_ian_dns_name_starts_with_period(::censys_definitions::LintResult* e_ian_dns_name_starts_with_period) {
+inline void Lints::set_allocated_e_ian_dns_name_starts_with_period(::zsearch::LintResult* e_ian_dns_name_starts_with_period) {
   delete e_ian_dns_name_starts_with_period_;
   e_ian_dns_name_starts_with_period_ = e_ian_dns_name_starts_with_period;
   if (e_ian_dns_name_starts_with_period) {
@@ -6700,10 +6700,10 @@ inline void Lints::set_allocated_e_ian_dns_name_starts_with_period(::censys_defi
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_ian_dns_name_starts_with_period)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ian_dns_name_starts_with_period)
 }
 
-// .censys_definitions.LintResult w_ian_iana_pub_suffix_empty = 109;
+// .zsearch.LintResult w_ian_iana_pub_suffix_empty = 109;
 inline bool Lints::has_w_ian_iana_pub_suffix_empty() const {
   return this != internal_default_instance() && w_ian_iana_pub_suffix_empty_ != NULL;
 }
@@ -6711,27 +6711,27 @@ inline void Lints::clear_w_ian_iana_pub_suffix_empty() {
   if (GetArenaNoVirtual() == NULL && w_ian_iana_pub_suffix_empty_ != NULL) delete w_ian_iana_pub_suffix_empty_;
   w_ian_iana_pub_suffix_empty_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::w_ian_iana_pub_suffix_empty() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.w_ian_iana_pub_suffix_empty)
+inline const ::zsearch::LintResult& Lints::w_ian_iana_pub_suffix_empty() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.w_ian_iana_pub_suffix_empty)
   return w_ian_iana_pub_suffix_empty_ != NULL ? *w_ian_iana_pub_suffix_empty_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_w_ian_iana_pub_suffix_empty() {
+inline ::zsearch::LintResult* Lints::mutable_w_ian_iana_pub_suffix_empty() {
   
   if (w_ian_iana_pub_suffix_empty_ == NULL) {
-    w_ian_iana_pub_suffix_empty_ = new ::censys_definitions::LintResult;
+    w_ian_iana_pub_suffix_empty_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.w_ian_iana_pub_suffix_empty)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.w_ian_iana_pub_suffix_empty)
   return w_ian_iana_pub_suffix_empty_;
 }
-inline ::censys_definitions::LintResult* Lints::release_w_ian_iana_pub_suffix_empty() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.w_ian_iana_pub_suffix_empty)
+inline ::zsearch::LintResult* Lints::release_w_ian_iana_pub_suffix_empty() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.w_ian_iana_pub_suffix_empty)
   
-  ::censys_definitions::LintResult* temp = w_ian_iana_pub_suffix_empty_;
+  ::zsearch::LintResult* temp = w_ian_iana_pub_suffix_empty_;
   w_ian_iana_pub_suffix_empty_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_w_ian_iana_pub_suffix_empty(::censys_definitions::LintResult* w_ian_iana_pub_suffix_empty) {
+inline void Lints::set_allocated_w_ian_iana_pub_suffix_empty(::zsearch::LintResult* w_ian_iana_pub_suffix_empty) {
   delete w_ian_iana_pub_suffix_empty_;
   w_ian_iana_pub_suffix_empty_ = w_ian_iana_pub_suffix_empty;
   if (w_ian_iana_pub_suffix_empty) {
@@ -6739,10 +6739,10 @@ inline void Lints::set_allocated_w_ian_iana_pub_suffix_empty(::censys_definition
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.w_ian_iana_pub_suffix_empty)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.w_ian_iana_pub_suffix_empty)
 }
 
-// .censys_definitions.LintResult e_inhibit_any_policy_not_critical = 110;
+// .zsearch.LintResult e_inhibit_any_policy_not_critical = 110;
 inline bool Lints::has_e_inhibit_any_policy_not_critical() const {
   return this != internal_default_instance() && e_inhibit_any_policy_not_critical_ != NULL;
 }
@@ -6750,27 +6750,27 @@ inline void Lints::clear_e_inhibit_any_policy_not_critical() {
   if (GetArenaNoVirtual() == NULL && e_inhibit_any_policy_not_critical_ != NULL) delete e_inhibit_any_policy_not_critical_;
   e_inhibit_any_policy_not_critical_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_inhibit_any_policy_not_critical() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_inhibit_any_policy_not_critical)
+inline const ::zsearch::LintResult& Lints::e_inhibit_any_policy_not_critical() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_inhibit_any_policy_not_critical)
   return e_inhibit_any_policy_not_critical_ != NULL ? *e_inhibit_any_policy_not_critical_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_inhibit_any_policy_not_critical() {
+inline ::zsearch::LintResult* Lints::mutable_e_inhibit_any_policy_not_critical() {
   
   if (e_inhibit_any_policy_not_critical_ == NULL) {
-    e_inhibit_any_policy_not_critical_ = new ::censys_definitions::LintResult;
+    e_inhibit_any_policy_not_critical_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_inhibit_any_policy_not_critical)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_inhibit_any_policy_not_critical)
   return e_inhibit_any_policy_not_critical_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_inhibit_any_policy_not_critical() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_inhibit_any_policy_not_critical)
+inline ::zsearch::LintResult* Lints::release_e_inhibit_any_policy_not_critical() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_inhibit_any_policy_not_critical)
   
-  ::censys_definitions::LintResult* temp = e_inhibit_any_policy_not_critical_;
+  ::zsearch::LintResult* temp = e_inhibit_any_policy_not_critical_;
   e_inhibit_any_policy_not_critical_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_inhibit_any_policy_not_critical(::censys_definitions::LintResult* e_inhibit_any_policy_not_critical) {
+inline void Lints::set_allocated_e_inhibit_any_policy_not_critical(::zsearch::LintResult* e_inhibit_any_policy_not_critical) {
   delete e_inhibit_any_policy_not_critical_;
   e_inhibit_any_policy_not_critical_ = e_inhibit_any_policy_not_critical;
   if (e_inhibit_any_policy_not_critical) {
@@ -6778,10 +6778,10 @@ inline void Lints::set_allocated_e_inhibit_any_policy_not_critical(::censys_defi
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_inhibit_any_policy_not_critical)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_inhibit_any_policy_not_critical)
 }
 
-// .censys_definitions.LintResult e_invalid_certificate_version = 111;
+// .zsearch.LintResult e_invalid_certificate_version = 111;
 inline bool Lints::has_e_invalid_certificate_version() const {
   return this != internal_default_instance() && e_invalid_certificate_version_ != NULL;
 }
@@ -6789,27 +6789,27 @@ inline void Lints::clear_e_invalid_certificate_version() {
   if (GetArenaNoVirtual() == NULL && e_invalid_certificate_version_ != NULL) delete e_invalid_certificate_version_;
   e_invalid_certificate_version_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_invalid_certificate_version() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_invalid_certificate_version)
+inline const ::zsearch::LintResult& Lints::e_invalid_certificate_version() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_invalid_certificate_version)
   return e_invalid_certificate_version_ != NULL ? *e_invalid_certificate_version_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_invalid_certificate_version() {
+inline ::zsearch::LintResult* Lints::mutable_e_invalid_certificate_version() {
   
   if (e_invalid_certificate_version_ == NULL) {
-    e_invalid_certificate_version_ = new ::censys_definitions::LintResult;
+    e_invalid_certificate_version_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_invalid_certificate_version)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_invalid_certificate_version)
   return e_invalid_certificate_version_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_invalid_certificate_version() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_invalid_certificate_version)
+inline ::zsearch::LintResult* Lints::release_e_invalid_certificate_version() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_invalid_certificate_version)
   
-  ::censys_definitions::LintResult* temp = e_invalid_certificate_version_;
+  ::zsearch::LintResult* temp = e_invalid_certificate_version_;
   e_invalid_certificate_version_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_invalid_certificate_version(::censys_definitions::LintResult* e_invalid_certificate_version) {
+inline void Lints::set_allocated_e_invalid_certificate_version(::zsearch::LintResult* e_invalid_certificate_version) {
   delete e_invalid_certificate_version_;
   e_invalid_certificate_version_ = e_invalid_certificate_version;
   if (e_invalid_certificate_version) {
@@ -6817,10 +6817,10 @@ inline void Lints::set_allocated_e_invalid_certificate_version(::censys_definiti
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_invalid_certificate_version)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_invalid_certificate_version)
 }
 
-// .censys_definitions.LintResult e_issuer_field_empty = 112;
+// .zsearch.LintResult e_issuer_field_empty = 112;
 inline bool Lints::has_e_issuer_field_empty() const {
   return this != internal_default_instance() && e_issuer_field_empty_ != NULL;
 }
@@ -6828,27 +6828,27 @@ inline void Lints::clear_e_issuer_field_empty() {
   if (GetArenaNoVirtual() == NULL && e_issuer_field_empty_ != NULL) delete e_issuer_field_empty_;
   e_issuer_field_empty_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_issuer_field_empty() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_issuer_field_empty)
+inline const ::zsearch::LintResult& Lints::e_issuer_field_empty() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_issuer_field_empty)
   return e_issuer_field_empty_ != NULL ? *e_issuer_field_empty_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_issuer_field_empty() {
+inline ::zsearch::LintResult* Lints::mutable_e_issuer_field_empty() {
   
   if (e_issuer_field_empty_ == NULL) {
-    e_issuer_field_empty_ = new ::censys_definitions::LintResult;
+    e_issuer_field_empty_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_issuer_field_empty)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_issuer_field_empty)
   return e_issuer_field_empty_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_issuer_field_empty() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_issuer_field_empty)
+inline ::zsearch::LintResult* Lints::release_e_issuer_field_empty() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_issuer_field_empty)
   
-  ::censys_definitions::LintResult* temp = e_issuer_field_empty_;
+  ::zsearch::LintResult* temp = e_issuer_field_empty_;
   e_issuer_field_empty_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_issuer_field_empty(::censys_definitions::LintResult* e_issuer_field_empty) {
+inline void Lints::set_allocated_e_issuer_field_empty(::zsearch::LintResult* e_issuer_field_empty) {
   delete e_issuer_field_empty_;
   e_issuer_field_empty_ = e_issuer_field_empty;
   if (e_issuer_field_empty) {
@@ -6856,10 +6856,10 @@ inline void Lints::set_allocated_e_issuer_field_empty(::censys_definitions::Lint
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_issuer_field_empty)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_issuer_field_empty)
 }
 
-// .censys_definitions.LintResult e_name_constraint_empty = 113;
+// .zsearch.LintResult e_name_constraint_empty = 113;
 inline bool Lints::has_e_name_constraint_empty() const {
   return this != internal_default_instance() && e_name_constraint_empty_ != NULL;
 }
@@ -6867,27 +6867,27 @@ inline void Lints::clear_e_name_constraint_empty() {
   if (GetArenaNoVirtual() == NULL && e_name_constraint_empty_ != NULL) delete e_name_constraint_empty_;
   e_name_constraint_empty_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_name_constraint_empty() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_name_constraint_empty)
+inline const ::zsearch::LintResult& Lints::e_name_constraint_empty() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_name_constraint_empty)
   return e_name_constraint_empty_ != NULL ? *e_name_constraint_empty_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_name_constraint_empty() {
+inline ::zsearch::LintResult* Lints::mutable_e_name_constraint_empty() {
   
   if (e_name_constraint_empty_ == NULL) {
-    e_name_constraint_empty_ = new ::censys_definitions::LintResult;
+    e_name_constraint_empty_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_name_constraint_empty)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_name_constraint_empty)
   return e_name_constraint_empty_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_name_constraint_empty() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_name_constraint_empty)
+inline ::zsearch::LintResult* Lints::release_e_name_constraint_empty() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_name_constraint_empty)
   
-  ::censys_definitions::LintResult* temp = e_name_constraint_empty_;
+  ::zsearch::LintResult* temp = e_name_constraint_empty_;
   e_name_constraint_empty_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_name_constraint_empty(::censys_definitions::LintResult* e_name_constraint_empty) {
+inline void Lints::set_allocated_e_name_constraint_empty(::zsearch::LintResult* e_name_constraint_empty) {
   delete e_name_constraint_empty_;
   e_name_constraint_empty_ = e_name_constraint_empty;
   if (e_name_constraint_empty) {
@@ -6895,10 +6895,10 @@ inline void Lints::set_allocated_e_name_constraint_empty(::censys_definitions::L
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_name_constraint_empty)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_name_constraint_empty)
 }
 
-// .censys_definitions.LintResult e_name_constraint_maximum_not_absent = 114;
+// .zsearch.LintResult e_name_constraint_maximum_not_absent = 114;
 inline bool Lints::has_e_name_constraint_maximum_not_absent() const {
   return this != internal_default_instance() && e_name_constraint_maximum_not_absent_ != NULL;
 }
@@ -6906,27 +6906,27 @@ inline void Lints::clear_e_name_constraint_maximum_not_absent() {
   if (GetArenaNoVirtual() == NULL && e_name_constraint_maximum_not_absent_ != NULL) delete e_name_constraint_maximum_not_absent_;
   e_name_constraint_maximum_not_absent_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_name_constraint_maximum_not_absent() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_name_constraint_maximum_not_absent)
+inline const ::zsearch::LintResult& Lints::e_name_constraint_maximum_not_absent() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_name_constraint_maximum_not_absent)
   return e_name_constraint_maximum_not_absent_ != NULL ? *e_name_constraint_maximum_not_absent_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_name_constraint_maximum_not_absent() {
+inline ::zsearch::LintResult* Lints::mutable_e_name_constraint_maximum_not_absent() {
   
   if (e_name_constraint_maximum_not_absent_ == NULL) {
-    e_name_constraint_maximum_not_absent_ = new ::censys_definitions::LintResult;
+    e_name_constraint_maximum_not_absent_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_name_constraint_maximum_not_absent)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_name_constraint_maximum_not_absent)
   return e_name_constraint_maximum_not_absent_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_name_constraint_maximum_not_absent() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_name_constraint_maximum_not_absent)
+inline ::zsearch::LintResult* Lints::release_e_name_constraint_maximum_not_absent() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_name_constraint_maximum_not_absent)
   
-  ::censys_definitions::LintResult* temp = e_name_constraint_maximum_not_absent_;
+  ::zsearch::LintResult* temp = e_name_constraint_maximum_not_absent_;
   e_name_constraint_maximum_not_absent_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_name_constraint_maximum_not_absent(::censys_definitions::LintResult* e_name_constraint_maximum_not_absent) {
+inline void Lints::set_allocated_e_name_constraint_maximum_not_absent(::zsearch::LintResult* e_name_constraint_maximum_not_absent) {
   delete e_name_constraint_maximum_not_absent_;
   e_name_constraint_maximum_not_absent_ = e_name_constraint_maximum_not_absent;
   if (e_name_constraint_maximum_not_absent) {
@@ -6934,10 +6934,10 @@ inline void Lints::set_allocated_e_name_constraint_maximum_not_absent(::censys_d
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_name_constraint_maximum_not_absent)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_name_constraint_maximum_not_absent)
 }
 
-// .censys_definitions.LintResult e_name_constraint_minimum_non_zero = 115;
+// .zsearch.LintResult e_name_constraint_minimum_non_zero = 115;
 inline bool Lints::has_e_name_constraint_minimum_non_zero() const {
   return this != internal_default_instance() && e_name_constraint_minimum_non_zero_ != NULL;
 }
@@ -6945,27 +6945,27 @@ inline void Lints::clear_e_name_constraint_minimum_non_zero() {
   if (GetArenaNoVirtual() == NULL && e_name_constraint_minimum_non_zero_ != NULL) delete e_name_constraint_minimum_non_zero_;
   e_name_constraint_minimum_non_zero_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_name_constraint_minimum_non_zero() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_name_constraint_minimum_non_zero)
+inline const ::zsearch::LintResult& Lints::e_name_constraint_minimum_non_zero() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_name_constraint_minimum_non_zero)
   return e_name_constraint_minimum_non_zero_ != NULL ? *e_name_constraint_minimum_non_zero_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_name_constraint_minimum_non_zero() {
+inline ::zsearch::LintResult* Lints::mutable_e_name_constraint_minimum_non_zero() {
   
   if (e_name_constraint_minimum_non_zero_ == NULL) {
-    e_name_constraint_minimum_non_zero_ = new ::censys_definitions::LintResult;
+    e_name_constraint_minimum_non_zero_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_name_constraint_minimum_non_zero)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_name_constraint_minimum_non_zero)
   return e_name_constraint_minimum_non_zero_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_name_constraint_minimum_non_zero() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_name_constraint_minimum_non_zero)
+inline ::zsearch::LintResult* Lints::release_e_name_constraint_minimum_non_zero() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_name_constraint_minimum_non_zero)
   
-  ::censys_definitions::LintResult* temp = e_name_constraint_minimum_non_zero_;
+  ::zsearch::LintResult* temp = e_name_constraint_minimum_non_zero_;
   e_name_constraint_minimum_non_zero_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_name_constraint_minimum_non_zero(::censys_definitions::LintResult* e_name_constraint_minimum_non_zero) {
+inline void Lints::set_allocated_e_name_constraint_minimum_non_zero(::zsearch::LintResult* e_name_constraint_minimum_non_zero) {
   delete e_name_constraint_minimum_non_zero_;
   e_name_constraint_minimum_non_zero_ = e_name_constraint_minimum_non_zero;
   if (e_name_constraint_minimum_non_zero) {
@@ -6973,10 +6973,10 @@ inline void Lints::set_allocated_e_name_constraint_minimum_non_zero(::censys_def
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_name_constraint_minimum_non_zero)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_name_constraint_minimum_non_zero)
 }
 
-// .censys_definitions.LintResult w_name_constraint_on_edi_party_name = 116;
+// .zsearch.LintResult w_name_constraint_on_edi_party_name = 116;
 inline bool Lints::has_w_name_constraint_on_edi_party_name() const {
   return this != internal_default_instance() && w_name_constraint_on_edi_party_name_ != NULL;
 }
@@ -6984,27 +6984,27 @@ inline void Lints::clear_w_name_constraint_on_edi_party_name() {
   if (GetArenaNoVirtual() == NULL && w_name_constraint_on_edi_party_name_ != NULL) delete w_name_constraint_on_edi_party_name_;
   w_name_constraint_on_edi_party_name_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::w_name_constraint_on_edi_party_name() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.w_name_constraint_on_edi_party_name)
+inline const ::zsearch::LintResult& Lints::w_name_constraint_on_edi_party_name() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.w_name_constraint_on_edi_party_name)
   return w_name_constraint_on_edi_party_name_ != NULL ? *w_name_constraint_on_edi_party_name_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_w_name_constraint_on_edi_party_name() {
+inline ::zsearch::LintResult* Lints::mutable_w_name_constraint_on_edi_party_name() {
   
   if (w_name_constraint_on_edi_party_name_ == NULL) {
-    w_name_constraint_on_edi_party_name_ = new ::censys_definitions::LintResult;
+    w_name_constraint_on_edi_party_name_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.w_name_constraint_on_edi_party_name)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.w_name_constraint_on_edi_party_name)
   return w_name_constraint_on_edi_party_name_;
 }
-inline ::censys_definitions::LintResult* Lints::release_w_name_constraint_on_edi_party_name() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.w_name_constraint_on_edi_party_name)
+inline ::zsearch::LintResult* Lints::release_w_name_constraint_on_edi_party_name() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.w_name_constraint_on_edi_party_name)
   
-  ::censys_definitions::LintResult* temp = w_name_constraint_on_edi_party_name_;
+  ::zsearch::LintResult* temp = w_name_constraint_on_edi_party_name_;
   w_name_constraint_on_edi_party_name_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_w_name_constraint_on_edi_party_name(::censys_definitions::LintResult* w_name_constraint_on_edi_party_name) {
+inline void Lints::set_allocated_w_name_constraint_on_edi_party_name(::zsearch::LintResult* w_name_constraint_on_edi_party_name) {
   delete w_name_constraint_on_edi_party_name_;
   w_name_constraint_on_edi_party_name_ = w_name_constraint_on_edi_party_name;
   if (w_name_constraint_on_edi_party_name) {
@@ -7012,10 +7012,10 @@ inline void Lints::set_allocated_w_name_constraint_on_edi_party_name(::censys_de
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.w_name_constraint_on_edi_party_name)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.w_name_constraint_on_edi_party_name)
 }
 
-// .censys_definitions.LintResult w_name_constraint_on_registered_id = 117;
+// .zsearch.LintResult w_name_constraint_on_registered_id = 117;
 inline bool Lints::has_w_name_constraint_on_registered_id() const {
   return this != internal_default_instance() && w_name_constraint_on_registered_id_ != NULL;
 }
@@ -7023,27 +7023,27 @@ inline void Lints::clear_w_name_constraint_on_registered_id() {
   if (GetArenaNoVirtual() == NULL && w_name_constraint_on_registered_id_ != NULL) delete w_name_constraint_on_registered_id_;
   w_name_constraint_on_registered_id_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::w_name_constraint_on_registered_id() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.w_name_constraint_on_registered_id)
+inline const ::zsearch::LintResult& Lints::w_name_constraint_on_registered_id() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.w_name_constraint_on_registered_id)
   return w_name_constraint_on_registered_id_ != NULL ? *w_name_constraint_on_registered_id_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_w_name_constraint_on_registered_id() {
+inline ::zsearch::LintResult* Lints::mutable_w_name_constraint_on_registered_id() {
   
   if (w_name_constraint_on_registered_id_ == NULL) {
-    w_name_constraint_on_registered_id_ = new ::censys_definitions::LintResult;
+    w_name_constraint_on_registered_id_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.w_name_constraint_on_registered_id)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.w_name_constraint_on_registered_id)
   return w_name_constraint_on_registered_id_;
 }
-inline ::censys_definitions::LintResult* Lints::release_w_name_constraint_on_registered_id() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.w_name_constraint_on_registered_id)
+inline ::zsearch::LintResult* Lints::release_w_name_constraint_on_registered_id() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.w_name_constraint_on_registered_id)
   
-  ::censys_definitions::LintResult* temp = w_name_constraint_on_registered_id_;
+  ::zsearch::LintResult* temp = w_name_constraint_on_registered_id_;
   w_name_constraint_on_registered_id_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_w_name_constraint_on_registered_id(::censys_definitions::LintResult* w_name_constraint_on_registered_id) {
+inline void Lints::set_allocated_w_name_constraint_on_registered_id(::zsearch::LintResult* w_name_constraint_on_registered_id) {
   delete w_name_constraint_on_registered_id_;
   w_name_constraint_on_registered_id_ = w_name_constraint_on_registered_id;
   if (w_name_constraint_on_registered_id) {
@@ -7051,10 +7051,10 @@ inline void Lints::set_allocated_w_name_constraint_on_registered_id(::censys_def
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.w_name_constraint_on_registered_id)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.w_name_constraint_on_registered_id)
 }
 
-// .censys_definitions.LintResult w_name_constraint_on_x400 = 118;
+// .zsearch.LintResult w_name_constraint_on_x400 = 118;
 inline bool Lints::has_w_name_constraint_on_x400() const {
   return this != internal_default_instance() && w_name_constraint_on_x400_ != NULL;
 }
@@ -7062,27 +7062,27 @@ inline void Lints::clear_w_name_constraint_on_x400() {
   if (GetArenaNoVirtual() == NULL && w_name_constraint_on_x400_ != NULL) delete w_name_constraint_on_x400_;
   w_name_constraint_on_x400_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::w_name_constraint_on_x400() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.w_name_constraint_on_x400)
+inline const ::zsearch::LintResult& Lints::w_name_constraint_on_x400() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.w_name_constraint_on_x400)
   return w_name_constraint_on_x400_ != NULL ? *w_name_constraint_on_x400_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_w_name_constraint_on_x400() {
+inline ::zsearch::LintResult* Lints::mutable_w_name_constraint_on_x400() {
   
   if (w_name_constraint_on_x400_ == NULL) {
-    w_name_constraint_on_x400_ = new ::censys_definitions::LintResult;
+    w_name_constraint_on_x400_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.w_name_constraint_on_x400)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.w_name_constraint_on_x400)
   return w_name_constraint_on_x400_;
 }
-inline ::censys_definitions::LintResult* Lints::release_w_name_constraint_on_x400() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.w_name_constraint_on_x400)
+inline ::zsearch::LintResult* Lints::release_w_name_constraint_on_x400() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.w_name_constraint_on_x400)
   
-  ::censys_definitions::LintResult* temp = w_name_constraint_on_x400_;
+  ::zsearch::LintResult* temp = w_name_constraint_on_x400_;
   w_name_constraint_on_x400_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_w_name_constraint_on_x400(::censys_definitions::LintResult* w_name_constraint_on_x400) {
+inline void Lints::set_allocated_w_name_constraint_on_x400(::zsearch::LintResult* w_name_constraint_on_x400) {
   delete w_name_constraint_on_x400_;
   w_name_constraint_on_x400_ = w_name_constraint_on_x400;
   if (w_name_constraint_on_x400) {
@@ -7090,10 +7090,10 @@ inline void Lints::set_allocated_w_name_constraint_on_x400(::censys_definitions:
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.w_name_constraint_on_x400)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.w_name_constraint_on_x400)
 }
 
-// .censys_definitions.LintResult e_old_root_ca_rsa_mod_less_than_2048_bits = 119;
+// .zsearch.LintResult e_old_root_ca_rsa_mod_less_than_2048_bits = 119;
 inline bool Lints::has_e_old_root_ca_rsa_mod_less_than_2048_bits() const {
   return this != internal_default_instance() && e_old_root_ca_rsa_mod_less_than_2048_bits_ != NULL;
 }
@@ -7101,27 +7101,27 @@ inline void Lints::clear_e_old_root_ca_rsa_mod_less_than_2048_bits() {
   if (GetArenaNoVirtual() == NULL && e_old_root_ca_rsa_mod_less_than_2048_bits_ != NULL) delete e_old_root_ca_rsa_mod_less_than_2048_bits_;
   e_old_root_ca_rsa_mod_less_than_2048_bits_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_old_root_ca_rsa_mod_less_than_2048_bits() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_old_root_ca_rsa_mod_less_than_2048_bits)
+inline const ::zsearch::LintResult& Lints::e_old_root_ca_rsa_mod_less_than_2048_bits() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_old_root_ca_rsa_mod_less_than_2048_bits)
   return e_old_root_ca_rsa_mod_less_than_2048_bits_ != NULL ? *e_old_root_ca_rsa_mod_less_than_2048_bits_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_old_root_ca_rsa_mod_less_than_2048_bits() {
+inline ::zsearch::LintResult* Lints::mutable_e_old_root_ca_rsa_mod_less_than_2048_bits() {
   
   if (e_old_root_ca_rsa_mod_less_than_2048_bits_ == NULL) {
-    e_old_root_ca_rsa_mod_less_than_2048_bits_ = new ::censys_definitions::LintResult;
+    e_old_root_ca_rsa_mod_less_than_2048_bits_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_old_root_ca_rsa_mod_less_than_2048_bits)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_old_root_ca_rsa_mod_less_than_2048_bits)
   return e_old_root_ca_rsa_mod_less_than_2048_bits_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_old_root_ca_rsa_mod_less_than_2048_bits() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_old_root_ca_rsa_mod_less_than_2048_bits)
+inline ::zsearch::LintResult* Lints::release_e_old_root_ca_rsa_mod_less_than_2048_bits() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_old_root_ca_rsa_mod_less_than_2048_bits)
   
-  ::censys_definitions::LintResult* temp = e_old_root_ca_rsa_mod_less_than_2048_bits_;
+  ::zsearch::LintResult* temp = e_old_root_ca_rsa_mod_less_than_2048_bits_;
   e_old_root_ca_rsa_mod_less_than_2048_bits_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_old_root_ca_rsa_mod_less_than_2048_bits(::censys_definitions::LintResult* e_old_root_ca_rsa_mod_less_than_2048_bits) {
+inline void Lints::set_allocated_e_old_root_ca_rsa_mod_less_than_2048_bits(::zsearch::LintResult* e_old_root_ca_rsa_mod_less_than_2048_bits) {
   delete e_old_root_ca_rsa_mod_less_than_2048_bits_;
   e_old_root_ca_rsa_mod_less_than_2048_bits_ = e_old_root_ca_rsa_mod_less_than_2048_bits;
   if (e_old_root_ca_rsa_mod_less_than_2048_bits) {
@@ -7129,10 +7129,10 @@ inline void Lints::set_allocated_e_old_root_ca_rsa_mod_less_than_2048_bits(::cen
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_old_root_ca_rsa_mod_less_than_2048_bits)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_old_root_ca_rsa_mod_less_than_2048_bits)
 }
 
-// .censys_definitions.LintResult e_old_sub_ca_rsa_mod_less_than_1024_bits = 120;
+// .zsearch.LintResult e_old_sub_ca_rsa_mod_less_than_1024_bits = 120;
 inline bool Lints::has_e_old_sub_ca_rsa_mod_less_than_1024_bits() const {
   return this != internal_default_instance() && e_old_sub_ca_rsa_mod_less_than_1024_bits_ != NULL;
 }
@@ -7140,27 +7140,27 @@ inline void Lints::clear_e_old_sub_ca_rsa_mod_less_than_1024_bits() {
   if (GetArenaNoVirtual() == NULL && e_old_sub_ca_rsa_mod_less_than_1024_bits_ != NULL) delete e_old_sub_ca_rsa_mod_less_than_1024_bits_;
   e_old_sub_ca_rsa_mod_less_than_1024_bits_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_old_sub_ca_rsa_mod_less_than_1024_bits() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_old_sub_ca_rsa_mod_less_than_1024_bits)
+inline const ::zsearch::LintResult& Lints::e_old_sub_ca_rsa_mod_less_than_1024_bits() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_old_sub_ca_rsa_mod_less_than_1024_bits)
   return e_old_sub_ca_rsa_mod_less_than_1024_bits_ != NULL ? *e_old_sub_ca_rsa_mod_less_than_1024_bits_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_old_sub_ca_rsa_mod_less_than_1024_bits() {
+inline ::zsearch::LintResult* Lints::mutable_e_old_sub_ca_rsa_mod_less_than_1024_bits() {
   
   if (e_old_sub_ca_rsa_mod_less_than_1024_bits_ == NULL) {
-    e_old_sub_ca_rsa_mod_less_than_1024_bits_ = new ::censys_definitions::LintResult;
+    e_old_sub_ca_rsa_mod_less_than_1024_bits_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_old_sub_ca_rsa_mod_less_than_1024_bits)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_old_sub_ca_rsa_mod_less_than_1024_bits)
   return e_old_sub_ca_rsa_mod_less_than_1024_bits_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_old_sub_ca_rsa_mod_less_than_1024_bits() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_old_sub_ca_rsa_mod_less_than_1024_bits)
+inline ::zsearch::LintResult* Lints::release_e_old_sub_ca_rsa_mod_less_than_1024_bits() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_old_sub_ca_rsa_mod_less_than_1024_bits)
   
-  ::censys_definitions::LintResult* temp = e_old_sub_ca_rsa_mod_less_than_1024_bits_;
+  ::zsearch::LintResult* temp = e_old_sub_ca_rsa_mod_less_than_1024_bits_;
   e_old_sub_ca_rsa_mod_less_than_1024_bits_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_old_sub_ca_rsa_mod_less_than_1024_bits(::censys_definitions::LintResult* e_old_sub_ca_rsa_mod_less_than_1024_bits) {
+inline void Lints::set_allocated_e_old_sub_ca_rsa_mod_less_than_1024_bits(::zsearch::LintResult* e_old_sub_ca_rsa_mod_less_than_1024_bits) {
   delete e_old_sub_ca_rsa_mod_less_than_1024_bits_;
   e_old_sub_ca_rsa_mod_less_than_1024_bits_ = e_old_sub_ca_rsa_mod_less_than_1024_bits;
   if (e_old_sub_ca_rsa_mod_less_than_1024_bits) {
@@ -7168,10 +7168,10 @@ inline void Lints::set_allocated_e_old_sub_ca_rsa_mod_less_than_1024_bits(::cens
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_old_sub_ca_rsa_mod_less_than_1024_bits)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_old_sub_ca_rsa_mod_less_than_1024_bits)
 }
 
-// .censys_definitions.LintResult e_old_sub_cert_rsa_mod_less_than_1024_bits = 121;
+// .zsearch.LintResult e_old_sub_cert_rsa_mod_less_than_1024_bits = 121;
 inline bool Lints::has_e_old_sub_cert_rsa_mod_less_than_1024_bits() const {
   return this != internal_default_instance() && e_old_sub_cert_rsa_mod_less_than_1024_bits_ != NULL;
 }
@@ -7179,27 +7179,27 @@ inline void Lints::clear_e_old_sub_cert_rsa_mod_less_than_1024_bits() {
   if (GetArenaNoVirtual() == NULL && e_old_sub_cert_rsa_mod_less_than_1024_bits_ != NULL) delete e_old_sub_cert_rsa_mod_less_than_1024_bits_;
   e_old_sub_cert_rsa_mod_less_than_1024_bits_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_old_sub_cert_rsa_mod_less_than_1024_bits() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_old_sub_cert_rsa_mod_less_than_1024_bits)
+inline const ::zsearch::LintResult& Lints::e_old_sub_cert_rsa_mod_less_than_1024_bits() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_old_sub_cert_rsa_mod_less_than_1024_bits)
   return e_old_sub_cert_rsa_mod_less_than_1024_bits_ != NULL ? *e_old_sub_cert_rsa_mod_less_than_1024_bits_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_old_sub_cert_rsa_mod_less_than_1024_bits() {
+inline ::zsearch::LintResult* Lints::mutable_e_old_sub_cert_rsa_mod_less_than_1024_bits() {
   
   if (e_old_sub_cert_rsa_mod_less_than_1024_bits_ == NULL) {
-    e_old_sub_cert_rsa_mod_less_than_1024_bits_ = new ::censys_definitions::LintResult;
+    e_old_sub_cert_rsa_mod_less_than_1024_bits_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_old_sub_cert_rsa_mod_less_than_1024_bits)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_old_sub_cert_rsa_mod_less_than_1024_bits)
   return e_old_sub_cert_rsa_mod_less_than_1024_bits_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_old_sub_cert_rsa_mod_less_than_1024_bits() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_old_sub_cert_rsa_mod_less_than_1024_bits)
+inline ::zsearch::LintResult* Lints::release_e_old_sub_cert_rsa_mod_less_than_1024_bits() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_old_sub_cert_rsa_mod_less_than_1024_bits)
   
-  ::censys_definitions::LintResult* temp = e_old_sub_cert_rsa_mod_less_than_1024_bits_;
+  ::zsearch::LintResult* temp = e_old_sub_cert_rsa_mod_less_than_1024_bits_;
   e_old_sub_cert_rsa_mod_less_than_1024_bits_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_old_sub_cert_rsa_mod_less_than_1024_bits(::censys_definitions::LintResult* e_old_sub_cert_rsa_mod_less_than_1024_bits) {
+inline void Lints::set_allocated_e_old_sub_cert_rsa_mod_less_than_1024_bits(::zsearch::LintResult* e_old_sub_cert_rsa_mod_less_than_1024_bits) {
   delete e_old_sub_cert_rsa_mod_less_than_1024_bits_;
   e_old_sub_cert_rsa_mod_less_than_1024_bits_ = e_old_sub_cert_rsa_mod_less_than_1024_bits;
   if (e_old_sub_cert_rsa_mod_less_than_1024_bits) {
@@ -7207,10 +7207,10 @@ inline void Lints::set_allocated_e_old_sub_cert_rsa_mod_less_than_1024_bits(::ce
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_old_sub_cert_rsa_mod_less_than_1024_bits)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_old_sub_cert_rsa_mod_less_than_1024_bits)
 }
 
-// .censys_definitions.LintResult e_path_len_constraint_improperly_included = 122;
+// .zsearch.LintResult e_path_len_constraint_improperly_included = 122;
 inline bool Lints::has_e_path_len_constraint_improperly_included() const {
   return this != internal_default_instance() && e_path_len_constraint_improperly_included_ != NULL;
 }
@@ -7218,27 +7218,27 @@ inline void Lints::clear_e_path_len_constraint_improperly_included() {
   if (GetArenaNoVirtual() == NULL && e_path_len_constraint_improperly_included_ != NULL) delete e_path_len_constraint_improperly_included_;
   e_path_len_constraint_improperly_included_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_path_len_constraint_improperly_included() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_path_len_constraint_improperly_included)
+inline const ::zsearch::LintResult& Lints::e_path_len_constraint_improperly_included() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_path_len_constraint_improperly_included)
   return e_path_len_constraint_improperly_included_ != NULL ? *e_path_len_constraint_improperly_included_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_path_len_constraint_improperly_included() {
+inline ::zsearch::LintResult* Lints::mutable_e_path_len_constraint_improperly_included() {
   
   if (e_path_len_constraint_improperly_included_ == NULL) {
-    e_path_len_constraint_improperly_included_ = new ::censys_definitions::LintResult;
+    e_path_len_constraint_improperly_included_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_path_len_constraint_improperly_included)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_path_len_constraint_improperly_included)
   return e_path_len_constraint_improperly_included_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_path_len_constraint_improperly_included() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_path_len_constraint_improperly_included)
+inline ::zsearch::LintResult* Lints::release_e_path_len_constraint_improperly_included() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_path_len_constraint_improperly_included)
   
-  ::censys_definitions::LintResult* temp = e_path_len_constraint_improperly_included_;
+  ::zsearch::LintResult* temp = e_path_len_constraint_improperly_included_;
   e_path_len_constraint_improperly_included_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_path_len_constraint_improperly_included(::censys_definitions::LintResult* e_path_len_constraint_improperly_included) {
+inline void Lints::set_allocated_e_path_len_constraint_improperly_included(::zsearch::LintResult* e_path_len_constraint_improperly_included) {
   delete e_path_len_constraint_improperly_included_;
   e_path_len_constraint_improperly_included_ = e_path_len_constraint_improperly_included;
   if (e_path_len_constraint_improperly_included) {
@@ -7246,10 +7246,10 @@ inline void Lints::set_allocated_e_path_len_constraint_improperly_included(::cen
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_path_len_constraint_improperly_included)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_path_len_constraint_improperly_included)
 }
 
-// .censys_definitions.LintResult e_path_len_constraint_zero_or_less = 123;
+// .zsearch.LintResult e_path_len_constraint_zero_or_less = 123;
 inline bool Lints::has_e_path_len_constraint_zero_or_less() const {
   return this != internal_default_instance() && e_path_len_constraint_zero_or_less_ != NULL;
 }
@@ -7257,27 +7257,27 @@ inline void Lints::clear_e_path_len_constraint_zero_or_less() {
   if (GetArenaNoVirtual() == NULL && e_path_len_constraint_zero_or_less_ != NULL) delete e_path_len_constraint_zero_or_less_;
   e_path_len_constraint_zero_or_less_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_path_len_constraint_zero_or_less() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_path_len_constraint_zero_or_less)
+inline const ::zsearch::LintResult& Lints::e_path_len_constraint_zero_or_less() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_path_len_constraint_zero_or_less)
   return e_path_len_constraint_zero_or_less_ != NULL ? *e_path_len_constraint_zero_or_less_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_path_len_constraint_zero_or_less() {
+inline ::zsearch::LintResult* Lints::mutable_e_path_len_constraint_zero_or_less() {
   
   if (e_path_len_constraint_zero_or_less_ == NULL) {
-    e_path_len_constraint_zero_or_less_ = new ::censys_definitions::LintResult;
+    e_path_len_constraint_zero_or_less_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_path_len_constraint_zero_or_less)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_path_len_constraint_zero_or_less)
   return e_path_len_constraint_zero_or_less_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_path_len_constraint_zero_or_less() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_path_len_constraint_zero_or_less)
+inline ::zsearch::LintResult* Lints::release_e_path_len_constraint_zero_or_less() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_path_len_constraint_zero_or_less)
   
-  ::censys_definitions::LintResult* temp = e_path_len_constraint_zero_or_less_;
+  ::zsearch::LintResult* temp = e_path_len_constraint_zero_or_less_;
   e_path_len_constraint_zero_or_less_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_path_len_constraint_zero_or_less(::censys_definitions::LintResult* e_path_len_constraint_zero_or_less) {
+inline void Lints::set_allocated_e_path_len_constraint_zero_or_less(::zsearch::LintResult* e_path_len_constraint_zero_or_less) {
   delete e_path_len_constraint_zero_or_less_;
   e_path_len_constraint_zero_or_less_ = e_path_len_constraint_zero_or_less;
   if (e_path_len_constraint_zero_or_less) {
@@ -7285,10 +7285,10 @@ inline void Lints::set_allocated_e_path_len_constraint_zero_or_less(::censys_def
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_path_len_constraint_zero_or_less)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_path_len_constraint_zero_or_less)
 }
 
-// .censys_definitions.LintResult e_public_key_type_not_allowed = 124;
+// .zsearch.LintResult e_public_key_type_not_allowed = 124;
 inline bool Lints::has_e_public_key_type_not_allowed() const {
   return this != internal_default_instance() && e_public_key_type_not_allowed_ != NULL;
 }
@@ -7296,27 +7296,27 @@ inline void Lints::clear_e_public_key_type_not_allowed() {
   if (GetArenaNoVirtual() == NULL && e_public_key_type_not_allowed_ != NULL) delete e_public_key_type_not_allowed_;
   e_public_key_type_not_allowed_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_public_key_type_not_allowed() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_public_key_type_not_allowed)
+inline const ::zsearch::LintResult& Lints::e_public_key_type_not_allowed() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_public_key_type_not_allowed)
   return e_public_key_type_not_allowed_ != NULL ? *e_public_key_type_not_allowed_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_public_key_type_not_allowed() {
+inline ::zsearch::LintResult* Lints::mutable_e_public_key_type_not_allowed() {
   
   if (e_public_key_type_not_allowed_ == NULL) {
-    e_public_key_type_not_allowed_ = new ::censys_definitions::LintResult;
+    e_public_key_type_not_allowed_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_public_key_type_not_allowed)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_public_key_type_not_allowed)
   return e_public_key_type_not_allowed_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_public_key_type_not_allowed() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_public_key_type_not_allowed)
+inline ::zsearch::LintResult* Lints::release_e_public_key_type_not_allowed() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_public_key_type_not_allowed)
   
-  ::censys_definitions::LintResult* temp = e_public_key_type_not_allowed_;
+  ::zsearch::LintResult* temp = e_public_key_type_not_allowed_;
   e_public_key_type_not_allowed_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_public_key_type_not_allowed(::censys_definitions::LintResult* e_public_key_type_not_allowed) {
+inline void Lints::set_allocated_e_public_key_type_not_allowed(::zsearch::LintResult* e_public_key_type_not_allowed) {
   delete e_public_key_type_not_allowed_;
   e_public_key_type_not_allowed_ = e_public_key_type_not_allowed;
   if (e_public_key_type_not_allowed) {
@@ -7324,10 +7324,10 @@ inline void Lints::set_allocated_e_public_key_type_not_allowed(::censys_definiti
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_public_key_type_not_allowed)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_public_key_type_not_allowed)
 }
 
-// .censys_definitions.LintResult w_root_ca_basic_constraints_path_len_constraint_field_present = 125;
+// .zsearch.LintResult w_root_ca_basic_constraints_path_len_constraint_field_present = 125;
 inline bool Lints::has_w_root_ca_basic_constraints_path_len_constraint_field_present() const {
   return this != internal_default_instance() && w_root_ca_basic_constraints_path_len_constraint_field_present_ != NULL;
 }
@@ -7335,27 +7335,27 @@ inline void Lints::clear_w_root_ca_basic_constraints_path_len_constraint_field_p
   if (GetArenaNoVirtual() == NULL && w_root_ca_basic_constraints_path_len_constraint_field_present_ != NULL) delete w_root_ca_basic_constraints_path_len_constraint_field_present_;
   w_root_ca_basic_constraints_path_len_constraint_field_present_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::w_root_ca_basic_constraints_path_len_constraint_field_present() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.w_root_ca_basic_constraints_path_len_constraint_field_present)
+inline const ::zsearch::LintResult& Lints::w_root_ca_basic_constraints_path_len_constraint_field_present() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.w_root_ca_basic_constraints_path_len_constraint_field_present)
   return w_root_ca_basic_constraints_path_len_constraint_field_present_ != NULL ? *w_root_ca_basic_constraints_path_len_constraint_field_present_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_w_root_ca_basic_constraints_path_len_constraint_field_present() {
+inline ::zsearch::LintResult* Lints::mutable_w_root_ca_basic_constraints_path_len_constraint_field_present() {
   
   if (w_root_ca_basic_constraints_path_len_constraint_field_present_ == NULL) {
-    w_root_ca_basic_constraints_path_len_constraint_field_present_ = new ::censys_definitions::LintResult;
+    w_root_ca_basic_constraints_path_len_constraint_field_present_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.w_root_ca_basic_constraints_path_len_constraint_field_present)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.w_root_ca_basic_constraints_path_len_constraint_field_present)
   return w_root_ca_basic_constraints_path_len_constraint_field_present_;
 }
-inline ::censys_definitions::LintResult* Lints::release_w_root_ca_basic_constraints_path_len_constraint_field_present() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.w_root_ca_basic_constraints_path_len_constraint_field_present)
+inline ::zsearch::LintResult* Lints::release_w_root_ca_basic_constraints_path_len_constraint_field_present() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.w_root_ca_basic_constraints_path_len_constraint_field_present)
   
-  ::censys_definitions::LintResult* temp = w_root_ca_basic_constraints_path_len_constraint_field_present_;
+  ::zsearch::LintResult* temp = w_root_ca_basic_constraints_path_len_constraint_field_present_;
   w_root_ca_basic_constraints_path_len_constraint_field_present_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_w_root_ca_basic_constraints_path_len_constraint_field_present(::censys_definitions::LintResult* w_root_ca_basic_constraints_path_len_constraint_field_present) {
+inline void Lints::set_allocated_w_root_ca_basic_constraints_path_len_constraint_field_present(::zsearch::LintResult* w_root_ca_basic_constraints_path_len_constraint_field_present) {
   delete w_root_ca_basic_constraints_path_len_constraint_field_present_;
   w_root_ca_basic_constraints_path_len_constraint_field_present_ = w_root_ca_basic_constraints_path_len_constraint_field_present;
   if (w_root_ca_basic_constraints_path_len_constraint_field_present) {
@@ -7363,10 +7363,10 @@ inline void Lints::set_allocated_w_root_ca_basic_constraints_path_len_constraint
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.w_root_ca_basic_constraints_path_len_constraint_field_present)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.w_root_ca_basic_constraints_path_len_constraint_field_present)
 }
 
-// .censys_definitions.LintResult w_root_ca_contains_cert_policy = 126;
+// .zsearch.LintResult w_root_ca_contains_cert_policy = 126;
 inline bool Lints::has_w_root_ca_contains_cert_policy() const {
   return this != internal_default_instance() && w_root_ca_contains_cert_policy_ != NULL;
 }
@@ -7374,27 +7374,27 @@ inline void Lints::clear_w_root_ca_contains_cert_policy() {
   if (GetArenaNoVirtual() == NULL && w_root_ca_contains_cert_policy_ != NULL) delete w_root_ca_contains_cert_policy_;
   w_root_ca_contains_cert_policy_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::w_root_ca_contains_cert_policy() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.w_root_ca_contains_cert_policy)
+inline const ::zsearch::LintResult& Lints::w_root_ca_contains_cert_policy() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.w_root_ca_contains_cert_policy)
   return w_root_ca_contains_cert_policy_ != NULL ? *w_root_ca_contains_cert_policy_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_w_root_ca_contains_cert_policy() {
+inline ::zsearch::LintResult* Lints::mutable_w_root_ca_contains_cert_policy() {
   
   if (w_root_ca_contains_cert_policy_ == NULL) {
-    w_root_ca_contains_cert_policy_ = new ::censys_definitions::LintResult;
+    w_root_ca_contains_cert_policy_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.w_root_ca_contains_cert_policy)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.w_root_ca_contains_cert_policy)
   return w_root_ca_contains_cert_policy_;
 }
-inline ::censys_definitions::LintResult* Lints::release_w_root_ca_contains_cert_policy() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.w_root_ca_contains_cert_policy)
+inline ::zsearch::LintResult* Lints::release_w_root_ca_contains_cert_policy() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.w_root_ca_contains_cert_policy)
   
-  ::censys_definitions::LintResult* temp = w_root_ca_contains_cert_policy_;
+  ::zsearch::LintResult* temp = w_root_ca_contains_cert_policy_;
   w_root_ca_contains_cert_policy_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_w_root_ca_contains_cert_policy(::censys_definitions::LintResult* w_root_ca_contains_cert_policy) {
+inline void Lints::set_allocated_w_root_ca_contains_cert_policy(::zsearch::LintResult* w_root_ca_contains_cert_policy) {
   delete w_root_ca_contains_cert_policy_;
   w_root_ca_contains_cert_policy_ = w_root_ca_contains_cert_policy;
   if (w_root_ca_contains_cert_policy) {
@@ -7402,10 +7402,10 @@ inline void Lints::set_allocated_w_root_ca_contains_cert_policy(::censys_definit
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.w_root_ca_contains_cert_policy)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.w_root_ca_contains_cert_policy)
 }
 
-// .censys_definitions.LintResult e_root_ca_extended_key_usage_present = 127;
+// .zsearch.LintResult e_root_ca_extended_key_usage_present = 127;
 inline bool Lints::has_e_root_ca_extended_key_usage_present() const {
   return this != internal_default_instance() && e_root_ca_extended_key_usage_present_ != NULL;
 }
@@ -7413,27 +7413,27 @@ inline void Lints::clear_e_root_ca_extended_key_usage_present() {
   if (GetArenaNoVirtual() == NULL && e_root_ca_extended_key_usage_present_ != NULL) delete e_root_ca_extended_key_usage_present_;
   e_root_ca_extended_key_usage_present_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_root_ca_extended_key_usage_present() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_root_ca_extended_key_usage_present)
+inline const ::zsearch::LintResult& Lints::e_root_ca_extended_key_usage_present() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_root_ca_extended_key_usage_present)
   return e_root_ca_extended_key_usage_present_ != NULL ? *e_root_ca_extended_key_usage_present_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_root_ca_extended_key_usage_present() {
+inline ::zsearch::LintResult* Lints::mutable_e_root_ca_extended_key_usage_present() {
   
   if (e_root_ca_extended_key_usage_present_ == NULL) {
-    e_root_ca_extended_key_usage_present_ = new ::censys_definitions::LintResult;
+    e_root_ca_extended_key_usage_present_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_root_ca_extended_key_usage_present)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_root_ca_extended_key_usage_present)
   return e_root_ca_extended_key_usage_present_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_root_ca_extended_key_usage_present() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_root_ca_extended_key_usage_present)
+inline ::zsearch::LintResult* Lints::release_e_root_ca_extended_key_usage_present() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_root_ca_extended_key_usage_present)
   
-  ::censys_definitions::LintResult* temp = e_root_ca_extended_key_usage_present_;
+  ::zsearch::LintResult* temp = e_root_ca_extended_key_usage_present_;
   e_root_ca_extended_key_usage_present_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_root_ca_extended_key_usage_present(::censys_definitions::LintResult* e_root_ca_extended_key_usage_present) {
+inline void Lints::set_allocated_e_root_ca_extended_key_usage_present(::zsearch::LintResult* e_root_ca_extended_key_usage_present) {
   delete e_root_ca_extended_key_usage_present_;
   e_root_ca_extended_key_usage_present_ = e_root_ca_extended_key_usage_present;
   if (e_root_ca_extended_key_usage_present) {
@@ -7441,10 +7441,10 @@ inline void Lints::set_allocated_e_root_ca_extended_key_usage_present(::censys_d
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_root_ca_extended_key_usage_present)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_root_ca_extended_key_usage_present)
 }
 
-// .censys_definitions.LintResult e_rsa_exp_negative = 128;
+// .zsearch.LintResult e_rsa_exp_negative = 128;
 inline bool Lints::has_e_rsa_exp_negative() const {
   return this != internal_default_instance() && e_rsa_exp_negative_ != NULL;
 }
@@ -7452,27 +7452,27 @@ inline void Lints::clear_e_rsa_exp_negative() {
   if (GetArenaNoVirtual() == NULL && e_rsa_exp_negative_ != NULL) delete e_rsa_exp_negative_;
   e_rsa_exp_negative_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_rsa_exp_negative() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_rsa_exp_negative)
+inline const ::zsearch::LintResult& Lints::e_rsa_exp_negative() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_rsa_exp_negative)
   return e_rsa_exp_negative_ != NULL ? *e_rsa_exp_negative_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_rsa_exp_negative() {
+inline ::zsearch::LintResult* Lints::mutable_e_rsa_exp_negative() {
   
   if (e_rsa_exp_negative_ == NULL) {
-    e_rsa_exp_negative_ = new ::censys_definitions::LintResult;
+    e_rsa_exp_negative_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_rsa_exp_negative)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_rsa_exp_negative)
   return e_rsa_exp_negative_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_rsa_exp_negative() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_rsa_exp_negative)
+inline ::zsearch::LintResult* Lints::release_e_rsa_exp_negative() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_rsa_exp_negative)
   
-  ::censys_definitions::LintResult* temp = e_rsa_exp_negative_;
+  ::zsearch::LintResult* temp = e_rsa_exp_negative_;
   e_rsa_exp_negative_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_rsa_exp_negative(::censys_definitions::LintResult* e_rsa_exp_negative) {
+inline void Lints::set_allocated_e_rsa_exp_negative(::zsearch::LintResult* e_rsa_exp_negative) {
   delete e_rsa_exp_negative_;
   e_rsa_exp_negative_ = e_rsa_exp_negative;
   if (e_rsa_exp_negative) {
@@ -7480,10 +7480,10 @@ inline void Lints::set_allocated_e_rsa_exp_negative(::censys_definitions::LintRe
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_rsa_exp_negative)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_rsa_exp_negative)
 }
 
-// .censys_definitions.LintResult w_rsa_mod_factors_smaller_than_752 = 129;
+// .zsearch.LintResult w_rsa_mod_factors_smaller_than_752 = 129;
 inline bool Lints::has_w_rsa_mod_factors_smaller_than_752() const {
   return this != internal_default_instance() && w_rsa_mod_factors_smaller_than_752_ != NULL;
 }
@@ -7491,27 +7491,27 @@ inline void Lints::clear_w_rsa_mod_factors_smaller_than_752() {
   if (GetArenaNoVirtual() == NULL && w_rsa_mod_factors_smaller_than_752_ != NULL) delete w_rsa_mod_factors_smaller_than_752_;
   w_rsa_mod_factors_smaller_than_752_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::w_rsa_mod_factors_smaller_than_752() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.w_rsa_mod_factors_smaller_than_752)
+inline const ::zsearch::LintResult& Lints::w_rsa_mod_factors_smaller_than_752() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.w_rsa_mod_factors_smaller_than_752)
   return w_rsa_mod_factors_smaller_than_752_ != NULL ? *w_rsa_mod_factors_smaller_than_752_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_w_rsa_mod_factors_smaller_than_752() {
+inline ::zsearch::LintResult* Lints::mutable_w_rsa_mod_factors_smaller_than_752() {
   
   if (w_rsa_mod_factors_smaller_than_752_ == NULL) {
-    w_rsa_mod_factors_smaller_than_752_ = new ::censys_definitions::LintResult;
+    w_rsa_mod_factors_smaller_than_752_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.w_rsa_mod_factors_smaller_than_752)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.w_rsa_mod_factors_smaller_than_752)
   return w_rsa_mod_factors_smaller_than_752_;
 }
-inline ::censys_definitions::LintResult* Lints::release_w_rsa_mod_factors_smaller_than_752() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.w_rsa_mod_factors_smaller_than_752)
+inline ::zsearch::LintResult* Lints::release_w_rsa_mod_factors_smaller_than_752() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.w_rsa_mod_factors_smaller_than_752)
   
-  ::censys_definitions::LintResult* temp = w_rsa_mod_factors_smaller_than_752_;
+  ::zsearch::LintResult* temp = w_rsa_mod_factors_smaller_than_752_;
   w_rsa_mod_factors_smaller_than_752_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_w_rsa_mod_factors_smaller_than_752(::censys_definitions::LintResult* w_rsa_mod_factors_smaller_than_752) {
+inline void Lints::set_allocated_w_rsa_mod_factors_smaller_than_752(::zsearch::LintResult* w_rsa_mod_factors_smaller_than_752) {
   delete w_rsa_mod_factors_smaller_than_752_;
   w_rsa_mod_factors_smaller_than_752_ = w_rsa_mod_factors_smaller_than_752;
   if (w_rsa_mod_factors_smaller_than_752) {
@@ -7519,10 +7519,10 @@ inline void Lints::set_allocated_w_rsa_mod_factors_smaller_than_752(::censys_def
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.w_rsa_mod_factors_smaller_than_752)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.w_rsa_mod_factors_smaller_than_752)
 }
 
-// .censys_definitions.LintResult e_rsa_mod_less_than_2048_bits = 130;
+// .zsearch.LintResult e_rsa_mod_less_than_2048_bits = 130;
 inline bool Lints::has_e_rsa_mod_less_than_2048_bits() const {
   return this != internal_default_instance() && e_rsa_mod_less_than_2048_bits_ != NULL;
 }
@@ -7530,27 +7530,27 @@ inline void Lints::clear_e_rsa_mod_less_than_2048_bits() {
   if (GetArenaNoVirtual() == NULL && e_rsa_mod_less_than_2048_bits_ != NULL) delete e_rsa_mod_less_than_2048_bits_;
   e_rsa_mod_less_than_2048_bits_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_rsa_mod_less_than_2048_bits() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_rsa_mod_less_than_2048_bits)
+inline const ::zsearch::LintResult& Lints::e_rsa_mod_less_than_2048_bits() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_rsa_mod_less_than_2048_bits)
   return e_rsa_mod_less_than_2048_bits_ != NULL ? *e_rsa_mod_less_than_2048_bits_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_rsa_mod_less_than_2048_bits() {
+inline ::zsearch::LintResult* Lints::mutable_e_rsa_mod_less_than_2048_bits() {
   
   if (e_rsa_mod_less_than_2048_bits_ == NULL) {
-    e_rsa_mod_less_than_2048_bits_ = new ::censys_definitions::LintResult;
+    e_rsa_mod_less_than_2048_bits_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_rsa_mod_less_than_2048_bits)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_rsa_mod_less_than_2048_bits)
   return e_rsa_mod_less_than_2048_bits_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_rsa_mod_less_than_2048_bits() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_rsa_mod_less_than_2048_bits)
+inline ::zsearch::LintResult* Lints::release_e_rsa_mod_less_than_2048_bits() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_rsa_mod_less_than_2048_bits)
   
-  ::censys_definitions::LintResult* temp = e_rsa_mod_less_than_2048_bits_;
+  ::zsearch::LintResult* temp = e_rsa_mod_less_than_2048_bits_;
   e_rsa_mod_less_than_2048_bits_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_rsa_mod_less_than_2048_bits(::censys_definitions::LintResult* e_rsa_mod_less_than_2048_bits) {
+inline void Lints::set_allocated_e_rsa_mod_less_than_2048_bits(::zsearch::LintResult* e_rsa_mod_less_than_2048_bits) {
   delete e_rsa_mod_less_than_2048_bits_;
   e_rsa_mod_less_than_2048_bits_ = e_rsa_mod_less_than_2048_bits;
   if (e_rsa_mod_less_than_2048_bits) {
@@ -7558,10 +7558,10 @@ inline void Lints::set_allocated_e_rsa_mod_less_than_2048_bits(::censys_definiti
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_rsa_mod_less_than_2048_bits)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_rsa_mod_less_than_2048_bits)
 }
 
-// .censys_definitions.LintResult w_rsa_mod_not_odd = 131;
+// .zsearch.LintResult w_rsa_mod_not_odd = 131;
 inline bool Lints::has_w_rsa_mod_not_odd() const {
   return this != internal_default_instance() && w_rsa_mod_not_odd_ != NULL;
 }
@@ -7569,27 +7569,27 @@ inline void Lints::clear_w_rsa_mod_not_odd() {
   if (GetArenaNoVirtual() == NULL && w_rsa_mod_not_odd_ != NULL) delete w_rsa_mod_not_odd_;
   w_rsa_mod_not_odd_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::w_rsa_mod_not_odd() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.w_rsa_mod_not_odd)
+inline const ::zsearch::LintResult& Lints::w_rsa_mod_not_odd() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.w_rsa_mod_not_odd)
   return w_rsa_mod_not_odd_ != NULL ? *w_rsa_mod_not_odd_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_w_rsa_mod_not_odd() {
+inline ::zsearch::LintResult* Lints::mutable_w_rsa_mod_not_odd() {
   
   if (w_rsa_mod_not_odd_ == NULL) {
-    w_rsa_mod_not_odd_ = new ::censys_definitions::LintResult;
+    w_rsa_mod_not_odd_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.w_rsa_mod_not_odd)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.w_rsa_mod_not_odd)
   return w_rsa_mod_not_odd_;
 }
-inline ::censys_definitions::LintResult* Lints::release_w_rsa_mod_not_odd() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.w_rsa_mod_not_odd)
+inline ::zsearch::LintResult* Lints::release_w_rsa_mod_not_odd() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.w_rsa_mod_not_odd)
   
-  ::censys_definitions::LintResult* temp = w_rsa_mod_not_odd_;
+  ::zsearch::LintResult* temp = w_rsa_mod_not_odd_;
   w_rsa_mod_not_odd_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_w_rsa_mod_not_odd(::censys_definitions::LintResult* w_rsa_mod_not_odd) {
+inline void Lints::set_allocated_w_rsa_mod_not_odd(::zsearch::LintResult* w_rsa_mod_not_odd) {
   delete w_rsa_mod_not_odd_;
   w_rsa_mod_not_odd_ = w_rsa_mod_not_odd;
   if (w_rsa_mod_not_odd) {
@@ -7597,10 +7597,10 @@ inline void Lints::set_allocated_w_rsa_mod_not_odd(::censys_definitions::LintRes
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.w_rsa_mod_not_odd)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.w_rsa_mod_not_odd)
 }
 
-// .censys_definitions.LintResult w_rsa_public_exponent_not_in_range = 132;
+// .zsearch.LintResult w_rsa_public_exponent_not_in_range = 132;
 inline bool Lints::has_w_rsa_public_exponent_not_in_range() const {
   return this != internal_default_instance() && w_rsa_public_exponent_not_in_range_ != NULL;
 }
@@ -7608,27 +7608,27 @@ inline void Lints::clear_w_rsa_public_exponent_not_in_range() {
   if (GetArenaNoVirtual() == NULL && w_rsa_public_exponent_not_in_range_ != NULL) delete w_rsa_public_exponent_not_in_range_;
   w_rsa_public_exponent_not_in_range_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::w_rsa_public_exponent_not_in_range() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.w_rsa_public_exponent_not_in_range)
+inline const ::zsearch::LintResult& Lints::w_rsa_public_exponent_not_in_range() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.w_rsa_public_exponent_not_in_range)
   return w_rsa_public_exponent_not_in_range_ != NULL ? *w_rsa_public_exponent_not_in_range_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_w_rsa_public_exponent_not_in_range() {
+inline ::zsearch::LintResult* Lints::mutable_w_rsa_public_exponent_not_in_range() {
   
   if (w_rsa_public_exponent_not_in_range_ == NULL) {
-    w_rsa_public_exponent_not_in_range_ = new ::censys_definitions::LintResult;
+    w_rsa_public_exponent_not_in_range_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.w_rsa_public_exponent_not_in_range)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.w_rsa_public_exponent_not_in_range)
   return w_rsa_public_exponent_not_in_range_;
 }
-inline ::censys_definitions::LintResult* Lints::release_w_rsa_public_exponent_not_in_range() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.w_rsa_public_exponent_not_in_range)
+inline ::zsearch::LintResult* Lints::release_w_rsa_public_exponent_not_in_range() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.w_rsa_public_exponent_not_in_range)
   
-  ::censys_definitions::LintResult* temp = w_rsa_public_exponent_not_in_range_;
+  ::zsearch::LintResult* temp = w_rsa_public_exponent_not_in_range_;
   w_rsa_public_exponent_not_in_range_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_w_rsa_public_exponent_not_in_range(::censys_definitions::LintResult* w_rsa_public_exponent_not_in_range) {
+inline void Lints::set_allocated_w_rsa_public_exponent_not_in_range(::zsearch::LintResult* w_rsa_public_exponent_not_in_range) {
   delete w_rsa_public_exponent_not_in_range_;
   w_rsa_public_exponent_not_in_range_ = w_rsa_public_exponent_not_in_range;
   if (w_rsa_public_exponent_not_in_range) {
@@ -7636,10 +7636,10 @@ inline void Lints::set_allocated_w_rsa_public_exponent_not_in_range(::censys_def
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.w_rsa_public_exponent_not_in_range)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.w_rsa_public_exponent_not_in_range)
 }
 
-// .censys_definitions.LintResult e_rsa_public_exponent_not_odd = 133;
+// .zsearch.LintResult e_rsa_public_exponent_not_odd = 133;
 inline bool Lints::has_e_rsa_public_exponent_not_odd() const {
   return this != internal_default_instance() && e_rsa_public_exponent_not_odd_ != NULL;
 }
@@ -7647,27 +7647,27 @@ inline void Lints::clear_e_rsa_public_exponent_not_odd() {
   if (GetArenaNoVirtual() == NULL && e_rsa_public_exponent_not_odd_ != NULL) delete e_rsa_public_exponent_not_odd_;
   e_rsa_public_exponent_not_odd_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_rsa_public_exponent_not_odd() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_rsa_public_exponent_not_odd)
+inline const ::zsearch::LintResult& Lints::e_rsa_public_exponent_not_odd() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_rsa_public_exponent_not_odd)
   return e_rsa_public_exponent_not_odd_ != NULL ? *e_rsa_public_exponent_not_odd_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_rsa_public_exponent_not_odd() {
+inline ::zsearch::LintResult* Lints::mutable_e_rsa_public_exponent_not_odd() {
   
   if (e_rsa_public_exponent_not_odd_ == NULL) {
-    e_rsa_public_exponent_not_odd_ = new ::censys_definitions::LintResult;
+    e_rsa_public_exponent_not_odd_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_rsa_public_exponent_not_odd)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_rsa_public_exponent_not_odd)
   return e_rsa_public_exponent_not_odd_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_rsa_public_exponent_not_odd() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_rsa_public_exponent_not_odd)
+inline ::zsearch::LintResult* Lints::release_e_rsa_public_exponent_not_odd() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_rsa_public_exponent_not_odd)
   
-  ::censys_definitions::LintResult* temp = e_rsa_public_exponent_not_odd_;
+  ::zsearch::LintResult* temp = e_rsa_public_exponent_not_odd_;
   e_rsa_public_exponent_not_odd_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_rsa_public_exponent_not_odd(::censys_definitions::LintResult* e_rsa_public_exponent_not_odd) {
+inline void Lints::set_allocated_e_rsa_public_exponent_not_odd(::zsearch::LintResult* e_rsa_public_exponent_not_odd) {
   delete e_rsa_public_exponent_not_odd_;
   e_rsa_public_exponent_not_odd_ = e_rsa_public_exponent_not_odd;
   if (e_rsa_public_exponent_not_odd) {
@@ -7675,10 +7675,10 @@ inline void Lints::set_allocated_e_rsa_public_exponent_not_odd(::censys_definiti
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_rsa_public_exponent_not_odd)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_rsa_public_exponent_not_odd)
 }
 
-// .censys_definitions.LintResult e_rsa_public_exponent_too_small = 134;
+// .zsearch.LintResult e_rsa_public_exponent_too_small = 134;
 inline bool Lints::has_e_rsa_public_exponent_too_small() const {
   return this != internal_default_instance() && e_rsa_public_exponent_too_small_ != NULL;
 }
@@ -7686,27 +7686,27 @@ inline void Lints::clear_e_rsa_public_exponent_too_small() {
   if (GetArenaNoVirtual() == NULL && e_rsa_public_exponent_too_small_ != NULL) delete e_rsa_public_exponent_too_small_;
   e_rsa_public_exponent_too_small_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_rsa_public_exponent_too_small() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_rsa_public_exponent_too_small)
+inline const ::zsearch::LintResult& Lints::e_rsa_public_exponent_too_small() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_rsa_public_exponent_too_small)
   return e_rsa_public_exponent_too_small_ != NULL ? *e_rsa_public_exponent_too_small_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_rsa_public_exponent_too_small() {
+inline ::zsearch::LintResult* Lints::mutable_e_rsa_public_exponent_too_small() {
   
   if (e_rsa_public_exponent_too_small_ == NULL) {
-    e_rsa_public_exponent_too_small_ = new ::censys_definitions::LintResult;
+    e_rsa_public_exponent_too_small_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_rsa_public_exponent_too_small)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_rsa_public_exponent_too_small)
   return e_rsa_public_exponent_too_small_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_rsa_public_exponent_too_small() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_rsa_public_exponent_too_small)
+inline ::zsearch::LintResult* Lints::release_e_rsa_public_exponent_too_small() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_rsa_public_exponent_too_small)
   
-  ::censys_definitions::LintResult* temp = e_rsa_public_exponent_too_small_;
+  ::zsearch::LintResult* temp = e_rsa_public_exponent_too_small_;
   e_rsa_public_exponent_too_small_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_rsa_public_exponent_too_small(::censys_definitions::LintResult* e_rsa_public_exponent_too_small) {
+inline void Lints::set_allocated_e_rsa_public_exponent_too_small(::zsearch::LintResult* e_rsa_public_exponent_too_small) {
   delete e_rsa_public_exponent_too_small_;
   e_rsa_public_exponent_too_small_ = e_rsa_public_exponent_too_small;
   if (e_rsa_public_exponent_too_small) {
@@ -7714,10 +7714,10 @@ inline void Lints::set_allocated_e_rsa_public_exponent_too_small(::censys_defini
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_rsa_public_exponent_too_small)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_rsa_public_exponent_too_small)
 }
 
-// .censys_definitions.LintResult e_san_dns_name_includes_null_char = 135;
+// .zsearch.LintResult e_san_dns_name_includes_null_char = 135;
 inline bool Lints::has_e_san_dns_name_includes_null_char() const {
   return this != internal_default_instance() && e_san_dns_name_includes_null_char_ != NULL;
 }
@@ -7725,27 +7725,27 @@ inline void Lints::clear_e_san_dns_name_includes_null_char() {
   if (GetArenaNoVirtual() == NULL && e_san_dns_name_includes_null_char_ != NULL) delete e_san_dns_name_includes_null_char_;
   e_san_dns_name_includes_null_char_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_san_dns_name_includes_null_char() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_san_dns_name_includes_null_char)
+inline const ::zsearch::LintResult& Lints::e_san_dns_name_includes_null_char() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_san_dns_name_includes_null_char)
   return e_san_dns_name_includes_null_char_ != NULL ? *e_san_dns_name_includes_null_char_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_san_dns_name_includes_null_char() {
+inline ::zsearch::LintResult* Lints::mutable_e_san_dns_name_includes_null_char() {
   
   if (e_san_dns_name_includes_null_char_ == NULL) {
-    e_san_dns_name_includes_null_char_ = new ::censys_definitions::LintResult;
+    e_san_dns_name_includes_null_char_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_san_dns_name_includes_null_char)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_san_dns_name_includes_null_char)
   return e_san_dns_name_includes_null_char_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_san_dns_name_includes_null_char() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_san_dns_name_includes_null_char)
+inline ::zsearch::LintResult* Lints::release_e_san_dns_name_includes_null_char() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_san_dns_name_includes_null_char)
   
-  ::censys_definitions::LintResult* temp = e_san_dns_name_includes_null_char_;
+  ::zsearch::LintResult* temp = e_san_dns_name_includes_null_char_;
   e_san_dns_name_includes_null_char_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_san_dns_name_includes_null_char(::censys_definitions::LintResult* e_san_dns_name_includes_null_char) {
+inline void Lints::set_allocated_e_san_dns_name_includes_null_char(::zsearch::LintResult* e_san_dns_name_includes_null_char) {
   delete e_san_dns_name_includes_null_char_;
   e_san_dns_name_includes_null_char_ = e_san_dns_name_includes_null_char;
   if (e_san_dns_name_includes_null_char) {
@@ -7753,10 +7753,10 @@ inline void Lints::set_allocated_e_san_dns_name_includes_null_char(::censys_defi
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_san_dns_name_includes_null_char)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_san_dns_name_includes_null_char)
 }
 
-// .censys_definitions.LintResult e_san_dns_name_starts_with_period = 136;
+// .zsearch.LintResult e_san_dns_name_starts_with_period = 136;
 inline bool Lints::has_e_san_dns_name_starts_with_period() const {
   return this != internal_default_instance() && e_san_dns_name_starts_with_period_ != NULL;
 }
@@ -7764,27 +7764,27 @@ inline void Lints::clear_e_san_dns_name_starts_with_period() {
   if (GetArenaNoVirtual() == NULL && e_san_dns_name_starts_with_period_ != NULL) delete e_san_dns_name_starts_with_period_;
   e_san_dns_name_starts_with_period_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_san_dns_name_starts_with_period() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_san_dns_name_starts_with_period)
+inline const ::zsearch::LintResult& Lints::e_san_dns_name_starts_with_period() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_san_dns_name_starts_with_period)
   return e_san_dns_name_starts_with_period_ != NULL ? *e_san_dns_name_starts_with_period_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_san_dns_name_starts_with_period() {
+inline ::zsearch::LintResult* Lints::mutable_e_san_dns_name_starts_with_period() {
   
   if (e_san_dns_name_starts_with_period_ == NULL) {
-    e_san_dns_name_starts_with_period_ = new ::censys_definitions::LintResult;
+    e_san_dns_name_starts_with_period_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_san_dns_name_starts_with_period)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_san_dns_name_starts_with_period)
   return e_san_dns_name_starts_with_period_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_san_dns_name_starts_with_period() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_san_dns_name_starts_with_period)
+inline ::zsearch::LintResult* Lints::release_e_san_dns_name_starts_with_period() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_san_dns_name_starts_with_period)
   
-  ::censys_definitions::LintResult* temp = e_san_dns_name_starts_with_period_;
+  ::zsearch::LintResult* temp = e_san_dns_name_starts_with_period_;
   e_san_dns_name_starts_with_period_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_san_dns_name_starts_with_period(::censys_definitions::LintResult* e_san_dns_name_starts_with_period) {
+inline void Lints::set_allocated_e_san_dns_name_starts_with_period(::zsearch::LintResult* e_san_dns_name_starts_with_period) {
   delete e_san_dns_name_starts_with_period_;
   e_san_dns_name_starts_with_period_ = e_san_dns_name_starts_with_period;
   if (e_san_dns_name_starts_with_period) {
@@ -7792,10 +7792,10 @@ inline void Lints::set_allocated_e_san_dns_name_starts_with_period(::censys_defi
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_san_dns_name_starts_with_period)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_san_dns_name_starts_with_period)
 }
 
-// .censys_definitions.LintResult w_san_iana_pub_suffix_empty = 137;
+// .zsearch.LintResult w_san_iana_pub_suffix_empty = 137;
 inline bool Lints::has_w_san_iana_pub_suffix_empty() const {
   return this != internal_default_instance() && w_san_iana_pub_suffix_empty_ != NULL;
 }
@@ -7803,27 +7803,27 @@ inline void Lints::clear_w_san_iana_pub_suffix_empty() {
   if (GetArenaNoVirtual() == NULL && w_san_iana_pub_suffix_empty_ != NULL) delete w_san_iana_pub_suffix_empty_;
   w_san_iana_pub_suffix_empty_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::w_san_iana_pub_suffix_empty() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.w_san_iana_pub_suffix_empty)
+inline const ::zsearch::LintResult& Lints::w_san_iana_pub_suffix_empty() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.w_san_iana_pub_suffix_empty)
   return w_san_iana_pub_suffix_empty_ != NULL ? *w_san_iana_pub_suffix_empty_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_w_san_iana_pub_suffix_empty() {
+inline ::zsearch::LintResult* Lints::mutable_w_san_iana_pub_suffix_empty() {
   
   if (w_san_iana_pub_suffix_empty_ == NULL) {
-    w_san_iana_pub_suffix_empty_ = new ::censys_definitions::LintResult;
+    w_san_iana_pub_suffix_empty_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.w_san_iana_pub_suffix_empty)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.w_san_iana_pub_suffix_empty)
   return w_san_iana_pub_suffix_empty_;
 }
-inline ::censys_definitions::LintResult* Lints::release_w_san_iana_pub_suffix_empty() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.w_san_iana_pub_suffix_empty)
+inline ::zsearch::LintResult* Lints::release_w_san_iana_pub_suffix_empty() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.w_san_iana_pub_suffix_empty)
   
-  ::censys_definitions::LintResult* temp = w_san_iana_pub_suffix_empty_;
+  ::zsearch::LintResult* temp = w_san_iana_pub_suffix_empty_;
   w_san_iana_pub_suffix_empty_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_w_san_iana_pub_suffix_empty(::censys_definitions::LintResult* w_san_iana_pub_suffix_empty) {
+inline void Lints::set_allocated_w_san_iana_pub_suffix_empty(::zsearch::LintResult* w_san_iana_pub_suffix_empty) {
   delete w_san_iana_pub_suffix_empty_;
   w_san_iana_pub_suffix_empty_ = w_san_iana_pub_suffix_empty;
   if (w_san_iana_pub_suffix_empty) {
@@ -7831,10 +7831,10 @@ inline void Lints::set_allocated_w_san_iana_pub_suffix_empty(::censys_definition
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.w_san_iana_pub_suffix_empty)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.w_san_iana_pub_suffix_empty)
 }
 
-// .censys_definitions.LintResult e_serial_number_longer_than_20_octets = 138;
+// .zsearch.LintResult e_serial_number_longer_than_20_octets = 138;
 inline bool Lints::has_e_serial_number_longer_than_20_octets() const {
   return this != internal_default_instance() && e_serial_number_longer_than_20_octets_ != NULL;
 }
@@ -7842,27 +7842,27 @@ inline void Lints::clear_e_serial_number_longer_than_20_octets() {
   if (GetArenaNoVirtual() == NULL && e_serial_number_longer_than_20_octets_ != NULL) delete e_serial_number_longer_than_20_octets_;
   e_serial_number_longer_than_20_octets_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_serial_number_longer_than_20_octets() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_serial_number_longer_than_20_octets)
+inline const ::zsearch::LintResult& Lints::e_serial_number_longer_than_20_octets() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_serial_number_longer_than_20_octets)
   return e_serial_number_longer_than_20_octets_ != NULL ? *e_serial_number_longer_than_20_octets_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_serial_number_longer_than_20_octets() {
+inline ::zsearch::LintResult* Lints::mutable_e_serial_number_longer_than_20_octets() {
   
   if (e_serial_number_longer_than_20_octets_ == NULL) {
-    e_serial_number_longer_than_20_octets_ = new ::censys_definitions::LintResult;
+    e_serial_number_longer_than_20_octets_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_serial_number_longer_than_20_octets)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_serial_number_longer_than_20_octets)
   return e_serial_number_longer_than_20_octets_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_serial_number_longer_than_20_octets() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_serial_number_longer_than_20_octets)
+inline ::zsearch::LintResult* Lints::release_e_serial_number_longer_than_20_octets() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_serial_number_longer_than_20_octets)
   
-  ::censys_definitions::LintResult* temp = e_serial_number_longer_than_20_octets_;
+  ::zsearch::LintResult* temp = e_serial_number_longer_than_20_octets_;
   e_serial_number_longer_than_20_octets_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_serial_number_longer_than_20_octets(::censys_definitions::LintResult* e_serial_number_longer_than_20_octets) {
+inline void Lints::set_allocated_e_serial_number_longer_than_20_octets(::zsearch::LintResult* e_serial_number_longer_than_20_octets) {
   delete e_serial_number_longer_than_20_octets_;
   e_serial_number_longer_than_20_octets_ = e_serial_number_longer_than_20_octets;
   if (e_serial_number_longer_than_20_octets) {
@@ -7870,10 +7870,10 @@ inline void Lints::set_allocated_e_serial_number_longer_than_20_octets(::censys_
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_serial_number_longer_than_20_octets)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_serial_number_longer_than_20_octets)
 }
 
-// .censys_definitions.LintResult e_serial_number_not_positive = 139;
+// .zsearch.LintResult e_serial_number_not_positive = 139;
 inline bool Lints::has_e_serial_number_not_positive() const {
   return this != internal_default_instance() && e_serial_number_not_positive_ != NULL;
 }
@@ -7881,27 +7881,27 @@ inline void Lints::clear_e_serial_number_not_positive() {
   if (GetArenaNoVirtual() == NULL && e_serial_number_not_positive_ != NULL) delete e_serial_number_not_positive_;
   e_serial_number_not_positive_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_serial_number_not_positive() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_serial_number_not_positive)
+inline const ::zsearch::LintResult& Lints::e_serial_number_not_positive() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_serial_number_not_positive)
   return e_serial_number_not_positive_ != NULL ? *e_serial_number_not_positive_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_serial_number_not_positive() {
+inline ::zsearch::LintResult* Lints::mutable_e_serial_number_not_positive() {
   
   if (e_serial_number_not_positive_ == NULL) {
-    e_serial_number_not_positive_ = new ::censys_definitions::LintResult;
+    e_serial_number_not_positive_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_serial_number_not_positive)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_serial_number_not_positive)
   return e_serial_number_not_positive_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_serial_number_not_positive() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_serial_number_not_positive)
+inline ::zsearch::LintResult* Lints::release_e_serial_number_not_positive() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_serial_number_not_positive)
   
-  ::censys_definitions::LintResult* temp = e_serial_number_not_positive_;
+  ::zsearch::LintResult* temp = e_serial_number_not_positive_;
   e_serial_number_not_positive_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_serial_number_not_positive(::censys_definitions::LintResult* e_serial_number_not_positive) {
+inline void Lints::set_allocated_e_serial_number_not_positive(::zsearch::LintResult* e_serial_number_not_positive) {
   delete e_serial_number_not_positive_;
   e_serial_number_not_positive_ = e_serial_number_not_positive;
   if (e_serial_number_not_positive) {
@@ -7909,10 +7909,10 @@ inline void Lints::set_allocated_e_serial_number_not_positive(::censys_definitio
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_serial_number_not_positive)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_serial_number_not_positive)
 }
 
-// .censys_definitions.LintResult w_sub_ca_aia_does_not_contain_issuing_ca_url = 140;
+// .zsearch.LintResult w_sub_ca_aia_does_not_contain_issuing_ca_url = 140;
 inline bool Lints::has_w_sub_ca_aia_does_not_contain_issuing_ca_url() const {
   return this != internal_default_instance() && w_sub_ca_aia_does_not_contain_issuing_ca_url_ != NULL;
 }
@@ -7920,27 +7920,27 @@ inline void Lints::clear_w_sub_ca_aia_does_not_contain_issuing_ca_url() {
   if (GetArenaNoVirtual() == NULL && w_sub_ca_aia_does_not_contain_issuing_ca_url_ != NULL) delete w_sub_ca_aia_does_not_contain_issuing_ca_url_;
   w_sub_ca_aia_does_not_contain_issuing_ca_url_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::w_sub_ca_aia_does_not_contain_issuing_ca_url() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.w_sub_ca_aia_does_not_contain_issuing_ca_url)
+inline const ::zsearch::LintResult& Lints::w_sub_ca_aia_does_not_contain_issuing_ca_url() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.w_sub_ca_aia_does_not_contain_issuing_ca_url)
   return w_sub_ca_aia_does_not_contain_issuing_ca_url_ != NULL ? *w_sub_ca_aia_does_not_contain_issuing_ca_url_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_w_sub_ca_aia_does_not_contain_issuing_ca_url() {
+inline ::zsearch::LintResult* Lints::mutable_w_sub_ca_aia_does_not_contain_issuing_ca_url() {
   
   if (w_sub_ca_aia_does_not_contain_issuing_ca_url_ == NULL) {
-    w_sub_ca_aia_does_not_contain_issuing_ca_url_ = new ::censys_definitions::LintResult;
+    w_sub_ca_aia_does_not_contain_issuing_ca_url_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.w_sub_ca_aia_does_not_contain_issuing_ca_url)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.w_sub_ca_aia_does_not_contain_issuing_ca_url)
   return w_sub_ca_aia_does_not_contain_issuing_ca_url_;
 }
-inline ::censys_definitions::LintResult* Lints::release_w_sub_ca_aia_does_not_contain_issuing_ca_url() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.w_sub_ca_aia_does_not_contain_issuing_ca_url)
+inline ::zsearch::LintResult* Lints::release_w_sub_ca_aia_does_not_contain_issuing_ca_url() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.w_sub_ca_aia_does_not_contain_issuing_ca_url)
   
-  ::censys_definitions::LintResult* temp = w_sub_ca_aia_does_not_contain_issuing_ca_url_;
+  ::zsearch::LintResult* temp = w_sub_ca_aia_does_not_contain_issuing_ca_url_;
   w_sub_ca_aia_does_not_contain_issuing_ca_url_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_w_sub_ca_aia_does_not_contain_issuing_ca_url(::censys_definitions::LintResult* w_sub_ca_aia_does_not_contain_issuing_ca_url) {
+inline void Lints::set_allocated_w_sub_ca_aia_does_not_contain_issuing_ca_url(::zsearch::LintResult* w_sub_ca_aia_does_not_contain_issuing_ca_url) {
   delete w_sub_ca_aia_does_not_contain_issuing_ca_url_;
   w_sub_ca_aia_does_not_contain_issuing_ca_url_ = w_sub_ca_aia_does_not_contain_issuing_ca_url;
   if (w_sub_ca_aia_does_not_contain_issuing_ca_url) {
@@ -7948,10 +7948,10 @@ inline void Lints::set_allocated_w_sub_ca_aia_does_not_contain_issuing_ca_url(::
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.w_sub_ca_aia_does_not_contain_issuing_ca_url)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.w_sub_ca_aia_does_not_contain_issuing_ca_url)
 }
 
-// .censys_definitions.LintResult e_sub_ca_aia_does_not_contain_ocsp_url = 141;
+// .zsearch.LintResult e_sub_ca_aia_does_not_contain_ocsp_url = 141;
 inline bool Lints::has_e_sub_ca_aia_does_not_contain_ocsp_url() const {
   return this != internal_default_instance() && e_sub_ca_aia_does_not_contain_ocsp_url_ != NULL;
 }
@@ -7959,27 +7959,27 @@ inline void Lints::clear_e_sub_ca_aia_does_not_contain_ocsp_url() {
   if (GetArenaNoVirtual() == NULL && e_sub_ca_aia_does_not_contain_ocsp_url_ != NULL) delete e_sub_ca_aia_does_not_contain_ocsp_url_;
   e_sub_ca_aia_does_not_contain_ocsp_url_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_sub_ca_aia_does_not_contain_ocsp_url() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_sub_ca_aia_does_not_contain_ocsp_url)
+inline const ::zsearch::LintResult& Lints::e_sub_ca_aia_does_not_contain_ocsp_url() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_sub_ca_aia_does_not_contain_ocsp_url)
   return e_sub_ca_aia_does_not_contain_ocsp_url_ != NULL ? *e_sub_ca_aia_does_not_contain_ocsp_url_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_sub_ca_aia_does_not_contain_ocsp_url() {
+inline ::zsearch::LintResult* Lints::mutable_e_sub_ca_aia_does_not_contain_ocsp_url() {
   
   if (e_sub_ca_aia_does_not_contain_ocsp_url_ == NULL) {
-    e_sub_ca_aia_does_not_contain_ocsp_url_ = new ::censys_definitions::LintResult;
+    e_sub_ca_aia_does_not_contain_ocsp_url_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_sub_ca_aia_does_not_contain_ocsp_url)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_sub_ca_aia_does_not_contain_ocsp_url)
   return e_sub_ca_aia_does_not_contain_ocsp_url_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_sub_ca_aia_does_not_contain_ocsp_url() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_sub_ca_aia_does_not_contain_ocsp_url)
+inline ::zsearch::LintResult* Lints::release_e_sub_ca_aia_does_not_contain_ocsp_url() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_sub_ca_aia_does_not_contain_ocsp_url)
   
-  ::censys_definitions::LintResult* temp = e_sub_ca_aia_does_not_contain_ocsp_url_;
+  ::zsearch::LintResult* temp = e_sub_ca_aia_does_not_contain_ocsp_url_;
   e_sub_ca_aia_does_not_contain_ocsp_url_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_sub_ca_aia_does_not_contain_ocsp_url(::censys_definitions::LintResult* e_sub_ca_aia_does_not_contain_ocsp_url) {
+inline void Lints::set_allocated_e_sub_ca_aia_does_not_contain_ocsp_url(::zsearch::LintResult* e_sub_ca_aia_does_not_contain_ocsp_url) {
   delete e_sub_ca_aia_does_not_contain_ocsp_url_;
   e_sub_ca_aia_does_not_contain_ocsp_url_ = e_sub_ca_aia_does_not_contain_ocsp_url;
   if (e_sub_ca_aia_does_not_contain_ocsp_url) {
@@ -7987,10 +7987,10 @@ inline void Lints::set_allocated_e_sub_ca_aia_does_not_contain_ocsp_url(::censys
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_sub_ca_aia_does_not_contain_ocsp_url)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_sub_ca_aia_does_not_contain_ocsp_url)
 }
 
-// .censys_definitions.LintResult e_sub_ca_aia_missing = 142;
+// .zsearch.LintResult e_sub_ca_aia_missing = 142;
 inline bool Lints::has_e_sub_ca_aia_missing() const {
   return this != internal_default_instance() && e_sub_ca_aia_missing_ != NULL;
 }
@@ -7998,27 +7998,27 @@ inline void Lints::clear_e_sub_ca_aia_missing() {
   if (GetArenaNoVirtual() == NULL && e_sub_ca_aia_missing_ != NULL) delete e_sub_ca_aia_missing_;
   e_sub_ca_aia_missing_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_sub_ca_aia_missing() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_sub_ca_aia_missing)
+inline const ::zsearch::LintResult& Lints::e_sub_ca_aia_missing() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_sub_ca_aia_missing)
   return e_sub_ca_aia_missing_ != NULL ? *e_sub_ca_aia_missing_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_sub_ca_aia_missing() {
+inline ::zsearch::LintResult* Lints::mutable_e_sub_ca_aia_missing() {
   
   if (e_sub_ca_aia_missing_ == NULL) {
-    e_sub_ca_aia_missing_ = new ::censys_definitions::LintResult;
+    e_sub_ca_aia_missing_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_sub_ca_aia_missing)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_sub_ca_aia_missing)
   return e_sub_ca_aia_missing_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_sub_ca_aia_missing() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_sub_ca_aia_missing)
+inline ::zsearch::LintResult* Lints::release_e_sub_ca_aia_missing() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_sub_ca_aia_missing)
   
-  ::censys_definitions::LintResult* temp = e_sub_ca_aia_missing_;
+  ::zsearch::LintResult* temp = e_sub_ca_aia_missing_;
   e_sub_ca_aia_missing_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_sub_ca_aia_missing(::censys_definitions::LintResult* e_sub_ca_aia_missing) {
+inline void Lints::set_allocated_e_sub_ca_aia_missing(::zsearch::LintResult* e_sub_ca_aia_missing) {
   delete e_sub_ca_aia_missing_;
   e_sub_ca_aia_missing_ = e_sub_ca_aia_missing;
   if (e_sub_ca_aia_missing) {
@@ -8026,10 +8026,10 @@ inline void Lints::set_allocated_e_sub_ca_aia_missing(::censys_definitions::Lint
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_sub_ca_aia_missing)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_sub_ca_aia_missing)
 }
 
-// .censys_definitions.LintResult w_sub_ca_certificate_policies_marked_critical = 143;
+// .zsearch.LintResult w_sub_ca_certificate_policies_marked_critical = 143;
 inline bool Lints::has_w_sub_ca_certificate_policies_marked_critical() const {
   return this != internal_default_instance() && w_sub_ca_certificate_policies_marked_critical_ != NULL;
 }
@@ -8037,27 +8037,27 @@ inline void Lints::clear_w_sub_ca_certificate_policies_marked_critical() {
   if (GetArenaNoVirtual() == NULL && w_sub_ca_certificate_policies_marked_critical_ != NULL) delete w_sub_ca_certificate_policies_marked_critical_;
   w_sub_ca_certificate_policies_marked_critical_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::w_sub_ca_certificate_policies_marked_critical() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.w_sub_ca_certificate_policies_marked_critical)
+inline const ::zsearch::LintResult& Lints::w_sub_ca_certificate_policies_marked_critical() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.w_sub_ca_certificate_policies_marked_critical)
   return w_sub_ca_certificate_policies_marked_critical_ != NULL ? *w_sub_ca_certificate_policies_marked_critical_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_w_sub_ca_certificate_policies_marked_critical() {
+inline ::zsearch::LintResult* Lints::mutable_w_sub_ca_certificate_policies_marked_critical() {
   
   if (w_sub_ca_certificate_policies_marked_critical_ == NULL) {
-    w_sub_ca_certificate_policies_marked_critical_ = new ::censys_definitions::LintResult;
+    w_sub_ca_certificate_policies_marked_critical_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.w_sub_ca_certificate_policies_marked_critical)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.w_sub_ca_certificate_policies_marked_critical)
   return w_sub_ca_certificate_policies_marked_critical_;
 }
-inline ::censys_definitions::LintResult* Lints::release_w_sub_ca_certificate_policies_marked_critical() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.w_sub_ca_certificate_policies_marked_critical)
+inline ::zsearch::LintResult* Lints::release_w_sub_ca_certificate_policies_marked_critical() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.w_sub_ca_certificate_policies_marked_critical)
   
-  ::censys_definitions::LintResult* temp = w_sub_ca_certificate_policies_marked_critical_;
+  ::zsearch::LintResult* temp = w_sub_ca_certificate_policies_marked_critical_;
   w_sub_ca_certificate_policies_marked_critical_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_w_sub_ca_certificate_policies_marked_critical(::censys_definitions::LintResult* w_sub_ca_certificate_policies_marked_critical) {
+inline void Lints::set_allocated_w_sub_ca_certificate_policies_marked_critical(::zsearch::LintResult* w_sub_ca_certificate_policies_marked_critical) {
   delete w_sub_ca_certificate_policies_marked_critical_;
   w_sub_ca_certificate_policies_marked_critical_ = w_sub_ca_certificate_policies_marked_critical;
   if (w_sub_ca_certificate_policies_marked_critical) {
@@ -8065,10 +8065,10 @@ inline void Lints::set_allocated_w_sub_ca_certificate_policies_marked_critical(:
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.w_sub_ca_certificate_policies_marked_critical)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.w_sub_ca_certificate_policies_marked_critical)
 }
 
-// .censys_definitions.LintResult e_sub_ca_certificate_policies_missing = 144;
+// .zsearch.LintResult e_sub_ca_certificate_policies_missing = 144;
 inline bool Lints::has_e_sub_ca_certificate_policies_missing() const {
   return this != internal_default_instance() && e_sub_ca_certificate_policies_missing_ != NULL;
 }
@@ -8076,27 +8076,27 @@ inline void Lints::clear_e_sub_ca_certificate_policies_missing() {
   if (GetArenaNoVirtual() == NULL && e_sub_ca_certificate_policies_missing_ != NULL) delete e_sub_ca_certificate_policies_missing_;
   e_sub_ca_certificate_policies_missing_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_sub_ca_certificate_policies_missing() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_sub_ca_certificate_policies_missing)
+inline const ::zsearch::LintResult& Lints::e_sub_ca_certificate_policies_missing() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_sub_ca_certificate_policies_missing)
   return e_sub_ca_certificate_policies_missing_ != NULL ? *e_sub_ca_certificate_policies_missing_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_sub_ca_certificate_policies_missing() {
+inline ::zsearch::LintResult* Lints::mutable_e_sub_ca_certificate_policies_missing() {
   
   if (e_sub_ca_certificate_policies_missing_ == NULL) {
-    e_sub_ca_certificate_policies_missing_ = new ::censys_definitions::LintResult;
+    e_sub_ca_certificate_policies_missing_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_sub_ca_certificate_policies_missing)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_sub_ca_certificate_policies_missing)
   return e_sub_ca_certificate_policies_missing_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_sub_ca_certificate_policies_missing() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_sub_ca_certificate_policies_missing)
+inline ::zsearch::LintResult* Lints::release_e_sub_ca_certificate_policies_missing() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_sub_ca_certificate_policies_missing)
   
-  ::censys_definitions::LintResult* temp = e_sub_ca_certificate_policies_missing_;
+  ::zsearch::LintResult* temp = e_sub_ca_certificate_policies_missing_;
   e_sub_ca_certificate_policies_missing_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_sub_ca_certificate_policies_missing(::censys_definitions::LintResult* e_sub_ca_certificate_policies_missing) {
+inline void Lints::set_allocated_e_sub_ca_certificate_policies_missing(::zsearch::LintResult* e_sub_ca_certificate_policies_missing) {
   delete e_sub_ca_certificate_policies_missing_;
   e_sub_ca_certificate_policies_missing_ = e_sub_ca_certificate_policies_missing;
   if (e_sub_ca_certificate_policies_missing) {
@@ -8104,10 +8104,10 @@ inline void Lints::set_allocated_e_sub_ca_certificate_policies_missing(::censys_
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_sub_ca_certificate_policies_missing)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_sub_ca_certificate_policies_missing)
 }
 
-// .censys_definitions.LintResult e_sub_ca_crl_distribution_points_does_not_contain_url = 145;
+// .zsearch.LintResult e_sub_ca_crl_distribution_points_does_not_contain_url = 145;
 inline bool Lints::has_e_sub_ca_crl_distribution_points_does_not_contain_url() const {
   return this != internal_default_instance() && e_sub_ca_crl_distribution_points_does_not_contain_url_ != NULL;
 }
@@ -8115,27 +8115,27 @@ inline void Lints::clear_e_sub_ca_crl_distribution_points_does_not_contain_url()
   if (GetArenaNoVirtual() == NULL && e_sub_ca_crl_distribution_points_does_not_contain_url_ != NULL) delete e_sub_ca_crl_distribution_points_does_not_contain_url_;
   e_sub_ca_crl_distribution_points_does_not_contain_url_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_sub_ca_crl_distribution_points_does_not_contain_url() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_sub_ca_crl_distribution_points_does_not_contain_url)
+inline const ::zsearch::LintResult& Lints::e_sub_ca_crl_distribution_points_does_not_contain_url() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_sub_ca_crl_distribution_points_does_not_contain_url)
   return e_sub_ca_crl_distribution_points_does_not_contain_url_ != NULL ? *e_sub_ca_crl_distribution_points_does_not_contain_url_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_sub_ca_crl_distribution_points_does_not_contain_url() {
+inline ::zsearch::LintResult* Lints::mutable_e_sub_ca_crl_distribution_points_does_not_contain_url() {
   
   if (e_sub_ca_crl_distribution_points_does_not_contain_url_ == NULL) {
-    e_sub_ca_crl_distribution_points_does_not_contain_url_ = new ::censys_definitions::LintResult;
+    e_sub_ca_crl_distribution_points_does_not_contain_url_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_sub_ca_crl_distribution_points_does_not_contain_url)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_sub_ca_crl_distribution_points_does_not_contain_url)
   return e_sub_ca_crl_distribution_points_does_not_contain_url_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_sub_ca_crl_distribution_points_does_not_contain_url() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_sub_ca_crl_distribution_points_does_not_contain_url)
+inline ::zsearch::LintResult* Lints::release_e_sub_ca_crl_distribution_points_does_not_contain_url() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_sub_ca_crl_distribution_points_does_not_contain_url)
   
-  ::censys_definitions::LintResult* temp = e_sub_ca_crl_distribution_points_does_not_contain_url_;
+  ::zsearch::LintResult* temp = e_sub_ca_crl_distribution_points_does_not_contain_url_;
   e_sub_ca_crl_distribution_points_does_not_contain_url_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_sub_ca_crl_distribution_points_does_not_contain_url(::censys_definitions::LintResult* e_sub_ca_crl_distribution_points_does_not_contain_url) {
+inline void Lints::set_allocated_e_sub_ca_crl_distribution_points_does_not_contain_url(::zsearch::LintResult* e_sub_ca_crl_distribution_points_does_not_contain_url) {
   delete e_sub_ca_crl_distribution_points_does_not_contain_url_;
   e_sub_ca_crl_distribution_points_does_not_contain_url_ = e_sub_ca_crl_distribution_points_does_not_contain_url;
   if (e_sub_ca_crl_distribution_points_does_not_contain_url) {
@@ -8143,10 +8143,10 @@ inline void Lints::set_allocated_e_sub_ca_crl_distribution_points_does_not_conta
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_sub_ca_crl_distribution_points_does_not_contain_url)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_sub_ca_crl_distribution_points_does_not_contain_url)
 }
 
-// .censys_definitions.LintResult e_sub_ca_crl_distribution_points_marked_critical = 146;
+// .zsearch.LintResult e_sub_ca_crl_distribution_points_marked_critical = 146;
 inline bool Lints::has_e_sub_ca_crl_distribution_points_marked_critical() const {
   return this != internal_default_instance() && e_sub_ca_crl_distribution_points_marked_critical_ != NULL;
 }
@@ -8154,27 +8154,27 @@ inline void Lints::clear_e_sub_ca_crl_distribution_points_marked_critical() {
   if (GetArenaNoVirtual() == NULL && e_sub_ca_crl_distribution_points_marked_critical_ != NULL) delete e_sub_ca_crl_distribution_points_marked_critical_;
   e_sub_ca_crl_distribution_points_marked_critical_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_sub_ca_crl_distribution_points_marked_critical() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_sub_ca_crl_distribution_points_marked_critical)
+inline const ::zsearch::LintResult& Lints::e_sub_ca_crl_distribution_points_marked_critical() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_sub_ca_crl_distribution_points_marked_critical)
   return e_sub_ca_crl_distribution_points_marked_critical_ != NULL ? *e_sub_ca_crl_distribution_points_marked_critical_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_sub_ca_crl_distribution_points_marked_critical() {
+inline ::zsearch::LintResult* Lints::mutable_e_sub_ca_crl_distribution_points_marked_critical() {
   
   if (e_sub_ca_crl_distribution_points_marked_critical_ == NULL) {
-    e_sub_ca_crl_distribution_points_marked_critical_ = new ::censys_definitions::LintResult;
+    e_sub_ca_crl_distribution_points_marked_critical_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_sub_ca_crl_distribution_points_marked_critical)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_sub_ca_crl_distribution_points_marked_critical)
   return e_sub_ca_crl_distribution_points_marked_critical_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_sub_ca_crl_distribution_points_marked_critical() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_sub_ca_crl_distribution_points_marked_critical)
+inline ::zsearch::LintResult* Lints::release_e_sub_ca_crl_distribution_points_marked_critical() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_sub_ca_crl_distribution_points_marked_critical)
   
-  ::censys_definitions::LintResult* temp = e_sub_ca_crl_distribution_points_marked_critical_;
+  ::zsearch::LintResult* temp = e_sub_ca_crl_distribution_points_marked_critical_;
   e_sub_ca_crl_distribution_points_marked_critical_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_sub_ca_crl_distribution_points_marked_critical(::censys_definitions::LintResult* e_sub_ca_crl_distribution_points_marked_critical) {
+inline void Lints::set_allocated_e_sub_ca_crl_distribution_points_marked_critical(::zsearch::LintResult* e_sub_ca_crl_distribution_points_marked_critical) {
   delete e_sub_ca_crl_distribution_points_marked_critical_;
   e_sub_ca_crl_distribution_points_marked_critical_ = e_sub_ca_crl_distribution_points_marked_critical;
   if (e_sub_ca_crl_distribution_points_marked_critical) {
@@ -8182,10 +8182,10 @@ inline void Lints::set_allocated_e_sub_ca_crl_distribution_points_marked_critica
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_sub_ca_crl_distribution_points_marked_critical)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_sub_ca_crl_distribution_points_marked_critical)
 }
 
-// .censys_definitions.LintResult e_sub_ca_crl_distribution_points_missing = 147;
+// .zsearch.LintResult e_sub_ca_crl_distribution_points_missing = 147;
 inline bool Lints::has_e_sub_ca_crl_distribution_points_missing() const {
   return this != internal_default_instance() && e_sub_ca_crl_distribution_points_missing_ != NULL;
 }
@@ -8193,27 +8193,27 @@ inline void Lints::clear_e_sub_ca_crl_distribution_points_missing() {
   if (GetArenaNoVirtual() == NULL && e_sub_ca_crl_distribution_points_missing_ != NULL) delete e_sub_ca_crl_distribution_points_missing_;
   e_sub_ca_crl_distribution_points_missing_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_sub_ca_crl_distribution_points_missing() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_sub_ca_crl_distribution_points_missing)
+inline const ::zsearch::LintResult& Lints::e_sub_ca_crl_distribution_points_missing() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_sub_ca_crl_distribution_points_missing)
   return e_sub_ca_crl_distribution_points_missing_ != NULL ? *e_sub_ca_crl_distribution_points_missing_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_sub_ca_crl_distribution_points_missing() {
+inline ::zsearch::LintResult* Lints::mutable_e_sub_ca_crl_distribution_points_missing() {
   
   if (e_sub_ca_crl_distribution_points_missing_ == NULL) {
-    e_sub_ca_crl_distribution_points_missing_ = new ::censys_definitions::LintResult;
+    e_sub_ca_crl_distribution_points_missing_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_sub_ca_crl_distribution_points_missing)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_sub_ca_crl_distribution_points_missing)
   return e_sub_ca_crl_distribution_points_missing_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_sub_ca_crl_distribution_points_missing() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_sub_ca_crl_distribution_points_missing)
+inline ::zsearch::LintResult* Lints::release_e_sub_ca_crl_distribution_points_missing() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_sub_ca_crl_distribution_points_missing)
   
-  ::censys_definitions::LintResult* temp = e_sub_ca_crl_distribution_points_missing_;
+  ::zsearch::LintResult* temp = e_sub_ca_crl_distribution_points_missing_;
   e_sub_ca_crl_distribution_points_missing_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_sub_ca_crl_distribution_points_missing(::censys_definitions::LintResult* e_sub_ca_crl_distribution_points_missing) {
+inline void Lints::set_allocated_e_sub_ca_crl_distribution_points_missing(::zsearch::LintResult* e_sub_ca_crl_distribution_points_missing) {
   delete e_sub_ca_crl_distribution_points_missing_;
   e_sub_ca_crl_distribution_points_missing_ = e_sub_ca_crl_distribution_points_missing;
   if (e_sub_ca_crl_distribution_points_missing) {
@@ -8221,10 +8221,10 @@ inline void Lints::set_allocated_e_sub_ca_crl_distribution_points_missing(::cens
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_sub_ca_crl_distribution_points_missing)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_sub_ca_crl_distribution_points_missing)
 }
 
-// .censys_definitions.LintResult w_sub_ca_eku_critical = 148;
+// .zsearch.LintResult w_sub_ca_eku_critical = 148;
 inline bool Lints::has_w_sub_ca_eku_critical() const {
   return this != internal_default_instance() && w_sub_ca_eku_critical_ != NULL;
 }
@@ -8232,27 +8232,27 @@ inline void Lints::clear_w_sub_ca_eku_critical() {
   if (GetArenaNoVirtual() == NULL && w_sub_ca_eku_critical_ != NULL) delete w_sub_ca_eku_critical_;
   w_sub_ca_eku_critical_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::w_sub_ca_eku_critical() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.w_sub_ca_eku_critical)
+inline const ::zsearch::LintResult& Lints::w_sub_ca_eku_critical() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.w_sub_ca_eku_critical)
   return w_sub_ca_eku_critical_ != NULL ? *w_sub_ca_eku_critical_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_w_sub_ca_eku_critical() {
+inline ::zsearch::LintResult* Lints::mutable_w_sub_ca_eku_critical() {
   
   if (w_sub_ca_eku_critical_ == NULL) {
-    w_sub_ca_eku_critical_ = new ::censys_definitions::LintResult;
+    w_sub_ca_eku_critical_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.w_sub_ca_eku_critical)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.w_sub_ca_eku_critical)
   return w_sub_ca_eku_critical_;
 }
-inline ::censys_definitions::LintResult* Lints::release_w_sub_ca_eku_critical() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.w_sub_ca_eku_critical)
+inline ::zsearch::LintResult* Lints::release_w_sub_ca_eku_critical() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.w_sub_ca_eku_critical)
   
-  ::censys_definitions::LintResult* temp = w_sub_ca_eku_critical_;
+  ::zsearch::LintResult* temp = w_sub_ca_eku_critical_;
   w_sub_ca_eku_critical_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_w_sub_ca_eku_critical(::censys_definitions::LintResult* w_sub_ca_eku_critical) {
+inline void Lints::set_allocated_w_sub_ca_eku_critical(::zsearch::LintResult* w_sub_ca_eku_critical) {
   delete w_sub_ca_eku_critical_;
   w_sub_ca_eku_critical_ = w_sub_ca_eku_critical;
   if (w_sub_ca_eku_critical) {
@@ -8260,10 +8260,10 @@ inline void Lints::set_allocated_w_sub_ca_eku_critical(::censys_definitions::Lin
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.w_sub_ca_eku_critical)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.w_sub_ca_eku_critical)
 }
 
-// .censys_definitions.LintResult w_sub_ca_name_constraints_not_critical = 149;
+// .zsearch.LintResult w_sub_ca_name_constraints_not_critical = 149;
 inline bool Lints::has_w_sub_ca_name_constraints_not_critical() const {
   return this != internal_default_instance() && w_sub_ca_name_constraints_not_critical_ != NULL;
 }
@@ -8271,27 +8271,27 @@ inline void Lints::clear_w_sub_ca_name_constraints_not_critical() {
   if (GetArenaNoVirtual() == NULL && w_sub_ca_name_constraints_not_critical_ != NULL) delete w_sub_ca_name_constraints_not_critical_;
   w_sub_ca_name_constraints_not_critical_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::w_sub_ca_name_constraints_not_critical() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.w_sub_ca_name_constraints_not_critical)
+inline const ::zsearch::LintResult& Lints::w_sub_ca_name_constraints_not_critical() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.w_sub_ca_name_constraints_not_critical)
   return w_sub_ca_name_constraints_not_critical_ != NULL ? *w_sub_ca_name_constraints_not_critical_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_w_sub_ca_name_constraints_not_critical() {
+inline ::zsearch::LintResult* Lints::mutable_w_sub_ca_name_constraints_not_critical() {
   
   if (w_sub_ca_name_constraints_not_critical_ == NULL) {
-    w_sub_ca_name_constraints_not_critical_ = new ::censys_definitions::LintResult;
+    w_sub_ca_name_constraints_not_critical_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.w_sub_ca_name_constraints_not_critical)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.w_sub_ca_name_constraints_not_critical)
   return w_sub_ca_name_constraints_not_critical_;
 }
-inline ::censys_definitions::LintResult* Lints::release_w_sub_ca_name_constraints_not_critical() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.w_sub_ca_name_constraints_not_critical)
+inline ::zsearch::LintResult* Lints::release_w_sub_ca_name_constraints_not_critical() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.w_sub_ca_name_constraints_not_critical)
   
-  ::censys_definitions::LintResult* temp = w_sub_ca_name_constraints_not_critical_;
+  ::zsearch::LintResult* temp = w_sub_ca_name_constraints_not_critical_;
   w_sub_ca_name_constraints_not_critical_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_w_sub_ca_name_constraints_not_critical(::censys_definitions::LintResult* w_sub_ca_name_constraints_not_critical) {
+inline void Lints::set_allocated_w_sub_ca_name_constraints_not_critical(::zsearch::LintResult* w_sub_ca_name_constraints_not_critical) {
   delete w_sub_ca_name_constraints_not_critical_;
   w_sub_ca_name_constraints_not_critical_ = w_sub_ca_name_constraints_not_critical;
   if (w_sub_ca_name_constraints_not_critical) {
@@ -8299,10 +8299,10 @@ inline void Lints::set_allocated_w_sub_ca_name_constraints_not_critical(::censys
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.w_sub_ca_name_constraints_not_critical)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.w_sub_ca_name_constraints_not_critical)
 }
 
-// .censys_definitions.LintResult e_sub_ca_no_dns_name_constraints = 150;
+// .zsearch.LintResult e_sub_ca_no_dns_name_constraints = 150;
 inline bool Lints::has_e_sub_ca_no_dns_name_constraints() const {
   return this != internal_default_instance() && e_sub_ca_no_dns_name_constraints_ != NULL;
 }
@@ -8310,27 +8310,27 @@ inline void Lints::clear_e_sub_ca_no_dns_name_constraints() {
   if (GetArenaNoVirtual() == NULL && e_sub_ca_no_dns_name_constraints_ != NULL) delete e_sub_ca_no_dns_name_constraints_;
   e_sub_ca_no_dns_name_constraints_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_sub_ca_no_dns_name_constraints() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_sub_ca_no_dns_name_constraints)
+inline const ::zsearch::LintResult& Lints::e_sub_ca_no_dns_name_constraints() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_sub_ca_no_dns_name_constraints)
   return e_sub_ca_no_dns_name_constraints_ != NULL ? *e_sub_ca_no_dns_name_constraints_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_sub_ca_no_dns_name_constraints() {
+inline ::zsearch::LintResult* Lints::mutable_e_sub_ca_no_dns_name_constraints() {
   
   if (e_sub_ca_no_dns_name_constraints_ == NULL) {
-    e_sub_ca_no_dns_name_constraints_ = new ::censys_definitions::LintResult;
+    e_sub_ca_no_dns_name_constraints_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_sub_ca_no_dns_name_constraints)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_sub_ca_no_dns_name_constraints)
   return e_sub_ca_no_dns_name_constraints_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_sub_ca_no_dns_name_constraints() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_sub_ca_no_dns_name_constraints)
+inline ::zsearch::LintResult* Lints::release_e_sub_ca_no_dns_name_constraints() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_sub_ca_no_dns_name_constraints)
   
-  ::censys_definitions::LintResult* temp = e_sub_ca_no_dns_name_constraints_;
+  ::zsearch::LintResult* temp = e_sub_ca_no_dns_name_constraints_;
   e_sub_ca_no_dns_name_constraints_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_sub_ca_no_dns_name_constraints(::censys_definitions::LintResult* e_sub_ca_no_dns_name_constraints) {
+inline void Lints::set_allocated_e_sub_ca_no_dns_name_constraints(::zsearch::LintResult* e_sub_ca_no_dns_name_constraints) {
   delete e_sub_ca_no_dns_name_constraints_;
   e_sub_ca_no_dns_name_constraints_ = e_sub_ca_no_dns_name_constraints;
   if (e_sub_ca_no_dns_name_constraints) {
@@ -8338,10 +8338,10 @@ inline void Lints::set_allocated_e_sub_ca_no_dns_name_constraints(::censys_defin
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_sub_ca_no_dns_name_constraints)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_sub_ca_no_dns_name_constraints)
 }
 
-// .censys_definitions.LintResult e_sub_ca_no_ip_name_constraints = 151;
+// .zsearch.LintResult e_sub_ca_no_ip_name_constraints = 151;
 inline bool Lints::has_e_sub_ca_no_ip_name_constraints() const {
   return this != internal_default_instance() && e_sub_ca_no_ip_name_constraints_ != NULL;
 }
@@ -8349,27 +8349,27 @@ inline void Lints::clear_e_sub_ca_no_ip_name_constraints() {
   if (GetArenaNoVirtual() == NULL && e_sub_ca_no_ip_name_constraints_ != NULL) delete e_sub_ca_no_ip_name_constraints_;
   e_sub_ca_no_ip_name_constraints_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_sub_ca_no_ip_name_constraints() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_sub_ca_no_ip_name_constraints)
+inline const ::zsearch::LintResult& Lints::e_sub_ca_no_ip_name_constraints() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_sub_ca_no_ip_name_constraints)
   return e_sub_ca_no_ip_name_constraints_ != NULL ? *e_sub_ca_no_ip_name_constraints_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_sub_ca_no_ip_name_constraints() {
+inline ::zsearch::LintResult* Lints::mutable_e_sub_ca_no_ip_name_constraints() {
   
   if (e_sub_ca_no_ip_name_constraints_ == NULL) {
-    e_sub_ca_no_ip_name_constraints_ = new ::censys_definitions::LintResult;
+    e_sub_ca_no_ip_name_constraints_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_sub_ca_no_ip_name_constraints)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_sub_ca_no_ip_name_constraints)
   return e_sub_ca_no_ip_name_constraints_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_sub_ca_no_ip_name_constraints() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_sub_ca_no_ip_name_constraints)
+inline ::zsearch::LintResult* Lints::release_e_sub_ca_no_ip_name_constraints() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_sub_ca_no_ip_name_constraints)
   
-  ::censys_definitions::LintResult* temp = e_sub_ca_no_ip_name_constraints_;
+  ::zsearch::LintResult* temp = e_sub_ca_no_ip_name_constraints_;
   e_sub_ca_no_ip_name_constraints_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_sub_ca_no_ip_name_constraints(::censys_definitions::LintResult* e_sub_ca_no_ip_name_constraints) {
+inline void Lints::set_allocated_e_sub_ca_no_ip_name_constraints(::zsearch::LintResult* e_sub_ca_no_ip_name_constraints) {
   delete e_sub_ca_no_ip_name_constraints_;
   e_sub_ca_no_ip_name_constraints_ = e_sub_ca_no_ip_name_constraints;
   if (e_sub_ca_no_ip_name_constraints) {
@@ -8377,10 +8377,10 @@ inline void Lints::set_allocated_e_sub_ca_no_ip_name_constraints(::censys_defini
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_sub_ca_no_ip_name_constraints)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_sub_ca_no_ip_name_constraints)
 }
 
-// .censys_definitions.LintResult w_sub_cert_aia_does_not_contain_issuing_ca_url = 152;
+// .zsearch.LintResult w_sub_cert_aia_does_not_contain_issuing_ca_url = 152;
 inline bool Lints::has_w_sub_cert_aia_does_not_contain_issuing_ca_url() const {
   return this != internal_default_instance() && w_sub_cert_aia_does_not_contain_issuing_ca_url_ != NULL;
 }
@@ -8388,27 +8388,27 @@ inline void Lints::clear_w_sub_cert_aia_does_not_contain_issuing_ca_url() {
   if (GetArenaNoVirtual() == NULL && w_sub_cert_aia_does_not_contain_issuing_ca_url_ != NULL) delete w_sub_cert_aia_does_not_contain_issuing_ca_url_;
   w_sub_cert_aia_does_not_contain_issuing_ca_url_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::w_sub_cert_aia_does_not_contain_issuing_ca_url() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.w_sub_cert_aia_does_not_contain_issuing_ca_url)
+inline const ::zsearch::LintResult& Lints::w_sub_cert_aia_does_not_contain_issuing_ca_url() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.w_sub_cert_aia_does_not_contain_issuing_ca_url)
   return w_sub_cert_aia_does_not_contain_issuing_ca_url_ != NULL ? *w_sub_cert_aia_does_not_contain_issuing_ca_url_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_w_sub_cert_aia_does_not_contain_issuing_ca_url() {
+inline ::zsearch::LintResult* Lints::mutable_w_sub_cert_aia_does_not_contain_issuing_ca_url() {
   
   if (w_sub_cert_aia_does_not_contain_issuing_ca_url_ == NULL) {
-    w_sub_cert_aia_does_not_contain_issuing_ca_url_ = new ::censys_definitions::LintResult;
+    w_sub_cert_aia_does_not_contain_issuing_ca_url_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.w_sub_cert_aia_does_not_contain_issuing_ca_url)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.w_sub_cert_aia_does_not_contain_issuing_ca_url)
   return w_sub_cert_aia_does_not_contain_issuing_ca_url_;
 }
-inline ::censys_definitions::LintResult* Lints::release_w_sub_cert_aia_does_not_contain_issuing_ca_url() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.w_sub_cert_aia_does_not_contain_issuing_ca_url)
+inline ::zsearch::LintResult* Lints::release_w_sub_cert_aia_does_not_contain_issuing_ca_url() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.w_sub_cert_aia_does_not_contain_issuing_ca_url)
   
-  ::censys_definitions::LintResult* temp = w_sub_cert_aia_does_not_contain_issuing_ca_url_;
+  ::zsearch::LintResult* temp = w_sub_cert_aia_does_not_contain_issuing_ca_url_;
   w_sub_cert_aia_does_not_contain_issuing_ca_url_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_w_sub_cert_aia_does_not_contain_issuing_ca_url(::censys_definitions::LintResult* w_sub_cert_aia_does_not_contain_issuing_ca_url) {
+inline void Lints::set_allocated_w_sub_cert_aia_does_not_contain_issuing_ca_url(::zsearch::LintResult* w_sub_cert_aia_does_not_contain_issuing_ca_url) {
   delete w_sub_cert_aia_does_not_contain_issuing_ca_url_;
   w_sub_cert_aia_does_not_contain_issuing_ca_url_ = w_sub_cert_aia_does_not_contain_issuing_ca_url;
   if (w_sub_cert_aia_does_not_contain_issuing_ca_url) {
@@ -8416,10 +8416,10 @@ inline void Lints::set_allocated_w_sub_cert_aia_does_not_contain_issuing_ca_url(
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.w_sub_cert_aia_does_not_contain_issuing_ca_url)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.w_sub_cert_aia_does_not_contain_issuing_ca_url)
 }
 
-// .censys_definitions.LintResult e_sub_cert_aia_does_not_contain_ocsp_url = 153;
+// .zsearch.LintResult e_sub_cert_aia_does_not_contain_ocsp_url = 153;
 inline bool Lints::has_e_sub_cert_aia_does_not_contain_ocsp_url() const {
   return this != internal_default_instance() && e_sub_cert_aia_does_not_contain_ocsp_url_ != NULL;
 }
@@ -8427,27 +8427,27 @@ inline void Lints::clear_e_sub_cert_aia_does_not_contain_ocsp_url() {
   if (GetArenaNoVirtual() == NULL && e_sub_cert_aia_does_not_contain_ocsp_url_ != NULL) delete e_sub_cert_aia_does_not_contain_ocsp_url_;
   e_sub_cert_aia_does_not_contain_ocsp_url_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_sub_cert_aia_does_not_contain_ocsp_url() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_sub_cert_aia_does_not_contain_ocsp_url)
+inline const ::zsearch::LintResult& Lints::e_sub_cert_aia_does_not_contain_ocsp_url() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_sub_cert_aia_does_not_contain_ocsp_url)
   return e_sub_cert_aia_does_not_contain_ocsp_url_ != NULL ? *e_sub_cert_aia_does_not_contain_ocsp_url_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_sub_cert_aia_does_not_contain_ocsp_url() {
+inline ::zsearch::LintResult* Lints::mutable_e_sub_cert_aia_does_not_contain_ocsp_url() {
   
   if (e_sub_cert_aia_does_not_contain_ocsp_url_ == NULL) {
-    e_sub_cert_aia_does_not_contain_ocsp_url_ = new ::censys_definitions::LintResult;
+    e_sub_cert_aia_does_not_contain_ocsp_url_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_sub_cert_aia_does_not_contain_ocsp_url)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_sub_cert_aia_does_not_contain_ocsp_url)
   return e_sub_cert_aia_does_not_contain_ocsp_url_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_sub_cert_aia_does_not_contain_ocsp_url() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_sub_cert_aia_does_not_contain_ocsp_url)
+inline ::zsearch::LintResult* Lints::release_e_sub_cert_aia_does_not_contain_ocsp_url() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_sub_cert_aia_does_not_contain_ocsp_url)
   
-  ::censys_definitions::LintResult* temp = e_sub_cert_aia_does_not_contain_ocsp_url_;
+  ::zsearch::LintResult* temp = e_sub_cert_aia_does_not_contain_ocsp_url_;
   e_sub_cert_aia_does_not_contain_ocsp_url_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_sub_cert_aia_does_not_contain_ocsp_url(::censys_definitions::LintResult* e_sub_cert_aia_does_not_contain_ocsp_url) {
+inline void Lints::set_allocated_e_sub_cert_aia_does_not_contain_ocsp_url(::zsearch::LintResult* e_sub_cert_aia_does_not_contain_ocsp_url) {
   delete e_sub_cert_aia_does_not_contain_ocsp_url_;
   e_sub_cert_aia_does_not_contain_ocsp_url_ = e_sub_cert_aia_does_not_contain_ocsp_url;
   if (e_sub_cert_aia_does_not_contain_ocsp_url) {
@@ -8455,10 +8455,10 @@ inline void Lints::set_allocated_e_sub_cert_aia_does_not_contain_ocsp_url(::cens
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_sub_cert_aia_does_not_contain_ocsp_url)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_sub_cert_aia_does_not_contain_ocsp_url)
 }
 
-// .censys_definitions.LintResult e_sub_cert_aia_missing = 154;
+// .zsearch.LintResult e_sub_cert_aia_missing = 154;
 inline bool Lints::has_e_sub_cert_aia_missing() const {
   return this != internal_default_instance() && e_sub_cert_aia_missing_ != NULL;
 }
@@ -8466,27 +8466,27 @@ inline void Lints::clear_e_sub_cert_aia_missing() {
   if (GetArenaNoVirtual() == NULL && e_sub_cert_aia_missing_ != NULL) delete e_sub_cert_aia_missing_;
   e_sub_cert_aia_missing_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_sub_cert_aia_missing() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_sub_cert_aia_missing)
+inline const ::zsearch::LintResult& Lints::e_sub_cert_aia_missing() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_sub_cert_aia_missing)
   return e_sub_cert_aia_missing_ != NULL ? *e_sub_cert_aia_missing_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_sub_cert_aia_missing() {
+inline ::zsearch::LintResult* Lints::mutable_e_sub_cert_aia_missing() {
   
   if (e_sub_cert_aia_missing_ == NULL) {
-    e_sub_cert_aia_missing_ = new ::censys_definitions::LintResult;
+    e_sub_cert_aia_missing_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_sub_cert_aia_missing)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_sub_cert_aia_missing)
   return e_sub_cert_aia_missing_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_sub_cert_aia_missing() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_sub_cert_aia_missing)
+inline ::zsearch::LintResult* Lints::release_e_sub_cert_aia_missing() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_sub_cert_aia_missing)
   
-  ::censys_definitions::LintResult* temp = e_sub_cert_aia_missing_;
+  ::zsearch::LintResult* temp = e_sub_cert_aia_missing_;
   e_sub_cert_aia_missing_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_sub_cert_aia_missing(::censys_definitions::LintResult* e_sub_cert_aia_missing) {
+inline void Lints::set_allocated_e_sub_cert_aia_missing(::zsearch::LintResult* e_sub_cert_aia_missing) {
   delete e_sub_cert_aia_missing_;
   e_sub_cert_aia_missing_ = e_sub_cert_aia_missing;
   if (e_sub_cert_aia_missing) {
@@ -8494,10 +8494,10 @@ inline void Lints::set_allocated_e_sub_cert_aia_missing(::censys_definitions::Li
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_sub_cert_aia_missing)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_sub_cert_aia_missing)
 }
 
-// .censys_definitions.LintResult w_sub_cert_cert_policy_empty = 155;
+// .zsearch.LintResult w_sub_cert_cert_policy_empty = 155;
 inline bool Lints::has_w_sub_cert_cert_policy_empty() const {
   return this != internal_default_instance() && w_sub_cert_cert_policy_empty_ != NULL;
 }
@@ -8505,27 +8505,27 @@ inline void Lints::clear_w_sub_cert_cert_policy_empty() {
   if (GetArenaNoVirtual() == NULL && w_sub_cert_cert_policy_empty_ != NULL) delete w_sub_cert_cert_policy_empty_;
   w_sub_cert_cert_policy_empty_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::w_sub_cert_cert_policy_empty() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.w_sub_cert_cert_policy_empty)
+inline const ::zsearch::LintResult& Lints::w_sub_cert_cert_policy_empty() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.w_sub_cert_cert_policy_empty)
   return w_sub_cert_cert_policy_empty_ != NULL ? *w_sub_cert_cert_policy_empty_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_w_sub_cert_cert_policy_empty() {
+inline ::zsearch::LintResult* Lints::mutable_w_sub_cert_cert_policy_empty() {
   
   if (w_sub_cert_cert_policy_empty_ == NULL) {
-    w_sub_cert_cert_policy_empty_ = new ::censys_definitions::LintResult;
+    w_sub_cert_cert_policy_empty_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.w_sub_cert_cert_policy_empty)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.w_sub_cert_cert_policy_empty)
   return w_sub_cert_cert_policy_empty_;
 }
-inline ::censys_definitions::LintResult* Lints::release_w_sub_cert_cert_policy_empty() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.w_sub_cert_cert_policy_empty)
+inline ::zsearch::LintResult* Lints::release_w_sub_cert_cert_policy_empty() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.w_sub_cert_cert_policy_empty)
   
-  ::censys_definitions::LintResult* temp = w_sub_cert_cert_policy_empty_;
+  ::zsearch::LintResult* temp = w_sub_cert_cert_policy_empty_;
   w_sub_cert_cert_policy_empty_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_w_sub_cert_cert_policy_empty(::censys_definitions::LintResult* w_sub_cert_cert_policy_empty) {
+inline void Lints::set_allocated_w_sub_cert_cert_policy_empty(::zsearch::LintResult* w_sub_cert_cert_policy_empty) {
   delete w_sub_cert_cert_policy_empty_;
   w_sub_cert_cert_policy_empty_ = w_sub_cert_cert_policy_empty;
   if (w_sub_cert_cert_policy_empty) {
@@ -8533,10 +8533,10 @@ inline void Lints::set_allocated_w_sub_cert_cert_policy_empty(::censys_definitio
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.w_sub_cert_cert_policy_empty)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.w_sub_cert_cert_policy_empty)
 }
 
-// .censys_definitions.LintResult w_sub_cert_certificate_policies_marked_critical = 156;
+// .zsearch.LintResult w_sub_cert_certificate_policies_marked_critical = 156;
 inline bool Lints::has_w_sub_cert_certificate_policies_marked_critical() const {
   return this != internal_default_instance() && w_sub_cert_certificate_policies_marked_critical_ != NULL;
 }
@@ -8544,27 +8544,27 @@ inline void Lints::clear_w_sub_cert_certificate_policies_marked_critical() {
   if (GetArenaNoVirtual() == NULL && w_sub_cert_certificate_policies_marked_critical_ != NULL) delete w_sub_cert_certificate_policies_marked_critical_;
   w_sub_cert_certificate_policies_marked_critical_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::w_sub_cert_certificate_policies_marked_critical() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.w_sub_cert_certificate_policies_marked_critical)
+inline const ::zsearch::LintResult& Lints::w_sub_cert_certificate_policies_marked_critical() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.w_sub_cert_certificate_policies_marked_critical)
   return w_sub_cert_certificate_policies_marked_critical_ != NULL ? *w_sub_cert_certificate_policies_marked_critical_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_w_sub_cert_certificate_policies_marked_critical() {
+inline ::zsearch::LintResult* Lints::mutable_w_sub_cert_certificate_policies_marked_critical() {
   
   if (w_sub_cert_certificate_policies_marked_critical_ == NULL) {
-    w_sub_cert_certificate_policies_marked_critical_ = new ::censys_definitions::LintResult;
+    w_sub_cert_certificate_policies_marked_critical_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.w_sub_cert_certificate_policies_marked_critical)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.w_sub_cert_certificate_policies_marked_critical)
   return w_sub_cert_certificate_policies_marked_critical_;
 }
-inline ::censys_definitions::LintResult* Lints::release_w_sub_cert_certificate_policies_marked_critical() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.w_sub_cert_certificate_policies_marked_critical)
+inline ::zsearch::LintResult* Lints::release_w_sub_cert_certificate_policies_marked_critical() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.w_sub_cert_certificate_policies_marked_critical)
   
-  ::censys_definitions::LintResult* temp = w_sub_cert_certificate_policies_marked_critical_;
+  ::zsearch::LintResult* temp = w_sub_cert_certificate_policies_marked_critical_;
   w_sub_cert_certificate_policies_marked_critical_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_w_sub_cert_certificate_policies_marked_critical(::censys_definitions::LintResult* w_sub_cert_certificate_policies_marked_critical) {
+inline void Lints::set_allocated_w_sub_cert_certificate_policies_marked_critical(::zsearch::LintResult* w_sub_cert_certificate_policies_marked_critical) {
   delete w_sub_cert_certificate_policies_marked_critical_;
   w_sub_cert_certificate_policies_marked_critical_ = w_sub_cert_certificate_policies_marked_critical;
   if (w_sub_cert_certificate_policies_marked_critical) {
@@ -8572,10 +8572,10 @@ inline void Lints::set_allocated_w_sub_cert_certificate_policies_marked_critical
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.w_sub_cert_certificate_policies_marked_critical)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.w_sub_cert_certificate_policies_marked_critical)
 }
 
-// .censys_definitions.LintResult e_sub_cert_crl_distribution_points_does_not_contain_url = 157;
+// .zsearch.LintResult e_sub_cert_crl_distribution_points_does_not_contain_url = 157;
 inline bool Lints::has_e_sub_cert_crl_distribution_points_does_not_contain_url() const {
   return this != internal_default_instance() && e_sub_cert_crl_distribution_points_does_not_contain_url_ != NULL;
 }
@@ -8583,27 +8583,27 @@ inline void Lints::clear_e_sub_cert_crl_distribution_points_does_not_contain_url
   if (GetArenaNoVirtual() == NULL && e_sub_cert_crl_distribution_points_does_not_contain_url_ != NULL) delete e_sub_cert_crl_distribution_points_does_not_contain_url_;
   e_sub_cert_crl_distribution_points_does_not_contain_url_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_sub_cert_crl_distribution_points_does_not_contain_url() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_sub_cert_crl_distribution_points_does_not_contain_url)
+inline const ::zsearch::LintResult& Lints::e_sub_cert_crl_distribution_points_does_not_contain_url() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_sub_cert_crl_distribution_points_does_not_contain_url)
   return e_sub_cert_crl_distribution_points_does_not_contain_url_ != NULL ? *e_sub_cert_crl_distribution_points_does_not_contain_url_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_sub_cert_crl_distribution_points_does_not_contain_url() {
+inline ::zsearch::LintResult* Lints::mutable_e_sub_cert_crl_distribution_points_does_not_contain_url() {
   
   if (e_sub_cert_crl_distribution_points_does_not_contain_url_ == NULL) {
-    e_sub_cert_crl_distribution_points_does_not_contain_url_ = new ::censys_definitions::LintResult;
+    e_sub_cert_crl_distribution_points_does_not_contain_url_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_sub_cert_crl_distribution_points_does_not_contain_url)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_sub_cert_crl_distribution_points_does_not_contain_url)
   return e_sub_cert_crl_distribution_points_does_not_contain_url_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_sub_cert_crl_distribution_points_does_not_contain_url() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_sub_cert_crl_distribution_points_does_not_contain_url)
+inline ::zsearch::LintResult* Lints::release_e_sub_cert_crl_distribution_points_does_not_contain_url() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_sub_cert_crl_distribution_points_does_not_contain_url)
   
-  ::censys_definitions::LintResult* temp = e_sub_cert_crl_distribution_points_does_not_contain_url_;
+  ::zsearch::LintResult* temp = e_sub_cert_crl_distribution_points_does_not_contain_url_;
   e_sub_cert_crl_distribution_points_does_not_contain_url_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_sub_cert_crl_distribution_points_does_not_contain_url(::censys_definitions::LintResult* e_sub_cert_crl_distribution_points_does_not_contain_url) {
+inline void Lints::set_allocated_e_sub_cert_crl_distribution_points_does_not_contain_url(::zsearch::LintResult* e_sub_cert_crl_distribution_points_does_not_contain_url) {
   delete e_sub_cert_crl_distribution_points_does_not_contain_url_;
   e_sub_cert_crl_distribution_points_does_not_contain_url_ = e_sub_cert_crl_distribution_points_does_not_contain_url;
   if (e_sub_cert_crl_distribution_points_does_not_contain_url) {
@@ -8611,10 +8611,10 @@ inline void Lints::set_allocated_e_sub_cert_crl_distribution_points_does_not_con
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_sub_cert_crl_distribution_points_does_not_contain_url)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_sub_cert_crl_distribution_points_does_not_contain_url)
 }
 
-// .censys_definitions.LintResult e_sub_cert_crl_distribution_points_marked_critical = 158;
+// .zsearch.LintResult e_sub_cert_crl_distribution_points_marked_critical = 158;
 inline bool Lints::has_e_sub_cert_crl_distribution_points_marked_critical() const {
   return this != internal_default_instance() && e_sub_cert_crl_distribution_points_marked_critical_ != NULL;
 }
@@ -8622,27 +8622,27 @@ inline void Lints::clear_e_sub_cert_crl_distribution_points_marked_critical() {
   if (GetArenaNoVirtual() == NULL && e_sub_cert_crl_distribution_points_marked_critical_ != NULL) delete e_sub_cert_crl_distribution_points_marked_critical_;
   e_sub_cert_crl_distribution_points_marked_critical_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_sub_cert_crl_distribution_points_marked_critical() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_sub_cert_crl_distribution_points_marked_critical)
+inline const ::zsearch::LintResult& Lints::e_sub_cert_crl_distribution_points_marked_critical() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_sub_cert_crl_distribution_points_marked_critical)
   return e_sub_cert_crl_distribution_points_marked_critical_ != NULL ? *e_sub_cert_crl_distribution_points_marked_critical_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_sub_cert_crl_distribution_points_marked_critical() {
+inline ::zsearch::LintResult* Lints::mutable_e_sub_cert_crl_distribution_points_marked_critical() {
   
   if (e_sub_cert_crl_distribution_points_marked_critical_ == NULL) {
-    e_sub_cert_crl_distribution_points_marked_critical_ = new ::censys_definitions::LintResult;
+    e_sub_cert_crl_distribution_points_marked_critical_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_sub_cert_crl_distribution_points_marked_critical)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_sub_cert_crl_distribution_points_marked_critical)
   return e_sub_cert_crl_distribution_points_marked_critical_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_sub_cert_crl_distribution_points_marked_critical() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_sub_cert_crl_distribution_points_marked_critical)
+inline ::zsearch::LintResult* Lints::release_e_sub_cert_crl_distribution_points_marked_critical() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_sub_cert_crl_distribution_points_marked_critical)
   
-  ::censys_definitions::LintResult* temp = e_sub_cert_crl_distribution_points_marked_critical_;
+  ::zsearch::LintResult* temp = e_sub_cert_crl_distribution_points_marked_critical_;
   e_sub_cert_crl_distribution_points_marked_critical_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_sub_cert_crl_distribution_points_marked_critical(::censys_definitions::LintResult* e_sub_cert_crl_distribution_points_marked_critical) {
+inline void Lints::set_allocated_e_sub_cert_crl_distribution_points_marked_critical(::zsearch::LintResult* e_sub_cert_crl_distribution_points_marked_critical) {
   delete e_sub_cert_crl_distribution_points_marked_critical_;
   e_sub_cert_crl_distribution_points_marked_critical_ = e_sub_cert_crl_distribution_points_marked_critical;
   if (e_sub_cert_crl_distribution_points_marked_critical) {
@@ -8650,10 +8650,10 @@ inline void Lints::set_allocated_e_sub_cert_crl_distribution_points_marked_criti
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_sub_cert_crl_distribution_points_marked_critical)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_sub_cert_crl_distribution_points_marked_critical)
 }
 
-// .censys_definitions.LintResult w_sub_cert_eku_extra_values = 159;
+// .zsearch.LintResult w_sub_cert_eku_extra_values = 159;
 inline bool Lints::has_w_sub_cert_eku_extra_values() const {
   return this != internal_default_instance() && w_sub_cert_eku_extra_values_ != NULL;
 }
@@ -8661,27 +8661,27 @@ inline void Lints::clear_w_sub_cert_eku_extra_values() {
   if (GetArenaNoVirtual() == NULL && w_sub_cert_eku_extra_values_ != NULL) delete w_sub_cert_eku_extra_values_;
   w_sub_cert_eku_extra_values_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::w_sub_cert_eku_extra_values() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.w_sub_cert_eku_extra_values)
+inline const ::zsearch::LintResult& Lints::w_sub_cert_eku_extra_values() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.w_sub_cert_eku_extra_values)
   return w_sub_cert_eku_extra_values_ != NULL ? *w_sub_cert_eku_extra_values_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_w_sub_cert_eku_extra_values() {
+inline ::zsearch::LintResult* Lints::mutable_w_sub_cert_eku_extra_values() {
   
   if (w_sub_cert_eku_extra_values_ == NULL) {
-    w_sub_cert_eku_extra_values_ = new ::censys_definitions::LintResult;
+    w_sub_cert_eku_extra_values_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.w_sub_cert_eku_extra_values)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.w_sub_cert_eku_extra_values)
   return w_sub_cert_eku_extra_values_;
 }
-inline ::censys_definitions::LintResult* Lints::release_w_sub_cert_eku_extra_values() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.w_sub_cert_eku_extra_values)
+inline ::zsearch::LintResult* Lints::release_w_sub_cert_eku_extra_values() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.w_sub_cert_eku_extra_values)
   
-  ::censys_definitions::LintResult* temp = w_sub_cert_eku_extra_values_;
+  ::zsearch::LintResult* temp = w_sub_cert_eku_extra_values_;
   w_sub_cert_eku_extra_values_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_w_sub_cert_eku_extra_values(::censys_definitions::LintResult* w_sub_cert_eku_extra_values) {
+inline void Lints::set_allocated_w_sub_cert_eku_extra_values(::zsearch::LintResult* w_sub_cert_eku_extra_values) {
   delete w_sub_cert_eku_extra_values_;
   w_sub_cert_eku_extra_values_ = w_sub_cert_eku_extra_values;
   if (w_sub_cert_eku_extra_values) {
@@ -8689,10 +8689,10 @@ inline void Lints::set_allocated_w_sub_cert_eku_extra_values(::censys_definition
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.w_sub_cert_eku_extra_values)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.w_sub_cert_eku_extra_values)
 }
 
-// .censys_definitions.LintResult e_sub_cert_eku_missing = 160;
+// .zsearch.LintResult e_sub_cert_eku_missing = 160;
 inline bool Lints::has_e_sub_cert_eku_missing() const {
   return this != internal_default_instance() && e_sub_cert_eku_missing_ != NULL;
 }
@@ -8700,27 +8700,27 @@ inline void Lints::clear_e_sub_cert_eku_missing() {
   if (GetArenaNoVirtual() == NULL && e_sub_cert_eku_missing_ != NULL) delete e_sub_cert_eku_missing_;
   e_sub_cert_eku_missing_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_sub_cert_eku_missing() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_sub_cert_eku_missing)
+inline const ::zsearch::LintResult& Lints::e_sub_cert_eku_missing() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_sub_cert_eku_missing)
   return e_sub_cert_eku_missing_ != NULL ? *e_sub_cert_eku_missing_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_sub_cert_eku_missing() {
+inline ::zsearch::LintResult* Lints::mutable_e_sub_cert_eku_missing() {
   
   if (e_sub_cert_eku_missing_ == NULL) {
-    e_sub_cert_eku_missing_ = new ::censys_definitions::LintResult;
+    e_sub_cert_eku_missing_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_sub_cert_eku_missing)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_sub_cert_eku_missing)
   return e_sub_cert_eku_missing_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_sub_cert_eku_missing() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_sub_cert_eku_missing)
+inline ::zsearch::LintResult* Lints::release_e_sub_cert_eku_missing() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_sub_cert_eku_missing)
   
-  ::censys_definitions::LintResult* temp = e_sub_cert_eku_missing_;
+  ::zsearch::LintResult* temp = e_sub_cert_eku_missing_;
   e_sub_cert_eku_missing_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_sub_cert_eku_missing(::censys_definitions::LintResult* e_sub_cert_eku_missing) {
+inline void Lints::set_allocated_e_sub_cert_eku_missing(::zsearch::LintResult* e_sub_cert_eku_missing) {
   delete e_sub_cert_eku_missing_;
   e_sub_cert_eku_missing_ = e_sub_cert_eku_missing;
   if (e_sub_cert_eku_missing) {
@@ -8728,10 +8728,10 @@ inline void Lints::set_allocated_e_sub_cert_eku_missing(::censys_definitions::Li
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_sub_cert_eku_missing)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_sub_cert_eku_missing)
 }
 
-// .censys_definitions.LintResult e_sub_cert_eku_server_auth_client_auth_missing = 161;
+// .zsearch.LintResult e_sub_cert_eku_server_auth_client_auth_missing = 161;
 inline bool Lints::has_e_sub_cert_eku_server_auth_client_auth_missing() const {
   return this != internal_default_instance() && e_sub_cert_eku_server_auth_client_auth_missing_ != NULL;
 }
@@ -8739,27 +8739,27 @@ inline void Lints::clear_e_sub_cert_eku_server_auth_client_auth_missing() {
   if (GetArenaNoVirtual() == NULL && e_sub_cert_eku_server_auth_client_auth_missing_ != NULL) delete e_sub_cert_eku_server_auth_client_auth_missing_;
   e_sub_cert_eku_server_auth_client_auth_missing_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_sub_cert_eku_server_auth_client_auth_missing() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_sub_cert_eku_server_auth_client_auth_missing)
+inline const ::zsearch::LintResult& Lints::e_sub_cert_eku_server_auth_client_auth_missing() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_sub_cert_eku_server_auth_client_auth_missing)
   return e_sub_cert_eku_server_auth_client_auth_missing_ != NULL ? *e_sub_cert_eku_server_auth_client_auth_missing_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_sub_cert_eku_server_auth_client_auth_missing() {
+inline ::zsearch::LintResult* Lints::mutable_e_sub_cert_eku_server_auth_client_auth_missing() {
   
   if (e_sub_cert_eku_server_auth_client_auth_missing_ == NULL) {
-    e_sub_cert_eku_server_auth_client_auth_missing_ = new ::censys_definitions::LintResult;
+    e_sub_cert_eku_server_auth_client_auth_missing_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_sub_cert_eku_server_auth_client_auth_missing)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_sub_cert_eku_server_auth_client_auth_missing)
   return e_sub_cert_eku_server_auth_client_auth_missing_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_sub_cert_eku_server_auth_client_auth_missing() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_sub_cert_eku_server_auth_client_auth_missing)
+inline ::zsearch::LintResult* Lints::release_e_sub_cert_eku_server_auth_client_auth_missing() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_sub_cert_eku_server_auth_client_auth_missing)
   
-  ::censys_definitions::LintResult* temp = e_sub_cert_eku_server_auth_client_auth_missing_;
+  ::zsearch::LintResult* temp = e_sub_cert_eku_server_auth_client_auth_missing_;
   e_sub_cert_eku_server_auth_client_auth_missing_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_sub_cert_eku_server_auth_client_auth_missing(::censys_definitions::LintResult* e_sub_cert_eku_server_auth_client_auth_missing) {
+inline void Lints::set_allocated_e_sub_cert_eku_server_auth_client_auth_missing(::zsearch::LintResult* e_sub_cert_eku_server_auth_client_auth_missing) {
   delete e_sub_cert_eku_server_auth_client_auth_missing_;
   e_sub_cert_eku_server_auth_client_auth_missing_ = e_sub_cert_eku_server_auth_client_auth_missing;
   if (e_sub_cert_eku_server_auth_client_auth_missing) {
@@ -8767,10 +8767,10 @@ inline void Lints::set_allocated_e_sub_cert_eku_server_auth_client_auth_missing(
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_sub_cert_eku_server_auth_client_auth_missing)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_sub_cert_eku_server_auth_client_auth_missing)
 }
 
-// .censys_definitions.LintResult e_sub_cert_key_usage_cert_sign_bit_set = 162;
+// .zsearch.LintResult e_sub_cert_key_usage_cert_sign_bit_set = 162;
 inline bool Lints::has_e_sub_cert_key_usage_cert_sign_bit_set() const {
   return this != internal_default_instance() && e_sub_cert_key_usage_cert_sign_bit_set_ != NULL;
 }
@@ -8778,27 +8778,27 @@ inline void Lints::clear_e_sub_cert_key_usage_cert_sign_bit_set() {
   if (GetArenaNoVirtual() == NULL && e_sub_cert_key_usage_cert_sign_bit_set_ != NULL) delete e_sub_cert_key_usage_cert_sign_bit_set_;
   e_sub_cert_key_usage_cert_sign_bit_set_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_sub_cert_key_usage_cert_sign_bit_set() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_sub_cert_key_usage_cert_sign_bit_set)
+inline const ::zsearch::LintResult& Lints::e_sub_cert_key_usage_cert_sign_bit_set() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_sub_cert_key_usage_cert_sign_bit_set)
   return e_sub_cert_key_usage_cert_sign_bit_set_ != NULL ? *e_sub_cert_key_usage_cert_sign_bit_set_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_sub_cert_key_usage_cert_sign_bit_set() {
+inline ::zsearch::LintResult* Lints::mutable_e_sub_cert_key_usage_cert_sign_bit_set() {
   
   if (e_sub_cert_key_usage_cert_sign_bit_set_ == NULL) {
-    e_sub_cert_key_usage_cert_sign_bit_set_ = new ::censys_definitions::LintResult;
+    e_sub_cert_key_usage_cert_sign_bit_set_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_sub_cert_key_usage_cert_sign_bit_set)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_sub_cert_key_usage_cert_sign_bit_set)
   return e_sub_cert_key_usage_cert_sign_bit_set_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_sub_cert_key_usage_cert_sign_bit_set() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_sub_cert_key_usage_cert_sign_bit_set)
+inline ::zsearch::LintResult* Lints::release_e_sub_cert_key_usage_cert_sign_bit_set() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_sub_cert_key_usage_cert_sign_bit_set)
   
-  ::censys_definitions::LintResult* temp = e_sub_cert_key_usage_cert_sign_bit_set_;
+  ::zsearch::LintResult* temp = e_sub_cert_key_usage_cert_sign_bit_set_;
   e_sub_cert_key_usage_cert_sign_bit_set_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_sub_cert_key_usage_cert_sign_bit_set(::censys_definitions::LintResult* e_sub_cert_key_usage_cert_sign_bit_set) {
+inline void Lints::set_allocated_e_sub_cert_key_usage_cert_sign_bit_set(::zsearch::LintResult* e_sub_cert_key_usage_cert_sign_bit_set) {
   delete e_sub_cert_key_usage_cert_sign_bit_set_;
   e_sub_cert_key_usage_cert_sign_bit_set_ = e_sub_cert_key_usage_cert_sign_bit_set;
   if (e_sub_cert_key_usage_cert_sign_bit_set) {
@@ -8806,10 +8806,10 @@ inline void Lints::set_allocated_e_sub_cert_key_usage_cert_sign_bit_set(::censys
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_sub_cert_key_usage_cert_sign_bit_set)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_sub_cert_key_usage_cert_sign_bit_set)
 }
 
-// .censys_definitions.LintResult e_sub_cert_or_sub_ca_using_sha1 = 163;
+// .zsearch.LintResult e_sub_cert_or_sub_ca_using_sha1 = 163;
 inline bool Lints::has_e_sub_cert_or_sub_ca_using_sha1() const {
   return this != internal_default_instance() && e_sub_cert_or_sub_ca_using_sha1_ != NULL;
 }
@@ -8817,27 +8817,27 @@ inline void Lints::clear_e_sub_cert_or_sub_ca_using_sha1() {
   if (GetArenaNoVirtual() == NULL && e_sub_cert_or_sub_ca_using_sha1_ != NULL) delete e_sub_cert_or_sub_ca_using_sha1_;
   e_sub_cert_or_sub_ca_using_sha1_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_sub_cert_or_sub_ca_using_sha1() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_sub_cert_or_sub_ca_using_sha1)
+inline const ::zsearch::LintResult& Lints::e_sub_cert_or_sub_ca_using_sha1() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_sub_cert_or_sub_ca_using_sha1)
   return e_sub_cert_or_sub_ca_using_sha1_ != NULL ? *e_sub_cert_or_sub_ca_using_sha1_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_sub_cert_or_sub_ca_using_sha1() {
+inline ::zsearch::LintResult* Lints::mutable_e_sub_cert_or_sub_ca_using_sha1() {
   
   if (e_sub_cert_or_sub_ca_using_sha1_ == NULL) {
-    e_sub_cert_or_sub_ca_using_sha1_ = new ::censys_definitions::LintResult;
+    e_sub_cert_or_sub_ca_using_sha1_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_sub_cert_or_sub_ca_using_sha1)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_sub_cert_or_sub_ca_using_sha1)
   return e_sub_cert_or_sub_ca_using_sha1_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_sub_cert_or_sub_ca_using_sha1() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_sub_cert_or_sub_ca_using_sha1)
+inline ::zsearch::LintResult* Lints::release_e_sub_cert_or_sub_ca_using_sha1() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_sub_cert_or_sub_ca_using_sha1)
   
-  ::censys_definitions::LintResult* temp = e_sub_cert_or_sub_ca_using_sha1_;
+  ::zsearch::LintResult* temp = e_sub_cert_or_sub_ca_using_sha1_;
   e_sub_cert_or_sub_ca_using_sha1_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_sub_cert_or_sub_ca_using_sha1(::censys_definitions::LintResult* e_sub_cert_or_sub_ca_using_sha1) {
+inline void Lints::set_allocated_e_sub_cert_or_sub_ca_using_sha1(::zsearch::LintResult* e_sub_cert_or_sub_ca_using_sha1) {
   delete e_sub_cert_or_sub_ca_using_sha1_;
   e_sub_cert_or_sub_ca_using_sha1_ = e_sub_cert_or_sub_ca_using_sha1;
   if (e_sub_cert_or_sub_ca_using_sha1) {
@@ -8845,10 +8845,10 @@ inline void Lints::set_allocated_e_sub_cert_or_sub_ca_using_sha1(::censys_defini
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_sub_cert_or_sub_ca_using_sha1)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_sub_cert_or_sub_ca_using_sha1)
 }
 
-// .censys_definitions.LintResult w_sub_cert_sha1_expiration_too_long = 164;
+// .zsearch.LintResult w_sub_cert_sha1_expiration_too_long = 164;
 inline bool Lints::has_w_sub_cert_sha1_expiration_too_long() const {
   return this != internal_default_instance() && w_sub_cert_sha1_expiration_too_long_ != NULL;
 }
@@ -8856,27 +8856,27 @@ inline void Lints::clear_w_sub_cert_sha1_expiration_too_long() {
   if (GetArenaNoVirtual() == NULL && w_sub_cert_sha1_expiration_too_long_ != NULL) delete w_sub_cert_sha1_expiration_too_long_;
   w_sub_cert_sha1_expiration_too_long_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::w_sub_cert_sha1_expiration_too_long() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.w_sub_cert_sha1_expiration_too_long)
+inline const ::zsearch::LintResult& Lints::w_sub_cert_sha1_expiration_too_long() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.w_sub_cert_sha1_expiration_too_long)
   return w_sub_cert_sha1_expiration_too_long_ != NULL ? *w_sub_cert_sha1_expiration_too_long_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_w_sub_cert_sha1_expiration_too_long() {
+inline ::zsearch::LintResult* Lints::mutable_w_sub_cert_sha1_expiration_too_long() {
   
   if (w_sub_cert_sha1_expiration_too_long_ == NULL) {
-    w_sub_cert_sha1_expiration_too_long_ = new ::censys_definitions::LintResult;
+    w_sub_cert_sha1_expiration_too_long_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.w_sub_cert_sha1_expiration_too_long)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.w_sub_cert_sha1_expiration_too_long)
   return w_sub_cert_sha1_expiration_too_long_;
 }
-inline ::censys_definitions::LintResult* Lints::release_w_sub_cert_sha1_expiration_too_long() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.w_sub_cert_sha1_expiration_too_long)
+inline ::zsearch::LintResult* Lints::release_w_sub_cert_sha1_expiration_too_long() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.w_sub_cert_sha1_expiration_too_long)
   
-  ::censys_definitions::LintResult* temp = w_sub_cert_sha1_expiration_too_long_;
+  ::zsearch::LintResult* temp = w_sub_cert_sha1_expiration_too_long_;
   w_sub_cert_sha1_expiration_too_long_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_w_sub_cert_sha1_expiration_too_long(::censys_definitions::LintResult* w_sub_cert_sha1_expiration_too_long) {
+inline void Lints::set_allocated_w_sub_cert_sha1_expiration_too_long(::zsearch::LintResult* w_sub_cert_sha1_expiration_too_long) {
   delete w_sub_cert_sha1_expiration_too_long_;
   w_sub_cert_sha1_expiration_too_long_ = w_sub_cert_sha1_expiration_too_long;
   if (w_sub_cert_sha1_expiration_too_long) {
@@ -8884,10 +8884,10 @@ inline void Lints::set_allocated_w_sub_cert_sha1_expiration_too_long(::censys_de
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.w_sub_cert_sha1_expiration_too_long)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.w_sub_cert_sha1_expiration_too_long)
 }
 
-// .censys_definitions.LintResult e_subject_common_name_disallowed = 165;
+// .zsearch.LintResult e_subject_common_name_disallowed = 165;
 inline bool Lints::has_e_subject_common_name_disallowed() const {
   return this != internal_default_instance() && e_subject_common_name_disallowed_ != NULL;
 }
@@ -8895,27 +8895,27 @@ inline void Lints::clear_e_subject_common_name_disallowed() {
   if (GetArenaNoVirtual() == NULL && e_subject_common_name_disallowed_ != NULL) delete e_subject_common_name_disallowed_;
   e_subject_common_name_disallowed_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_subject_common_name_disallowed() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_subject_common_name_disallowed)
+inline const ::zsearch::LintResult& Lints::e_subject_common_name_disallowed() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_subject_common_name_disallowed)
   return e_subject_common_name_disallowed_ != NULL ? *e_subject_common_name_disallowed_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_subject_common_name_disallowed() {
+inline ::zsearch::LintResult* Lints::mutable_e_subject_common_name_disallowed() {
   
   if (e_subject_common_name_disallowed_ == NULL) {
-    e_subject_common_name_disallowed_ = new ::censys_definitions::LintResult;
+    e_subject_common_name_disallowed_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_subject_common_name_disallowed)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_subject_common_name_disallowed)
   return e_subject_common_name_disallowed_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_subject_common_name_disallowed() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_subject_common_name_disallowed)
+inline ::zsearch::LintResult* Lints::release_e_subject_common_name_disallowed() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_subject_common_name_disallowed)
   
-  ::censys_definitions::LintResult* temp = e_subject_common_name_disallowed_;
+  ::zsearch::LintResult* temp = e_subject_common_name_disallowed_;
   e_subject_common_name_disallowed_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_subject_common_name_disallowed(::censys_definitions::LintResult* e_subject_common_name_disallowed) {
+inline void Lints::set_allocated_e_subject_common_name_disallowed(::zsearch::LintResult* e_subject_common_name_disallowed) {
   delete e_subject_common_name_disallowed_;
   e_subject_common_name_disallowed_ = e_subject_common_name_disallowed;
   if (e_subject_common_name_disallowed) {
@@ -8923,10 +8923,10 @@ inline void Lints::set_allocated_e_subject_common_name_disallowed(::censys_defin
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_subject_common_name_disallowed)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_subject_common_name_disallowed)
 }
 
-// .censys_definitions.LintResult w_subject_common_name_included = 166;
+// .zsearch.LintResult w_subject_common_name_included = 166;
 inline bool Lints::has_w_subject_common_name_included() const {
   return this != internal_default_instance() && w_subject_common_name_included_ != NULL;
 }
@@ -8934,27 +8934,27 @@ inline void Lints::clear_w_subject_common_name_included() {
   if (GetArenaNoVirtual() == NULL && w_subject_common_name_included_ != NULL) delete w_subject_common_name_included_;
   w_subject_common_name_included_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::w_subject_common_name_included() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.w_subject_common_name_included)
+inline const ::zsearch::LintResult& Lints::w_subject_common_name_included() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.w_subject_common_name_included)
   return w_subject_common_name_included_ != NULL ? *w_subject_common_name_included_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_w_subject_common_name_included() {
+inline ::zsearch::LintResult* Lints::mutable_w_subject_common_name_included() {
   
   if (w_subject_common_name_included_ == NULL) {
-    w_subject_common_name_included_ = new ::censys_definitions::LintResult;
+    w_subject_common_name_included_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.w_subject_common_name_included)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.w_subject_common_name_included)
   return w_subject_common_name_included_;
 }
-inline ::censys_definitions::LintResult* Lints::release_w_subject_common_name_included() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.w_subject_common_name_included)
+inline ::zsearch::LintResult* Lints::release_w_subject_common_name_included() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.w_subject_common_name_included)
   
-  ::censys_definitions::LintResult* temp = w_subject_common_name_included_;
+  ::zsearch::LintResult* temp = w_subject_common_name_included_;
   w_subject_common_name_included_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_w_subject_common_name_included(::censys_definitions::LintResult* w_subject_common_name_included) {
+inline void Lints::set_allocated_w_subject_common_name_included(::zsearch::LintResult* w_subject_common_name_included) {
   delete w_subject_common_name_included_;
   w_subject_common_name_included_ = w_subject_common_name_included;
   if (w_subject_common_name_included) {
@@ -8962,10 +8962,10 @@ inline void Lints::set_allocated_w_subject_common_name_included(::censys_definit
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.w_subject_common_name_included)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.w_subject_common_name_included)
 }
 
-// .censys_definitions.LintResult e_subject_common_name_not_from_san = 167;
+// .zsearch.LintResult e_subject_common_name_not_from_san = 167;
 inline bool Lints::has_e_subject_common_name_not_from_san() const {
   return this != internal_default_instance() && e_subject_common_name_not_from_san_ != NULL;
 }
@@ -8973,27 +8973,27 @@ inline void Lints::clear_e_subject_common_name_not_from_san() {
   if (GetArenaNoVirtual() == NULL && e_subject_common_name_not_from_san_ != NULL) delete e_subject_common_name_not_from_san_;
   e_subject_common_name_not_from_san_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_subject_common_name_not_from_san() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_subject_common_name_not_from_san)
+inline const ::zsearch::LintResult& Lints::e_subject_common_name_not_from_san() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_subject_common_name_not_from_san)
   return e_subject_common_name_not_from_san_ != NULL ? *e_subject_common_name_not_from_san_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_subject_common_name_not_from_san() {
+inline ::zsearch::LintResult* Lints::mutable_e_subject_common_name_not_from_san() {
   
   if (e_subject_common_name_not_from_san_ == NULL) {
-    e_subject_common_name_not_from_san_ = new ::censys_definitions::LintResult;
+    e_subject_common_name_not_from_san_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_subject_common_name_not_from_san)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_subject_common_name_not_from_san)
   return e_subject_common_name_not_from_san_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_subject_common_name_not_from_san() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_subject_common_name_not_from_san)
+inline ::zsearch::LintResult* Lints::release_e_subject_common_name_not_from_san() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_subject_common_name_not_from_san)
   
-  ::censys_definitions::LintResult* temp = e_subject_common_name_not_from_san_;
+  ::zsearch::LintResult* temp = e_subject_common_name_not_from_san_;
   e_subject_common_name_not_from_san_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_subject_common_name_not_from_san(::censys_definitions::LintResult* e_subject_common_name_not_from_san) {
+inline void Lints::set_allocated_e_subject_common_name_not_from_san(::zsearch::LintResult* e_subject_common_name_not_from_san) {
   delete e_subject_common_name_not_from_san_;
   e_subject_common_name_not_from_san_ = e_subject_common_name_not_from_san;
   if (e_subject_common_name_not_from_san) {
@@ -9001,10 +9001,10 @@ inline void Lints::set_allocated_e_subject_common_name_not_from_san(::censys_def
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_subject_common_name_not_from_san)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_subject_common_name_not_from_san)
 }
 
-// .censys_definitions.LintResult e_subject_contains_noninformational_value = 168;
+// .zsearch.LintResult e_subject_contains_noninformational_value = 168;
 inline bool Lints::has_e_subject_contains_noninformational_value() const {
   return this != internal_default_instance() && e_subject_contains_noninformational_value_ != NULL;
 }
@@ -9012,27 +9012,27 @@ inline void Lints::clear_e_subject_contains_noninformational_value() {
   if (GetArenaNoVirtual() == NULL && e_subject_contains_noninformational_value_ != NULL) delete e_subject_contains_noninformational_value_;
   e_subject_contains_noninformational_value_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_subject_contains_noninformational_value() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_subject_contains_noninformational_value)
+inline const ::zsearch::LintResult& Lints::e_subject_contains_noninformational_value() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_subject_contains_noninformational_value)
   return e_subject_contains_noninformational_value_ != NULL ? *e_subject_contains_noninformational_value_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_subject_contains_noninformational_value() {
+inline ::zsearch::LintResult* Lints::mutable_e_subject_contains_noninformational_value() {
   
   if (e_subject_contains_noninformational_value_ == NULL) {
-    e_subject_contains_noninformational_value_ = new ::censys_definitions::LintResult;
+    e_subject_contains_noninformational_value_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_subject_contains_noninformational_value)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_subject_contains_noninformational_value)
   return e_subject_contains_noninformational_value_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_subject_contains_noninformational_value() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_subject_contains_noninformational_value)
+inline ::zsearch::LintResult* Lints::release_e_subject_contains_noninformational_value() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_subject_contains_noninformational_value)
   
-  ::censys_definitions::LintResult* temp = e_subject_contains_noninformational_value_;
+  ::zsearch::LintResult* temp = e_subject_contains_noninformational_value_;
   e_subject_contains_noninformational_value_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_subject_contains_noninformational_value(::censys_definitions::LintResult* e_subject_contains_noninformational_value) {
+inline void Lints::set_allocated_e_subject_contains_noninformational_value(::zsearch::LintResult* e_subject_contains_noninformational_value) {
   delete e_subject_contains_noninformational_value_;
   e_subject_contains_noninformational_value_ = e_subject_contains_noninformational_value;
   if (e_subject_contains_noninformational_value) {
@@ -9040,10 +9040,10 @@ inline void Lints::set_allocated_e_subject_contains_noninformational_value(::cen
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_subject_contains_noninformational_value)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_subject_contains_noninformational_value)
 }
 
-// .censys_definitions.LintResult e_subject_contains_reserved_ip = 169;
+// .zsearch.LintResult e_subject_contains_reserved_ip = 169;
 inline bool Lints::has_e_subject_contains_reserved_ip() const {
   return this != internal_default_instance() && e_subject_contains_reserved_ip_ != NULL;
 }
@@ -9051,27 +9051,27 @@ inline void Lints::clear_e_subject_contains_reserved_ip() {
   if (GetArenaNoVirtual() == NULL && e_subject_contains_reserved_ip_ != NULL) delete e_subject_contains_reserved_ip_;
   e_subject_contains_reserved_ip_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_subject_contains_reserved_ip() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_subject_contains_reserved_ip)
+inline const ::zsearch::LintResult& Lints::e_subject_contains_reserved_ip() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_subject_contains_reserved_ip)
   return e_subject_contains_reserved_ip_ != NULL ? *e_subject_contains_reserved_ip_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_subject_contains_reserved_ip() {
+inline ::zsearch::LintResult* Lints::mutable_e_subject_contains_reserved_ip() {
   
   if (e_subject_contains_reserved_ip_ == NULL) {
-    e_subject_contains_reserved_ip_ = new ::censys_definitions::LintResult;
+    e_subject_contains_reserved_ip_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_subject_contains_reserved_ip)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_subject_contains_reserved_ip)
   return e_subject_contains_reserved_ip_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_subject_contains_reserved_ip() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_subject_contains_reserved_ip)
+inline ::zsearch::LintResult* Lints::release_e_subject_contains_reserved_ip() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_subject_contains_reserved_ip)
   
-  ::censys_definitions::LintResult* temp = e_subject_contains_reserved_ip_;
+  ::zsearch::LintResult* temp = e_subject_contains_reserved_ip_;
   e_subject_contains_reserved_ip_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_subject_contains_reserved_ip(::censys_definitions::LintResult* e_subject_contains_reserved_ip) {
+inline void Lints::set_allocated_e_subject_contains_reserved_ip(::zsearch::LintResult* e_subject_contains_reserved_ip) {
   delete e_subject_contains_reserved_ip_;
   e_subject_contains_reserved_ip_ = e_subject_contains_reserved_ip;
   if (e_subject_contains_reserved_ip) {
@@ -9079,10 +9079,10 @@ inline void Lints::set_allocated_e_subject_contains_reserved_ip(::censys_definit
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_subject_contains_reserved_ip)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_subject_contains_reserved_ip)
 }
 
-// .censys_definitions.LintResult e_subject_country_not_iso = 170;
+// .zsearch.LintResult e_subject_country_not_iso = 170;
 inline bool Lints::has_e_subject_country_not_iso() const {
   return this != internal_default_instance() && e_subject_country_not_iso_ != NULL;
 }
@@ -9090,27 +9090,27 @@ inline void Lints::clear_e_subject_country_not_iso() {
   if (GetArenaNoVirtual() == NULL && e_subject_country_not_iso_ != NULL) delete e_subject_country_not_iso_;
   e_subject_country_not_iso_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_subject_country_not_iso() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_subject_country_not_iso)
+inline const ::zsearch::LintResult& Lints::e_subject_country_not_iso() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_subject_country_not_iso)
   return e_subject_country_not_iso_ != NULL ? *e_subject_country_not_iso_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_subject_country_not_iso() {
+inline ::zsearch::LintResult* Lints::mutable_e_subject_country_not_iso() {
   
   if (e_subject_country_not_iso_ == NULL) {
-    e_subject_country_not_iso_ = new ::censys_definitions::LintResult;
+    e_subject_country_not_iso_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_subject_country_not_iso)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_subject_country_not_iso)
   return e_subject_country_not_iso_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_subject_country_not_iso() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_subject_country_not_iso)
+inline ::zsearch::LintResult* Lints::release_e_subject_country_not_iso() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_subject_country_not_iso)
   
-  ::censys_definitions::LintResult* temp = e_subject_country_not_iso_;
+  ::zsearch::LintResult* temp = e_subject_country_not_iso_;
   e_subject_country_not_iso_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_subject_country_not_iso(::censys_definitions::LintResult* e_subject_country_not_iso) {
+inline void Lints::set_allocated_e_subject_country_not_iso(::zsearch::LintResult* e_subject_country_not_iso) {
   delete e_subject_country_not_iso_;
   e_subject_country_not_iso_ = e_subject_country_not_iso;
   if (e_subject_country_not_iso) {
@@ -9118,10 +9118,10 @@ inline void Lints::set_allocated_e_subject_country_not_iso(::censys_definitions:
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_subject_country_not_iso)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_subject_country_not_iso)
 }
 
-// .censys_definitions.LintResult e_subject_empty_without_san = 171;
+// .zsearch.LintResult e_subject_empty_without_san = 171;
 inline bool Lints::has_e_subject_empty_without_san() const {
   return this != internal_default_instance() && e_subject_empty_without_san_ != NULL;
 }
@@ -9129,27 +9129,27 @@ inline void Lints::clear_e_subject_empty_without_san() {
   if (GetArenaNoVirtual() == NULL && e_subject_empty_without_san_ != NULL) delete e_subject_empty_without_san_;
   e_subject_empty_without_san_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_subject_empty_without_san() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_subject_empty_without_san)
+inline const ::zsearch::LintResult& Lints::e_subject_empty_without_san() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_subject_empty_without_san)
   return e_subject_empty_without_san_ != NULL ? *e_subject_empty_without_san_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_subject_empty_without_san() {
+inline ::zsearch::LintResult* Lints::mutable_e_subject_empty_without_san() {
   
   if (e_subject_empty_without_san_ == NULL) {
-    e_subject_empty_without_san_ = new ::censys_definitions::LintResult;
+    e_subject_empty_without_san_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_subject_empty_without_san)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_subject_empty_without_san)
   return e_subject_empty_without_san_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_subject_empty_without_san() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_subject_empty_without_san)
+inline ::zsearch::LintResult* Lints::release_e_subject_empty_without_san() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_subject_empty_without_san)
   
-  ::censys_definitions::LintResult* temp = e_subject_empty_without_san_;
+  ::zsearch::LintResult* temp = e_subject_empty_without_san_;
   e_subject_empty_without_san_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_subject_empty_without_san(::censys_definitions::LintResult* e_subject_empty_without_san) {
+inline void Lints::set_allocated_e_subject_empty_without_san(::zsearch::LintResult* e_subject_empty_without_san) {
   delete e_subject_empty_without_san_;
   e_subject_empty_without_san_ = e_subject_empty_without_san;
   if (e_subject_empty_without_san) {
@@ -9157,10 +9157,10 @@ inline void Lints::set_allocated_e_subject_empty_without_san(::censys_definition
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_subject_empty_without_san)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_subject_empty_without_san)
 }
 
-// .censys_definitions.LintResult e_subject_info_access_marked_critical = 172;
+// .zsearch.LintResult e_subject_info_access_marked_critical = 172;
 inline bool Lints::has_e_subject_info_access_marked_critical() const {
   return this != internal_default_instance() && e_subject_info_access_marked_critical_ != NULL;
 }
@@ -9168,27 +9168,27 @@ inline void Lints::clear_e_subject_info_access_marked_critical() {
   if (GetArenaNoVirtual() == NULL && e_subject_info_access_marked_critical_ != NULL) delete e_subject_info_access_marked_critical_;
   e_subject_info_access_marked_critical_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_subject_info_access_marked_critical() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_subject_info_access_marked_critical)
+inline const ::zsearch::LintResult& Lints::e_subject_info_access_marked_critical() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_subject_info_access_marked_critical)
   return e_subject_info_access_marked_critical_ != NULL ? *e_subject_info_access_marked_critical_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_subject_info_access_marked_critical() {
+inline ::zsearch::LintResult* Lints::mutable_e_subject_info_access_marked_critical() {
   
   if (e_subject_info_access_marked_critical_ == NULL) {
-    e_subject_info_access_marked_critical_ = new ::censys_definitions::LintResult;
+    e_subject_info_access_marked_critical_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_subject_info_access_marked_critical)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_subject_info_access_marked_critical)
   return e_subject_info_access_marked_critical_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_subject_info_access_marked_critical() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_subject_info_access_marked_critical)
+inline ::zsearch::LintResult* Lints::release_e_subject_info_access_marked_critical() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_subject_info_access_marked_critical)
   
-  ::censys_definitions::LintResult* temp = e_subject_info_access_marked_critical_;
+  ::zsearch::LintResult* temp = e_subject_info_access_marked_critical_;
   e_subject_info_access_marked_critical_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_subject_info_access_marked_critical(::censys_definitions::LintResult* e_subject_info_access_marked_critical) {
+inline void Lints::set_allocated_e_subject_info_access_marked_critical(::zsearch::LintResult* e_subject_info_access_marked_critical) {
   delete e_subject_info_access_marked_critical_;
   e_subject_info_access_marked_critical_ = e_subject_info_access_marked_critical;
   if (e_subject_info_access_marked_critical) {
@@ -9196,10 +9196,10 @@ inline void Lints::set_allocated_e_subject_info_access_marked_critical(::censys_
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_subject_info_access_marked_critical)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_subject_info_access_marked_critical)
 }
 
-// .censys_definitions.LintResult e_subject_locality_without_org = 173;
+// .zsearch.LintResult e_subject_locality_without_org = 173;
 inline bool Lints::has_e_subject_locality_without_org() const {
   return this != internal_default_instance() && e_subject_locality_without_org_ != NULL;
 }
@@ -9207,27 +9207,27 @@ inline void Lints::clear_e_subject_locality_without_org() {
   if (GetArenaNoVirtual() == NULL && e_subject_locality_without_org_ != NULL) delete e_subject_locality_without_org_;
   e_subject_locality_without_org_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_subject_locality_without_org() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_subject_locality_without_org)
+inline const ::zsearch::LintResult& Lints::e_subject_locality_without_org() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_subject_locality_without_org)
   return e_subject_locality_without_org_ != NULL ? *e_subject_locality_without_org_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_subject_locality_without_org() {
+inline ::zsearch::LintResult* Lints::mutable_e_subject_locality_without_org() {
   
   if (e_subject_locality_without_org_ == NULL) {
-    e_subject_locality_without_org_ = new ::censys_definitions::LintResult;
+    e_subject_locality_without_org_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_subject_locality_without_org)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_subject_locality_without_org)
   return e_subject_locality_without_org_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_subject_locality_without_org() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_subject_locality_without_org)
+inline ::zsearch::LintResult* Lints::release_e_subject_locality_without_org() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_subject_locality_without_org)
   
-  ::censys_definitions::LintResult* temp = e_subject_locality_without_org_;
+  ::zsearch::LintResult* temp = e_subject_locality_without_org_;
   e_subject_locality_without_org_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_subject_locality_without_org(::censys_definitions::LintResult* e_subject_locality_without_org) {
+inline void Lints::set_allocated_e_subject_locality_without_org(::zsearch::LintResult* e_subject_locality_without_org) {
   delete e_subject_locality_without_org_;
   e_subject_locality_without_org_ = e_subject_locality_without_org;
   if (e_subject_locality_without_org) {
@@ -9235,10 +9235,10 @@ inline void Lints::set_allocated_e_subject_locality_without_org(::censys_definit
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_subject_locality_without_org)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_subject_locality_without_org)
 }
 
-// .censys_definitions.LintResult e_subject_not_dn = 174;
+// .zsearch.LintResult e_subject_not_dn = 174;
 inline bool Lints::has_e_subject_not_dn() const {
   return this != internal_default_instance() && e_subject_not_dn_ != NULL;
 }
@@ -9246,27 +9246,27 @@ inline void Lints::clear_e_subject_not_dn() {
   if (GetArenaNoVirtual() == NULL && e_subject_not_dn_ != NULL) delete e_subject_not_dn_;
   e_subject_not_dn_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_subject_not_dn() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_subject_not_dn)
+inline const ::zsearch::LintResult& Lints::e_subject_not_dn() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_subject_not_dn)
   return e_subject_not_dn_ != NULL ? *e_subject_not_dn_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_subject_not_dn() {
+inline ::zsearch::LintResult* Lints::mutable_e_subject_not_dn() {
   
   if (e_subject_not_dn_ == NULL) {
-    e_subject_not_dn_ = new ::censys_definitions::LintResult;
+    e_subject_not_dn_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_subject_not_dn)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_subject_not_dn)
   return e_subject_not_dn_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_subject_not_dn() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_subject_not_dn)
+inline ::zsearch::LintResult* Lints::release_e_subject_not_dn() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_subject_not_dn)
   
-  ::censys_definitions::LintResult* temp = e_subject_not_dn_;
+  ::zsearch::LintResult* temp = e_subject_not_dn_;
   e_subject_not_dn_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_subject_not_dn(::censys_definitions::LintResult* e_subject_not_dn) {
+inline void Lints::set_allocated_e_subject_not_dn(::zsearch::LintResult* e_subject_not_dn) {
   delete e_subject_not_dn_;
   e_subject_not_dn_ = e_subject_not_dn;
   if (e_subject_not_dn) {
@@ -9274,10 +9274,10 @@ inline void Lints::set_allocated_e_subject_not_dn(::censys_definitions::LintResu
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_subject_not_dn)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_subject_not_dn)
 }
 
-// .censys_definitions.LintResult e_subject_org_without_country = 175;
+// .zsearch.LintResult e_subject_org_without_country = 175;
 inline bool Lints::has_e_subject_org_without_country() const {
   return this != internal_default_instance() && e_subject_org_without_country_ != NULL;
 }
@@ -9285,27 +9285,27 @@ inline void Lints::clear_e_subject_org_without_country() {
   if (GetArenaNoVirtual() == NULL && e_subject_org_without_country_ != NULL) delete e_subject_org_without_country_;
   e_subject_org_without_country_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_subject_org_without_country() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_subject_org_without_country)
+inline const ::zsearch::LintResult& Lints::e_subject_org_without_country() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_subject_org_without_country)
   return e_subject_org_without_country_ != NULL ? *e_subject_org_without_country_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_subject_org_without_country() {
+inline ::zsearch::LintResult* Lints::mutable_e_subject_org_without_country() {
   
   if (e_subject_org_without_country_ == NULL) {
-    e_subject_org_without_country_ = new ::censys_definitions::LintResult;
+    e_subject_org_without_country_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_subject_org_without_country)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_subject_org_without_country)
   return e_subject_org_without_country_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_subject_org_without_country() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_subject_org_without_country)
+inline ::zsearch::LintResult* Lints::release_e_subject_org_without_country() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_subject_org_without_country)
   
-  ::censys_definitions::LintResult* temp = e_subject_org_without_country_;
+  ::zsearch::LintResult* temp = e_subject_org_without_country_;
   e_subject_org_without_country_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_subject_org_without_country(::censys_definitions::LintResult* e_subject_org_without_country) {
+inline void Lints::set_allocated_e_subject_org_without_country(::zsearch::LintResult* e_subject_org_without_country) {
   delete e_subject_org_without_country_;
   e_subject_org_without_country_ = e_subject_org_without_country;
   if (e_subject_org_without_country) {
@@ -9313,10 +9313,10 @@ inline void Lints::set_allocated_e_subject_org_without_country(::censys_definiti
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_subject_org_without_country)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_subject_org_without_country)
 }
 
-// .censys_definitions.LintResult e_subject_org_without_locality_or_province = 176;
+// .zsearch.LintResult e_subject_org_without_locality_or_province = 176;
 inline bool Lints::has_e_subject_org_without_locality_or_province() const {
   return this != internal_default_instance() && e_subject_org_without_locality_or_province_ != NULL;
 }
@@ -9324,27 +9324,27 @@ inline void Lints::clear_e_subject_org_without_locality_or_province() {
   if (GetArenaNoVirtual() == NULL && e_subject_org_without_locality_or_province_ != NULL) delete e_subject_org_without_locality_or_province_;
   e_subject_org_without_locality_or_province_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_subject_org_without_locality_or_province() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_subject_org_without_locality_or_province)
+inline const ::zsearch::LintResult& Lints::e_subject_org_without_locality_or_province() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_subject_org_without_locality_or_province)
   return e_subject_org_without_locality_or_province_ != NULL ? *e_subject_org_without_locality_or_province_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_subject_org_without_locality_or_province() {
+inline ::zsearch::LintResult* Lints::mutable_e_subject_org_without_locality_or_province() {
   
   if (e_subject_org_without_locality_or_province_ == NULL) {
-    e_subject_org_without_locality_or_province_ = new ::censys_definitions::LintResult;
+    e_subject_org_without_locality_or_province_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_subject_org_without_locality_or_province)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_subject_org_without_locality_or_province)
   return e_subject_org_without_locality_or_province_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_subject_org_without_locality_or_province() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_subject_org_without_locality_or_province)
+inline ::zsearch::LintResult* Lints::release_e_subject_org_without_locality_or_province() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_subject_org_without_locality_or_province)
   
-  ::censys_definitions::LintResult* temp = e_subject_org_without_locality_or_province_;
+  ::zsearch::LintResult* temp = e_subject_org_without_locality_or_province_;
   e_subject_org_without_locality_or_province_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_subject_org_without_locality_or_province(::censys_definitions::LintResult* e_subject_org_without_locality_or_province) {
+inline void Lints::set_allocated_e_subject_org_without_locality_or_province(::zsearch::LintResult* e_subject_org_without_locality_or_province) {
   delete e_subject_org_without_locality_or_province_;
   e_subject_org_without_locality_or_province_ = e_subject_org_without_locality_or_province;
   if (e_subject_org_without_locality_or_province) {
@@ -9352,10 +9352,10 @@ inline void Lints::set_allocated_e_subject_org_without_locality_or_province(::ce
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_subject_org_without_locality_or_province)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_subject_org_without_locality_or_province)
 }
 
-// .censys_definitions.LintResult e_subject_postal_without_org = 177;
+// .zsearch.LintResult e_subject_postal_without_org = 177;
 inline bool Lints::has_e_subject_postal_without_org() const {
   return this != internal_default_instance() && e_subject_postal_without_org_ != NULL;
 }
@@ -9363,27 +9363,27 @@ inline void Lints::clear_e_subject_postal_without_org() {
   if (GetArenaNoVirtual() == NULL && e_subject_postal_without_org_ != NULL) delete e_subject_postal_without_org_;
   e_subject_postal_without_org_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_subject_postal_without_org() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_subject_postal_without_org)
+inline const ::zsearch::LintResult& Lints::e_subject_postal_without_org() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_subject_postal_without_org)
   return e_subject_postal_without_org_ != NULL ? *e_subject_postal_without_org_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_subject_postal_without_org() {
+inline ::zsearch::LintResult* Lints::mutable_e_subject_postal_without_org() {
   
   if (e_subject_postal_without_org_ == NULL) {
-    e_subject_postal_without_org_ = new ::censys_definitions::LintResult;
+    e_subject_postal_without_org_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_subject_postal_without_org)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_subject_postal_without_org)
   return e_subject_postal_without_org_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_subject_postal_without_org() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_subject_postal_without_org)
+inline ::zsearch::LintResult* Lints::release_e_subject_postal_without_org() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_subject_postal_without_org)
   
-  ::censys_definitions::LintResult* temp = e_subject_postal_without_org_;
+  ::zsearch::LintResult* temp = e_subject_postal_without_org_;
   e_subject_postal_without_org_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_subject_postal_without_org(::censys_definitions::LintResult* e_subject_postal_without_org) {
+inline void Lints::set_allocated_e_subject_postal_without_org(::zsearch::LintResult* e_subject_postal_without_org) {
   delete e_subject_postal_without_org_;
   e_subject_postal_without_org_ = e_subject_postal_without_org;
   if (e_subject_postal_without_org) {
@@ -9391,10 +9391,10 @@ inline void Lints::set_allocated_e_subject_postal_without_org(::censys_definitio
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_subject_postal_without_org)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_subject_postal_without_org)
 }
 
-// .censys_definitions.LintResult e_subject_province_without_org = 178;
+// .zsearch.LintResult e_subject_province_without_org = 178;
 inline bool Lints::has_e_subject_province_without_org() const {
   return this != internal_default_instance() && e_subject_province_without_org_ != NULL;
 }
@@ -9402,27 +9402,27 @@ inline void Lints::clear_e_subject_province_without_org() {
   if (GetArenaNoVirtual() == NULL && e_subject_province_without_org_ != NULL) delete e_subject_province_without_org_;
   e_subject_province_without_org_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_subject_province_without_org() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_subject_province_without_org)
+inline const ::zsearch::LintResult& Lints::e_subject_province_without_org() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_subject_province_without_org)
   return e_subject_province_without_org_ != NULL ? *e_subject_province_without_org_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_subject_province_without_org() {
+inline ::zsearch::LintResult* Lints::mutable_e_subject_province_without_org() {
   
   if (e_subject_province_without_org_ == NULL) {
-    e_subject_province_without_org_ = new ::censys_definitions::LintResult;
+    e_subject_province_without_org_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_subject_province_without_org)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_subject_province_without_org)
   return e_subject_province_without_org_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_subject_province_without_org() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_subject_province_without_org)
+inline ::zsearch::LintResult* Lints::release_e_subject_province_without_org() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_subject_province_without_org)
   
-  ::censys_definitions::LintResult* temp = e_subject_province_without_org_;
+  ::zsearch::LintResult* temp = e_subject_province_without_org_;
   e_subject_province_without_org_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_subject_province_without_org(::censys_definitions::LintResult* e_subject_province_without_org) {
+inline void Lints::set_allocated_e_subject_province_without_org(::zsearch::LintResult* e_subject_province_without_org) {
   delete e_subject_province_without_org_;
   e_subject_province_without_org_ = e_subject_province_without_org;
   if (e_subject_province_without_org) {
@@ -9430,10 +9430,10 @@ inline void Lints::set_allocated_e_subject_province_without_org(::censys_definit
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_subject_province_without_org)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_subject_province_without_org)
 }
 
-// .censys_definitions.LintResult e_subject_street_without_org = 179;
+// .zsearch.LintResult e_subject_street_without_org = 179;
 inline bool Lints::has_e_subject_street_without_org() const {
   return this != internal_default_instance() && e_subject_street_without_org_ != NULL;
 }
@@ -9441,27 +9441,27 @@ inline void Lints::clear_e_subject_street_without_org() {
   if (GetArenaNoVirtual() == NULL && e_subject_street_without_org_ != NULL) delete e_subject_street_without_org_;
   e_subject_street_without_org_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_subject_street_without_org() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_subject_street_without_org)
+inline const ::zsearch::LintResult& Lints::e_subject_street_without_org() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_subject_street_without_org)
   return e_subject_street_without_org_ != NULL ? *e_subject_street_without_org_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_subject_street_without_org() {
+inline ::zsearch::LintResult* Lints::mutable_e_subject_street_without_org() {
   
   if (e_subject_street_without_org_ == NULL) {
-    e_subject_street_without_org_ = new ::censys_definitions::LintResult;
+    e_subject_street_without_org_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_subject_street_without_org)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_subject_street_without_org)
   return e_subject_street_without_org_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_subject_street_without_org() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_subject_street_without_org)
+inline ::zsearch::LintResult* Lints::release_e_subject_street_without_org() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_subject_street_without_org)
   
-  ::censys_definitions::LintResult* temp = e_subject_street_without_org_;
+  ::zsearch::LintResult* temp = e_subject_street_without_org_;
   e_subject_street_without_org_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_subject_street_without_org(::censys_definitions::LintResult* e_subject_street_without_org) {
+inline void Lints::set_allocated_e_subject_street_without_org(::zsearch::LintResult* e_subject_street_without_org) {
   delete e_subject_street_without_org_;
   e_subject_street_without_org_ = e_subject_street_without_org;
   if (e_subject_street_without_org) {
@@ -9469,10 +9469,10 @@ inline void Lints::set_allocated_e_subject_street_without_org(::censys_definitio
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_subject_street_without_org)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_subject_street_without_org)
 }
 
-// .censys_definitions.LintResult e_utc_time_does_not_include_seconds = 180;
+// .zsearch.LintResult e_utc_time_does_not_include_seconds = 180;
 inline bool Lints::has_e_utc_time_does_not_include_seconds() const {
   return this != internal_default_instance() && e_utc_time_does_not_include_seconds_ != NULL;
 }
@@ -9480,27 +9480,27 @@ inline void Lints::clear_e_utc_time_does_not_include_seconds() {
   if (GetArenaNoVirtual() == NULL && e_utc_time_does_not_include_seconds_ != NULL) delete e_utc_time_does_not_include_seconds_;
   e_utc_time_does_not_include_seconds_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_utc_time_does_not_include_seconds() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_utc_time_does_not_include_seconds)
+inline const ::zsearch::LintResult& Lints::e_utc_time_does_not_include_seconds() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_utc_time_does_not_include_seconds)
   return e_utc_time_does_not_include_seconds_ != NULL ? *e_utc_time_does_not_include_seconds_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_utc_time_does_not_include_seconds() {
+inline ::zsearch::LintResult* Lints::mutable_e_utc_time_does_not_include_seconds() {
   
   if (e_utc_time_does_not_include_seconds_ == NULL) {
-    e_utc_time_does_not_include_seconds_ = new ::censys_definitions::LintResult;
+    e_utc_time_does_not_include_seconds_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_utc_time_does_not_include_seconds)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_utc_time_does_not_include_seconds)
   return e_utc_time_does_not_include_seconds_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_utc_time_does_not_include_seconds() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_utc_time_does_not_include_seconds)
+inline ::zsearch::LintResult* Lints::release_e_utc_time_does_not_include_seconds() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_utc_time_does_not_include_seconds)
   
-  ::censys_definitions::LintResult* temp = e_utc_time_does_not_include_seconds_;
+  ::zsearch::LintResult* temp = e_utc_time_does_not_include_seconds_;
   e_utc_time_does_not_include_seconds_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_utc_time_does_not_include_seconds(::censys_definitions::LintResult* e_utc_time_does_not_include_seconds) {
+inline void Lints::set_allocated_e_utc_time_does_not_include_seconds(::zsearch::LintResult* e_utc_time_does_not_include_seconds) {
   delete e_utc_time_does_not_include_seconds_;
   e_utc_time_does_not_include_seconds_ = e_utc_time_does_not_include_seconds;
   if (e_utc_time_does_not_include_seconds) {
@@ -9508,10 +9508,10 @@ inline void Lints::set_allocated_e_utc_time_does_not_include_seconds(::censys_de
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_utc_time_does_not_include_seconds)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_utc_time_does_not_include_seconds)
 }
 
-// .censys_definitions.LintResult e_utc_time_not_in_zulu = 181;
+// .zsearch.LintResult e_utc_time_not_in_zulu = 181;
 inline bool Lints::has_e_utc_time_not_in_zulu() const {
   return this != internal_default_instance() && e_utc_time_not_in_zulu_ != NULL;
 }
@@ -9519,27 +9519,27 @@ inline void Lints::clear_e_utc_time_not_in_zulu() {
   if (GetArenaNoVirtual() == NULL && e_utc_time_not_in_zulu_ != NULL) delete e_utc_time_not_in_zulu_;
   e_utc_time_not_in_zulu_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_utc_time_not_in_zulu() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_utc_time_not_in_zulu)
+inline const ::zsearch::LintResult& Lints::e_utc_time_not_in_zulu() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_utc_time_not_in_zulu)
   return e_utc_time_not_in_zulu_ != NULL ? *e_utc_time_not_in_zulu_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_utc_time_not_in_zulu() {
+inline ::zsearch::LintResult* Lints::mutable_e_utc_time_not_in_zulu() {
   
   if (e_utc_time_not_in_zulu_ == NULL) {
-    e_utc_time_not_in_zulu_ = new ::censys_definitions::LintResult;
+    e_utc_time_not_in_zulu_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_utc_time_not_in_zulu)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_utc_time_not_in_zulu)
   return e_utc_time_not_in_zulu_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_utc_time_not_in_zulu() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_utc_time_not_in_zulu)
+inline ::zsearch::LintResult* Lints::release_e_utc_time_not_in_zulu() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_utc_time_not_in_zulu)
   
-  ::censys_definitions::LintResult* temp = e_utc_time_not_in_zulu_;
+  ::zsearch::LintResult* temp = e_utc_time_not_in_zulu_;
   e_utc_time_not_in_zulu_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_utc_time_not_in_zulu(::censys_definitions::LintResult* e_utc_time_not_in_zulu) {
+inline void Lints::set_allocated_e_utc_time_not_in_zulu(::zsearch::LintResult* e_utc_time_not_in_zulu) {
   delete e_utc_time_not_in_zulu_;
   e_utc_time_not_in_zulu_ = e_utc_time_not_in_zulu;
   if (e_utc_time_not_in_zulu) {
@@ -9547,10 +9547,10 @@ inline void Lints::set_allocated_e_utc_time_not_in_zulu(::censys_definitions::Li
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_utc_time_not_in_zulu)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_utc_time_not_in_zulu)
 }
 
-// .censys_definitions.LintResult e_validity_time_not_positive = 182;
+// .zsearch.LintResult e_validity_time_not_positive = 182;
 inline bool Lints::has_e_validity_time_not_positive() const {
   return this != internal_default_instance() && e_validity_time_not_positive_ != NULL;
 }
@@ -9558,27 +9558,27 @@ inline void Lints::clear_e_validity_time_not_positive() {
   if (GetArenaNoVirtual() == NULL && e_validity_time_not_positive_ != NULL) delete e_validity_time_not_positive_;
   e_validity_time_not_positive_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_validity_time_not_positive() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_validity_time_not_positive)
+inline const ::zsearch::LintResult& Lints::e_validity_time_not_positive() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_validity_time_not_positive)
   return e_validity_time_not_positive_ != NULL ? *e_validity_time_not_positive_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_validity_time_not_positive() {
+inline ::zsearch::LintResult* Lints::mutable_e_validity_time_not_positive() {
   
   if (e_validity_time_not_positive_ == NULL) {
-    e_validity_time_not_positive_ = new ::censys_definitions::LintResult;
+    e_validity_time_not_positive_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_validity_time_not_positive)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_validity_time_not_positive)
   return e_validity_time_not_positive_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_validity_time_not_positive() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_validity_time_not_positive)
+inline ::zsearch::LintResult* Lints::release_e_validity_time_not_positive() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_validity_time_not_positive)
   
-  ::censys_definitions::LintResult* temp = e_validity_time_not_positive_;
+  ::zsearch::LintResult* temp = e_validity_time_not_positive_;
   e_validity_time_not_positive_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_validity_time_not_positive(::censys_definitions::LintResult* e_validity_time_not_positive) {
+inline void Lints::set_allocated_e_validity_time_not_positive(::zsearch::LintResult* e_validity_time_not_positive) {
   delete e_validity_time_not_positive_;
   e_validity_time_not_positive_ = e_validity_time_not_positive;
   if (e_validity_time_not_positive) {
@@ -9586,10 +9586,10 @@ inline void Lints::set_allocated_e_validity_time_not_positive(::censys_definitio
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_validity_time_not_positive)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_validity_time_not_positive)
 }
 
-// .censys_definitions.LintResult e_wrong_time_format_pre2050 = 183;
+// .zsearch.LintResult e_wrong_time_format_pre2050 = 183;
 inline bool Lints::has_e_wrong_time_format_pre2050() const {
   return this != internal_default_instance() && e_wrong_time_format_pre2050_ != NULL;
 }
@@ -9597,27 +9597,27 @@ inline void Lints::clear_e_wrong_time_format_pre2050() {
   if (GetArenaNoVirtual() == NULL && e_wrong_time_format_pre2050_ != NULL) delete e_wrong_time_format_pre2050_;
   e_wrong_time_format_pre2050_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_wrong_time_format_pre2050() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_wrong_time_format_pre2050)
+inline const ::zsearch::LintResult& Lints::e_wrong_time_format_pre2050() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_wrong_time_format_pre2050)
   return e_wrong_time_format_pre2050_ != NULL ? *e_wrong_time_format_pre2050_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_wrong_time_format_pre2050() {
+inline ::zsearch::LintResult* Lints::mutable_e_wrong_time_format_pre2050() {
   
   if (e_wrong_time_format_pre2050_ == NULL) {
-    e_wrong_time_format_pre2050_ = new ::censys_definitions::LintResult;
+    e_wrong_time_format_pre2050_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_wrong_time_format_pre2050)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_wrong_time_format_pre2050)
   return e_wrong_time_format_pre2050_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_wrong_time_format_pre2050() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_wrong_time_format_pre2050)
+inline ::zsearch::LintResult* Lints::release_e_wrong_time_format_pre2050() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_wrong_time_format_pre2050)
   
-  ::censys_definitions::LintResult* temp = e_wrong_time_format_pre2050_;
+  ::zsearch::LintResult* temp = e_wrong_time_format_pre2050_;
   e_wrong_time_format_pre2050_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_wrong_time_format_pre2050(::censys_definitions::LintResult* e_wrong_time_format_pre2050) {
+inline void Lints::set_allocated_e_wrong_time_format_pre2050(::zsearch::LintResult* e_wrong_time_format_pre2050) {
   delete e_wrong_time_format_pre2050_;
   e_wrong_time_format_pre2050_ = e_wrong_time_format_pre2050;
   if (e_wrong_time_format_pre2050) {
@@ -9625,10 +9625,10 @@ inline void Lints::set_allocated_e_wrong_time_format_pre2050(::censys_definition
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_wrong_time_format_pre2050)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_wrong_time_format_pre2050)
 }
 
-// .censys_definitions.LintResult e_rsa_no_public_key = 184;
+// .zsearch.LintResult e_rsa_no_public_key = 184;
 inline bool Lints::has_e_rsa_no_public_key() const {
   return this != internal_default_instance() && e_rsa_no_public_key_ != NULL;
 }
@@ -9636,27 +9636,27 @@ inline void Lints::clear_e_rsa_no_public_key() {
   if (GetArenaNoVirtual() == NULL && e_rsa_no_public_key_ != NULL) delete e_rsa_no_public_key_;
   e_rsa_no_public_key_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_rsa_no_public_key() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_rsa_no_public_key)
+inline const ::zsearch::LintResult& Lints::e_rsa_no_public_key() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_rsa_no_public_key)
   return e_rsa_no_public_key_ != NULL ? *e_rsa_no_public_key_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_rsa_no_public_key() {
+inline ::zsearch::LintResult* Lints::mutable_e_rsa_no_public_key() {
   
   if (e_rsa_no_public_key_ == NULL) {
-    e_rsa_no_public_key_ = new ::censys_definitions::LintResult;
+    e_rsa_no_public_key_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_rsa_no_public_key)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_rsa_no_public_key)
   return e_rsa_no_public_key_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_rsa_no_public_key() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_rsa_no_public_key)
+inline ::zsearch::LintResult* Lints::release_e_rsa_no_public_key() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_rsa_no_public_key)
   
-  ::censys_definitions::LintResult* temp = e_rsa_no_public_key_;
+  ::zsearch::LintResult* temp = e_rsa_no_public_key_;
   e_rsa_no_public_key_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_rsa_no_public_key(::censys_definitions::LintResult* e_rsa_no_public_key) {
+inline void Lints::set_allocated_e_rsa_no_public_key(::zsearch::LintResult* e_rsa_no_public_key) {
   delete e_rsa_no_public_key_;
   e_rsa_no_public_key_ = e_rsa_no_public_key;
   if (e_rsa_no_public_key) {
@@ -9664,10 +9664,10 @@ inline void Lints::set_allocated_e_rsa_no_public_key(::censys_definitions::LintR
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_rsa_no_public_key)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_rsa_no_public_key)
 }
 
-// .censys_definitions.LintResult e_sub_cert_certificate_policies_missing = 185;
+// .zsearch.LintResult e_sub_cert_certificate_policies_missing = 185;
 inline bool Lints::has_e_sub_cert_certificate_policies_missing() const {
   return this != internal_default_instance() && e_sub_cert_certificate_policies_missing_ != NULL;
 }
@@ -9675,27 +9675,27 @@ inline void Lints::clear_e_sub_cert_certificate_policies_missing() {
   if (GetArenaNoVirtual() == NULL && e_sub_cert_certificate_policies_missing_ != NULL) delete e_sub_cert_certificate_policies_missing_;
   e_sub_cert_certificate_policies_missing_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_sub_cert_certificate_policies_missing() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_sub_cert_certificate_policies_missing)
+inline const ::zsearch::LintResult& Lints::e_sub_cert_certificate_policies_missing() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_sub_cert_certificate_policies_missing)
   return e_sub_cert_certificate_policies_missing_ != NULL ? *e_sub_cert_certificate_policies_missing_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_sub_cert_certificate_policies_missing() {
+inline ::zsearch::LintResult* Lints::mutable_e_sub_cert_certificate_policies_missing() {
   
   if (e_sub_cert_certificate_policies_missing_ == NULL) {
-    e_sub_cert_certificate_policies_missing_ = new ::censys_definitions::LintResult;
+    e_sub_cert_certificate_policies_missing_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_sub_cert_certificate_policies_missing)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_sub_cert_certificate_policies_missing)
   return e_sub_cert_certificate_policies_missing_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_sub_cert_certificate_policies_missing() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_sub_cert_certificate_policies_missing)
+inline ::zsearch::LintResult* Lints::release_e_sub_cert_certificate_policies_missing() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_sub_cert_certificate_policies_missing)
   
-  ::censys_definitions::LintResult* temp = e_sub_cert_certificate_policies_missing_;
+  ::zsearch::LintResult* temp = e_sub_cert_certificate_policies_missing_;
   e_sub_cert_certificate_policies_missing_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_sub_cert_certificate_policies_missing(::censys_definitions::LintResult* e_sub_cert_certificate_policies_missing) {
+inline void Lints::set_allocated_e_sub_cert_certificate_policies_missing(::zsearch::LintResult* e_sub_cert_certificate_policies_missing) {
   delete e_sub_cert_certificate_policies_missing_;
   e_sub_cert_certificate_policies_missing_ = e_sub_cert_certificate_policies_missing;
   if (e_sub_cert_certificate_policies_missing) {
@@ -9703,10 +9703,10 @@ inline void Lints::set_allocated_e_sub_cert_certificate_policies_missing(::censy
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_sub_cert_certificate_policies_missing)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_sub_cert_certificate_policies_missing)
 }
 
-// .censys_definitions.LintResult e_sub_cert_key_usage_crl_sign_bit_set = 186;
+// .zsearch.LintResult e_sub_cert_key_usage_crl_sign_bit_set = 186;
 inline bool Lints::has_e_sub_cert_key_usage_crl_sign_bit_set() const {
   return this != internal_default_instance() && e_sub_cert_key_usage_crl_sign_bit_set_ != NULL;
 }
@@ -9714,27 +9714,27 @@ inline void Lints::clear_e_sub_cert_key_usage_crl_sign_bit_set() {
   if (GetArenaNoVirtual() == NULL && e_sub_cert_key_usage_crl_sign_bit_set_ != NULL) delete e_sub_cert_key_usage_crl_sign_bit_set_;
   e_sub_cert_key_usage_crl_sign_bit_set_ = NULL;
 }
-inline const ::censys_definitions::LintResult& Lints::e_sub_cert_key_usage_crl_sign_bit_set() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Lints.e_sub_cert_key_usage_crl_sign_bit_set)
+inline const ::zsearch::LintResult& Lints::e_sub_cert_key_usage_crl_sign_bit_set() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_sub_cert_key_usage_crl_sign_bit_set)
   return e_sub_cert_key_usage_crl_sign_bit_set_ != NULL ? *e_sub_cert_key_usage_crl_sign_bit_set_
-                         : *::censys_definitions::LintResult::internal_default_instance();
+                         : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::censys_definitions::LintResult* Lints::mutable_e_sub_cert_key_usage_crl_sign_bit_set() {
+inline ::zsearch::LintResult* Lints::mutable_e_sub_cert_key_usage_crl_sign_bit_set() {
   
   if (e_sub_cert_key_usage_crl_sign_bit_set_ == NULL) {
-    e_sub_cert_key_usage_crl_sign_bit_set_ = new ::censys_definitions::LintResult;
+    e_sub_cert_key_usage_crl_sign_bit_set_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Lints.e_sub_cert_key_usage_crl_sign_bit_set)
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_sub_cert_key_usage_crl_sign_bit_set)
   return e_sub_cert_key_usage_crl_sign_bit_set_;
 }
-inline ::censys_definitions::LintResult* Lints::release_e_sub_cert_key_usage_crl_sign_bit_set() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Lints.e_sub_cert_key_usage_crl_sign_bit_set)
+inline ::zsearch::LintResult* Lints::release_e_sub_cert_key_usage_crl_sign_bit_set() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_sub_cert_key_usage_crl_sign_bit_set)
   
-  ::censys_definitions::LintResult* temp = e_sub_cert_key_usage_crl_sign_bit_set_;
+  ::zsearch::LintResult* temp = e_sub_cert_key_usage_crl_sign_bit_set_;
   e_sub_cert_key_usage_crl_sign_bit_set_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_e_sub_cert_key_usage_crl_sign_bit_set(::censys_definitions::LintResult* e_sub_cert_key_usage_crl_sign_bit_set) {
+inline void Lints::set_allocated_e_sub_cert_key_usage_crl_sign_bit_set(::zsearch::LintResult* e_sub_cert_key_usage_crl_sign_bit_set) {
   delete e_sub_cert_key_usage_crl_sign_bit_set_;
   e_sub_cert_key_usage_crl_sign_bit_set_ = e_sub_cert_key_usage_crl_sign_bit_set;
   if (e_sub_cert_key_usage_crl_sign_bit_set) {
@@ -9742,7 +9742,7 @@ inline void Lints::set_allocated_e_sub_cert_key_usage_crl_sign_bit_set(::censys_
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Lints.e_sub_cert_key_usage_crl_sign_bit_set)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_sub_cert_key_usage_crl_sign_bit_set)
 }
 
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -9754,21 +9754,21 @@ inline void Lints::set_allocated_e_sub_cert_key_usage_crl_sign_bit_set(::censys_
 // @@protoc_insertion_point(namespace_scope)
 
 
-}  // namespace censys_definitions
+}  // namespace zsearch
 
 #ifndef SWIG
 namespace google {
 namespace protobuf {
 
-template <> struct is_proto_enum< ::censys_definitions::LintResultStatus> : ::google::protobuf::internal::true_type {};
+template <> struct is_proto_enum< ::zsearch::LintResultStatus> : ::google::protobuf::internal::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::censys_definitions::LintResultStatus>() {
-  return ::censys_definitions::LintResultStatus_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::zsearch::LintResultStatus>() {
+  return ::zsearch::LintResultStatus_descriptor();
 }
-template <> struct is_proto_enum< ::censys_definitions::ZLintStatus> : ::google::protobuf::internal::true_type {};
+template <> struct is_proto_enum< ::zsearch::ZLintStatus> : ::google::protobuf::internal::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::censys_definitions::ZLintStatus>() {
-  return ::censys_definitions::ZLintStatus_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::zsearch::ZLintStatus>() {
+  return ::zsearch::ZLintStatus_descriptor();
 }
 
 }  // namespace protobuf

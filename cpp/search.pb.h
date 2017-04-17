@@ -30,7 +30,7 @@
 #include "hoststore.pb.h"
 #include "rpc.pb.h"
 // @@protoc_insertion_point(includes)
-namespace censys_definitions {
+namespace zsearch {
 class AnonymousDelta;
 class AnonymousDeltaDefaultTypeInternal;
 extern AnonymousDeltaDefaultTypeInternal _AnonymousDelta_default_instance_;
@@ -106,9 +106,9 @@ extern UserDataRequestDefaultTypeInternal _UserDataRequest_default_instance_;
 class WHOISAtom;
 class WHOISAtomDefaultTypeInternal;
 extern WHOISAtomDefaultTypeInternal _WHOISAtom_default_instance_;
-}  // namespace censys_definitions
+}  // namespace zsearch
 
-namespace censys_definitions {
+namespace zsearch {
 
 namespace protobuf_search_2eproto {
 // Internal implementation detail -- do not call these.
@@ -135,7 +135,7 @@ void InitDefaults();
 // @@protoc_insertion_point(namespace_scope)
 
 
-}  // namespace censys_definitions
+}  // namespace zsearch
 
 // @@protoc_insertion_point(global_scope)
 

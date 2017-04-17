@@ -28,10 +28,10 @@
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
 #include <google/protobuf/generated_enum_reflection.h>
 // @@protoc_insertion_point(includes)
-namespace censys_definitions {
-}  // namespace censys_definitions
+namespace zsearch {
+}  // namespace zsearch
 
-namespace censys_definitions {
+namespace zsearch {
 
 namespace protobuf_protocols_2eproto {
 // Internal implementation detail -- do not call these.
@@ -181,21 +181,21 @@ inline bool Subprotocol_Parse(
 // @@protoc_insertion_point(namespace_scope)
 
 
-}  // namespace censys_definitions
+}  // namespace zsearch
 
 #ifndef SWIG
 namespace google {
 namespace protobuf {
 
-template <> struct is_proto_enum< ::censys_definitions::Protocol> : ::google::protobuf::internal::true_type {};
+template <> struct is_proto_enum< ::zsearch::Protocol> : ::google::protobuf::internal::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::censys_definitions::Protocol>() {
-  return ::censys_definitions::Protocol_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::zsearch::Protocol>() {
+  return ::zsearch::Protocol_descriptor();
 }
-template <> struct is_proto_enum< ::censys_definitions::Subprotocol> : ::google::protobuf::internal::true_type {};
+template <> struct is_proto_enum< ::zsearch::Subprotocol> : ::google::protobuf::internal::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::censys_definitions::Subprotocol>() {
-  return ::censys_definitions::Subprotocol_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::zsearch::Subprotocol>() {
+  return ::zsearch::Subprotocol_descriptor();
 }
 
 }  // namespace protobuf

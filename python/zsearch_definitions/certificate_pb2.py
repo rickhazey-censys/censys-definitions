@@ -21,16 +21,16 @@ import ct_pb2 as ct__pb2
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='certificate.proto',
-  package='censys_definitions',
+  package='zsearch',
   syntax='proto3',
-  serialized_pb=_b('\n\x11\x63\x65rtificate.proto\x12\x12\x63\x65nsys_definitions\x1a\x0c\x63ommon.proto\x1a\x0bzlint.proto\x1a\x08\x63t.proto\"\xce\x01\n\x0fRootStoreStatus\x12\r\n\x05valid\x18\x01 \x01(\x08\x12\x11\n\twas_valid\x18\x02 \x01(\x08\x12\x14\n\x0ctrusted_path\x18\x03 \x01(\x08\x12\x18\n\x10was_trusted_path\x18\x04 \x01(\x08\x12\x13\n\x0b\x62lacklisted\x18\x05 \x01(\x08\x12\x13\n\x0bwhitelisted\x18\x06 \x01(\x08\x12\x31\n\x04type\x18\x07 \x01(\x0e\x32#.censys_definitions.CertificateType\x12\x0c\n\x04path\x18\x08 \x03(\x0c\"\xde\x02\n\x15\x43\x65rtificateValidation\x12\x30\n\x03nss\x18\x01 \x01(\x0b\x32#.censys_definitions.RootStoreStatus\x12\x36\n\tmicrosoft\x18\x02 \x01(\x0b\x32#.censys_definitions.RootStoreStatus\x12\x32\n\x05\x61pple\x18\x03 \x01(\x0b\x32#.censys_definitions.RootStoreStatus\x12\x31\n\x04java\x18\x04 \x01(\x0b\x32#.censys_definitions.RootStoreStatus\x12\x34\n\x07\x61ndroid\x18\x05 \x01(\x0b\x32#.censys_definitions.RootStoreStatus\x12>\n\x11google_ct_primary\x18\n \x01(\x0b\x32#.censys_definitions.RootStoreStatus\"\xba\x02\n\x17MozillaSalesForceStatus\x12\x12\n\ncurrent_in\x18\x01 \x01(\x08\x12\x0e\n\x06was_in\x18\x02 \x01(\x08\x12\x12\n\nowner_name\x18\x03 \x01(\t\x12\x13\n\x0bparent_name\x18\x04 \x01(\t\x12\x18\n\x10\x63\x65rtificate_name\x18\x05 \x01(\t\x12\x1a\n\x12\x63\x65rtificate_policy\x18\x06 \x01(\t\x12(\n certification_practice_statement\x18\x07 \x01(\t\x12\x19\n\x11\x63p_same_as_parent\x18\x08 \x01(\x08\x12\x1c\n\x14\x61udit_same_as_parent\x18\t \x01(\x08\x12\x16\n\x0estandard_audit\x18\n \x01(\t\x12\x10\n\x08\x62r_audit\x18\x0b \x01(\t\x12\x0f\n\x07\x61uditor\x18\x0c \x01(\t\"i\n\x15\x43\x65rtificateRevocation\x12\x0f\n\x07revoked\x18\x01 \x01(\x08\x12?\n\x06reason\x18\x02 \x01(\x0e\x32/.censys_definitions.CertificateRevocationReason\"P\n\x10\x43\x65rtificateAudit\x12<\n\x07mozilla\x18\x01 \x01(\x0b\x32+.censys_definitions.MozillaSalesForceStatus\"\xc6\n\n\x0b\x43\x65rtificate\x12\x0e\n\x06sha1fp\x18\x01 \x01(\x0c\x12\x10\n\x08sha256fp\x18\x02 \x01(\x0c\x12\x0b\n\x03raw\x18\x03 \x01(\x0c\x12\x0e\n\x06parsed\x18\x04 \x01(\t\x12@\n\x0cparse_status\x18, \x01(\x0e\x32*.censys_definitions.CertificateParseStatus\x12\x15\n\rparse_version\x18\' \x01(\r\x12\x13\n\x0bparse_error\x18/ \x01(\t\x12\x0f\n\x07parents\x18\x05 \x03(\x0c\x12\x17\n\x0fpresented_chain\x18- \x03(\x0c\x12\x35\n\x06source\x18\x1c \x01(\x0e\x32%.censys_definitions.CertificateSource\x12\x14\n\x0cseen_in_scan\x18\x1d \x01(\x08\x12\x16\n\x0epost_processed\x18\x1a \x01(\x08\x12\x1e\n\x16post_process_timestamp\x18% \x01(\r\x12=\n\nvalidation\x18# \x01(\x0b\x32).censys_definitions.CertificateValidation\x12(\n\x02\x63t\x18\x1e \x01(\x0b\x32\x1c.censys_definitions.CTStatus\x12(\n\x05zlint\x18& \x01(\x0b\x32\x19.censys_definitions.ZLint\x12=\n\nrevocation\x18+ \x01(\x0b\x32).censys_definitions.CertificateRevocation\x12\x33\n\x05\x61udit\x18. \x01(\x0b\x32$.censys_definitions.CertificateAudit\x12\x12\n\nis_precert\x18  \x01(\x08\x12\x17\n\x0fnot_valid_after\x18) \x01(\r\x12\x18\n\x10not_valid_before\x18* \x01(\r\x12\x0e\n\x06in_nss\x18\x06 \x01(\x08\x12\x18\n\x0cin_microsoft\x18\x07 \x01(\x08\x42\x02\x18\x01\x12\x14\n\x08in_apple\x18\x08 \x01(\x08\x42\x02\x18\x01\x12\x1c\n\x14validation_timestamp\x18\n \x01(\r\x12\x15\n\tvalid_nss\x18\x0b \x01(\x08\x42\x02\x18\x01\x12\x1b\n\x0fvalid_microsoft\x18\x0c \x01(\x08\x42\x02\x18\x01\x12\x17\n\x0bvalid_apple\x18\r \x01(\x08\x42\x02\x18\x01\x12\x15\n\rwas_valid_nss\x18\x0e \x01(\x08\x12\x1f\n\x13was_valid_microsoft\x18\x0f \x01(\x08\x42\x02\x18\x01\x12\x1b\n\x0fwas_valid_apple\x18\x10 \x01(\x08\x42\x02\x18\x01\x12\x16\n\nwas_in_nss\x18\x11 \x01(\x08\x42\x02\x18\x01\x12\x1c\n\x10was_in_microsoft\x18\x12 \x01(\x08\x42\x02\x18\x01\x12\x18\n\x0cwas_in_apple\x18\x13 \x01(\x08\x42\x02\x18\x01\x12\x19\n\x11\x63urrent_valid_nss\x18\x14 \x01(\x08\x12#\n\x17\x63urrent_valid_microsoft\x18\x15 \x01(\x08\x42\x02\x18\x01\x12\x1f\n\x13\x63urrent_valid_apple\x18\x16 \x01(\x08\x42\x02\x18\x01\x12\x16\n\x0e\x63urrent_in_nss\x18\x17 \x01(\x08\x12 \n\x14\x63urrent_in_microsoft\x18\x18 \x01(\x08\x42\x02\x18\x01\x12\x1c\n\x10\x63urrent_in_apple\x18\x19 \x01(\x08\x42\x02\x18\x01\x12\x42\n\tnss_audit\x18\x1f \x01(\x0b\x32+.censys_definitions.MozillaSalesForceStatusB\x02\x18\x01\x12\x1f\n\x13should_post_process\x18\x1b \x01(\x08\x42\x02\x18\x01\x12\x1f\n\x13\x64o_not_post_process\x18$ \x01(\x08\x42\x02\x18\x01*\xa7\x01\n\x0f\x43\x65rtificateType\x12\x1d\n\x19\x43\x45RTIFICATE_TYPE_RESERVED\x10\x00\x12\x1c\n\x18\x43\x45RTIFICATE_TYPE_UNKNOWN\x10\x01\x12\x19\n\x15\x43\x45RTIFICATE_TYPE_LEAF\x10\x02\x12!\n\x1d\x43\x45RTIFICATE_TYPE_INTERMEDIATE\x10\x03\x12\x19\n\x15\x43\x45RTIFICATE_TYPE_ROOT\x10\x04*\xb7\x02\n\x11\x43\x65rtificateSource\x12\x1f\n\x1b\x43\x45RTIFICATE_SOURCE_RESERVED\x10\x00\x12\x1e\n\x1a\x43\x45RTIFICATE_SOURCE_UNKNOWN\x10\x01\x12\x1b\n\x17\x43\x45RTIFICATE_SOURCE_SCAN\x10\x02\x12\x19\n\x15\x43\x45RTIFICATE_SOURCE_CT\x10\x03\x12)\n%CERTIFICATE_SOURCE_MOZILLA_SALESFORCE\x10\x04\x12\x1f\n\x1b\x43\x45RTIFICATE_SOURCE_RESEARCH\x10\x05\x12\x1d\n\x19\x43\x45RTIFICATE_SOURCE_RAPID7\x10\x06\x12\x1d\n\x19\x43\x45RTIFICATE_SOURCE_HUBBLE\x10\x07\x12\x1f\n\x1b\x43\x45RTIFICATE_SOURCE_CT_CHAIN\x10\x08*\xd7\x01\n\x16\x43\x65rtificateParseStatus\x12%\n!CERTIFICATE_PARSE_STATUS_RESERVED\x10\x00\x12$\n CERTIFICATE_PARSE_STATUS_UNKNOWN\x10\x01\x12$\n CERTIFICATE_PARSE_STATUS_SUCCESS\x10\x02\x12!\n\x1d\x43\x45RTIFICATE_PARSE_STATUS_FAIL\x10\x03\x12\'\n#CERTIFICATE_PARSE_STATUS_NOT_PARSED\x10\x04*\xf4\x04\n\x1b\x43\x65rtificateRevocationReason\x12*\n&CERTIFICATE_REVOCATION_REASON_RESERVED\x10\x00\x12)\n%CERTIFICATE_REVOCATION_REASON_UNKNOWN\x10\x01\x12-\n)CERTIFICATE_REVOCATION_REASON_UNSPECIFIED\x10\x02\x12\x30\n,CERTIFICATE_REVOCATION_REASON_KEY_COMPROMISE\x10\x03\x12/\n+CERTIFICATE_REVOCATION_REASON_CA_COMPROMISE\x10\x04\x12\x35\n1CERTIFICATE_REVOCATION_REASON_AFFILIATION_CHANGED\x10\x05\x12,\n(CERTIFICATE_REVOCATION_REASON_SUPERSEDED\x10\x06\x12\x38\n4CERTIFICATE_REVOCATION_REASON_CESSATION_OF_OPERATION\x10\x07\x12\x32\n.CERTIFICATE_REVOCATION_REASON_CERTIFICATE_HOLD\x10\x08\x12\x31\n-CERTIFICATE_REVOCATION_REASON_REMOVE_FROM_CRL\x10\t\x12\x35\n1CERTIFICATE_REVOCATION_REASON_PRIVILEGE_WITHDRAWN\x10\n\x12/\n+CERTIFICATE_REVOCATION_REASON_AA_COMPROMISE\x10\x0b\x62\x06proto3')
+  serialized_pb=_b('\n\x11\x63\x65rtificate.proto\x12\x07zsearch\x1a\x0c\x63ommon.proto\x1a\x0bzlint.proto\x1a\x08\x63t.proto\"\xc3\x01\n\x0fRootStoreStatus\x12\r\n\x05valid\x18\x01 \x01(\x08\x12\x11\n\twas_valid\x18\x02 \x01(\x08\x12\x14\n\x0ctrusted_path\x18\x03 \x01(\x08\x12\x18\n\x10was_trusted_path\x18\x04 \x01(\x08\x12\x13\n\x0b\x62lacklisted\x18\x05 \x01(\x08\x12\x13\n\x0bwhitelisted\x18\x06 \x01(\x08\x12&\n\x04type\x18\x07 \x01(\x0e\x32\x18.zsearch.CertificateType\x12\x0c\n\x04path\x18\x08 \x03(\x0c\"\x9c\x02\n\x15\x43\x65rtificateValidation\x12%\n\x03nss\x18\x01 \x01(\x0b\x32\x18.zsearch.RootStoreStatus\x12+\n\tmicrosoft\x18\x02 \x01(\x0b\x32\x18.zsearch.RootStoreStatus\x12\'\n\x05\x61pple\x18\x03 \x01(\x0b\x32\x18.zsearch.RootStoreStatus\x12&\n\x04java\x18\x04 \x01(\x0b\x32\x18.zsearch.RootStoreStatus\x12)\n\x07\x61ndroid\x18\x05 \x01(\x0b\x32\x18.zsearch.RootStoreStatus\x12\x33\n\x11google_ct_primary\x18\n \x01(\x0b\x32\x18.zsearch.RootStoreStatus\"\xba\x02\n\x17MozillaSalesForceStatus\x12\x12\n\ncurrent_in\x18\x01 \x01(\x08\x12\x0e\n\x06was_in\x18\x02 \x01(\x08\x12\x12\n\nowner_name\x18\x03 \x01(\t\x12\x13\n\x0bparent_name\x18\x04 \x01(\t\x12\x18\n\x10\x63\x65rtificate_name\x18\x05 \x01(\t\x12\x1a\n\x12\x63\x65rtificate_policy\x18\x06 \x01(\t\x12(\n certification_practice_statement\x18\x07 \x01(\t\x12\x19\n\x11\x63p_same_as_parent\x18\x08 \x01(\x08\x12\x1c\n\x14\x61udit_same_as_parent\x18\t \x01(\x08\x12\x16\n\x0estandard_audit\x18\n \x01(\t\x12\x10\n\x08\x62r_audit\x18\x0b \x01(\t\x12\x0f\n\x07\x61uditor\x18\x0c \x01(\t\"^\n\x15\x43\x65rtificateRevocation\x12\x0f\n\x07revoked\x18\x01 \x01(\x08\x12\x34\n\x06reason\x18\x02 \x01(\x0e\x32$.zsearch.CertificateRevocationReason\"E\n\x10\x43\x65rtificateAudit\x12\x31\n\x07mozilla\x18\x01 \x01(\x0b\x32 .zsearch.MozillaSalesForceStatus\"\xee\t\n\x0b\x43\x65rtificate\x12\x0e\n\x06sha1fp\x18\x01 \x01(\x0c\x12\x10\n\x08sha256fp\x18\x02 \x01(\x0c\x12\x0b\n\x03raw\x18\x03 \x01(\x0c\x12\x0e\n\x06parsed\x18\x04 \x01(\t\x12\x35\n\x0cparse_status\x18, \x01(\x0e\x32\x1f.zsearch.CertificateParseStatus\x12\x15\n\rparse_version\x18\' \x01(\r\x12\x13\n\x0bparse_error\x18/ \x01(\t\x12\x0f\n\x07parents\x18\x05 \x03(\x0c\x12\x17\n\x0fpresented_chain\x18- \x03(\x0c\x12*\n\x06source\x18\x1c \x01(\x0e\x32\x1a.zsearch.CertificateSource\x12\x14\n\x0cseen_in_scan\x18\x1d \x01(\x08\x12\x16\n\x0epost_processed\x18\x1a \x01(\x08\x12\x1e\n\x16post_process_timestamp\x18% \x01(\r\x12\x32\n\nvalidation\x18# \x01(\x0b\x32\x1e.zsearch.CertificateValidation\x12\x1d\n\x02\x63t\x18\x1e \x01(\x0b\x32\x11.zsearch.CTStatus\x12\x1d\n\x05zlint\x18& \x01(\x0b\x32\x0e.zsearch.ZLint\x12\x32\n\nrevocation\x18+ \x01(\x0b\x32\x1e.zsearch.CertificateRevocation\x12(\n\x05\x61udit\x18. \x01(\x0b\x32\x19.zsearch.CertificateAudit\x12\x12\n\nis_precert\x18  \x01(\x08\x12\x17\n\x0fnot_valid_after\x18) \x01(\r\x12\x18\n\x10not_valid_before\x18* \x01(\r\x12\x0e\n\x06in_nss\x18\x06 \x01(\x08\x12\x18\n\x0cin_microsoft\x18\x07 \x01(\x08\x42\x02\x18\x01\x12\x14\n\x08in_apple\x18\x08 \x01(\x08\x42\x02\x18\x01\x12\x1c\n\x14validation_timestamp\x18\n \x01(\r\x12\x15\n\tvalid_nss\x18\x0b \x01(\x08\x42\x02\x18\x01\x12\x1b\n\x0fvalid_microsoft\x18\x0c \x01(\x08\x42\x02\x18\x01\x12\x17\n\x0bvalid_apple\x18\r \x01(\x08\x42\x02\x18\x01\x12\x15\n\rwas_valid_nss\x18\x0e \x01(\x08\x12\x1f\n\x13was_valid_microsoft\x18\x0f \x01(\x08\x42\x02\x18\x01\x12\x1b\n\x0fwas_valid_apple\x18\x10 \x01(\x08\x42\x02\x18\x01\x12\x16\n\nwas_in_nss\x18\x11 \x01(\x08\x42\x02\x18\x01\x12\x1c\n\x10was_in_microsoft\x18\x12 \x01(\x08\x42\x02\x18\x01\x12\x18\n\x0cwas_in_apple\x18\x13 \x01(\x08\x42\x02\x18\x01\x12\x19\n\x11\x63urrent_valid_nss\x18\x14 \x01(\x08\x12#\n\x17\x63urrent_valid_microsoft\x18\x15 \x01(\x08\x42\x02\x18\x01\x12\x1f\n\x13\x63urrent_valid_apple\x18\x16 \x01(\x08\x42\x02\x18\x01\x12\x16\n\x0e\x63urrent_in_nss\x18\x17 \x01(\x08\x12 \n\x14\x63urrent_in_microsoft\x18\x18 \x01(\x08\x42\x02\x18\x01\x12\x1c\n\x10\x63urrent_in_apple\x18\x19 \x01(\x08\x42\x02\x18\x01\x12\x37\n\tnss_audit\x18\x1f \x01(\x0b\x32 .zsearch.MozillaSalesForceStatusB\x02\x18\x01\x12\x1f\n\x13should_post_process\x18\x1b \x01(\x08\x42\x02\x18\x01\x12\x1f\n\x13\x64o_not_post_process\x18$ \x01(\x08\x42\x02\x18\x01*\xa7\x01\n\x0f\x43\x65rtificateType\x12\x1d\n\x19\x43\x45RTIFICATE_TYPE_RESERVED\x10\x00\x12\x1c\n\x18\x43\x45RTIFICATE_TYPE_UNKNOWN\x10\x01\x12\x19\n\x15\x43\x45RTIFICATE_TYPE_LEAF\x10\x02\x12!\n\x1d\x43\x45RTIFICATE_TYPE_INTERMEDIATE\x10\x03\x12\x19\n\x15\x43\x45RTIFICATE_TYPE_ROOT\x10\x04*\xb7\x02\n\x11\x43\x65rtificateSource\x12\x1f\n\x1b\x43\x45RTIFICATE_SOURCE_RESERVED\x10\x00\x12\x1e\n\x1a\x43\x45RTIFICATE_SOURCE_UNKNOWN\x10\x01\x12\x1b\n\x17\x43\x45RTIFICATE_SOURCE_SCAN\x10\x02\x12\x19\n\x15\x43\x45RTIFICATE_SOURCE_CT\x10\x03\x12)\n%CERTIFICATE_SOURCE_MOZILLA_SALESFORCE\x10\x04\x12\x1f\n\x1b\x43\x45RTIFICATE_SOURCE_RESEARCH\x10\x05\x12\x1d\n\x19\x43\x45RTIFICATE_SOURCE_RAPID7\x10\x06\x12\x1d\n\x19\x43\x45RTIFICATE_SOURCE_HUBBLE\x10\x07\x12\x1f\n\x1b\x43\x45RTIFICATE_SOURCE_CT_CHAIN\x10\x08*\xd7\x01\n\x16\x43\x65rtificateParseStatus\x12%\n!CERTIFICATE_PARSE_STATUS_RESERVED\x10\x00\x12$\n CERTIFICATE_PARSE_STATUS_UNKNOWN\x10\x01\x12$\n CERTIFICATE_PARSE_STATUS_SUCCESS\x10\x02\x12!\n\x1d\x43\x45RTIFICATE_PARSE_STATUS_FAIL\x10\x03\x12\'\n#CERTIFICATE_PARSE_STATUS_NOT_PARSED\x10\x04*\xf4\x04\n\x1b\x43\x65rtificateRevocationReason\x12*\n&CERTIFICATE_REVOCATION_REASON_RESERVED\x10\x00\x12)\n%CERTIFICATE_REVOCATION_REASON_UNKNOWN\x10\x01\x12-\n)CERTIFICATE_REVOCATION_REASON_UNSPECIFIED\x10\x02\x12\x30\n,CERTIFICATE_REVOCATION_REASON_KEY_COMPROMISE\x10\x03\x12/\n+CERTIFICATE_REVOCATION_REASON_CA_COMPROMISE\x10\x04\x12\x35\n1CERTIFICATE_REVOCATION_REASON_AFFILIATION_CHANGED\x10\x05\x12,\n(CERTIFICATE_REVOCATION_REASON_SUPERSEDED\x10\x06\x12\x38\n4CERTIFICATE_REVOCATION_REASON_CESSATION_OF_OPERATION\x10\x07\x12\x32\n.CERTIFICATE_REVOCATION_REASON_CERTIFICATE_HOLD\x10\x08\x12\x31\n-CERTIFICATE_REVOCATION_REASON_REMOVE_FROM_CRL\x10\t\x12\x35\n1CERTIFICATE_REVOCATION_REASON_PRIVILEGE_WITHDRAWN\x10\n\x12/\n+CERTIFICATE_REVOCATION_REASON_AA_COMPROMISE\x10\x0b\x62\x06proto3')
   ,
   dependencies=[common__pb2.DESCRIPTOR,zlint__pb2.DESCRIPTOR,ct__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 _CERTIFICATETYPE = _descriptor.EnumDescriptor(
   name='CertificateType',
-  full_name='censys_definitions.CertificateType',
+  full_name='zsearch.CertificateType',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -57,15 +57,15 @@ _CERTIFICATETYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2500,
-  serialized_end=2667,
+  serialized_start=2302,
+  serialized_end=2469,
 )
 _sym_db.RegisterEnumDescriptor(_CERTIFICATETYPE)
 
 CertificateType = enum_type_wrapper.EnumTypeWrapper(_CERTIFICATETYPE)
 _CERTIFICATESOURCE = _descriptor.EnumDescriptor(
   name='CertificateSource',
-  full_name='censys_definitions.CertificateSource',
+  full_name='zsearch.CertificateSource',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -108,15 +108,15 @@ _CERTIFICATESOURCE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2670,
-  serialized_end=2981,
+  serialized_start=2472,
+  serialized_end=2783,
 )
 _sym_db.RegisterEnumDescriptor(_CERTIFICATESOURCE)
 
 CertificateSource = enum_type_wrapper.EnumTypeWrapper(_CERTIFICATESOURCE)
 _CERTIFICATEPARSESTATUS = _descriptor.EnumDescriptor(
   name='CertificateParseStatus',
-  full_name='censys_definitions.CertificateParseStatus',
+  full_name='zsearch.CertificateParseStatus',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -143,15 +143,15 @@ _CERTIFICATEPARSESTATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2984,
-  serialized_end=3199,
+  serialized_start=2786,
+  serialized_end=3001,
 )
 _sym_db.RegisterEnumDescriptor(_CERTIFICATEPARSESTATUS)
 
 CertificateParseStatus = enum_type_wrapper.EnumTypeWrapper(_CERTIFICATEPARSESTATUS)
 _CERTIFICATEREVOCATIONREASON = _descriptor.EnumDescriptor(
   name='CertificateRevocationReason',
-  full_name='censys_definitions.CertificateRevocationReason',
+  full_name='zsearch.CertificateRevocationReason',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -206,8 +206,8 @@ _CERTIFICATEREVOCATIONREASON = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=3202,
-  serialized_end=3830,
+  serialized_start=3004,
+  serialized_end=3632,
 )
 _sym_db.RegisterEnumDescriptor(_CERTIFICATEREVOCATIONREASON)
 
@@ -248,62 +248,62 @@ CERTIFICATE_REVOCATION_REASON_AA_COMPROMISE = 11
 
 _ROOTSTORESTATUS = _descriptor.Descriptor(
   name='RootStoreStatus',
-  full_name='censys_definitions.RootStoreStatus',
+  full_name='zsearch.RootStoreStatus',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='valid', full_name='censys_definitions.RootStoreStatus.valid', index=0,
+      name='valid', full_name='zsearch.RootStoreStatus.valid', index=0,
       number=1, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='was_valid', full_name='censys_definitions.RootStoreStatus.was_valid', index=1,
+      name='was_valid', full_name='zsearch.RootStoreStatus.was_valid', index=1,
       number=2, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='trusted_path', full_name='censys_definitions.RootStoreStatus.trusted_path', index=2,
+      name='trusted_path', full_name='zsearch.RootStoreStatus.trusted_path', index=2,
       number=3, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='was_trusted_path', full_name='censys_definitions.RootStoreStatus.was_trusted_path', index=3,
+      name='was_trusted_path', full_name='zsearch.RootStoreStatus.was_trusted_path', index=3,
       number=4, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='blacklisted', full_name='censys_definitions.RootStoreStatus.blacklisted', index=4,
+      name='blacklisted', full_name='zsearch.RootStoreStatus.blacklisted', index=4,
       number=5, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='whitelisted', full_name='censys_definitions.RootStoreStatus.whitelisted', index=5,
+      name='whitelisted', full_name='zsearch.RootStoreStatus.whitelisted', index=5,
       number=6, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='type', full_name='censys_definitions.RootStoreStatus.type', index=6,
+      name='type', full_name='zsearch.RootStoreStatus.type', index=6,
       number=7, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='path', full_name='censys_definitions.RootStoreStatus.path', index=7,
+      name='path', full_name='zsearch.RootStoreStatus.path', index=7,
       number=8, type=12, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -321,55 +321,55 @@ _ROOTSTORESTATUS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=79,
-  serialized_end=285,
+  serialized_start=68,
+  serialized_end=263,
 )
 
 
 _CERTIFICATEVALIDATION = _descriptor.Descriptor(
   name='CertificateValidation',
-  full_name='censys_definitions.CertificateValidation',
+  full_name='zsearch.CertificateValidation',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='nss', full_name='censys_definitions.CertificateValidation.nss', index=0,
+      name='nss', full_name='zsearch.CertificateValidation.nss', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='microsoft', full_name='censys_definitions.CertificateValidation.microsoft', index=1,
+      name='microsoft', full_name='zsearch.CertificateValidation.microsoft', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='apple', full_name='censys_definitions.CertificateValidation.apple', index=2,
+      name='apple', full_name='zsearch.CertificateValidation.apple', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='java', full_name='censys_definitions.CertificateValidation.java', index=3,
+      name='java', full_name='zsearch.CertificateValidation.java', index=3,
       number=4, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='android', full_name='censys_definitions.CertificateValidation.android', index=4,
+      name='android', full_name='zsearch.CertificateValidation.android', index=4,
       number=5, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='google_ct_primary', full_name='censys_definitions.CertificateValidation.google_ct_primary', index=5,
+      name='google_ct_primary', full_name='zsearch.CertificateValidation.google_ct_primary', index=5,
       number=10, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -387,97 +387,97 @@ _CERTIFICATEVALIDATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=288,
-  serialized_end=638,
+  serialized_start=266,
+  serialized_end=550,
 )
 
 
 _MOZILLASALESFORCESTATUS = _descriptor.Descriptor(
   name='MozillaSalesForceStatus',
-  full_name='censys_definitions.MozillaSalesForceStatus',
+  full_name='zsearch.MozillaSalesForceStatus',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='current_in', full_name='censys_definitions.MozillaSalesForceStatus.current_in', index=0,
+      name='current_in', full_name='zsearch.MozillaSalesForceStatus.current_in', index=0,
       number=1, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='was_in', full_name='censys_definitions.MozillaSalesForceStatus.was_in', index=1,
+      name='was_in', full_name='zsearch.MozillaSalesForceStatus.was_in', index=1,
       number=2, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='owner_name', full_name='censys_definitions.MozillaSalesForceStatus.owner_name', index=2,
+      name='owner_name', full_name='zsearch.MozillaSalesForceStatus.owner_name', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='parent_name', full_name='censys_definitions.MozillaSalesForceStatus.parent_name', index=3,
+      name='parent_name', full_name='zsearch.MozillaSalesForceStatus.parent_name', index=3,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='certificate_name', full_name='censys_definitions.MozillaSalesForceStatus.certificate_name', index=4,
+      name='certificate_name', full_name='zsearch.MozillaSalesForceStatus.certificate_name', index=4,
       number=5, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='certificate_policy', full_name='censys_definitions.MozillaSalesForceStatus.certificate_policy', index=5,
+      name='certificate_policy', full_name='zsearch.MozillaSalesForceStatus.certificate_policy', index=5,
       number=6, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='certification_practice_statement', full_name='censys_definitions.MozillaSalesForceStatus.certification_practice_statement', index=6,
+      name='certification_practice_statement', full_name='zsearch.MozillaSalesForceStatus.certification_practice_statement', index=6,
       number=7, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='cp_same_as_parent', full_name='censys_definitions.MozillaSalesForceStatus.cp_same_as_parent', index=7,
+      name='cp_same_as_parent', full_name='zsearch.MozillaSalesForceStatus.cp_same_as_parent', index=7,
       number=8, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='audit_same_as_parent', full_name='censys_definitions.MozillaSalesForceStatus.audit_same_as_parent', index=8,
+      name='audit_same_as_parent', full_name='zsearch.MozillaSalesForceStatus.audit_same_as_parent', index=8,
       number=9, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='standard_audit', full_name='censys_definitions.MozillaSalesForceStatus.standard_audit', index=9,
+      name='standard_audit', full_name='zsearch.MozillaSalesForceStatus.standard_audit', index=9,
       number=10, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='br_audit', full_name='censys_definitions.MozillaSalesForceStatus.br_audit', index=10,
+      name='br_audit', full_name='zsearch.MozillaSalesForceStatus.br_audit', index=10,
       number=11, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='auditor', full_name='censys_definitions.MozillaSalesForceStatus.auditor', index=11,
+      name='auditor', full_name='zsearch.MozillaSalesForceStatus.auditor', index=11,
       number=12, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -495,27 +495,27 @@ _MOZILLASALESFORCESTATUS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=641,
-  serialized_end=955,
+  serialized_start=553,
+  serialized_end=867,
 )
 
 
 _CERTIFICATEREVOCATION = _descriptor.Descriptor(
   name='CertificateRevocation',
-  full_name='censys_definitions.CertificateRevocation',
+  full_name='zsearch.CertificateRevocation',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='revoked', full_name='censys_definitions.CertificateRevocation.revoked', index=0,
+      name='revoked', full_name='zsearch.CertificateRevocation.revoked', index=0,
       number=1, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='reason', full_name='censys_definitions.CertificateRevocation.reason', index=1,
+      name='reason', full_name='zsearch.CertificateRevocation.reason', index=1,
       number=2, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -533,20 +533,20 @@ _CERTIFICATEREVOCATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=957,
-  serialized_end=1062,
+  serialized_start=869,
+  serialized_end=963,
 )
 
 
 _CERTIFICATEAUDIT = _descriptor.Descriptor(
   name='CertificateAudit',
-  full_name='censys_definitions.CertificateAudit',
+  full_name='zsearch.CertificateAudit',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='mozilla', full_name='censys_definitions.CertificateAudit.mozilla', index=0,
+      name='mozilla', full_name='zsearch.CertificateAudit.mozilla', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -564,314 +564,314 @@ _CERTIFICATEAUDIT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1064,
-  serialized_end=1144,
+  serialized_start=965,
+  serialized_end=1034,
 )
 
 
 _CERTIFICATE = _descriptor.Descriptor(
   name='Certificate',
-  full_name='censys_definitions.Certificate',
+  full_name='zsearch.Certificate',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='sha1fp', full_name='censys_definitions.Certificate.sha1fp', index=0,
+      name='sha1fp', full_name='zsearch.Certificate.sha1fp', index=0,
       number=1, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='sha256fp', full_name='censys_definitions.Certificate.sha256fp', index=1,
+      name='sha256fp', full_name='zsearch.Certificate.sha256fp', index=1,
       number=2, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='raw', full_name='censys_definitions.Certificate.raw', index=2,
+      name='raw', full_name='zsearch.Certificate.raw', index=2,
       number=3, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='parsed', full_name='censys_definitions.Certificate.parsed', index=3,
+      name='parsed', full_name='zsearch.Certificate.parsed', index=3,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='parse_status', full_name='censys_definitions.Certificate.parse_status', index=4,
+      name='parse_status', full_name='zsearch.Certificate.parse_status', index=4,
       number=44, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='parse_version', full_name='censys_definitions.Certificate.parse_version', index=5,
+      name='parse_version', full_name='zsearch.Certificate.parse_version', index=5,
       number=39, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='parse_error', full_name='censys_definitions.Certificate.parse_error', index=6,
+      name='parse_error', full_name='zsearch.Certificate.parse_error', index=6,
       number=47, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='parents', full_name='censys_definitions.Certificate.parents', index=7,
+      name='parents', full_name='zsearch.Certificate.parents', index=7,
       number=5, type=12, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='presented_chain', full_name='censys_definitions.Certificate.presented_chain', index=8,
+      name='presented_chain', full_name='zsearch.Certificate.presented_chain', index=8,
       number=45, type=12, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='source', full_name='censys_definitions.Certificate.source', index=9,
+      name='source', full_name='zsearch.Certificate.source', index=9,
       number=28, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='seen_in_scan', full_name='censys_definitions.Certificate.seen_in_scan', index=10,
+      name='seen_in_scan', full_name='zsearch.Certificate.seen_in_scan', index=10,
       number=29, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='post_processed', full_name='censys_definitions.Certificate.post_processed', index=11,
+      name='post_processed', full_name='zsearch.Certificate.post_processed', index=11,
       number=26, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='post_process_timestamp', full_name='censys_definitions.Certificate.post_process_timestamp', index=12,
+      name='post_process_timestamp', full_name='zsearch.Certificate.post_process_timestamp', index=12,
       number=37, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='validation', full_name='censys_definitions.Certificate.validation', index=13,
+      name='validation', full_name='zsearch.Certificate.validation', index=13,
       number=35, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='ct', full_name='censys_definitions.Certificate.ct', index=14,
+      name='ct', full_name='zsearch.Certificate.ct', index=14,
       number=30, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='zlint', full_name='censys_definitions.Certificate.zlint', index=15,
+      name='zlint', full_name='zsearch.Certificate.zlint', index=15,
       number=38, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='revocation', full_name='censys_definitions.Certificate.revocation', index=16,
+      name='revocation', full_name='zsearch.Certificate.revocation', index=16,
       number=43, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='audit', full_name='censys_definitions.Certificate.audit', index=17,
+      name='audit', full_name='zsearch.Certificate.audit', index=17,
       number=46, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='is_precert', full_name='censys_definitions.Certificate.is_precert', index=18,
+      name='is_precert', full_name='zsearch.Certificate.is_precert', index=18,
       number=32, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='not_valid_after', full_name='censys_definitions.Certificate.not_valid_after', index=19,
+      name='not_valid_after', full_name='zsearch.Certificate.not_valid_after', index=19,
       number=41, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='not_valid_before', full_name='censys_definitions.Certificate.not_valid_before', index=20,
+      name='not_valid_before', full_name='zsearch.Certificate.not_valid_before', index=20,
       number=42, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='in_nss', full_name='censys_definitions.Certificate.in_nss', index=21,
+      name='in_nss', full_name='zsearch.Certificate.in_nss', index=21,
       number=6, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='in_microsoft', full_name='censys_definitions.Certificate.in_microsoft', index=22,
+      name='in_microsoft', full_name='zsearch.Certificate.in_microsoft', index=22,
       number=7, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\030\001'))),
     _descriptor.FieldDescriptor(
-      name='in_apple', full_name='censys_definitions.Certificate.in_apple', index=23,
+      name='in_apple', full_name='zsearch.Certificate.in_apple', index=23,
       number=8, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\030\001'))),
     _descriptor.FieldDescriptor(
-      name='validation_timestamp', full_name='censys_definitions.Certificate.validation_timestamp', index=24,
+      name='validation_timestamp', full_name='zsearch.Certificate.validation_timestamp', index=24,
       number=10, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='valid_nss', full_name='censys_definitions.Certificate.valid_nss', index=25,
+      name='valid_nss', full_name='zsearch.Certificate.valid_nss', index=25,
       number=11, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\030\001'))),
     _descriptor.FieldDescriptor(
-      name='valid_microsoft', full_name='censys_definitions.Certificate.valid_microsoft', index=26,
+      name='valid_microsoft', full_name='zsearch.Certificate.valid_microsoft', index=26,
       number=12, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\030\001'))),
     _descriptor.FieldDescriptor(
-      name='valid_apple', full_name='censys_definitions.Certificate.valid_apple', index=27,
+      name='valid_apple', full_name='zsearch.Certificate.valid_apple', index=27,
       number=13, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\030\001'))),
     _descriptor.FieldDescriptor(
-      name='was_valid_nss', full_name='censys_definitions.Certificate.was_valid_nss', index=28,
+      name='was_valid_nss', full_name='zsearch.Certificate.was_valid_nss', index=28,
       number=14, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='was_valid_microsoft', full_name='censys_definitions.Certificate.was_valid_microsoft', index=29,
+      name='was_valid_microsoft', full_name='zsearch.Certificate.was_valid_microsoft', index=29,
       number=15, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\030\001'))),
     _descriptor.FieldDescriptor(
-      name='was_valid_apple', full_name='censys_definitions.Certificate.was_valid_apple', index=30,
+      name='was_valid_apple', full_name='zsearch.Certificate.was_valid_apple', index=30,
       number=16, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\030\001'))),
     _descriptor.FieldDescriptor(
-      name='was_in_nss', full_name='censys_definitions.Certificate.was_in_nss', index=31,
+      name='was_in_nss', full_name='zsearch.Certificate.was_in_nss', index=31,
       number=17, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\030\001'))),
     _descriptor.FieldDescriptor(
-      name='was_in_microsoft', full_name='censys_definitions.Certificate.was_in_microsoft', index=32,
+      name='was_in_microsoft', full_name='zsearch.Certificate.was_in_microsoft', index=32,
       number=18, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\030\001'))),
     _descriptor.FieldDescriptor(
-      name='was_in_apple', full_name='censys_definitions.Certificate.was_in_apple', index=33,
+      name='was_in_apple', full_name='zsearch.Certificate.was_in_apple', index=33,
       number=19, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\030\001'))),
     _descriptor.FieldDescriptor(
-      name='current_valid_nss', full_name='censys_definitions.Certificate.current_valid_nss', index=34,
+      name='current_valid_nss', full_name='zsearch.Certificate.current_valid_nss', index=34,
       number=20, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='current_valid_microsoft', full_name='censys_definitions.Certificate.current_valid_microsoft', index=35,
+      name='current_valid_microsoft', full_name='zsearch.Certificate.current_valid_microsoft', index=35,
       number=21, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\030\001'))),
     _descriptor.FieldDescriptor(
-      name='current_valid_apple', full_name='censys_definitions.Certificate.current_valid_apple', index=36,
+      name='current_valid_apple', full_name='zsearch.Certificate.current_valid_apple', index=36,
       number=22, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\030\001'))),
     _descriptor.FieldDescriptor(
-      name='current_in_nss', full_name='censys_definitions.Certificate.current_in_nss', index=37,
+      name='current_in_nss', full_name='zsearch.Certificate.current_in_nss', index=37,
       number=23, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='current_in_microsoft', full_name='censys_definitions.Certificate.current_in_microsoft', index=38,
+      name='current_in_microsoft', full_name='zsearch.Certificate.current_in_microsoft', index=38,
       number=24, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\030\001'))),
     _descriptor.FieldDescriptor(
-      name='current_in_apple', full_name='censys_definitions.Certificate.current_in_apple', index=39,
+      name='current_in_apple', full_name='zsearch.Certificate.current_in_apple', index=39,
       number=25, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\030\001'))),
     _descriptor.FieldDescriptor(
-      name='nss_audit', full_name='censys_definitions.Certificate.nss_audit', index=40,
+      name='nss_audit', full_name='zsearch.Certificate.nss_audit', index=40,
       number=31, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\030\001'))),
     _descriptor.FieldDescriptor(
-      name='should_post_process', full_name='censys_definitions.Certificate.should_post_process', index=41,
+      name='should_post_process', full_name='zsearch.Certificate.should_post_process', index=41,
       number=27, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=_descriptor._ParseOptions(descriptor_pb2.FieldOptions(), _b('\030\001'))),
     _descriptor.FieldDescriptor(
-      name='do_not_post_process', full_name='censys_definitions.Certificate.do_not_post_process', index=42,
+      name='do_not_post_process', full_name='zsearch.Certificate.do_not_post_process', index=42,
       number=36, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
@@ -889,8 +889,8 @@ _CERTIFICATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1147,
-  serialized_end=2497,
+  serialized_start=1037,
+  serialized_end=2299,
 )
 
 _ROOTSTORESTATUS.fields_by_name['type'].enum_type = _CERTIFICATETYPE
@@ -924,42 +924,42 @@ DESCRIPTOR.enum_types_by_name['CertificateRevocationReason'] = _CERTIFICATEREVOC
 RootStoreStatus = _reflection.GeneratedProtocolMessageType('RootStoreStatus', (_message.Message,), dict(
   DESCRIPTOR = _ROOTSTORESTATUS,
   __module__ = 'certificate_pb2'
-  # @@protoc_insertion_point(class_scope:censys_definitions.RootStoreStatus)
+  # @@protoc_insertion_point(class_scope:zsearch.RootStoreStatus)
   ))
 _sym_db.RegisterMessage(RootStoreStatus)
 
 CertificateValidation = _reflection.GeneratedProtocolMessageType('CertificateValidation', (_message.Message,), dict(
   DESCRIPTOR = _CERTIFICATEVALIDATION,
   __module__ = 'certificate_pb2'
-  # @@protoc_insertion_point(class_scope:censys_definitions.CertificateValidation)
+  # @@protoc_insertion_point(class_scope:zsearch.CertificateValidation)
   ))
 _sym_db.RegisterMessage(CertificateValidation)
 
 MozillaSalesForceStatus = _reflection.GeneratedProtocolMessageType('MozillaSalesForceStatus', (_message.Message,), dict(
   DESCRIPTOR = _MOZILLASALESFORCESTATUS,
   __module__ = 'certificate_pb2'
-  # @@protoc_insertion_point(class_scope:censys_definitions.MozillaSalesForceStatus)
+  # @@protoc_insertion_point(class_scope:zsearch.MozillaSalesForceStatus)
   ))
 _sym_db.RegisterMessage(MozillaSalesForceStatus)
 
 CertificateRevocation = _reflection.GeneratedProtocolMessageType('CertificateRevocation', (_message.Message,), dict(
   DESCRIPTOR = _CERTIFICATEREVOCATION,
   __module__ = 'certificate_pb2'
-  # @@protoc_insertion_point(class_scope:censys_definitions.CertificateRevocation)
+  # @@protoc_insertion_point(class_scope:zsearch.CertificateRevocation)
   ))
 _sym_db.RegisterMessage(CertificateRevocation)
 
 CertificateAudit = _reflection.GeneratedProtocolMessageType('CertificateAudit', (_message.Message,), dict(
   DESCRIPTOR = _CERTIFICATEAUDIT,
   __module__ = 'certificate_pb2'
-  # @@protoc_insertion_point(class_scope:censys_definitions.CertificateAudit)
+  # @@protoc_insertion_point(class_scope:zsearch.CertificateAudit)
   ))
 _sym_db.RegisterMessage(CertificateAudit)
 
 Certificate = _reflection.GeneratedProtocolMessageType('Certificate', (_message.Message,), dict(
   DESCRIPTOR = _CERTIFICATE,
   __module__ = 'certificate_pb2'
-  # @@protoc_insertion_point(class_scope:censys_definitions.Certificate)
+  # @@protoc_insertion_point(class_scope:zsearch.Certificate)
   ))
 _sym_db.RegisterMessage(Certificate)
 

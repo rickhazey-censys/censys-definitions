@@ -31,7 +31,7 @@
 #include <google/protobuf/unknown_field_set.h>
 #include "common.pb.h"
 // @@protoc_insertion_point(includes)
-namespace censys_definitions {
+namespace zsearch {
 class ASAtom;
 class ASAtomDefaultTypeInternal;
 extern ASAtomDefaultTypeInternal _ASAtom_default_instance_;
@@ -53,9 +53,9 @@ extern RSACryptographicKeyDefaultTypeInternal _RSACryptographicKey_default_insta
 class UserdataAtom;
 class UserdataAtomDefaultTypeInternal;
 extern UserdataAtomDefaultTypeInternal _UserdataAtom_default_instance_;
-}  // namespace censys_definitions
+}  // namespace zsearch
 
-namespace censys_definitions {
+namespace zsearch {
 
 namespace protobuf_pubkey_2eproto {
 // Internal implementation detail -- do not call these.
@@ -94,7 +94,7 @@ inline bool CryptographicKey_KeyType_Parse(
 }
 // ===================================================================
 
-class RSACryptographicKey : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:censys_definitions.RSACryptographicKey) */ {
+class RSACryptographicKey : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zsearch.RSACryptographicKey) */ {
  public:
   RSACryptographicKey();
   virtual ~RSACryptographicKey();
@@ -217,7 +217,7 @@ class RSACryptographicKey : public ::google::protobuf::Message /* @@protoc_inser
   ::std::string* release_q();
   void set_allocated_q(::std::string* q);
 
-  // @@protoc_insertion_point(class_scope:censys_definitions.RSACryptographicKey)
+  // @@protoc_insertion_point(class_scope:zsearch.RSACryptographicKey)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -230,7 +230,7 @@ class RSACryptographicKey : public ::google::protobuf::Message /* @@protoc_inser
 };
 // -------------------------------------------------------------------
 
-class DSACryptographicKey : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:censys_definitions.DSACryptographicKey) */ {
+class DSACryptographicKey : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zsearch.DSACryptographicKey) */ {
  public:
   DSACryptographicKey();
   virtual ~DSACryptographicKey();
@@ -367,7 +367,7 @@ class DSACryptographicKey : public ::google::protobuf::Message /* @@protoc_inser
   ::std::string* release_x();
   void set_allocated_x(::std::string* x);
 
-  // @@protoc_insertion_point(class_scope:censys_definitions.DSACryptographicKey)
+  // @@protoc_insertion_point(class_scope:zsearch.DSACryptographicKey)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -381,7 +381,7 @@ class DSACryptographicKey : public ::google::protobuf::Message /* @@protoc_inser
 };
 // -------------------------------------------------------------------
 
-class ECCCryptographicKey : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:censys_definitions.ECCCryptographicKey) */ {
+class ECCCryptographicKey : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zsearch.ECCCryptographicKey) */ {
  public:
   ECCCryptographicKey();
   virtual ~ECCCryptographicKey();
@@ -496,7 +496,7 @@ class ECCCryptographicKey : public ::google::protobuf::Message /* @@protoc_inser
   ::google::protobuf::uint32 curve() const;
   void set_curve(::google::protobuf::uint32 value);
 
-  // @@protoc_insertion_point(class_scope:censys_definitions.ECCCryptographicKey)
+  // @@protoc_insertion_point(class_scope:zsearch.ECCCryptographicKey)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -509,7 +509,7 @@ class ECCCryptographicKey : public ::google::protobuf::Message /* @@protoc_inser
 };
 // -------------------------------------------------------------------
 
-class CryptographicKey : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:censys_definitions.CryptographicKey) */ {
+class CryptographicKey : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zsearch.CryptographicKey) */ {
  public:
   CryptographicKey();
   virtual ~CryptographicKey();
@@ -615,11 +615,11 @@ class CryptographicKey : public ::google::protobuf::Message /* @@protoc_insertio
 
   // accessors -------------------------------------------------------
 
-  // .censys_definitions.CryptographicKey.KeyType type = 1;
+  // .zsearch.CryptographicKey.KeyType type = 1;
   void clear_type();
   static const int kTypeFieldNumber = 1;
-  ::censys_definitions::CryptographicKey_KeyType type() const;
-  void set_type(::censys_definitions::CryptographicKey_KeyType value);
+  ::zsearch::CryptographicKey_KeyType type() const;
+  void set_type(::zsearch::CryptographicKey_KeyType value);
 
   // bool broken = 5;
   void clear_broken();
@@ -639,35 +639,35 @@ class CryptographicKey : public ::google::protobuf::Message /* @@protoc_insertio
   bool debian() const;
   void set_debian(bool value);
 
-  // .censys_definitions.RSACryptographicKey rsa = 2;
+  // .zsearch.RSACryptographicKey rsa = 2;
   bool has_rsa() const;
   void clear_rsa();
   static const int kRsaFieldNumber = 2;
-  const ::censys_definitions::RSACryptographicKey& rsa() const;
-  ::censys_definitions::RSACryptographicKey* mutable_rsa();
-  ::censys_definitions::RSACryptographicKey* release_rsa();
-  void set_allocated_rsa(::censys_definitions::RSACryptographicKey* rsa);
+  const ::zsearch::RSACryptographicKey& rsa() const;
+  ::zsearch::RSACryptographicKey* mutable_rsa();
+  ::zsearch::RSACryptographicKey* release_rsa();
+  void set_allocated_rsa(::zsearch::RSACryptographicKey* rsa);
 
-  // .censys_definitions.DSACryptographicKey dsa = 3;
+  // .zsearch.DSACryptographicKey dsa = 3;
   bool has_dsa() const;
   void clear_dsa();
   static const int kDsaFieldNumber = 3;
-  const ::censys_definitions::DSACryptographicKey& dsa() const;
-  ::censys_definitions::DSACryptographicKey* mutable_dsa();
-  ::censys_definitions::DSACryptographicKey* release_dsa();
-  void set_allocated_dsa(::censys_definitions::DSACryptographicKey* dsa);
+  const ::zsearch::DSACryptographicKey& dsa() const;
+  ::zsearch::DSACryptographicKey* mutable_dsa();
+  ::zsearch::DSACryptographicKey* release_dsa();
+  void set_allocated_dsa(::zsearch::DSACryptographicKey* dsa);
 
-  // .censys_definitions.ECCCryptographicKey ecc = 4;
+  // .zsearch.ECCCryptographicKey ecc = 4;
   bool has_ecc() const;
   void clear_ecc();
   static const int kEccFieldNumber = 4;
-  const ::censys_definitions::ECCCryptographicKey& ecc() const;
-  ::censys_definitions::ECCCryptographicKey* mutable_ecc();
-  ::censys_definitions::ECCCryptographicKey* release_ecc();
-  void set_allocated_ecc(::censys_definitions::ECCCryptographicKey* ecc);
+  const ::zsearch::ECCCryptographicKey& ecc() const;
+  ::zsearch::ECCCryptographicKey* mutable_ecc();
+  ::zsearch::ECCCryptographicKey* release_ecc();
+  void set_allocated_ecc(::zsearch::ECCCryptographicKey* ecc);
 
   KeyOneofCase key_oneof_case() const;
-  // @@protoc_insertion_point(class_scope:censys_definitions.CryptographicKey)
+  // @@protoc_insertion_point(class_scope:zsearch.CryptographicKey)
  private:
   void set_has_rsa();
   void set_has_dsa();
@@ -684,9 +684,9 @@ class CryptographicKey : public ::google::protobuf::Message /* @@protoc_insertio
   bool debian_;
   union KeyOneofUnion {
     KeyOneofUnion() {}
-    ::censys_definitions::RSACryptographicKey* rsa_;
-    ::censys_definitions::DSACryptographicKey* dsa_;
-    ::censys_definitions::ECCCryptographicKey* ecc_;
+    ::zsearch::RSACryptographicKey* rsa_;
+    ::zsearch::DSACryptographicKey* dsa_;
+    ::zsearch::ECCCryptographicKey* ecc_;
   } key_oneof_;
   mutable int _cached_size_;
   ::google::protobuf::uint32 _oneof_case_[1];
@@ -706,40 +706,40 @@ inline void RSACryptographicKey::clear_modulus() {
   modulus_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& RSACryptographicKey::modulus() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.RSACryptographicKey.modulus)
+  // @@protoc_insertion_point(field_get:zsearch.RSACryptographicKey.modulus)
   return modulus_.GetNoArena();
 }
 inline void RSACryptographicKey::set_modulus(const ::std::string& value) {
   
   modulus_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:censys_definitions.RSACryptographicKey.modulus)
+  // @@protoc_insertion_point(field_set:zsearch.RSACryptographicKey.modulus)
 }
 #if LANG_CXX11
 inline void RSACryptographicKey::set_modulus(::std::string&& value) {
   
   modulus_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:censys_definitions.RSACryptographicKey.modulus)
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.RSACryptographicKey.modulus)
 }
 #endif
 inline void RSACryptographicKey::set_modulus(const char* value) {
   
   modulus_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:censys_definitions.RSACryptographicKey.modulus)
+  // @@protoc_insertion_point(field_set_char:zsearch.RSACryptographicKey.modulus)
 }
 inline void RSACryptographicKey::set_modulus(const void* value, size_t size) {
   
   modulus_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.RSACryptographicKey.modulus)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.RSACryptographicKey.modulus)
 }
 inline ::std::string* RSACryptographicKey::mutable_modulus() {
   
-  // @@protoc_insertion_point(field_mutable:censys_definitions.RSACryptographicKey.modulus)
+  // @@protoc_insertion_point(field_mutable:zsearch.RSACryptographicKey.modulus)
   return modulus_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* RSACryptographicKey::release_modulus() {
-  // @@protoc_insertion_point(field_release:censys_definitions.RSACryptographicKey.modulus)
+  // @@protoc_insertion_point(field_release:zsearch.RSACryptographicKey.modulus)
   
   return modulus_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -750,7 +750,7 @@ inline void RSACryptographicKey::set_allocated_modulus(::std::string* modulus) {
     
   }
   modulus_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), modulus);
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.RSACryptographicKey.modulus)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.RSACryptographicKey.modulus)
 }
 
 // bytes exponent = 2;
@@ -758,40 +758,40 @@ inline void RSACryptographicKey::clear_exponent() {
   exponent_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& RSACryptographicKey::exponent() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.RSACryptographicKey.exponent)
+  // @@protoc_insertion_point(field_get:zsearch.RSACryptographicKey.exponent)
   return exponent_.GetNoArena();
 }
 inline void RSACryptographicKey::set_exponent(const ::std::string& value) {
   
   exponent_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:censys_definitions.RSACryptographicKey.exponent)
+  // @@protoc_insertion_point(field_set:zsearch.RSACryptographicKey.exponent)
 }
 #if LANG_CXX11
 inline void RSACryptographicKey::set_exponent(::std::string&& value) {
   
   exponent_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:censys_definitions.RSACryptographicKey.exponent)
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.RSACryptographicKey.exponent)
 }
 #endif
 inline void RSACryptographicKey::set_exponent(const char* value) {
   
   exponent_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:censys_definitions.RSACryptographicKey.exponent)
+  // @@protoc_insertion_point(field_set_char:zsearch.RSACryptographicKey.exponent)
 }
 inline void RSACryptographicKey::set_exponent(const void* value, size_t size) {
   
   exponent_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.RSACryptographicKey.exponent)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.RSACryptographicKey.exponent)
 }
 inline ::std::string* RSACryptographicKey::mutable_exponent() {
   
-  // @@protoc_insertion_point(field_mutable:censys_definitions.RSACryptographicKey.exponent)
+  // @@protoc_insertion_point(field_mutable:zsearch.RSACryptographicKey.exponent)
   return exponent_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* RSACryptographicKey::release_exponent() {
-  // @@protoc_insertion_point(field_release:censys_definitions.RSACryptographicKey.exponent)
+  // @@protoc_insertion_point(field_release:zsearch.RSACryptographicKey.exponent)
   
   return exponent_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -802,7 +802,7 @@ inline void RSACryptographicKey::set_allocated_exponent(::std::string* exponent)
     
   }
   exponent_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), exponent);
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.RSACryptographicKey.exponent)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.RSACryptographicKey.exponent)
 }
 
 // bytes p = 3;
@@ -810,40 +810,40 @@ inline void RSACryptographicKey::clear_p() {
   p_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& RSACryptographicKey::p() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.RSACryptographicKey.p)
+  // @@protoc_insertion_point(field_get:zsearch.RSACryptographicKey.p)
   return p_.GetNoArena();
 }
 inline void RSACryptographicKey::set_p(const ::std::string& value) {
   
   p_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:censys_definitions.RSACryptographicKey.p)
+  // @@protoc_insertion_point(field_set:zsearch.RSACryptographicKey.p)
 }
 #if LANG_CXX11
 inline void RSACryptographicKey::set_p(::std::string&& value) {
   
   p_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:censys_definitions.RSACryptographicKey.p)
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.RSACryptographicKey.p)
 }
 #endif
 inline void RSACryptographicKey::set_p(const char* value) {
   
   p_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:censys_definitions.RSACryptographicKey.p)
+  // @@protoc_insertion_point(field_set_char:zsearch.RSACryptographicKey.p)
 }
 inline void RSACryptographicKey::set_p(const void* value, size_t size) {
   
   p_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.RSACryptographicKey.p)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.RSACryptographicKey.p)
 }
 inline ::std::string* RSACryptographicKey::mutable_p() {
   
-  // @@protoc_insertion_point(field_mutable:censys_definitions.RSACryptographicKey.p)
+  // @@protoc_insertion_point(field_mutable:zsearch.RSACryptographicKey.p)
   return p_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* RSACryptographicKey::release_p() {
-  // @@protoc_insertion_point(field_release:censys_definitions.RSACryptographicKey.p)
+  // @@protoc_insertion_point(field_release:zsearch.RSACryptographicKey.p)
   
   return p_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -854,7 +854,7 @@ inline void RSACryptographicKey::set_allocated_p(::std::string* p) {
     
   }
   p_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), p);
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.RSACryptographicKey.p)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.RSACryptographicKey.p)
 }
 
 // bytes q = 4;
@@ -862,40 +862,40 @@ inline void RSACryptographicKey::clear_q() {
   q_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& RSACryptographicKey::q() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.RSACryptographicKey.q)
+  // @@protoc_insertion_point(field_get:zsearch.RSACryptographicKey.q)
   return q_.GetNoArena();
 }
 inline void RSACryptographicKey::set_q(const ::std::string& value) {
   
   q_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:censys_definitions.RSACryptographicKey.q)
+  // @@protoc_insertion_point(field_set:zsearch.RSACryptographicKey.q)
 }
 #if LANG_CXX11
 inline void RSACryptographicKey::set_q(::std::string&& value) {
   
   q_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:censys_definitions.RSACryptographicKey.q)
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.RSACryptographicKey.q)
 }
 #endif
 inline void RSACryptographicKey::set_q(const char* value) {
   
   q_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:censys_definitions.RSACryptographicKey.q)
+  // @@protoc_insertion_point(field_set_char:zsearch.RSACryptographicKey.q)
 }
 inline void RSACryptographicKey::set_q(const void* value, size_t size) {
   
   q_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.RSACryptographicKey.q)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.RSACryptographicKey.q)
 }
 inline ::std::string* RSACryptographicKey::mutable_q() {
   
-  // @@protoc_insertion_point(field_mutable:censys_definitions.RSACryptographicKey.q)
+  // @@protoc_insertion_point(field_mutable:zsearch.RSACryptographicKey.q)
   return q_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* RSACryptographicKey::release_q() {
-  // @@protoc_insertion_point(field_release:censys_definitions.RSACryptographicKey.q)
+  // @@protoc_insertion_point(field_release:zsearch.RSACryptographicKey.q)
   
   return q_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -906,7 +906,7 @@ inline void RSACryptographicKey::set_allocated_q(::std::string* q) {
     
   }
   q_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), q);
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.RSACryptographicKey.q)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.RSACryptographicKey.q)
 }
 
 // -------------------------------------------------------------------
@@ -918,40 +918,40 @@ inline void DSACryptographicKey::clear_p() {
   p_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& DSACryptographicKey::p() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.DSACryptographicKey.p)
+  // @@protoc_insertion_point(field_get:zsearch.DSACryptographicKey.p)
   return p_.GetNoArena();
 }
 inline void DSACryptographicKey::set_p(const ::std::string& value) {
   
   p_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:censys_definitions.DSACryptographicKey.p)
+  // @@protoc_insertion_point(field_set:zsearch.DSACryptographicKey.p)
 }
 #if LANG_CXX11
 inline void DSACryptographicKey::set_p(::std::string&& value) {
   
   p_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:censys_definitions.DSACryptographicKey.p)
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.DSACryptographicKey.p)
 }
 #endif
 inline void DSACryptographicKey::set_p(const char* value) {
   
   p_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:censys_definitions.DSACryptographicKey.p)
+  // @@protoc_insertion_point(field_set_char:zsearch.DSACryptographicKey.p)
 }
 inline void DSACryptographicKey::set_p(const void* value, size_t size) {
   
   p_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.DSACryptographicKey.p)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.DSACryptographicKey.p)
 }
 inline ::std::string* DSACryptographicKey::mutable_p() {
   
-  // @@protoc_insertion_point(field_mutable:censys_definitions.DSACryptographicKey.p)
+  // @@protoc_insertion_point(field_mutable:zsearch.DSACryptographicKey.p)
   return p_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* DSACryptographicKey::release_p() {
-  // @@protoc_insertion_point(field_release:censys_definitions.DSACryptographicKey.p)
+  // @@protoc_insertion_point(field_release:zsearch.DSACryptographicKey.p)
   
   return p_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -962,7 +962,7 @@ inline void DSACryptographicKey::set_allocated_p(::std::string* p) {
     
   }
   p_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), p);
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.DSACryptographicKey.p)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.DSACryptographicKey.p)
 }
 
 // bytes q = 2;
@@ -970,40 +970,40 @@ inline void DSACryptographicKey::clear_q() {
   q_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& DSACryptographicKey::q() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.DSACryptographicKey.q)
+  // @@protoc_insertion_point(field_get:zsearch.DSACryptographicKey.q)
   return q_.GetNoArena();
 }
 inline void DSACryptographicKey::set_q(const ::std::string& value) {
   
   q_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:censys_definitions.DSACryptographicKey.q)
+  // @@protoc_insertion_point(field_set:zsearch.DSACryptographicKey.q)
 }
 #if LANG_CXX11
 inline void DSACryptographicKey::set_q(::std::string&& value) {
   
   q_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:censys_definitions.DSACryptographicKey.q)
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.DSACryptographicKey.q)
 }
 #endif
 inline void DSACryptographicKey::set_q(const char* value) {
   
   q_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:censys_definitions.DSACryptographicKey.q)
+  // @@protoc_insertion_point(field_set_char:zsearch.DSACryptographicKey.q)
 }
 inline void DSACryptographicKey::set_q(const void* value, size_t size) {
   
   q_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.DSACryptographicKey.q)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.DSACryptographicKey.q)
 }
 inline ::std::string* DSACryptographicKey::mutable_q() {
   
-  // @@protoc_insertion_point(field_mutable:censys_definitions.DSACryptographicKey.q)
+  // @@protoc_insertion_point(field_mutable:zsearch.DSACryptographicKey.q)
   return q_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* DSACryptographicKey::release_q() {
-  // @@protoc_insertion_point(field_release:censys_definitions.DSACryptographicKey.q)
+  // @@protoc_insertion_point(field_release:zsearch.DSACryptographicKey.q)
   
   return q_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -1014,7 +1014,7 @@ inline void DSACryptographicKey::set_allocated_q(::std::string* q) {
     
   }
   q_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), q);
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.DSACryptographicKey.q)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.DSACryptographicKey.q)
 }
 
 // bytes g = 3;
@@ -1022,40 +1022,40 @@ inline void DSACryptographicKey::clear_g() {
   g_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& DSACryptographicKey::g() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.DSACryptographicKey.g)
+  // @@protoc_insertion_point(field_get:zsearch.DSACryptographicKey.g)
   return g_.GetNoArena();
 }
 inline void DSACryptographicKey::set_g(const ::std::string& value) {
   
   g_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:censys_definitions.DSACryptographicKey.g)
+  // @@protoc_insertion_point(field_set:zsearch.DSACryptographicKey.g)
 }
 #if LANG_CXX11
 inline void DSACryptographicKey::set_g(::std::string&& value) {
   
   g_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:censys_definitions.DSACryptographicKey.g)
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.DSACryptographicKey.g)
 }
 #endif
 inline void DSACryptographicKey::set_g(const char* value) {
   
   g_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:censys_definitions.DSACryptographicKey.g)
+  // @@protoc_insertion_point(field_set_char:zsearch.DSACryptographicKey.g)
 }
 inline void DSACryptographicKey::set_g(const void* value, size_t size) {
   
   g_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.DSACryptographicKey.g)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.DSACryptographicKey.g)
 }
 inline ::std::string* DSACryptographicKey::mutable_g() {
   
-  // @@protoc_insertion_point(field_mutable:censys_definitions.DSACryptographicKey.g)
+  // @@protoc_insertion_point(field_mutable:zsearch.DSACryptographicKey.g)
   return g_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* DSACryptographicKey::release_g() {
-  // @@protoc_insertion_point(field_release:censys_definitions.DSACryptographicKey.g)
+  // @@protoc_insertion_point(field_release:zsearch.DSACryptographicKey.g)
   
   return g_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -1066,7 +1066,7 @@ inline void DSACryptographicKey::set_allocated_g(::std::string* g) {
     
   }
   g_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), g);
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.DSACryptographicKey.g)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.DSACryptographicKey.g)
 }
 
 // bytes y = 4;
@@ -1074,40 +1074,40 @@ inline void DSACryptographicKey::clear_y() {
   y_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& DSACryptographicKey::y() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.DSACryptographicKey.y)
+  // @@protoc_insertion_point(field_get:zsearch.DSACryptographicKey.y)
   return y_.GetNoArena();
 }
 inline void DSACryptographicKey::set_y(const ::std::string& value) {
   
   y_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:censys_definitions.DSACryptographicKey.y)
+  // @@protoc_insertion_point(field_set:zsearch.DSACryptographicKey.y)
 }
 #if LANG_CXX11
 inline void DSACryptographicKey::set_y(::std::string&& value) {
   
   y_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:censys_definitions.DSACryptographicKey.y)
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.DSACryptographicKey.y)
 }
 #endif
 inline void DSACryptographicKey::set_y(const char* value) {
   
   y_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:censys_definitions.DSACryptographicKey.y)
+  // @@protoc_insertion_point(field_set_char:zsearch.DSACryptographicKey.y)
 }
 inline void DSACryptographicKey::set_y(const void* value, size_t size) {
   
   y_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.DSACryptographicKey.y)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.DSACryptographicKey.y)
 }
 inline ::std::string* DSACryptographicKey::mutable_y() {
   
-  // @@protoc_insertion_point(field_mutable:censys_definitions.DSACryptographicKey.y)
+  // @@protoc_insertion_point(field_mutable:zsearch.DSACryptographicKey.y)
   return y_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* DSACryptographicKey::release_y() {
-  // @@protoc_insertion_point(field_release:censys_definitions.DSACryptographicKey.y)
+  // @@protoc_insertion_point(field_release:zsearch.DSACryptographicKey.y)
   
   return y_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -1118,7 +1118,7 @@ inline void DSACryptographicKey::set_allocated_y(::std::string* y) {
     
   }
   y_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), y);
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.DSACryptographicKey.y)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.DSACryptographicKey.y)
 }
 
 // bytes x = 5;
@@ -1126,40 +1126,40 @@ inline void DSACryptographicKey::clear_x() {
   x_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& DSACryptographicKey::x() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.DSACryptographicKey.x)
+  // @@protoc_insertion_point(field_get:zsearch.DSACryptographicKey.x)
   return x_.GetNoArena();
 }
 inline void DSACryptographicKey::set_x(const ::std::string& value) {
   
   x_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:censys_definitions.DSACryptographicKey.x)
+  // @@protoc_insertion_point(field_set:zsearch.DSACryptographicKey.x)
 }
 #if LANG_CXX11
 inline void DSACryptographicKey::set_x(::std::string&& value) {
   
   x_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:censys_definitions.DSACryptographicKey.x)
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.DSACryptographicKey.x)
 }
 #endif
 inline void DSACryptographicKey::set_x(const char* value) {
   
   x_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:censys_definitions.DSACryptographicKey.x)
+  // @@protoc_insertion_point(field_set_char:zsearch.DSACryptographicKey.x)
 }
 inline void DSACryptographicKey::set_x(const void* value, size_t size) {
   
   x_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.DSACryptographicKey.x)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.DSACryptographicKey.x)
 }
 inline ::std::string* DSACryptographicKey::mutable_x() {
   
-  // @@protoc_insertion_point(field_mutable:censys_definitions.DSACryptographicKey.x)
+  // @@protoc_insertion_point(field_mutable:zsearch.DSACryptographicKey.x)
   return x_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* DSACryptographicKey::release_x() {
-  // @@protoc_insertion_point(field_release:censys_definitions.DSACryptographicKey.x)
+  // @@protoc_insertion_point(field_release:zsearch.DSACryptographicKey.x)
   
   return x_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -1170,7 +1170,7 @@ inline void DSACryptographicKey::set_allocated_x(::std::string* x) {
     
   }
   x_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), x);
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.DSACryptographicKey.x)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.DSACryptographicKey.x)
 }
 
 // -------------------------------------------------------------------
@@ -1182,13 +1182,13 @@ inline void ECCCryptographicKey::clear_curve() {
   curve_ = 0u;
 }
 inline ::google::protobuf::uint32 ECCCryptographicKey::curve() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.ECCCryptographicKey.curve)
+  // @@protoc_insertion_point(field_get:zsearch.ECCCryptographicKey.curve)
   return curve_;
 }
 inline void ECCCryptographicKey::set_curve(::google::protobuf::uint32 value) {
   
   curve_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.ECCCryptographicKey.curve)
+  // @@protoc_insertion_point(field_set:zsearch.ECCCryptographicKey.curve)
 }
 
 // bytes x = 2;
@@ -1196,40 +1196,40 @@ inline void ECCCryptographicKey::clear_x() {
   x_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& ECCCryptographicKey::x() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.ECCCryptographicKey.x)
+  // @@protoc_insertion_point(field_get:zsearch.ECCCryptographicKey.x)
   return x_.GetNoArena();
 }
 inline void ECCCryptographicKey::set_x(const ::std::string& value) {
   
   x_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:censys_definitions.ECCCryptographicKey.x)
+  // @@protoc_insertion_point(field_set:zsearch.ECCCryptographicKey.x)
 }
 #if LANG_CXX11
 inline void ECCCryptographicKey::set_x(::std::string&& value) {
   
   x_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:censys_definitions.ECCCryptographicKey.x)
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.ECCCryptographicKey.x)
 }
 #endif
 inline void ECCCryptographicKey::set_x(const char* value) {
   
   x_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:censys_definitions.ECCCryptographicKey.x)
+  // @@protoc_insertion_point(field_set_char:zsearch.ECCCryptographicKey.x)
 }
 inline void ECCCryptographicKey::set_x(const void* value, size_t size) {
   
   x_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.ECCCryptographicKey.x)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.ECCCryptographicKey.x)
 }
 inline ::std::string* ECCCryptographicKey::mutable_x() {
   
-  // @@protoc_insertion_point(field_mutable:censys_definitions.ECCCryptographicKey.x)
+  // @@protoc_insertion_point(field_mutable:zsearch.ECCCryptographicKey.x)
   return x_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* ECCCryptographicKey::release_x() {
-  // @@protoc_insertion_point(field_release:censys_definitions.ECCCryptographicKey.x)
+  // @@protoc_insertion_point(field_release:zsearch.ECCCryptographicKey.x)
   
   return x_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -1240,7 +1240,7 @@ inline void ECCCryptographicKey::set_allocated_x(::std::string* x) {
     
   }
   x_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), x);
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.ECCCryptographicKey.x)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.ECCCryptographicKey.x)
 }
 
 // bytes y = 3;
@@ -1248,40 +1248,40 @@ inline void ECCCryptographicKey::clear_y() {
   y_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& ECCCryptographicKey::y() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.ECCCryptographicKey.y)
+  // @@protoc_insertion_point(field_get:zsearch.ECCCryptographicKey.y)
   return y_.GetNoArena();
 }
 inline void ECCCryptographicKey::set_y(const ::std::string& value) {
   
   y_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:censys_definitions.ECCCryptographicKey.y)
+  // @@protoc_insertion_point(field_set:zsearch.ECCCryptographicKey.y)
 }
 #if LANG_CXX11
 inline void ECCCryptographicKey::set_y(::std::string&& value) {
   
   y_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:censys_definitions.ECCCryptographicKey.y)
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.ECCCryptographicKey.y)
 }
 #endif
 inline void ECCCryptographicKey::set_y(const char* value) {
   
   y_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:censys_definitions.ECCCryptographicKey.y)
+  // @@protoc_insertion_point(field_set_char:zsearch.ECCCryptographicKey.y)
 }
 inline void ECCCryptographicKey::set_y(const void* value, size_t size) {
   
   y_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.ECCCryptographicKey.y)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.ECCCryptographicKey.y)
 }
 inline ::std::string* ECCCryptographicKey::mutable_y() {
   
-  // @@protoc_insertion_point(field_mutable:censys_definitions.ECCCryptographicKey.y)
+  // @@protoc_insertion_point(field_mutable:zsearch.ECCCryptographicKey.y)
   return y_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* ECCCryptographicKey::release_y() {
-  // @@protoc_insertion_point(field_release:censys_definitions.ECCCryptographicKey.y)
+  // @@protoc_insertion_point(field_release:zsearch.ECCCryptographicKey.y)
   
   return y_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -1292,7 +1292,7 @@ inline void ECCCryptographicKey::set_allocated_y(::std::string* y) {
     
   }
   y_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), y);
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.ECCCryptographicKey.y)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.ECCCryptographicKey.y)
 }
 
 // bytes private = 4;
@@ -1300,40 +1300,40 @@ inline void ECCCryptographicKey::clear_private_() {
   private__.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& ECCCryptographicKey::private_() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.ECCCryptographicKey.private)
+  // @@protoc_insertion_point(field_get:zsearch.ECCCryptographicKey.private)
   return private__.GetNoArena();
 }
 inline void ECCCryptographicKey::set_private_(const ::std::string& value) {
   
   private__.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:censys_definitions.ECCCryptographicKey.private)
+  // @@protoc_insertion_point(field_set:zsearch.ECCCryptographicKey.private)
 }
 #if LANG_CXX11
 inline void ECCCryptographicKey::set_private_(::std::string&& value) {
   
   private__.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:censys_definitions.ECCCryptographicKey.private)
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.ECCCryptographicKey.private)
 }
 #endif
 inline void ECCCryptographicKey::set_private_(const char* value) {
   
   private__.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:censys_definitions.ECCCryptographicKey.private)
+  // @@protoc_insertion_point(field_set_char:zsearch.ECCCryptographicKey.private)
 }
 inline void ECCCryptographicKey::set_private_(const void* value, size_t size) {
   
   private__.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.ECCCryptographicKey.private)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.ECCCryptographicKey.private)
 }
 inline ::std::string* ECCCryptographicKey::mutable_private_() {
   
-  // @@protoc_insertion_point(field_mutable:censys_definitions.ECCCryptographicKey.private)
+  // @@protoc_insertion_point(field_mutable:zsearch.ECCCryptographicKey.private)
   return private__.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* ECCCryptographicKey::release_private_() {
-  // @@protoc_insertion_point(field_release:censys_definitions.ECCCryptographicKey.private)
+  // @@protoc_insertion_point(field_release:zsearch.ECCCryptographicKey.private)
   
   return private__.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -1344,28 +1344,28 @@ inline void ECCCryptographicKey::set_allocated_private_(::std::string* private_)
     
   }
   private__.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), private_);
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.ECCCryptographicKey.private)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.ECCCryptographicKey.private)
 }
 
 // -------------------------------------------------------------------
 
 // CryptographicKey
 
-// .censys_definitions.CryptographicKey.KeyType type = 1;
+// .zsearch.CryptographicKey.KeyType type = 1;
 inline void CryptographicKey::clear_type() {
   type_ = 0;
 }
-inline ::censys_definitions::CryptographicKey_KeyType CryptographicKey::type() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.CryptographicKey.type)
-  return static_cast< ::censys_definitions::CryptographicKey_KeyType >(type_);
+inline ::zsearch::CryptographicKey_KeyType CryptographicKey::type() const {
+  // @@protoc_insertion_point(field_get:zsearch.CryptographicKey.type)
+  return static_cast< ::zsearch::CryptographicKey_KeyType >(type_);
 }
-inline void CryptographicKey::set_type(::censys_definitions::CryptographicKey_KeyType value) {
+inline void CryptographicKey::set_type(::zsearch::CryptographicKey_KeyType value) {
   
   type_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.CryptographicKey.type)
+  // @@protoc_insertion_point(field_set:zsearch.CryptographicKey.type)
 }
 
-// .censys_definitions.RSACryptographicKey rsa = 2;
+// .zsearch.RSACryptographicKey rsa = 2;
 inline bool CryptographicKey::has_rsa() const {
   return key_oneof_case() == kRsa;
 }
@@ -1378,42 +1378,42 @@ inline void CryptographicKey::clear_rsa() {
     clear_has_key_oneof();
   }
 }
-inline  const ::censys_definitions::RSACryptographicKey& CryptographicKey::rsa() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.CryptographicKey.rsa)
+inline  const ::zsearch::RSACryptographicKey& CryptographicKey::rsa() const {
+  // @@protoc_insertion_point(field_get:zsearch.CryptographicKey.rsa)
   return has_rsa()
       ? *key_oneof_.rsa_
-      : ::censys_definitions::RSACryptographicKey::default_instance();
+      : ::zsearch::RSACryptographicKey::default_instance();
 }
-inline ::censys_definitions::RSACryptographicKey* CryptographicKey::mutable_rsa() {
+inline ::zsearch::RSACryptographicKey* CryptographicKey::mutable_rsa() {
   if (!has_rsa()) {
     clear_key_oneof();
     set_has_rsa();
-    key_oneof_.rsa_ = new ::censys_definitions::RSACryptographicKey;
+    key_oneof_.rsa_ = new ::zsearch::RSACryptographicKey;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.CryptographicKey.rsa)
+  // @@protoc_insertion_point(field_mutable:zsearch.CryptographicKey.rsa)
   return key_oneof_.rsa_;
 }
-inline ::censys_definitions::RSACryptographicKey* CryptographicKey::release_rsa() {
-  // @@protoc_insertion_point(field_release:censys_definitions.CryptographicKey.rsa)
+inline ::zsearch::RSACryptographicKey* CryptographicKey::release_rsa() {
+  // @@protoc_insertion_point(field_release:zsearch.CryptographicKey.rsa)
   if (has_rsa()) {
     clear_has_key_oneof();
-    ::censys_definitions::RSACryptographicKey* temp = key_oneof_.rsa_;
+    ::zsearch::RSACryptographicKey* temp = key_oneof_.rsa_;
     key_oneof_.rsa_ = NULL;
     return temp;
   } else {
     return NULL;
   }
 }
-inline void CryptographicKey::set_allocated_rsa(::censys_definitions::RSACryptographicKey* rsa) {
+inline void CryptographicKey::set_allocated_rsa(::zsearch::RSACryptographicKey* rsa) {
   clear_key_oneof();
   if (rsa) {
     set_has_rsa();
     key_oneof_.rsa_ = rsa;
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.CryptographicKey.rsa)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CryptographicKey.rsa)
 }
 
-// .censys_definitions.DSACryptographicKey dsa = 3;
+// .zsearch.DSACryptographicKey dsa = 3;
 inline bool CryptographicKey::has_dsa() const {
   return key_oneof_case() == kDsa;
 }
@@ -1426,42 +1426,42 @@ inline void CryptographicKey::clear_dsa() {
     clear_has_key_oneof();
   }
 }
-inline  const ::censys_definitions::DSACryptographicKey& CryptographicKey::dsa() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.CryptographicKey.dsa)
+inline  const ::zsearch::DSACryptographicKey& CryptographicKey::dsa() const {
+  // @@protoc_insertion_point(field_get:zsearch.CryptographicKey.dsa)
   return has_dsa()
       ? *key_oneof_.dsa_
-      : ::censys_definitions::DSACryptographicKey::default_instance();
+      : ::zsearch::DSACryptographicKey::default_instance();
 }
-inline ::censys_definitions::DSACryptographicKey* CryptographicKey::mutable_dsa() {
+inline ::zsearch::DSACryptographicKey* CryptographicKey::mutable_dsa() {
   if (!has_dsa()) {
     clear_key_oneof();
     set_has_dsa();
-    key_oneof_.dsa_ = new ::censys_definitions::DSACryptographicKey;
+    key_oneof_.dsa_ = new ::zsearch::DSACryptographicKey;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.CryptographicKey.dsa)
+  // @@protoc_insertion_point(field_mutable:zsearch.CryptographicKey.dsa)
   return key_oneof_.dsa_;
 }
-inline ::censys_definitions::DSACryptographicKey* CryptographicKey::release_dsa() {
-  // @@protoc_insertion_point(field_release:censys_definitions.CryptographicKey.dsa)
+inline ::zsearch::DSACryptographicKey* CryptographicKey::release_dsa() {
+  // @@protoc_insertion_point(field_release:zsearch.CryptographicKey.dsa)
   if (has_dsa()) {
     clear_has_key_oneof();
-    ::censys_definitions::DSACryptographicKey* temp = key_oneof_.dsa_;
+    ::zsearch::DSACryptographicKey* temp = key_oneof_.dsa_;
     key_oneof_.dsa_ = NULL;
     return temp;
   } else {
     return NULL;
   }
 }
-inline void CryptographicKey::set_allocated_dsa(::censys_definitions::DSACryptographicKey* dsa) {
+inline void CryptographicKey::set_allocated_dsa(::zsearch::DSACryptographicKey* dsa) {
   clear_key_oneof();
   if (dsa) {
     set_has_dsa();
     key_oneof_.dsa_ = dsa;
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.CryptographicKey.dsa)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CryptographicKey.dsa)
 }
 
-// .censys_definitions.ECCCryptographicKey ecc = 4;
+// .zsearch.ECCCryptographicKey ecc = 4;
 inline bool CryptographicKey::has_ecc() const {
   return key_oneof_case() == kEcc;
 }
@@ -1474,39 +1474,39 @@ inline void CryptographicKey::clear_ecc() {
     clear_has_key_oneof();
   }
 }
-inline  const ::censys_definitions::ECCCryptographicKey& CryptographicKey::ecc() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.CryptographicKey.ecc)
+inline  const ::zsearch::ECCCryptographicKey& CryptographicKey::ecc() const {
+  // @@protoc_insertion_point(field_get:zsearch.CryptographicKey.ecc)
   return has_ecc()
       ? *key_oneof_.ecc_
-      : ::censys_definitions::ECCCryptographicKey::default_instance();
+      : ::zsearch::ECCCryptographicKey::default_instance();
 }
-inline ::censys_definitions::ECCCryptographicKey* CryptographicKey::mutable_ecc() {
+inline ::zsearch::ECCCryptographicKey* CryptographicKey::mutable_ecc() {
   if (!has_ecc()) {
     clear_key_oneof();
     set_has_ecc();
-    key_oneof_.ecc_ = new ::censys_definitions::ECCCryptographicKey;
+    key_oneof_.ecc_ = new ::zsearch::ECCCryptographicKey;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.CryptographicKey.ecc)
+  // @@protoc_insertion_point(field_mutable:zsearch.CryptographicKey.ecc)
   return key_oneof_.ecc_;
 }
-inline ::censys_definitions::ECCCryptographicKey* CryptographicKey::release_ecc() {
-  // @@protoc_insertion_point(field_release:censys_definitions.CryptographicKey.ecc)
+inline ::zsearch::ECCCryptographicKey* CryptographicKey::release_ecc() {
+  // @@protoc_insertion_point(field_release:zsearch.CryptographicKey.ecc)
   if (has_ecc()) {
     clear_has_key_oneof();
-    ::censys_definitions::ECCCryptographicKey* temp = key_oneof_.ecc_;
+    ::zsearch::ECCCryptographicKey* temp = key_oneof_.ecc_;
     key_oneof_.ecc_ = NULL;
     return temp;
   } else {
     return NULL;
   }
 }
-inline void CryptographicKey::set_allocated_ecc(::censys_definitions::ECCCryptographicKey* ecc) {
+inline void CryptographicKey::set_allocated_ecc(::zsearch::ECCCryptographicKey* ecc) {
   clear_key_oneof();
   if (ecc) {
     set_has_ecc();
     key_oneof_.ecc_ = ecc;
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.CryptographicKey.ecc)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CryptographicKey.ecc)
 }
 
 // bool broken = 5;
@@ -1514,13 +1514,13 @@ inline void CryptographicKey::clear_broken() {
   broken_ = false;
 }
 inline bool CryptographicKey::broken() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.CryptographicKey.broken)
+  // @@protoc_insertion_point(field_get:zsearch.CryptographicKey.broken)
   return broken_;
 }
 inline void CryptographicKey::set_broken(bool value) {
   
   broken_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.CryptographicKey.broken)
+  // @@protoc_insertion_point(field_set:zsearch.CryptographicKey.broken)
 }
 
 // bool common = 6;
@@ -1528,13 +1528,13 @@ inline void CryptographicKey::clear_common() {
   common_ = false;
 }
 inline bool CryptographicKey::common() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.CryptographicKey.common)
+  // @@protoc_insertion_point(field_get:zsearch.CryptographicKey.common)
   return common_;
 }
 inline void CryptographicKey::set_common(bool value) {
   
   common_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.CryptographicKey.common)
+  // @@protoc_insertion_point(field_set:zsearch.CryptographicKey.common)
 }
 
 // bool debian = 7;
@@ -1542,13 +1542,13 @@ inline void CryptographicKey::clear_debian() {
   debian_ = false;
 }
 inline bool CryptographicKey::debian() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.CryptographicKey.debian)
+  // @@protoc_insertion_point(field_get:zsearch.CryptographicKey.debian)
   return debian_;
 }
 inline void CryptographicKey::set_debian(bool value) {
   
   debian_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.CryptographicKey.debian)
+  // @@protoc_insertion_point(field_set:zsearch.CryptographicKey.debian)
 }
 
 inline bool CryptographicKey::has_key_oneof() const {
@@ -1571,16 +1571,16 @@ inline CryptographicKey::KeyOneofCase CryptographicKey::key_oneof_case() const {
 // @@protoc_insertion_point(namespace_scope)
 
 
-}  // namespace censys_definitions
+}  // namespace zsearch
 
 #ifndef SWIG
 namespace google {
 namespace protobuf {
 
-template <> struct is_proto_enum< ::censys_definitions::CryptographicKey_KeyType> : ::google::protobuf::internal::true_type {};
+template <> struct is_proto_enum< ::zsearch::CryptographicKey_KeyType> : ::google::protobuf::internal::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::censys_definitions::CryptographicKey_KeyType>() {
-  return ::censys_definitions::CryptographicKey_KeyType_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::zsearch::CryptographicKey_KeyType>() {
+  return ::zsearch::CryptographicKey_KeyType_descriptor();
 }
 
 }  // namespace protobuf

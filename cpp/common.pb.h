@@ -30,7 +30,7 @@
 #include <google/protobuf/generated_enum_reflection.h>
 #include <google/protobuf/unknown_field_set.h>
 // @@protoc_insertion_point(includes)
-namespace censys_definitions {
+namespace zsearch {
 class ASAtom;
 class ASAtomDefaultTypeInternal;
 extern ASAtomDefaultTypeInternal _ASAtom_default_instance_;
@@ -40,9 +40,9 @@ extern MetadatumDefaultTypeInternal _Metadatum_default_instance_;
 class UserdataAtom;
 class UserdataAtomDefaultTypeInternal;
 extern UserdataAtomDefaultTypeInternal _UserdataAtom_default_instance_;
-}  // namespace censys_definitions
+}  // namespace zsearch
 
-namespace censys_definitions {
+namespace zsearch {
 
 namespace protobuf_common_2eproto {
 // Internal implementation detail -- do not call these.
@@ -106,7 +106,7 @@ inline bool RegionalRegistrar_Parse(
 }
 // ===================================================================
 
-class Metadatum : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:censys_definitions.Metadatum) */ {
+class Metadatum : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zsearch.Metadatum) */ {
  public:
   Metadatum();
   virtual ~Metadatum();
@@ -201,7 +201,7 @@ class Metadatum : public ::google::protobuf::Message /* @@protoc_insertion_point
   ::std::string* release_value();
   void set_allocated_value(::std::string* value);
 
-  // @@protoc_insertion_point(class_scope:censys_definitions.Metadatum)
+  // @@protoc_insertion_point(class_scope:zsearch.Metadatum)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -212,7 +212,7 @@ class Metadatum : public ::google::protobuf::Message /* @@protoc_insertion_point
 };
 // -------------------------------------------------------------------
 
-class UserdataAtom : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:censys_definitions.UserdataAtom) */ {
+class UserdataAtom : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zsearch.UserdataAtom) */ {
  public:
   UserdataAtom();
   virtual ~UserdataAtom();
@@ -279,28 +279,28 @@ class UserdataAtom : public ::google::protobuf::Message /* @@protoc_insertion_po
 
   // accessors -------------------------------------------------------
 
-  // repeated .censys_definitions.Metadatum private_metadata = 3;
+  // repeated .zsearch.Metadatum private_metadata = 3;
   int private_metadata_size() const;
   void clear_private_metadata();
   static const int kPrivateMetadataFieldNumber = 3;
-  const ::censys_definitions::Metadatum& private_metadata(int index) const;
-  ::censys_definitions::Metadatum* mutable_private_metadata(int index);
-  ::censys_definitions::Metadatum* add_private_metadata();
-  ::google::protobuf::RepeatedPtrField< ::censys_definitions::Metadatum >*
+  const ::zsearch::Metadatum& private_metadata(int index) const;
+  ::zsearch::Metadatum* mutable_private_metadata(int index);
+  ::zsearch::Metadatum* add_private_metadata();
+  ::google::protobuf::RepeatedPtrField< ::zsearch::Metadatum >*
       mutable_private_metadata();
-  const ::google::protobuf::RepeatedPtrField< ::censys_definitions::Metadatum >&
+  const ::google::protobuf::RepeatedPtrField< ::zsearch::Metadatum >&
       private_metadata() const;
 
-  // repeated .censys_definitions.Metadatum public_metadata = 4;
+  // repeated .zsearch.Metadatum public_metadata = 4;
   int public_metadata_size() const;
   void clear_public_metadata();
   static const int kPublicMetadataFieldNumber = 4;
-  const ::censys_definitions::Metadatum& public_metadata(int index) const;
-  ::censys_definitions::Metadatum* mutable_public_metadata(int index);
-  ::censys_definitions::Metadatum* add_public_metadata();
-  ::google::protobuf::RepeatedPtrField< ::censys_definitions::Metadatum >*
+  const ::zsearch::Metadatum& public_metadata(int index) const;
+  ::zsearch::Metadatum* mutable_public_metadata(int index);
+  ::zsearch::Metadatum* add_public_metadata();
+  ::google::protobuf::RepeatedPtrField< ::zsearch::Metadatum >*
       mutable_public_metadata();
-  const ::google::protobuf::RepeatedPtrField< ::censys_definitions::Metadatum >&
+  const ::google::protobuf::RepeatedPtrField< ::zsearch::Metadatum >&
       public_metadata() const;
 
   // repeated string private_tags = 5;
@@ -363,12 +363,12 @@ class UserdataAtom : public ::google::protobuf::Message /* @@protoc_insertion_po
   ::std::string* release_public_notes();
   void set_allocated_public_notes(::std::string* public_notes);
 
-  // @@protoc_insertion_point(class_scope:censys_definitions.UserdataAtom)
+  // @@protoc_insertion_point(class_scope:zsearch.UserdataAtom)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::RepeatedPtrField< ::censys_definitions::Metadatum > private_metadata_;
-  ::google::protobuf::RepeatedPtrField< ::censys_definitions::Metadatum > public_metadata_;
+  ::google::protobuf::RepeatedPtrField< ::zsearch::Metadatum > private_metadata_;
+  ::google::protobuf::RepeatedPtrField< ::zsearch::Metadatum > public_metadata_;
   ::google::protobuf::RepeatedPtrField< ::std::string> private_tags_;
   ::google::protobuf::RepeatedPtrField< ::std::string> public_tags_;
   ::google::protobuf::internal::ArenaStringPtr private_notes_;
@@ -378,7 +378,7 @@ class UserdataAtom : public ::google::protobuf::Message /* @@protoc_insertion_po
 };
 // -------------------------------------------------------------------
 
-class ASAtom : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:censys_definitions.ASAtom) */ {
+class ASAtom : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zsearch.ASAtom) */ {
  public:
   ASAtom();
   virtual ~ASAtom();
@@ -533,13 +533,13 @@ class ASAtom : public ::google::protobuf::Message /* @@protoc_insertion_point(cl
   ::google::protobuf::uint32 asn() const;
   void set_asn(::google::protobuf::uint32 value);
 
-  // .censys_definitions.RegionalRegistrar rir = 4;
+  // .zsearch.RegionalRegistrar rir = 4;
   void clear_rir();
   static const int kRirFieldNumber = 4;
-  ::censys_definitions::RegionalRegistrar rir() const;
-  void set_rir(::censys_definitions::RegionalRegistrar value);
+  ::zsearch::RegionalRegistrar rir() const;
+  void set_rir(::zsearch::RegionalRegistrar value);
 
-  // @@protoc_insertion_point(class_scope:censys_definitions.ASAtom)
+  // @@protoc_insertion_point(class_scope:zsearch.ASAtom)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -568,40 +568,40 @@ inline void Metadatum::clear_key() {
   key_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& Metadatum::key() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Metadatum.key)
+  // @@protoc_insertion_point(field_get:zsearch.Metadatum.key)
   return key_.GetNoArena();
 }
 inline void Metadatum::set_key(const ::std::string& value) {
   
   key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:censys_definitions.Metadatum.key)
+  // @@protoc_insertion_point(field_set:zsearch.Metadatum.key)
 }
 #if LANG_CXX11
 inline void Metadatum::set_key(::std::string&& value) {
   
   key_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:censys_definitions.Metadatum.key)
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.Metadatum.key)
 }
 #endif
 inline void Metadatum::set_key(const char* value) {
   
   key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:censys_definitions.Metadatum.key)
+  // @@protoc_insertion_point(field_set_char:zsearch.Metadatum.key)
 }
 inline void Metadatum::set_key(const char* value, size_t size) {
   
   key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.Metadatum.key)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.Metadatum.key)
 }
 inline ::std::string* Metadatum::mutable_key() {
   
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Metadatum.key)
+  // @@protoc_insertion_point(field_mutable:zsearch.Metadatum.key)
   return key_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Metadatum::release_key() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Metadatum.key)
+  // @@protoc_insertion_point(field_release:zsearch.Metadatum.key)
   
   return key_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -612,7 +612,7 @@ inline void Metadatum::set_allocated_key(::std::string* key) {
     
   }
   key_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), key);
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Metadatum.key)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Metadatum.key)
 }
 
 // string value = 2;
@@ -620,40 +620,40 @@ inline void Metadatum::clear_value() {
   value_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& Metadatum::value() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Metadatum.value)
+  // @@protoc_insertion_point(field_get:zsearch.Metadatum.value)
   return value_.GetNoArena();
 }
 inline void Metadatum::set_value(const ::std::string& value) {
   
   value_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:censys_definitions.Metadatum.value)
+  // @@protoc_insertion_point(field_set:zsearch.Metadatum.value)
 }
 #if LANG_CXX11
 inline void Metadatum::set_value(::std::string&& value) {
   
   value_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:censys_definitions.Metadatum.value)
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.Metadatum.value)
 }
 #endif
 inline void Metadatum::set_value(const char* value) {
   
   value_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:censys_definitions.Metadatum.value)
+  // @@protoc_insertion_point(field_set_char:zsearch.Metadatum.value)
 }
 inline void Metadatum::set_value(const char* value, size_t size) {
   
   value_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.Metadatum.value)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.Metadatum.value)
 }
 inline ::std::string* Metadatum::mutable_value() {
   
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Metadatum.value)
+  // @@protoc_insertion_point(field_mutable:zsearch.Metadatum.value)
   return value_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Metadatum::release_value() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Metadatum.value)
+  // @@protoc_insertion_point(field_release:zsearch.Metadatum.value)
   
   return value_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -664,7 +664,7 @@ inline void Metadatum::set_allocated_value(::std::string* value) {
     
   }
   value_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Metadatum.value)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Metadatum.value)
 }
 
 // -------------------------------------------------------------------
@@ -676,40 +676,40 @@ inline void UserdataAtom::clear_private_notes() {
   private_notes_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& UserdataAtom::private_notes() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.UserdataAtom.private_notes)
+  // @@protoc_insertion_point(field_get:zsearch.UserdataAtom.private_notes)
   return private_notes_.GetNoArena();
 }
 inline void UserdataAtom::set_private_notes(const ::std::string& value) {
   
   private_notes_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:censys_definitions.UserdataAtom.private_notes)
+  // @@protoc_insertion_point(field_set:zsearch.UserdataAtom.private_notes)
 }
 #if LANG_CXX11
 inline void UserdataAtom::set_private_notes(::std::string&& value) {
   
   private_notes_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:censys_definitions.UserdataAtom.private_notes)
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.UserdataAtom.private_notes)
 }
 #endif
 inline void UserdataAtom::set_private_notes(const char* value) {
   
   private_notes_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:censys_definitions.UserdataAtom.private_notes)
+  // @@protoc_insertion_point(field_set_char:zsearch.UserdataAtom.private_notes)
 }
 inline void UserdataAtom::set_private_notes(const char* value, size_t size) {
   
   private_notes_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.UserdataAtom.private_notes)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.UserdataAtom.private_notes)
 }
 inline ::std::string* UserdataAtom::mutable_private_notes() {
   
-  // @@protoc_insertion_point(field_mutable:censys_definitions.UserdataAtom.private_notes)
+  // @@protoc_insertion_point(field_mutable:zsearch.UserdataAtom.private_notes)
   return private_notes_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* UserdataAtom::release_private_notes() {
-  // @@protoc_insertion_point(field_release:censys_definitions.UserdataAtom.private_notes)
+  // @@protoc_insertion_point(field_release:zsearch.UserdataAtom.private_notes)
   
   return private_notes_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -720,7 +720,7 @@ inline void UserdataAtom::set_allocated_private_notes(::std::string* private_not
     
   }
   private_notes_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), private_notes);
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.UserdataAtom.private_notes)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.UserdataAtom.private_notes)
 }
 
 // string public_notes = 2;
@@ -728,40 +728,40 @@ inline void UserdataAtom::clear_public_notes() {
   public_notes_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& UserdataAtom::public_notes() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.UserdataAtom.public_notes)
+  // @@protoc_insertion_point(field_get:zsearch.UserdataAtom.public_notes)
   return public_notes_.GetNoArena();
 }
 inline void UserdataAtom::set_public_notes(const ::std::string& value) {
   
   public_notes_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:censys_definitions.UserdataAtom.public_notes)
+  // @@protoc_insertion_point(field_set:zsearch.UserdataAtom.public_notes)
 }
 #if LANG_CXX11
 inline void UserdataAtom::set_public_notes(::std::string&& value) {
   
   public_notes_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:censys_definitions.UserdataAtom.public_notes)
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.UserdataAtom.public_notes)
 }
 #endif
 inline void UserdataAtom::set_public_notes(const char* value) {
   
   public_notes_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:censys_definitions.UserdataAtom.public_notes)
+  // @@protoc_insertion_point(field_set_char:zsearch.UserdataAtom.public_notes)
 }
 inline void UserdataAtom::set_public_notes(const char* value, size_t size) {
   
   public_notes_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.UserdataAtom.public_notes)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.UserdataAtom.public_notes)
 }
 inline ::std::string* UserdataAtom::mutable_public_notes() {
   
-  // @@protoc_insertion_point(field_mutable:censys_definitions.UserdataAtom.public_notes)
+  // @@protoc_insertion_point(field_mutable:zsearch.UserdataAtom.public_notes)
   return public_notes_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* UserdataAtom::release_public_notes() {
-  // @@protoc_insertion_point(field_release:censys_definitions.UserdataAtom.public_notes)
+  // @@protoc_insertion_point(field_release:zsearch.UserdataAtom.public_notes)
   
   return public_notes_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -772,66 +772,66 @@ inline void UserdataAtom::set_allocated_public_notes(::std::string* public_notes
     
   }
   public_notes_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), public_notes);
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.UserdataAtom.public_notes)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.UserdataAtom.public_notes)
 }
 
-// repeated .censys_definitions.Metadatum private_metadata = 3;
+// repeated .zsearch.Metadatum private_metadata = 3;
 inline int UserdataAtom::private_metadata_size() const {
   return private_metadata_.size();
 }
 inline void UserdataAtom::clear_private_metadata() {
   private_metadata_.Clear();
 }
-inline const ::censys_definitions::Metadatum& UserdataAtom::private_metadata(int index) const {
-  // @@protoc_insertion_point(field_get:censys_definitions.UserdataAtom.private_metadata)
+inline const ::zsearch::Metadatum& UserdataAtom::private_metadata(int index) const {
+  // @@protoc_insertion_point(field_get:zsearch.UserdataAtom.private_metadata)
   return private_metadata_.Get(index);
 }
-inline ::censys_definitions::Metadatum* UserdataAtom::mutable_private_metadata(int index) {
-  // @@protoc_insertion_point(field_mutable:censys_definitions.UserdataAtom.private_metadata)
+inline ::zsearch::Metadatum* UserdataAtom::mutable_private_metadata(int index) {
+  // @@protoc_insertion_point(field_mutable:zsearch.UserdataAtom.private_metadata)
   return private_metadata_.Mutable(index);
 }
-inline ::censys_definitions::Metadatum* UserdataAtom::add_private_metadata() {
-  // @@protoc_insertion_point(field_add:censys_definitions.UserdataAtom.private_metadata)
+inline ::zsearch::Metadatum* UserdataAtom::add_private_metadata() {
+  // @@protoc_insertion_point(field_add:zsearch.UserdataAtom.private_metadata)
   return private_metadata_.Add();
 }
-inline ::google::protobuf::RepeatedPtrField< ::censys_definitions::Metadatum >*
+inline ::google::protobuf::RepeatedPtrField< ::zsearch::Metadatum >*
 UserdataAtom::mutable_private_metadata() {
-  // @@protoc_insertion_point(field_mutable_list:censys_definitions.UserdataAtom.private_metadata)
+  // @@protoc_insertion_point(field_mutable_list:zsearch.UserdataAtom.private_metadata)
   return &private_metadata_;
 }
-inline const ::google::protobuf::RepeatedPtrField< ::censys_definitions::Metadatum >&
+inline const ::google::protobuf::RepeatedPtrField< ::zsearch::Metadatum >&
 UserdataAtom::private_metadata() const {
-  // @@protoc_insertion_point(field_list:censys_definitions.UserdataAtom.private_metadata)
+  // @@protoc_insertion_point(field_list:zsearch.UserdataAtom.private_metadata)
   return private_metadata_;
 }
 
-// repeated .censys_definitions.Metadatum public_metadata = 4;
+// repeated .zsearch.Metadatum public_metadata = 4;
 inline int UserdataAtom::public_metadata_size() const {
   return public_metadata_.size();
 }
 inline void UserdataAtom::clear_public_metadata() {
   public_metadata_.Clear();
 }
-inline const ::censys_definitions::Metadatum& UserdataAtom::public_metadata(int index) const {
-  // @@protoc_insertion_point(field_get:censys_definitions.UserdataAtom.public_metadata)
+inline const ::zsearch::Metadatum& UserdataAtom::public_metadata(int index) const {
+  // @@protoc_insertion_point(field_get:zsearch.UserdataAtom.public_metadata)
   return public_metadata_.Get(index);
 }
-inline ::censys_definitions::Metadatum* UserdataAtom::mutable_public_metadata(int index) {
-  // @@protoc_insertion_point(field_mutable:censys_definitions.UserdataAtom.public_metadata)
+inline ::zsearch::Metadatum* UserdataAtom::mutable_public_metadata(int index) {
+  // @@protoc_insertion_point(field_mutable:zsearch.UserdataAtom.public_metadata)
   return public_metadata_.Mutable(index);
 }
-inline ::censys_definitions::Metadatum* UserdataAtom::add_public_metadata() {
-  // @@protoc_insertion_point(field_add:censys_definitions.UserdataAtom.public_metadata)
+inline ::zsearch::Metadatum* UserdataAtom::add_public_metadata() {
+  // @@protoc_insertion_point(field_add:zsearch.UserdataAtom.public_metadata)
   return public_metadata_.Add();
 }
-inline ::google::protobuf::RepeatedPtrField< ::censys_definitions::Metadatum >*
+inline ::google::protobuf::RepeatedPtrField< ::zsearch::Metadatum >*
 UserdataAtom::mutable_public_metadata() {
-  // @@protoc_insertion_point(field_mutable_list:censys_definitions.UserdataAtom.public_metadata)
+  // @@protoc_insertion_point(field_mutable_list:zsearch.UserdataAtom.public_metadata)
   return &public_metadata_;
 }
-inline const ::google::protobuf::RepeatedPtrField< ::censys_definitions::Metadatum >&
+inline const ::google::protobuf::RepeatedPtrField< ::zsearch::Metadatum >&
 UserdataAtom::public_metadata() const {
-  // @@protoc_insertion_point(field_list:censys_definitions.UserdataAtom.public_metadata)
+  // @@protoc_insertion_point(field_list:zsearch.UserdataAtom.public_metadata)
   return public_metadata_;
 }
 
@@ -843,50 +843,50 @@ inline void UserdataAtom::clear_private_tags() {
   private_tags_.Clear();
 }
 inline const ::std::string& UserdataAtom::private_tags(int index) const {
-  // @@protoc_insertion_point(field_get:censys_definitions.UserdataAtom.private_tags)
+  // @@protoc_insertion_point(field_get:zsearch.UserdataAtom.private_tags)
   return private_tags_.Get(index);
 }
 inline ::std::string* UserdataAtom::mutable_private_tags(int index) {
-  // @@protoc_insertion_point(field_mutable:censys_definitions.UserdataAtom.private_tags)
+  // @@protoc_insertion_point(field_mutable:zsearch.UserdataAtom.private_tags)
   return private_tags_.Mutable(index);
 }
 inline void UserdataAtom::set_private_tags(int index, const ::std::string& value) {
-  // @@protoc_insertion_point(field_set:censys_definitions.UserdataAtom.private_tags)
+  // @@protoc_insertion_point(field_set:zsearch.UserdataAtom.private_tags)
   private_tags_.Mutable(index)->assign(value);
 }
 inline void UserdataAtom::set_private_tags(int index, const char* value) {
   private_tags_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:censys_definitions.UserdataAtom.private_tags)
+  // @@protoc_insertion_point(field_set_char:zsearch.UserdataAtom.private_tags)
 }
 inline void UserdataAtom::set_private_tags(int index, const char* value, size_t size) {
   private_tags_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.UserdataAtom.private_tags)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.UserdataAtom.private_tags)
 }
 inline ::std::string* UserdataAtom::add_private_tags() {
-  // @@protoc_insertion_point(field_add_mutable:censys_definitions.UserdataAtom.private_tags)
+  // @@protoc_insertion_point(field_add_mutable:zsearch.UserdataAtom.private_tags)
   return private_tags_.Add();
 }
 inline void UserdataAtom::add_private_tags(const ::std::string& value) {
   private_tags_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:censys_definitions.UserdataAtom.private_tags)
+  // @@protoc_insertion_point(field_add:zsearch.UserdataAtom.private_tags)
 }
 inline void UserdataAtom::add_private_tags(const char* value) {
   private_tags_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:censys_definitions.UserdataAtom.private_tags)
+  // @@protoc_insertion_point(field_add_char:zsearch.UserdataAtom.private_tags)
 }
 inline void UserdataAtom::add_private_tags(const char* value, size_t size) {
   private_tags_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:censys_definitions.UserdataAtom.private_tags)
+  // @@protoc_insertion_point(field_add_pointer:zsearch.UserdataAtom.private_tags)
 }
 inline const ::google::protobuf::RepeatedPtrField< ::std::string>&
 UserdataAtom::private_tags() const {
-  // @@protoc_insertion_point(field_list:censys_definitions.UserdataAtom.private_tags)
+  // @@protoc_insertion_point(field_list:zsearch.UserdataAtom.private_tags)
   return private_tags_;
 }
 inline ::google::protobuf::RepeatedPtrField< ::std::string>*
 UserdataAtom::mutable_private_tags() {
-  // @@protoc_insertion_point(field_mutable_list:censys_definitions.UserdataAtom.private_tags)
+  // @@protoc_insertion_point(field_mutable_list:zsearch.UserdataAtom.private_tags)
   return &private_tags_;
 }
 
@@ -898,50 +898,50 @@ inline void UserdataAtom::clear_public_tags() {
   public_tags_.Clear();
 }
 inline const ::std::string& UserdataAtom::public_tags(int index) const {
-  // @@protoc_insertion_point(field_get:censys_definitions.UserdataAtom.public_tags)
+  // @@protoc_insertion_point(field_get:zsearch.UserdataAtom.public_tags)
   return public_tags_.Get(index);
 }
 inline ::std::string* UserdataAtom::mutable_public_tags(int index) {
-  // @@protoc_insertion_point(field_mutable:censys_definitions.UserdataAtom.public_tags)
+  // @@protoc_insertion_point(field_mutable:zsearch.UserdataAtom.public_tags)
   return public_tags_.Mutable(index);
 }
 inline void UserdataAtom::set_public_tags(int index, const ::std::string& value) {
-  // @@protoc_insertion_point(field_set:censys_definitions.UserdataAtom.public_tags)
+  // @@protoc_insertion_point(field_set:zsearch.UserdataAtom.public_tags)
   public_tags_.Mutable(index)->assign(value);
 }
 inline void UserdataAtom::set_public_tags(int index, const char* value) {
   public_tags_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:censys_definitions.UserdataAtom.public_tags)
+  // @@protoc_insertion_point(field_set_char:zsearch.UserdataAtom.public_tags)
 }
 inline void UserdataAtom::set_public_tags(int index, const char* value, size_t size) {
   public_tags_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.UserdataAtom.public_tags)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.UserdataAtom.public_tags)
 }
 inline ::std::string* UserdataAtom::add_public_tags() {
-  // @@protoc_insertion_point(field_add_mutable:censys_definitions.UserdataAtom.public_tags)
+  // @@protoc_insertion_point(field_add_mutable:zsearch.UserdataAtom.public_tags)
   return public_tags_.Add();
 }
 inline void UserdataAtom::add_public_tags(const ::std::string& value) {
   public_tags_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:censys_definitions.UserdataAtom.public_tags)
+  // @@protoc_insertion_point(field_add:zsearch.UserdataAtom.public_tags)
 }
 inline void UserdataAtom::add_public_tags(const char* value) {
   public_tags_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:censys_definitions.UserdataAtom.public_tags)
+  // @@protoc_insertion_point(field_add_char:zsearch.UserdataAtom.public_tags)
 }
 inline void UserdataAtom::add_public_tags(const char* value, size_t size) {
   public_tags_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:censys_definitions.UserdataAtom.public_tags)
+  // @@protoc_insertion_point(field_add_pointer:zsearch.UserdataAtom.public_tags)
 }
 inline const ::google::protobuf::RepeatedPtrField< ::std::string>&
 UserdataAtom::public_tags() const {
-  // @@protoc_insertion_point(field_list:censys_definitions.UserdataAtom.public_tags)
+  // @@protoc_insertion_point(field_list:zsearch.UserdataAtom.public_tags)
   return public_tags_;
 }
 inline ::google::protobuf::RepeatedPtrField< ::std::string>*
 UserdataAtom::mutable_public_tags() {
-  // @@protoc_insertion_point(field_mutable_list:censys_definitions.UserdataAtom.public_tags)
+  // @@protoc_insertion_point(field_mutable_list:zsearch.UserdataAtom.public_tags)
   return &public_tags_;
 }
 
@@ -954,13 +954,13 @@ inline void ASAtom::clear_asn() {
   asn_ = 0u;
 }
 inline ::google::protobuf::uint32 ASAtom::asn() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.ASAtom.asn)
+  // @@protoc_insertion_point(field_get:zsearch.ASAtom.asn)
   return asn_;
 }
 inline void ASAtom::set_asn(::google::protobuf::uint32 value) {
   
   asn_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.ASAtom.asn)
+  // @@protoc_insertion_point(field_set:zsearch.ASAtom.asn)
 }
 
 // string description = 2;
@@ -968,40 +968,40 @@ inline void ASAtom::clear_description() {
   description_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& ASAtom::description() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.ASAtom.description)
+  // @@protoc_insertion_point(field_get:zsearch.ASAtom.description)
   return description_.GetNoArena();
 }
 inline void ASAtom::set_description(const ::std::string& value) {
   
   description_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:censys_definitions.ASAtom.description)
+  // @@protoc_insertion_point(field_set:zsearch.ASAtom.description)
 }
 #if LANG_CXX11
 inline void ASAtom::set_description(::std::string&& value) {
   
   description_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:censys_definitions.ASAtom.description)
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.ASAtom.description)
 }
 #endif
 inline void ASAtom::set_description(const char* value) {
   
   description_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:censys_definitions.ASAtom.description)
+  // @@protoc_insertion_point(field_set_char:zsearch.ASAtom.description)
 }
 inline void ASAtom::set_description(const char* value, size_t size) {
   
   description_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.ASAtom.description)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.ASAtom.description)
 }
 inline ::std::string* ASAtom::mutable_description() {
   
-  // @@protoc_insertion_point(field_mutable:censys_definitions.ASAtom.description)
+  // @@protoc_insertion_point(field_mutable:zsearch.ASAtom.description)
   return description_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* ASAtom::release_description() {
-  // @@protoc_insertion_point(field_release:censys_definitions.ASAtom.description)
+  // @@protoc_insertion_point(field_release:zsearch.ASAtom.description)
   
   return description_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -1012,7 +1012,7 @@ inline void ASAtom::set_allocated_description(::std::string* description) {
     
   }
   description_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), description);
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.ASAtom.description)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.ASAtom.description)
 }
 
 // repeated uint32 path = 3 [packed = true];
@@ -1023,40 +1023,40 @@ inline void ASAtom::clear_path() {
   path_.Clear();
 }
 inline ::google::protobuf::uint32 ASAtom::path(int index) const {
-  // @@protoc_insertion_point(field_get:censys_definitions.ASAtom.path)
+  // @@protoc_insertion_point(field_get:zsearch.ASAtom.path)
   return path_.Get(index);
 }
 inline void ASAtom::set_path(int index, ::google::protobuf::uint32 value) {
   path_.Set(index, value);
-  // @@protoc_insertion_point(field_set:censys_definitions.ASAtom.path)
+  // @@protoc_insertion_point(field_set:zsearch.ASAtom.path)
 }
 inline void ASAtom::add_path(::google::protobuf::uint32 value) {
   path_.Add(value);
-  // @@protoc_insertion_point(field_add:censys_definitions.ASAtom.path)
+  // @@protoc_insertion_point(field_add:zsearch.ASAtom.path)
 }
 inline const ::google::protobuf::RepeatedField< ::google::protobuf::uint32 >&
 ASAtom::path() const {
-  // @@protoc_insertion_point(field_list:censys_definitions.ASAtom.path)
+  // @@protoc_insertion_point(field_list:zsearch.ASAtom.path)
   return path_;
 }
 inline ::google::protobuf::RepeatedField< ::google::protobuf::uint32 >*
 ASAtom::mutable_path() {
-  // @@protoc_insertion_point(field_mutable_list:censys_definitions.ASAtom.path)
+  // @@protoc_insertion_point(field_mutable_list:zsearch.ASAtom.path)
   return &path_;
 }
 
-// .censys_definitions.RegionalRegistrar rir = 4;
+// .zsearch.RegionalRegistrar rir = 4;
 inline void ASAtom::clear_rir() {
   rir_ = 0;
 }
-inline ::censys_definitions::RegionalRegistrar ASAtom::rir() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.ASAtom.rir)
-  return static_cast< ::censys_definitions::RegionalRegistrar >(rir_);
+inline ::zsearch::RegionalRegistrar ASAtom::rir() const {
+  // @@protoc_insertion_point(field_get:zsearch.ASAtom.rir)
+  return static_cast< ::zsearch::RegionalRegistrar >(rir_);
 }
-inline void ASAtom::set_rir(::censys_definitions::RegionalRegistrar value) {
+inline void ASAtom::set_rir(::zsearch::RegionalRegistrar value) {
   
   rir_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.ASAtom.rir)
+  // @@protoc_insertion_point(field_set:zsearch.ASAtom.rir)
 }
 
 // string bgp_prefix = 5;
@@ -1064,40 +1064,40 @@ inline void ASAtom::clear_bgp_prefix() {
   bgp_prefix_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& ASAtom::bgp_prefix() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.ASAtom.bgp_prefix)
+  // @@protoc_insertion_point(field_get:zsearch.ASAtom.bgp_prefix)
   return bgp_prefix_.GetNoArena();
 }
 inline void ASAtom::set_bgp_prefix(const ::std::string& value) {
   
   bgp_prefix_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:censys_definitions.ASAtom.bgp_prefix)
+  // @@protoc_insertion_point(field_set:zsearch.ASAtom.bgp_prefix)
 }
 #if LANG_CXX11
 inline void ASAtom::set_bgp_prefix(::std::string&& value) {
   
   bgp_prefix_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:censys_definitions.ASAtom.bgp_prefix)
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.ASAtom.bgp_prefix)
 }
 #endif
 inline void ASAtom::set_bgp_prefix(const char* value) {
   
   bgp_prefix_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:censys_definitions.ASAtom.bgp_prefix)
+  // @@protoc_insertion_point(field_set_char:zsearch.ASAtom.bgp_prefix)
 }
 inline void ASAtom::set_bgp_prefix(const char* value, size_t size) {
   
   bgp_prefix_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.ASAtom.bgp_prefix)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.ASAtom.bgp_prefix)
 }
 inline ::std::string* ASAtom::mutable_bgp_prefix() {
   
-  // @@protoc_insertion_point(field_mutable:censys_definitions.ASAtom.bgp_prefix)
+  // @@protoc_insertion_point(field_mutable:zsearch.ASAtom.bgp_prefix)
   return bgp_prefix_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* ASAtom::release_bgp_prefix() {
-  // @@protoc_insertion_point(field_release:censys_definitions.ASAtom.bgp_prefix)
+  // @@protoc_insertion_point(field_release:zsearch.ASAtom.bgp_prefix)
   
   return bgp_prefix_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -1108,7 +1108,7 @@ inline void ASAtom::set_allocated_bgp_prefix(::std::string* bgp_prefix) {
     
   }
   bgp_prefix_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), bgp_prefix);
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.ASAtom.bgp_prefix)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.ASAtom.bgp_prefix)
 }
 
 // string name = 6;
@@ -1116,40 +1116,40 @@ inline void ASAtom::clear_name() {
   name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& ASAtom::name() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.ASAtom.name)
+  // @@protoc_insertion_point(field_get:zsearch.ASAtom.name)
   return name_.GetNoArena();
 }
 inline void ASAtom::set_name(const ::std::string& value) {
   
   name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:censys_definitions.ASAtom.name)
+  // @@protoc_insertion_point(field_set:zsearch.ASAtom.name)
 }
 #if LANG_CXX11
 inline void ASAtom::set_name(::std::string&& value) {
   
   name_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:censys_definitions.ASAtom.name)
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.ASAtom.name)
 }
 #endif
 inline void ASAtom::set_name(const char* value) {
   
   name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:censys_definitions.ASAtom.name)
+  // @@protoc_insertion_point(field_set_char:zsearch.ASAtom.name)
 }
 inline void ASAtom::set_name(const char* value, size_t size) {
   
   name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.ASAtom.name)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.ASAtom.name)
 }
 inline ::std::string* ASAtom::mutable_name() {
   
-  // @@protoc_insertion_point(field_mutable:censys_definitions.ASAtom.name)
+  // @@protoc_insertion_point(field_mutable:zsearch.ASAtom.name)
   return name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* ASAtom::release_name() {
-  // @@protoc_insertion_point(field_release:censys_definitions.ASAtom.name)
+  // @@protoc_insertion_point(field_release:zsearch.ASAtom.name)
   
   return name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -1160,7 +1160,7 @@ inline void ASAtom::set_allocated_name(::std::string* name) {
     
   }
   name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), name);
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.ASAtom.name)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.ASAtom.name)
 }
 
 // string country_code = 7;
@@ -1168,40 +1168,40 @@ inline void ASAtom::clear_country_code() {
   country_code_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& ASAtom::country_code() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.ASAtom.country_code)
+  // @@protoc_insertion_point(field_get:zsearch.ASAtom.country_code)
   return country_code_.GetNoArena();
 }
 inline void ASAtom::set_country_code(const ::std::string& value) {
   
   country_code_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:censys_definitions.ASAtom.country_code)
+  // @@protoc_insertion_point(field_set:zsearch.ASAtom.country_code)
 }
 #if LANG_CXX11
 inline void ASAtom::set_country_code(::std::string&& value) {
   
   country_code_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:censys_definitions.ASAtom.country_code)
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.ASAtom.country_code)
 }
 #endif
 inline void ASAtom::set_country_code(const char* value) {
   
   country_code_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:censys_definitions.ASAtom.country_code)
+  // @@protoc_insertion_point(field_set_char:zsearch.ASAtom.country_code)
 }
 inline void ASAtom::set_country_code(const char* value, size_t size) {
   
   country_code_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.ASAtom.country_code)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.ASAtom.country_code)
 }
 inline ::std::string* ASAtom::mutable_country_code() {
   
-  // @@protoc_insertion_point(field_mutable:censys_definitions.ASAtom.country_code)
+  // @@protoc_insertion_point(field_mutable:zsearch.ASAtom.country_code)
   return country_code_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* ASAtom::release_country_code() {
-  // @@protoc_insertion_point(field_release:censys_definitions.ASAtom.country_code)
+  // @@protoc_insertion_point(field_release:zsearch.ASAtom.country_code)
   
   return country_code_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -1212,7 +1212,7 @@ inline void ASAtom::set_allocated_country_code(::std::string* country_code) {
     
   }
   country_code_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), country_code);
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.ASAtom.country_code)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.ASAtom.country_code)
 }
 
 // string organization = 8;
@@ -1220,40 +1220,40 @@ inline void ASAtom::clear_organization() {
   organization_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& ASAtom::organization() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.ASAtom.organization)
+  // @@protoc_insertion_point(field_get:zsearch.ASAtom.organization)
   return organization_.GetNoArena();
 }
 inline void ASAtom::set_organization(const ::std::string& value) {
   
   organization_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:censys_definitions.ASAtom.organization)
+  // @@protoc_insertion_point(field_set:zsearch.ASAtom.organization)
 }
 #if LANG_CXX11
 inline void ASAtom::set_organization(::std::string&& value) {
   
   organization_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:censys_definitions.ASAtom.organization)
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.ASAtom.organization)
 }
 #endif
 inline void ASAtom::set_organization(const char* value) {
   
   organization_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:censys_definitions.ASAtom.organization)
+  // @@protoc_insertion_point(field_set_char:zsearch.ASAtom.organization)
 }
 inline void ASAtom::set_organization(const char* value, size_t size) {
   
   organization_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.ASAtom.organization)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.ASAtom.organization)
 }
 inline ::std::string* ASAtom::mutable_organization() {
   
-  // @@protoc_insertion_point(field_mutable:censys_definitions.ASAtom.organization)
+  // @@protoc_insertion_point(field_mutable:zsearch.ASAtom.organization)
   return organization_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* ASAtom::release_organization() {
-  // @@protoc_insertion_point(field_release:censys_definitions.ASAtom.organization)
+  // @@protoc_insertion_point(field_release:zsearch.ASAtom.organization)
   
   return organization_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -1264,7 +1264,7 @@ inline void ASAtom::set_allocated_organization(::std::string* organization) {
     
   }
   organization_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), organization);
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.ASAtom.organization)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.ASAtom.organization)
 }
 
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -1276,21 +1276,21 @@ inline void ASAtom::set_allocated_organization(::std::string* organization) {
 // @@protoc_insertion_point(namespace_scope)
 
 
-}  // namespace censys_definitions
+}  // namespace zsearch
 
 #ifndef SWIG
 namespace google {
 namespace protobuf {
 
-template <> struct is_proto_enum< ::censys_definitions::DeltaType> : ::google::protobuf::internal::true_type {};
+template <> struct is_proto_enum< ::zsearch::DeltaType> : ::google::protobuf::internal::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::censys_definitions::DeltaType>() {
-  return ::censys_definitions::DeltaType_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::zsearch::DeltaType>() {
+  return ::zsearch::DeltaType_descriptor();
 }
-template <> struct is_proto_enum< ::censys_definitions::RegionalRegistrar> : ::google::protobuf::internal::true_type {};
+template <> struct is_proto_enum< ::zsearch::RegionalRegistrar> : ::google::protobuf::internal::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::censys_definitions::RegionalRegistrar>() {
-  return ::censys_definitions::RegionalRegistrar_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::zsearch::RegionalRegistrar>() {
+  return ::zsearch::RegionalRegistrar_descriptor();
 }
 
 }  // namespace protobuf

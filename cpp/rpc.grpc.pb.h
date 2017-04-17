@@ -24,9 +24,9 @@ class ServerCompletionQueue;
 class ServerContext;
 }  // namespace grpc
 
-namespace censys_definitions {
+namespace zsearch {
 
-}  // namespace censys_definitions
+}  // namespace zsearch
 
 
 #endif  // GRPC_rpc_2eproto__INCLUDED

@@ -36,7 +36,7 @@
 #include "anonstore.pb.h"
 #include "hoststore.pb.h"
 // @@protoc_insertion_point(includes)
-namespace censys_definitions {
+namespace zsearch {
 class ASAtom;
 class ASAtomDefaultTypeInternal;
 extern ASAtomDefaultTypeInternal _ASAtom_default_instance_;
@@ -139,9 +139,9 @@ extern UserdataAtomDefaultTypeInternal _UserdataAtom_default_instance_;
 class WHOISAtom;
 class WHOISAtomDefaultTypeInternal;
 extern WHOISAtomDefaultTypeInternal _WHOISAtom_default_instance_;
-}  // namespace censys_definitions
+}  // namespace zsearch
 
-namespace censys_definitions {
+namespace zsearch {
 
 namespace protobuf_rpc_2eproto {
 // Internal implementation detail -- do not call these.
@@ -249,7 +249,7 @@ inline bool RootStoreQuery_RootStoreQueryType_Parse(
 }
 // ===================================================================
 
-class MinScanId : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:censys_definitions.MinScanId) */ {
+class MinScanId : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zsearch.MinScanId) */ {
  public:
   MinScanId();
   virtual ~MinScanId();
@@ -316,14 +316,14 @@ class MinScanId : public ::google::protobuf::Message /* @@protoc_insertion_point
 
   // accessors -------------------------------------------------------
 
-  // .censys_definitions.AnonymousKey key = 1;
+  // .zsearch.AnonymousKey key = 1;
   bool has_key() const;
   void clear_key();
   static const int kKeyFieldNumber = 1;
-  const ::censys_definitions::AnonymousKey& key() const;
-  ::censys_definitions::AnonymousKey* mutable_key();
-  ::censys_definitions::AnonymousKey* release_key();
-  void set_allocated_key(::censys_definitions::AnonymousKey* key);
+  const ::zsearch::AnonymousKey& key() const;
+  ::zsearch::AnonymousKey* mutable_key();
+  ::zsearch::AnonymousKey* release_key();
+  void set_allocated_key(::zsearch::AnonymousKey* key);
 
   // uint32 min_scan_id = 2;
   void clear_min_scan_id();
@@ -331,18 +331,18 @@ class MinScanId : public ::google::protobuf::Message /* @@protoc_insertion_point
   ::google::protobuf::uint32 min_scan_id() const;
   void set_min_scan_id(::google::protobuf::uint32 value);
 
-  // @@protoc_insertion_point(class_scope:censys_definitions.MinScanId)
+  // @@protoc_insertion_point(class_scope:zsearch.MinScanId)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::censys_definitions::AnonymousKey* key_;
+  ::zsearch::AnonymousKey* key_;
   ::google::protobuf::uint32 min_scan_id_;
   mutable int _cached_size_;
   friend struct  protobuf_rpc_2eproto::TableStruct;
 };
 // -------------------------------------------------------------------
 
-class MozillaOneCRLEntry : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:censys_definitions.MozillaOneCRLEntry) */ {
+class MozillaOneCRLEntry : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zsearch.MozillaOneCRLEntry) */ {
  public:
   MozillaOneCRLEntry();
   virtual ~MozillaOneCRLEntry();
@@ -457,7 +457,7 @@ class MozillaOneCRLEntry : public ::google::protobuf::Message /* @@protoc_insert
   ::google::protobuf::uint32 last_modified() const;
   void set_last_modified(::google::protobuf::uint32 value);
 
-  // @@protoc_insertion_point(class_scope:censys_definitions.MozillaOneCRLEntry)
+  // @@protoc_insertion_point(class_scope:zsearch.MozillaOneCRLEntry)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -470,7 +470,7 @@ class MozillaOneCRLEntry : public ::google::protobuf::Message /* @@protoc_insert
 };
 // -------------------------------------------------------------------
 
-class Command : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:censys_definitions.Command) */ {
+class Command : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zsearch.Command) */ {
  public:
   Command();
   virtual ~Command();
@@ -537,28 +537,28 @@ class Command : public ::google::protobuf::Message /* @@protoc_insertion_point(c
 
   // accessors -------------------------------------------------------
 
-  // repeated .censys_definitions.MinScanId min_scan_ids = 2;
+  // repeated .zsearch.MinScanId min_scan_ids = 2;
   int min_scan_ids_size() const;
   void clear_min_scan_ids();
   static const int kMinScanIdsFieldNumber = 2;
-  const ::censys_definitions::MinScanId& min_scan_ids(int index) const;
-  ::censys_definitions::MinScanId* mutable_min_scan_ids(int index);
-  ::censys_definitions::MinScanId* add_min_scan_ids();
-  ::google::protobuf::RepeatedPtrField< ::censys_definitions::MinScanId >*
+  const ::zsearch::MinScanId& min_scan_ids(int index) const;
+  ::zsearch::MinScanId* mutable_min_scan_ids(int index);
+  ::zsearch::MinScanId* add_min_scan_ids();
+  ::google::protobuf::RepeatedPtrField< ::zsearch::MinScanId >*
       mutable_min_scan_ids();
-  const ::google::protobuf::RepeatedPtrField< ::censys_definitions::MinScanId >&
+  const ::google::protobuf::RepeatedPtrField< ::zsearch::MinScanId >&
       min_scan_ids() const;
 
-  // repeated .censys_definitions.MozillaOneCRLEntry one_crl_entries = 7;
+  // repeated .zsearch.MozillaOneCRLEntry one_crl_entries = 7;
   int one_crl_entries_size() const;
   void clear_one_crl_entries();
   static const int kOneCrlEntriesFieldNumber = 7;
-  const ::censys_definitions::MozillaOneCRLEntry& one_crl_entries(int index) const;
-  ::censys_definitions::MozillaOneCRLEntry* mutable_one_crl_entries(int index);
-  ::censys_definitions::MozillaOneCRLEntry* add_one_crl_entries();
-  ::google::protobuf::RepeatedPtrField< ::censys_definitions::MozillaOneCRLEntry >*
+  const ::zsearch::MozillaOneCRLEntry& one_crl_entries(int index) const;
+  ::zsearch::MozillaOneCRLEntry* mutable_one_crl_entries(int index);
+  ::zsearch::MozillaOneCRLEntry* add_one_crl_entries();
+  ::google::protobuf::RepeatedPtrField< ::zsearch::MozillaOneCRLEntry >*
       mutable_one_crl_entries();
-  const ::google::protobuf::RepeatedPtrField< ::censys_definitions::MozillaOneCRLEntry >&
+  const ::google::protobuf::RepeatedPtrField< ::zsearch::MozillaOneCRLEntry >&
       one_crl_entries() const;
 
   // string filepath = 3;
@@ -605,12 +605,12 @@ class Command : public ::google::protobuf::Message /* @@protoc_insertion_point(c
   ::google::protobuf::uint32 threads() const;
   void set_threads(::google::protobuf::uint32 value);
 
-  // @@protoc_insertion_point(class_scope:censys_definitions.Command)
+  // @@protoc_insertion_point(class_scope:zsearch.Command)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::RepeatedPtrField< ::censys_definitions::MinScanId > min_scan_ids_;
-  ::google::protobuf::RepeatedPtrField< ::censys_definitions::MozillaOneCRLEntry > one_crl_entries_;
+  ::google::protobuf::RepeatedPtrField< ::zsearch::MinScanId > min_scan_ids_;
+  ::google::protobuf::RepeatedPtrField< ::zsearch::MozillaOneCRLEntry > one_crl_entries_;
   ::google::protobuf::internal::ArenaStringPtr filepath_;
   bool incremental_dump_;
   ::google::protobuf::uint32 max_records_;
@@ -622,7 +622,7 @@ class Command : public ::google::protobuf::Message /* @@protoc_insertion_point(c
 };
 // -------------------------------------------------------------------
 
-class AnonymousStoreStatistics : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:censys_definitions.AnonymousStoreStatistics) */ {
+class AnonymousStoreStatistics : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zsearch.AnonymousStoreStatistics) */ {
  public:
   AnonymousStoreStatistics();
   virtual ~AnonymousStoreStatistics();
@@ -759,7 +759,7 @@ class AnonymousStoreStatistics : public ::google::protobuf::Message /* @@protoc_
   ::google::protobuf::uint32 worker_threads() const;
   void set_worker_threads(::google::protobuf::uint32 value);
 
-  // @@protoc_insertion_point(class_scope:censys_definitions.AnonymousStoreStatistics)
+  // @@protoc_insertion_point(class_scope:zsearch.AnonymousStoreStatistics)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -777,7 +777,7 @@ class AnonymousStoreStatistics : public ::google::protobuf::Message /* @@protoc_
 };
 // -------------------------------------------------------------------
 
-class StatisticsPair : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:censys_definitions.StatisticsPair) */ {
+class StatisticsPair : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zsearch.StatisticsPair) */ {
  public:
   StatisticsPair();
   virtual ~StatisticsPair();
@@ -844,14 +844,14 @@ class StatisticsPair : public ::google::protobuf::Message /* @@protoc_insertion_
 
   // accessors -------------------------------------------------------
 
-  // .censys_definitions.AnonymousStoreStatistics statistics = 4;
+  // .zsearch.AnonymousStoreStatistics statistics = 4;
   bool has_statistics() const;
   void clear_statistics();
   static const int kStatisticsFieldNumber = 4;
-  const ::censys_definitions::AnonymousStoreStatistics& statistics() const;
-  ::censys_definitions::AnonymousStoreStatistics* mutable_statistics();
-  ::censys_definitions::AnonymousStoreStatistics* release_statistics();
-  void set_allocated_statistics(::censys_definitions::AnonymousStoreStatistics* statistics);
+  const ::zsearch::AnonymousStoreStatistics& statistics() const;
+  ::zsearch::AnonymousStoreStatistics* mutable_statistics();
+  ::zsearch::AnonymousStoreStatistics* release_statistics();
+  void set_allocated_statistics(::zsearch::AnonymousStoreStatistics* statistics);
 
   // uint32 port = 1;
   void clear_port();
@@ -871,11 +871,11 @@ class StatisticsPair : public ::google::protobuf::Message /* @@protoc_insertion_
   ::google::protobuf::uint32 subprotocol() const;
   void set_subprotocol(::google::protobuf::uint32 value);
 
-  // @@protoc_insertion_point(class_scope:censys_definitions.StatisticsPair)
+  // @@protoc_insertion_point(class_scope:zsearch.StatisticsPair)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::censys_definitions::AnonymousStoreStatistics* statistics_;
+  ::zsearch::AnonymousStoreStatistics* statistics_;
   ::google::protobuf::uint32 port_;
   ::google::protobuf::uint32 protocol_;
   ::google::protobuf::uint32 subprotocol_;
@@ -884,7 +884,7 @@ class StatisticsPair : public ::google::protobuf::Message /* @@protoc_insertion_
 };
 // -------------------------------------------------------------------
 
-class StoreStatistics : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:censys_definitions.StoreStatistics) */ {
+class StoreStatistics : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zsearch.StoreStatistics) */ {
  public:
   StoreStatistics();
   virtual ~StoreStatistics();
@@ -951,33 +951,33 @@ class StoreStatistics : public ::google::protobuf::Message /* @@protoc_insertion
 
   // accessors -------------------------------------------------------
 
-  // repeated .censys_definitions.StatisticsPair protocols = 2;
+  // repeated .zsearch.StatisticsPair protocols = 2;
   int protocols_size() const;
   void clear_protocols();
   static const int kProtocolsFieldNumber = 2;
-  const ::censys_definitions::StatisticsPair& protocols(int index) const;
-  ::censys_definitions::StatisticsPair* mutable_protocols(int index);
-  ::censys_definitions::StatisticsPair* add_protocols();
-  ::google::protobuf::RepeatedPtrField< ::censys_definitions::StatisticsPair >*
+  const ::zsearch::StatisticsPair& protocols(int index) const;
+  ::zsearch::StatisticsPair* mutable_protocols(int index);
+  ::zsearch::StatisticsPair* add_protocols();
+  ::google::protobuf::RepeatedPtrField< ::zsearch::StatisticsPair >*
       mutable_protocols();
-  const ::google::protobuf::RepeatedPtrField< ::censys_definitions::StatisticsPair >&
+  const ::google::protobuf::RepeatedPtrField< ::zsearch::StatisticsPair >&
       protocols() const;
 
-  // .censys_definitions.AnonymousStoreStatistics global = 1;
+  // .zsearch.AnonymousStoreStatistics global = 1;
   bool has_global() const;
   void clear_global();
   static const int kGlobalFieldNumber = 1;
-  const ::censys_definitions::AnonymousStoreStatistics& global() const;
-  ::censys_definitions::AnonymousStoreStatistics* mutable_global();
-  ::censys_definitions::AnonymousStoreStatistics* release_global();
-  void set_allocated_global(::censys_definitions::AnonymousStoreStatistics* global);
+  const ::zsearch::AnonymousStoreStatistics& global() const;
+  ::zsearch::AnonymousStoreStatistics* mutable_global();
+  ::zsearch::AnonymousStoreStatistics* release_global();
+  void set_allocated_global(::zsearch::AnonymousStoreStatistics* global);
 
-  // @@protoc_insertion_point(class_scope:censys_definitions.StoreStatistics)
+  // @@protoc_insertion_point(class_scope:zsearch.StoreStatistics)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::RepeatedPtrField< ::censys_definitions::StatisticsPair > protocols_;
-  ::censys_definitions::AnonymousStoreStatistics* global_;
+  ::google::protobuf::RepeatedPtrField< ::zsearch::StatisticsPair > protocols_;
+  ::zsearch::AnonymousStoreStatistics* global_;
   mutable int _cached_size_;
   friend struct  protobuf_rpc_2eproto::TableStruct;
 };
@@ -989,7 +989,7 @@ class StoreStatistics : public ::google::protobuf::Message /* @@protoc_insertion
 
 // -------------------------------------------------------------------
 
-class ServerStatistics : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:censys_definitions.ServerStatistics) */ {
+class ServerStatistics : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zsearch.ServerStatistics) */ {
  public:
   ServerStatistics();
   virtual ~ServerStatistics();
@@ -1057,47 +1057,47 @@ class ServerStatistics : public ::google::protobuf::Message /* @@protoc_insertio
 
   // accessors -------------------------------------------------------
 
-  // map<string, .censys_definitions.StoreStatistics> store_statistics = 1;
+  // map<string, .zsearch.StoreStatistics> store_statistics = 1;
   int store_statistics_size() const;
   void clear_store_statistics();
   static const int kStoreStatisticsFieldNumber = 1;
-  const ::google::protobuf::Map< ::std::string, ::censys_definitions::StoreStatistics >&
+  const ::google::protobuf::Map< ::std::string, ::zsearch::StoreStatistics >&
       store_statistics() const;
-  ::google::protobuf::Map< ::std::string, ::censys_definitions::StoreStatistics >*
+  ::google::protobuf::Map< ::std::string, ::zsearch::StoreStatistics >*
       mutable_store_statistics();
 
-  // map<string, .censys_definitions.AnonymousStoreStatistics> anonymous_store_statistics = 2;
+  // map<string, .zsearch.AnonymousStoreStatistics> anonymous_store_statistics = 2;
   int anonymous_store_statistics_size() const;
   void clear_anonymous_store_statistics();
   static const int kAnonymousStoreStatisticsFieldNumber = 2;
-  const ::google::protobuf::Map< ::std::string, ::censys_definitions::AnonymousStoreStatistics >&
+  const ::google::protobuf::Map< ::std::string, ::zsearch::AnonymousStoreStatistics >&
       anonymous_store_statistics() const;
-  ::google::protobuf::Map< ::std::string, ::censys_definitions::AnonymousStoreStatistics >*
+  ::google::protobuf::Map< ::std::string, ::zsearch::AnonymousStoreStatistics >*
       mutable_anonymous_store_statistics();
 
-  // @@protoc_insertion_point(class_scope:censys_definitions.ServerStatistics)
+  // @@protoc_insertion_point(class_scope:zsearch.ServerStatistics)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   typedef ::google::protobuf::internal::MapEntryLite<
-      ::std::string, ::censys_definitions::StoreStatistics,
+      ::std::string, ::zsearch::StoreStatistics,
       ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
       ::google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,
       0 >
       ServerStatistics_StoreStatisticsEntry;
   ::google::protobuf::internal::MapField<
-      ::std::string, ::censys_definitions::StoreStatistics,
+      ::std::string, ::zsearch::StoreStatistics,
       ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
       ::google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,
       0 > store_statistics_;
   typedef ::google::protobuf::internal::MapEntryLite<
-      ::std::string, ::censys_definitions::AnonymousStoreStatistics,
+      ::std::string, ::zsearch::AnonymousStoreStatistics,
       ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
       ::google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,
       0 >
       ServerStatistics_AnonymousStoreStatisticsEntry;
   ::google::protobuf::internal::MapField<
-      ::std::string, ::censys_definitions::AnonymousStoreStatistics,
+      ::std::string, ::zsearch::AnonymousStoreStatistics,
       ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
       ::google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,
       0 > anonymous_store_statistics_;
@@ -1106,7 +1106,7 @@ class ServerStatistics : public ::google::protobuf::Message /* @@protoc_insertio
 };
 // -------------------------------------------------------------------
 
-class PruneStatistics : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:censys_definitions.PruneStatistics) */ {
+class PruneStatistics : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zsearch.PruneStatistics) */ {
  public:
   PruneStatistics();
   virtual ~PruneStatistics();
@@ -1173,14 +1173,14 @@ class PruneStatistics : public ::google::protobuf::Message /* @@protoc_insertion
 
   // accessors -------------------------------------------------------
 
-  // .censys_definitions.AnonymousKey key = 1;
+  // .zsearch.AnonymousKey key = 1;
   bool has_key() const;
   void clear_key();
   static const int kKeyFieldNumber = 1;
-  const ::censys_definitions::AnonymousKey& key() const;
-  ::censys_definitions::AnonymousKey* mutable_key();
-  ::censys_definitions::AnonymousKey* release_key();
-  void set_allocated_key(::censys_definitions::AnonymousKey* key);
+  const ::zsearch::AnonymousKey& key() const;
+  ::zsearch::AnonymousKey* mutable_key();
+  ::zsearch::AnonymousKey* release_key();
+  void set_allocated_key(::zsearch::AnonymousKey* key);
 
   // uint64 records_pruned = 2;
   void clear_records_pruned();
@@ -1188,18 +1188,18 @@ class PruneStatistics : public ::google::protobuf::Message /* @@protoc_insertion
   ::google::protobuf::uint64 records_pruned() const;
   void set_records_pruned(::google::protobuf::uint64 value);
 
-  // @@protoc_insertion_point(class_scope:censys_definitions.PruneStatistics)
+  // @@protoc_insertion_point(class_scope:zsearch.PruneStatistics)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::censys_definitions::AnonymousKey* key_;
+  ::zsearch::AnonymousKey* key_;
   ::google::protobuf::uint64 records_pruned_;
   mutable int _cached_size_;
   friend struct  protobuf_rpc_2eproto::TableStruct;
 };
 // -------------------------------------------------------------------
 
-class CommandReply : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:censys_definitions.CommandReply) */ {
+class CommandReply : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zsearch.CommandReply) */ {
  public:
   CommandReply();
   virtual ~CommandReply();
@@ -1296,16 +1296,16 @@ class CommandReply : public ::google::protobuf::Message /* @@protoc_insertion_po
 
   // accessors -------------------------------------------------------
 
-  // repeated .censys_definitions.PruneStatistics prune_statistics = 4;
+  // repeated .zsearch.PruneStatistics prune_statistics = 4;
   int prune_statistics_size() const;
   void clear_prune_statistics();
   static const int kPruneStatisticsFieldNumber = 4;
-  const ::censys_definitions::PruneStatistics& prune_statistics(int index) const;
-  ::censys_definitions::PruneStatistics* mutable_prune_statistics(int index);
-  ::censys_definitions::PruneStatistics* add_prune_statistics();
-  ::google::protobuf::RepeatedPtrField< ::censys_definitions::PruneStatistics >*
+  const ::zsearch::PruneStatistics& prune_statistics(int index) const;
+  ::zsearch::PruneStatistics* mutable_prune_statistics(int index);
+  ::zsearch::PruneStatistics* add_prune_statistics();
+  ::google::protobuf::RepeatedPtrField< ::zsearch::PruneStatistics >*
       mutable_prune_statistics();
-  const ::google::protobuf::RepeatedPtrField< ::censys_definitions::PruneStatistics >&
+  const ::google::protobuf::RepeatedPtrField< ::zsearch::PruneStatistics >&
       prune_statistics() const;
 
   // string error = 2;
@@ -1322,35 +1322,35 @@ class CommandReply : public ::google::protobuf::Message /* @@protoc_insertion_po
   ::std::string* release_error();
   void set_allocated_error(::std::string* error);
 
-  // .censys_definitions.ServerStatistics stats = 3;
+  // .zsearch.ServerStatistics stats = 3;
   bool has_stats() const;
   void clear_stats();
   static const int kStatsFieldNumber = 3;
-  const ::censys_definitions::ServerStatistics& stats() const;
-  ::censys_definitions::ServerStatistics* mutable_stats();
-  ::censys_definitions::ServerStatistics* release_stats();
-  void set_allocated_stats(::censys_definitions::ServerStatistics* stats);
+  const ::zsearch::ServerStatistics& stats() const;
+  ::zsearch::ServerStatistics* mutable_stats();
+  ::zsearch::ServerStatistics* release_stats();
+  void set_allocated_stats(::zsearch::ServerStatistics* stats);
 
-  // .censys_definitions.CommandReply.CommandStatus status = 1;
+  // .zsearch.CommandReply.CommandStatus status = 1;
   void clear_status();
   static const int kStatusFieldNumber = 1;
-  ::censys_definitions::CommandReply_CommandStatus status() const;
-  void set_status(::censys_definitions::CommandReply_CommandStatus value);
+  ::zsearch::CommandReply_CommandStatus status() const;
+  void set_status(::zsearch::CommandReply_CommandStatus value);
 
-  // @@protoc_insertion_point(class_scope:censys_definitions.CommandReply)
+  // @@protoc_insertion_point(class_scope:zsearch.CommandReply)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::RepeatedPtrField< ::censys_definitions::PruneStatistics > prune_statistics_;
+  ::google::protobuf::RepeatedPtrField< ::zsearch::PruneStatistics > prune_statistics_;
   ::google::protobuf::internal::ArenaStringPtr error_;
-  ::censys_definitions::ServerStatistics* stats_;
+  ::zsearch::ServerStatistics* stats_;
   int status_;
   mutable int _cached_size_;
   friend struct  protobuf_rpc_2eproto::TableStruct;
 };
 // -------------------------------------------------------------------
 
-class HostQuery : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:censys_definitions.HostQuery) */ {
+class HostQuery : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zsearch.HostQuery) */ {
  public:
   HostQuery();
   virtual ~HostQuery();
@@ -1461,7 +1461,7 @@ class HostQuery : public ::google::protobuf::Message /* @@protoc_insertion_point
   ::google::protobuf::uint32 max_records() const;
   void set_max_records(::google::protobuf::uint32 value);
 
-  // @@protoc_insertion_point(class_scope:censys_definitions.HostQuery)
+  // @@protoc_insertion_point(class_scope:zsearch.HostQuery)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -1476,7 +1476,7 @@ class HostQuery : public ::google::protobuf::Message /* @@protoc_insertion_point
 };
 // -------------------------------------------------------------------
 
-class HostQueryResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:censys_definitions.HostQueryResponse) */ {
+class HostQueryResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zsearch.HostQueryResponse) */ {
  public:
   HostQueryResponse();
   virtual ~HostQueryResponse();
@@ -1573,16 +1573,16 @@ class HostQueryResponse : public ::google::protobuf::Message /* @@protoc_inserti
 
   // accessors -------------------------------------------------------
 
-  // repeated .censys_definitions.Record records = 8;
+  // repeated .zsearch.Record records = 8;
   int records_size() const;
   void clear_records();
   static const int kRecordsFieldNumber = 8;
-  const ::censys_definitions::Record& records(int index) const;
-  ::censys_definitions::Record* mutable_records(int index);
-  ::censys_definitions::Record* add_records();
-  ::google::protobuf::RepeatedPtrField< ::censys_definitions::Record >*
+  const ::zsearch::Record& records(int index) const;
+  ::zsearch::Record* mutable_records(int index);
+  ::zsearch::Record* add_records();
+  ::google::protobuf::RepeatedPtrField< ::zsearch::Record >*
       mutable_records();
-  const ::google::protobuf::RepeatedPtrField< ::censys_definitions::Record >&
+  const ::google::protobuf::RepeatedPtrField< ::zsearch::Record >&
       records() const;
 
   // string domain = 3;
@@ -1613,20 +1613,20 @@ class HostQueryResponse : public ::google::protobuf::Message /* @@protoc_inserti
   ::std::string* release_error();
   void set_allocated_error(::std::string* error);
 
-  // .censys_definitions.Record record = 7;
+  // .zsearch.Record record = 7;
   bool has_record() const;
   void clear_record();
   static const int kRecordFieldNumber = 7;
-  const ::censys_definitions::Record& record() const;
-  ::censys_definitions::Record* mutable_record();
-  ::censys_definitions::Record* release_record();
-  void set_allocated_record(::censys_definitions::Record* record);
+  const ::zsearch::Record& record() const;
+  ::zsearch::Record* mutable_record();
+  ::zsearch::Record* release_record();
+  void set_allocated_record(::zsearch::Record* record);
 
-  // .censys_definitions.HostQueryResponse.ResponseStatus status = 1;
+  // .zsearch.HostQueryResponse.ResponseStatus status = 1;
   void clear_status();
   static const int kStatusFieldNumber = 1;
-  ::censys_definitions::HostQueryResponse_ResponseStatus status() const;
-  void set_status(::censys_definitions::HostQueryResponse_ResponseStatus value);
+  ::zsearch::HostQueryResponse_ResponseStatus status() const;
+  void set_status(::zsearch::HostQueryResponse_ResponseStatus value);
 
   // fixed32 ip = 2;
   void clear_ip();
@@ -1652,14 +1652,14 @@ class HostQueryResponse : public ::google::protobuf::Message /* @@protoc_inserti
   ::google::protobuf::uint32 subprotocol() const;
   void set_subprotocol(::google::protobuf::uint32 value);
 
-  // @@protoc_insertion_point(class_scope:censys_definitions.HostQueryResponse)
+  // @@protoc_insertion_point(class_scope:zsearch.HostQueryResponse)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::RepeatedPtrField< ::censys_definitions::Record > records_;
+  ::google::protobuf::RepeatedPtrField< ::zsearch::Record > records_;
   ::google::protobuf::internal::ArenaStringPtr domain_;
   ::google::protobuf::internal::ArenaStringPtr error_;
-  ::censys_definitions::Record* record_;
+  ::zsearch::Record* record_;
   int status_;
   ::google::protobuf::uint32 ip_;
   ::google::protobuf::uint32 port_;
@@ -1670,7 +1670,7 @@ class HostQueryResponse : public ::google::protobuf::Message /* @@protoc_inserti
 };
 // -------------------------------------------------------------------
 
-class AnonymousQuery : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:censys_definitions.AnonymousQuery) */ {
+class AnonymousQuery : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zsearch.AnonymousQuery) */ {
  public:
   AnonymousQuery();
   virtual ~AnonymousQuery();
@@ -1751,7 +1751,7 @@ class AnonymousQuery : public ::google::protobuf::Message /* @@protoc_insertion_
   ::std::string* release_sha256fp();
   void set_allocated_sha256fp(::std::string* sha256fp);
 
-  // @@protoc_insertion_point(class_scope:censys_definitions.AnonymousQuery)
+  // @@protoc_insertion_point(class_scope:zsearch.AnonymousQuery)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -1761,7 +1761,7 @@ class AnonymousQuery : public ::google::protobuf::Message /* @@protoc_insertion_
 };
 // -------------------------------------------------------------------
 
-class AnonymousQueryResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:censys_definitions.AnonymousQueryResponse) */ {
+class AnonymousQueryResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zsearch.AnonymousQueryResponse) */ {
  public:
   AnonymousQueryResponse();
   virtual ~AnonymousQueryResponse();
@@ -1858,16 +1858,16 @@ class AnonymousQueryResponse : public ::google::protobuf::Message /* @@protoc_in
 
   // accessors -------------------------------------------------------
 
-  // repeated .censys_definitions.AnonymousRecord records = 4;
+  // repeated .zsearch.AnonymousRecord records = 4;
   int records_size() const;
   void clear_records();
   static const int kRecordsFieldNumber = 4;
-  const ::censys_definitions::AnonymousRecord& records(int index) const;
-  ::censys_definitions::AnonymousRecord* mutable_records(int index);
-  ::censys_definitions::AnonymousRecord* add_records();
-  ::google::protobuf::RepeatedPtrField< ::censys_definitions::AnonymousRecord >*
+  const ::zsearch::AnonymousRecord& records(int index) const;
+  ::zsearch::AnonymousRecord* mutable_records(int index);
+  ::zsearch::AnonymousRecord* add_records();
+  ::google::protobuf::RepeatedPtrField< ::zsearch::AnonymousRecord >*
       mutable_records();
-  const ::google::protobuf::RepeatedPtrField< ::censys_definitions::AnonymousRecord >&
+  const ::google::protobuf::RepeatedPtrField< ::zsearch::AnonymousRecord >&
       records() const;
 
   // bytes sha256fp = 1;
@@ -1898,36 +1898,36 @@ class AnonymousQueryResponse : public ::google::protobuf::Message /* @@protoc_in
   ::std::string* release_error();
   void set_allocated_error(::std::string* error);
 
-  // .censys_definitions.AnonymousRecord record = 3;
+  // .zsearch.AnonymousRecord record = 3;
   bool has_record() const;
   void clear_record();
   static const int kRecordFieldNumber = 3;
-  const ::censys_definitions::AnonymousRecord& record() const;
-  ::censys_definitions::AnonymousRecord* mutable_record();
-  ::censys_definitions::AnonymousRecord* release_record();
-  void set_allocated_record(::censys_definitions::AnonymousRecord* record);
+  const ::zsearch::AnonymousRecord& record() const;
+  ::zsearch::AnonymousRecord* mutable_record();
+  ::zsearch::AnonymousRecord* release_record();
+  void set_allocated_record(::zsearch::AnonymousRecord* record);
 
-  // .censys_definitions.AnonymousQueryResponse.ResponseStatus status = 2;
+  // .zsearch.AnonymousQueryResponse.ResponseStatus status = 2;
   void clear_status();
   static const int kStatusFieldNumber = 2;
-  ::censys_definitions::AnonymousQueryResponse_ResponseStatus status() const;
-  void set_status(::censys_definitions::AnonymousQueryResponse_ResponseStatus value);
+  ::zsearch::AnonymousQueryResponse_ResponseStatus status() const;
+  void set_status(::zsearch::AnonymousQueryResponse_ResponseStatus value);
 
-  // @@protoc_insertion_point(class_scope:censys_definitions.AnonymousQueryResponse)
+  // @@protoc_insertion_point(class_scope:zsearch.AnonymousQueryResponse)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::RepeatedPtrField< ::censys_definitions::AnonymousRecord > records_;
+  ::google::protobuf::RepeatedPtrField< ::zsearch::AnonymousRecord > records_;
   ::google::protobuf::internal::ArenaStringPtr sha256fp_;
   ::google::protobuf::internal::ArenaStringPtr error_;
-  ::censys_definitions::AnonymousRecord* record_;
+  ::zsearch::AnonymousRecord* record_;
   int status_;
   mutable int _cached_size_;
   friend struct  protobuf_rpc_2eproto::TableStruct;
 };
 // -------------------------------------------------------------------
 
-class UserDataRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:censys_definitions.UserDataRequest) */ {
+class UserDataRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zsearch.UserDataRequest) */ {
  public:
   UserDataRequest();
   virtual ~UserDataRequest();
@@ -2008,14 +2008,14 @@ class UserDataRequest : public ::google::protobuf::Message /* @@protoc_insertion
   ::std::string* release_domain();
   void set_allocated_domain(::std::string* domain);
 
-  // .censys_definitions.UserdataAtom data = 3;
+  // .zsearch.UserdataAtom data = 3;
   bool has_data() const;
   void clear_data();
   static const int kDataFieldNumber = 3;
-  const ::censys_definitions::UserdataAtom& data() const;
-  ::censys_definitions::UserdataAtom* mutable_data();
-  ::censys_definitions::UserdataAtom* release_data();
-  void set_allocated_data(::censys_definitions::UserdataAtom* data);
+  const ::zsearch::UserdataAtom& data() const;
+  ::zsearch::UserdataAtom* mutable_data();
+  ::zsearch::UserdataAtom* release_data();
+  void set_allocated_data(::zsearch::UserdataAtom* data);
 
   // fixed32 ip = 1;
   void clear_ip();
@@ -2023,19 +2023,19 @@ class UserDataRequest : public ::google::protobuf::Message /* @@protoc_insertion
   ::google::protobuf::uint32 ip() const;
   void set_ip(::google::protobuf::uint32 value);
 
-  // @@protoc_insertion_point(class_scope:censys_definitions.UserDataRequest)
+  // @@protoc_insertion_point(class_scope:zsearch.UserDataRequest)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::ArenaStringPtr domain_;
-  ::censys_definitions::UserdataAtom* data_;
+  ::zsearch::UserdataAtom* data_;
   ::google::protobuf::uint32 ip_;
   mutable int _cached_size_;
   friend struct  protobuf_rpc_2eproto::TableStruct;
 };
 // -------------------------------------------------------------------
 
-class RootStoreQuery : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:censys_definitions.RootStoreQuery) */ {
+class RootStoreQuery : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zsearch.RootStoreQuery) */ {
  public:
   RootStoreQuery();
   virtual ~RootStoreQuery();
@@ -2134,13 +2134,13 @@ class RootStoreQuery : public ::google::protobuf::Message /* @@protoc_insertion_
 
   // accessors -------------------------------------------------------
 
-  // .censys_definitions.RootStoreQuery.RootStoreQueryType type = 1;
+  // .zsearch.RootStoreQuery.RootStoreQueryType type = 1;
   void clear_type();
   static const int kTypeFieldNumber = 1;
-  ::censys_definitions::RootStoreQuery_RootStoreQueryType type() const;
-  void set_type(::censys_definitions::RootStoreQuery_RootStoreQueryType value);
+  ::zsearch::RootStoreQuery_RootStoreQueryType type() const;
+  void set_type(::zsearch::RootStoreQuery_RootStoreQueryType value);
 
-  // @@protoc_insertion_point(class_scope:censys_definitions.RootStoreQuery)
+  // @@protoc_insertion_point(class_scope:zsearch.RootStoreQuery)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -2150,7 +2150,7 @@ class RootStoreQuery : public ::google::protobuf::Message /* @@protoc_insertion_
 };
 // -------------------------------------------------------------------
 
-class RootStoreReply : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:censys_definitions.RootStoreReply) */ {
+class RootStoreReply : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zsearch.RootStoreReply) */ {
  public:
   RootStoreReply();
   virtual ~RootStoreReply();
@@ -2217,23 +2217,23 @@ class RootStoreReply : public ::google::protobuf::Message /* @@protoc_insertion_
 
   // accessors -------------------------------------------------------
 
-  // repeated .censys_definitions.Certificate certificates = 1;
+  // repeated .zsearch.Certificate certificates = 1;
   int certificates_size() const;
   void clear_certificates();
   static const int kCertificatesFieldNumber = 1;
-  const ::censys_definitions::Certificate& certificates(int index) const;
-  ::censys_definitions::Certificate* mutable_certificates(int index);
-  ::censys_definitions::Certificate* add_certificates();
-  ::google::protobuf::RepeatedPtrField< ::censys_definitions::Certificate >*
+  const ::zsearch::Certificate& certificates(int index) const;
+  ::zsearch::Certificate* mutable_certificates(int index);
+  ::zsearch::Certificate* add_certificates();
+  ::google::protobuf::RepeatedPtrField< ::zsearch::Certificate >*
       mutable_certificates();
-  const ::google::protobuf::RepeatedPtrField< ::censys_definitions::Certificate >&
+  const ::google::protobuf::RepeatedPtrField< ::zsearch::Certificate >&
       certificates() const;
 
-  // @@protoc_insertion_point(class_scope:censys_definitions.RootStoreReply)
+  // @@protoc_insertion_point(class_scope:zsearch.RootStoreReply)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::RepeatedPtrField< ::censys_definitions::Certificate > certificates_;
+  ::google::protobuf::RepeatedPtrField< ::zsearch::Certificate > certificates_;
   mutable int _cached_size_;
   friend struct  protobuf_rpc_2eproto::TableStruct;
 };
@@ -2245,7 +2245,7 @@ class RootStoreReply : public ::google::protobuf::Message /* @@protoc_insertion_
 #if !PROTOBUF_INLINE_NOT_IN_HEADERS
 // MinScanId
 
-// .censys_definitions.AnonymousKey key = 1;
+// .zsearch.AnonymousKey key = 1;
 inline bool MinScanId::has_key() const {
   return this != internal_default_instance() && key_ != NULL;
 }
@@ -2253,27 +2253,27 @@ inline void MinScanId::clear_key() {
   if (GetArenaNoVirtual() == NULL && key_ != NULL) delete key_;
   key_ = NULL;
 }
-inline const ::censys_definitions::AnonymousKey& MinScanId::key() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.MinScanId.key)
+inline const ::zsearch::AnonymousKey& MinScanId::key() const {
+  // @@protoc_insertion_point(field_get:zsearch.MinScanId.key)
   return key_ != NULL ? *key_
-                         : *::censys_definitions::AnonymousKey::internal_default_instance();
+                         : *::zsearch::AnonymousKey::internal_default_instance();
 }
-inline ::censys_definitions::AnonymousKey* MinScanId::mutable_key() {
+inline ::zsearch::AnonymousKey* MinScanId::mutable_key() {
   
   if (key_ == NULL) {
-    key_ = new ::censys_definitions::AnonymousKey;
+    key_ = new ::zsearch::AnonymousKey;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.MinScanId.key)
+  // @@protoc_insertion_point(field_mutable:zsearch.MinScanId.key)
   return key_;
 }
-inline ::censys_definitions::AnonymousKey* MinScanId::release_key() {
-  // @@protoc_insertion_point(field_release:censys_definitions.MinScanId.key)
+inline ::zsearch::AnonymousKey* MinScanId::release_key() {
+  // @@protoc_insertion_point(field_release:zsearch.MinScanId.key)
   
-  ::censys_definitions::AnonymousKey* temp = key_;
+  ::zsearch::AnonymousKey* temp = key_;
   key_ = NULL;
   return temp;
 }
-inline void MinScanId::set_allocated_key(::censys_definitions::AnonymousKey* key) {
+inline void MinScanId::set_allocated_key(::zsearch::AnonymousKey* key) {
   delete key_;
   key_ = key;
   if (key) {
@@ -2281,7 +2281,7 @@ inline void MinScanId::set_allocated_key(::censys_definitions::AnonymousKey* key
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.MinScanId.key)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.MinScanId.key)
 }
 
 // uint32 min_scan_id = 2;
@@ -2289,13 +2289,13 @@ inline void MinScanId::clear_min_scan_id() {
   min_scan_id_ = 0u;
 }
 inline ::google::protobuf::uint32 MinScanId::min_scan_id() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.MinScanId.min_scan_id)
+  // @@protoc_insertion_point(field_get:zsearch.MinScanId.min_scan_id)
   return min_scan_id_;
 }
 inline void MinScanId::set_min_scan_id(::google::protobuf::uint32 value) {
   
   min_scan_id_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.MinScanId.min_scan_id)
+  // @@protoc_insertion_point(field_set:zsearch.MinScanId.min_scan_id)
 }
 
 // -------------------------------------------------------------------
@@ -2307,40 +2307,40 @@ inline void MozillaOneCRLEntry::clear_issuer() {
   issuer_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& MozillaOneCRLEntry::issuer() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.MozillaOneCRLEntry.issuer)
+  // @@protoc_insertion_point(field_get:zsearch.MozillaOneCRLEntry.issuer)
   return issuer_.GetNoArena();
 }
 inline void MozillaOneCRLEntry::set_issuer(const ::std::string& value) {
   
   issuer_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:censys_definitions.MozillaOneCRLEntry.issuer)
+  // @@protoc_insertion_point(field_set:zsearch.MozillaOneCRLEntry.issuer)
 }
 #if LANG_CXX11
 inline void MozillaOneCRLEntry::set_issuer(::std::string&& value) {
   
   issuer_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:censys_definitions.MozillaOneCRLEntry.issuer)
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.MozillaOneCRLEntry.issuer)
 }
 #endif
 inline void MozillaOneCRLEntry::set_issuer(const char* value) {
   
   issuer_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:censys_definitions.MozillaOneCRLEntry.issuer)
+  // @@protoc_insertion_point(field_set_char:zsearch.MozillaOneCRLEntry.issuer)
 }
 inline void MozillaOneCRLEntry::set_issuer(const void* value, size_t size) {
   
   issuer_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.MozillaOneCRLEntry.issuer)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.MozillaOneCRLEntry.issuer)
 }
 inline ::std::string* MozillaOneCRLEntry::mutable_issuer() {
   
-  // @@protoc_insertion_point(field_mutable:censys_definitions.MozillaOneCRLEntry.issuer)
+  // @@protoc_insertion_point(field_mutable:zsearch.MozillaOneCRLEntry.issuer)
   return issuer_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* MozillaOneCRLEntry::release_issuer() {
-  // @@protoc_insertion_point(field_release:censys_definitions.MozillaOneCRLEntry.issuer)
+  // @@protoc_insertion_point(field_release:zsearch.MozillaOneCRLEntry.issuer)
   
   return issuer_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -2351,7 +2351,7 @@ inline void MozillaOneCRLEntry::set_allocated_issuer(::std::string* issuer) {
     
   }
   issuer_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), issuer);
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.MozillaOneCRLEntry.issuer)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.MozillaOneCRLEntry.issuer)
 }
 
 // bytes serial = 2;
@@ -2359,40 +2359,40 @@ inline void MozillaOneCRLEntry::clear_serial() {
   serial_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& MozillaOneCRLEntry::serial() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.MozillaOneCRLEntry.serial)
+  // @@protoc_insertion_point(field_get:zsearch.MozillaOneCRLEntry.serial)
   return serial_.GetNoArena();
 }
 inline void MozillaOneCRLEntry::set_serial(const ::std::string& value) {
   
   serial_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:censys_definitions.MozillaOneCRLEntry.serial)
+  // @@protoc_insertion_point(field_set:zsearch.MozillaOneCRLEntry.serial)
 }
 #if LANG_CXX11
 inline void MozillaOneCRLEntry::set_serial(::std::string&& value) {
   
   serial_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:censys_definitions.MozillaOneCRLEntry.serial)
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.MozillaOneCRLEntry.serial)
 }
 #endif
 inline void MozillaOneCRLEntry::set_serial(const char* value) {
   
   serial_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:censys_definitions.MozillaOneCRLEntry.serial)
+  // @@protoc_insertion_point(field_set_char:zsearch.MozillaOneCRLEntry.serial)
 }
 inline void MozillaOneCRLEntry::set_serial(const void* value, size_t size) {
   
   serial_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.MozillaOneCRLEntry.serial)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.MozillaOneCRLEntry.serial)
 }
 inline ::std::string* MozillaOneCRLEntry::mutable_serial() {
   
-  // @@protoc_insertion_point(field_mutable:censys_definitions.MozillaOneCRLEntry.serial)
+  // @@protoc_insertion_point(field_mutable:zsearch.MozillaOneCRLEntry.serial)
   return serial_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* MozillaOneCRLEntry::release_serial() {
-  // @@protoc_insertion_point(field_release:censys_definitions.MozillaOneCRLEntry.serial)
+  // @@protoc_insertion_point(field_release:zsearch.MozillaOneCRLEntry.serial)
   
   return serial_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -2403,7 +2403,7 @@ inline void MozillaOneCRLEntry::set_allocated_serial(::std::string* serial) {
     
   }
   serial_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), serial);
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.MozillaOneCRLEntry.serial)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.MozillaOneCRLEntry.serial)
 }
 
 // string id = 3;
@@ -2411,40 +2411,40 @@ inline void MozillaOneCRLEntry::clear_id() {
   id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& MozillaOneCRLEntry::id() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.MozillaOneCRLEntry.id)
+  // @@protoc_insertion_point(field_get:zsearch.MozillaOneCRLEntry.id)
   return id_.GetNoArena();
 }
 inline void MozillaOneCRLEntry::set_id(const ::std::string& value) {
   
   id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:censys_definitions.MozillaOneCRLEntry.id)
+  // @@protoc_insertion_point(field_set:zsearch.MozillaOneCRLEntry.id)
 }
 #if LANG_CXX11
 inline void MozillaOneCRLEntry::set_id(::std::string&& value) {
   
   id_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:censys_definitions.MozillaOneCRLEntry.id)
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.MozillaOneCRLEntry.id)
 }
 #endif
 inline void MozillaOneCRLEntry::set_id(const char* value) {
   
   id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:censys_definitions.MozillaOneCRLEntry.id)
+  // @@protoc_insertion_point(field_set_char:zsearch.MozillaOneCRLEntry.id)
 }
 inline void MozillaOneCRLEntry::set_id(const char* value, size_t size) {
   
   id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.MozillaOneCRLEntry.id)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.MozillaOneCRLEntry.id)
 }
 inline ::std::string* MozillaOneCRLEntry::mutable_id() {
   
-  // @@protoc_insertion_point(field_mutable:censys_definitions.MozillaOneCRLEntry.id)
+  // @@protoc_insertion_point(field_mutable:zsearch.MozillaOneCRLEntry.id)
   return id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* MozillaOneCRLEntry::release_id() {
-  // @@protoc_insertion_point(field_release:censys_definitions.MozillaOneCRLEntry.id)
+  // @@protoc_insertion_point(field_release:zsearch.MozillaOneCRLEntry.id)
   
   return id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -2455,7 +2455,7 @@ inline void MozillaOneCRLEntry::set_allocated_id(::std::string* id) {
     
   }
   id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), id);
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.MozillaOneCRLEntry.id)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.MozillaOneCRLEntry.id)
 }
 
 // uint32 last_modified = 4;
@@ -2463,13 +2463,13 @@ inline void MozillaOneCRLEntry::clear_last_modified() {
   last_modified_ = 0u;
 }
 inline ::google::protobuf::uint32 MozillaOneCRLEntry::last_modified() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.MozillaOneCRLEntry.last_modified)
+  // @@protoc_insertion_point(field_get:zsearch.MozillaOneCRLEntry.last_modified)
   return last_modified_;
 }
 inline void MozillaOneCRLEntry::set_last_modified(::google::protobuf::uint32 value) {
   
   last_modified_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.MozillaOneCRLEntry.last_modified)
+  // @@protoc_insertion_point(field_set:zsearch.MozillaOneCRLEntry.last_modified)
 }
 
 // -------------------------------------------------------------------
@@ -2481,42 +2481,42 @@ inline void Command::clear_incremental_dump() {
   incremental_dump_ = false;
 }
 inline bool Command::incremental_dump() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Command.incremental_dump)
+  // @@protoc_insertion_point(field_get:zsearch.Command.incremental_dump)
   return incremental_dump_;
 }
 inline void Command::set_incremental_dump(bool value) {
   
   incremental_dump_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.Command.incremental_dump)
+  // @@protoc_insertion_point(field_set:zsearch.Command.incremental_dump)
 }
 
-// repeated .censys_definitions.MinScanId min_scan_ids = 2;
+// repeated .zsearch.MinScanId min_scan_ids = 2;
 inline int Command::min_scan_ids_size() const {
   return min_scan_ids_.size();
 }
 inline void Command::clear_min_scan_ids() {
   min_scan_ids_.Clear();
 }
-inline const ::censys_definitions::MinScanId& Command::min_scan_ids(int index) const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Command.min_scan_ids)
+inline const ::zsearch::MinScanId& Command::min_scan_ids(int index) const {
+  // @@protoc_insertion_point(field_get:zsearch.Command.min_scan_ids)
   return min_scan_ids_.Get(index);
 }
-inline ::censys_definitions::MinScanId* Command::mutable_min_scan_ids(int index) {
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Command.min_scan_ids)
+inline ::zsearch::MinScanId* Command::mutable_min_scan_ids(int index) {
+  // @@protoc_insertion_point(field_mutable:zsearch.Command.min_scan_ids)
   return min_scan_ids_.Mutable(index);
 }
-inline ::censys_definitions::MinScanId* Command::add_min_scan_ids() {
-  // @@protoc_insertion_point(field_add:censys_definitions.Command.min_scan_ids)
+inline ::zsearch::MinScanId* Command::add_min_scan_ids() {
+  // @@protoc_insertion_point(field_add:zsearch.Command.min_scan_ids)
   return min_scan_ids_.Add();
 }
-inline ::google::protobuf::RepeatedPtrField< ::censys_definitions::MinScanId >*
+inline ::google::protobuf::RepeatedPtrField< ::zsearch::MinScanId >*
 Command::mutable_min_scan_ids() {
-  // @@protoc_insertion_point(field_mutable_list:censys_definitions.Command.min_scan_ids)
+  // @@protoc_insertion_point(field_mutable_list:zsearch.Command.min_scan_ids)
   return &min_scan_ids_;
 }
-inline const ::google::protobuf::RepeatedPtrField< ::censys_definitions::MinScanId >&
+inline const ::google::protobuf::RepeatedPtrField< ::zsearch::MinScanId >&
 Command::min_scan_ids() const {
-  // @@protoc_insertion_point(field_list:censys_definitions.Command.min_scan_ids)
+  // @@protoc_insertion_point(field_list:zsearch.Command.min_scan_ids)
   return min_scan_ids_;
 }
 
@@ -2525,40 +2525,40 @@ inline void Command::clear_filepath() {
   filepath_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& Command::filepath() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Command.filepath)
+  // @@protoc_insertion_point(field_get:zsearch.Command.filepath)
   return filepath_.GetNoArena();
 }
 inline void Command::set_filepath(const ::std::string& value) {
   
   filepath_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:censys_definitions.Command.filepath)
+  // @@protoc_insertion_point(field_set:zsearch.Command.filepath)
 }
 #if LANG_CXX11
 inline void Command::set_filepath(::std::string&& value) {
   
   filepath_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:censys_definitions.Command.filepath)
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.Command.filepath)
 }
 #endif
 inline void Command::set_filepath(const char* value) {
   
   filepath_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:censys_definitions.Command.filepath)
+  // @@protoc_insertion_point(field_set_char:zsearch.Command.filepath)
 }
 inline void Command::set_filepath(const char* value, size_t size) {
   
   filepath_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.Command.filepath)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.Command.filepath)
 }
 inline ::std::string* Command::mutable_filepath() {
   
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Command.filepath)
+  // @@protoc_insertion_point(field_mutable:zsearch.Command.filepath)
   return filepath_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Command::release_filepath() {
-  // @@protoc_insertion_point(field_release:censys_definitions.Command.filepath)
+  // @@protoc_insertion_point(field_release:zsearch.Command.filepath)
   
   return filepath_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -2569,7 +2569,7 @@ inline void Command::set_allocated_filepath(::std::string* filepath) {
     
   }
   filepath_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), filepath);
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.Command.filepath)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Command.filepath)
 }
 
 // uint32 max_records = 4;
@@ -2577,13 +2577,13 @@ inline void Command::clear_max_records() {
   max_records_ = 0u;
 }
 inline ::google::protobuf::uint32 Command::max_records() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Command.max_records)
+  // @@protoc_insertion_point(field_get:zsearch.Command.max_records)
   return max_records_;
 }
 inline void Command::set_max_records(::google::protobuf::uint32 value) {
   
   max_records_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.Command.max_records)
+  // @@protoc_insertion_point(field_set:zsearch.Command.max_records)
 }
 
 // uint32 start_ip = 5;
@@ -2591,13 +2591,13 @@ inline void Command::clear_start_ip() {
   start_ip_ = 0u;
 }
 inline ::google::protobuf::uint32 Command::start_ip() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Command.start_ip)
+  // @@protoc_insertion_point(field_get:zsearch.Command.start_ip)
   return start_ip_;
 }
 inline void Command::set_start_ip(::google::protobuf::uint32 value) {
   
   start_ip_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.Command.start_ip)
+  // @@protoc_insertion_point(field_set:zsearch.Command.start_ip)
 }
 
 // uint32 stop_ip = 6;
@@ -2605,42 +2605,42 @@ inline void Command::clear_stop_ip() {
   stop_ip_ = 0u;
 }
 inline ::google::protobuf::uint32 Command::stop_ip() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Command.stop_ip)
+  // @@protoc_insertion_point(field_get:zsearch.Command.stop_ip)
   return stop_ip_;
 }
 inline void Command::set_stop_ip(::google::protobuf::uint32 value) {
   
   stop_ip_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.Command.stop_ip)
+  // @@protoc_insertion_point(field_set:zsearch.Command.stop_ip)
 }
 
-// repeated .censys_definitions.MozillaOneCRLEntry one_crl_entries = 7;
+// repeated .zsearch.MozillaOneCRLEntry one_crl_entries = 7;
 inline int Command::one_crl_entries_size() const {
   return one_crl_entries_.size();
 }
 inline void Command::clear_one_crl_entries() {
   one_crl_entries_.Clear();
 }
-inline const ::censys_definitions::MozillaOneCRLEntry& Command::one_crl_entries(int index) const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Command.one_crl_entries)
+inline const ::zsearch::MozillaOneCRLEntry& Command::one_crl_entries(int index) const {
+  // @@protoc_insertion_point(field_get:zsearch.Command.one_crl_entries)
   return one_crl_entries_.Get(index);
 }
-inline ::censys_definitions::MozillaOneCRLEntry* Command::mutable_one_crl_entries(int index) {
-  // @@protoc_insertion_point(field_mutable:censys_definitions.Command.one_crl_entries)
+inline ::zsearch::MozillaOneCRLEntry* Command::mutable_one_crl_entries(int index) {
+  // @@protoc_insertion_point(field_mutable:zsearch.Command.one_crl_entries)
   return one_crl_entries_.Mutable(index);
 }
-inline ::censys_definitions::MozillaOneCRLEntry* Command::add_one_crl_entries() {
-  // @@protoc_insertion_point(field_add:censys_definitions.Command.one_crl_entries)
+inline ::zsearch::MozillaOneCRLEntry* Command::add_one_crl_entries() {
+  // @@protoc_insertion_point(field_add:zsearch.Command.one_crl_entries)
   return one_crl_entries_.Add();
 }
-inline ::google::protobuf::RepeatedPtrField< ::censys_definitions::MozillaOneCRLEntry >*
+inline ::google::protobuf::RepeatedPtrField< ::zsearch::MozillaOneCRLEntry >*
 Command::mutable_one_crl_entries() {
-  // @@protoc_insertion_point(field_mutable_list:censys_definitions.Command.one_crl_entries)
+  // @@protoc_insertion_point(field_mutable_list:zsearch.Command.one_crl_entries)
   return &one_crl_entries_;
 }
-inline const ::google::protobuf::RepeatedPtrField< ::censys_definitions::MozillaOneCRLEntry >&
+inline const ::google::protobuf::RepeatedPtrField< ::zsearch::MozillaOneCRLEntry >&
 Command::one_crl_entries() const {
-  // @@protoc_insertion_point(field_list:censys_definitions.Command.one_crl_entries)
+  // @@protoc_insertion_point(field_list:zsearch.Command.one_crl_entries)
   return one_crl_entries_;
 }
 
@@ -2649,13 +2649,13 @@ inline void Command::clear_threads() {
   threads_ = 0u;
 }
 inline ::google::protobuf::uint32 Command::threads() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.Command.threads)
+  // @@protoc_insertion_point(field_get:zsearch.Command.threads)
   return threads_;
 }
 inline void Command::set_threads(::google::protobuf::uint32 value) {
   
   threads_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.Command.threads)
+  // @@protoc_insertion_point(field_set:zsearch.Command.threads)
 }
 
 // -------------------------------------------------------------------
@@ -2667,13 +2667,13 @@ inline void AnonymousStoreStatistics::clear_total_records() {
   total_records_ = GOOGLE_ULONGLONG(0);
 }
 inline ::google::protobuf::uint64 AnonymousStoreStatistics::total_records() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.AnonymousStoreStatistics.total_records)
+  // @@protoc_insertion_point(field_get:zsearch.AnonymousStoreStatistics.total_records)
   return total_records_;
 }
 inline void AnonymousStoreStatistics::set_total_records(::google::protobuf::uint64 value) {
   
   total_records_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.AnonymousStoreStatistics.total_records)
+  // @@protoc_insertion_point(field_set:zsearch.AnonymousStoreStatistics.total_records)
 }
 
 // uint64 records_added_last_reset = 2;
@@ -2681,13 +2681,13 @@ inline void AnonymousStoreStatistics::clear_records_added_last_reset() {
   records_added_last_reset_ = GOOGLE_ULONGLONG(0);
 }
 inline ::google::protobuf::uint64 AnonymousStoreStatistics::records_added_last_reset() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.AnonymousStoreStatistics.records_added_last_reset)
+  // @@protoc_insertion_point(field_get:zsearch.AnonymousStoreStatistics.records_added_last_reset)
   return records_added_last_reset_;
 }
 inline void AnonymousStoreStatistics::set_records_added_last_reset(::google::protobuf::uint64 value) {
   
   records_added_last_reset_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.AnonymousStoreStatistics.records_added_last_reset)
+  // @@protoc_insertion_point(field_set:zsearch.AnonymousStoreStatistics.records_added_last_reset)
 }
 
 // uint64 records_updated_last_reset = 3;
@@ -2695,13 +2695,13 @@ inline void AnonymousStoreStatistics::clear_records_updated_last_reset() {
   records_updated_last_reset_ = GOOGLE_ULONGLONG(0);
 }
 inline ::google::protobuf::uint64 AnonymousStoreStatistics::records_updated_last_reset() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.AnonymousStoreStatistics.records_updated_last_reset)
+  // @@protoc_insertion_point(field_get:zsearch.AnonymousStoreStatistics.records_updated_last_reset)
   return records_updated_last_reset_;
 }
 inline void AnonymousStoreStatistics::set_records_updated_last_reset(::google::protobuf::uint64 value) {
   
   records_updated_last_reset_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.AnonymousStoreStatistics.records_updated_last_reset)
+  // @@protoc_insertion_point(field_set:zsearch.AnonymousStoreStatistics.records_updated_last_reset)
 }
 
 // uint64 records_unchanged_last_reset = 4;
@@ -2709,13 +2709,13 @@ inline void AnonymousStoreStatistics::clear_records_unchanged_last_reset() {
   records_unchanged_last_reset_ = GOOGLE_ULONGLONG(0);
 }
 inline ::google::protobuf::uint64 AnonymousStoreStatistics::records_unchanged_last_reset() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.AnonymousStoreStatistics.records_unchanged_last_reset)
+  // @@protoc_insertion_point(field_get:zsearch.AnonymousStoreStatistics.records_unchanged_last_reset)
   return records_unchanged_last_reset_;
 }
 inline void AnonymousStoreStatistics::set_records_unchanged_last_reset(::google::protobuf::uint64 value) {
   
   records_unchanged_last_reset_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.AnonymousStoreStatistics.records_unchanged_last_reset)
+  // @@protoc_insertion_point(field_set:zsearch.AnonymousStoreStatistics.records_unchanged_last_reset)
 }
 
 // uint64 records_received = 5;
@@ -2723,13 +2723,13 @@ inline void AnonymousStoreStatistics::clear_records_received() {
   records_received_ = GOOGLE_ULONGLONG(0);
 }
 inline ::google::protobuf::uint64 AnonymousStoreStatistics::records_received() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.AnonymousStoreStatistics.records_received)
+  // @@protoc_insertion_point(field_get:zsearch.AnonymousStoreStatistics.records_received)
   return records_received_;
 }
 inline void AnonymousStoreStatistics::set_records_received(::google::protobuf::uint64 value) {
   
   records_received_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.AnonymousStoreStatistics.records_received)
+  // @@protoc_insertion_point(field_set:zsearch.AnonymousStoreStatistics.records_received)
 }
 
 // uint32 records_in_redis_queue = 6;
@@ -2737,13 +2737,13 @@ inline void AnonymousStoreStatistics::clear_records_in_redis_queue() {
   records_in_redis_queue_ = 0u;
 }
 inline ::google::protobuf::uint32 AnonymousStoreStatistics::records_in_redis_queue() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.AnonymousStoreStatistics.records_in_redis_queue)
+  // @@protoc_insertion_point(field_get:zsearch.AnonymousStoreStatistics.records_in_redis_queue)
   return records_in_redis_queue_;
 }
 inline void AnonymousStoreStatistics::set_records_in_redis_queue(::google::protobuf::uint32 value) {
   
   records_in_redis_queue_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.AnonymousStoreStatistics.records_in_redis_queue)
+  // @@protoc_insertion_point(field_set:zsearch.AnonymousStoreStatistics.records_in_redis_queue)
 }
 
 // string redis_queue_name = 7;
@@ -2751,40 +2751,40 @@ inline void AnonymousStoreStatistics::clear_redis_queue_name() {
   redis_queue_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& AnonymousStoreStatistics::redis_queue_name() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.AnonymousStoreStatistics.redis_queue_name)
+  // @@protoc_insertion_point(field_get:zsearch.AnonymousStoreStatistics.redis_queue_name)
   return redis_queue_name_.GetNoArena();
 }
 inline void AnonymousStoreStatistics::set_redis_queue_name(const ::std::string& value) {
   
   redis_queue_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:censys_definitions.AnonymousStoreStatistics.redis_queue_name)
+  // @@protoc_insertion_point(field_set:zsearch.AnonymousStoreStatistics.redis_queue_name)
 }
 #if LANG_CXX11
 inline void AnonymousStoreStatistics::set_redis_queue_name(::std::string&& value) {
   
   redis_queue_name_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:censys_definitions.AnonymousStoreStatistics.redis_queue_name)
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.AnonymousStoreStatistics.redis_queue_name)
 }
 #endif
 inline void AnonymousStoreStatistics::set_redis_queue_name(const char* value) {
   
   redis_queue_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:censys_definitions.AnonymousStoreStatistics.redis_queue_name)
+  // @@protoc_insertion_point(field_set_char:zsearch.AnonymousStoreStatistics.redis_queue_name)
 }
 inline void AnonymousStoreStatistics::set_redis_queue_name(const char* value, size_t size) {
   
   redis_queue_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.AnonymousStoreStatistics.redis_queue_name)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.AnonymousStoreStatistics.redis_queue_name)
 }
 inline ::std::string* AnonymousStoreStatistics::mutable_redis_queue_name() {
   
-  // @@protoc_insertion_point(field_mutable:censys_definitions.AnonymousStoreStatistics.redis_queue_name)
+  // @@protoc_insertion_point(field_mutable:zsearch.AnonymousStoreStatistics.redis_queue_name)
   return redis_queue_name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* AnonymousStoreStatistics::release_redis_queue_name() {
-  // @@protoc_insertion_point(field_release:censys_definitions.AnonymousStoreStatistics.redis_queue_name)
+  // @@protoc_insertion_point(field_release:zsearch.AnonymousStoreStatistics.redis_queue_name)
   
   return redis_queue_name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -2795,7 +2795,7 @@ inline void AnonymousStoreStatistics::set_allocated_redis_queue_name(::std::stri
     
   }
   redis_queue_name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), redis_queue_name);
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.AnonymousStoreStatistics.redis_queue_name)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.AnonymousStoreStatistics.redis_queue_name)
 }
 
 // string queue_type = 8;
@@ -2803,40 +2803,40 @@ inline void AnonymousStoreStatistics::clear_queue_type() {
   queue_type_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& AnonymousStoreStatistics::queue_type() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.AnonymousStoreStatistics.queue_type)
+  // @@protoc_insertion_point(field_get:zsearch.AnonymousStoreStatistics.queue_type)
   return queue_type_.GetNoArena();
 }
 inline void AnonymousStoreStatistics::set_queue_type(const ::std::string& value) {
   
   queue_type_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:censys_definitions.AnonymousStoreStatistics.queue_type)
+  // @@protoc_insertion_point(field_set:zsearch.AnonymousStoreStatistics.queue_type)
 }
 #if LANG_CXX11
 inline void AnonymousStoreStatistics::set_queue_type(::std::string&& value) {
   
   queue_type_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:censys_definitions.AnonymousStoreStatistics.queue_type)
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.AnonymousStoreStatistics.queue_type)
 }
 #endif
 inline void AnonymousStoreStatistics::set_queue_type(const char* value) {
   
   queue_type_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:censys_definitions.AnonymousStoreStatistics.queue_type)
+  // @@protoc_insertion_point(field_set_char:zsearch.AnonymousStoreStatistics.queue_type)
 }
 inline void AnonymousStoreStatistics::set_queue_type(const char* value, size_t size) {
   
   queue_type_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.AnonymousStoreStatistics.queue_type)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.AnonymousStoreStatistics.queue_type)
 }
 inline ::std::string* AnonymousStoreStatistics::mutable_queue_type() {
   
-  // @@protoc_insertion_point(field_mutable:censys_definitions.AnonymousStoreStatistics.queue_type)
+  // @@protoc_insertion_point(field_mutable:zsearch.AnonymousStoreStatistics.queue_type)
   return queue_type_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* AnonymousStoreStatistics::release_queue_type() {
-  // @@protoc_insertion_point(field_release:censys_definitions.AnonymousStoreStatistics.queue_type)
+  // @@protoc_insertion_point(field_release:zsearch.AnonymousStoreStatistics.queue_type)
   
   return queue_type_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -2847,7 +2847,7 @@ inline void AnonymousStoreStatistics::set_allocated_queue_type(::std::string* qu
     
   }
   queue_type_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), queue_type);
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.AnonymousStoreStatistics.queue_type)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.AnonymousStoreStatistics.queue_type)
 }
 
 // uint32 worker_threads = 9;
@@ -2855,13 +2855,13 @@ inline void AnonymousStoreStatistics::clear_worker_threads() {
   worker_threads_ = 0u;
 }
 inline ::google::protobuf::uint32 AnonymousStoreStatistics::worker_threads() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.AnonymousStoreStatistics.worker_threads)
+  // @@protoc_insertion_point(field_get:zsearch.AnonymousStoreStatistics.worker_threads)
   return worker_threads_;
 }
 inline void AnonymousStoreStatistics::set_worker_threads(::google::protobuf::uint32 value) {
   
   worker_threads_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.AnonymousStoreStatistics.worker_threads)
+  // @@protoc_insertion_point(field_set:zsearch.AnonymousStoreStatistics.worker_threads)
 }
 
 // -------------------------------------------------------------------
@@ -2873,13 +2873,13 @@ inline void StatisticsPair::clear_port() {
   port_ = 0u;
 }
 inline ::google::protobuf::uint32 StatisticsPair::port() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.StatisticsPair.port)
+  // @@protoc_insertion_point(field_get:zsearch.StatisticsPair.port)
   return port_;
 }
 inline void StatisticsPair::set_port(::google::protobuf::uint32 value) {
   
   port_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.StatisticsPair.port)
+  // @@protoc_insertion_point(field_set:zsearch.StatisticsPair.port)
 }
 
 // uint32 protocol = 2;
@@ -2887,13 +2887,13 @@ inline void StatisticsPair::clear_protocol() {
   protocol_ = 0u;
 }
 inline ::google::protobuf::uint32 StatisticsPair::protocol() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.StatisticsPair.protocol)
+  // @@protoc_insertion_point(field_get:zsearch.StatisticsPair.protocol)
   return protocol_;
 }
 inline void StatisticsPair::set_protocol(::google::protobuf::uint32 value) {
   
   protocol_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.StatisticsPair.protocol)
+  // @@protoc_insertion_point(field_set:zsearch.StatisticsPair.protocol)
 }
 
 // uint32 subprotocol = 3;
@@ -2901,16 +2901,16 @@ inline void StatisticsPair::clear_subprotocol() {
   subprotocol_ = 0u;
 }
 inline ::google::protobuf::uint32 StatisticsPair::subprotocol() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.StatisticsPair.subprotocol)
+  // @@protoc_insertion_point(field_get:zsearch.StatisticsPair.subprotocol)
   return subprotocol_;
 }
 inline void StatisticsPair::set_subprotocol(::google::protobuf::uint32 value) {
   
   subprotocol_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.StatisticsPair.subprotocol)
+  // @@protoc_insertion_point(field_set:zsearch.StatisticsPair.subprotocol)
 }
 
-// .censys_definitions.AnonymousStoreStatistics statistics = 4;
+// .zsearch.AnonymousStoreStatistics statistics = 4;
 inline bool StatisticsPair::has_statistics() const {
   return this != internal_default_instance() && statistics_ != NULL;
 }
@@ -2918,27 +2918,27 @@ inline void StatisticsPair::clear_statistics() {
   if (GetArenaNoVirtual() == NULL && statistics_ != NULL) delete statistics_;
   statistics_ = NULL;
 }
-inline const ::censys_definitions::AnonymousStoreStatistics& StatisticsPair::statistics() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.StatisticsPair.statistics)
+inline const ::zsearch::AnonymousStoreStatistics& StatisticsPair::statistics() const {
+  // @@protoc_insertion_point(field_get:zsearch.StatisticsPair.statistics)
   return statistics_ != NULL ? *statistics_
-                         : *::censys_definitions::AnonymousStoreStatistics::internal_default_instance();
+                         : *::zsearch::AnonymousStoreStatistics::internal_default_instance();
 }
-inline ::censys_definitions::AnonymousStoreStatistics* StatisticsPair::mutable_statistics() {
+inline ::zsearch::AnonymousStoreStatistics* StatisticsPair::mutable_statistics() {
   
   if (statistics_ == NULL) {
-    statistics_ = new ::censys_definitions::AnonymousStoreStatistics;
+    statistics_ = new ::zsearch::AnonymousStoreStatistics;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.StatisticsPair.statistics)
+  // @@protoc_insertion_point(field_mutable:zsearch.StatisticsPair.statistics)
   return statistics_;
 }
-inline ::censys_definitions::AnonymousStoreStatistics* StatisticsPair::release_statistics() {
-  // @@protoc_insertion_point(field_release:censys_definitions.StatisticsPair.statistics)
+inline ::zsearch::AnonymousStoreStatistics* StatisticsPair::release_statistics() {
+  // @@protoc_insertion_point(field_release:zsearch.StatisticsPair.statistics)
   
-  ::censys_definitions::AnonymousStoreStatistics* temp = statistics_;
+  ::zsearch::AnonymousStoreStatistics* temp = statistics_;
   statistics_ = NULL;
   return temp;
 }
-inline void StatisticsPair::set_allocated_statistics(::censys_definitions::AnonymousStoreStatistics* statistics) {
+inline void StatisticsPair::set_allocated_statistics(::zsearch::AnonymousStoreStatistics* statistics) {
   delete statistics_;
   statistics_ = statistics;
   if (statistics) {
@@ -2946,14 +2946,14 @@ inline void StatisticsPair::set_allocated_statistics(::censys_definitions::Anony
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.StatisticsPair.statistics)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.StatisticsPair.statistics)
 }
 
 // -------------------------------------------------------------------
 
 // StoreStatistics
 
-// .censys_definitions.AnonymousStoreStatistics global = 1;
+// .zsearch.AnonymousStoreStatistics global = 1;
 inline bool StoreStatistics::has_global() const {
   return this != internal_default_instance() && global_ != NULL;
 }
@@ -2961,27 +2961,27 @@ inline void StoreStatistics::clear_global() {
   if (GetArenaNoVirtual() == NULL && global_ != NULL) delete global_;
   global_ = NULL;
 }
-inline const ::censys_definitions::AnonymousStoreStatistics& StoreStatistics::global() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.StoreStatistics.global)
+inline const ::zsearch::AnonymousStoreStatistics& StoreStatistics::global() const {
+  // @@protoc_insertion_point(field_get:zsearch.StoreStatistics.global)
   return global_ != NULL ? *global_
-                         : *::censys_definitions::AnonymousStoreStatistics::internal_default_instance();
+                         : *::zsearch::AnonymousStoreStatistics::internal_default_instance();
 }
-inline ::censys_definitions::AnonymousStoreStatistics* StoreStatistics::mutable_global() {
+inline ::zsearch::AnonymousStoreStatistics* StoreStatistics::mutable_global() {
   
   if (global_ == NULL) {
-    global_ = new ::censys_definitions::AnonymousStoreStatistics;
+    global_ = new ::zsearch::AnonymousStoreStatistics;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.StoreStatistics.global)
+  // @@protoc_insertion_point(field_mutable:zsearch.StoreStatistics.global)
   return global_;
 }
-inline ::censys_definitions::AnonymousStoreStatistics* StoreStatistics::release_global() {
-  // @@protoc_insertion_point(field_release:censys_definitions.StoreStatistics.global)
+inline ::zsearch::AnonymousStoreStatistics* StoreStatistics::release_global() {
+  // @@protoc_insertion_point(field_release:zsearch.StoreStatistics.global)
   
-  ::censys_definitions::AnonymousStoreStatistics* temp = global_;
+  ::zsearch::AnonymousStoreStatistics* temp = global_;
   global_ = NULL;
   return temp;
 }
-inline void StoreStatistics::set_allocated_global(::censys_definitions::AnonymousStoreStatistics* global) {
+inline void StoreStatistics::set_allocated_global(::zsearch::AnonymousStoreStatistics* global) {
   delete global_;
   global_ = global;
   if (global) {
@@ -2989,36 +2989,36 @@ inline void StoreStatistics::set_allocated_global(::censys_definitions::Anonymou
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.StoreStatistics.global)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.StoreStatistics.global)
 }
 
-// repeated .censys_definitions.StatisticsPair protocols = 2;
+// repeated .zsearch.StatisticsPair protocols = 2;
 inline int StoreStatistics::protocols_size() const {
   return protocols_.size();
 }
 inline void StoreStatistics::clear_protocols() {
   protocols_.Clear();
 }
-inline const ::censys_definitions::StatisticsPair& StoreStatistics::protocols(int index) const {
-  // @@protoc_insertion_point(field_get:censys_definitions.StoreStatistics.protocols)
+inline const ::zsearch::StatisticsPair& StoreStatistics::protocols(int index) const {
+  // @@protoc_insertion_point(field_get:zsearch.StoreStatistics.protocols)
   return protocols_.Get(index);
 }
-inline ::censys_definitions::StatisticsPair* StoreStatistics::mutable_protocols(int index) {
-  // @@protoc_insertion_point(field_mutable:censys_definitions.StoreStatistics.protocols)
+inline ::zsearch::StatisticsPair* StoreStatistics::mutable_protocols(int index) {
+  // @@protoc_insertion_point(field_mutable:zsearch.StoreStatistics.protocols)
   return protocols_.Mutable(index);
 }
-inline ::censys_definitions::StatisticsPair* StoreStatistics::add_protocols() {
-  // @@protoc_insertion_point(field_add:censys_definitions.StoreStatistics.protocols)
+inline ::zsearch::StatisticsPair* StoreStatistics::add_protocols() {
+  // @@protoc_insertion_point(field_add:zsearch.StoreStatistics.protocols)
   return protocols_.Add();
 }
-inline ::google::protobuf::RepeatedPtrField< ::censys_definitions::StatisticsPair >*
+inline ::google::protobuf::RepeatedPtrField< ::zsearch::StatisticsPair >*
 StoreStatistics::mutable_protocols() {
-  // @@protoc_insertion_point(field_mutable_list:censys_definitions.StoreStatistics.protocols)
+  // @@protoc_insertion_point(field_mutable_list:zsearch.StoreStatistics.protocols)
   return &protocols_;
 }
-inline const ::google::protobuf::RepeatedPtrField< ::censys_definitions::StatisticsPair >&
+inline const ::google::protobuf::RepeatedPtrField< ::zsearch::StatisticsPair >&
 StoreStatistics::protocols() const {
-  // @@protoc_insertion_point(field_list:censys_definitions.StoreStatistics.protocols)
+  // @@protoc_insertion_point(field_list:zsearch.StoreStatistics.protocols)
   return protocols_;
 }
 
@@ -3030,39 +3030,39 @@ StoreStatistics::protocols() const {
 
 // ServerStatistics
 
-// map<string, .censys_definitions.StoreStatistics> store_statistics = 1;
+// map<string, .zsearch.StoreStatistics> store_statistics = 1;
 inline int ServerStatistics::store_statistics_size() const {
   return store_statistics_.size();
 }
 inline void ServerStatistics::clear_store_statistics() {
   store_statistics_.Clear();
 }
-inline const ::google::protobuf::Map< ::std::string, ::censys_definitions::StoreStatistics >&
+inline const ::google::protobuf::Map< ::std::string, ::zsearch::StoreStatistics >&
 ServerStatistics::store_statistics() const {
-  // @@protoc_insertion_point(field_map:censys_definitions.ServerStatistics.store_statistics)
+  // @@protoc_insertion_point(field_map:zsearch.ServerStatistics.store_statistics)
   return store_statistics_.GetMap();
 }
-inline ::google::protobuf::Map< ::std::string, ::censys_definitions::StoreStatistics >*
+inline ::google::protobuf::Map< ::std::string, ::zsearch::StoreStatistics >*
 ServerStatistics::mutable_store_statistics() {
-  // @@protoc_insertion_point(field_mutable_map:censys_definitions.ServerStatistics.store_statistics)
+  // @@protoc_insertion_point(field_mutable_map:zsearch.ServerStatistics.store_statistics)
   return store_statistics_.MutableMap();
 }
 
-// map<string, .censys_definitions.AnonymousStoreStatistics> anonymous_store_statistics = 2;
+// map<string, .zsearch.AnonymousStoreStatistics> anonymous_store_statistics = 2;
 inline int ServerStatistics::anonymous_store_statistics_size() const {
   return anonymous_store_statistics_.size();
 }
 inline void ServerStatistics::clear_anonymous_store_statistics() {
   anonymous_store_statistics_.Clear();
 }
-inline const ::google::protobuf::Map< ::std::string, ::censys_definitions::AnonymousStoreStatistics >&
+inline const ::google::protobuf::Map< ::std::string, ::zsearch::AnonymousStoreStatistics >&
 ServerStatistics::anonymous_store_statistics() const {
-  // @@protoc_insertion_point(field_map:censys_definitions.ServerStatistics.anonymous_store_statistics)
+  // @@protoc_insertion_point(field_map:zsearch.ServerStatistics.anonymous_store_statistics)
   return anonymous_store_statistics_.GetMap();
 }
-inline ::google::protobuf::Map< ::std::string, ::censys_definitions::AnonymousStoreStatistics >*
+inline ::google::protobuf::Map< ::std::string, ::zsearch::AnonymousStoreStatistics >*
 ServerStatistics::mutable_anonymous_store_statistics() {
-  // @@protoc_insertion_point(field_mutable_map:censys_definitions.ServerStatistics.anonymous_store_statistics)
+  // @@protoc_insertion_point(field_mutable_map:zsearch.ServerStatistics.anonymous_store_statistics)
   return anonymous_store_statistics_.MutableMap();
 }
 
@@ -3070,7 +3070,7 @@ ServerStatistics::mutable_anonymous_store_statistics() {
 
 // PruneStatistics
 
-// .censys_definitions.AnonymousKey key = 1;
+// .zsearch.AnonymousKey key = 1;
 inline bool PruneStatistics::has_key() const {
   return this != internal_default_instance() && key_ != NULL;
 }
@@ -3078,27 +3078,27 @@ inline void PruneStatistics::clear_key() {
   if (GetArenaNoVirtual() == NULL && key_ != NULL) delete key_;
   key_ = NULL;
 }
-inline const ::censys_definitions::AnonymousKey& PruneStatistics::key() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.PruneStatistics.key)
+inline const ::zsearch::AnonymousKey& PruneStatistics::key() const {
+  // @@protoc_insertion_point(field_get:zsearch.PruneStatistics.key)
   return key_ != NULL ? *key_
-                         : *::censys_definitions::AnonymousKey::internal_default_instance();
+                         : *::zsearch::AnonymousKey::internal_default_instance();
 }
-inline ::censys_definitions::AnonymousKey* PruneStatistics::mutable_key() {
+inline ::zsearch::AnonymousKey* PruneStatistics::mutable_key() {
   
   if (key_ == NULL) {
-    key_ = new ::censys_definitions::AnonymousKey;
+    key_ = new ::zsearch::AnonymousKey;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.PruneStatistics.key)
+  // @@protoc_insertion_point(field_mutable:zsearch.PruneStatistics.key)
   return key_;
 }
-inline ::censys_definitions::AnonymousKey* PruneStatistics::release_key() {
-  // @@protoc_insertion_point(field_release:censys_definitions.PruneStatistics.key)
+inline ::zsearch::AnonymousKey* PruneStatistics::release_key() {
+  // @@protoc_insertion_point(field_release:zsearch.PruneStatistics.key)
   
-  ::censys_definitions::AnonymousKey* temp = key_;
+  ::zsearch::AnonymousKey* temp = key_;
   key_ = NULL;
   return temp;
 }
-inline void PruneStatistics::set_allocated_key(::censys_definitions::AnonymousKey* key) {
+inline void PruneStatistics::set_allocated_key(::zsearch::AnonymousKey* key) {
   delete key_;
   key_ = key;
   if (key) {
@@ -3106,7 +3106,7 @@ inline void PruneStatistics::set_allocated_key(::censys_definitions::AnonymousKe
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.PruneStatistics.key)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.PruneStatistics.key)
 }
 
 // uint64 records_pruned = 2;
@@ -3114,31 +3114,31 @@ inline void PruneStatistics::clear_records_pruned() {
   records_pruned_ = GOOGLE_ULONGLONG(0);
 }
 inline ::google::protobuf::uint64 PruneStatistics::records_pruned() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.PruneStatistics.records_pruned)
+  // @@protoc_insertion_point(field_get:zsearch.PruneStatistics.records_pruned)
   return records_pruned_;
 }
 inline void PruneStatistics::set_records_pruned(::google::protobuf::uint64 value) {
   
   records_pruned_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.PruneStatistics.records_pruned)
+  // @@protoc_insertion_point(field_set:zsearch.PruneStatistics.records_pruned)
 }
 
 // -------------------------------------------------------------------
 
 // CommandReply
 
-// .censys_definitions.CommandReply.CommandStatus status = 1;
+// .zsearch.CommandReply.CommandStatus status = 1;
 inline void CommandReply::clear_status() {
   status_ = 0;
 }
-inline ::censys_definitions::CommandReply_CommandStatus CommandReply::status() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.CommandReply.status)
-  return static_cast< ::censys_definitions::CommandReply_CommandStatus >(status_);
+inline ::zsearch::CommandReply_CommandStatus CommandReply::status() const {
+  // @@protoc_insertion_point(field_get:zsearch.CommandReply.status)
+  return static_cast< ::zsearch::CommandReply_CommandStatus >(status_);
 }
-inline void CommandReply::set_status(::censys_definitions::CommandReply_CommandStatus value) {
+inline void CommandReply::set_status(::zsearch::CommandReply_CommandStatus value) {
   
   status_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.CommandReply.status)
+  // @@protoc_insertion_point(field_set:zsearch.CommandReply.status)
 }
 
 // string error = 2;
@@ -3146,40 +3146,40 @@ inline void CommandReply::clear_error() {
   error_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& CommandReply::error() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.CommandReply.error)
+  // @@protoc_insertion_point(field_get:zsearch.CommandReply.error)
   return error_.GetNoArena();
 }
 inline void CommandReply::set_error(const ::std::string& value) {
   
   error_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:censys_definitions.CommandReply.error)
+  // @@protoc_insertion_point(field_set:zsearch.CommandReply.error)
 }
 #if LANG_CXX11
 inline void CommandReply::set_error(::std::string&& value) {
   
   error_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:censys_definitions.CommandReply.error)
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.CommandReply.error)
 }
 #endif
 inline void CommandReply::set_error(const char* value) {
   
   error_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:censys_definitions.CommandReply.error)
+  // @@protoc_insertion_point(field_set_char:zsearch.CommandReply.error)
 }
 inline void CommandReply::set_error(const char* value, size_t size) {
   
   error_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.CommandReply.error)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.CommandReply.error)
 }
 inline ::std::string* CommandReply::mutable_error() {
   
-  // @@protoc_insertion_point(field_mutable:censys_definitions.CommandReply.error)
+  // @@protoc_insertion_point(field_mutable:zsearch.CommandReply.error)
   return error_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* CommandReply::release_error() {
-  // @@protoc_insertion_point(field_release:censys_definitions.CommandReply.error)
+  // @@protoc_insertion_point(field_release:zsearch.CommandReply.error)
   
   return error_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -3190,10 +3190,10 @@ inline void CommandReply::set_allocated_error(::std::string* error) {
     
   }
   error_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), error);
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.CommandReply.error)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CommandReply.error)
 }
 
-// .censys_definitions.ServerStatistics stats = 3;
+// .zsearch.ServerStatistics stats = 3;
 inline bool CommandReply::has_stats() const {
   return this != internal_default_instance() && stats_ != NULL;
 }
@@ -3201,27 +3201,27 @@ inline void CommandReply::clear_stats() {
   if (GetArenaNoVirtual() == NULL && stats_ != NULL) delete stats_;
   stats_ = NULL;
 }
-inline const ::censys_definitions::ServerStatistics& CommandReply::stats() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.CommandReply.stats)
+inline const ::zsearch::ServerStatistics& CommandReply::stats() const {
+  // @@protoc_insertion_point(field_get:zsearch.CommandReply.stats)
   return stats_ != NULL ? *stats_
-                         : *::censys_definitions::ServerStatistics::internal_default_instance();
+                         : *::zsearch::ServerStatistics::internal_default_instance();
 }
-inline ::censys_definitions::ServerStatistics* CommandReply::mutable_stats() {
+inline ::zsearch::ServerStatistics* CommandReply::mutable_stats() {
   
   if (stats_ == NULL) {
-    stats_ = new ::censys_definitions::ServerStatistics;
+    stats_ = new ::zsearch::ServerStatistics;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.CommandReply.stats)
+  // @@protoc_insertion_point(field_mutable:zsearch.CommandReply.stats)
   return stats_;
 }
-inline ::censys_definitions::ServerStatistics* CommandReply::release_stats() {
-  // @@protoc_insertion_point(field_release:censys_definitions.CommandReply.stats)
+inline ::zsearch::ServerStatistics* CommandReply::release_stats() {
+  // @@protoc_insertion_point(field_release:zsearch.CommandReply.stats)
   
-  ::censys_definitions::ServerStatistics* temp = stats_;
+  ::zsearch::ServerStatistics* temp = stats_;
   stats_ = NULL;
   return temp;
 }
-inline void CommandReply::set_allocated_stats(::censys_definitions::ServerStatistics* stats) {
+inline void CommandReply::set_allocated_stats(::zsearch::ServerStatistics* stats) {
   delete stats_;
   stats_ = stats;
   if (stats) {
@@ -3229,36 +3229,36 @@ inline void CommandReply::set_allocated_stats(::censys_definitions::ServerStatis
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.CommandReply.stats)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CommandReply.stats)
 }
 
-// repeated .censys_definitions.PruneStatistics prune_statistics = 4;
+// repeated .zsearch.PruneStatistics prune_statistics = 4;
 inline int CommandReply::prune_statistics_size() const {
   return prune_statistics_.size();
 }
 inline void CommandReply::clear_prune_statistics() {
   prune_statistics_.Clear();
 }
-inline const ::censys_definitions::PruneStatistics& CommandReply::prune_statistics(int index) const {
-  // @@protoc_insertion_point(field_get:censys_definitions.CommandReply.prune_statistics)
+inline const ::zsearch::PruneStatistics& CommandReply::prune_statistics(int index) const {
+  // @@protoc_insertion_point(field_get:zsearch.CommandReply.prune_statistics)
   return prune_statistics_.Get(index);
 }
-inline ::censys_definitions::PruneStatistics* CommandReply::mutable_prune_statistics(int index) {
-  // @@protoc_insertion_point(field_mutable:censys_definitions.CommandReply.prune_statistics)
+inline ::zsearch::PruneStatistics* CommandReply::mutable_prune_statistics(int index) {
+  // @@protoc_insertion_point(field_mutable:zsearch.CommandReply.prune_statistics)
   return prune_statistics_.Mutable(index);
 }
-inline ::censys_definitions::PruneStatistics* CommandReply::add_prune_statistics() {
-  // @@protoc_insertion_point(field_add:censys_definitions.CommandReply.prune_statistics)
+inline ::zsearch::PruneStatistics* CommandReply::add_prune_statistics() {
+  // @@protoc_insertion_point(field_add:zsearch.CommandReply.prune_statistics)
   return prune_statistics_.Add();
 }
-inline ::google::protobuf::RepeatedPtrField< ::censys_definitions::PruneStatistics >*
+inline ::google::protobuf::RepeatedPtrField< ::zsearch::PruneStatistics >*
 CommandReply::mutable_prune_statistics() {
-  // @@protoc_insertion_point(field_mutable_list:censys_definitions.CommandReply.prune_statistics)
+  // @@protoc_insertion_point(field_mutable_list:zsearch.CommandReply.prune_statistics)
   return &prune_statistics_;
 }
-inline const ::google::protobuf::RepeatedPtrField< ::censys_definitions::PruneStatistics >&
+inline const ::google::protobuf::RepeatedPtrField< ::zsearch::PruneStatistics >&
 CommandReply::prune_statistics() const {
-  // @@protoc_insertion_point(field_list:censys_definitions.CommandReply.prune_statistics)
+  // @@protoc_insertion_point(field_list:zsearch.CommandReply.prune_statistics)
   return prune_statistics_;
 }
 
@@ -3271,13 +3271,13 @@ inline void HostQuery::clear_ip() {
   ip_ = 0u;
 }
 inline ::google::protobuf::uint32 HostQuery::ip() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.HostQuery.ip)
+  // @@protoc_insertion_point(field_get:zsearch.HostQuery.ip)
   return ip_;
 }
 inline void HostQuery::set_ip(::google::protobuf::uint32 value) {
   
   ip_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.HostQuery.ip)
+  // @@protoc_insertion_point(field_set:zsearch.HostQuery.ip)
 }
 
 // string domain = 2;
@@ -3285,40 +3285,40 @@ inline void HostQuery::clear_domain() {
   domain_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& HostQuery::domain() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.HostQuery.domain)
+  // @@protoc_insertion_point(field_get:zsearch.HostQuery.domain)
   return domain_.GetNoArena();
 }
 inline void HostQuery::set_domain(const ::std::string& value) {
   
   domain_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:censys_definitions.HostQuery.domain)
+  // @@protoc_insertion_point(field_set:zsearch.HostQuery.domain)
 }
 #if LANG_CXX11
 inline void HostQuery::set_domain(::std::string&& value) {
   
   domain_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:censys_definitions.HostQuery.domain)
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.HostQuery.domain)
 }
 #endif
 inline void HostQuery::set_domain(const char* value) {
   
   domain_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:censys_definitions.HostQuery.domain)
+  // @@protoc_insertion_point(field_set_char:zsearch.HostQuery.domain)
 }
 inline void HostQuery::set_domain(const char* value, size_t size) {
   
   domain_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.HostQuery.domain)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.HostQuery.domain)
 }
 inline ::std::string* HostQuery::mutable_domain() {
   
-  // @@protoc_insertion_point(field_mutable:censys_definitions.HostQuery.domain)
+  // @@protoc_insertion_point(field_mutable:zsearch.HostQuery.domain)
   return domain_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* HostQuery::release_domain() {
-  // @@protoc_insertion_point(field_release:censys_definitions.HostQuery.domain)
+  // @@protoc_insertion_point(field_release:zsearch.HostQuery.domain)
   
   return domain_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -3329,7 +3329,7 @@ inline void HostQuery::set_allocated_domain(::std::string* domain) {
     
   }
   domain_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), domain);
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.HostQuery.domain)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.HostQuery.domain)
 }
 
 // uint32 port = 3;
@@ -3337,13 +3337,13 @@ inline void HostQuery::clear_port() {
   port_ = 0u;
 }
 inline ::google::protobuf::uint32 HostQuery::port() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.HostQuery.port)
+  // @@protoc_insertion_point(field_get:zsearch.HostQuery.port)
   return port_;
 }
 inline void HostQuery::set_port(::google::protobuf::uint32 value) {
   
   port_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.HostQuery.port)
+  // @@protoc_insertion_point(field_set:zsearch.HostQuery.port)
 }
 
 // uint32 protocol = 4;
@@ -3351,13 +3351,13 @@ inline void HostQuery::clear_protocol() {
   protocol_ = 0u;
 }
 inline ::google::protobuf::uint32 HostQuery::protocol() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.HostQuery.protocol)
+  // @@protoc_insertion_point(field_get:zsearch.HostQuery.protocol)
   return protocol_;
 }
 inline void HostQuery::set_protocol(::google::protobuf::uint32 value) {
   
   protocol_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.HostQuery.protocol)
+  // @@protoc_insertion_point(field_set:zsearch.HostQuery.protocol)
 }
 
 // uint32 subprotocol = 5;
@@ -3365,13 +3365,13 @@ inline void HostQuery::clear_subprotocol() {
   subprotocol_ = 0u;
 }
 inline ::google::protobuf::uint32 HostQuery::subprotocol() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.HostQuery.subprotocol)
+  // @@protoc_insertion_point(field_get:zsearch.HostQuery.subprotocol)
   return subprotocol_;
 }
 inline void HostQuery::set_subprotocol(::google::protobuf::uint32 value) {
   
   subprotocol_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.HostQuery.subprotocol)
+  // @@protoc_insertion_point(field_set:zsearch.HostQuery.subprotocol)
 }
 
 // uint32 max_records = 6;
@@ -3379,31 +3379,31 @@ inline void HostQuery::clear_max_records() {
   max_records_ = 0u;
 }
 inline ::google::protobuf::uint32 HostQuery::max_records() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.HostQuery.max_records)
+  // @@protoc_insertion_point(field_get:zsearch.HostQuery.max_records)
   return max_records_;
 }
 inline void HostQuery::set_max_records(::google::protobuf::uint32 value) {
   
   max_records_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.HostQuery.max_records)
+  // @@protoc_insertion_point(field_set:zsearch.HostQuery.max_records)
 }
 
 // -------------------------------------------------------------------
 
 // HostQueryResponse
 
-// .censys_definitions.HostQueryResponse.ResponseStatus status = 1;
+// .zsearch.HostQueryResponse.ResponseStatus status = 1;
 inline void HostQueryResponse::clear_status() {
   status_ = 0;
 }
-inline ::censys_definitions::HostQueryResponse_ResponseStatus HostQueryResponse::status() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.HostQueryResponse.status)
-  return static_cast< ::censys_definitions::HostQueryResponse_ResponseStatus >(status_);
+inline ::zsearch::HostQueryResponse_ResponseStatus HostQueryResponse::status() const {
+  // @@protoc_insertion_point(field_get:zsearch.HostQueryResponse.status)
+  return static_cast< ::zsearch::HostQueryResponse_ResponseStatus >(status_);
 }
-inline void HostQueryResponse::set_status(::censys_definitions::HostQueryResponse_ResponseStatus value) {
+inline void HostQueryResponse::set_status(::zsearch::HostQueryResponse_ResponseStatus value) {
   
   status_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.HostQueryResponse.status)
+  // @@protoc_insertion_point(field_set:zsearch.HostQueryResponse.status)
 }
 
 // fixed32 ip = 2;
@@ -3411,13 +3411,13 @@ inline void HostQueryResponse::clear_ip() {
   ip_ = 0u;
 }
 inline ::google::protobuf::uint32 HostQueryResponse::ip() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.HostQueryResponse.ip)
+  // @@protoc_insertion_point(field_get:zsearch.HostQueryResponse.ip)
   return ip_;
 }
 inline void HostQueryResponse::set_ip(::google::protobuf::uint32 value) {
   
   ip_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.HostQueryResponse.ip)
+  // @@protoc_insertion_point(field_set:zsearch.HostQueryResponse.ip)
 }
 
 // string domain = 3;
@@ -3425,40 +3425,40 @@ inline void HostQueryResponse::clear_domain() {
   domain_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& HostQueryResponse::domain() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.HostQueryResponse.domain)
+  // @@protoc_insertion_point(field_get:zsearch.HostQueryResponse.domain)
   return domain_.GetNoArena();
 }
 inline void HostQueryResponse::set_domain(const ::std::string& value) {
   
   domain_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:censys_definitions.HostQueryResponse.domain)
+  // @@protoc_insertion_point(field_set:zsearch.HostQueryResponse.domain)
 }
 #if LANG_CXX11
 inline void HostQueryResponse::set_domain(::std::string&& value) {
   
   domain_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:censys_definitions.HostQueryResponse.domain)
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.HostQueryResponse.domain)
 }
 #endif
 inline void HostQueryResponse::set_domain(const char* value) {
   
   domain_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:censys_definitions.HostQueryResponse.domain)
+  // @@protoc_insertion_point(field_set_char:zsearch.HostQueryResponse.domain)
 }
 inline void HostQueryResponse::set_domain(const char* value, size_t size) {
   
   domain_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.HostQueryResponse.domain)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.HostQueryResponse.domain)
 }
 inline ::std::string* HostQueryResponse::mutable_domain() {
   
-  // @@protoc_insertion_point(field_mutable:censys_definitions.HostQueryResponse.domain)
+  // @@protoc_insertion_point(field_mutable:zsearch.HostQueryResponse.domain)
   return domain_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* HostQueryResponse::release_domain() {
-  // @@protoc_insertion_point(field_release:censys_definitions.HostQueryResponse.domain)
+  // @@protoc_insertion_point(field_release:zsearch.HostQueryResponse.domain)
   
   return domain_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -3469,7 +3469,7 @@ inline void HostQueryResponse::set_allocated_domain(::std::string* domain) {
     
   }
   domain_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), domain);
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.HostQueryResponse.domain)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.HostQueryResponse.domain)
 }
 
 // uint32 port = 4;
@@ -3477,13 +3477,13 @@ inline void HostQueryResponse::clear_port() {
   port_ = 0u;
 }
 inline ::google::protobuf::uint32 HostQueryResponse::port() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.HostQueryResponse.port)
+  // @@protoc_insertion_point(field_get:zsearch.HostQueryResponse.port)
   return port_;
 }
 inline void HostQueryResponse::set_port(::google::protobuf::uint32 value) {
   
   port_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.HostQueryResponse.port)
+  // @@protoc_insertion_point(field_set:zsearch.HostQueryResponse.port)
 }
 
 // uint32 protocol = 5;
@@ -3491,13 +3491,13 @@ inline void HostQueryResponse::clear_protocol() {
   protocol_ = 0u;
 }
 inline ::google::protobuf::uint32 HostQueryResponse::protocol() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.HostQueryResponse.protocol)
+  // @@protoc_insertion_point(field_get:zsearch.HostQueryResponse.protocol)
   return protocol_;
 }
 inline void HostQueryResponse::set_protocol(::google::protobuf::uint32 value) {
   
   protocol_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.HostQueryResponse.protocol)
+  // @@protoc_insertion_point(field_set:zsearch.HostQueryResponse.protocol)
 }
 
 // uint32 subprotocol = 6;
@@ -3505,16 +3505,16 @@ inline void HostQueryResponse::clear_subprotocol() {
   subprotocol_ = 0u;
 }
 inline ::google::protobuf::uint32 HostQueryResponse::subprotocol() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.HostQueryResponse.subprotocol)
+  // @@protoc_insertion_point(field_get:zsearch.HostQueryResponse.subprotocol)
   return subprotocol_;
 }
 inline void HostQueryResponse::set_subprotocol(::google::protobuf::uint32 value) {
   
   subprotocol_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.HostQueryResponse.subprotocol)
+  // @@protoc_insertion_point(field_set:zsearch.HostQueryResponse.subprotocol)
 }
 
-// .censys_definitions.Record record = 7;
+// .zsearch.Record record = 7;
 inline bool HostQueryResponse::has_record() const {
   return this != internal_default_instance() && record_ != NULL;
 }
@@ -3522,27 +3522,27 @@ inline void HostQueryResponse::clear_record() {
   if (GetArenaNoVirtual() == NULL && record_ != NULL) delete record_;
   record_ = NULL;
 }
-inline const ::censys_definitions::Record& HostQueryResponse::record() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.HostQueryResponse.record)
+inline const ::zsearch::Record& HostQueryResponse::record() const {
+  // @@protoc_insertion_point(field_get:zsearch.HostQueryResponse.record)
   return record_ != NULL ? *record_
-                         : *::censys_definitions::Record::internal_default_instance();
+                         : *::zsearch::Record::internal_default_instance();
 }
-inline ::censys_definitions::Record* HostQueryResponse::mutable_record() {
+inline ::zsearch::Record* HostQueryResponse::mutable_record() {
   
   if (record_ == NULL) {
-    record_ = new ::censys_definitions::Record;
+    record_ = new ::zsearch::Record;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.HostQueryResponse.record)
+  // @@protoc_insertion_point(field_mutable:zsearch.HostQueryResponse.record)
   return record_;
 }
-inline ::censys_definitions::Record* HostQueryResponse::release_record() {
-  // @@protoc_insertion_point(field_release:censys_definitions.HostQueryResponse.record)
+inline ::zsearch::Record* HostQueryResponse::release_record() {
+  // @@protoc_insertion_point(field_release:zsearch.HostQueryResponse.record)
   
-  ::censys_definitions::Record* temp = record_;
+  ::zsearch::Record* temp = record_;
   record_ = NULL;
   return temp;
 }
-inline void HostQueryResponse::set_allocated_record(::censys_definitions::Record* record) {
+inline void HostQueryResponse::set_allocated_record(::zsearch::Record* record) {
   delete record_;
   record_ = record;
   if (record) {
@@ -3550,36 +3550,36 @@ inline void HostQueryResponse::set_allocated_record(::censys_definitions::Record
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.HostQueryResponse.record)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.HostQueryResponse.record)
 }
 
-// repeated .censys_definitions.Record records = 8;
+// repeated .zsearch.Record records = 8;
 inline int HostQueryResponse::records_size() const {
   return records_.size();
 }
 inline void HostQueryResponse::clear_records() {
   records_.Clear();
 }
-inline const ::censys_definitions::Record& HostQueryResponse::records(int index) const {
-  // @@protoc_insertion_point(field_get:censys_definitions.HostQueryResponse.records)
+inline const ::zsearch::Record& HostQueryResponse::records(int index) const {
+  // @@protoc_insertion_point(field_get:zsearch.HostQueryResponse.records)
   return records_.Get(index);
 }
-inline ::censys_definitions::Record* HostQueryResponse::mutable_records(int index) {
-  // @@protoc_insertion_point(field_mutable:censys_definitions.HostQueryResponse.records)
+inline ::zsearch::Record* HostQueryResponse::mutable_records(int index) {
+  // @@protoc_insertion_point(field_mutable:zsearch.HostQueryResponse.records)
   return records_.Mutable(index);
 }
-inline ::censys_definitions::Record* HostQueryResponse::add_records() {
-  // @@protoc_insertion_point(field_add:censys_definitions.HostQueryResponse.records)
+inline ::zsearch::Record* HostQueryResponse::add_records() {
+  // @@protoc_insertion_point(field_add:zsearch.HostQueryResponse.records)
   return records_.Add();
 }
-inline ::google::protobuf::RepeatedPtrField< ::censys_definitions::Record >*
+inline ::google::protobuf::RepeatedPtrField< ::zsearch::Record >*
 HostQueryResponse::mutable_records() {
-  // @@protoc_insertion_point(field_mutable_list:censys_definitions.HostQueryResponse.records)
+  // @@protoc_insertion_point(field_mutable_list:zsearch.HostQueryResponse.records)
   return &records_;
 }
-inline const ::google::protobuf::RepeatedPtrField< ::censys_definitions::Record >&
+inline const ::google::protobuf::RepeatedPtrField< ::zsearch::Record >&
 HostQueryResponse::records() const {
-  // @@protoc_insertion_point(field_list:censys_definitions.HostQueryResponse.records)
+  // @@protoc_insertion_point(field_list:zsearch.HostQueryResponse.records)
   return records_;
 }
 
@@ -3588,40 +3588,40 @@ inline void HostQueryResponse::clear_error() {
   error_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& HostQueryResponse::error() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.HostQueryResponse.error)
+  // @@protoc_insertion_point(field_get:zsearch.HostQueryResponse.error)
   return error_.GetNoArena();
 }
 inline void HostQueryResponse::set_error(const ::std::string& value) {
   
   error_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:censys_definitions.HostQueryResponse.error)
+  // @@protoc_insertion_point(field_set:zsearch.HostQueryResponse.error)
 }
 #if LANG_CXX11
 inline void HostQueryResponse::set_error(::std::string&& value) {
   
   error_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:censys_definitions.HostQueryResponse.error)
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.HostQueryResponse.error)
 }
 #endif
 inline void HostQueryResponse::set_error(const char* value) {
   
   error_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:censys_definitions.HostQueryResponse.error)
+  // @@protoc_insertion_point(field_set_char:zsearch.HostQueryResponse.error)
 }
 inline void HostQueryResponse::set_error(const char* value, size_t size) {
   
   error_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.HostQueryResponse.error)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.HostQueryResponse.error)
 }
 inline ::std::string* HostQueryResponse::mutable_error() {
   
-  // @@protoc_insertion_point(field_mutable:censys_definitions.HostQueryResponse.error)
+  // @@protoc_insertion_point(field_mutable:zsearch.HostQueryResponse.error)
   return error_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* HostQueryResponse::release_error() {
-  // @@protoc_insertion_point(field_release:censys_definitions.HostQueryResponse.error)
+  // @@protoc_insertion_point(field_release:zsearch.HostQueryResponse.error)
   
   return error_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -3632,7 +3632,7 @@ inline void HostQueryResponse::set_allocated_error(::std::string* error) {
     
   }
   error_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), error);
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.HostQueryResponse.error)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.HostQueryResponse.error)
 }
 
 // -------------------------------------------------------------------
@@ -3644,40 +3644,40 @@ inline void AnonymousQuery::clear_sha256fp() {
   sha256fp_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& AnonymousQuery::sha256fp() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.AnonymousQuery.sha256fp)
+  // @@protoc_insertion_point(field_get:zsearch.AnonymousQuery.sha256fp)
   return sha256fp_.GetNoArena();
 }
 inline void AnonymousQuery::set_sha256fp(const ::std::string& value) {
   
   sha256fp_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:censys_definitions.AnonymousQuery.sha256fp)
+  // @@protoc_insertion_point(field_set:zsearch.AnonymousQuery.sha256fp)
 }
 #if LANG_CXX11
 inline void AnonymousQuery::set_sha256fp(::std::string&& value) {
   
   sha256fp_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:censys_definitions.AnonymousQuery.sha256fp)
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.AnonymousQuery.sha256fp)
 }
 #endif
 inline void AnonymousQuery::set_sha256fp(const char* value) {
   
   sha256fp_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:censys_definitions.AnonymousQuery.sha256fp)
+  // @@protoc_insertion_point(field_set_char:zsearch.AnonymousQuery.sha256fp)
 }
 inline void AnonymousQuery::set_sha256fp(const void* value, size_t size) {
   
   sha256fp_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.AnonymousQuery.sha256fp)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.AnonymousQuery.sha256fp)
 }
 inline ::std::string* AnonymousQuery::mutable_sha256fp() {
   
-  // @@protoc_insertion_point(field_mutable:censys_definitions.AnonymousQuery.sha256fp)
+  // @@protoc_insertion_point(field_mutable:zsearch.AnonymousQuery.sha256fp)
   return sha256fp_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* AnonymousQuery::release_sha256fp() {
-  // @@protoc_insertion_point(field_release:censys_definitions.AnonymousQuery.sha256fp)
+  // @@protoc_insertion_point(field_release:zsearch.AnonymousQuery.sha256fp)
   
   return sha256fp_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -3688,7 +3688,7 @@ inline void AnonymousQuery::set_allocated_sha256fp(::std::string* sha256fp) {
     
   }
   sha256fp_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), sha256fp);
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.AnonymousQuery.sha256fp)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.AnonymousQuery.sha256fp)
 }
 
 // -------------------------------------------------------------------
@@ -3700,40 +3700,40 @@ inline void AnonymousQueryResponse::clear_sha256fp() {
   sha256fp_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& AnonymousQueryResponse::sha256fp() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.AnonymousQueryResponse.sha256fp)
+  // @@protoc_insertion_point(field_get:zsearch.AnonymousQueryResponse.sha256fp)
   return sha256fp_.GetNoArena();
 }
 inline void AnonymousQueryResponse::set_sha256fp(const ::std::string& value) {
   
   sha256fp_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:censys_definitions.AnonymousQueryResponse.sha256fp)
+  // @@protoc_insertion_point(field_set:zsearch.AnonymousQueryResponse.sha256fp)
 }
 #if LANG_CXX11
 inline void AnonymousQueryResponse::set_sha256fp(::std::string&& value) {
   
   sha256fp_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:censys_definitions.AnonymousQueryResponse.sha256fp)
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.AnonymousQueryResponse.sha256fp)
 }
 #endif
 inline void AnonymousQueryResponse::set_sha256fp(const char* value) {
   
   sha256fp_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:censys_definitions.AnonymousQueryResponse.sha256fp)
+  // @@protoc_insertion_point(field_set_char:zsearch.AnonymousQueryResponse.sha256fp)
 }
 inline void AnonymousQueryResponse::set_sha256fp(const void* value, size_t size) {
   
   sha256fp_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.AnonymousQueryResponse.sha256fp)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.AnonymousQueryResponse.sha256fp)
 }
 inline ::std::string* AnonymousQueryResponse::mutable_sha256fp() {
   
-  // @@protoc_insertion_point(field_mutable:censys_definitions.AnonymousQueryResponse.sha256fp)
+  // @@protoc_insertion_point(field_mutable:zsearch.AnonymousQueryResponse.sha256fp)
   return sha256fp_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* AnonymousQueryResponse::release_sha256fp() {
-  // @@protoc_insertion_point(field_release:censys_definitions.AnonymousQueryResponse.sha256fp)
+  // @@protoc_insertion_point(field_release:zsearch.AnonymousQueryResponse.sha256fp)
   
   return sha256fp_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -3744,24 +3744,24 @@ inline void AnonymousQueryResponse::set_allocated_sha256fp(::std::string* sha256
     
   }
   sha256fp_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), sha256fp);
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.AnonymousQueryResponse.sha256fp)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.AnonymousQueryResponse.sha256fp)
 }
 
-// .censys_definitions.AnonymousQueryResponse.ResponseStatus status = 2;
+// .zsearch.AnonymousQueryResponse.ResponseStatus status = 2;
 inline void AnonymousQueryResponse::clear_status() {
   status_ = 0;
 }
-inline ::censys_definitions::AnonymousQueryResponse_ResponseStatus AnonymousQueryResponse::status() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.AnonymousQueryResponse.status)
-  return static_cast< ::censys_definitions::AnonymousQueryResponse_ResponseStatus >(status_);
+inline ::zsearch::AnonymousQueryResponse_ResponseStatus AnonymousQueryResponse::status() const {
+  // @@protoc_insertion_point(field_get:zsearch.AnonymousQueryResponse.status)
+  return static_cast< ::zsearch::AnonymousQueryResponse_ResponseStatus >(status_);
 }
-inline void AnonymousQueryResponse::set_status(::censys_definitions::AnonymousQueryResponse_ResponseStatus value) {
+inline void AnonymousQueryResponse::set_status(::zsearch::AnonymousQueryResponse_ResponseStatus value) {
   
   status_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.AnonymousQueryResponse.status)
+  // @@protoc_insertion_point(field_set:zsearch.AnonymousQueryResponse.status)
 }
 
-// .censys_definitions.AnonymousRecord record = 3;
+// .zsearch.AnonymousRecord record = 3;
 inline bool AnonymousQueryResponse::has_record() const {
   return this != internal_default_instance() && record_ != NULL;
 }
@@ -3769,27 +3769,27 @@ inline void AnonymousQueryResponse::clear_record() {
   if (GetArenaNoVirtual() == NULL && record_ != NULL) delete record_;
   record_ = NULL;
 }
-inline const ::censys_definitions::AnonymousRecord& AnonymousQueryResponse::record() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.AnonymousQueryResponse.record)
+inline const ::zsearch::AnonymousRecord& AnonymousQueryResponse::record() const {
+  // @@protoc_insertion_point(field_get:zsearch.AnonymousQueryResponse.record)
   return record_ != NULL ? *record_
-                         : *::censys_definitions::AnonymousRecord::internal_default_instance();
+                         : *::zsearch::AnonymousRecord::internal_default_instance();
 }
-inline ::censys_definitions::AnonymousRecord* AnonymousQueryResponse::mutable_record() {
+inline ::zsearch::AnonymousRecord* AnonymousQueryResponse::mutable_record() {
   
   if (record_ == NULL) {
-    record_ = new ::censys_definitions::AnonymousRecord;
+    record_ = new ::zsearch::AnonymousRecord;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.AnonymousQueryResponse.record)
+  // @@protoc_insertion_point(field_mutable:zsearch.AnonymousQueryResponse.record)
   return record_;
 }
-inline ::censys_definitions::AnonymousRecord* AnonymousQueryResponse::release_record() {
-  // @@protoc_insertion_point(field_release:censys_definitions.AnonymousQueryResponse.record)
+inline ::zsearch::AnonymousRecord* AnonymousQueryResponse::release_record() {
+  // @@protoc_insertion_point(field_release:zsearch.AnonymousQueryResponse.record)
   
-  ::censys_definitions::AnonymousRecord* temp = record_;
+  ::zsearch::AnonymousRecord* temp = record_;
   record_ = NULL;
   return temp;
 }
-inline void AnonymousQueryResponse::set_allocated_record(::censys_definitions::AnonymousRecord* record) {
+inline void AnonymousQueryResponse::set_allocated_record(::zsearch::AnonymousRecord* record) {
   delete record_;
   record_ = record;
   if (record) {
@@ -3797,36 +3797,36 @@ inline void AnonymousQueryResponse::set_allocated_record(::censys_definitions::A
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.AnonymousQueryResponse.record)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.AnonymousQueryResponse.record)
 }
 
-// repeated .censys_definitions.AnonymousRecord records = 4;
+// repeated .zsearch.AnonymousRecord records = 4;
 inline int AnonymousQueryResponse::records_size() const {
   return records_.size();
 }
 inline void AnonymousQueryResponse::clear_records() {
   records_.Clear();
 }
-inline const ::censys_definitions::AnonymousRecord& AnonymousQueryResponse::records(int index) const {
-  // @@protoc_insertion_point(field_get:censys_definitions.AnonymousQueryResponse.records)
+inline const ::zsearch::AnonymousRecord& AnonymousQueryResponse::records(int index) const {
+  // @@protoc_insertion_point(field_get:zsearch.AnonymousQueryResponse.records)
   return records_.Get(index);
 }
-inline ::censys_definitions::AnonymousRecord* AnonymousQueryResponse::mutable_records(int index) {
-  // @@protoc_insertion_point(field_mutable:censys_definitions.AnonymousQueryResponse.records)
+inline ::zsearch::AnonymousRecord* AnonymousQueryResponse::mutable_records(int index) {
+  // @@protoc_insertion_point(field_mutable:zsearch.AnonymousQueryResponse.records)
   return records_.Mutable(index);
 }
-inline ::censys_definitions::AnonymousRecord* AnonymousQueryResponse::add_records() {
-  // @@protoc_insertion_point(field_add:censys_definitions.AnonymousQueryResponse.records)
+inline ::zsearch::AnonymousRecord* AnonymousQueryResponse::add_records() {
+  // @@protoc_insertion_point(field_add:zsearch.AnonymousQueryResponse.records)
   return records_.Add();
 }
-inline ::google::protobuf::RepeatedPtrField< ::censys_definitions::AnonymousRecord >*
+inline ::google::protobuf::RepeatedPtrField< ::zsearch::AnonymousRecord >*
 AnonymousQueryResponse::mutable_records() {
-  // @@protoc_insertion_point(field_mutable_list:censys_definitions.AnonymousQueryResponse.records)
+  // @@protoc_insertion_point(field_mutable_list:zsearch.AnonymousQueryResponse.records)
   return &records_;
 }
-inline const ::google::protobuf::RepeatedPtrField< ::censys_definitions::AnonymousRecord >&
+inline const ::google::protobuf::RepeatedPtrField< ::zsearch::AnonymousRecord >&
 AnonymousQueryResponse::records() const {
-  // @@protoc_insertion_point(field_list:censys_definitions.AnonymousQueryResponse.records)
+  // @@protoc_insertion_point(field_list:zsearch.AnonymousQueryResponse.records)
   return records_;
 }
 
@@ -3835,40 +3835,40 @@ inline void AnonymousQueryResponse::clear_error() {
   error_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& AnonymousQueryResponse::error() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.AnonymousQueryResponse.error)
+  // @@protoc_insertion_point(field_get:zsearch.AnonymousQueryResponse.error)
   return error_.GetNoArena();
 }
 inline void AnonymousQueryResponse::set_error(const ::std::string& value) {
   
   error_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:censys_definitions.AnonymousQueryResponse.error)
+  // @@protoc_insertion_point(field_set:zsearch.AnonymousQueryResponse.error)
 }
 #if LANG_CXX11
 inline void AnonymousQueryResponse::set_error(::std::string&& value) {
   
   error_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:censys_definitions.AnonymousQueryResponse.error)
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.AnonymousQueryResponse.error)
 }
 #endif
 inline void AnonymousQueryResponse::set_error(const char* value) {
   
   error_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:censys_definitions.AnonymousQueryResponse.error)
+  // @@protoc_insertion_point(field_set_char:zsearch.AnonymousQueryResponse.error)
 }
 inline void AnonymousQueryResponse::set_error(const char* value, size_t size) {
   
   error_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.AnonymousQueryResponse.error)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.AnonymousQueryResponse.error)
 }
 inline ::std::string* AnonymousQueryResponse::mutable_error() {
   
-  // @@protoc_insertion_point(field_mutable:censys_definitions.AnonymousQueryResponse.error)
+  // @@protoc_insertion_point(field_mutable:zsearch.AnonymousQueryResponse.error)
   return error_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* AnonymousQueryResponse::release_error() {
-  // @@protoc_insertion_point(field_release:censys_definitions.AnonymousQueryResponse.error)
+  // @@protoc_insertion_point(field_release:zsearch.AnonymousQueryResponse.error)
   
   return error_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -3879,7 +3879,7 @@ inline void AnonymousQueryResponse::set_allocated_error(::std::string* error) {
     
   }
   error_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), error);
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.AnonymousQueryResponse.error)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.AnonymousQueryResponse.error)
 }
 
 // -------------------------------------------------------------------
@@ -3891,13 +3891,13 @@ inline void UserDataRequest::clear_ip() {
   ip_ = 0u;
 }
 inline ::google::protobuf::uint32 UserDataRequest::ip() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.UserDataRequest.ip)
+  // @@protoc_insertion_point(field_get:zsearch.UserDataRequest.ip)
   return ip_;
 }
 inline void UserDataRequest::set_ip(::google::protobuf::uint32 value) {
   
   ip_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.UserDataRequest.ip)
+  // @@protoc_insertion_point(field_set:zsearch.UserDataRequest.ip)
 }
 
 // string domain = 2;
@@ -3905,40 +3905,40 @@ inline void UserDataRequest::clear_domain() {
   domain_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& UserDataRequest::domain() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.UserDataRequest.domain)
+  // @@protoc_insertion_point(field_get:zsearch.UserDataRequest.domain)
   return domain_.GetNoArena();
 }
 inline void UserDataRequest::set_domain(const ::std::string& value) {
   
   domain_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:censys_definitions.UserDataRequest.domain)
+  // @@protoc_insertion_point(field_set:zsearch.UserDataRequest.domain)
 }
 #if LANG_CXX11
 inline void UserDataRequest::set_domain(::std::string&& value) {
   
   domain_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:censys_definitions.UserDataRequest.domain)
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.UserDataRequest.domain)
 }
 #endif
 inline void UserDataRequest::set_domain(const char* value) {
   
   domain_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:censys_definitions.UserDataRequest.domain)
+  // @@protoc_insertion_point(field_set_char:zsearch.UserDataRequest.domain)
 }
 inline void UserDataRequest::set_domain(const char* value, size_t size) {
   
   domain_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:censys_definitions.UserDataRequest.domain)
+  // @@protoc_insertion_point(field_set_pointer:zsearch.UserDataRequest.domain)
 }
 inline ::std::string* UserDataRequest::mutable_domain() {
   
-  // @@protoc_insertion_point(field_mutable:censys_definitions.UserDataRequest.domain)
+  // @@protoc_insertion_point(field_mutable:zsearch.UserDataRequest.domain)
   return domain_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* UserDataRequest::release_domain() {
-  // @@protoc_insertion_point(field_release:censys_definitions.UserDataRequest.domain)
+  // @@protoc_insertion_point(field_release:zsearch.UserDataRequest.domain)
   
   return domain_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -3949,10 +3949,10 @@ inline void UserDataRequest::set_allocated_domain(::std::string* domain) {
     
   }
   domain_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), domain);
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.UserDataRequest.domain)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.UserDataRequest.domain)
 }
 
-// .censys_definitions.UserdataAtom data = 3;
+// .zsearch.UserdataAtom data = 3;
 inline bool UserDataRequest::has_data() const {
   return this != internal_default_instance() && data_ != NULL;
 }
@@ -3960,27 +3960,27 @@ inline void UserDataRequest::clear_data() {
   if (GetArenaNoVirtual() == NULL && data_ != NULL) delete data_;
   data_ = NULL;
 }
-inline const ::censys_definitions::UserdataAtom& UserDataRequest::data() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.UserDataRequest.data)
+inline const ::zsearch::UserdataAtom& UserDataRequest::data() const {
+  // @@protoc_insertion_point(field_get:zsearch.UserDataRequest.data)
   return data_ != NULL ? *data_
-                         : *::censys_definitions::UserdataAtom::internal_default_instance();
+                         : *::zsearch::UserdataAtom::internal_default_instance();
 }
-inline ::censys_definitions::UserdataAtom* UserDataRequest::mutable_data() {
+inline ::zsearch::UserdataAtom* UserDataRequest::mutable_data() {
   
   if (data_ == NULL) {
-    data_ = new ::censys_definitions::UserdataAtom;
+    data_ = new ::zsearch::UserdataAtom;
   }
-  // @@protoc_insertion_point(field_mutable:censys_definitions.UserDataRequest.data)
+  // @@protoc_insertion_point(field_mutable:zsearch.UserDataRequest.data)
   return data_;
 }
-inline ::censys_definitions::UserdataAtom* UserDataRequest::release_data() {
-  // @@protoc_insertion_point(field_release:censys_definitions.UserDataRequest.data)
+inline ::zsearch::UserdataAtom* UserDataRequest::release_data() {
+  // @@protoc_insertion_point(field_release:zsearch.UserDataRequest.data)
   
-  ::censys_definitions::UserdataAtom* temp = data_;
+  ::zsearch::UserdataAtom* temp = data_;
   data_ = NULL;
   return temp;
 }
-inline void UserDataRequest::set_allocated_data(::censys_definitions::UserdataAtom* data) {
+inline void UserDataRequest::set_allocated_data(::zsearch::UserdataAtom* data) {
   delete data_;
   data_ = data;
   if (data) {
@@ -3988,58 +3988,58 @@ inline void UserDataRequest::set_allocated_data(::censys_definitions::UserdataAt
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:censys_definitions.UserDataRequest.data)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.UserDataRequest.data)
 }
 
 // -------------------------------------------------------------------
 
 // RootStoreQuery
 
-// .censys_definitions.RootStoreQuery.RootStoreQueryType type = 1;
+// .zsearch.RootStoreQuery.RootStoreQueryType type = 1;
 inline void RootStoreQuery::clear_type() {
   type_ = 0;
 }
-inline ::censys_definitions::RootStoreQuery_RootStoreQueryType RootStoreQuery::type() const {
-  // @@protoc_insertion_point(field_get:censys_definitions.RootStoreQuery.type)
-  return static_cast< ::censys_definitions::RootStoreQuery_RootStoreQueryType >(type_);
+inline ::zsearch::RootStoreQuery_RootStoreQueryType RootStoreQuery::type() const {
+  // @@protoc_insertion_point(field_get:zsearch.RootStoreQuery.type)
+  return static_cast< ::zsearch::RootStoreQuery_RootStoreQueryType >(type_);
 }
-inline void RootStoreQuery::set_type(::censys_definitions::RootStoreQuery_RootStoreQueryType value) {
+inline void RootStoreQuery::set_type(::zsearch::RootStoreQuery_RootStoreQueryType value) {
   
   type_ = value;
-  // @@protoc_insertion_point(field_set:censys_definitions.RootStoreQuery.type)
+  // @@protoc_insertion_point(field_set:zsearch.RootStoreQuery.type)
 }
 
 // -------------------------------------------------------------------
 
 // RootStoreReply
 
-// repeated .censys_definitions.Certificate certificates = 1;
+// repeated .zsearch.Certificate certificates = 1;
 inline int RootStoreReply::certificates_size() const {
   return certificates_.size();
 }
 inline void RootStoreReply::clear_certificates() {
   certificates_.Clear();
 }
-inline const ::censys_definitions::Certificate& RootStoreReply::certificates(int index) const {
-  // @@protoc_insertion_point(field_get:censys_definitions.RootStoreReply.certificates)
+inline const ::zsearch::Certificate& RootStoreReply::certificates(int index) const {
+  // @@protoc_insertion_point(field_get:zsearch.RootStoreReply.certificates)
   return certificates_.Get(index);
 }
-inline ::censys_definitions::Certificate* RootStoreReply::mutable_certificates(int index) {
-  // @@protoc_insertion_point(field_mutable:censys_definitions.RootStoreReply.certificates)
+inline ::zsearch::Certificate* RootStoreReply::mutable_certificates(int index) {
+  // @@protoc_insertion_point(field_mutable:zsearch.RootStoreReply.certificates)
   return certificates_.Mutable(index);
 }
-inline ::censys_definitions::Certificate* RootStoreReply::add_certificates() {
-  // @@protoc_insertion_point(field_add:censys_definitions.RootStoreReply.certificates)
+inline ::zsearch::Certificate* RootStoreReply::add_certificates() {
+  // @@protoc_insertion_point(field_add:zsearch.RootStoreReply.certificates)
   return certificates_.Add();
 }
-inline ::google::protobuf::RepeatedPtrField< ::censys_definitions::Certificate >*
+inline ::google::protobuf::RepeatedPtrField< ::zsearch::Certificate >*
 RootStoreReply::mutable_certificates() {
-  // @@protoc_insertion_point(field_mutable_list:censys_definitions.RootStoreReply.certificates)
+  // @@protoc_insertion_point(field_mutable_list:zsearch.RootStoreReply.certificates)
   return &certificates_;
 }
-inline const ::google::protobuf::RepeatedPtrField< ::censys_definitions::Certificate >&
+inline const ::google::protobuf::RepeatedPtrField< ::zsearch::Certificate >&
 RootStoreReply::certificates() const {
-  // @@protoc_insertion_point(field_list:censys_definitions.RootStoreReply.certificates)
+  // @@protoc_insertion_point(field_list:zsearch.RootStoreReply.certificates)
   return certificates_;
 }
 
@@ -4082,31 +4082,31 @@ RootStoreReply::certificates() const {
 // @@protoc_insertion_point(namespace_scope)
 
 
-}  // namespace censys_definitions
+}  // namespace zsearch
 
 #ifndef SWIG
 namespace google {
 namespace protobuf {
 
-template <> struct is_proto_enum< ::censys_definitions::CommandReply_CommandStatus> : ::google::protobuf::internal::true_type {};
+template <> struct is_proto_enum< ::zsearch::CommandReply_CommandStatus> : ::google::protobuf::internal::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::censys_definitions::CommandReply_CommandStatus>() {
-  return ::censys_definitions::CommandReply_CommandStatus_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::zsearch::CommandReply_CommandStatus>() {
+  return ::zsearch::CommandReply_CommandStatus_descriptor();
 }
-template <> struct is_proto_enum< ::censys_definitions::HostQueryResponse_ResponseStatus> : ::google::protobuf::internal::true_type {};
+template <> struct is_proto_enum< ::zsearch::HostQueryResponse_ResponseStatus> : ::google::protobuf::internal::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::censys_definitions::HostQueryResponse_ResponseStatus>() {
-  return ::censys_definitions::HostQueryResponse_ResponseStatus_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::zsearch::HostQueryResponse_ResponseStatus>() {
+  return ::zsearch::HostQueryResponse_ResponseStatus_descriptor();
 }
-template <> struct is_proto_enum< ::censys_definitions::AnonymousQueryResponse_ResponseStatus> : ::google::protobuf::internal::true_type {};
+template <> struct is_proto_enum< ::zsearch::AnonymousQueryResponse_ResponseStatus> : ::google::protobuf::internal::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::censys_definitions::AnonymousQueryResponse_ResponseStatus>() {
-  return ::censys_definitions::AnonymousQueryResponse_ResponseStatus_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::zsearch::AnonymousQueryResponse_ResponseStatus>() {
+  return ::zsearch::AnonymousQueryResponse_ResponseStatus_descriptor();
 }
-template <> struct is_proto_enum< ::censys_definitions::RootStoreQuery_RootStoreQueryType> : ::google::protobuf::internal::true_type {};
+template <> struct is_proto_enum< ::zsearch::RootStoreQuery_RootStoreQueryType> : ::google::protobuf::internal::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::censys_definitions::RootStoreQuery_RootStoreQueryType>() {
-  return ::censys_definitions::RootStoreQuery_RootStoreQueryType_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::zsearch::RootStoreQuery_RootStoreQueryType>() {
+  return ::zsearch::RootStoreQuery_RootStoreQueryType_descriptor();
 }
 
 }  // namespace protobuf

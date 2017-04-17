@@ -1,5 +1,5 @@
 syntax="proto3";
-package censys_definitions;
+package zsearch;
 
 enum LintResultStatus {
     LINT_RESULT_RESERVED = 0;

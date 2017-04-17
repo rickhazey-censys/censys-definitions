@@ -54,9 +54,9 @@ abs_all_inputs = abs_protobuf_inputs + abs_grpc_inputs
 
 def build_go():
     protoc_gen_go_cmd = which('protoc-gen-go')
-    go_directory = os.path.join(directory, 'go')
+    go_directory = os.path.join(os.path.join(directory, 'go'), 'censys-definitions')
     cd(proto_directory)
-    protoc("--go_out=plugins=grpc:" + go_directory, glob('*.proto'))
+    protoc("--go_out=plugins=grpc,import_path=censys_definitions:" + go_directory, glob('*.proto'))
 
 
 def build_python():

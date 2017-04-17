@@ -18,9 +18,9 @@ import common_pb2 as common__pb2
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='pubkey.proto',
-  package='censys_definitions',
+  package='zsearch',
   syntax='proto3',
-  serialized_pb=_b('\n\x0cpubkey.proto\x12\x12\x63\x65nsys_definitions\x1a\x0c\x63ommon.proto\"N\n\x13RSACryptographicKey\x12\x0f\n\x07modulus\x18\x01 \x01(\x0c\x12\x10\n\x08\x65xponent\x18\x02 \x01(\x0c\x12\t\n\x01p\x18\x03 \x01(\x0c\x12\t\n\x01q\x18\x04 \x01(\x0c\"L\n\x13\x44SACryptographicKey\x12\t\n\x01p\x18\x01 \x01(\x0c\x12\t\n\x01q\x18\x02 \x01(\x0c\x12\t\n\x01g\x18\x03 \x01(\x0c\x12\t\n\x01y\x18\x04 \x01(\x0c\x12\t\n\x01x\x18\x05 \x01(\x0c\"K\n\x13\x45\x43\x43\x43ryptographicKey\x12\r\n\x05\x63urve\x18\x01 \x01(\r\x12\t\n\x01x\x18\x02 \x01(\x0c\x12\t\n\x01y\x18\x03 \x01(\x0c\x12\x0f\n\x07private\x18\x04 \x01(\x0c\"\xf4\x02\n\x10\x43ryptographicKey\x12:\n\x04type\x18\x01 \x01(\x0e\x32,.censys_definitions.CryptographicKey.KeyType\x12\x36\n\x03rsa\x18\x02 \x01(\x0b\x32\'.censys_definitions.RSACryptographicKeyH\x00\x12\x36\n\x03\x64sa\x18\x03 \x01(\x0b\x32\'.censys_definitions.DSACryptographicKeyH\x00\x12\x36\n\x03\x65\x63\x63\x18\x04 \x01(\x0b\x32\'.censys_definitions.ECCCryptographicKeyH\x00\x12\x0e\n\x06\x62roken\x18\x05 \x01(\x08\x12\x0e\n\x06\x63ommon\x18\x06 \x01(\x08\x12\x0e\n\x06\x64\x65\x62ian\x18\x07 \x01(\x08\"?\n\x07KeyType\x12\x0c\n\x08RESERVED\x10\x00\x12\x0b\n\x07UNKNOWN\x10\x01\x12\x07\n\x03RSA\x10\x02\x12\x07\n\x03\x44SA\x10\x03\x12\x07\n\x03\x45\x43\x43\x10\x04\x42\x0b\n\tkey_oneofb\x06proto3')
+  serialized_pb=_b('\n\x0cpubkey.proto\x12\x07zsearch\x1a\x0c\x63ommon.proto\"N\n\x13RSACryptographicKey\x12\x0f\n\x07modulus\x18\x01 \x01(\x0c\x12\x10\n\x08\x65xponent\x18\x02 \x01(\x0c\x12\t\n\x01p\x18\x03 \x01(\x0c\x12\t\n\x01q\x18\x04 \x01(\x0c\"L\n\x13\x44SACryptographicKey\x12\t\n\x01p\x18\x01 \x01(\x0c\x12\t\n\x01q\x18\x02 \x01(\x0c\x12\t\n\x01g\x18\x03 \x01(\x0c\x12\t\n\x01y\x18\x04 \x01(\x0c\x12\t\n\x01x\x18\x05 \x01(\x0c\"K\n\x13\x45\x43\x43\x43ryptographicKey\x12\r\n\x05\x63urve\x18\x01 \x01(\r\x12\t\n\x01x\x18\x02 \x01(\x0c\x12\t\n\x01y\x18\x03 \x01(\x0c\x12\x0f\n\x07private\x18\x04 \x01(\x0c\"\xc8\x02\n\x10\x43ryptographicKey\x12/\n\x04type\x18\x01 \x01(\x0e\x32!.zsearch.CryptographicKey.KeyType\x12+\n\x03rsa\x18\x02 \x01(\x0b\x32\x1c.zsearch.RSACryptographicKeyH\x00\x12+\n\x03\x64sa\x18\x03 \x01(\x0b\x32\x1c.zsearch.DSACryptographicKeyH\x00\x12+\n\x03\x65\x63\x63\x18\x04 \x01(\x0b\x32\x1c.zsearch.ECCCryptographicKeyH\x00\x12\x0e\n\x06\x62roken\x18\x05 \x01(\x08\x12\x0e\n\x06\x63ommon\x18\x06 \x01(\x08\x12\x0e\n\x06\x64\x65\x62ian\x18\x07 \x01(\x08\"?\n\x07KeyType\x12\x0c\n\x08RESERVED\x10\x00\x12\x0b\n\x07UNKNOWN\x10\x01\x12\x07\n\x03RSA\x10\x02\x12\x07\n\x03\x44SA\x10\x03\x12\x07\n\x03\x45\x43\x43\x10\x04\x42\x0b\n\tkey_oneofb\x06proto3')
   ,
   dependencies=[common__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -29,7 +29,7 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 _CRYPTOGRAPHICKEY_KEYTYPE = _descriptor.EnumDescriptor(
   name='KeyType',
-  full_name='censys_definitions.CryptographicKey.KeyType',
+  full_name='zsearch.CryptographicKey.KeyType',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -56,42 +56,42 @@ _CRYPTOGRAPHICKEY_KEYTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=582,
-  serialized_end=645,
+  serialized_start=527,
+  serialized_end=590,
 )
 _sym_db.RegisterEnumDescriptor(_CRYPTOGRAPHICKEY_KEYTYPE)
 
 
 _RSACRYPTOGRAPHICKEY = _descriptor.Descriptor(
   name='RSACryptographicKey',
-  full_name='censys_definitions.RSACryptographicKey',
+  full_name='zsearch.RSACryptographicKey',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='modulus', full_name='censys_definitions.RSACryptographicKey.modulus', index=0,
+      name='modulus', full_name='zsearch.RSACryptographicKey.modulus', index=0,
       number=1, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='exponent', full_name='censys_definitions.RSACryptographicKey.exponent', index=1,
+      name='exponent', full_name='zsearch.RSACryptographicKey.exponent', index=1,
       number=2, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='p', full_name='censys_definitions.RSACryptographicKey.p', index=2,
+      name='p', full_name='zsearch.RSACryptographicKey.p', index=2,
       number=3, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='q', full_name='censys_definitions.RSACryptographicKey.q', index=3,
+      name='q', full_name='zsearch.RSACryptographicKey.q', index=3,
       number=4, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
@@ -109,48 +109,48 @@ _RSACRYPTOGRAPHICKEY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=50,
-  serialized_end=128,
+  serialized_start=39,
+  serialized_end=117,
 )
 
 
 _DSACRYPTOGRAPHICKEY = _descriptor.Descriptor(
   name='DSACryptographicKey',
-  full_name='censys_definitions.DSACryptographicKey',
+  full_name='zsearch.DSACryptographicKey',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='p', full_name='censys_definitions.DSACryptographicKey.p', index=0,
+      name='p', full_name='zsearch.DSACryptographicKey.p', index=0,
       number=1, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='q', full_name='censys_definitions.DSACryptographicKey.q', index=1,
+      name='q', full_name='zsearch.DSACryptographicKey.q', index=1,
       number=2, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='g', full_name='censys_definitions.DSACryptographicKey.g', index=2,
+      name='g', full_name='zsearch.DSACryptographicKey.g', index=2,
       number=3, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='y', full_name='censys_definitions.DSACryptographicKey.y', index=3,
+      name='y', full_name='zsearch.DSACryptographicKey.y', index=3,
       number=4, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='x', full_name='censys_definitions.DSACryptographicKey.x', index=4,
+      name='x', full_name='zsearch.DSACryptographicKey.x', index=4,
       number=5, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
@@ -168,41 +168,41 @@ _DSACRYPTOGRAPHICKEY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=130,
-  serialized_end=206,
+  serialized_start=119,
+  serialized_end=195,
 )
 
 
 _ECCCRYPTOGRAPHICKEY = _descriptor.Descriptor(
   name='ECCCryptographicKey',
-  full_name='censys_definitions.ECCCryptographicKey',
+  full_name='zsearch.ECCCryptographicKey',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='curve', full_name='censys_definitions.ECCCryptographicKey.curve', index=0,
+      name='curve', full_name='zsearch.ECCCryptographicKey.curve', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='x', full_name='censys_definitions.ECCCryptographicKey.x', index=1,
+      name='x', full_name='zsearch.ECCCryptographicKey.x', index=1,
       number=2, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='y', full_name='censys_definitions.ECCCryptographicKey.y', index=2,
+      name='y', full_name='zsearch.ECCCryptographicKey.y', index=2,
       number=3, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='private', full_name='censys_definitions.ECCCryptographicKey.private', index=3,
+      name='private', full_name='zsearch.ECCCryptographicKey.private', index=3,
       number=4, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
@@ -220,62 +220,62 @@ _ECCCRYPTOGRAPHICKEY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=208,
-  serialized_end=283,
+  serialized_start=197,
+  serialized_end=272,
 )
 
 
 _CRYPTOGRAPHICKEY = _descriptor.Descriptor(
   name='CryptographicKey',
-  full_name='censys_definitions.CryptographicKey',
+  full_name='zsearch.CryptographicKey',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='type', full_name='censys_definitions.CryptographicKey.type', index=0,
+      name='type', full_name='zsearch.CryptographicKey.type', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='rsa', full_name='censys_definitions.CryptographicKey.rsa', index=1,
+      name='rsa', full_name='zsearch.CryptographicKey.rsa', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='dsa', full_name='censys_definitions.CryptographicKey.dsa', index=2,
+      name='dsa', full_name='zsearch.CryptographicKey.dsa', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='ecc', full_name='censys_definitions.CryptographicKey.ecc', index=3,
+      name='ecc', full_name='zsearch.CryptographicKey.ecc', index=3,
       number=4, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='broken', full_name='censys_definitions.CryptographicKey.broken', index=4,
+      name='broken', full_name='zsearch.CryptographicKey.broken', index=4,
       number=5, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='common', full_name='censys_definitions.CryptographicKey.common', index=5,
+      name='common', full_name='zsearch.CryptographicKey.common', index=5,
       number=6, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='debian', full_name='censys_definitions.CryptographicKey.debian', index=6,
+      name='debian', full_name='zsearch.CryptographicKey.debian', index=6,
       number=7, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
@@ -294,11 +294,11 @@ _CRYPTOGRAPHICKEY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
     _descriptor.OneofDescriptor(
-      name='key_oneof', full_name='censys_definitions.CryptographicKey.key_oneof',
+      name='key_oneof', full_name='zsearch.CryptographicKey.key_oneof',
       index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=286,
-  serialized_end=658,
+  serialized_start=275,
+  serialized_end=603,
 )
 
 _CRYPTOGRAPHICKEY.fields_by_name['type'].enum_type = _CRYPTOGRAPHICKEY_KEYTYPE
@@ -323,28 +323,28 @@ DESCRIPTOR.message_types_by_name['CryptographicKey'] = _CRYPTOGRAPHICKEY
 RSACryptographicKey = _reflection.GeneratedProtocolMessageType('RSACryptographicKey', (_message.Message,), dict(
   DESCRIPTOR = _RSACRYPTOGRAPHICKEY,
   __module__ = 'pubkey_pb2'
-  # @@protoc_insertion_point(class_scope:censys_definitions.RSACryptographicKey)
+  # @@protoc_insertion_point(class_scope:zsearch.RSACryptographicKey)
   ))
 _sym_db.RegisterMessage(RSACryptographicKey)
 
 DSACryptographicKey = _reflection.GeneratedProtocolMessageType('DSACryptographicKey', (_message.Message,), dict(
   DESCRIPTOR = _DSACRYPTOGRAPHICKEY,
   __module__ = 'pubkey_pb2'
-  # @@protoc_insertion_point(class_scope:censys_definitions.DSACryptographicKey)
+  # @@protoc_insertion_point(class_scope:zsearch.DSACryptographicKey)
   ))
 _sym_db.RegisterMessage(DSACryptographicKey)
 
 ECCCryptographicKey = _reflection.GeneratedProtocolMessageType('ECCCryptographicKey', (_message.Message,), dict(
   DESCRIPTOR = _ECCCRYPTOGRAPHICKEY,
   __module__ = 'pubkey_pb2'
-  # @@protoc_insertion_point(class_scope:censys_definitions.ECCCryptographicKey)
+  # @@protoc_insertion_point(class_scope:zsearch.ECCCryptographicKey)
   ))
 _sym_db.RegisterMessage(ECCCryptographicKey)
 
 CryptographicKey = _reflection.GeneratedProtocolMessageType('CryptographicKey', (_message.Message,), dict(
   DESCRIPTOR = _CRYPTOGRAPHICKEY,
   __module__ = 'pubkey_pb2'
-  # @@protoc_insertion_point(class_scope:censys_definitions.CryptographicKey)
+  # @@protoc_insertion_point(class_scope:zsearch.CryptographicKey)
   ))
 _sym_db.RegisterMessage(CryptographicKey)
 
