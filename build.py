@@ -43,6 +43,7 @@ proto_directory = os.path.join(directory, 'proto')
 # Generate relative filepaths for the inputs
 protobuf_inputs = [x + ".proto" for x in protobuf_prefixes]
 grpc_inputs = [x + ".proto" for x in grpc_prefixes]
+all_inputs = protobuf_inputs + grpc_inputs
 
 # Generate absolute filepaths for the inputs
 abs_protobuf_inputs = [os.path.join(directory, x) for x in protobuf_inputs]
@@ -74,7 +75,7 @@ def build_cpp():
     grpc_cpp_plugin_cmd = which('grpc_cpp_plugin')
     grpc_cpp_plugin = '='.join(['protoc-gen-grpc', grpc_cpp_plugin_cmd])
     cd(proto_directory)
-    protoc("--cpp_out=" + cpp_dir, *protobuf_inputs)
+    protoc("--cpp_out=" + cpp_dir, *all_inputs)
     protoc(
         "--grpc_out=" + cpp_dir,
         "--plugin=" + grpc_cpp_plugin,
