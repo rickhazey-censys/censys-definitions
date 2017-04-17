@@ -114,6 +114,7 @@ message Certificate {
     string parsed = 4;
     CertificateParseStatus parse_status = 44;
     uint32 parse_version = 39;
+    string parse_error = 47;
 
     repeated bytes parents = 5;
     // the chain that we received with the certificate and pass
