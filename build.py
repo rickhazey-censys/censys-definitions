@@ -92,11 +92,12 @@ def main():
         help='one of {go, python, cpp}',
     )
     args = parser.parse_args()
-    if args.target == TARGET_GO:
+    target = args.target[0]
+    if target == TARGET_GO:
         build_go()
-    elif args.target == TARGET_PYTHON:
+    elif target == TARGET_PYTHON:
         build_python()
-    elif args.target == TARGET_CPP:
+    elif target == TARGET_CPP:
         build_cpp()
     return
 
