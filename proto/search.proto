@@ -1,0 +1,62 @@
+syntax = "proto3";
+package censys_definitions;
+
+import "anonstore.proto";
+import "hoststore.proto";
+import "rpc.proto";
+
+// Two gRPC interfaces. One from
+
+service AdminService {
+    rpc Shutdown(Command) returns (CommandReply) {}
+    rpc Status(Command) returns (CommandReply) {}
+    rpc Statistics(Command) returns (CommandReply) {}
+    rpc PruneIPv4(Command) returns (CommandReply) {}
+    rpc PruneDomain(Command) returns (CommandReply) {}
+    rpc UpdateASData(Command) returns (CommandReply) {}
+    rpc UpdateLocationData(Command) returns (CommandReply) {}
+
+    rpc ValidateCertificates(Command) returns (CommandReply) {}
+    rpc FixCertificateSource(Command) returns (CommandReply) {}
+
+    rpc DumpIPv4ToJSON(Command) returns (CommandReply) {}
+    rpc DumpDomainToJSON(Command) returns (CommandReply) {}
+    rpc DumpCertificatesToJSON(Command) returns (CommandReply) {}
+    rpc DumpKeysToJSON(Command) returns (CommandReply) {}
+
+    rpc RegenerateIPv4Deltas(Command) returns (CommandReply) {}
+    rpc RegenerateDomainDeltas(Command) returns (CommandReply) {}
+    rpc RegenerateCertificateDeltas(Command) returns (CommandReply) {}
+    rpc RegenerateSingleCertificateDelta(AnonymousQuery) returns (CommandReply) {}
+
+    rpc Ping(Command) returns (CommandReply) {}
+}
+
+service QueryService {
+  rpc GetHostIPv4Record(HostQuery) returns (HostQueryResponse) {}
+  rpc PutHostIPv4Record(Record) returns (Delta) {}
+  rpc DelHostIPv4Record(HostQuery) returns (Delta) {}
+  rpc GetAllIPv4Records(HostQuery) returns (HostQueryResponse) {}
+  rpc GetHostIPv4Delta(HostQuery) returns (Delta) {}
+
+  rpc GetHostDomainRecord(HostQuery) returns (HostQueryResponse) {}
+  rpc PutHostDomainRecord(Record) returns (Delta) {}
+  rpc DelHostDomainRecord(HostQuery) returns (Delta) {}
+  rpc GetAllDomainRecords(HostQuery) returns (HostQueryResponse) {}
+  rpc GetHostDomainDelta(HostQuery) returns (Delta) {}
+
+  rpc GetCertificate(AnonymousQuery) returns (AnonymousQueryResponse) {}
+  rpc UpsertCertificate(AnonymousRecord) returns (AnonymousDelta) {}
+  rpc UpsertRawCertificate(AnonymousRecord) returns (AnonymousDelta) {}
+
+  rpc GetCryptographicKey(AnonymousQuery) returns (AnonymousQueryResponse) {}
+  rpc UpsertCryptographicKey(AnonymousRecord) returns (AnonymousDelta) {}
+
+  rpc GetPublicLocation(HostQuery) returns (LocationAtom) {}
+  rpc GetRestrictedLocation(HostQuery) returns (LocationAtom) {}
+  rpc GetWHOIS(HostQuery) returns (Record) {}
+
+  rpc GetUserMetadata(HostQuery) returns (Record) {}
+  rpc PutUserMetadata(Record) returns (CommandReply) {}
+  rpc GetRootStore(RootStoreQuery) returns (RootStoreReply) {}
+}

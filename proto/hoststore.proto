@@ -1,0 +1,73 @@
+syntax = "proto3";
+
+package censys_definitions;
+
+import "common.proto";
+
+message WHOISAtom {
+
+}
+
+message LocationAtom {
+    string continent = 1;
+    string country = 2;
+    string country_code = 3;
+    string city = 4;
+    string postal_code = 5;
+    string timezone = 6;
+    string province = 7;
+    double latitude = 8;
+    double longitude = 9;
+    string registered_country = 10;
+    string registered_country_code = 11;
+}
+
+message ProtocolAtom {
+    repeated Metadatum metadata = 1;
+    repeated string tags = 2;
+    string data = 3;
+}
+
+message AnonymousKey {
+    uint32 port = 1;
+    uint32 protocol = 2;
+    uint32 subprotocol = 3;
+}
+
+message Record {
+    fixed32 ip = 1;
+    uint32 port = 2;
+    uint32 protocol = 3;
+    uint32 subprotocol = 4;
+
+    string domain = 5;
+    fixed32 timestamp = 6;
+    uint32 scanid = 7;
+    bytes sha256fp = 8;
+
+    uint32 first_seen_at_scan_id = 9;
+    uint32 last_seen_at_scan_id = 10;
+
+    oneof data_oneof {
+         ProtocolAtom atom = 11;
+         LocationAtom private_location = 12;
+         ASAtom as_atom = 13;
+         WHOISAtom whois = 14;
+         UserdataAtom userdata = 15;
+         LocationAtom public_location = 17;
+         uint32 alexa_rank = 16;
+         uint32 quantcast_rank = 19;
+         uint32 cisco_umbrella_rank = 20;
+    }
+
+    uint64 version = 18;
+}
+
+message Delta {
+
+    DeltaType delta_type = 1;
+    fixed32 ip = 2;
+    string domain = 3;
+    uint64 version = 4;
+    repeated Record records = 5;
+}

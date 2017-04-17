@@ -1,0 +1,54 @@
+syntax = "proto3";
+
+package censys_definitions;
+
+import "common.proto";
+import "pubkey.proto";
+import "ct.proto";
+import "certificate.proto";
+
+message AnonymousRecord {
+    bytes sha256fp = 1;
+    sfixed64 timestamp = 2;
+    uint32 scan_id = 3;
+    bool exported = 4 [deprecated=true];
+    UserdataAtom userdata = 5;
+    oneof oneof_data {
+        string data = 6;
+        bytes raw_data = 7;
+        Certificate certificate = 8;
+        CryptographicKey key = 9;
+        ASAtom as = 10;
+    }
+    repeated Metadatum metadata = 14;
+    repeated string tags = 15;
+
+    fixed32 updated_at = 16;
+    fixed32 added_at = 17;
+}
+
+message AnonymousDelta {
+    enum DeltaType {
+        DT_RESERVED = 0;
+        DT_UPDATE = 1;
+        DT_DELETE = 2;
+    }
+    enum DeltaScope {
+        SCOPE_RESERVED = 0;
+        SCOPE_NO_CHANGE = 1;
+        SCOPE_NEW = 2;
+        SCOPE_UPDATE = 3;
+    }
+    DeltaType  delta_type = 1;
+    DeltaScope delta_scope = 2;
+    AnonymousRecord record = 3;
+}
+
+message ExternalCertificate {
+    CertificateSource source = 1;
+    AnonymousRecord anonymous_record = 2;
+    CTServer ct_server = 3;
+    CTServerStatus ct_status = 4;
+    MozillaSalesForceStatus nss_status = 5;
+    bytes tbsHash = 6; // TODO ????
+}

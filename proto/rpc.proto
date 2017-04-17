@@ -1,0 +1,147 @@
+syntax = "proto3";
+
+package censys_definitions;
+
+import "common.proto";
+import "certificate.proto";
+import "anonstore.proto";
+import "hoststore.proto";
+
+// gRPC Interface Message
+
+message MinScanId {
+    AnonymousKey key = 1;
+    uint32 min_scan_id = 2;
+}
+
+message MozillaOneCRLEntry {
+
+    bytes issuer = 1;
+    bytes serial = 2;
+    string id = 3;
+    uint32 last_modified = 4;
+}
+
+message Command {
+    bool incremental_dump = 1;
+    repeated MinScanId min_scan_ids = 2;
+    string filepath = 3;
+    uint32 max_records = 4;
+    uint32 start_ip = 5;
+    uint32 stop_ip = 6;
+    repeated MozillaOneCRLEntry one_crl_entries = 7;
+    uint32 threads = 8;
+}
+
+message AnonymousStoreStatistics {
+    uint64 total_records = 1;
+    uint64 records_added_last_reset = 2;
+    uint64 records_updated_last_reset = 3;
+    uint64 records_unchanged_last_reset = 4;
+    uint64 records_received = 5;
+    uint32 records_in_redis_queue = 6;
+    string redis_queue_name = 7;
+    string queue_type = 8;
+    uint32 worker_threads = 9;
+}
+
+message StatisticsPair {
+    uint32 port = 1;
+    uint32 protocol = 2;
+    uint32 subprotocol = 3;
+    AnonymousStoreStatistics statistics = 4;
+}
+
+message StoreStatistics {
+    AnonymousStoreStatistics global = 1;
+    repeated StatisticsPair protocols = 2;
+}
+
+message ServerStatistics {
+    map<string,StoreStatistics> store_statistics = 1;
+    map<string,AnonymousStoreStatistics> anonymous_store_statistics = 2;
+}
+
+message PruneStatistics {
+    AnonymousKey key = 1;
+    uint64 records_pruned = 2;
+}
+
+message CommandReply {
+    enum CommandStatus {
+        FATAL = 0;
+        SUCCESS = 1;
+        ERROR = 2;
+        NO_RECORD = 3;
+    }
+    CommandStatus status = 1;
+    string error = 2;
+    ServerStatistics stats = 3;
+    repeated PruneStatistics prune_statistics = 4;
+}
+
+message HostQuery {
+    fixed32 ip = 1;
+    string domain = 2;
+    uint32 port = 3;
+    uint32 protocol = 4;
+    uint32 subprotocol = 5;
+    uint32 max_records = 6;
+}
+
+message HostQueryResponse {
+    enum ResponseStatus {
+        RESERVED = 0;
+        SUCCESS = 1;
+        NO_RECORD = 2;
+        ERROR = 3;
+    }
+    ResponseStatus status = 1;
+    fixed32 ip = 2;
+    string domain = 3;
+    uint32 port = 4;
+    uint32 protocol = 5;
+    uint32 subprotocol = 6;
+    Record record = 7;
+    repeated Record records = 8;
+    string error = 9;
+}
+
+message AnonymousQuery {
+    bytes sha256fp = 1;
+}
+
+message AnonymousQueryResponse {
+    enum ResponseStatus {
+        RESERVED = 0;
+        SUCCESS = 1;
+        NO_RECORD = 2;
+        ERROR = 3;
+    }
+    bytes sha256fp = 1;
+    ResponseStatus status = 2;
+    AnonymousRecord record = 3;
+    repeated AnonymousRecord records = 4;
+    string error = 59;
+}
+
+message UserDataRequest {
+    fixed32 ip = 1;
+    string domain = 2;
+    UserdataAtom data = 3;
+}
+
+message RootStoreQuery {
+    enum RootStoreQueryType {
+        RESERVED = 0;
+        MOZILLA = 1;
+        MICROSOFT = 2;
+        APPLE = 3;
+        ALL = 4;
+    }
+    RootStoreQueryType type = 1;
+}
+
+message RootStoreReply {
+    repeated Certificate certificates = 1;
+}

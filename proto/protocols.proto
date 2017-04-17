@@ -1,0 +1,103 @@
+syntax = "proto3";
+
+package censys_definitions;
+
+enum Protocol {
+    PROTO_RESERVED = 0;
+    PROTO_SYSTEM = 1;
+    PROTO_HTTP = 2;
+    PROTO_HTTPS = 3;
+    PROTO_IMAP = 4;
+    PROTO_IMAPS = 5;
+    PROTO_SMTP = 6;
+    PROTO_SMTPS = 7;
+    PROTO_POP3 = 8;
+    PROTO_POP3S = 9;
+    PROTO_MODBUS = 10;
+    PROTO_FTP = 11;
+    PROTO_SSH = 12;
+    PROTO_DNS = 13;
+    PROTO_NTP = 14;
+    PROTO_TELNET = 15;
+    PROTO_UPNP = 16;
+    PROTO_CWMP = 17;
+    PROTO_HTTP_2 = 18;
+    PROTO_BACNET = 19;
+    PROTO_DNP3 = 20;
+    PROTO_FOX = 21;
+    PROTO_S7 = 22;
+    PROTO_GLOBAL = 23;
+    PROTO_LOOKUP = 24; // DNS lookups about a domain, e.g., DMARC record
+    PROTO_HTTP_WWW = 26; // http://www.domain.tld, for use within Alexa
+    PROTO_HTTPS_WWW = 27; // https://www.domain.tld, for use within Alexa
+
+}
+
+enum Subprotocol {
+    SUBPROTO_RESERVED = 0;
+    SUBPROTO_DELETED = 1;
+    SUBPROTO_GENERIC = 2;
+    SUBPROTO_BANNER = 3;
+    SUBPROTO_TLS = 4;
+    SUBPROTO_TLS_1_0 = 5;
+    SUBPROTO_TLS_1_1 = 6;
+    SUBPROTO_TLS_1_2 = 7;
+    SUBPROTO_TLS_1_3 = 8;
+    SUBPROTO_HEARTBLEED = 9;
+    SUBPROTO_CIPHERS = 10;
+    SUBPROTO_SSL_2 = 11;
+    SUBPROTO_SSL_3 = 12;
+    SUBPROTO_GET = 13;
+    SUBPROTO_STARTTLS = 14;
+    SUBPROTO_EXPORT = 15;
+    SUBPROTO_RSA_EXPORT = 16;
+    SUBPROTO_DHE_EXPORT= 17;
+    SUBPROTO_DHE = 18;
+    SUBPROTO_ECDHE = 19;
+    SUBPROTO_SNI = 20;
+    SUBPROTO_NO_SNI = 21;
+    SUBPROTO_QUIC = 22;
+    SUBPROTO_SPDY = 23;
+    SUBPROTO_RSA = 24;
+    SUBPROTO_DSA = 25;
+    SUBPROTO_ECDSA = 26;
+    SUBPROTO_DEVICE_ID = 27;
+    SUBPROTO_OPEN_RESOLVER = 28; // Unused. This was an original DNS attempt
+                                 // that we had to later scrap.
+    SUBPROTO_OPEN_PROXY = 29;
+    SUBPROTO_OPEN_RELAY = 30;
+    SUBPROTO_TIME = 31;
+    SUBPROTO_HACKING_TEAM = 32;
+    SUBPROTO_EXTENDED_RANDOM = 33;
+    SUBPROTO_DISCOVERY = 34;
+    SUBPROTO_GTLD_A = 35; // Unused
+    SUBPROTO_LOOKUP = 36; // Replacing OPEN_RESOLVER
+    SUBPROTO_STATUS = 37;
+    SUBPROTO_SZL = 38; // Siemens S/7 System Status Lists
+
+    // System Records
+    SUBPROTO_SYS_PUBLIC_LOCATION = 192;
+    SUBPROTO_SYS_AS = 193;
+    SUBPROTO_SYS_TAGS = 194;
+    SUBPROTO_SYS_METADATA = 195;
+    SUBPROTO_SYS_WHOIS = 196;
+    SUBPROTO_SYS_USERDATA = 197;
+    SUBPROTO_SYS_BLACKLIST = 198;
+    SUBPROTO_SYS_ALEXA_RANK = 199;
+    SUBPROTO_SYS_RESTRICTED_LOCATION = 200;
+    SUBPROTO_SYS_VERSION = 201;
+    SUBPROTO_SYS_QUANTCAST_RANK = 202;
+    SUBPROTO_SYS_CISCO_UMBRELLA_RANK = 203;
+    SUBPROTO_SYS_REVERSE_DNS = 204;
+
+    // Non System Global data. This is generally used
+    // for things about Alexa domains, such as DNS records, etc.
+    SUBPROTO_SPF = 220;
+    SUBPROTO_DMARC = 221;
+    SUBPROTO_DKIM = 222;
+    SUBPROTO_A = 223;
+    SUBPROTO_MX = 224;
+    SUBPROTO_AXFR = 225;
+
+}
+

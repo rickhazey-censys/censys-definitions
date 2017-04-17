@@ -1,0 +1,173 @@
+syntax = "proto3";
+
+package censys_definitions;
+
+import "common.proto";
+import "zlint.proto";
+import "ct.proto";
+
+
+enum CertificateType {
+    CERTIFICATE_TYPE_RESERVED = 0;
+    CERTIFICATE_TYPE_UNKNOWN = 1;
+    CERTIFICATE_TYPE_LEAF = 2;
+    CERTIFICATE_TYPE_INTERMEDIATE = 3;
+    CERTIFICATE_TYPE_ROOT = 4;
+}
+
+enum CertificateSource {
+    CERTIFICATE_SOURCE_RESERVED = 0;
+    CERTIFICATE_SOURCE_UNKNOWN = 1;
+    CERTIFICATE_SOURCE_SCAN = 2;
+    CERTIFICATE_SOURCE_CT = 3;
+    CERTIFICATE_SOURCE_MOZILLA_SALESFORCE = 4;
+    CERTIFICATE_SOURCE_RESEARCH = 5;
+    CERTIFICATE_SOURCE_RAPID7 = 6;
+    CERTIFICATE_SOURCE_HUBBLE = 7;
+    CERTIFICATE_SOURCE_CT_CHAIN = 8;
+}
+
+enum CertificateParseStatus {
+    CERTIFICATE_PARSE_STATUS_RESERVED = 0;
+    CERTIFICATE_PARSE_STATUS_UNKNOWN = 1;
+    CERTIFICATE_PARSE_STATUS_SUCCESS = 2;
+    CERTIFICATE_PARSE_STATUS_FAIL = 3;
+    CERTIFICATE_PARSE_STATUS_NOT_PARSED = 4;
+}
+
+enum CertificateRevocationReason {
+    CERTIFICATE_REVOCATION_REASON_RESERVED = 0;
+    CERTIFICATE_REVOCATION_REASON_UNKNOWN = 1;
+    // RFC 5280
+    CERTIFICATE_REVOCATION_REASON_UNSPECIFIED = 2;
+    CERTIFICATE_REVOCATION_REASON_KEY_COMPROMISE = 3;
+    CERTIFICATE_REVOCATION_REASON_CA_COMPROMISE = 4;
+    CERTIFICATE_REVOCATION_REASON_AFFILIATION_CHANGED = 5;
+    CERTIFICATE_REVOCATION_REASON_SUPERSEDED = 6;
+    CERTIFICATE_REVOCATION_REASON_CESSATION_OF_OPERATION = 7;
+    CERTIFICATE_REVOCATION_REASON_CERTIFICATE_HOLD = 8;
+    CERTIFICATE_REVOCATION_REASON_REMOVE_FROM_CRL = 9;
+    CERTIFICATE_REVOCATION_REASON_PRIVILEGE_WITHDRAWN = 10;
+    CERTIFICATE_REVOCATION_REASON_AA_COMPROMISE = 11;
+}
+
+message RootStoreStatus {
+    // (trusted path || whitelisted) && other certificate validation (e.g., expiration)
+    bool valid = 1;
+    // was certificate ever valid in the past?
+    bool was_valid = 2;
+    // does there exist a path from the certificate to the root store
+    bool trusted_path = 3;
+    bool was_trusted_path = 4;
+    // is the certificate explicitly blacklisted by the browser (e.g., OneCRL)
+    bool blacklisted = 5;
+    bool whitelisted = 6;
+    CertificateType type = 7;
+    // contains sha256fp of path to root store
+    repeated bytes path = 8;
+}
+
+message CertificateValidation {
+    RootStoreStatus nss = 1;
+    RootStoreStatus microsoft = 2;
+    RootStoreStatus apple = 3;
+    RootStoreStatus java = 4;
+    RootStoreStatus android = 5;
+    // also track for Google CT servers so we know what to push
+    RootStoreStatus google_ct_primary = 10;
+}
+
+message MozillaSalesForceStatus {
+    bool current_in = 1;
+    bool was_in = 2;
+    string owner_name = 3;
+    string parent_name = 4;
+    string certificate_name = 5;
+    string certificate_policy = 6;
+    string certification_practice_statement = 7;
+    bool cp_same_as_parent = 8;
+    bool audit_same_as_parent = 9;
+    string standard_audit = 10;
+    string br_audit = 11;
+    string auditor = 12;
+}
+
+
+message CertificateRevocation {
+    bool revoked = 1;
+    CertificateRevocationReason reason = 2;
+}
+
+message CertificateAudit {
+    MozillaSalesForceStatus mozilla = 1;
+}
+
+
+// Database Records
+message Certificate {
+
+    bytes sha1fp = 1;
+    bytes sha256fp = 2;
+
+    bytes raw = 3;
+
+    string parsed = 4;
+    CertificateParseStatus parse_status = 44;
+    uint32 parse_version = 39;
+
+    repeated bytes parents = 5;
+    // the chain that we received with the certificate and pass
+    // to the certificate processing daemon.
+    repeated bytes presented_chain = 45;
+
+    CertificateSource source = 28;
+    bool seen_in_scan = 29;
+
+    bool post_processed = 26;
+    uint32 post_process_timestamp = 37;
+
+    CertificateValidation validation = 35;
+    CTStatus ct = 30;
+    ZLint zlint = 38;
+    CertificateRevocation revocation = 43;
+    CertificateAudit audit = 46;
+    // store wheter record is precert so that CT synchronization
+    // daemon can quickly decide what to do without reparsing the
+    // raw certificate
+    bool is_precert = 32;
+    // store time range that certificate is valid so that cert
+    // dump job can mark certificates as expired
+    uint32 not_valid_after = 41;
+    uint32 not_valid_before = 42;
+
+    // deprecated stuff
+
+    bool in_nss = 6; // TODO [deprecated=true];
+    bool in_microsoft = 7 [deprecated=true];
+    bool in_apple = 8 [deprecated=true];
+
+    uint32 validation_timestamp = 10; // TODO [deprecated=true];
+    bool valid_nss = 11 [deprecated=true];
+    bool valid_microsoft = 12 [deprecated=true];
+    bool valid_apple = 13 [deprecated=true];
+
+    bool was_valid_nss = 14; // TODO [deprecated=true];
+    bool was_valid_microsoft = 15 [deprecated=true];
+    bool was_valid_apple = 16 [deprecated=true];
+    bool was_in_nss = 17 [deprecated=true];
+    bool was_in_microsoft = 18 [deprecated=true];
+    bool was_in_apple = 19 [deprecated=true];
+
+    bool current_valid_nss = 20; // TODO [deprecated=true];
+    bool current_valid_microsoft = 21 [deprecated=true];
+    bool current_valid_apple = 22 [deprecated=true];
+    bool current_in_nss = 23; // TODO [deprecated=true];
+    bool current_in_microsoft = 24 [deprecated=true];
+    bool current_in_apple = 25 [deprecated=true];
+
+    MozillaSalesForceStatus nss_audit = 31 [deprecated=true];
+
+    bool should_post_process = 27 [deprecated=true];
+    bool do_not_post_process = 36 [deprecated=true];
+
+}

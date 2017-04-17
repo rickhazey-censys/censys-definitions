@@ -1,0 +1,46 @@
+syntax = "proto3";
+
+package censys_definitions;
+
+import "common.proto";
+
+message RSACryptographicKey {
+    bytes modulus = 1;
+    bytes exponent = 2;
+    bytes p = 3;
+    bytes q = 4;
+}
+
+message DSACryptographicKey {
+    bytes p = 1;
+    bytes q = 2;
+    bytes g = 3;
+    bytes y = 4;
+    bytes x = 5;
+}
+
+message ECCCryptographicKey {
+    uint32 curve = 1;
+    bytes x = 2;
+    bytes y = 3;
+    bytes private = 4;
+}
+
+message CryptographicKey {
+    enum KeyType {
+        RESERVED = 0;
+        UNKNOWN = 1;
+        RSA = 2;
+        DSA = 3;
+        ECC = 4;
+    }
+    KeyType type = 1;
+    oneof key_oneof {
+        RSACryptographicKey rsa = 2;
+        DSACryptographicKey dsa = 3;
+        ECCCryptographicKey ecc = 4;
+    }
+    bool broken = 5;
+    bool common = 6;
+    bool debian = 7;
+}
