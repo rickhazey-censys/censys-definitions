@@ -29,6 +29,9 @@ service AdminService {
     rpc RegenerateCertificateDeltas(Command) returns (CommandReply) {}
     rpc RegenerateSingleCertificateDelta(AnonymousQuery) returns (CommandReply) {}
 
+    rpc ReprocessCertificates(Command) returns (CommandReply) {}
+    rpc ReprocessSingleCertificate(AnonymousQuery) returns (CommandReply) {}
+
     rpc Ping(Command) returns (CommandReply) {}
 }
 

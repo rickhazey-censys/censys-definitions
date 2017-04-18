@@ -33,6 +33,8 @@ static const char* AdminService_method_names[] = {
   "/zsearch.AdminService/RegenerateDomainDeltas",
   "/zsearch.AdminService/RegenerateCertificateDeltas",
   "/zsearch.AdminService/RegenerateSingleCertificateDelta",
+  "/zsearch.AdminService/ReprocessCertificates",
+  "/zsearch.AdminService/ReprocessSingleCertificate",
   "/zsearch.AdminService/Ping",
 };
 
@@ -59,7 +61,9 @@ AdminService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& chann
   , rpcmethod_RegenerateDomainDeltas_(AdminService_method_names[14], ::grpc::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_RegenerateCertificateDeltas_(AdminService_method_names[15], ::grpc::RpcMethod::NORMAL_RPC, channel)
   , rpcmethod_RegenerateSingleCertificateDelta_(AdminService_method_names[16], ::grpc::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_Ping_(AdminService_method_names[17], ::grpc::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_ReprocessCertificates_(AdminService_method_names[17], ::grpc::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_ReprocessSingleCertificate_(AdminService_method_names[18], ::grpc::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_Ping_(AdminService_method_names[19], ::grpc::RpcMethod::NORMAL_RPC, channel)
   {}
 
 ::grpc::Status AdminService::Stub::Shutdown(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) {
@@ -198,6 +202,22 @@ AdminService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& chann
   return new ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>(channel_.get(), cq, rpcmethod_RegenerateSingleCertificateDelta_, context, request);
 }
 
+::grpc::Status AdminService::Stub::ReprocessCertificates(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) {
+  return ::grpc::BlockingUnaryCall(channel_.get(), rpcmethod_ReprocessCertificates_, context, request, response);
+}
+
+::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AdminService::Stub::AsyncReprocessCertificatesRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>(channel_.get(), cq, rpcmethod_ReprocessCertificates_, context, request);
+}
+
+::grpc::Status AdminService::Stub::ReprocessSingleCertificate(::grpc::ClientContext* context, const ::zsearch::AnonymousQuery& request, ::zsearch::CommandReply* response) {
+  return ::grpc::BlockingUnaryCall(channel_.get(), rpcmethod_ReprocessSingleCertificate_, context, request, response);
+}
+
+::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AdminService::Stub::AsyncReprocessSingleCertificateRaw(::grpc::ClientContext* context, const ::zsearch::AnonymousQuery& request, ::grpc::CompletionQueue* cq) {
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>(channel_.get(), cq, rpcmethod_ReprocessSingleCertificate_, context, request);
+}
+
 ::grpc::Status AdminService::Stub::Ping(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) {
   return ::grpc::BlockingUnaryCall(channel_.get(), rpcmethod_Ping_, context, request, response);
 }
@@ -294,6 +314,16 @@ AdminService::Service::Service() {
           std::mem_fn(&AdminService::Service::RegenerateSingleCertificateDelta), this)));
   AddMethod(new ::grpc::RpcServiceMethod(
       AdminService_method_names[17],
+      ::grpc::RpcMethod::NORMAL_RPC,
+      new ::grpc::RpcMethodHandler< AdminService::Service, ::zsearch::Command, ::zsearch::CommandReply>(
+          std::mem_fn(&AdminService::Service::ReprocessCertificates), this)));
+  AddMethod(new ::grpc::RpcServiceMethod(
+      AdminService_method_names[18],
+      ::grpc::RpcMethod::NORMAL_RPC,
+      new ::grpc::RpcMethodHandler< AdminService::Service, ::zsearch::AnonymousQuery, ::zsearch::CommandReply>(
+          std::mem_fn(&AdminService::Service::ReprocessSingleCertificate), this)));
+  AddMethod(new ::grpc::RpcServiceMethod(
+      AdminService_method_names[19],
       ::grpc::RpcMethod::NORMAL_RPC,
       new ::grpc::RpcMethodHandler< AdminService::Service, ::zsearch::Command, ::zsearch::CommandReply>(
           std::mem_fn(&AdminService::Service::Ping), this)));
@@ -415,6 +445,20 @@ AdminService::Service::~Service() {
 }
 
 ::grpc::Status AdminService::Service::RegenerateSingleCertificateDelta(::grpc::ServerContext* context, const ::zsearch::AnonymousQuery* request, ::zsearch::CommandReply* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+::grpc::Status AdminService::Service::ReprocessCertificates(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+::grpc::Status AdminService::Service::ReprocessSingleCertificate(::grpc::ServerContext* context, const ::zsearch::AnonymousQuery* request, ::zsearch::CommandReply* response) {
   (void) context;
   (void) request;
   (void) response;
