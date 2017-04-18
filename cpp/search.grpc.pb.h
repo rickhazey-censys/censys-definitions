@@ -101,6 +101,14 @@ class AdminService final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>> AsyncRegenerateSingleCertificateDelta(::grpc::ClientContext* context, const ::zsearch::AnonymousQuery& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>>(AsyncRegenerateSingleCertificateDeltaRaw(context, request, cq));
     }
+    virtual ::grpc::Status ReprocessCertificates(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>> AsyncReprocessCertificates(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>>(AsyncReprocessCertificatesRaw(context, request, cq));
+    }
+    virtual ::grpc::Status ReprocessSingleCertificate(::grpc::ClientContext* context, const ::zsearch::AnonymousQuery& request, ::zsearch::CommandReply* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>> AsyncReprocessSingleCertificate(::grpc::ClientContext* context, const ::zsearch::AnonymousQuery& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>>(AsyncReprocessSingleCertificateRaw(context, request, cq));
+    }
     virtual ::grpc::Status Ping(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) = 0;
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>> AsyncPing(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>>(AsyncPingRaw(context, request, cq));
@@ -123,6 +131,8 @@ class AdminService final {
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>* AsyncRegenerateDomainDeltasRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>* AsyncRegenerateCertificateDeltasRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>* AsyncRegenerateSingleCertificateDeltaRaw(::grpc::ClientContext* context, const ::zsearch::AnonymousQuery& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>* AsyncReprocessCertificatesRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>* AsyncReprocessSingleCertificateRaw(::grpc::ClientContext* context, const ::zsearch::AnonymousQuery& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::zsearch::CommandReply>* AsyncPingRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) = 0;
   };
   class Stub final : public StubInterface {
@@ -196,6 +206,14 @@ class AdminService final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>> AsyncRegenerateSingleCertificateDelta(::grpc::ClientContext* context, const ::zsearch::AnonymousQuery& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>>(AsyncRegenerateSingleCertificateDeltaRaw(context, request, cq));
     }
+    ::grpc::Status ReprocessCertificates(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>> AsyncReprocessCertificates(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>>(AsyncReprocessCertificatesRaw(context, request, cq));
+    }
+    ::grpc::Status ReprocessSingleCertificate(::grpc::ClientContext* context, const ::zsearch::AnonymousQuery& request, ::zsearch::CommandReply* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>> AsyncReprocessSingleCertificate(::grpc::ClientContext* context, const ::zsearch::AnonymousQuery& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>>(AsyncReprocessSingleCertificateRaw(context, request, cq));
+    }
     ::grpc::Status Ping(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) override;
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>> AsyncPing(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>>(AsyncPingRaw(context, request, cq));
@@ -220,6 +238,8 @@ class AdminService final {
     ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AsyncRegenerateDomainDeltasRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AsyncRegenerateCertificateDeltasRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AsyncRegenerateSingleCertificateDeltaRaw(::grpc::ClientContext* context, const ::zsearch::AnonymousQuery& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AsyncReprocessCertificatesRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AsyncReprocessSingleCertificateRaw(::grpc::ClientContext* context, const ::zsearch::AnonymousQuery& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AsyncPingRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) override;
     const ::grpc::RpcMethod rpcmethod_Shutdown_;
     const ::grpc::RpcMethod rpcmethod_Status_;
@@ -238,6 +258,8 @@ class AdminService final {
     const ::grpc::RpcMethod rpcmethod_RegenerateDomainDeltas_;
     const ::grpc::RpcMethod rpcmethod_RegenerateCertificateDeltas_;
     const ::grpc::RpcMethod rpcmethod_RegenerateSingleCertificateDelta_;
+    const ::grpc::RpcMethod rpcmethod_ReprocessCertificates_;
+    const ::grpc::RpcMethod rpcmethod_ReprocessSingleCertificate_;
     const ::grpc::RpcMethod rpcmethod_Ping_;
   };
   static std::unique_ptr<Stub> NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
@@ -263,6 +285,8 @@ class AdminService final {
     virtual ::grpc::Status RegenerateDomainDeltas(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response);
     virtual ::grpc::Status RegenerateCertificateDeltas(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response);
     virtual ::grpc::Status RegenerateSingleCertificateDelta(::grpc::ServerContext* context, const ::zsearch::AnonymousQuery* request, ::zsearch::CommandReply* response);
+    virtual ::grpc::Status ReprocessCertificates(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response);
+    virtual ::grpc::Status ReprocessSingleCertificate(::grpc::ServerContext* context, const ::zsearch::AnonymousQuery* request, ::zsearch::CommandReply* response);
     virtual ::grpc::Status Ping(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response);
   };
   template <class BaseClass>
@@ -606,12 +630,52 @@ class AdminService final {
     }
   };
   template <class BaseClass>
+  class WithAsyncMethod_ReprocessCertificates : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithAsyncMethod_ReprocessCertificates() {
+      ::grpc::Service::MarkMethodAsync(17);
+    }
+    ~WithAsyncMethod_ReprocessCertificates() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status ReprocessCertificates(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) final override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestReprocessCertificates(::grpc::ServerContext* context, ::zsearch::Command* request, ::grpc::ServerAsyncResponseWriter< ::zsearch::CommandReply>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(17, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithAsyncMethod_ReprocessSingleCertificate : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithAsyncMethod_ReprocessSingleCertificate() {
+      ::grpc::Service::MarkMethodAsync(18);
+    }
+    ~WithAsyncMethod_ReprocessSingleCertificate() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status ReprocessSingleCertificate(::grpc::ServerContext* context, const ::zsearch::AnonymousQuery* request, ::zsearch::CommandReply* response) final override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestReprocessSingleCertificate(::grpc::ServerContext* context, ::zsearch::AnonymousQuery* request, ::grpc::ServerAsyncResponseWriter< ::zsearch::CommandReply>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(18, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
   class WithAsyncMethod_Ping : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithAsyncMethod_Ping() {
-      ::grpc::Service::MarkMethodAsync(17);
+      ::grpc::Service::MarkMethodAsync(19);
     }
     ~WithAsyncMethod_Ping() override {
       BaseClassMustBeDerivedFromService(this);
@@ -622,10 +686,10 @@ class AdminService final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     void RequestPing(::grpc::ServerContext* context, ::zsearch::Command* request, ::grpc::ServerAsyncResponseWriter< ::zsearch::CommandReply>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
-      ::grpc::Service::RequestAsyncUnary(17, context, request, response, new_call_cq, notification_cq, tag);
+      ::grpc::Service::RequestAsyncUnary(19, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
-  typedef WithAsyncMethod_Shutdown<WithAsyncMethod_Status<WithAsyncMethod_Statistics<WithAsyncMethod_PruneIPv4<WithAsyncMethod_PruneDomain<WithAsyncMethod_UpdateASData<WithAsyncMethod_UpdateLocationData<WithAsyncMethod_ValidateCertificates<WithAsyncMethod_FixCertificateSource<WithAsyncMethod_DumpIPv4ToJSON<WithAsyncMethod_DumpDomainToJSON<WithAsyncMethod_DumpCertificatesToJSON<WithAsyncMethod_DumpKeysToJSON<WithAsyncMethod_RegenerateIPv4Deltas<WithAsyncMethod_RegenerateDomainDeltas<WithAsyncMethod_RegenerateCertificateDeltas<WithAsyncMethod_RegenerateSingleCertificateDelta<WithAsyncMethod_Ping<Service > > > > > > > > > > > > > > > > > > AsyncService;
+  typedef WithAsyncMethod_Shutdown<WithAsyncMethod_Status<WithAsyncMethod_Statistics<WithAsyncMethod_PruneIPv4<WithAsyncMethod_PruneDomain<WithAsyncMethod_UpdateASData<WithAsyncMethod_UpdateLocationData<WithAsyncMethod_ValidateCertificates<WithAsyncMethod_FixCertificateSource<WithAsyncMethod_DumpIPv4ToJSON<WithAsyncMethod_DumpDomainToJSON<WithAsyncMethod_DumpCertificatesToJSON<WithAsyncMethod_DumpKeysToJSON<WithAsyncMethod_RegenerateIPv4Deltas<WithAsyncMethod_RegenerateDomainDeltas<WithAsyncMethod_RegenerateCertificateDeltas<WithAsyncMethod_RegenerateSingleCertificateDelta<WithAsyncMethod_ReprocessCertificates<WithAsyncMethod_ReprocessSingleCertificate<WithAsyncMethod_Ping<Service > > > > > > > > > > > > > > > > > > > > AsyncService;
   template <class BaseClass>
   class WithGenericMethod_Shutdown : public BaseClass {
    private:
@@ -916,12 +980,46 @@ class AdminService final {
     }
   };
   template <class BaseClass>
+  class WithGenericMethod_ReprocessCertificates : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithGenericMethod_ReprocessCertificates() {
+      ::grpc::Service::MarkMethodGeneric(17);
+    }
+    ~WithGenericMethod_ReprocessCertificates() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status ReprocessCertificates(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) final override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_ReprocessSingleCertificate : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithGenericMethod_ReprocessSingleCertificate() {
+      ::grpc::Service::MarkMethodGeneric(18);
+    }
+    ~WithGenericMethod_ReprocessSingleCertificate() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status ReprocessSingleCertificate(::grpc::ServerContext* context, const ::zsearch::AnonymousQuery* request, ::zsearch::CommandReply* response) final override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
   class WithGenericMethod_Ping : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithGenericMethod_Ping() {
-      ::grpc::Service::MarkMethodGeneric(17);
+      ::grpc::Service::MarkMethodGeneric(19);
     }
     ~WithGenericMethod_Ping() override {
       BaseClassMustBeDerivedFromService(this);
@@ -1273,12 +1371,52 @@ class AdminService final {
     virtual ::grpc::Status StreamedRegenerateSingleCertificateDelta(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::zsearch::AnonymousQuery,::zsearch::CommandReply>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
+  class WithStreamedUnaryMethod_ReprocessCertificates : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithStreamedUnaryMethod_ReprocessCertificates() {
+      ::grpc::Service::MarkMethodStreamed(17,
+        new ::grpc::StreamedUnaryHandler< ::zsearch::Command, ::zsearch::CommandReply>(std::bind(&WithStreamedUnaryMethod_ReprocessCertificates<BaseClass>::StreamedReprocessCertificates, this, std::placeholders::_1, std::placeholders::_2)));
+    }
+    ~WithStreamedUnaryMethod_ReprocessCertificates() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status ReprocessCertificates(::grpc::ServerContext* context, const ::zsearch::Command* request, ::zsearch::CommandReply* response) final override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status StreamedReprocessCertificates(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::zsearch::Command,::zsearch::CommandReply>* server_unary_streamer) = 0;
+  };
+  template <class BaseClass>
+  class WithStreamedUnaryMethod_ReprocessSingleCertificate : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithStreamedUnaryMethod_ReprocessSingleCertificate() {
+      ::grpc::Service::MarkMethodStreamed(18,
+        new ::grpc::StreamedUnaryHandler< ::zsearch::AnonymousQuery, ::zsearch::CommandReply>(std::bind(&WithStreamedUnaryMethod_ReprocessSingleCertificate<BaseClass>::StreamedReprocessSingleCertificate, this, std::placeholders::_1, std::placeholders::_2)));
+    }
+    ~WithStreamedUnaryMethod_ReprocessSingleCertificate() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status ReprocessSingleCertificate(::grpc::ServerContext* context, const ::zsearch::AnonymousQuery* request, ::zsearch::CommandReply* response) final override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status StreamedReprocessSingleCertificate(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::zsearch::AnonymousQuery,::zsearch::CommandReply>* server_unary_streamer) = 0;
+  };
+  template <class BaseClass>
   class WithStreamedUnaryMethod_Ping : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
     WithStreamedUnaryMethod_Ping() {
-      ::grpc::Service::MarkMethodStreamed(17,
+      ::grpc::Service::MarkMethodStreamed(19,
         new ::grpc::StreamedUnaryHandler< ::zsearch::Command, ::zsearch::CommandReply>(std::bind(&WithStreamedUnaryMethod_Ping<BaseClass>::StreamedPing, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_Ping() override {
@@ -1292,9 +1430,9 @@ class AdminService final {
     // replace default version of method with streamed unary
     virtual ::grpc::Status StreamedPing(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::zsearch::Command,::zsearch::CommandReply>* server_unary_streamer) = 0;
   };
-  typedef WithStreamedUnaryMethod_Shutdown<WithStreamedUnaryMethod_Status<WithStreamedUnaryMethod_Statistics<WithStreamedUnaryMethod_PruneIPv4<WithStreamedUnaryMethod_PruneDomain<WithStreamedUnaryMethod_UpdateASData<WithStreamedUnaryMethod_UpdateLocationData<WithStreamedUnaryMethod_ValidateCertificates<WithStreamedUnaryMethod_FixCertificateSource<WithStreamedUnaryMethod_DumpIPv4ToJSON<WithStreamedUnaryMethod_DumpDomainToJSON<WithStreamedUnaryMethod_DumpCertificatesToJSON<WithStreamedUnaryMethod_DumpKeysToJSON<WithStreamedUnaryMethod_RegenerateIPv4Deltas<WithStreamedUnaryMethod_RegenerateDomainDeltas<WithStreamedUnaryMethod_RegenerateCertificateDeltas<WithStreamedUnaryMethod_RegenerateSingleCertificateDelta<WithStreamedUnaryMethod_Ping<Service > > > > > > > > > > > > > > > > > > StreamedUnaryService;
+  typedef WithStreamedUnaryMethod_Shutdown<WithStreamedUnaryMethod_Status<WithStreamedUnaryMethod_Statistics<WithStreamedUnaryMethod_PruneIPv4<WithStreamedUnaryMethod_PruneDomain<WithStreamedUnaryMethod_UpdateASData<WithStreamedUnaryMethod_UpdateLocationData<WithStreamedUnaryMethod_ValidateCertificates<WithStreamedUnaryMethod_FixCertificateSource<WithStreamedUnaryMethod_DumpIPv4ToJSON<WithStreamedUnaryMethod_DumpDomainToJSON<WithStreamedUnaryMethod_DumpCertificatesToJSON<WithStreamedUnaryMethod_DumpKeysToJSON<WithStreamedUnaryMethod_RegenerateIPv4Deltas<WithStreamedUnaryMethod_RegenerateDomainDeltas<WithStreamedUnaryMethod_RegenerateCertificateDeltas<WithStreamedUnaryMethod_RegenerateSingleCertificateDelta<WithStreamedUnaryMethod_ReprocessCertificates<WithStreamedUnaryMethod_ReprocessSingleCertificate<WithStreamedUnaryMethod_Ping<Service > > > > > > > > > > > > > > > > > > > > StreamedUnaryService;
   typedef Service SplitStreamedService;
-  typedef WithStreamedUnaryMethod_Shutdown<WithStreamedUnaryMethod_Status<WithStreamedUnaryMethod_Statistics<WithStreamedUnaryMethod_PruneIPv4<WithStreamedUnaryMethod_PruneDomain<WithStreamedUnaryMethod_UpdateASData<WithStreamedUnaryMethod_UpdateLocationData<WithStreamedUnaryMethod_ValidateCertificates<WithStreamedUnaryMethod_FixCertificateSource<WithStreamedUnaryMethod_DumpIPv4ToJSON<WithStreamedUnaryMethod_DumpDomainToJSON<WithStreamedUnaryMethod_DumpCertificatesToJSON<WithStreamedUnaryMethod_DumpKeysToJSON<WithStreamedUnaryMethod_RegenerateIPv4Deltas<WithStreamedUnaryMethod_RegenerateDomainDeltas<WithStreamedUnaryMethod_RegenerateCertificateDeltas<WithStreamedUnaryMethod_RegenerateSingleCertificateDelta<WithStreamedUnaryMethod_Ping<Service > > > > > > > > > > > > > > > > > > StreamedService;
+  typedef WithStreamedUnaryMethod_Shutdown<WithStreamedUnaryMethod_Status<WithStreamedUnaryMethod_Statistics<WithStreamedUnaryMethod_PruneIPv4<WithStreamedUnaryMethod_PruneDomain<WithStreamedUnaryMethod_UpdateASData<WithStreamedUnaryMethod_UpdateLocationData<WithStreamedUnaryMethod_ValidateCertificates<WithStreamedUnaryMethod_FixCertificateSource<WithStreamedUnaryMethod_DumpIPv4ToJSON<WithStreamedUnaryMethod_DumpDomainToJSON<WithStreamedUnaryMethod_DumpCertificatesToJSON<WithStreamedUnaryMethod_DumpKeysToJSON<WithStreamedUnaryMethod_RegenerateIPv4Deltas<WithStreamedUnaryMethod_RegenerateDomainDeltas<WithStreamedUnaryMethod_RegenerateCertificateDeltas<WithStreamedUnaryMethod_RegenerateSingleCertificateDelta<WithStreamedUnaryMethod_ReprocessCertificates<WithStreamedUnaryMethod_ReprocessSingleCertificate<WithStreamedUnaryMethod_Ping<Service > > > > > > > > > > > > > > > > > > > > StreamedService;
 };
 
 class QueryService final {

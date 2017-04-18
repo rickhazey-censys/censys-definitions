@@ -104,6 +104,16 @@ class AdminServiceStub(object):
         request_serializer=rpc__pb2.AnonymousQuery.SerializeToString,
         response_deserializer=rpc__pb2.CommandReply.FromString,
         )
+    self.ReprocessCertificates = channel.unary_unary(
+        '/zsearch.AdminService/ReprocessCertificates',
+        request_serializer=rpc__pb2.Command.SerializeToString,
+        response_deserializer=rpc__pb2.CommandReply.FromString,
+        )
+    self.ReprocessSingleCertificate = channel.unary_unary(
+        '/zsearch.AdminService/ReprocessSingleCertificate',
+        request_serializer=rpc__pb2.AnonymousQuery.SerializeToString,
+        response_deserializer=rpc__pb2.CommandReply.FromString,
+        )
     self.Ping = channel.unary_unary(
         '/zsearch.AdminService/Ping',
         request_serializer=rpc__pb2.Command.SerializeToString,
@@ -201,6 +211,16 @@ class AdminServiceServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
+  def ReprocessCertificates(self, request, context):
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def ReprocessSingleCertificate(self, request, context):
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
   def Ping(self, request, context):
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
     context.set_details('Method not implemented!')
@@ -291,6 +311,16 @@ def add_AdminServiceServicer_to_server(servicer, server):
       ),
       'RegenerateSingleCertificateDelta': grpc.unary_unary_rpc_method_handler(
           servicer.RegenerateSingleCertificateDelta,
+          request_deserializer=rpc__pb2.AnonymousQuery.FromString,
+          response_serializer=rpc__pb2.CommandReply.SerializeToString,
+      ),
+      'ReprocessCertificates': grpc.unary_unary_rpc_method_handler(
+          servicer.ReprocessCertificates,
+          request_deserializer=rpc__pb2.Command.FromString,
+          response_serializer=rpc__pb2.CommandReply.SerializeToString,
+      ),
+      'ReprocessSingleCertificate': grpc.unary_unary_rpc_method_handler(
+          servicer.ReprocessSingleCertificate,
           request_deserializer=rpc__pb2.AnonymousQuery.FromString,
           response_serializer=rpc__pb2.CommandReply.SerializeToString,
       ),

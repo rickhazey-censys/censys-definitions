@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='search.proto',
   package='zsearch',
   syntax='proto3',
-  serialized_pb=_b('\n\x0csearch.proto\x12\x07zsearch\x1a\x0f\x61nonstore.proto\x1a\x0fhoststore.proto\x1a\trpc.proto2\x80\t\n\x0c\x41\x64minService\x12\x35\n\x08Shutdown\x12\x10.zsearch.Command\x1a\x15.zsearch.CommandReply\"\x00\x12\x33\n\x06Status\x12\x10.zsearch.Command\x1a\x15.zsearch.CommandReply\"\x00\x12\x37\n\nStatistics\x12\x10.zsearch.Command\x1a\x15.zsearch.CommandReply\"\x00\x12\x36\n\tPruneIPv4\x12\x10.zsearch.Command\x1a\x15.zsearch.CommandReply\"\x00\x12\x38\n\x0bPruneDomain\x12\x10.zsearch.Command\x1a\x15.zsearch.CommandReply\"\x00\x12\x39\n\x0cUpdateASData\x12\x10.zsearch.Command\x1a\x15.zsearch.CommandReply\"\x00\x12?\n\x12UpdateLocationData\x12\x10.zsearch.Command\x1a\x15.zsearch.CommandReply\"\x00\x12\x41\n\x14ValidateCertificates\x12\x10.zsearch.Command\x1a\x15.zsearch.CommandReply\"\x00\x12\x41\n\x14\x46ixCertificateSource\x12\x10.zsearch.Command\x1a\x15.zsearch.CommandReply\"\x00\x12;\n\x0e\x44umpIPv4ToJSON\x12\x10.zsearch.Command\x1a\x15.zsearch.CommandReply\"\x00\x12=\n\x10\x44umpDomainToJSON\x12\x10.zsearch.Command\x1a\x15.zsearch.CommandReply\"\x00\x12\x43\n\x16\x44umpCertificatesToJSON\x12\x10.zsearch.Command\x1a\x15.zsearch.CommandReply\"\x00\x12;\n\x0e\x44umpKeysToJSON\x12\x10.zsearch.Command\x1a\x15.zsearch.CommandReply\"\x00\x12\x41\n\x14RegenerateIPv4Deltas\x12\x10.zsearch.Command\x1a\x15.zsearch.CommandReply\"\x00\x12\x43\n\x16RegenerateDomainDeltas\x12\x10.zsearch.Command\x1a\x15.zsearch.CommandReply\"\x00\x12H\n\x1bRegenerateCertificateDeltas\x12\x10.zsearch.Command\x1a\x15.zsearch.CommandReply\"\x00\x12T\n RegenerateSingleCertificateDelta\x12\x17.zsearch.AnonymousQuery\x1a\x15.zsearch.CommandReply\"\x00\x12\x31\n\x04Ping\x12\x10.zsearch.Command\x1a\x15.zsearch.CommandReply\"\x00\x32\x8b\x0b\n\x0cQueryService\x12\x45\n\x11GetHostIPv4Record\x12\x12.zsearch.HostQuery\x1a\x1a.zsearch.HostQueryResponse\"\x00\x12\x36\n\x11PutHostIPv4Record\x12\x0f.zsearch.Record\x1a\x0e.zsearch.Delta\"\x00\x12\x39\n\x11\x44\x65lHostIPv4Record\x12\x12.zsearch.HostQuery\x1a\x0e.zsearch.Delta\"\x00\x12\x45\n\x11GetAllIPv4Records\x12\x12.zsearch.HostQuery\x1a\x1a.zsearch.HostQueryResponse\"\x00\x12\x38\n\x10GetHostIPv4Delta\x12\x12.zsearch.HostQuery\x1a\x0e.zsearch.Delta\"\x00\x12G\n\x13GetHostDomainRecord\x12\x12.zsearch.HostQuery\x1a\x1a.zsearch.HostQueryResponse\"\x00\x12\x38\n\x13PutHostDomainRecord\x12\x0f.zsearch.Record\x1a\x0e.zsearch.Delta\"\x00\x12;\n\x13\x44\x65lHostDomainRecord\x12\x12.zsearch.HostQuery\x1a\x0e.zsearch.Delta\"\x00\x12G\n\x13GetAllDomainRecords\x12\x12.zsearch.HostQuery\x1a\x1a.zsearch.HostQueryResponse\"\x00\x12:\n\x12GetHostDomainDelta\x12\x12.zsearch.HostQuery\x1a\x0e.zsearch.Delta\"\x00\x12L\n\x0eGetCertificate\x12\x17.zsearch.AnonymousQuery\x1a\x1f.zsearch.AnonymousQueryResponse\"\x00\x12H\n\x11UpsertCertificate\x12\x18.zsearch.AnonymousRecord\x1a\x17.zsearch.AnonymousDelta\"\x00\x12K\n\x14UpsertRawCertificate\x12\x18.zsearch.AnonymousRecord\x1a\x17.zsearch.AnonymousDelta\"\x00\x12Q\n\x13GetCryptographicKey\x12\x17.zsearch.AnonymousQuery\x1a\x1f.zsearch.AnonymousQueryResponse\"\x00\x12M\n\x16UpsertCryptographicKey\x12\x18.zsearch.AnonymousRecord\x1a\x17.zsearch.AnonymousDelta\"\x00\x12@\n\x11GetPublicLocation\x12\x12.zsearch.HostQuery\x1a\x15.zsearch.LocationAtom\"\x00\x12\x44\n\x15GetRestrictedLocation\x12\x12.zsearch.HostQuery\x1a\x15.zsearch.LocationAtom\"\x00\x12\x31\n\x08GetWHOIS\x12\x12.zsearch.HostQuery\x1a\x0f.zsearch.Record\"\x00\x12\x38\n\x0fGetUserMetadata\x12\x12.zsearch.HostQuery\x1a\x0f.zsearch.Record\"\x00\x12;\n\x0fPutUserMetadata\x12\x0f.zsearch.Record\x1a\x15.zsearch.CommandReply\"\x00\x12\x42\n\x0cGetRootStore\x12\x17.zsearch.RootStoreQuery\x1a\x17.zsearch.RootStoreReply\"\x00\x62\x06proto3')
+  serialized_pb=_b('\n\x0csearch.proto\x12\x07zsearch\x1a\x0f\x61nonstore.proto\x1a\x0fhoststore.proto\x1a\trpc.proto2\x94\n\n\x0c\x41\x64minService\x12\x35\n\x08Shutdown\x12\x10.zsearch.Command\x1a\x15.zsearch.CommandReply\"\x00\x12\x33\n\x06Status\x12\x10.zsearch.Command\x1a\x15.zsearch.CommandReply\"\x00\x12\x37\n\nStatistics\x12\x10.zsearch.Command\x1a\x15.zsearch.CommandReply\"\x00\x12\x36\n\tPruneIPv4\x12\x10.zsearch.Command\x1a\x15.zsearch.CommandReply\"\x00\x12\x38\n\x0bPruneDomain\x12\x10.zsearch.Command\x1a\x15.zsearch.CommandReply\"\x00\x12\x39\n\x0cUpdateASData\x12\x10.zsearch.Command\x1a\x15.zsearch.CommandReply\"\x00\x12?\n\x12UpdateLocationData\x12\x10.zsearch.Command\x1a\x15.zsearch.CommandReply\"\x00\x12\x41\n\x14ValidateCertificates\x12\x10.zsearch.Command\x1a\x15.zsearch.CommandReply\"\x00\x12\x41\n\x14\x46ixCertificateSource\x12\x10.zsearch.Command\x1a\x15.zsearch.CommandReply\"\x00\x12;\n\x0e\x44umpIPv4ToJSON\x12\x10.zsearch.Command\x1a\x15.zsearch.CommandReply\"\x00\x12=\n\x10\x44umpDomainToJSON\x12\x10.zsearch.Command\x1a\x15.zsearch.CommandReply\"\x00\x12\x43\n\x16\x44umpCertificatesToJSON\x12\x10.zsearch.Command\x1a\x15.zsearch.CommandReply\"\x00\x12;\n\x0e\x44umpKeysToJSON\x12\x10.zsearch.Command\x1a\x15.zsearch.CommandReply\"\x00\x12\x41\n\x14RegenerateIPv4Deltas\x12\x10.zsearch.Command\x1a\x15.zsearch.CommandReply\"\x00\x12\x43\n\x16RegenerateDomainDeltas\x12\x10.zsearch.Command\x1a\x15.zsearch.CommandReply\"\x00\x12H\n\x1bRegenerateCertificateDeltas\x12\x10.zsearch.Command\x1a\x15.zsearch.CommandReply\"\x00\x12T\n RegenerateSingleCertificateDelta\x12\x17.zsearch.AnonymousQuery\x1a\x15.zsearch.CommandReply\"\x00\x12\x42\n\x15ReprocessCertificates\x12\x10.zsearch.Command\x1a\x15.zsearch.CommandReply\"\x00\x12N\n\x1aReprocessSingleCertificate\x12\x17.zsearch.AnonymousQuery\x1a\x15.zsearch.CommandReply\"\x00\x12\x31\n\x04Ping\x12\x10.zsearch.Command\x1a\x15.zsearch.CommandReply\"\x00\x32\x8b\x0b\n\x0cQueryService\x12\x45\n\x11GetHostIPv4Record\x12\x12.zsearch.HostQuery\x1a\x1a.zsearch.HostQueryResponse\"\x00\x12\x36\n\x11PutHostIPv4Record\x12\x0f.zsearch.Record\x1a\x0e.zsearch.Delta\"\x00\x12\x39\n\x11\x44\x65lHostIPv4Record\x12\x12.zsearch.HostQuery\x1a\x0e.zsearch.Delta\"\x00\x12\x45\n\x11GetAllIPv4Records\x12\x12.zsearch.HostQuery\x1a\x1a.zsearch.HostQueryResponse\"\x00\x12\x38\n\x10GetHostIPv4Delta\x12\x12.zsearch.HostQuery\x1a\x0e.zsearch.Delta\"\x00\x12G\n\x13GetHostDomainRecord\x12\x12.zsearch.HostQuery\x1a\x1a.zsearch.HostQueryResponse\"\x00\x12\x38\n\x13PutHostDomainRecord\x12\x0f.zsearch.Record\x1a\x0e.zsearch.Delta\"\x00\x12;\n\x13\x44\x65lHostDomainRecord\x12\x12.zsearch.HostQuery\x1a\x0e.zsearch.Delta\"\x00\x12G\n\x13GetAllDomainRecords\x12\x12.zsearch.HostQuery\x1a\x1a.zsearch.HostQueryResponse\"\x00\x12:\n\x12GetHostDomainDelta\x12\x12.zsearch.HostQuery\x1a\x0e.zsearch.Delta\"\x00\x12L\n\x0eGetCertificate\x12\x17.zsearch.AnonymousQuery\x1a\x1f.zsearch.AnonymousQueryResponse\"\x00\x12H\n\x11UpsertCertificate\x12\x18.zsearch.AnonymousRecord\x1a\x17.zsearch.AnonymousDelta\"\x00\x12K\n\x14UpsertRawCertificate\x12\x18.zsearch.AnonymousRecord\x1a\x17.zsearch.AnonymousDelta\"\x00\x12Q\n\x13GetCryptographicKey\x12\x17.zsearch.AnonymousQuery\x1a\x1f.zsearch.AnonymousQueryResponse\"\x00\x12M\n\x16UpsertCryptographicKey\x12\x18.zsearch.AnonymousRecord\x1a\x17.zsearch.AnonymousDelta\"\x00\x12@\n\x11GetPublicLocation\x12\x12.zsearch.HostQuery\x1a\x15.zsearch.LocationAtom\"\x00\x12\x44\n\x15GetRestrictedLocation\x12\x12.zsearch.HostQuery\x1a\x15.zsearch.LocationAtom\"\x00\x12\x31\n\x08GetWHOIS\x12\x12.zsearch.HostQuery\x1a\x0f.zsearch.Record\"\x00\x12\x38\n\x0fGetUserMetadata\x12\x12.zsearch.HostQuery\x1a\x0f.zsearch.Record\"\x00\x12;\n\x0fPutUserMetadata\x12\x0f.zsearch.Record\x1a\x15.zsearch.CommandReply\"\x00\x12\x42\n\x0cGetRootStore\x12\x17.zsearch.RootStoreQuery\x1a\x17.zsearch.RootStoreReply\"\x00\x62\x06proto3')
   ,
   dependencies=[anonstore__pb2.DESCRIPTOR,hoststore__pb2.DESCRIPTOR,rpc__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -137,6 +137,16 @@ try:
           request_serializer=rpc__pb2.AnonymousQuery.SerializeToString,
           response_deserializer=rpc__pb2.CommandReply.FromString,
           )
+      self.ReprocessCertificates = channel.unary_unary(
+          '/zsearch.AdminService/ReprocessCertificates',
+          request_serializer=rpc__pb2.Command.SerializeToString,
+          response_deserializer=rpc__pb2.CommandReply.FromString,
+          )
+      self.ReprocessSingleCertificate = channel.unary_unary(
+          '/zsearch.AdminService/ReprocessSingleCertificate',
+          request_serializer=rpc__pb2.AnonymousQuery.SerializeToString,
+          response_deserializer=rpc__pb2.CommandReply.FromString,
+          )
       self.Ping = channel.unary_unary(
           '/zsearch.AdminService/Ping',
           request_serializer=rpc__pb2.Command.SerializeToString,
@@ -234,6 +244,16 @@ try:
       context.set_details('Method not implemented!')
       raise NotImplementedError('Method not implemented!')
 
+    def ReprocessCertificates(self, request, context):
+      context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+      context.set_details('Method not implemented!')
+      raise NotImplementedError('Method not implemented!')
+
+    def ReprocessSingleCertificate(self, request, context):
+      context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+      context.set_details('Method not implemented!')
+      raise NotImplementedError('Method not implemented!')
+
     def Ping(self, request, context):
       context.set_code(grpc.StatusCode.UNIMPLEMENTED)
       context.set_details('Method not implemented!')
@@ -324,6 +344,16 @@ try:
         ),
         'RegenerateSingleCertificateDelta': grpc.unary_unary_rpc_method_handler(
             servicer.RegenerateSingleCertificateDelta,
+            request_deserializer=rpc__pb2.AnonymousQuery.FromString,
+            response_serializer=rpc__pb2.CommandReply.SerializeToString,
+        ),
+        'ReprocessCertificates': grpc.unary_unary_rpc_method_handler(
+            servicer.ReprocessCertificates,
+            request_deserializer=rpc__pb2.Command.FromString,
+            response_serializer=rpc__pb2.CommandReply.SerializeToString,
+        ),
+        'ReprocessSingleCertificate': grpc.unary_unary_rpc_method_handler(
+            servicer.ReprocessSingleCertificate,
             request_deserializer=rpc__pb2.AnonymousQuery.FromString,
             response_serializer=rpc__pb2.CommandReply.SerializeToString,
         ),
@@ -717,6 +747,10 @@ try:
       context.code(beta_interfaces.StatusCode.UNIMPLEMENTED)
     def RegenerateSingleCertificateDelta(self, request, context):
       context.code(beta_interfaces.StatusCode.UNIMPLEMENTED)
+    def ReprocessCertificates(self, request, context):
+      context.code(beta_interfaces.StatusCode.UNIMPLEMENTED)
+    def ReprocessSingleCertificate(self, request, context):
+      context.code(beta_interfaces.StatusCode.UNIMPLEMENTED)
     def Ping(self, request, context):
       context.code(beta_interfaces.StatusCode.UNIMPLEMENTED)
 
@@ -781,6 +815,12 @@ try:
     def RegenerateSingleCertificateDelta(self, request, timeout, metadata=None, with_call=False, protocol_options=None):
       raise NotImplementedError()
     RegenerateSingleCertificateDelta.future = None
+    def ReprocessCertificates(self, request, timeout, metadata=None, with_call=False, protocol_options=None):
+      raise NotImplementedError()
+    ReprocessCertificates.future = None
+    def ReprocessSingleCertificate(self, request, timeout, metadata=None, with_call=False, protocol_options=None):
+      raise NotImplementedError()
+    ReprocessSingleCertificate.future = None
     def Ping(self, request, timeout, metadata=None, with_call=False, protocol_options=None):
       raise NotImplementedError()
     Ping.future = None
@@ -805,6 +845,8 @@ try:
       ('zsearch.AdminService', 'RegenerateDomainDeltas'): rpc__pb2.Command.FromString,
       ('zsearch.AdminService', 'RegenerateIPv4Deltas'): rpc__pb2.Command.FromString,
       ('zsearch.AdminService', 'RegenerateSingleCertificateDelta'): rpc__pb2.AnonymousQuery.FromString,
+      ('zsearch.AdminService', 'ReprocessCertificates'): rpc__pb2.Command.FromString,
+      ('zsearch.AdminService', 'ReprocessSingleCertificate'): rpc__pb2.AnonymousQuery.FromString,
       ('zsearch.AdminService', 'Shutdown'): rpc__pb2.Command.FromString,
       ('zsearch.AdminService', 'Statistics'): rpc__pb2.Command.FromString,
       ('zsearch.AdminService', 'Status'): rpc__pb2.Command.FromString,
@@ -825,6 +867,8 @@ try:
       ('zsearch.AdminService', 'RegenerateDomainDeltas'): rpc__pb2.CommandReply.SerializeToString,
       ('zsearch.AdminService', 'RegenerateIPv4Deltas'): rpc__pb2.CommandReply.SerializeToString,
       ('zsearch.AdminService', 'RegenerateSingleCertificateDelta'): rpc__pb2.CommandReply.SerializeToString,
+      ('zsearch.AdminService', 'ReprocessCertificates'): rpc__pb2.CommandReply.SerializeToString,
+      ('zsearch.AdminService', 'ReprocessSingleCertificate'): rpc__pb2.CommandReply.SerializeToString,
       ('zsearch.AdminService', 'Shutdown'): rpc__pb2.CommandReply.SerializeToString,
       ('zsearch.AdminService', 'Statistics'): rpc__pb2.CommandReply.SerializeToString,
       ('zsearch.AdminService', 'Status'): rpc__pb2.CommandReply.SerializeToString,
@@ -845,6 +889,8 @@ try:
       ('zsearch.AdminService', 'RegenerateDomainDeltas'): face_utilities.unary_unary_inline(servicer.RegenerateDomainDeltas),
       ('zsearch.AdminService', 'RegenerateIPv4Deltas'): face_utilities.unary_unary_inline(servicer.RegenerateIPv4Deltas),
       ('zsearch.AdminService', 'RegenerateSingleCertificateDelta'): face_utilities.unary_unary_inline(servicer.RegenerateSingleCertificateDelta),
+      ('zsearch.AdminService', 'ReprocessCertificates'): face_utilities.unary_unary_inline(servicer.ReprocessCertificates),
+      ('zsearch.AdminService', 'ReprocessSingleCertificate'): face_utilities.unary_unary_inline(servicer.ReprocessSingleCertificate),
       ('zsearch.AdminService', 'Shutdown'): face_utilities.unary_unary_inline(servicer.Shutdown),
       ('zsearch.AdminService', 'Statistics'): face_utilities.unary_unary_inline(servicer.Statistics),
       ('zsearch.AdminService', 'Status'): face_utilities.unary_unary_inline(servicer.Status),
@@ -875,6 +921,8 @@ try:
       ('zsearch.AdminService', 'RegenerateDomainDeltas'): rpc__pb2.Command.SerializeToString,
       ('zsearch.AdminService', 'RegenerateIPv4Deltas'): rpc__pb2.Command.SerializeToString,
       ('zsearch.AdminService', 'RegenerateSingleCertificateDelta'): rpc__pb2.AnonymousQuery.SerializeToString,
+      ('zsearch.AdminService', 'ReprocessCertificates'): rpc__pb2.Command.SerializeToString,
+      ('zsearch.AdminService', 'ReprocessSingleCertificate'): rpc__pb2.AnonymousQuery.SerializeToString,
       ('zsearch.AdminService', 'Shutdown'): rpc__pb2.Command.SerializeToString,
       ('zsearch.AdminService', 'Statistics'): rpc__pb2.Command.SerializeToString,
       ('zsearch.AdminService', 'Status'): rpc__pb2.Command.SerializeToString,
@@ -895,6 +943,8 @@ try:
       ('zsearch.AdminService', 'RegenerateDomainDeltas'): rpc__pb2.CommandReply.FromString,
       ('zsearch.AdminService', 'RegenerateIPv4Deltas'): rpc__pb2.CommandReply.FromString,
       ('zsearch.AdminService', 'RegenerateSingleCertificateDelta'): rpc__pb2.CommandReply.FromString,
+      ('zsearch.AdminService', 'ReprocessCertificates'): rpc__pb2.CommandReply.FromString,
+      ('zsearch.AdminService', 'ReprocessSingleCertificate'): rpc__pb2.CommandReply.FromString,
       ('zsearch.AdminService', 'Shutdown'): rpc__pb2.CommandReply.FromString,
       ('zsearch.AdminService', 'Statistics'): rpc__pb2.CommandReply.FromString,
       ('zsearch.AdminService', 'Status'): rpc__pb2.CommandReply.FromString,
@@ -915,6 +965,8 @@ try:
       'RegenerateDomainDeltas': cardinality.Cardinality.UNARY_UNARY,
       'RegenerateIPv4Deltas': cardinality.Cardinality.UNARY_UNARY,
       'RegenerateSingleCertificateDelta': cardinality.Cardinality.UNARY_UNARY,
+      'ReprocessCertificates': cardinality.Cardinality.UNARY_UNARY,
+      'ReprocessSingleCertificate': cardinality.Cardinality.UNARY_UNARY,
       'Shutdown': cardinality.Cardinality.UNARY_UNARY,
       'Statistics': cardinality.Cardinality.UNARY_UNARY,
       'Status': cardinality.Cardinality.UNARY_UNARY,
