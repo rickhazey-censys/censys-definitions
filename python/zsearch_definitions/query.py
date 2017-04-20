@@ -221,4 +221,4 @@ class QueryService(object):
 
 if __name__ == "__main__":
    q = QueryService()
-   print q.get_host_ipv4_record(1046726718, 443, "https", "tls")
+   print q.get_certificate("bbf561e53fabf1a684d7cc1e890dab22ab0baabf73a1d85bb5063180424e9592")
