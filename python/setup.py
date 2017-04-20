@@ -3,12 +3,12 @@ from setuptools import setup, find_packages
 setup(
     name = "zsearch-definitions",
     description = "Egg version of files that can be used for interacting with zdb through python",
-    version = "0.0.56",
+    version = "0.1.0",
     license = "Apache License, Version 2.0",
-    author = "Zakir Durumeric",
-    author_email = "zakird@gmail.com",
-    maintainer = "Zakir Durumeric",
-    maintainer_email = "zakird@gmail.com",
+    author = "Censys Team",
+    author_email = "team@censys.io",
+    maintainer = "Censys Team",
+    maintainer_email = "team@censys.io",
     keywords = "python json zsearch",
     zip_safe = False,
     install_requires = [
