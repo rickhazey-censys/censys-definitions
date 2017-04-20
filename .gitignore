@@ -33,3 +33,7 @@
 
 *~
 *.swp
+
+python/build/*
+python/dist/*
+python/zsearch_definitions.egg-info/*
