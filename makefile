@@ -13,6 +13,6 @@ deploy: python
 	cd python && python setup.py sdist upload
 
 clean:
-	rm -f go/*.go python/zsearch_definitions/*.py cpp/*.h cpp/*.cc
+	rm -f go/*.go python/zsearch_definitions/*_pb2.py python/zsearch_definitions/*_grpc.py cpp/*.h cpp/*.cc
 
 .PHONY: deploy clean cpp python go
