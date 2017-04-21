@@ -14,7 +14,7 @@ setup(
     install_requires = [
         "zschema",
         "grpcio==1.2.1",
-        "protobuf==3.0.0",
+        "protobuf==3.2.0",
     ],
     packages = [
         "zsearch_definitions",
