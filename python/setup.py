@@ -12,7 +12,6 @@ setup(
     keywords = "python json zsearch",
     zip_safe = False,
     install_requires = [
-        "zschema",
         "grpcio==1.2.1",
         "protobuf==3.2.0",
     ],
