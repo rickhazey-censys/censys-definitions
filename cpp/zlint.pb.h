@@ -477,14 +477,14 @@ class Lints : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
   ::zsearch::LintResult* release_e_ca_crl_sign_not_set();
   void set_allocated_e_ca_crl_sign_not_set(::zsearch::LintResult* e_ca_crl_sign_not_set);
 
-  // .zsearch.LintResult w_ca_digital_signature_not_set = 9;
-  bool has_w_ca_digital_signature_not_set() const;
-  void clear_w_ca_digital_signature_not_set();
-  static const int kWCaDigitalSignatureNotSetFieldNumber = 9;
-  const ::zsearch::LintResult& w_ca_digital_signature_not_set() const;
-  ::zsearch::LintResult* mutable_w_ca_digital_signature_not_set();
-  ::zsearch::LintResult* release_w_ca_digital_signature_not_set();
-  void set_allocated_w_ca_digital_signature_not_set(::zsearch::LintResult* w_ca_digital_signature_not_set);
+  // .zsearch.LintResult i_ca_digital_signature_not_set = 9;
+  bool has_i_ca_digital_signature_not_set() const;
+  void clear_i_ca_digital_signature_not_set();
+  static const int kICaDigitalSignatureNotSetFieldNumber = 9;
+  const ::zsearch::LintResult& i_ca_digital_signature_not_set() const;
+  ::zsearch::LintResult* mutable_i_ca_digital_signature_not_set();
+  ::zsearch::LintResult* release_i_ca_digital_signature_not_set();
+  void set_allocated_i_ca_digital_signature_not_set(::zsearch::LintResult* i_ca_digital_signature_not_set);
 
   // .zsearch.LintResult e_ca_key_cert_sign_not_set = 10;
   bool has_e_ca_key_cert_sign_not_set() const;
@@ -1764,14 +1764,14 @@ class Lints : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
   ::zsearch::LintResult* release_e_sub_ca_no_ip_name_constraints();
   void set_allocated_e_sub_ca_no_ip_name_constraints(::zsearch::LintResult* e_sub_ca_no_ip_name_constraints);
 
-  // .zsearch.LintResult w_sub_cert_aia_does_not_contain_issuing_ca_url = 152;
-  bool has_w_sub_cert_aia_does_not_contain_issuing_ca_url() const;
-  void clear_w_sub_cert_aia_does_not_contain_issuing_ca_url();
-  static const int kWSubCertAiaDoesNotContainIssuingCaUrlFieldNumber = 152;
-  const ::zsearch::LintResult& w_sub_cert_aia_does_not_contain_issuing_ca_url() const;
-  ::zsearch::LintResult* mutable_w_sub_cert_aia_does_not_contain_issuing_ca_url();
-  ::zsearch::LintResult* release_w_sub_cert_aia_does_not_contain_issuing_ca_url();
-  void set_allocated_w_sub_cert_aia_does_not_contain_issuing_ca_url(::zsearch::LintResult* w_sub_cert_aia_does_not_contain_issuing_ca_url);
+  // .zsearch.LintResult e_sub_cert_aia_does_not_contain_issuing_ca_url = 152;
+  bool has_e_sub_cert_aia_does_not_contain_issuing_ca_url() const;
+  void clear_e_sub_cert_aia_does_not_contain_issuing_ca_url();
+  static const int kESubCertAiaDoesNotContainIssuingCaUrlFieldNumber = 152;
+  const ::zsearch::LintResult& e_sub_cert_aia_does_not_contain_issuing_ca_url() const;
+  ::zsearch::LintResult* mutable_e_sub_cert_aia_does_not_contain_issuing_ca_url();
+  ::zsearch::LintResult* release_e_sub_cert_aia_does_not_contain_issuing_ca_url();
+  void set_allocated_e_sub_cert_aia_does_not_contain_issuing_ca_url(::zsearch::LintResult* e_sub_cert_aia_does_not_contain_issuing_ca_url);
 
   // .zsearch.LintResult e_sub_cert_aia_does_not_contain_ocsp_url = 153;
   bool has_e_sub_cert_aia_does_not_contain_ocsp_url() const;
@@ -1791,14 +1791,14 @@ class Lints : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
   ::zsearch::LintResult* release_e_sub_cert_aia_missing();
   void set_allocated_e_sub_cert_aia_missing(::zsearch::LintResult* e_sub_cert_aia_missing);
 
-  // .zsearch.LintResult w_sub_cert_cert_policy_empty = 155;
-  bool has_w_sub_cert_cert_policy_empty() const;
-  void clear_w_sub_cert_cert_policy_empty();
-  static const int kWSubCertCertPolicyEmptyFieldNumber = 155;
-  const ::zsearch::LintResult& w_sub_cert_cert_policy_empty() const;
-  ::zsearch::LintResult* mutable_w_sub_cert_cert_policy_empty();
-  ::zsearch::LintResult* release_w_sub_cert_cert_policy_empty();
-  void set_allocated_w_sub_cert_cert_policy_empty(::zsearch::LintResult* w_sub_cert_cert_policy_empty);
+  // .zsearch.LintResult e_sub_cert_cert_policy_empty = 155;
+  bool has_e_sub_cert_cert_policy_empty() const;
+  void clear_e_sub_cert_cert_policy_empty();
+  static const int kESubCertCertPolicyEmptyFieldNumber = 155;
+  const ::zsearch::LintResult& e_sub_cert_cert_policy_empty() const;
+  ::zsearch::LintResult* mutable_e_sub_cert_cert_policy_empty();
+  ::zsearch::LintResult* release_e_sub_cert_cert_policy_empty();
+  void set_allocated_e_sub_cert_cert_policy_empty(::zsearch::LintResult* e_sub_cert_cert_policy_empty);
 
   // .zsearch.LintResult w_sub_cert_certificate_policies_marked_critical = 156;
   bool has_w_sub_cert_certificate_policies_marked_critical() const;
@@ -1890,14 +1890,14 @@ class Lints : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
   ::zsearch::LintResult* release_e_subject_common_name_disallowed();
   void set_allocated_e_subject_common_name_disallowed(::zsearch::LintResult* e_subject_common_name_disallowed);
 
-  // .zsearch.LintResult w_subject_common_name_included = 166;
-  bool has_w_subject_common_name_included() const;
-  void clear_w_subject_common_name_included();
-  static const int kWSubjectCommonNameIncludedFieldNumber = 166;
-  const ::zsearch::LintResult& w_subject_common_name_included() const;
-  ::zsearch::LintResult* mutable_w_subject_common_name_included();
-  ::zsearch::LintResult* release_w_subject_common_name_included();
-  void set_allocated_w_subject_common_name_included(::zsearch::LintResult* w_subject_common_name_included);
+  // .zsearch.LintResult i_subject_common_name_included = 166;
+  bool has_i_subject_common_name_included() const;
+  void clear_i_subject_common_name_included();
+  static const int kISubjectCommonNameIncludedFieldNumber = 166;
+  const ::zsearch::LintResult& i_subject_common_name_included() const;
+  ::zsearch::LintResult* mutable_i_subject_common_name_included();
+  ::zsearch::LintResult* release_i_subject_common_name_included();
+  void set_allocated_i_subject_common_name_included(::zsearch::LintResult* i_subject_common_name_included);
 
   // .zsearch.LintResult e_subject_common_name_not_from_san = 167;
   bool has_e_subject_common_name_not_from_san() const;
@@ -2091,7 +2091,7 @@ class Lints : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
   ::zsearch::LintResult* e_ca_country_name_invalid_;
   ::zsearch::LintResult* e_ca_country_name_missing_;
   ::zsearch::LintResult* e_ca_crl_sign_not_set_;
-  ::zsearch::LintResult* w_ca_digital_signature_not_set_;
+  ::zsearch::LintResult* i_ca_digital_signature_not_set_;
   ::zsearch::LintResult* e_ca_key_cert_sign_not_set_;
   ::zsearch::LintResult* e_ca_key_usage_missing_;
   ::zsearch::LintResult* e_ca_key_usage_not_critical_;
@@ -2234,10 +2234,10 @@ class Lints : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
   ::zsearch::LintResult* w_sub_ca_name_constraints_not_critical_;
   ::zsearch::LintResult* e_sub_ca_no_dns_name_constraints_;
   ::zsearch::LintResult* e_sub_ca_no_ip_name_constraints_;
-  ::zsearch::LintResult* w_sub_cert_aia_does_not_contain_issuing_ca_url_;
+  ::zsearch::LintResult* e_sub_cert_aia_does_not_contain_issuing_ca_url_;
   ::zsearch::LintResult* e_sub_cert_aia_does_not_contain_ocsp_url_;
   ::zsearch::LintResult* e_sub_cert_aia_missing_;
-  ::zsearch::LintResult* w_sub_cert_cert_policy_empty_;
+  ::zsearch::LintResult* e_sub_cert_cert_policy_empty_;
   ::zsearch::LintResult* w_sub_cert_certificate_policies_marked_critical_;
   ::zsearch::LintResult* e_sub_cert_crl_distribution_points_does_not_contain_url_;
   ::zsearch::LintResult* e_sub_cert_crl_distribution_points_marked_critical_;
@@ -2248,7 +2248,7 @@ class Lints : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
   ::zsearch::LintResult* e_sub_cert_or_sub_ca_using_sha1_;
   ::zsearch::LintResult* w_sub_cert_sha1_expiration_too_long_;
   ::zsearch::LintResult* e_subject_common_name_disallowed_;
-  ::zsearch::LintResult* w_subject_common_name_included_;
+  ::zsearch::LintResult* i_subject_common_name_included_;
   ::zsearch::LintResult* e_subject_common_name_not_from_san_;
   ::zsearch::LintResult* e_subject_contains_noninformational_value_;
   ::zsearch::LintResult* e_subject_contains_reserved_ip_;
@@ -2803,43 +2803,43 @@ inline void Lints::set_allocated_e_ca_crl_sign_not_set(::zsearch::LintResult* e_
   // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ca_crl_sign_not_set)
 }
 
-// .zsearch.LintResult w_ca_digital_signature_not_set = 9;
-inline bool Lints::has_w_ca_digital_signature_not_set() const {
-  return this != internal_default_instance() && w_ca_digital_signature_not_set_ != NULL;
+// .zsearch.LintResult i_ca_digital_signature_not_set = 9;
+inline bool Lints::has_i_ca_digital_signature_not_set() const {
+  return this != internal_default_instance() && i_ca_digital_signature_not_set_ != NULL;
 }
-inline void Lints::clear_w_ca_digital_signature_not_set() {
-  if (GetArenaNoVirtual() == NULL && w_ca_digital_signature_not_set_ != NULL) delete w_ca_digital_signature_not_set_;
-  w_ca_digital_signature_not_set_ = NULL;
+inline void Lints::clear_i_ca_digital_signature_not_set() {
+  if (GetArenaNoVirtual() == NULL && i_ca_digital_signature_not_set_ != NULL) delete i_ca_digital_signature_not_set_;
+  i_ca_digital_signature_not_set_ = NULL;
 }
-inline const ::zsearch::LintResult& Lints::w_ca_digital_signature_not_set() const {
-  // @@protoc_insertion_point(field_get:zsearch.Lints.w_ca_digital_signature_not_set)
-  return w_ca_digital_signature_not_set_ != NULL ? *w_ca_digital_signature_not_set_
+inline const ::zsearch::LintResult& Lints::i_ca_digital_signature_not_set() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.i_ca_digital_signature_not_set)
+  return i_ca_digital_signature_not_set_ != NULL ? *i_ca_digital_signature_not_set_
                          : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::zsearch::LintResult* Lints::mutable_w_ca_digital_signature_not_set() {
+inline ::zsearch::LintResult* Lints::mutable_i_ca_digital_signature_not_set() {
   
-  if (w_ca_digital_signature_not_set_ == NULL) {
-    w_ca_digital_signature_not_set_ = new ::zsearch::LintResult;
+  if (i_ca_digital_signature_not_set_ == NULL) {
+    i_ca_digital_signature_not_set_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:zsearch.Lints.w_ca_digital_signature_not_set)
-  return w_ca_digital_signature_not_set_;
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.i_ca_digital_signature_not_set)
+  return i_ca_digital_signature_not_set_;
 }
-inline ::zsearch::LintResult* Lints::release_w_ca_digital_signature_not_set() {
-  // @@protoc_insertion_point(field_release:zsearch.Lints.w_ca_digital_signature_not_set)
+inline ::zsearch::LintResult* Lints::release_i_ca_digital_signature_not_set() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.i_ca_digital_signature_not_set)
   
-  ::zsearch::LintResult* temp = w_ca_digital_signature_not_set_;
-  w_ca_digital_signature_not_set_ = NULL;
+  ::zsearch::LintResult* temp = i_ca_digital_signature_not_set_;
+  i_ca_digital_signature_not_set_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_w_ca_digital_signature_not_set(::zsearch::LintResult* w_ca_digital_signature_not_set) {
-  delete w_ca_digital_signature_not_set_;
-  w_ca_digital_signature_not_set_ = w_ca_digital_signature_not_set;
-  if (w_ca_digital_signature_not_set) {
+inline void Lints::set_allocated_i_ca_digital_signature_not_set(::zsearch::LintResult* i_ca_digital_signature_not_set) {
+  delete i_ca_digital_signature_not_set_;
+  i_ca_digital_signature_not_set_ = i_ca_digital_signature_not_set;
+  if (i_ca_digital_signature_not_set) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.w_ca_digital_signature_not_set)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.i_ca_digital_signature_not_set)
 }
 
 // .zsearch.LintResult e_ca_key_cert_sign_not_set = 10;
@@ -8380,43 +8380,43 @@ inline void Lints::set_allocated_e_sub_ca_no_ip_name_constraints(::zsearch::Lint
   // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_sub_ca_no_ip_name_constraints)
 }
 
-// .zsearch.LintResult w_sub_cert_aia_does_not_contain_issuing_ca_url = 152;
-inline bool Lints::has_w_sub_cert_aia_does_not_contain_issuing_ca_url() const {
-  return this != internal_default_instance() && w_sub_cert_aia_does_not_contain_issuing_ca_url_ != NULL;
+// .zsearch.LintResult e_sub_cert_aia_does_not_contain_issuing_ca_url = 152;
+inline bool Lints::has_e_sub_cert_aia_does_not_contain_issuing_ca_url() const {
+  return this != internal_default_instance() && e_sub_cert_aia_does_not_contain_issuing_ca_url_ != NULL;
 }
-inline void Lints::clear_w_sub_cert_aia_does_not_contain_issuing_ca_url() {
-  if (GetArenaNoVirtual() == NULL && w_sub_cert_aia_does_not_contain_issuing_ca_url_ != NULL) delete w_sub_cert_aia_does_not_contain_issuing_ca_url_;
-  w_sub_cert_aia_does_not_contain_issuing_ca_url_ = NULL;
+inline void Lints::clear_e_sub_cert_aia_does_not_contain_issuing_ca_url() {
+  if (GetArenaNoVirtual() == NULL && e_sub_cert_aia_does_not_contain_issuing_ca_url_ != NULL) delete e_sub_cert_aia_does_not_contain_issuing_ca_url_;
+  e_sub_cert_aia_does_not_contain_issuing_ca_url_ = NULL;
 }
-inline const ::zsearch::LintResult& Lints::w_sub_cert_aia_does_not_contain_issuing_ca_url() const {
-  // @@protoc_insertion_point(field_get:zsearch.Lints.w_sub_cert_aia_does_not_contain_issuing_ca_url)
-  return w_sub_cert_aia_does_not_contain_issuing_ca_url_ != NULL ? *w_sub_cert_aia_does_not_contain_issuing_ca_url_
+inline const ::zsearch::LintResult& Lints::e_sub_cert_aia_does_not_contain_issuing_ca_url() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_sub_cert_aia_does_not_contain_issuing_ca_url)
+  return e_sub_cert_aia_does_not_contain_issuing_ca_url_ != NULL ? *e_sub_cert_aia_does_not_contain_issuing_ca_url_
                          : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::zsearch::LintResult* Lints::mutable_w_sub_cert_aia_does_not_contain_issuing_ca_url() {
+inline ::zsearch::LintResult* Lints::mutable_e_sub_cert_aia_does_not_contain_issuing_ca_url() {
   
-  if (w_sub_cert_aia_does_not_contain_issuing_ca_url_ == NULL) {
-    w_sub_cert_aia_does_not_contain_issuing_ca_url_ = new ::zsearch::LintResult;
+  if (e_sub_cert_aia_does_not_contain_issuing_ca_url_ == NULL) {
+    e_sub_cert_aia_does_not_contain_issuing_ca_url_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:zsearch.Lints.w_sub_cert_aia_does_not_contain_issuing_ca_url)
-  return w_sub_cert_aia_does_not_contain_issuing_ca_url_;
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_sub_cert_aia_does_not_contain_issuing_ca_url)
+  return e_sub_cert_aia_does_not_contain_issuing_ca_url_;
 }
-inline ::zsearch::LintResult* Lints::release_w_sub_cert_aia_does_not_contain_issuing_ca_url() {
-  // @@protoc_insertion_point(field_release:zsearch.Lints.w_sub_cert_aia_does_not_contain_issuing_ca_url)
+inline ::zsearch::LintResult* Lints::release_e_sub_cert_aia_does_not_contain_issuing_ca_url() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_sub_cert_aia_does_not_contain_issuing_ca_url)
   
-  ::zsearch::LintResult* temp = w_sub_cert_aia_does_not_contain_issuing_ca_url_;
-  w_sub_cert_aia_does_not_contain_issuing_ca_url_ = NULL;
+  ::zsearch::LintResult* temp = e_sub_cert_aia_does_not_contain_issuing_ca_url_;
+  e_sub_cert_aia_does_not_contain_issuing_ca_url_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_w_sub_cert_aia_does_not_contain_issuing_ca_url(::zsearch::LintResult* w_sub_cert_aia_does_not_contain_issuing_ca_url) {
-  delete w_sub_cert_aia_does_not_contain_issuing_ca_url_;
-  w_sub_cert_aia_does_not_contain_issuing_ca_url_ = w_sub_cert_aia_does_not_contain_issuing_ca_url;
-  if (w_sub_cert_aia_does_not_contain_issuing_ca_url) {
+inline void Lints::set_allocated_e_sub_cert_aia_does_not_contain_issuing_ca_url(::zsearch::LintResult* e_sub_cert_aia_does_not_contain_issuing_ca_url) {
+  delete e_sub_cert_aia_does_not_contain_issuing_ca_url_;
+  e_sub_cert_aia_does_not_contain_issuing_ca_url_ = e_sub_cert_aia_does_not_contain_issuing_ca_url;
+  if (e_sub_cert_aia_does_not_contain_issuing_ca_url) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.w_sub_cert_aia_does_not_contain_issuing_ca_url)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_sub_cert_aia_does_not_contain_issuing_ca_url)
 }
 
 // .zsearch.LintResult e_sub_cert_aia_does_not_contain_ocsp_url = 153;
@@ -8497,43 +8497,43 @@ inline void Lints::set_allocated_e_sub_cert_aia_missing(::zsearch::LintResult* e
   // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_sub_cert_aia_missing)
 }
 
-// .zsearch.LintResult w_sub_cert_cert_policy_empty = 155;
-inline bool Lints::has_w_sub_cert_cert_policy_empty() const {
-  return this != internal_default_instance() && w_sub_cert_cert_policy_empty_ != NULL;
+// .zsearch.LintResult e_sub_cert_cert_policy_empty = 155;
+inline bool Lints::has_e_sub_cert_cert_policy_empty() const {
+  return this != internal_default_instance() && e_sub_cert_cert_policy_empty_ != NULL;
 }
-inline void Lints::clear_w_sub_cert_cert_policy_empty() {
-  if (GetArenaNoVirtual() == NULL && w_sub_cert_cert_policy_empty_ != NULL) delete w_sub_cert_cert_policy_empty_;
-  w_sub_cert_cert_policy_empty_ = NULL;
+inline void Lints::clear_e_sub_cert_cert_policy_empty() {
+  if (GetArenaNoVirtual() == NULL && e_sub_cert_cert_policy_empty_ != NULL) delete e_sub_cert_cert_policy_empty_;
+  e_sub_cert_cert_policy_empty_ = NULL;
 }
-inline const ::zsearch::LintResult& Lints::w_sub_cert_cert_policy_empty() const {
-  // @@protoc_insertion_point(field_get:zsearch.Lints.w_sub_cert_cert_policy_empty)
-  return w_sub_cert_cert_policy_empty_ != NULL ? *w_sub_cert_cert_policy_empty_
+inline const ::zsearch::LintResult& Lints::e_sub_cert_cert_policy_empty() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_sub_cert_cert_policy_empty)
+  return e_sub_cert_cert_policy_empty_ != NULL ? *e_sub_cert_cert_policy_empty_
                          : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::zsearch::LintResult* Lints::mutable_w_sub_cert_cert_policy_empty() {
+inline ::zsearch::LintResult* Lints::mutable_e_sub_cert_cert_policy_empty() {
   
-  if (w_sub_cert_cert_policy_empty_ == NULL) {
-    w_sub_cert_cert_policy_empty_ = new ::zsearch::LintResult;
+  if (e_sub_cert_cert_policy_empty_ == NULL) {
+    e_sub_cert_cert_policy_empty_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:zsearch.Lints.w_sub_cert_cert_policy_empty)
-  return w_sub_cert_cert_policy_empty_;
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_sub_cert_cert_policy_empty)
+  return e_sub_cert_cert_policy_empty_;
 }
-inline ::zsearch::LintResult* Lints::release_w_sub_cert_cert_policy_empty() {
-  // @@protoc_insertion_point(field_release:zsearch.Lints.w_sub_cert_cert_policy_empty)
+inline ::zsearch::LintResult* Lints::release_e_sub_cert_cert_policy_empty() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_sub_cert_cert_policy_empty)
   
-  ::zsearch::LintResult* temp = w_sub_cert_cert_policy_empty_;
-  w_sub_cert_cert_policy_empty_ = NULL;
+  ::zsearch::LintResult* temp = e_sub_cert_cert_policy_empty_;
+  e_sub_cert_cert_policy_empty_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_w_sub_cert_cert_policy_empty(::zsearch::LintResult* w_sub_cert_cert_policy_empty) {
-  delete w_sub_cert_cert_policy_empty_;
-  w_sub_cert_cert_policy_empty_ = w_sub_cert_cert_policy_empty;
-  if (w_sub_cert_cert_policy_empty) {
+inline void Lints::set_allocated_e_sub_cert_cert_policy_empty(::zsearch::LintResult* e_sub_cert_cert_policy_empty) {
+  delete e_sub_cert_cert_policy_empty_;
+  e_sub_cert_cert_policy_empty_ = e_sub_cert_cert_policy_empty;
+  if (e_sub_cert_cert_policy_empty) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.w_sub_cert_cert_policy_empty)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_sub_cert_cert_policy_empty)
 }
 
 // .zsearch.LintResult w_sub_cert_certificate_policies_marked_critical = 156;
@@ -8926,43 +8926,43 @@ inline void Lints::set_allocated_e_subject_common_name_disallowed(::zsearch::Lin
   // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_subject_common_name_disallowed)
 }
 
-// .zsearch.LintResult w_subject_common_name_included = 166;
-inline bool Lints::has_w_subject_common_name_included() const {
-  return this != internal_default_instance() && w_subject_common_name_included_ != NULL;
+// .zsearch.LintResult i_subject_common_name_included = 166;
+inline bool Lints::has_i_subject_common_name_included() const {
+  return this != internal_default_instance() && i_subject_common_name_included_ != NULL;
 }
-inline void Lints::clear_w_subject_common_name_included() {
-  if (GetArenaNoVirtual() == NULL && w_subject_common_name_included_ != NULL) delete w_subject_common_name_included_;
-  w_subject_common_name_included_ = NULL;
+inline void Lints::clear_i_subject_common_name_included() {
+  if (GetArenaNoVirtual() == NULL && i_subject_common_name_included_ != NULL) delete i_subject_common_name_included_;
+  i_subject_common_name_included_ = NULL;
 }
-inline const ::zsearch::LintResult& Lints::w_subject_common_name_included() const {
-  // @@protoc_insertion_point(field_get:zsearch.Lints.w_subject_common_name_included)
-  return w_subject_common_name_included_ != NULL ? *w_subject_common_name_included_
+inline const ::zsearch::LintResult& Lints::i_subject_common_name_included() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.i_subject_common_name_included)
+  return i_subject_common_name_included_ != NULL ? *i_subject_common_name_included_
                          : *::zsearch::LintResult::internal_default_instance();
 }
-inline ::zsearch::LintResult* Lints::mutable_w_subject_common_name_included() {
+inline ::zsearch::LintResult* Lints::mutable_i_subject_common_name_included() {
   
-  if (w_subject_common_name_included_ == NULL) {
-    w_subject_common_name_included_ = new ::zsearch::LintResult;
+  if (i_subject_common_name_included_ == NULL) {
+    i_subject_common_name_included_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:zsearch.Lints.w_subject_common_name_included)
-  return w_subject_common_name_included_;
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.i_subject_common_name_included)
+  return i_subject_common_name_included_;
 }
-inline ::zsearch::LintResult* Lints::release_w_subject_common_name_included() {
-  // @@protoc_insertion_point(field_release:zsearch.Lints.w_subject_common_name_included)
+inline ::zsearch::LintResult* Lints::release_i_subject_common_name_included() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.i_subject_common_name_included)
   
-  ::zsearch::LintResult* temp = w_subject_common_name_included_;
-  w_subject_common_name_included_ = NULL;
+  ::zsearch::LintResult* temp = i_subject_common_name_included_;
+  i_subject_common_name_included_ = NULL;
   return temp;
 }
-inline void Lints::set_allocated_w_subject_common_name_included(::zsearch::LintResult* w_subject_common_name_included) {
-  delete w_subject_common_name_included_;
-  w_subject_common_name_included_ = w_subject_common_name_included;
-  if (w_subject_common_name_included) {
+inline void Lints::set_allocated_i_subject_common_name_included(::zsearch::LintResult* i_subject_common_name_included) {
+  delete i_subject_common_name_included_;
+  i_subject_common_name_included_ = i_subject_common_name_included;
+  if (i_subject_common_name_included) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.w_subject_common_name_included)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.i_subject_common_name_included)
 }
 
 // .zsearch.LintResult e_subject_common_name_not_from_san = 167;

@@ -66,7 +66,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, e_ca_country_name_invalid_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, e_ca_country_name_missing_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, e_ca_crl_sign_not_set_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, w_ca_digital_signature_not_set_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, i_ca_digital_signature_not_set_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, e_ca_key_cert_sign_not_set_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, e_ca_key_usage_missing_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, e_ca_key_usage_not_critical_),
@@ -209,10 +209,10 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, w_sub_ca_name_constraints_not_critical_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, e_sub_ca_no_dns_name_constraints_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, e_sub_ca_no_ip_name_constraints_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, w_sub_cert_aia_does_not_contain_issuing_ca_url_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, e_sub_cert_aia_does_not_contain_issuing_ca_url_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, e_sub_cert_aia_does_not_contain_ocsp_url_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, e_sub_cert_aia_missing_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, w_sub_cert_cert_policy_empty_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, e_sub_cert_cert_policy_empty_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, w_sub_cert_certificate_policies_marked_critical_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, e_sub_cert_crl_distribution_points_does_not_contain_url_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, e_sub_cert_crl_distribution_points_marked_critical_),
@@ -223,7 +223,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, e_sub_cert_or_sub_ca_using_sha1_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, w_sub_cert_sha1_expiration_too_long_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, e_subject_common_name_disallowed_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, w_subject_common_name_included_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, i_subject_common_name_included_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, e_subject_common_name_not_from_san_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, e_subject_contains_noninformational_value_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, e_subject_contains_reserved_ip_),
@@ -315,7 +315,7 @@ void TableStruct::InitDefaultsImpl() {
       ::zsearch::LintResult::internal_default_instance());
   _Lints_default_instance_.get_mutable()->e_ca_crl_sign_not_set_ = const_cast< ::zsearch::LintResult*>(
       ::zsearch::LintResult::internal_default_instance());
-  _Lints_default_instance_.get_mutable()->w_ca_digital_signature_not_set_ = const_cast< ::zsearch::LintResult*>(
+  _Lints_default_instance_.get_mutable()->i_ca_digital_signature_not_set_ = const_cast< ::zsearch::LintResult*>(
       ::zsearch::LintResult::internal_default_instance());
   _Lints_default_instance_.get_mutable()->e_ca_key_cert_sign_not_set_ = const_cast< ::zsearch::LintResult*>(
       ::zsearch::LintResult::internal_default_instance());
@@ -601,13 +601,13 @@ void TableStruct::InitDefaultsImpl() {
       ::zsearch::LintResult::internal_default_instance());
   _Lints_default_instance_.get_mutable()->e_sub_ca_no_ip_name_constraints_ = const_cast< ::zsearch::LintResult*>(
       ::zsearch::LintResult::internal_default_instance());
-  _Lints_default_instance_.get_mutable()->w_sub_cert_aia_does_not_contain_issuing_ca_url_ = const_cast< ::zsearch::LintResult*>(
+  _Lints_default_instance_.get_mutable()->e_sub_cert_aia_does_not_contain_issuing_ca_url_ = const_cast< ::zsearch::LintResult*>(
       ::zsearch::LintResult::internal_default_instance());
   _Lints_default_instance_.get_mutable()->e_sub_cert_aia_does_not_contain_ocsp_url_ = const_cast< ::zsearch::LintResult*>(
       ::zsearch::LintResult::internal_default_instance());
   _Lints_default_instance_.get_mutable()->e_sub_cert_aia_missing_ = const_cast< ::zsearch::LintResult*>(
       ::zsearch::LintResult::internal_default_instance());
-  _Lints_default_instance_.get_mutable()->w_sub_cert_cert_policy_empty_ = const_cast< ::zsearch::LintResult*>(
+  _Lints_default_instance_.get_mutable()->e_sub_cert_cert_policy_empty_ = const_cast< ::zsearch::LintResult*>(
       ::zsearch::LintResult::internal_default_instance());
   _Lints_default_instance_.get_mutable()->w_sub_cert_certificate_policies_marked_critical_ = const_cast< ::zsearch::LintResult*>(
       ::zsearch::LintResult::internal_default_instance());
@@ -629,7 +629,7 @@ void TableStruct::InitDefaultsImpl() {
       ::zsearch::LintResult::internal_default_instance());
   _Lints_default_instance_.get_mutable()->e_subject_common_name_disallowed_ = const_cast< ::zsearch::LintResult*>(
       ::zsearch::LintResult::internal_default_instance());
-  _Lints_default_instance_.get_mutable()->w_subject_common_name_included_ = const_cast< ::zsearch::LintResult*>(
+  _Lints_default_instance_.get_mutable()->i_subject_common_name_included_ = const_cast< ::zsearch::LintResult*>(
       ::zsearch::LintResult::internal_default_instance());
   _Lints_default_instance_.get_mutable()->e_subject_common_name_not_from_san_ = const_cast< ::zsearch::LintResult*>(
       ::zsearch::LintResult::internal_default_instance());
@@ -698,7 +698,7 @@ void AddDescriptorsImpl() {
       "country_name_invalid\030\006 \001(\0132\023.zsearch.Lin"
       "tResult\0226\n\031e_ca_country_name_missing\030\007 \001"
       "(\0132\023.zsearch.LintResult\0222\n\025e_ca_crl_sign"
-      "_not_set\030\010 \001(\0132\023.zsearch.LintResult\022;\n\036w"
+      "_not_set\030\010 \001(\0132\023.zsearch.LintResult\022;\n\036i"
       "_ca_digital_signature_not_set\030\t \001(\0132\023.zs"
       "earch.LintResult\0227\n\032e_ca_key_cert_sign_n"
       "ot_set\030\n \001(\0132\023.zsearch.LintResult\0223\n\026e_c"
@@ -924,12 +924,12 @@ void AddDescriptorsImpl() {
       "LintResult\022>\n e_sub_ca_no_dns_name_const"
       "raints\030\226\001 \001(\0132\023.zsearch.LintResult\022=\n\037e_"
       "sub_ca_no_ip_name_constraints\030\227\001 \001(\0132\023.z"
-      "search.LintResult\022L\n.w_sub_cert_aia_does"
+      "search.LintResult\022L\n.e_sub_cert_aia_does"
       "_not_contain_issuing_ca_url\030\230\001 \001(\0132\023.zse"
       "arch.LintResult\022F\n(e_sub_cert_aia_does_n"
       "ot_contain_ocsp_url\030\231\001 \001(\0132\023.zsearch.Lin"
       "tResult\0224\n\026e_sub_cert_aia_missing\030\232\001 \001(\013"
-      "2\023.zsearch.LintResult\022:\n\034w_sub_cert_cert"
+      "2\023.zsearch.LintResult\022:\n\034e_sub_cert_cert"
       "_policy_empty\030\233\001 \001(\0132\023.zsearch.LintResul"
       "t\022M\n/w_sub_cert_certificate_policies_mar"
       "ked_critical\030\234\001 \001(\0132\023.zsearch.LintResult"
@@ -948,7 +948,7 @@ void AddDescriptorsImpl() {
       "ch.LintResult\022A\n#w_sub_cert_sha1_expirat"
       "ion_too_long\030\244\001 \001(\0132\023.zsearch.LintResult"
       "\022>\n e_subject_common_name_disallowed\030\245\001 "
-      "\001(\0132\023.zsearch.LintResult\022<\n\036w_subject_co"
+      "\001(\0132\023.zsearch.LintResult\022<\n\036i_subject_co"
       "mmon_name_included\030\246\001 \001(\0132\023.zsearch.Lint"
       "Result\022@\n\"e_subject_common_name_not_from"
       "_san\030\247\001 \001(\0132\023.zsearch.LintResult\022G\n)e_su"
@@ -1995,7 +1995,7 @@ const int Lints::kESanWildcardNotFirstFieldNumber;
 const int Lints::kECaCountryNameInvalidFieldNumber;
 const int Lints::kECaCountryNameMissingFieldNumber;
 const int Lints::kECaCrlSignNotSetFieldNumber;
-const int Lints::kWCaDigitalSignatureNotSetFieldNumber;
+const int Lints::kICaDigitalSignatureNotSetFieldNumber;
 const int Lints::kECaKeyCertSignNotSetFieldNumber;
 const int Lints::kECaKeyUsageMissingFieldNumber;
 const int Lints::kECaKeyUsageNotCriticalFieldNumber;
@@ -2138,10 +2138,10 @@ const int Lints::kWSubCaEkuCriticalFieldNumber;
 const int Lints::kWSubCaNameConstraintsNotCriticalFieldNumber;
 const int Lints::kESubCaNoDnsNameConstraintsFieldNumber;
 const int Lints::kESubCaNoIpNameConstraintsFieldNumber;
-const int Lints::kWSubCertAiaDoesNotContainIssuingCaUrlFieldNumber;
+const int Lints::kESubCertAiaDoesNotContainIssuingCaUrlFieldNumber;
 const int Lints::kESubCertAiaDoesNotContainOcspUrlFieldNumber;
 const int Lints::kESubCertAiaMissingFieldNumber;
-const int Lints::kWSubCertCertPolicyEmptyFieldNumber;
+const int Lints::kESubCertCertPolicyEmptyFieldNumber;
 const int Lints::kWSubCertCertificatePoliciesMarkedCriticalFieldNumber;
 const int Lints::kESubCertCrlDistributionPointsDoesNotContainUrlFieldNumber;
 const int Lints::kESubCertCrlDistributionPointsMarkedCriticalFieldNumber;
@@ -2152,7 +2152,7 @@ const int Lints::kESubCertKeyUsageCertSignBitSetFieldNumber;
 const int Lints::kESubCertOrSubCaUsingSha1FieldNumber;
 const int Lints::kWSubCertSha1ExpirationTooLongFieldNumber;
 const int Lints::kESubjectCommonNameDisallowedFieldNumber;
-const int Lints::kWSubjectCommonNameIncludedFieldNumber;
+const int Lints::kISubjectCommonNameIncludedFieldNumber;
 const int Lints::kESubjectCommonNameNotFromSanFieldNumber;
 const int Lints::kESubjectContainsNoninformationalValueFieldNumber;
 const int Lints::kESubjectContainsReservedIpFieldNumber;
@@ -2228,10 +2228,10 @@ Lints::Lints(const Lints& from)
   } else {
     e_ca_crl_sign_not_set_ = NULL;
   }
-  if (from.has_w_ca_digital_signature_not_set()) {
-    w_ca_digital_signature_not_set_ = new ::zsearch::LintResult(*from.w_ca_digital_signature_not_set_);
+  if (from.has_i_ca_digital_signature_not_set()) {
+    i_ca_digital_signature_not_set_ = new ::zsearch::LintResult(*from.i_ca_digital_signature_not_set_);
   } else {
-    w_ca_digital_signature_not_set_ = NULL;
+    i_ca_digital_signature_not_set_ = NULL;
   }
   if (from.has_e_ca_key_cert_sign_not_set()) {
     e_ca_key_cert_sign_not_set_ = new ::zsearch::LintResult(*from.e_ca_key_cert_sign_not_set_);
@@ -2943,10 +2943,10 @@ Lints::Lints(const Lints& from)
   } else {
     e_sub_ca_no_ip_name_constraints_ = NULL;
   }
-  if (from.has_w_sub_cert_aia_does_not_contain_issuing_ca_url()) {
-    w_sub_cert_aia_does_not_contain_issuing_ca_url_ = new ::zsearch::LintResult(*from.w_sub_cert_aia_does_not_contain_issuing_ca_url_);
+  if (from.has_e_sub_cert_aia_does_not_contain_issuing_ca_url()) {
+    e_sub_cert_aia_does_not_contain_issuing_ca_url_ = new ::zsearch::LintResult(*from.e_sub_cert_aia_does_not_contain_issuing_ca_url_);
   } else {
-    w_sub_cert_aia_does_not_contain_issuing_ca_url_ = NULL;
+    e_sub_cert_aia_does_not_contain_issuing_ca_url_ = NULL;
   }
   if (from.has_e_sub_cert_aia_does_not_contain_ocsp_url()) {
     e_sub_cert_aia_does_not_contain_ocsp_url_ = new ::zsearch::LintResult(*from.e_sub_cert_aia_does_not_contain_ocsp_url_);
@@ -2958,10 +2958,10 @@ Lints::Lints(const Lints& from)
   } else {
     e_sub_cert_aia_missing_ = NULL;
   }
-  if (from.has_w_sub_cert_cert_policy_empty()) {
-    w_sub_cert_cert_policy_empty_ = new ::zsearch::LintResult(*from.w_sub_cert_cert_policy_empty_);
+  if (from.has_e_sub_cert_cert_policy_empty()) {
+    e_sub_cert_cert_policy_empty_ = new ::zsearch::LintResult(*from.e_sub_cert_cert_policy_empty_);
   } else {
-    w_sub_cert_cert_policy_empty_ = NULL;
+    e_sub_cert_cert_policy_empty_ = NULL;
   }
   if (from.has_w_sub_cert_certificate_policies_marked_critical()) {
     w_sub_cert_certificate_policies_marked_critical_ = new ::zsearch::LintResult(*from.w_sub_cert_certificate_policies_marked_critical_);
@@ -3013,10 +3013,10 @@ Lints::Lints(const Lints& from)
   } else {
     e_subject_common_name_disallowed_ = NULL;
   }
-  if (from.has_w_subject_common_name_included()) {
-    w_subject_common_name_included_ = new ::zsearch::LintResult(*from.w_subject_common_name_included_);
+  if (from.has_i_subject_common_name_included()) {
+    i_subject_common_name_included_ = new ::zsearch::LintResult(*from.i_subject_common_name_included_);
   } else {
-    w_subject_common_name_included_ = NULL;
+    i_subject_common_name_included_ = NULL;
   }
   if (from.has_e_subject_common_name_not_from_san()) {
     e_subject_common_name_not_from_san_ = new ::zsearch::LintResult(*from.e_subject_common_name_not_from_san_);
@@ -3158,7 +3158,7 @@ void Lints::SharedDtor() {
     delete e_ca_crl_sign_not_set_;
   }
   if (this != internal_default_instance()) {
-    delete w_ca_digital_signature_not_set_;
+    delete i_ca_digital_signature_not_set_;
   }
   if (this != internal_default_instance()) {
     delete e_ca_key_cert_sign_not_set_;
@@ -3587,7 +3587,7 @@ void Lints::SharedDtor() {
     delete e_sub_ca_no_ip_name_constraints_;
   }
   if (this != internal_default_instance()) {
-    delete w_sub_cert_aia_does_not_contain_issuing_ca_url_;
+    delete e_sub_cert_aia_does_not_contain_issuing_ca_url_;
   }
   if (this != internal_default_instance()) {
     delete e_sub_cert_aia_does_not_contain_ocsp_url_;
@@ -3596,7 +3596,7 @@ void Lints::SharedDtor() {
     delete e_sub_cert_aia_missing_;
   }
   if (this != internal_default_instance()) {
-    delete w_sub_cert_cert_policy_empty_;
+    delete e_sub_cert_cert_policy_empty_;
   }
   if (this != internal_default_instance()) {
     delete w_sub_cert_certificate_policies_marked_critical_;
@@ -3629,7 +3629,7 @@ void Lints::SharedDtor() {
     delete e_subject_common_name_disallowed_;
   }
   if (this != internal_default_instance()) {
-    delete w_subject_common_name_included_;
+    delete i_subject_common_name_included_;
   }
   if (this != internal_default_instance()) {
     delete e_subject_common_name_not_from_san_;
@@ -3750,10 +3750,10 @@ void Lints::Clear() {
     delete e_ca_crl_sign_not_set_;
   }
   e_ca_crl_sign_not_set_ = NULL;
-  if (GetArenaNoVirtual() == NULL && w_ca_digital_signature_not_set_ != NULL) {
-    delete w_ca_digital_signature_not_set_;
+  if (GetArenaNoVirtual() == NULL && i_ca_digital_signature_not_set_ != NULL) {
+    delete i_ca_digital_signature_not_set_;
   }
-  w_ca_digital_signature_not_set_ = NULL;
+  i_ca_digital_signature_not_set_ = NULL;
   if (GetArenaNoVirtual() == NULL && e_ca_key_cert_sign_not_set_ != NULL) {
     delete e_ca_key_cert_sign_not_set_;
   }
@@ -4322,10 +4322,10 @@ void Lints::Clear() {
     delete e_sub_ca_no_ip_name_constraints_;
   }
   e_sub_ca_no_ip_name_constraints_ = NULL;
-  if (GetArenaNoVirtual() == NULL && w_sub_cert_aia_does_not_contain_issuing_ca_url_ != NULL) {
-    delete w_sub_cert_aia_does_not_contain_issuing_ca_url_;
+  if (GetArenaNoVirtual() == NULL && e_sub_cert_aia_does_not_contain_issuing_ca_url_ != NULL) {
+    delete e_sub_cert_aia_does_not_contain_issuing_ca_url_;
   }
-  w_sub_cert_aia_does_not_contain_issuing_ca_url_ = NULL;
+  e_sub_cert_aia_does_not_contain_issuing_ca_url_ = NULL;
   if (GetArenaNoVirtual() == NULL && e_sub_cert_aia_does_not_contain_ocsp_url_ != NULL) {
     delete e_sub_cert_aia_does_not_contain_ocsp_url_;
   }
@@ -4334,10 +4334,10 @@ void Lints::Clear() {
     delete e_sub_cert_aia_missing_;
   }
   e_sub_cert_aia_missing_ = NULL;
-  if (GetArenaNoVirtual() == NULL && w_sub_cert_cert_policy_empty_ != NULL) {
-    delete w_sub_cert_cert_policy_empty_;
+  if (GetArenaNoVirtual() == NULL && e_sub_cert_cert_policy_empty_ != NULL) {
+    delete e_sub_cert_cert_policy_empty_;
   }
-  w_sub_cert_cert_policy_empty_ = NULL;
+  e_sub_cert_cert_policy_empty_ = NULL;
   if (GetArenaNoVirtual() == NULL && w_sub_cert_certificate_policies_marked_critical_ != NULL) {
     delete w_sub_cert_certificate_policies_marked_critical_;
   }
@@ -4378,10 +4378,10 @@ void Lints::Clear() {
     delete e_subject_common_name_disallowed_;
   }
   e_subject_common_name_disallowed_ = NULL;
-  if (GetArenaNoVirtual() == NULL && w_subject_common_name_included_ != NULL) {
-    delete w_subject_common_name_included_;
+  if (GetArenaNoVirtual() == NULL && i_subject_common_name_included_ != NULL) {
+    delete i_subject_common_name_included_;
   }
-  w_subject_common_name_included_ = NULL;
+  i_subject_common_name_included_ = NULL;
   if (GetArenaNoVirtual() == NULL && e_subject_common_name_not_from_san_ != NULL) {
     delete e_subject_common_name_not_from_san_;
   }
@@ -4562,11 +4562,11 @@ bool Lints::MergePartialFromCodedStream(
         break;
       }
 
-      // .zsearch.LintResult w_ca_digital_signature_not_set = 9;
+      // .zsearch.LintResult i_ca_digital_signature_not_set = 9;
       case 9: {
         if (tag == 74u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
-               input, mutable_w_ca_digital_signature_not_set()));
+               input, mutable_i_ca_digital_signature_not_set()));
         } else {
           goto handle_unusual;
         }
@@ -6135,11 +6135,11 @@ bool Lints::MergePartialFromCodedStream(
         break;
       }
 
-      // .zsearch.LintResult w_sub_cert_aia_does_not_contain_issuing_ca_url = 152;
+      // .zsearch.LintResult e_sub_cert_aia_does_not_contain_issuing_ca_url = 152;
       case 152: {
         if (tag == 1218u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
-               input, mutable_w_sub_cert_aia_does_not_contain_issuing_ca_url()));
+               input, mutable_e_sub_cert_aia_does_not_contain_issuing_ca_url()));
         } else {
           goto handle_unusual;
         }
@@ -6168,11 +6168,11 @@ bool Lints::MergePartialFromCodedStream(
         break;
       }
 
-      // .zsearch.LintResult w_sub_cert_cert_policy_empty = 155;
+      // .zsearch.LintResult e_sub_cert_cert_policy_empty = 155;
       case 155: {
         if (tag == 1242u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
-               input, mutable_w_sub_cert_cert_policy_empty()));
+               input, mutable_e_sub_cert_cert_policy_empty()));
         } else {
           goto handle_unusual;
         }
@@ -6289,11 +6289,11 @@ bool Lints::MergePartialFromCodedStream(
         break;
       }
 
-      // .zsearch.LintResult w_subject_common_name_included = 166;
+      // .zsearch.LintResult i_subject_common_name_included = 166;
       case 166: {
         if (tag == 1330u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
-               input, mutable_w_subject_common_name_included()));
+               input, mutable_i_subject_common_name_included()));
         } else {
           goto handle_unusual;
         }
@@ -6592,10 +6592,10 @@ void Lints::SerializeWithCachedSizes(
       8, *this->e_ca_crl_sign_not_set_, output);
   }
 
-  // .zsearch.LintResult w_ca_digital_signature_not_set = 9;
-  if (this->has_w_ca_digital_signature_not_set()) {
+  // .zsearch.LintResult i_ca_digital_signature_not_set = 9;
+  if (this->has_i_ca_digital_signature_not_set()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      9, *this->w_ca_digital_signature_not_set_, output);
+      9, *this->i_ca_digital_signature_not_set_, output);
   }
 
   // .zsearch.LintResult e_ca_key_cert_sign_not_set = 10;
@@ -7450,10 +7450,10 @@ void Lints::SerializeWithCachedSizes(
       151, *this->e_sub_ca_no_ip_name_constraints_, output);
   }
 
-  // .zsearch.LintResult w_sub_cert_aia_does_not_contain_issuing_ca_url = 152;
-  if (this->has_w_sub_cert_aia_does_not_contain_issuing_ca_url()) {
+  // .zsearch.LintResult e_sub_cert_aia_does_not_contain_issuing_ca_url = 152;
+  if (this->has_e_sub_cert_aia_does_not_contain_issuing_ca_url()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      152, *this->w_sub_cert_aia_does_not_contain_issuing_ca_url_, output);
+      152, *this->e_sub_cert_aia_does_not_contain_issuing_ca_url_, output);
   }
 
   // .zsearch.LintResult e_sub_cert_aia_does_not_contain_ocsp_url = 153;
@@ -7468,10 +7468,10 @@ void Lints::SerializeWithCachedSizes(
       154, *this->e_sub_cert_aia_missing_, output);
   }
 
-  // .zsearch.LintResult w_sub_cert_cert_policy_empty = 155;
-  if (this->has_w_sub_cert_cert_policy_empty()) {
+  // .zsearch.LintResult e_sub_cert_cert_policy_empty = 155;
+  if (this->has_e_sub_cert_cert_policy_empty()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      155, *this->w_sub_cert_cert_policy_empty_, output);
+      155, *this->e_sub_cert_cert_policy_empty_, output);
   }
 
   // .zsearch.LintResult w_sub_cert_certificate_policies_marked_critical = 156;
@@ -7534,10 +7534,10 @@ void Lints::SerializeWithCachedSizes(
       165, *this->e_subject_common_name_disallowed_, output);
   }
 
-  // .zsearch.LintResult w_subject_common_name_included = 166;
-  if (this->has_w_subject_common_name_included()) {
+  // .zsearch.LintResult i_subject_common_name_included = 166;
+  if (this->has_i_subject_common_name_included()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      166, *this->w_subject_common_name_included_, output);
+      166, *this->i_subject_common_name_included_, output);
   }
 
   // .zsearch.LintResult e_subject_common_name_not_from_san = 167;
@@ -7723,11 +7723,11 @@ void Lints::SerializeWithCachedSizes(
         8, *this->e_ca_crl_sign_not_set_, false, target);
   }
 
-  // .zsearch.LintResult w_ca_digital_signature_not_set = 9;
-  if (this->has_w_ca_digital_signature_not_set()) {
+  // .zsearch.LintResult i_ca_digital_signature_not_set = 9;
+  if (this->has_i_ca_digital_signature_not_set()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        9, *this->w_ca_digital_signature_not_set_, false, target);
+        9, *this->i_ca_digital_signature_not_set_, false, target);
   }
 
   // .zsearch.LintResult e_ca_key_cert_sign_not_set = 10;
@@ -8724,11 +8724,11 @@ void Lints::SerializeWithCachedSizes(
         151, *this->e_sub_ca_no_ip_name_constraints_, false, target);
   }
 
-  // .zsearch.LintResult w_sub_cert_aia_does_not_contain_issuing_ca_url = 152;
-  if (this->has_w_sub_cert_aia_does_not_contain_issuing_ca_url()) {
+  // .zsearch.LintResult e_sub_cert_aia_does_not_contain_issuing_ca_url = 152;
+  if (this->has_e_sub_cert_aia_does_not_contain_issuing_ca_url()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        152, *this->w_sub_cert_aia_does_not_contain_issuing_ca_url_, false, target);
+        152, *this->e_sub_cert_aia_does_not_contain_issuing_ca_url_, false, target);
   }
 
   // .zsearch.LintResult e_sub_cert_aia_does_not_contain_ocsp_url = 153;
@@ -8745,11 +8745,11 @@ void Lints::SerializeWithCachedSizes(
         154, *this->e_sub_cert_aia_missing_, false, target);
   }
 
-  // .zsearch.LintResult w_sub_cert_cert_policy_empty = 155;
-  if (this->has_w_sub_cert_cert_policy_empty()) {
+  // .zsearch.LintResult e_sub_cert_cert_policy_empty = 155;
+  if (this->has_e_sub_cert_cert_policy_empty()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        155, *this->w_sub_cert_cert_policy_empty_, false, target);
+        155, *this->e_sub_cert_cert_policy_empty_, false, target);
   }
 
   // .zsearch.LintResult w_sub_cert_certificate_policies_marked_critical = 156;
@@ -8822,11 +8822,11 @@ void Lints::SerializeWithCachedSizes(
         165, *this->e_subject_common_name_disallowed_, false, target);
   }
 
-  // .zsearch.LintResult w_subject_common_name_included = 166;
-  if (this->has_w_subject_common_name_included()) {
+  // .zsearch.LintResult i_subject_common_name_included = 166;
+  if (this->has_i_subject_common_name_included()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        166, *this->w_subject_common_name_included_, false, target);
+        166, *this->i_subject_common_name_included_, false, target);
   }
 
   // .zsearch.LintResult e_subject_common_name_not_from_san = 167;
@@ -9033,11 +9033,11 @@ size_t Lints::ByteSizeLong() const {
         *this->e_ca_crl_sign_not_set_);
   }
 
-  // .zsearch.LintResult w_ca_digital_signature_not_set = 9;
-  if (this->has_w_ca_digital_signature_not_set()) {
+  // .zsearch.LintResult i_ca_digital_signature_not_set = 9;
+  if (this->has_i_ca_digital_signature_not_set()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-        *this->w_ca_digital_signature_not_set_);
+        *this->i_ca_digital_signature_not_set_);
   }
 
   // .zsearch.LintResult e_ca_key_cert_sign_not_set = 10;
@@ -10034,11 +10034,11 @@ size_t Lints::ByteSizeLong() const {
         *this->e_sub_ca_no_ip_name_constraints_);
   }
 
-  // .zsearch.LintResult w_sub_cert_aia_does_not_contain_issuing_ca_url = 152;
-  if (this->has_w_sub_cert_aia_does_not_contain_issuing_ca_url()) {
+  // .zsearch.LintResult e_sub_cert_aia_does_not_contain_issuing_ca_url = 152;
+  if (this->has_e_sub_cert_aia_does_not_contain_issuing_ca_url()) {
     total_size += 2 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-        *this->w_sub_cert_aia_does_not_contain_issuing_ca_url_);
+        *this->e_sub_cert_aia_does_not_contain_issuing_ca_url_);
   }
 
   // .zsearch.LintResult e_sub_cert_aia_does_not_contain_ocsp_url = 153;
@@ -10055,11 +10055,11 @@ size_t Lints::ByteSizeLong() const {
         *this->e_sub_cert_aia_missing_);
   }
 
-  // .zsearch.LintResult w_sub_cert_cert_policy_empty = 155;
-  if (this->has_w_sub_cert_cert_policy_empty()) {
+  // .zsearch.LintResult e_sub_cert_cert_policy_empty = 155;
+  if (this->has_e_sub_cert_cert_policy_empty()) {
     total_size += 2 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-        *this->w_sub_cert_cert_policy_empty_);
+        *this->e_sub_cert_cert_policy_empty_);
   }
 
   // .zsearch.LintResult w_sub_cert_certificate_policies_marked_critical = 156;
@@ -10132,11 +10132,11 @@ size_t Lints::ByteSizeLong() const {
         *this->e_subject_common_name_disallowed_);
   }
 
-  // .zsearch.LintResult w_subject_common_name_included = 166;
-  if (this->has_w_subject_common_name_included()) {
+  // .zsearch.LintResult i_subject_common_name_included = 166;
+  if (this->has_i_subject_common_name_included()) {
     total_size += 2 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-        *this->w_subject_common_name_included_);
+        *this->i_subject_common_name_included_);
   }
 
   // .zsearch.LintResult e_subject_common_name_not_from_san = 167;
@@ -10329,8 +10329,8 @@ void Lints::MergeFrom(const Lints& from) {
   if (from.has_e_ca_crl_sign_not_set()) {
     mutable_e_ca_crl_sign_not_set()->::zsearch::LintResult::MergeFrom(from.e_ca_crl_sign_not_set());
   }
-  if (from.has_w_ca_digital_signature_not_set()) {
-    mutable_w_ca_digital_signature_not_set()->::zsearch::LintResult::MergeFrom(from.w_ca_digital_signature_not_set());
+  if (from.has_i_ca_digital_signature_not_set()) {
+    mutable_i_ca_digital_signature_not_set()->::zsearch::LintResult::MergeFrom(from.i_ca_digital_signature_not_set());
   }
   if (from.has_e_ca_key_cert_sign_not_set()) {
     mutable_e_ca_key_cert_sign_not_set()->::zsearch::LintResult::MergeFrom(from.e_ca_key_cert_sign_not_set());
@@ -10758,8 +10758,8 @@ void Lints::MergeFrom(const Lints& from) {
   if (from.has_e_sub_ca_no_ip_name_constraints()) {
     mutable_e_sub_ca_no_ip_name_constraints()->::zsearch::LintResult::MergeFrom(from.e_sub_ca_no_ip_name_constraints());
   }
-  if (from.has_w_sub_cert_aia_does_not_contain_issuing_ca_url()) {
-    mutable_w_sub_cert_aia_does_not_contain_issuing_ca_url()->::zsearch::LintResult::MergeFrom(from.w_sub_cert_aia_does_not_contain_issuing_ca_url());
+  if (from.has_e_sub_cert_aia_does_not_contain_issuing_ca_url()) {
+    mutable_e_sub_cert_aia_does_not_contain_issuing_ca_url()->::zsearch::LintResult::MergeFrom(from.e_sub_cert_aia_does_not_contain_issuing_ca_url());
   }
   if (from.has_e_sub_cert_aia_does_not_contain_ocsp_url()) {
     mutable_e_sub_cert_aia_does_not_contain_ocsp_url()->::zsearch::LintResult::MergeFrom(from.e_sub_cert_aia_does_not_contain_ocsp_url());
@@ -10767,8 +10767,8 @@ void Lints::MergeFrom(const Lints& from) {
   if (from.has_e_sub_cert_aia_missing()) {
     mutable_e_sub_cert_aia_missing()->::zsearch::LintResult::MergeFrom(from.e_sub_cert_aia_missing());
   }
-  if (from.has_w_sub_cert_cert_policy_empty()) {
-    mutable_w_sub_cert_cert_policy_empty()->::zsearch::LintResult::MergeFrom(from.w_sub_cert_cert_policy_empty());
+  if (from.has_e_sub_cert_cert_policy_empty()) {
+    mutable_e_sub_cert_cert_policy_empty()->::zsearch::LintResult::MergeFrom(from.e_sub_cert_cert_policy_empty());
   }
   if (from.has_w_sub_cert_certificate_policies_marked_critical()) {
     mutable_w_sub_cert_certificate_policies_marked_critical()->::zsearch::LintResult::MergeFrom(from.w_sub_cert_certificate_policies_marked_critical());
@@ -10800,8 +10800,8 @@ void Lints::MergeFrom(const Lints& from) {
   if (from.has_e_subject_common_name_disallowed()) {
     mutable_e_subject_common_name_disallowed()->::zsearch::LintResult::MergeFrom(from.e_subject_common_name_disallowed());
   }
-  if (from.has_w_subject_common_name_included()) {
-    mutable_w_subject_common_name_included()->::zsearch::LintResult::MergeFrom(from.w_subject_common_name_included());
+  if (from.has_i_subject_common_name_included()) {
+    mutable_i_subject_common_name_included()->::zsearch::LintResult::MergeFrom(from.i_subject_common_name_included());
   }
   if (from.has_e_subject_common_name_not_from_san()) {
     mutable_e_subject_common_name_not_from_san()->::zsearch::LintResult::MergeFrom(from.e_subject_common_name_not_from_san());
@@ -10896,7 +10896,7 @@ void Lints::InternalSwap(Lints* other) {
   std::swap(e_ca_country_name_invalid_, other->e_ca_country_name_invalid_);
   std::swap(e_ca_country_name_missing_, other->e_ca_country_name_missing_);
   std::swap(e_ca_crl_sign_not_set_, other->e_ca_crl_sign_not_set_);
-  std::swap(w_ca_digital_signature_not_set_, other->w_ca_digital_signature_not_set_);
+  std::swap(i_ca_digital_signature_not_set_, other->i_ca_digital_signature_not_set_);
   std::swap(e_ca_key_cert_sign_not_set_, other->e_ca_key_cert_sign_not_set_);
   std::swap(e_ca_key_usage_missing_, other->e_ca_key_usage_missing_);
   std::swap(e_ca_key_usage_not_critical_, other->e_ca_key_usage_not_critical_);
@@ -11039,10 +11039,10 @@ void Lints::InternalSwap(Lints* other) {
   std::swap(w_sub_ca_name_constraints_not_critical_, other->w_sub_ca_name_constraints_not_critical_);
   std::swap(e_sub_ca_no_dns_name_constraints_, other->e_sub_ca_no_dns_name_constraints_);
   std::swap(e_sub_ca_no_ip_name_constraints_, other->e_sub_ca_no_ip_name_constraints_);
-  std::swap(w_sub_cert_aia_does_not_contain_issuing_ca_url_, other->w_sub_cert_aia_does_not_contain_issuing_ca_url_);
+  std::swap(e_sub_cert_aia_does_not_contain_issuing_ca_url_, other->e_sub_cert_aia_does_not_contain_issuing_ca_url_);
   std::swap(e_sub_cert_aia_does_not_contain_ocsp_url_, other->e_sub_cert_aia_does_not_contain_ocsp_url_);
   std::swap(e_sub_cert_aia_missing_, other->e_sub_cert_aia_missing_);
-  std::swap(w_sub_cert_cert_policy_empty_, other->w_sub_cert_cert_policy_empty_);
+  std::swap(e_sub_cert_cert_policy_empty_, other->e_sub_cert_cert_policy_empty_);
   std::swap(w_sub_cert_certificate_policies_marked_critical_, other->w_sub_cert_certificate_policies_marked_critical_);
   std::swap(e_sub_cert_crl_distribution_points_does_not_contain_url_, other->e_sub_cert_crl_distribution_points_does_not_contain_url_);
   std::swap(e_sub_cert_crl_distribution_points_marked_critical_, other->e_sub_cert_crl_distribution_points_marked_critical_);
@@ -11053,7 +11053,7 @@ void Lints::InternalSwap(Lints* other) {
   std::swap(e_sub_cert_or_sub_ca_using_sha1_, other->e_sub_cert_or_sub_ca_using_sha1_);
   std::swap(w_sub_cert_sha1_expiration_too_long_, other->w_sub_cert_sha1_expiration_too_long_);
   std::swap(e_subject_common_name_disallowed_, other->e_subject_common_name_disallowed_);
-  std::swap(w_subject_common_name_included_, other->w_subject_common_name_included_);
+  std::swap(i_subject_common_name_included_, other->i_subject_common_name_included_);
   std::swap(e_subject_common_name_not_from_san_, other->e_subject_common_name_not_from_san_);
   std::swap(e_subject_contains_noninformational_value_, other->e_subject_contains_noninformational_value_);
   std::swap(e_subject_contains_reserved_ip_, other->e_subject_contains_reserved_ip_);
@@ -11397,43 +11397,43 @@ void Lints::set_allocated_e_ca_crl_sign_not_set(::zsearch::LintResult* e_ca_crl_
   // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ca_crl_sign_not_set)
 }
 
-// .zsearch.LintResult w_ca_digital_signature_not_set = 9;
-bool Lints::has_w_ca_digital_signature_not_set() const {
-  return this != internal_default_instance() && w_ca_digital_signature_not_set_ != NULL;
+// .zsearch.LintResult i_ca_digital_signature_not_set = 9;
+bool Lints::has_i_ca_digital_signature_not_set() const {
+  return this != internal_default_instance() && i_ca_digital_signature_not_set_ != NULL;
 }
-void Lints::clear_w_ca_digital_signature_not_set() {
-  if (GetArenaNoVirtual() == NULL && w_ca_digital_signature_not_set_ != NULL) delete w_ca_digital_signature_not_set_;
-  w_ca_digital_signature_not_set_ = NULL;
+void Lints::clear_i_ca_digital_signature_not_set() {
+  if (GetArenaNoVirtual() == NULL && i_ca_digital_signature_not_set_ != NULL) delete i_ca_digital_signature_not_set_;
+  i_ca_digital_signature_not_set_ = NULL;
 }
-const ::zsearch::LintResult& Lints::w_ca_digital_signature_not_set() const {
-  // @@protoc_insertion_point(field_get:zsearch.Lints.w_ca_digital_signature_not_set)
-  return w_ca_digital_signature_not_set_ != NULL ? *w_ca_digital_signature_not_set_
+const ::zsearch::LintResult& Lints::i_ca_digital_signature_not_set() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.i_ca_digital_signature_not_set)
+  return i_ca_digital_signature_not_set_ != NULL ? *i_ca_digital_signature_not_set_
                          : *::zsearch::LintResult::internal_default_instance();
 }
-::zsearch::LintResult* Lints::mutable_w_ca_digital_signature_not_set() {
+::zsearch::LintResult* Lints::mutable_i_ca_digital_signature_not_set() {
   
-  if (w_ca_digital_signature_not_set_ == NULL) {
-    w_ca_digital_signature_not_set_ = new ::zsearch::LintResult;
+  if (i_ca_digital_signature_not_set_ == NULL) {
+    i_ca_digital_signature_not_set_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:zsearch.Lints.w_ca_digital_signature_not_set)
-  return w_ca_digital_signature_not_set_;
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.i_ca_digital_signature_not_set)
+  return i_ca_digital_signature_not_set_;
 }
-::zsearch::LintResult* Lints::release_w_ca_digital_signature_not_set() {
-  // @@protoc_insertion_point(field_release:zsearch.Lints.w_ca_digital_signature_not_set)
+::zsearch::LintResult* Lints::release_i_ca_digital_signature_not_set() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.i_ca_digital_signature_not_set)
   
-  ::zsearch::LintResult* temp = w_ca_digital_signature_not_set_;
-  w_ca_digital_signature_not_set_ = NULL;
+  ::zsearch::LintResult* temp = i_ca_digital_signature_not_set_;
+  i_ca_digital_signature_not_set_ = NULL;
   return temp;
 }
-void Lints::set_allocated_w_ca_digital_signature_not_set(::zsearch::LintResult* w_ca_digital_signature_not_set) {
-  delete w_ca_digital_signature_not_set_;
-  w_ca_digital_signature_not_set_ = w_ca_digital_signature_not_set;
-  if (w_ca_digital_signature_not_set) {
+void Lints::set_allocated_i_ca_digital_signature_not_set(::zsearch::LintResult* i_ca_digital_signature_not_set) {
+  delete i_ca_digital_signature_not_set_;
+  i_ca_digital_signature_not_set_ = i_ca_digital_signature_not_set;
+  if (i_ca_digital_signature_not_set) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.w_ca_digital_signature_not_set)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.i_ca_digital_signature_not_set)
 }
 
 // .zsearch.LintResult e_ca_key_cert_sign_not_set = 10;
@@ -16974,43 +16974,43 @@ void Lints::set_allocated_e_sub_ca_no_ip_name_constraints(::zsearch::LintResult*
   // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_sub_ca_no_ip_name_constraints)
 }
 
-// .zsearch.LintResult w_sub_cert_aia_does_not_contain_issuing_ca_url = 152;
-bool Lints::has_w_sub_cert_aia_does_not_contain_issuing_ca_url() const {
-  return this != internal_default_instance() && w_sub_cert_aia_does_not_contain_issuing_ca_url_ != NULL;
+// .zsearch.LintResult e_sub_cert_aia_does_not_contain_issuing_ca_url = 152;
+bool Lints::has_e_sub_cert_aia_does_not_contain_issuing_ca_url() const {
+  return this != internal_default_instance() && e_sub_cert_aia_does_not_contain_issuing_ca_url_ != NULL;
 }
-void Lints::clear_w_sub_cert_aia_does_not_contain_issuing_ca_url() {
-  if (GetArenaNoVirtual() == NULL && w_sub_cert_aia_does_not_contain_issuing_ca_url_ != NULL) delete w_sub_cert_aia_does_not_contain_issuing_ca_url_;
-  w_sub_cert_aia_does_not_contain_issuing_ca_url_ = NULL;
+void Lints::clear_e_sub_cert_aia_does_not_contain_issuing_ca_url() {
+  if (GetArenaNoVirtual() == NULL && e_sub_cert_aia_does_not_contain_issuing_ca_url_ != NULL) delete e_sub_cert_aia_does_not_contain_issuing_ca_url_;
+  e_sub_cert_aia_does_not_contain_issuing_ca_url_ = NULL;
 }
-const ::zsearch::LintResult& Lints::w_sub_cert_aia_does_not_contain_issuing_ca_url() const {
-  // @@protoc_insertion_point(field_get:zsearch.Lints.w_sub_cert_aia_does_not_contain_issuing_ca_url)
-  return w_sub_cert_aia_does_not_contain_issuing_ca_url_ != NULL ? *w_sub_cert_aia_does_not_contain_issuing_ca_url_
+const ::zsearch::LintResult& Lints::e_sub_cert_aia_does_not_contain_issuing_ca_url() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_sub_cert_aia_does_not_contain_issuing_ca_url)
+  return e_sub_cert_aia_does_not_contain_issuing_ca_url_ != NULL ? *e_sub_cert_aia_does_not_contain_issuing_ca_url_
                          : *::zsearch::LintResult::internal_default_instance();
 }
-::zsearch::LintResult* Lints::mutable_w_sub_cert_aia_does_not_contain_issuing_ca_url() {
+::zsearch::LintResult* Lints::mutable_e_sub_cert_aia_does_not_contain_issuing_ca_url() {
   
-  if (w_sub_cert_aia_does_not_contain_issuing_ca_url_ == NULL) {
-    w_sub_cert_aia_does_not_contain_issuing_ca_url_ = new ::zsearch::LintResult;
+  if (e_sub_cert_aia_does_not_contain_issuing_ca_url_ == NULL) {
+    e_sub_cert_aia_does_not_contain_issuing_ca_url_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:zsearch.Lints.w_sub_cert_aia_does_not_contain_issuing_ca_url)
-  return w_sub_cert_aia_does_not_contain_issuing_ca_url_;
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_sub_cert_aia_does_not_contain_issuing_ca_url)
+  return e_sub_cert_aia_does_not_contain_issuing_ca_url_;
 }
-::zsearch::LintResult* Lints::release_w_sub_cert_aia_does_not_contain_issuing_ca_url() {
-  // @@protoc_insertion_point(field_release:zsearch.Lints.w_sub_cert_aia_does_not_contain_issuing_ca_url)
+::zsearch::LintResult* Lints::release_e_sub_cert_aia_does_not_contain_issuing_ca_url() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_sub_cert_aia_does_not_contain_issuing_ca_url)
   
-  ::zsearch::LintResult* temp = w_sub_cert_aia_does_not_contain_issuing_ca_url_;
-  w_sub_cert_aia_does_not_contain_issuing_ca_url_ = NULL;
+  ::zsearch::LintResult* temp = e_sub_cert_aia_does_not_contain_issuing_ca_url_;
+  e_sub_cert_aia_does_not_contain_issuing_ca_url_ = NULL;
   return temp;
 }
-void Lints::set_allocated_w_sub_cert_aia_does_not_contain_issuing_ca_url(::zsearch::LintResult* w_sub_cert_aia_does_not_contain_issuing_ca_url) {
-  delete w_sub_cert_aia_does_not_contain_issuing_ca_url_;
-  w_sub_cert_aia_does_not_contain_issuing_ca_url_ = w_sub_cert_aia_does_not_contain_issuing_ca_url;
-  if (w_sub_cert_aia_does_not_contain_issuing_ca_url) {
+void Lints::set_allocated_e_sub_cert_aia_does_not_contain_issuing_ca_url(::zsearch::LintResult* e_sub_cert_aia_does_not_contain_issuing_ca_url) {
+  delete e_sub_cert_aia_does_not_contain_issuing_ca_url_;
+  e_sub_cert_aia_does_not_contain_issuing_ca_url_ = e_sub_cert_aia_does_not_contain_issuing_ca_url;
+  if (e_sub_cert_aia_does_not_contain_issuing_ca_url) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.w_sub_cert_aia_does_not_contain_issuing_ca_url)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_sub_cert_aia_does_not_contain_issuing_ca_url)
 }
 
 // .zsearch.LintResult e_sub_cert_aia_does_not_contain_ocsp_url = 153;
@@ -17091,43 +17091,43 @@ void Lints::set_allocated_e_sub_cert_aia_missing(::zsearch::LintResult* e_sub_ce
   // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_sub_cert_aia_missing)
 }
 
-// .zsearch.LintResult w_sub_cert_cert_policy_empty = 155;
-bool Lints::has_w_sub_cert_cert_policy_empty() const {
-  return this != internal_default_instance() && w_sub_cert_cert_policy_empty_ != NULL;
+// .zsearch.LintResult e_sub_cert_cert_policy_empty = 155;
+bool Lints::has_e_sub_cert_cert_policy_empty() const {
+  return this != internal_default_instance() && e_sub_cert_cert_policy_empty_ != NULL;
 }
-void Lints::clear_w_sub_cert_cert_policy_empty() {
-  if (GetArenaNoVirtual() == NULL && w_sub_cert_cert_policy_empty_ != NULL) delete w_sub_cert_cert_policy_empty_;
-  w_sub_cert_cert_policy_empty_ = NULL;
+void Lints::clear_e_sub_cert_cert_policy_empty() {
+  if (GetArenaNoVirtual() == NULL && e_sub_cert_cert_policy_empty_ != NULL) delete e_sub_cert_cert_policy_empty_;
+  e_sub_cert_cert_policy_empty_ = NULL;
 }
-const ::zsearch::LintResult& Lints::w_sub_cert_cert_policy_empty() const {
-  // @@protoc_insertion_point(field_get:zsearch.Lints.w_sub_cert_cert_policy_empty)
-  return w_sub_cert_cert_policy_empty_ != NULL ? *w_sub_cert_cert_policy_empty_
+const ::zsearch::LintResult& Lints::e_sub_cert_cert_policy_empty() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_sub_cert_cert_policy_empty)
+  return e_sub_cert_cert_policy_empty_ != NULL ? *e_sub_cert_cert_policy_empty_
                          : *::zsearch::LintResult::internal_default_instance();
 }
-::zsearch::LintResult* Lints::mutable_w_sub_cert_cert_policy_empty() {
+::zsearch::LintResult* Lints::mutable_e_sub_cert_cert_policy_empty() {
   
-  if (w_sub_cert_cert_policy_empty_ == NULL) {
-    w_sub_cert_cert_policy_empty_ = new ::zsearch::LintResult;
+  if (e_sub_cert_cert_policy_empty_ == NULL) {
+    e_sub_cert_cert_policy_empty_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:zsearch.Lints.w_sub_cert_cert_policy_empty)
-  return w_sub_cert_cert_policy_empty_;
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_sub_cert_cert_policy_empty)
+  return e_sub_cert_cert_policy_empty_;
 }
-::zsearch::LintResult* Lints::release_w_sub_cert_cert_policy_empty() {
-  // @@protoc_insertion_point(field_release:zsearch.Lints.w_sub_cert_cert_policy_empty)
+::zsearch::LintResult* Lints::release_e_sub_cert_cert_policy_empty() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_sub_cert_cert_policy_empty)
   
-  ::zsearch::LintResult* temp = w_sub_cert_cert_policy_empty_;
-  w_sub_cert_cert_policy_empty_ = NULL;
+  ::zsearch::LintResult* temp = e_sub_cert_cert_policy_empty_;
+  e_sub_cert_cert_policy_empty_ = NULL;
   return temp;
 }
-void Lints::set_allocated_w_sub_cert_cert_policy_empty(::zsearch::LintResult* w_sub_cert_cert_policy_empty) {
-  delete w_sub_cert_cert_policy_empty_;
-  w_sub_cert_cert_policy_empty_ = w_sub_cert_cert_policy_empty;
-  if (w_sub_cert_cert_policy_empty) {
+void Lints::set_allocated_e_sub_cert_cert_policy_empty(::zsearch::LintResult* e_sub_cert_cert_policy_empty) {
+  delete e_sub_cert_cert_policy_empty_;
+  e_sub_cert_cert_policy_empty_ = e_sub_cert_cert_policy_empty;
+  if (e_sub_cert_cert_policy_empty) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.w_sub_cert_cert_policy_empty)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_sub_cert_cert_policy_empty)
 }
 
 // .zsearch.LintResult w_sub_cert_certificate_policies_marked_critical = 156;
@@ -17520,43 +17520,43 @@ void Lints::set_allocated_e_subject_common_name_disallowed(::zsearch::LintResult
   // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_subject_common_name_disallowed)
 }
 
-// .zsearch.LintResult w_subject_common_name_included = 166;
-bool Lints::has_w_subject_common_name_included() const {
-  return this != internal_default_instance() && w_subject_common_name_included_ != NULL;
+// .zsearch.LintResult i_subject_common_name_included = 166;
+bool Lints::has_i_subject_common_name_included() const {
+  return this != internal_default_instance() && i_subject_common_name_included_ != NULL;
 }
-void Lints::clear_w_subject_common_name_included() {
-  if (GetArenaNoVirtual() == NULL && w_subject_common_name_included_ != NULL) delete w_subject_common_name_included_;
-  w_subject_common_name_included_ = NULL;
+void Lints::clear_i_subject_common_name_included() {
+  if (GetArenaNoVirtual() == NULL && i_subject_common_name_included_ != NULL) delete i_subject_common_name_included_;
+  i_subject_common_name_included_ = NULL;
 }
-const ::zsearch::LintResult& Lints::w_subject_common_name_included() const {
-  // @@protoc_insertion_point(field_get:zsearch.Lints.w_subject_common_name_included)
-  return w_subject_common_name_included_ != NULL ? *w_subject_common_name_included_
+const ::zsearch::LintResult& Lints::i_subject_common_name_included() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.i_subject_common_name_included)
+  return i_subject_common_name_included_ != NULL ? *i_subject_common_name_included_
                          : *::zsearch::LintResult::internal_default_instance();
 }
-::zsearch::LintResult* Lints::mutable_w_subject_common_name_included() {
+::zsearch::LintResult* Lints::mutable_i_subject_common_name_included() {
   
-  if (w_subject_common_name_included_ == NULL) {
-    w_subject_common_name_included_ = new ::zsearch::LintResult;
+  if (i_subject_common_name_included_ == NULL) {
+    i_subject_common_name_included_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:zsearch.Lints.w_subject_common_name_included)
-  return w_subject_common_name_included_;
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.i_subject_common_name_included)
+  return i_subject_common_name_included_;
 }
-::zsearch::LintResult* Lints::release_w_subject_common_name_included() {
-  // @@protoc_insertion_point(field_release:zsearch.Lints.w_subject_common_name_included)
+::zsearch::LintResult* Lints::release_i_subject_common_name_included() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.i_subject_common_name_included)
   
-  ::zsearch::LintResult* temp = w_subject_common_name_included_;
-  w_subject_common_name_included_ = NULL;
+  ::zsearch::LintResult* temp = i_subject_common_name_included_;
+  i_subject_common_name_included_ = NULL;
   return temp;
 }
-void Lints::set_allocated_w_subject_common_name_included(::zsearch::LintResult* w_subject_common_name_included) {
-  delete w_subject_common_name_included_;
-  w_subject_common_name_included_ = w_subject_common_name_included;
-  if (w_subject_common_name_included) {
+void Lints::set_allocated_i_subject_common_name_included(::zsearch::LintResult* i_subject_common_name_included) {
+  delete i_subject_common_name_included_;
+  i_subject_common_name_included_ = i_subject_common_name_included;
+  if (i_subject_common_name_included) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.w_subject_common_name_included)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.i_subject_common_name_included)
 }
 
 // .zsearch.LintResult e_subject_common_name_not_from_san = 167;
