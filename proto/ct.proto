@@ -66,7 +66,7 @@ message CTStatus {
     CTServerStatus cnnic_ctserver = 27;
     CTServerStatus startssl_ct = 29;
     CTServerStatus certly_log = 30; // deprecated
-    CTServerStatus sheca_ct = 41;
+    CTServerStatus sheca_ct = 42;
 
     CTServerStatus certificatetransparency_cn_ct = 38;
 }

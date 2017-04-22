@@ -99,6 +99,7 @@ enum CTServer {
   CT_SERVER_SYMANTEC_WS_SIRIUS = 37,
   CT_SERVER_COMODO_DODO = 35,
   CT_SERVER_COMODO_MAMMOTH = 36,
+  CT_SERVER_COMODO_SABRE = 41,
   CT_SERVER_WOSIGN_CTLOG = 25,
   CT_SERVER_WOSIGN_CT = 26,
   CT_SERVER_VENAFI_API_CTLOG = 31,
@@ -114,12 +115,13 @@ enum CTServer {
   CT_SERVER_CERTLY_LOG = 30,
   CT_SERVER_NORDU_CT_PLAUSIBLE = 33,
   CT_SERVER_CERTIFICATETRANSPARENCY_CN_CT = 38,
+  CT_SERVER_SHECA_CT = 42,
   CTServer_INT_MIN_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32min,
   CTServer_INT_MAX_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32max
 };
 bool CTServer_IsValid(int value);
 const CTServer CTServer_MIN = CT_SERVER_RESERVED;
-const CTServer CTServer_MAX = CT_SERVER_DIGICERT_CT2;
+const CTServer CTServer_MAX = CT_SERVER_SHECA_CT;
 const int CTServer_ARRAYSIZE = CTServer_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* CTServer_descriptor();
@@ -522,6 +524,15 @@ class CTStatus : public ::google::protobuf::Message /* @@protoc_insertion_point(
   ::zsearch::CTServerStatus* release_comodo_mammoth();
   void set_allocated_comodo_mammoth(::zsearch::CTServerStatus* comodo_mammoth);
 
+  // .zsearch.CTServerStatus comodo_sirius = 41;
+  bool has_comodo_sirius() const;
+  void clear_comodo_sirius();
+  static const int kComodoSiriusFieldNumber = 41;
+  const ::zsearch::CTServerStatus& comodo_sirius() const;
+  ::zsearch::CTServerStatus* mutable_comodo_sirius();
+  ::zsearch::CTServerStatus* release_comodo_sirius();
+  void set_allocated_comodo_sirius(::zsearch::CTServerStatus* comodo_sirius);
+
   // .zsearch.CTServerStatus wosign_ctlog = 25;
   bool has_wosign_ctlog() const;
   void clear_wosign_ctlog();
@@ -612,6 +623,15 @@ class CTStatus : public ::google::protobuf::Message /* @@protoc_insertion_point(
   ::zsearch::CTServerStatus* release_certly_log();
   void set_allocated_certly_log(::zsearch::CTServerStatus* certly_log);
 
+  // .zsearch.CTServerStatus sheca_ct = 42;
+  bool has_sheca_ct() const;
+  void clear_sheca_ct();
+  static const int kShecaCtFieldNumber = 42;
+  const ::zsearch::CTServerStatus& sheca_ct() const;
+  ::zsearch::CTServerStatus* mutable_sheca_ct();
+  ::zsearch::CTServerStatus* release_sheca_ct();
+  void set_allocated_sheca_ct(::zsearch::CTServerStatus* sheca_ct);
+
   // .zsearch.CTServerStatus certificatetransparency_cn_ct = 38;
   bool has_certificatetransparency_cn_ct() const;
   void clear_certificatetransparency_cn_ct();
@@ -645,6 +665,7 @@ class CTStatus : public ::google::protobuf::Message /* @@protoc_insertion_point(
   ::zsearch::CTServerStatus* symantec_ws_deneb_;
   ::zsearch::CTServerStatus* comodo_dodo_;
   ::zsearch::CTServerStatus* comodo_mammoth_;
+  ::zsearch::CTServerStatus* comodo_sirius_;
   ::zsearch::CTServerStatus* wosign_ctlog_;
   ::zsearch::CTServerStatus* wosign_ct_;
   ::zsearch::CTServerStatus* gdca_ct_;
@@ -655,6 +676,7 @@ class CTStatus : public ::google::protobuf::Message /* @@protoc_insertion_point(
   ::zsearch::CTServerStatus* cnnic_ctserver_;
   ::zsearch::CTServerStatus* startssl_ct_;
   ::zsearch::CTServerStatus* certly_log_;
+  ::zsearch::CTServerStatus* sheca_ct_;
   ::zsearch::CTServerStatus* certificatetransparency_cn_ct_;
   mutable int _cached_size_;
   friend struct  protobuf_ct_2eproto::TableStruct;
@@ -1733,6 +1755,45 @@ inline void CTStatus::set_allocated_comodo_mammoth(::zsearch::CTServerStatus* co
   // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.comodo_mammoth)
 }
 
+// .zsearch.CTServerStatus comodo_sirius = 41;
+inline bool CTStatus::has_comodo_sirius() const {
+  return this != internal_default_instance() && comodo_sirius_ != NULL;
+}
+inline void CTStatus::clear_comodo_sirius() {
+  if (GetArenaNoVirtual() == NULL && comodo_sirius_ != NULL) delete comodo_sirius_;
+  comodo_sirius_ = NULL;
+}
+inline const ::zsearch::CTServerStatus& CTStatus::comodo_sirius() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.comodo_sirius)
+  return comodo_sirius_ != NULL ? *comodo_sirius_
+                         : *::zsearch::CTServerStatus::internal_default_instance();
+}
+inline ::zsearch::CTServerStatus* CTStatus::mutable_comodo_sirius() {
+  
+  if (comodo_sirius_ == NULL) {
+    comodo_sirius_ = new ::zsearch::CTServerStatus;
+  }
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.comodo_sirius)
+  return comodo_sirius_;
+}
+inline ::zsearch::CTServerStatus* CTStatus::release_comodo_sirius() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.comodo_sirius)
+  
+  ::zsearch::CTServerStatus* temp = comodo_sirius_;
+  comodo_sirius_ = NULL;
+  return temp;
+}
+inline void CTStatus::set_allocated_comodo_sirius(::zsearch::CTServerStatus* comodo_sirius) {
+  delete comodo_sirius_;
+  comodo_sirius_ = comodo_sirius;
+  if (comodo_sirius) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.comodo_sirius)
+}
+
 // .zsearch.CTServerStatus wosign_ctlog = 25;
 inline bool CTStatus::has_wosign_ctlog() const {
   return this != internal_default_instance() && wosign_ctlog_ != NULL;
@@ -2121,6 +2182,45 @@ inline void CTStatus::set_allocated_certly_log(::zsearch::CTServerStatus* certly
     
   }
   // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.certly_log)
+}
+
+// .zsearch.CTServerStatus sheca_ct = 42;
+inline bool CTStatus::has_sheca_ct() const {
+  return this != internal_default_instance() && sheca_ct_ != NULL;
+}
+inline void CTStatus::clear_sheca_ct() {
+  if (GetArenaNoVirtual() == NULL && sheca_ct_ != NULL) delete sheca_ct_;
+  sheca_ct_ = NULL;
+}
+inline const ::zsearch::CTServerStatus& CTStatus::sheca_ct() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.sheca_ct)
+  return sheca_ct_ != NULL ? *sheca_ct_
+                         : *::zsearch::CTServerStatus::internal_default_instance();
+}
+inline ::zsearch::CTServerStatus* CTStatus::mutable_sheca_ct() {
+  
+  if (sheca_ct_ == NULL) {
+    sheca_ct_ = new ::zsearch::CTServerStatus;
+  }
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.sheca_ct)
+  return sheca_ct_;
+}
+inline ::zsearch::CTServerStatus* CTStatus::release_sheca_ct() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.sheca_ct)
+  
+  ::zsearch::CTServerStatus* temp = sheca_ct_;
+  sheca_ct_ = NULL;
+  return temp;
+}
+inline void CTStatus::set_allocated_sheca_ct(::zsearch::CTServerStatus* sheca_ct) {
+  delete sheca_ct_;
+  sheca_ct_ = sheca_ct;
+  if (sheca_ct) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.sheca_ct)
 }
 
 // .zsearch.CTServerStatus certificatetransparency_cn_ct = 38;

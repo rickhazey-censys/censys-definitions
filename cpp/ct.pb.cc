@@ -71,6 +71,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, symantec_ws_deneb_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, comodo_dodo_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, comodo_mammoth_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, comodo_sirius_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, wosign_ctlog_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, wosign_ct_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, gdca_ct_),
@@ -81,6 +82,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, cnnic_ctserver_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, startssl_ct_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, certly_log_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, sheca_ct_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, certificatetransparency_cn_ct_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SCT, _internal_metadata_),
@@ -94,7 +96,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
 static const ::google::protobuf::internal::MigrationSchema schemas[] = {
   { 0, -1, sizeof(CTServerStatus)},
   { 11, -1, sizeof(CTStatus)},
-  { 46, -1, sizeof(SCT)},
+  { 48, -1, sizeof(SCT)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -182,6 +184,8 @@ void TableStruct::InitDefaultsImpl() {
       ::zsearch::CTServerStatus::internal_default_instance());
   _CTStatus_default_instance_.get_mutable()->comodo_mammoth_ = const_cast< ::zsearch::CTServerStatus*>(
       ::zsearch::CTServerStatus::internal_default_instance());
+  _CTStatus_default_instance_.get_mutable()->comodo_sirius_ = const_cast< ::zsearch::CTServerStatus*>(
+      ::zsearch::CTServerStatus::internal_default_instance());
   _CTStatus_default_instance_.get_mutable()->wosign_ctlog_ = const_cast< ::zsearch::CTServerStatus*>(
       ::zsearch::CTServerStatus::internal_default_instance());
   _CTStatus_default_instance_.get_mutable()->wosign_ct_ = const_cast< ::zsearch::CTServerStatus*>(
@@ -202,6 +206,8 @@ void TableStruct::InitDefaultsImpl() {
       ::zsearch::CTServerStatus::internal_default_instance());
   _CTStatus_default_instance_.get_mutable()->certly_log_ = const_cast< ::zsearch::CTServerStatus*>(
       ::zsearch::CTServerStatus::internal_default_instance());
+  _CTStatus_default_instance_.get_mutable()->sheca_ct_ = const_cast< ::zsearch::CTServerStatus*>(
+      ::zsearch::CTServerStatus::internal_default_instance());
   _CTStatus_default_instance_.get_mutable()->certificatetransparency_cn_ct_ = const_cast< ::zsearch::CTServerStatus*>(
       ::zsearch::CTServerStatus::internal_default_instance());
   _SCT_default_instance_.get_mutable()->status_ = const_cast< ::zsearch::CTServerStatus*>(
@@ -220,7 +226,7 @@ void AddDescriptorsImpl() {
       "ull_timestamp\030\003 \001(\003\022\026\n\016push_timestamp\030\004 "
       "\001(\003\022*\n\013push_status\030\005 \001(\0162\025.zsearch.CTPus"
       "hStatus\022\013\n\003sct\030\006 \001(\014\022\022\n\npush_error\030\007 \001(\t"
-      "\"\365\013\n\010CTStatus\022+\n\ncensys_dev\030\001 \001(\0132\027.zsea"
+      "\"\320\014\n\010CTStatus\022+\n\ncensys_dev\030\001 \001(\0132\027.zsea"
       "rch.CTServerStatus\022\'\n\006censys\030\002 \001(\0132\027.zse"
       "arch.CTServerStatus\022/\n\016google_aviator\030\n "
       "\001(\0132\027.zsearch.CTServerStatus\022-\n\014google_p"
@@ -244,57 +250,60 @@ void AddDescriptorsImpl() {
       "2\n\021symantec_ws_deneb\030  \001(\0132\027.zsearch.CTS"
       "erverStatus\022,\n\013comodo_dodo\030\" \001(\0132\027.zsear"
       "ch.CTServerStatus\022/\n\016comodo_mammoth\030# \001("
-      "\0132\027.zsearch.CTServerStatus\022-\n\014wosign_ctl"
-      "og\030\031 \001(\0132\027.zsearch.CTServerStatus\022*\n\twos"
-      "ign_ct\030\032 \001(\0132\027.zsearch.CTServerStatus\022(\n"
-      "\007gdca_ct\030\034 \001(\0132\027.zsearch.CTServerStatus\022"
-      "+\n\ngdca_ctlog\030$ \001(\0132\027.zsearch.CTServerSt"
-      "atus\0221\n\020venafi_api_ctlog\030\037 \001(\0132\027.zsearch"
-      ".CTServerStatus\0226\n\025venafi_api_ctlog_gen2"
-      "\030\' \001(\0132\027.zsearch.CTServerStatus\0223\n\022nordu"
-      "_ct_plausible\030! \001(\0132\027.zsearch.CTServerSt"
-      "atus\022/\n\016cnnic_ctserver\030\033 \001(\0132\027.zsearch.C"
-      "TServerStatus\022,\n\013startssl_ct\030\035 \001(\0132\027.zse"
-      "arch.CTServerStatus\022+\n\ncertly_log\030\036 \001(\0132"
-      "\027.zsearch.CTServerStatus\022>\n\035certificatet"
-      "ransparency_cn_ct\030& \001(\0132\027.zsearch.CTServ"
-      "erStatus\"c\n\003SCT\022\020\n\010sha256fp\030\001 \001(\014\022!\n\006ser"
-      "ver\030\002 \001(\0162\021.zsearch.CTServer\022\'\n\006status\030\003"
-      " \001(\0132\027.zsearch.CTServerStatus*\353\001\n\014CTPush"
-      "Status\022\033\n\027CT_PUSH_STATUS_RESERVED\020\000\022\032\n\026C"
-      "T_PUSH_STATUS_UNKNOWN\020\001\022\032\n\026CT_PUSH_STATU"
-      "S_SUCCESS\020\002\022 \n\034CT_PUSH_STATUS_UNKNOWN_ER"
-      "ROR\020\003\022\037\n\033CT_PUSH_STATUS_INVALID_ROOT\020\004\022!"
-      "\n\035CT_PUSH_STATUS_ALREADY_EXISTS\020\005\022 \n\034CT_"
-      "PUSH_STATUS_WILL_NOT_PUSH\020\006*\323\007\n\010CTServer"
-      "\022\026\n\022CT_SERVER_RESERVED\020\000\022\037\n\033CT_SERVER_CE"
-      "NSYS_PRODUCTION\020\001\022 \n\034CT_SERVER_CENSYS_DE"
-      "VELOPMENT\020\002\022\032\n\026CT_SERVER_GOOGLE_PILOT\020\013\022"
-      "\036\n\032CT_SERVER_GOOGLE_ROCKETEER\020\014\022\037\n\033CT_SE"
-      "RVER_GOOGLE_SUBMARINER\020\r\022\035\n\031CT_SERVER_GO"
-      "OGLE_TESTTUBE\020\016\022\033\n\027CT_SERVER_GOOGLE_ICAR"
-      "US\020\017\022\035\n\031CT_SERVER_GOOGLE_SKYDIVER\020\020\022\035\n\031C"
-      "T_SERVER_GOOGLE_DAEDALUS\020\021\022\034\n\030CT_SERVER_"
-      "GOOGLE_AVIATOR\020\n\022\034\n\030CT_SERVER_SYMANTEC_W"
-      "S_CT\020\027\022\036\n\032CT_SERVER_SYMANTEC_WS_VEGA\020\030\022\037"
-      "\n\033CT_SERVER_SYMANTEC_WS_DENEB\020 \022 \n\034CT_SE"
-      "RVER_SYMANTEC_WS_SIRIUS\020%\022\031\n\025CT_SERVER_C"
-      "OMODO_DODO\020#\022\034\n\030CT_SERVER_COMODO_MAMMOTH"
-      "\020$\022\032\n\026CT_SERVER_WOSIGN_CTLOG\020\031\022\027\n\023CT_SER"
-      "VER_WOSIGN_CT\020\032\022\036\n\032CT_SERVER_VENAFI_API_"
-      "CTLOG\020\037\022#\n\037CT_SERVER_VENAFI_API_CTLOG_GE"
-      "N2\020\'\022\025\n\021CT_SERVER_GDCA_CT\020\034\022\030\n\024CT_SERVER"
-      "_GDCA_CTLOG\020\"\022\033\n\027CT_SERVER_IZENPE_COM_CT"
-      "\020\025\022\033\n\027CT_SERVER_IZENPE_EUS_CT\020\026\022\032\n\026CT_SE"
-      "RVER_DIGICERT_CT1\020\024\022\032\n\026CT_SERVER_DIGICER"
-      "T_CT2\020(\022\034\n\030CT_SERVER_CNNIC_CTSERVER\020\033\022\031\n"
-      "\025CT_SERVER_STARTSSL_CT\020\035\022\030\n\024CT_SERVER_CE"
-      "RTLY_LOG\020\036\022 \n\034CT_SERVER_NORDU_CT_PLAUSIB"
-      "LE\020!\022+\n\'CT_SERVER_CERTIFICATETRANSPARENC"
-      "Y_CN_CT\020&b\006proto3"
+      "\0132\027.zsearch.CTServerStatus\022.\n\rcomodo_sir"
+      "ius\030) \001(\0132\027.zsearch.CTServerStatus\022-\n\014wo"
+      "sign_ctlog\030\031 \001(\0132\027.zsearch.CTServerStatu"
+      "s\022*\n\twosign_ct\030\032 \001(\0132\027.zsearch.CTServerS"
+      "tatus\022(\n\007gdca_ct\030\034 \001(\0132\027.zsearch.CTServe"
+      "rStatus\022+\n\ngdca_ctlog\030$ \001(\0132\027.zsearch.CT"
+      "ServerStatus\0221\n\020venafi_api_ctlog\030\037 \001(\0132\027"
+      ".zsearch.CTServerStatus\0226\n\025venafi_api_ct"
+      "log_gen2\030\' \001(\0132\027.zsearch.CTServerStatus\022"
+      "3\n\022nordu_ct_plausible\030! \001(\0132\027.zsearch.CT"
+      "ServerStatus\022/\n\016cnnic_ctserver\030\033 \001(\0132\027.z"
+      "search.CTServerStatus\022,\n\013startssl_ct\030\035 \001"
+      "(\0132\027.zsearch.CTServerStatus\022+\n\ncertly_lo"
+      "g\030\036 \001(\0132\027.zsearch.CTServerStatus\022)\n\010shec"
+      "a_ct\030* \001(\0132\027.zsearch.CTServerStatus\022>\n\035c"
+      "ertificatetransparency_cn_ct\030& \001(\0132\027.zse"
+      "arch.CTServerStatus\"c\n\003SCT\022\020\n\010sha256fp\030\001"
+      " \001(\014\022!\n\006server\030\002 \001(\0162\021.zsearch.CTServer\022"
+      "\'\n\006status\030\003 \001(\0132\027.zsearch.CTServerStatus"
+      "*\353\001\n\014CTPushStatus\022\033\n\027CT_PUSH_STATUS_RESE"
+      "RVED\020\000\022\032\n\026CT_PUSH_STATUS_UNKNOWN\020\001\022\032\n\026CT"
+      "_PUSH_STATUS_SUCCESS\020\002\022 \n\034CT_PUSH_STATUS"
+      "_UNKNOWN_ERROR\020\003\022\037\n\033CT_PUSH_STATUS_INVAL"
+      "ID_ROOT\020\004\022!\n\035CT_PUSH_STATUS_ALREADY_EXIS"
+      "TS\020\005\022 \n\034CT_PUSH_STATUS_WILL_NOT_PUSH\020\006*\207"
+      "\010\n\010CTServer\022\026\n\022CT_SERVER_RESERVED\020\000\022\037\n\033C"
+      "T_SERVER_CENSYS_PRODUCTION\020\001\022 \n\034CT_SERVE"
+      "R_CENSYS_DEVELOPMENT\020\002\022\032\n\026CT_SERVER_GOOG"
+      "LE_PILOT\020\013\022\036\n\032CT_SERVER_GOOGLE_ROCKETEER"
+      "\020\014\022\037\n\033CT_SERVER_GOOGLE_SUBMARINER\020\r\022\035\n\031C"
+      "T_SERVER_GOOGLE_TESTTUBE\020\016\022\033\n\027CT_SERVER_"
+      "GOOGLE_ICARUS\020\017\022\035\n\031CT_SERVER_GOOGLE_SKYD"
+      "IVER\020\020\022\035\n\031CT_SERVER_GOOGLE_DAEDALUS\020\021\022\034\n"
+      "\030CT_SERVER_GOOGLE_AVIATOR\020\n\022\034\n\030CT_SERVER"
+      "_SYMANTEC_WS_CT\020\027\022\036\n\032CT_SERVER_SYMANTEC_"
+      "WS_VEGA\020\030\022\037\n\033CT_SERVER_SYMANTEC_WS_DENEB"
+      "\020 \022 \n\034CT_SERVER_SYMANTEC_WS_SIRIUS\020%\022\031\n\025"
+      "CT_SERVER_COMODO_DODO\020#\022\034\n\030CT_SERVER_COM"
+      "ODO_MAMMOTH\020$\022\032\n\026CT_SERVER_COMODO_SABRE\020"
+      ")\022\032\n\026CT_SERVER_WOSIGN_CTLOG\020\031\022\027\n\023CT_SERV"
+      "ER_WOSIGN_CT\020\032\022\036\n\032CT_SERVER_VENAFI_API_C"
+      "TLOG\020\037\022#\n\037CT_SERVER_VENAFI_API_CTLOG_GEN"
+      "2\020\'\022\025\n\021CT_SERVER_GDCA_CT\020\034\022\030\n\024CT_SERVER_"
+      "GDCA_CTLOG\020\"\022\033\n\027CT_SERVER_IZENPE_COM_CT\020"
+      "\025\022\033\n\027CT_SERVER_IZENPE_EUS_CT\020\026\022\032\n\026CT_SER"
+      "VER_DIGICERT_CT1\020\024\022\032\n\026CT_SERVER_DIGICERT"
+      "_CT2\020(\022\034\n\030CT_SERVER_CNNIC_CTSERVER\020\033\022\031\n\025"
+      "CT_SERVER_STARTSSL_CT\020\035\022\030\n\024CT_SERVER_CER"
+      "TLY_LOG\020\036\022 \n\034CT_SERVER_NORDU_CT_PLAUSIBL"
+      "E\020!\022+\n\'CT_SERVER_CERTIFICATETRANSPARENCY"
+      "_CN_CT\020&\022\026\n\022CT_SERVER_SHECA_CT\020*b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 3057);
+      descriptor, 3200);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "ct.proto", &protobuf_RegisterTypes);
   ::google::protobuf::internal::OnShutdown(&TableStruct::Shutdown);
@@ -370,6 +379,8 @@ bool CTServer_IsValid(int value) {
     case 38:
     case 39:
     case 40:
+    case 41:
+    case 42:
       return true;
     default:
       return false;
@@ -1031,6 +1042,7 @@ const int CTStatus::kSymantecWsSiriusFieldNumber;
 const int CTStatus::kSymantecWsDenebFieldNumber;
 const int CTStatus::kComodoDodoFieldNumber;
 const int CTStatus::kComodoMammothFieldNumber;
+const int CTStatus::kComodoSiriusFieldNumber;
 const int CTStatus::kWosignCtlogFieldNumber;
 const int CTStatus::kWosignCtFieldNumber;
 const int CTStatus::kGdcaCtFieldNumber;
@@ -1041,6 +1053,7 @@ const int CTStatus::kNorduCtPlausibleFieldNumber;
 const int CTStatus::kCnnicCtserverFieldNumber;
 const int CTStatus::kStartsslCtFieldNumber;
 const int CTStatus::kCertlyLogFieldNumber;
+const int CTStatus::kShecaCtFieldNumber;
 const int CTStatus::kCertificatetransparencyCnCtFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
@@ -1157,6 +1170,11 @@ CTStatus::CTStatus(const CTStatus& from)
   } else {
     comodo_mammoth_ = NULL;
   }
+  if (from.has_comodo_sirius()) {
+    comodo_sirius_ = new ::zsearch::CTServerStatus(*from.comodo_sirius_);
+  } else {
+    comodo_sirius_ = NULL;
+  }
   if (from.has_wosign_ctlog()) {
     wosign_ctlog_ = new ::zsearch::CTServerStatus(*from.wosign_ctlog_);
   } else {
@@ -1206,6 +1224,11 @@ CTStatus::CTStatus(const CTStatus& from)
     certly_log_ = new ::zsearch::CTServerStatus(*from.certly_log_);
   } else {
     certly_log_ = NULL;
+  }
+  if (from.has_sheca_ct()) {
+    sheca_ct_ = new ::zsearch::CTServerStatus(*from.sheca_ct_);
+  } else {
+    sheca_ct_ = NULL;
   }
   if (from.has_certificatetransparency_cn_ct()) {
     certificatetransparency_cn_ct_ = new ::zsearch::CTServerStatus(*from.certificatetransparency_cn_ct_);
@@ -1288,6 +1311,9 @@ void CTStatus::SharedDtor() {
     delete comodo_mammoth_;
   }
   if (this != internal_default_instance()) {
+    delete comodo_sirius_;
+  }
+  if (this != internal_default_instance()) {
     delete wosign_ctlog_;
   }
   if (this != internal_default_instance()) {
@@ -1316,6 +1342,9 @@ void CTStatus::SharedDtor() {
   }
   if (this != internal_default_instance()) {
     delete certly_log_;
+  }
+  if (this != internal_default_instance()) {
+    delete sheca_ct_;
   }
   if (this != internal_default_instance()) {
     delete certificatetransparency_cn_ct_;
@@ -1427,6 +1456,10 @@ void CTStatus::Clear() {
     delete comodo_mammoth_;
   }
   comodo_mammoth_ = NULL;
+  if (GetArenaNoVirtual() == NULL && comodo_sirius_ != NULL) {
+    delete comodo_sirius_;
+  }
+  comodo_sirius_ = NULL;
   if (GetArenaNoVirtual() == NULL && wosign_ctlog_ != NULL) {
     delete wosign_ctlog_;
   }
@@ -1467,6 +1500,10 @@ void CTStatus::Clear() {
     delete certly_log_;
   }
   certly_log_ = NULL;
+  if (GetArenaNoVirtual() == NULL && sheca_ct_ != NULL) {
+    delete sheca_ct_;
+  }
+  sheca_ct_ = NULL;
   if (GetArenaNoVirtual() == NULL && certificatetransparency_cn_ct_ != NULL) {
     delete certificatetransparency_cn_ct_;
   }
@@ -1824,6 +1861,28 @@ bool CTStatus::MergePartialFromCodedStream(
         break;
       }
 
+      // .zsearch.CTServerStatus comodo_sirius = 41;
+      case 41: {
+        if (tag == 330u) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_comodo_sirius()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .zsearch.CTServerStatus sheca_ct = 42;
+      case 42: {
+        if (tag == 338u) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_sheca_ct()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
       default: {
       handle_unusual:
         if (tag == 0 ||
@@ -2032,6 +2091,18 @@ void CTStatus::SerializeWithCachedSizes(
   if (this->has_digicert_ct2()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       40, *this->digicert_ct2_, output);
+  }
+
+  // .zsearch.CTServerStatus comodo_sirius = 41;
+  if (this->has_comodo_sirius()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      41, *this->comodo_sirius_, output);
+  }
+
+  // .zsearch.CTServerStatus sheca_ct = 42;
+  if (this->has_sheca_ct()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      42, *this->sheca_ct_, output);
   }
 
   // @@protoc_insertion_point(serialize_end:zsearch.CTStatus)
@@ -2258,6 +2329,20 @@ void CTStatus::SerializeWithCachedSizes(
         40, *this->digicert_ct2_, false, target);
   }
 
+  // .zsearch.CTServerStatus comodo_sirius = 41;
+  if (this->has_comodo_sirius()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageNoVirtualToArray(
+        41, *this->comodo_sirius_, false, target);
+  }
+
+  // .zsearch.CTServerStatus sheca_ct = 42;
+  if (this->has_sheca_ct()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageNoVirtualToArray(
+        42, *this->sheca_ct_, false, target);
+  }
+
   // @@protoc_insertion_point(serialize_to_array_end:zsearch.CTStatus)
   return target;
 }
@@ -2406,6 +2491,13 @@ size_t CTStatus::ByteSizeLong() const {
         *this->comodo_mammoth_);
   }
 
+  // .zsearch.CTServerStatus comodo_sirius = 41;
+  if (this->has_comodo_sirius()) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        *this->comodo_sirius_);
+  }
+
   // .zsearch.CTServerStatus wosign_ctlog = 25;
   if (this->has_wosign_ctlog()) {
     total_size += 2 +
@@ -2474,6 +2566,13 @@ size_t CTStatus::ByteSizeLong() const {
     total_size += 2 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->certly_log_);
+  }
+
+  // .zsearch.CTServerStatus sheca_ct = 42;
+  if (this->has_sheca_ct()) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        *this->sheca_ct_);
   }
 
   // .zsearch.CTServerStatus certificatetransparency_cn_ct = 38;
@@ -2569,6 +2668,9 @@ void CTStatus::MergeFrom(const CTStatus& from) {
   if (from.has_comodo_mammoth()) {
     mutable_comodo_mammoth()->::zsearch::CTServerStatus::MergeFrom(from.comodo_mammoth());
   }
+  if (from.has_comodo_sirius()) {
+    mutable_comodo_sirius()->::zsearch::CTServerStatus::MergeFrom(from.comodo_sirius());
+  }
   if (from.has_wosign_ctlog()) {
     mutable_wosign_ctlog()->::zsearch::CTServerStatus::MergeFrom(from.wosign_ctlog());
   }
@@ -2598,6 +2700,9 @@ void CTStatus::MergeFrom(const CTStatus& from) {
   }
   if (from.has_certly_log()) {
     mutable_certly_log()->::zsearch::CTServerStatus::MergeFrom(from.certly_log());
+  }
+  if (from.has_sheca_ct()) {
+    mutable_sheca_ct()->::zsearch::CTServerStatus::MergeFrom(from.sheca_ct());
   }
   if (from.has_certificatetransparency_cn_ct()) {
     mutable_certificatetransparency_cn_ct()->::zsearch::CTServerStatus::MergeFrom(from.certificatetransparency_cn_ct());
@@ -2647,6 +2752,7 @@ void CTStatus::InternalSwap(CTStatus* other) {
   std::swap(symantec_ws_deneb_, other->symantec_ws_deneb_);
   std::swap(comodo_dodo_, other->comodo_dodo_);
   std::swap(comodo_mammoth_, other->comodo_mammoth_);
+  std::swap(comodo_sirius_, other->comodo_sirius_);
   std::swap(wosign_ctlog_, other->wosign_ctlog_);
   std::swap(wosign_ct_, other->wosign_ct_);
   std::swap(gdca_ct_, other->gdca_ct_);
@@ -2657,6 +2763,7 @@ void CTStatus::InternalSwap(CTStatus* other) {
   std::swap(cnnic_ctserver_, other->cnnic_ctserver_);
   std::swap(startssl_ct_, other->startssl_ct_);
   std::swap(certly_log_, other->certly_log_);
+  std::swap(sheca_ct_, other->sheca_ct_);
   std::swap(certificatetransparency_cn_ct_, other->certificatetransparency_cn_ct_);
   std::swap(_cached_size_, other->_cached_size_);
 }
@@ -3449,6 +3556,45 @@ void CTStatus::set_allocated_comodo_mammoth(::zsearch::CTServerStatus* comodo_ma
   // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.comodo_mammoth)
 }
 
+// .zsearch.CTServerStatus comodo_sirius = 41;
+bool CTStatus::has_comodo_sirius() const {
+  return this != internal_default_instance() && comodo_sirius_ != NULL;
+}
+void CTStatus::clear_comodo_sirius() {
+  if (GetArenaNoVirtual() == NULL && comodo_sirius_ != NULL) delete comodo_sirius_;
+  comodo_sirius_ = NULL;
+}
+const ::zsearch::CTServerStatus& CTStatus::comodo_sirius() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.comodo_sirius)
+  return comodo_sirius_ != NULL ? *comodo_sirius_
+                         : *::zsearch::CTServerStatus::internal_default_instance();
+}
+::zsearch::CTServerStatus* CTStatus::mutable_comodo_sirius() {
+  
+  if (comodo_sirius_ == NULL) {
+    comodo_sirius_ = new ::zsearch::CTServerStatus;
+  }
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.comodo_sirius)
+  return comodo_sirius_;
+}
+::zsearch::CTServerStatus* CTStatus::release_comodo_sirius() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.comodo_sirius)
+  
+  ::zsearch::CTServerStatus* temp = comodo_sirius_;
+  comodo_sirius_ = NULL;
+  return temp;
+}
+void CTStatus::set_allocated_comodo_sirius(::zsearch::CTServerStatus* comodo_sirius) {
+  delete comodo_sirius_;
+  comodo_sirius_ = comodo_sirius;
+  if (comodo_sirius) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.comodo_sirius)
+}
+
 // .zsearch.CTServerStatus wosign_ctlog = 25;
 bool CTStatus::has_wosign_ctlog() const {
   return this != internal_default_instance() && wosign_ctlog_ != NULL;
@@ -3837,6 +3983,45 @@ void CTStatus::set_allocated_certly_log(::zsearch::CTServerStatus* certly_log) {
     
   }
   // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.certly_log)
+}
+
+// .zsearch.CTServerStatus sheca_ct = 42;
+bool CTStatus::has_sheca_ct() const {
+  return this != internal_default_instance() && sheca_ct_ != NULL;
+}
+void CTStatus::clear_sheca_ct() {
+  if (GetArenaNoVirtual() == NULL && sheca_ct_ != NULL) delete sheca_ct_;
+  sheca_ct_ = NULL;
+}
+const ::zsearch::CTServerStatus& CTStatus::sheca_ct() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.sheca_ct)
+  return sheca_ct_ != NULL ? *sheca_ct_
+                         : *::zsearch::CTServerStatus::internal_default_instance();
+}
+::zsearch::CTServerStatus* CTStatus::mutable_sheca_ct() {
+  
+  if (sheca_ct_ == NULL) {
+    sheca_ct_ = new ::zsearch::CTServerStatus;
+  }
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.sheca_ct)
+  return sheca_ct_;
+}
+::zsearch::CTServerStatus* CTStatus::release_sheca_ct() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.sheca_ct)
+  
+  ::zsearch::CTServerStatus* temp = sheca_ct_;
+  sheca_ct_ = NULL;
+  return temp;
+}
+void CTStatus::set_allocated_sheca_ct(::zsearch::CTServerStatus* sheca_ct) {
+  delete sheca_ct_;
+  sheca_ct_ = sheca_ct;
+  if (sheca_ct) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.sheca_ct)
 }
 
 // .zsearch.CTServerStatus certificatetransparency_cn_ct = 38;
