@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='ct.proto',
   package='zsearch',
   syntax='proto3',
-  serialized_pb=_b('\n\x08\x63t.proto\x12\x07zsearch\"\xb2\x01\n\x0e\x43TServerStatus\x12\r\n\x05index\x18\x01 \x01(\x03\x12\x14\n\x0c\x63t_timestamp\x18\x02 \x01(\x03\x12\x16\n\x0epull_timestamp\x18\x03 \x01(\x03\x12\x16\n\x0epush_timestamp\x18\x04 \x01(\x03\x12*\n\x0bpush_status\x18\x05 \x01(\x0e\x32\x15.zsearch.CTPushStatus\x12\x0b\n\x03sct\x18\x06 \x01(\x0c\x12\x12\n\npush_error\x18\x07 \x01(\t\"\xd0\x0c\n\x08\x43TStatus\x12+\n\ncensys_dev\x18\x01 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\'\n\x06\x63\x65nsys\x18\x02 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12/\n\x0egoogle_aviator\x18\n \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12-\n\x0cgoogle_pilot\x18\x0b \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x31\n\x10google_rocketeer\x18\x0c \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x32\n\x11google_submariner\x18\r \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x30\n\x0fgoogle_testtube\x18\x0e \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12.\n\rgoogle_icarus\x18\x0f \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x30\n\x0fgoogle_skydiver\x18\x10 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x30\n\x0fgoogle_daedalus\x18\x11 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12-\n\x0c\x64igicert_ct1\x18\x14 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12-\n\x0c\x64igicert_ct2\x18( \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12.\n\rizenpe_com_ct\x18\x15 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12.\n\rizenpe_eus_ct\x18\x16 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12/\n\x0esymantec_ws_ct\x18\x17 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x31\n\x10symantec_ws_vega\x18\x18 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x33\n\x12symantec_ws_sirius\x18% \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x32\n\x11symantec_ws_deneb\x18  \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12,\n\x0b\x63omodo_dodo\x18\" \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12/\n\x0e\x63omodo_mammoth\x18# \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12.\n\rcomodo_sirius\x18) \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12-\n\x0cwosign_ctlog\x18\x19 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12*\n\twosign_ct\x18\x1a \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12(\n\x07gdca_ct\x18\x1c \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12+\n\ngdca_ctlog\x18$ \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x31\n\x10venafi_api_ctlog\x18\x1f \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x36\n\x15venafi_api_ctlog_gen2\x18\' \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x33\n\x12nordu_ct_plausible\x18! \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12/\n\x0e\x63nnic_ctserver\x18\x1b \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12,\n\x0bstartssl_ct\x18\x1d \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12+\n\ncertly_log\x18\x1e \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12)\n\x08sheca_ct\x18* \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12>\n\x1d\x63\x65rtificatetransparency_cn_ct\x18& \x01(\x0b\x32\x17.zsearch.CTServerStatus\"c\n\x03SCT\x12\x10\n\x08sha256fp\x18\x01 \x01(\x0c\x12!\n\x06server\x18\x02 \x01(\x0e\x32\x11.zsearch.CTServer\x12\'\n\x06status\x18\x03 \x01(\x0b\x32\x17.zsearch.CTServerStatus*\xeb\x01\n\x0c\x43TPushStatus\x12\x1b\n\x17\x43T_PUSH_STATUS_RESERVED\x10\x00\x12\x1a\n\x16\x43T_PUSH_STATUS_UNKNOWN\x10\x01\x12\x1a\n\x16\x43T_PUSH_STATUS_SUCCESS\x10\x02\x12 \n\x1c\x43T_PUSH_STATUS_UNKNOWN_ERROR\x10\x03\x12\x1f\n\x1b\x43T_PUSH_STATUS_INVALID_ROOT\x10\x04\x12!\n\x1d\x43T_PUSH_STATUS_ALREADY_EXISTS\x10\x05\x12 \n\x1c\x43T_PUSH_STATUS_WILL_NOT_PUSH\x10\x06*\x87\x08\n\x08\x43TServer\x12\x16\n\x12\x43T_SERVER_RESERVED\x10\x00\x12\x1f\n\x1b\x43T_SERVER_CENSYS_PRODUCTION\x10\x01\x12 \n\x1c\x43T_SERVER_CENSYS_DEVELOPMENT\x10\x02\x12\x1a\n\x16\x43T_SERVER_GOOGLE_PILOT\x10\x0b\x12\x1e\n\x1a\x43T_SERVER_GOOGLE_ROCKETEER\x10\x0c\x12\x1f\n\x1b\x43T_SERVER_GOOGLE_SUBMARINER\x10\r\x12\x1d\n\x19\x43T_SERVER_GOOGLE_TESTTUBE\x10\x0e\x12\x1b\n\x17\x43T_SERVER_GOOGLE_ICARUS\x10\x0f\x12\x1d\n\x19\x43T_SERVER_GOOGLE_SKYDIVER\x10\x10\x12\x1d\n\x19\x43T_SERVER_GOOGLE_DAEDALUS\x10\x11\x12\x1c\n\x18\x43T_SERVER_GOOGLE_AVIATOR\x10\n\x12\x1c\n\x18\x43T_SERVER_SYMANTEC_WS_CT\x10\x17\x12\x1e\n\x1a\x43T_SERVER_SYMANTEC_WS_VEGA\x10\x18\x12\x1f\n\x1b\x43T_SERVER_SYMANTEC_WS_DENEB\x10 \x12 \n\x1c\x43T_SERVER_SYMANTEC_WS_SIRIUS\x10%\x12\x19\n\x15\x43T_SERVER_COMODO_DODO\x10#\x12\x1c\n\x18\x43T_SERVER_COMODO_MAMMOTH\x10$\x12\x1a\n\x16\x43T_SERVER_COMODO_SABRE\x10)\x12\x1a\n\x16\x43T_SERVER_WOSIGN_CTLOG\x10\x19\x12\x17\n\x13\x43T_SERVER_WOSIGN_CT\x10\x1a\x12\x1e\n\x1a\x43T_SERVER_VENAFI_API_CTLOG\x10\x1f\x12#\n\x1f\x43T_SERVER_VENAFI_API_CTLOG_GEN2\x10\'\x12\x15\n\x11\x43T_SERVER_GDCA_CT\x10\x1c\x12\x18\n\x14\x43T_SERVER_GDCA_CTLOG\x10\"\x12\x1b\n\x17\x43T_SERVER_IZENPE_COM_CT\x10\x15\x12\x1b\n\x17\x43T_SERVER_IZENPE_EUS_CT\x10\x16\x12\x1a\n\x16\x43T_SERVER_DIGICERT_CT1\x10\x14\x12\x1a\n\x16\x43T_SERVER_DIGICERT_CT2\x10(\x12\x1c\n\x18\x43T_SERVER_CNNIC_CTSERVER\x10\x1b\x12\x19\n\x15\x43T_SERVER_STARTSSL_CT\x10\x1d\x12\x18\n\x14\x43T_SERVER_CERTLY_LOG\x10\x1e\x12 \n\x1c\x43T_SERVER_NORDU_CT_PLAUSIBLE\x10!\x12+\n\'CT_SERVER_CERTIFICATETRANSPARENCY_CN_CT\x10&\x12\x16\n\x12\x43T_SERVER_SHECA_CT\x10*b\x06proto3')
+  serialized_pb=_b('\n\x08\x63t.proto\x12\x07zsearch\"\xb2\x01\n\x0e\x43TServerStatus\x12\r\n\x05index\x18\x01 \x01(\x03\x12\x14\n\x0c\x63t_timestamp\x18\x02 \x01(\x03\x12\x16\n\x0epull_timestamp\x18\x03 \x01(\x03\x12\x16\n\x0epush_timestamp\x18\x04 \x01(\x03\x12*\n\x0bpush_status\x18\x05 \x01(\x0e\x32\x15.zsearch.CTPushStatus\x12\x0b\n\x03sct\x18\x06 \x01(\x0c\x12\x12\n\npush_error\x18\x07 \x01(\t\"\xcf\x0c\n\x08\x43TStatus\x12+\n\ncensys_dev\x18\x01 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\'\n\x06\x63\x65nsys\x18\x02 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12/\n\x0egoogle_aviator\x18\n \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12-\n\x0cgoogle_pilot\x18\x0b \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x31\n\x10google_rocketeer\x18\x0c \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x32\n\x11google_submariner\x18\r \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x30\n\x0fgoogle_testtube\x18\x0e \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12.\n\rgoogle_icarus\x18\x0f \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x30\n\x0fgoogle_skydiver\x18\x10 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x30\n\x0fgoogle_daedalus\x18\x11 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12-\n\x0c\x64igicert_ct1\x18\x14 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12-\n\x0c\x64igicert_ct2\x18( \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12.\n\rizenpe_com_ct\x18\x15 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12.\n\rizenpe_eus_ct\x18\x16 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12/\n\x0esymantec_ws_ct\x18\x17 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x31\n\x10symantec_ws_vega\x18\x18 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x33\n\x12symantec_ws_sirius\x18% \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x32\n\x11symantec_ws_deneb\x18  \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12,\n\x0b\x63omodo_dodo\x18\" \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12/\n\x0e\x63omodo_mammoth\x18# \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12-\n\x0c\x63omodo_sabre\x18) \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12-\n\x0cwosign_ctlog\x18\x19 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12*\n\twosign_ct\x18\x1a \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12(\n\x07gdca_ct\x18\x1c \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12+\n\ngdca_ctlog\x18$ \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x31\n\x10venafi_api_ctlog\x18\x1f \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x36\n\x15venafi_api_ctlog_gen2\x18\' \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x33\n\x12nordu_ct_plausible\x18! \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12/\n\x0e\x63nnic_ctserver\x18\x1b \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12,\n\x0bstartssl_ct\x18\x1d \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12+\n\ncertly_log\x18\x1e \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12)\n\x08sheca_ct\x18* \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12>\n\x1d\x63\x65rtificatetransparency_cn_ct\x18& \x01(\x0b\x32\x17.zsearch.CTServerStatus\"c\n\x03SCT\x12\x10\n\x08sha256fp\x18\x01 \x01(\x0c\x12!\n\x06server\x18\x02 \x01(\x0e\x32\x11.zsearch.CTServer\x12\'\n\x06status\x18\x03 \x01(\x0b\x32\x17.zsearch.CTServerStatus*\xeb\x01\n\x0c\x43TPushStatus\x12\x1b\n\x17\x43T_PUSH_STATUS_RESERVED\x10\x00\x12\x1a\n\x16\x43T_PUSH_STATUS_UNKNOWN\x10\x01\x12\x1a\n\x16\x43T_PUSH_STATUS_SUCCESS\x10\x02\x12 \n\x1c\x43T_PUSH_STATUS_UNKNOWN_ERROR\x10\x03\x12\x1f\n\x1b\x43T_PUSH_STATUS_INVALID_ROOT\x10\x04\x12!\n\x1d\x43T_PUSH_STATUS_ALREADY_EXISTS\x10\x05\x12 \n\x1c\x43T_PUSH_STATUS_WILL_NOT_PUSH\x10\x06*\x87\x08\n\x08\x43TServer\x12\x16\n\x12\x43T_SERVER_RESERVED\x10\x00\x12\x1f\n\x1b\x43T_SERVER_CENSYS_PRODUCTION\x10\x01\x12 \n\x1c\x43T_SERVER_CENSYS_DEVELOPMENT\x10\x02\x12\x1a\n\x16\x43T_SERVER_GOOGLE_PILOT\x10\x0b\x12\x1e\n\x1a\x43T_SERVER_GOOGLE_ROCKETEER\x10\x0c\x12\x1f\n\x1b\x43T_SERVER_GOOGLE_SUBMARINER\x10\r\x12\x1d\n\x19\x43T_SERVER_GOOGLE_TESTTUBE\x10\x0e\x12\x1b\n\x17\x43T_SERVER_GOOGLE_ICARUS\x10\x0f\x12\x1d\n\x19\x43T_SERVER_GOOGLE_SKYDIVER\x10\x10\x12\x1d\n\x19\x43T_SERVER_GOOGLE_DAEDALUS\x10\x11\x12\x1c\n\x18\x43T_SERVER_GOOGLE_AVIATOR\x10\n\x12\x1c\n\x18\x43T_SERVER_SYMANTEC_WS_CT\x10\x17\x12\x1e\n\x1a\x43T_SERVER_SYMANTEC_WS_VEGA\x10\x18\x12\x1f\n\x1b\x43T_SERVER_SYMANTEC_WS_DENEB\x10 \x12 \n\x1c\x43T_SERVER_SYMANTEC_WS_SIRIUS\x10%\x12\x19\n\x15\x43T_SERVER_COMODO_DODO\x10#\x12\x1c\n\x18\x43T_SERVER_COMODO_MAMMOTH\x10$\x12\x1a\n\x16\x43T_SERVER_COMODO_SABRE\x10)\x12\x1a\n\x16\x43T_SERVER_WOSIGN_CTLOG\x10\x19\x12\x17\n\x13\x43T_SERVER_WOSIGN_CT\x10\x1a\x12\x1e\n\x1a\x43T_SERVER_VENAFI_API_CTLOG\x10\x1f\x12#\n\x1f\x43T_SERVER_VENAFI_API_CTLOG_GEN2\x10\'\x12\x15\n\x11\x43T_SERVER_GDCA_CT\x10\x1c\x12\x18\n\x14\x43T_SERVER_GDCA_CTLOG\x10\"\x12\x1b\n\x17\x43T_SERVER_IZENPE_COM_CT\x10\x15\x12\x1b\n\x17\x43T_SERVER_IZENPE_EUS_CT\x10\x16\x12\x1a\n\x16\x43T_SERVER_DIGICERT_CT1\x10\x14\x12\x1a\n\x16\x43T_SERVER_DIGICERT_CT2\x10(\x12\x1c\n\x18\x43T_SERVER_CNNIC_CTSERVER\x10\x1b\x12\x19\n\x15\x43T_SERVER_STARTSSL_CT\x10\x1d\x12\x18\n\x14\x43T_SERVER_CERTLY_LOG\x10\x1e\x12 \n\x1c\x43T_SERVER_NORDU_CT_PLAUSIBLE\x10!\x12+\n\'CT_SERVER_CERTIFICATETRANSPARENCY_CN_CT\x10&\x12\x16\n\x12\x43T_SERVER_SHECA_CT\x10*b\x06proto3')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -61,8 +61,8 @@ _CTPUSHSTATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1923,
-  serialized_end=2158,
+  serialized_start=1922,
+  serialized_end=2157,
 )
 _sym_db.RegisterEnumDescriptor(_CTPUSHSTATUS)
 
@@ -212,8 +212,8 @@ _CTSERVER = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2161,
-  serialized_end=3192,
+  serialized_start=2160,
+  serialized_end=3191,
 )
 _sym_db.RegisterEnumDescriptor(_CTSERVER)
 
@@ -483,7 +483,7 @@ _CTSTATUS = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='comodo_sirius', full_name='zsearch.CTStatus.comodo_sirius', index=20,
+      name='comodo_sabre', full_name='zsearch.CTStatus.comodo_sabre', index=20,
       number=41, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -586,7 +586,7 @@ _CTSTATUS = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=203,
-  serialized_end=1819,
+  serialized_end=1818,
 )
 
 
@@ -630,8 +630,8 @@ _SCT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1821,
-  serialized_end=1920,
+  serialized_start=1820,
+  serialized_end=1919,
 )
 
 _CTSERVERSTATUS.fields_by_name['push_status'].enum_type = _CTPUSHSTATUS
@@ -655,7 +655,7 @@ _CTSTATUS.fields_by_name['symantec_ws_sirius'].message_type = _CTSERVERSTATUS
 _CTSTATUS.fields_by_name['symantec_ws_deneb'].message_type = _CTSERVERSTATUS
 _CTSTATUS.fields_by_name['comodo_dodo'].message_type = _CTSERVERSTATUS
 _CTSTATUS.fields_by_name['comodo_mammoth'].message_type = _CTSERVERSTATUS
-_CTSTATUS.fields_by_name['comodo_sirius'].message_type = _CTSERVERSTATUS
+_CTSTATUS.fields_by_name['comodo_sabre'].message_type = _CTSERVERSTATUS
 _CTSTATUS.fields_by_name['wosign_ctlog'].message_type = _CTSERVERSTATUS
 _CTSTATUS.fields_by_name['wosign_ct'].message_type = _CTSERVERSTATUS
 _CTSTATUS.fields_by_name['gdca_ct'].message_type = _CTSERVERSTATUS

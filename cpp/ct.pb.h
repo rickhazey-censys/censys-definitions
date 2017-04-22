@@ -524,14 +524,14 @@ class CTStatus : public ::google::protobuf::Message /* @@protoc_insertion_point(
   ::zsearch::CTServerStatus* release_comodo_mammoth();
   void set_allocated_comodo_mammoth(::zsearch::CTServerStatus* comodo_mammoth);
 
-  // .zsearch.CTServerStatus comodo_sirius = 41;
-  bool has_comodo_sirius() const;
-  void clear_comodo_sirius();
-  static const int kComodoSiriusFieldNumber = 41;
-  const ::zsearch::CTServerStatus& comodo_sirius() const;
-  ::zsearch::CTServerStatus* mutable_comodo_sirius();
-  ::zsearch::CTServerStatus* release_comodo_sirius();
-  void set_allocated_comodo_sirius(::zsearch::CTServerStatus* comodo_sirius);
+  // .zsearch.CTServerStatus comodo_sabre = 41;
+  bool has_comodo_sabre() const;
+  void clear_comodo_sabre();
+  static const int kComodoSabreFieldNumber = 41;
+  const ::zsearch::CTServerStatus& comodo_sabre() const;
+  ::zsearch::CTServerStatus* mutable_comodo_sabre();
+  ::zsearch::CTServerStatus* release_comodo_sabre();
+  void set_allocated_comodo_sabre(::zsearch::CTServerStatus* comodo_sabre);
 
   // .zsearch.CTServerStatus wosign_ctlog = 25;
   bool has_wosign_ctlog() const;
@@ -665,7 +665,7 @@ class CTStatus : public ::google::protobuf::Message /* @@protoc_insertion_point(
   ::zsearch::CTServerStatus* symantec_ws_deneb_;
   ::zsearch::CTServerStatus* comodo_dodo_;
   ::zsearch::CTServerStatus* comodo_mammoth_;
-  ::zsearch::CTServerStatus* comodo_sirius_;
+  ::zsearch::CTServerStatus* comodo_sabre_;
   ::zsearch::CTServerStatus* wosign_ctlog_;
   ::zsearch::CTServerStatus* wosign_ct_;
   ::zsearch::CTServerStatus* gdca_ct_;
@@ -1755,43 +1755,43 @@ inline void CTStatus::set_allocated_comodo_mammoth(::zsearch::CTServerStatus* co
   // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.comodo_mammoth)
 }
 
-// .zsearch.CTServerStatus comodo_sirius = 41;
-inline bool CTStatus::has_comodo_sirius() const {
-  return this != internal_default_instance() && comodo_sirius_ != NULL;
+// .zsearch.CTServerStatus comodo_sabre = 41;
+inline bool CTStatus::has_comodo_sabre() const {
+  return this != internal_default_instance() && comodo_sabre_ != NULL;
 }
-inline void CTStatus::clear_comodo_sirius() {
-  if (GetArenaNoVirtual() == NULL && comodo_sirius_ != NULL) delete comodo_sirius_;
-  comodo_sirius_ = NULL;
+inline void CTStatus::clear_comodo_sabre() {
+  if (GetArenaNoVirtual() == NULL && comodo_sabre_ != NULL) delete comodo_sabre_;
+  comodo_sabre_ = NULL;
 }
-inline const ::zsearch::CTServerStatus& CTStatus::comodo_sirius() const {
-  // @@protoc_insertion_point(field_get:zsearch.CTStatus.comodo_sirius)
-  return comodo_sirius_ != NULL ? *comodo_sirius_
+inline const ::zsearch::CTServerStatus& CTStatus::comodo_sabre() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.comodo_sabre)
+  return comodo_sabre_ != NULL ? *comodo_sabre_
                          : *::zsearch::CTServerStatus::internal_default_instance();
 }
-inline ::zsearch::CTServerStatus* CTStatus::mutable_comodo_sirius() {
+inline ::zsearch::CTServerStatus* CTStatus::mutable_comodo_sabre() {
   
-  if (comodo_sirius_ == NULL) {
-    comodo_sirius_ = new ::zsearch::CTServerStatus;
+  if (comodo_sabre_ == NULL) {
+    comodo_sabre_ = new ::zsearch::CTServerStatus;
   }
-  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.comodo_sirius)
-  return comodo_sirius_;
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.comodo_sabre)
+  return comodo_sabre_;
 }
-inline ::zsearch::CTServerStatus* CTStatus::release_comodo_sirius() {
-  // @@protoc_insertion_point(field_release:zsearch.CTStatus.comodo_sirius)
+inline ::zsearch::CTServerStatus* CTStatus::release_comodo_sabre() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.comodo_sabre)
   
-  ::zsearch::CTServerStatus* temp = comodo_sirius_;
-  comodo_sirius_ = NULL;
+  ::zsearch::CTServerStatus* temp = comodo_sabre_;
+  comodo_sabre_ = NULL;
   return temp;
 }
-inline void CTStatus::set_allocated_comodo_sirius(::zsearch::CTServerStatus* comodo_sirius) {
-  delete comodo_sirius_;
-  comodo_sirius_ = comodo_sirius;
-  if (comodo_sirius) {
+inline void CTStatus::set_allocated_comodo_sabre(::zsearch::CTServerStatus* comodo_sabre) {
+  delete comodo_sabre_;
+  comodo_sabre_ = comodo_sabre;
+  if (comodo_sabre) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.comodo_sirius)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.comodo_sabre)
 }
 
 // .zsearch.CTServerStatus wosign_ctlog = 25;

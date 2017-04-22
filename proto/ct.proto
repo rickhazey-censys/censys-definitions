@@ -51,7 +51,7 @@ message CTStatus {
 
     CTServerStatus comodo_dodo = 34;
     CTServerStatus comodo_mammoth = 35;
-    CTServerStatus comodo_sirius = 41;
+    CTServerStatus comodo_sabre = 41;
 
     CTServerStatus wosign_ctlog = 25;
     CTServerStatus wosign_ct = 26; // deprecated
