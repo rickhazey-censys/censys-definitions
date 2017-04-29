@@ -60,9 +60,11 @@ enum LintResultStatus {
   LINT_RESULT_NA = 1,
   LINT_RESULT_NE = 2,
   LINT_RESULT_PASS = 3,
-  LINT_RESULT_FAIL = 4,
-  LINT_RESULT_FATAL = 5,
-  LINT_RESULT_UNKNOWN = 6,
+  LINT_RESULT_INFO = 4,
+  LINT_RESULT_WARN = 5,
+  LINT_RESULT_FAIL = 6,
+  LINT_RESULT_FATAL = 7,
+  LINT_RESULT_UNKNOWN = 8,
   LintResultStatus_INT_MIN_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32min,
   LintResultStatus_INT_MAX_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32max
 };

@@ -981,17 +981,18 @@ void AddDescriptorsImpl() {
       "cert_certificate_policies_missing\030\271\001 \001(\013"
       "2\023.zsearch.LintResult\022C\n%e_sub_cert_key_"
       "usage_crl_sign_bit_set\030\272\001 \001(\0132\023.zsearch."
-      "LintResult*\260\001\n\020LintResultStatus\022\030\n\024LINT_"
+      "LintResult*\334\001\n\020LintResultStatus\022\030\n\024LINT_"
       "RESULT_RESERVED\020\000\022\022\n\016LINT_RESULT_NA\020\001\022\022\n"
       "\016LINT_RESULT_NE\020\002\022\024\n\020LINT_RESULT_PASS\020\003\022"
-      "\024\n\020LINT_RESULT_FAIL\020\004\022\025\n\021LINT_RESULT_FAT"
-      "AL\020\005\022\027\n\023LINT_RESULT_UNKNOWN\020\006*[\n\013ZLintSt"
-      "atus\022\031\n\025ZLINT_STATUS_RESERVED\020\000\022\030\n\024ZLINT"
-      "_STATUS_SUCCESS\020\001\022\027\n\023ZLINT_STATUS_FAILED"
-      "\020\002b\006proto3"
+      "\024\n\020LINT_RESULT_INFO\020\004\022\024\n\020LINT_RESULT_WAR"
+      "N\020\005\022\024\n\020LINT_RESULT_FAIL\020\006\022\025\n\021LINT_RESULT"
+      "_FATAL\020\007\022\027\n\023LINT_RESULT_UNKNOWN\020\010*[\n\013ZLi"
+      "ntStatus\022\031\n\025ZLINT_STATUS_RESERVED\020\000\022\030\n\024Z"
+      "LINT_STATUS_SUCCESS\020\001\022\027\n\023ZLINT_STATUS_FA"
+      "ILED\020\002b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 12330);
+      descriptor, 12374);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "zlint.proto", &protobuf_RegisterTypes);
   ::google::protobuf::internal::OnShutdown(&TableStruct::Shutdown);
@@ -1023,6 +1024,8 @@ bool LintResultStatus_IsValid(int value) {
     case 4:
     case 5:
     case 6:
+    case 7:
+    case 8:
       return true;
     default:
       return false;
