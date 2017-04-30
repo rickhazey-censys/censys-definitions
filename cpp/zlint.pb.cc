@@ -139,7 +139,6 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, w_ext_san_critical_with_subject_dn_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, e_ext_san_directory_name_present_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, e_ext_san_dns_not_ia5_string_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, e_ext_san_dns_syntax_incorrect_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, e_ext_san_dnsname_not_fqdn_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, e_ext_san_edi_party_name_present_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, e_ext_san_empty_name_),
@@ -461,8 +460,6 @@ void TableStruct::InitDefaultsImpl() {
       ::zsearch::LintResult::internal_default_instance());
   _Lints_default_instance_.get_mutable()->e_ext_san_dns_not_ia5_string_ = const_cast< ::zsearch::LintResult*>(
       ::zsearch::LintResult::internal_default_instance());
-  _Lints_default_instance_.get_mutable()->e_ext_san_dns_syntax_incorrect_ = const_cast< ::zsearch::LintResult*>(
-      ::zsearch::LintResult::internal_default_instance());
   _Lints_default_instance_.get_mutable()->e_ext_san_dnsname_not_fqdn_ = const_cast< ::zsearch::LintResult*>(
       ::zsearch::LintResult::internal_default_instance());
   _Lints_default_instance_.get_mutable()->e_ext_san_edi_party_name_present_ = const_cast< ::zsearch::LintResult*>(
@@ -687,7 +684,7 @@ void AddDescriptorsImpl() {
       ".zsearch.ZLintStatus\022\025\n\rinfos_present\030\004 "
       "\001(\010\022\030\n\020warnings_present\030\005 \001(\010\022\026\n\016errors_"
       "present\030\006 \001(\010\022\026\n\016fatals_present\030\007 \001(\010\022\035\n"
-      "\005lints\030\010 \001(\0132\016.zsearch.Lints\"\333[\n\005Lints\022="
+      "\005lints\030\010 \001(\0132\016.zsearch.Lints\"\236[\n\005Lints\022="
       "\n e_basic_constraints_not_critical\030\001 \001(\013"
       "2\023.zsearch.LintResult\0220\n\023e_ian_bare_wild"
       "card\030\002 \001(\0132\023.zsearch.LintResult\0225\n\030e_ian"
@@ -812,186 +809,185 @@ void AddDescriptorsImpl() {
       "h.LintResult\022=\n e_ext_san_directory_name"
       "_present\030P \001(\0132\023.zsearch.LintResult\0229\n\034e"
       "_ext_san_dns_not_ia5_string\030Q \001(\0132\023.zsea"
-      "rch.LintResult\022;\n\036e_ext_san_dns_syntax_i"
-      "ncorrect\030R \001(\0132\023.zsearch.LintResult\0227\n\032e"
-      "_ext_san_dnsname_not_fqdn\030S \001(\0132\023.zsearc"
-      "h.LintResult\022=\n e_ext_san_edi_party_name"
-      "_present\030T \001(\0132\023.zsearch.LintResult\0221\n\024e"
-      "_ext_san_empty_name\030U \001(\0132\023.zsearch.Lint"
-      "Result\022.\n\021e_ext_san_missing\030V \001(\0132\023.zsea"
-      "rch.LintResult\0221\n\024e_ext_san_no_entries\030W"
-      " \001(\0132\023.zsearch.LintResult\022C\n&e_ext_san_n"
-      "ot_critical_without_subject\030X \001(\0132\023.zsea"
-      "rch.LintResult\0229\n\034e_ext_san_other_name_p"
-      "resent\030Y \001(\0132\023.zsearch.LintResult\022<\n\037e_e"
-      "xt_san_registered_id_present\030Z \001(\0132\023.zse"
-      "arch.LintResult\022<\n\037e_ext_san_rfc822_form"
-      "at_invalid\030[ \001(\0132\023.zsearch.LintResult\022:\n"
-      "\035e_ext_san_rfc822_name_present\030\\ \001(\0132\023.z"
-      "search.LintResult\0225\n\030e_ext_san_space_dns"
-      "_name\030] \001(\0132\023.zsearch.LintResult\022J\n-e_ex"
-      "t_san_uniform_resource_identifier_presen"
-      "t\030^ \001(\0132\023.zsearch.LintResult\0229\n\034e_ext_sa"
-      "n_uri_format_invalid\030_ \001(\0132\023.zsearch.Lin"
-      "tResult\022>\n!e_ext_san_uri_host_not_fqdn_o"
-      "r_ip\030` \001(\0132\023.zsearch.LintResult\0222\n\025e_ext"
-      "_san_uri_not_ia5\030a \001(\0132\023.zsearch.LintRes"
-      "ult\0223\n\026e_ext_san_uri_relative\030b \001(\0132\023.zs"
-      "earch.LintResult\022B\n%e_ext_subject_direct"
-      "ory_attr_critical\030c \001(\0132\023.zsearch.LintRe"
-      "sult\022B\n%e_ext_subject_key_identifier_cri"
-      "tical\030d \001(\0132\023.zsearch.LintResult\022D\n\'e_ex"
-      "t_subject_key_identifier_missing_ca\030e \001("
-      "\0132\023.zsearch.LintResult\022J\n-w_ext_subject_"
-      "key_identifier_missing_sub_cert\030f \001(\0132\023."
-      "zsearch.LintResult\022H\n+e_generalized_time"
-      "_does_not_include_seconds\030g \001(\0132\023.zsearc"
-      "h.LintResult\022I\n,e_generalized_time_inclu"
-      "des_fraction_seconds\030h \001(\0132\023.zsearch.Lin"
-      "tResult\022;\n\036e_generalized_time_not_in_zul"
-      "u\030i \001(\0132\023.zsearch.LintResult\0227\n\032w_gtld_u"
-      "nder_consideration\030j \001(\0132\023.zsearch.LintR"
-      "esult\022>\n!e_ian_dns_name_includes_null_ch"
-      "ar\030k \001(\0132\023.zsearch.LintResult\022>\n!e_ian_d"
-      "ns_name_starts_with_period\030l \001(\0132\023.zsear"
-      "ch.LintResult\0228\n\033w_ian_iana_pub_suffix_e"
-      "mpty\030m \001(\0132\023.zsearch.LintResult\022>\n!e_inh"
-      "ibit_any_policy_not_critical\030n \001(\0132\023.zse"
-      "arch.LintResult\022:\n\035e_invalid_certificate"
-      "_version\030o \001(\0132\023.zsearch.LintResult\0221\n\024e"
-      "_issuer_field_empty\030p \001(\0132\023.zsearch.Lint"
-      "Result\0224\n\027e_name_constraint_empty\030q \001(\0132"
-      "\023.zsearch.LintResult\022A\n$e_name_constrain"
-      "t_maximum_not_absent\030r \001(\0132\023.zsearch.Lin"
-      "tResult\022\?\n\"e_name_constraint_minimum_non"
-      "_zero\030s \001(\0132\023.zsearch.LintResult\022@\n#w_na"
-      "me_constraint_on_edi_party_name\030t \001(\0132\023."
-      "zsearch.LintResult\022\?\n\"w_name_constraint_"
-      "on_registered_id\030u \001(\0132\023.zsearch.LintRes"
-      "ult\0226\n\031w_name_constraint_on_x400\030v \001(\0132\023"
-      ".zsearch.LintResult\022F\n)e_old_root_ca_rsa"
-      "_mod_less_than_2048_bits\030w \001(\0132\023.zsearch"
-      ".LintResult\022E\n(e_old_sub_ca_rsa_mod_less"
-      "_than_1024_bits\030x \001(\0132\023.zsearch.LintResu"
-      "lt\022G\n*e_old_sub_cert_rsa_mod_less_than_1"
-      "024_bits\030y \001(\0132\023.zsearch.LintResult\022F\n)e"
-      "_path_len_constraint_improperly_included"
-      "\030z \001(\0132\023.zsearch.LintResult\022\?\n\"e_path_le"
-      "n_constraint_zero_or_less\030{ \001(\0132\023.zsearc"
-      "h.LintResult\022:\n\035e_public_key_type_not_al"
-      "lowed\030| \001(\0132\023.zsearch.LintResult\022Z\n=w_ro"
-      "ot_ca_basic_constraints_path_len_constra"
-      "int_field_present\030} \001(\0132\023.zsearch.LintRe"
-      "sult\022;\n\036w_root_ca_contains_cert_policy\030~"
-      " \001(\0132\023.zsearch.LintResult\022A\n$e_root_ca_e"
-      "xtended_key_usage_present\030\177 \001(\0132\023.zsearc"
-      "h.LintResult\0220\n\022e_rsa_exp_negative\030\200\001 \001("
-      "\0132\023.zsearch.LintResult\022@\n\"w_rsa_mod_fact"
-      "ors_smaller_than_752\030\201\001 \001(\0132\023.zsearch.Li"
-      "ntResult\022;\n\035e_rsa_mod_less_than_2048_bit"
-      "s\030\202\001 \001(\0132\023.zsearch.LintResult\022/\n\021w_rsa_m"
-      "od_not_odd\030\203\001 \001(\0132\023.zsearch.LintResult\022@"
-      "\n\"w_rsa_public_exponent_not_in_range\030\204\001 "
-      "\001(\0132\023.zsearch.LintResult\022;\n\035e_rsa_public"
-      "_exponent_not_odd\030\205\001 \001(\0132\023.zsearch.LintR"
-      "esult\022=\n\037e_rsa_public_exponent_too_small"
-      "\030\206\001 \001(\0132\023.zsearch.LintResult\022\?\n!e_san_dn"
-      "s_name_includes_null_char\030\207\001 \001(\0132\023.zsear"
-      "ch.LintResult\022\?\n!e_san_dns_name_starts_w"
-      "ith_period\030\210\001 \001(\0132\023.zsearch.LintResult\0229"
-      "\n\033w_san_iana_pub_suffix_empty\030\211\001 \001(\0132\023.z"
-      "search.LintResult\022C\n%e_serial_number_lon"
-      "ger_than_20_octets\030\212\001 \001(\0132\023.zsearch.Lint"
-      "Result\022:\n\034e_serial_number_not_positive\030\213"
-      "\001 \001(\0132\023.zsearch.LintResult\022J\n,w_sub_ca_a"
-      "ia_does_not_contain_issuing_ca_url\030\214\001 \001("
-      "\0132\023.zsearch.LintResult\022D\n&e_sub_ca_aia_d"
-      "oes_not_contain_ocsp_url\030\215\001 \001(\0132\023.zsearc"
-      "h.LintResult\0222\n\024e_sub_ca_aia_missing\030\216\001 "
-      "\001(\0132\023.zsearch.LintResult\022K\n-w_sub_ca_cer"
-      "tificate_policies_marked_critical\030\217\001 \001(\013"
-      "2\023.zsearch.LintResult\022C\n%e_sub_ca_certif"
-      "icate_policies_missing\030\220\001 \001(\0132\023.zsearch."
-      "LintResult\022S\n5e_sub_ca_crl_distribution_"
-      "points_does_not_contain_url\030\221\001 \001(\0132\023.zse"
-      "arch.LintResult\022N\n0e_sub_ca_crl_distribu"
-      "tion_points_marked_critical\030\222\001 \001(\0132\023.zse"
-      "arch.LintResult\022F\n(e_sub_ca_crl_distribu"
-      "tion_points_missing\030\223\001 \001(\0132\023.zsearch.Lin"
-      "tResult\0223\n\025w_sub_ca_eku_critical\030\224\001 \001(\0132"
-      "\023.zsearch.LintResult\022D\n&w_sub_ca_name_co"
-      "nstraints_not_critical\030\225\001 \001(\0132\023.zsearch."
-      "LintResult\022>\n e_sub_ca_no_dns_name_const"
-      "raints\030\226\001 \001(\0132\023.zsearch.LintResult\022=\n\037e_"
-      "sub_ca_no_ip_name_constraints\030\227\001 \001(\0132\023.z"
-      "search.LintResult\022L\n.e_sub_cert_aia_does"
-      "_not_contain_issuing_ca_url\030\230\001 \001(\0132\023.zse"
-      "arch.LintResult\022F\n(e_sub_cert_aia_does_n"
-      "ot_contain_ocsp_url\030\231\001 \001(\0132\023.zsearch.Lin"
-      "tResult\0224\n\026e_sub_cert_aia_missing\030\232\001 \001(\013"
-      "2\023.zsearch.LintResult\022:\n\034e_sub_cert_cert"
-      "_policy_empty\030\233\001 \001(\0132\023.zsearch.LintResul"
-      "t\022M\n/w_sub_cert_certificate_policies_mar"
-      "ked_critical\030\234\001 \001(\0132\023.zsearch.LintResult"
-      "\022U\n7e_sub_cert_crl_distribution_points_d"
-      "oes_not_contain_url\030\235\001 \001(\0132\023.zsearch.Lin"
-      "tResult\022P\n2e_sub_cert_crl_distribution_p"
-      "oints_marked_critical\030\236\001 \001(\0132\023.zsearch.L"
-      "intResult\0229\n\033w_sub_cert_eku_extra_values"
-      "\030\237\001 \001(\0132\023.zsearch.LintResult\0224\n\026e_sub_ce"
-      "rt_eku_missing\030\240\001 \001(\0132\023.zsearch.LintResu"
-      "lt\022L\n.e_sub_cert_eku_server_auth_client_"
-      "auth_missing\030\241\001 \001(\0132\023.zsearch.LintResult"
-      "\022D\n&e_sub_cert_key_usage_cert_sign_bit_s"
-      "et\030\242\001 \001(\0132\023.zsearch.LintResult\022=\n\037e_sub_"
-      "cert_or_sub_ca_using_sha1\030\243\001 \001(\0132\023.zsear"
-      "ch.LintResult\022A\n#w_sub_cert_sha1_expirat"
-      "ion_too_long\030\244\001 \001(\0132\023.zsearch.LintResult"
-      "\022>\n e_subject_common_name_disallowed\030\245\001 "
-      "\001(\0132\023.zsearch.LintResult\022<\n\036i_subject_co"
-      "mmon_name_included\030\246\001 \001(\0132\023.zsearch.Lint"
-      "Result\022@\n\"e_subject_common_name_not_from"
-      "_san\030\247\001 \001(\0132\023.zsearch.LintResult\022G\n)e_su"
-      "bject_contains_noninformational_value\030\250\001"
-      " \001(\0132\023.zsearch.LintResult\022<\n\036e_subject_c"
-      "ontains_reserved_ip\030\251\001 \001(\0132\023.zsearch.Lin"
-      "tResult\0227\n\031e_subject_country_not_iso\030\252\001 "
-      "\001(\0132\023.zsearch.LintResult\0229\n\033e_subject_em"
-      "pty_without_san\030\253\001 \001(\0132\023.zsearch.LintRes"
-      "ult\022C\n%e_subject_info_access_marked_crit"
-      "ical\030\254\001 \001(\0132\023.zsearch.LintResult\022<\n\036e_su"
-      "bject_locality_without_org\030\255\001 \001(\0132\023.zsea"
-      "rch.LintResult\022.\n\020e_subject_not_dn\030\256\001 \001("
-      "\0132\023.zsearch.LintResult\022;\n\035e_subject_org_"
-      "without_country\030\257\001 \001(\0132\023.zsearch.LintRes"
-      "ult\022H\n*e_subject_org_without_locality_or"
-      "_province\030\260\001 \001(\0132\023.zsearch.LintResult\022:\n"
-      "\034e_subject_postal_without_org\030\261\001 \001(\0132\023.z"
-      "search.LintResult\022<\n\036e_subject_province_"
-      "without_org\030\262\001 \001(\0132\023.zsearch.LintResult\022"
-      ":\n\034e_subject_street_without_org\030\263\001 \001(\0132\023"
-      ".zsearch.LintResult\022A\n#e_utc_time_does_n"
-      "ot_include_seconds\030\264\001 \001(\0132\023.zsearch.Lint"
-      "Result\0224\n\026e_utc_time_not_in_zulu\030\265\001 \001(\0132"
-      "\023.zsearch.LintResult\022:\n\034e_validity_time_"
-      "not_positive\030\266\001 \001(\0132\023.zsearch.LintResult"
-      "\0229\n\033e_wrong_time_format_pre2050\030\267\001 \001(\0132\023"
-      ".zsearch.LintResult\0221\n\023e_rsa_no_public_k"
-      "ey\030\270\001 \001(\0132\023.zsearch.LintResult\022E\n\'e_sub_"
-      "cert_certificate_policies_missing\030\271\001 \001(\013"
-      "2\023.zsearch.LintResult\022C\n%e_sub_cert_key_"
-      "usage_crl_sign_bit_set\030\272\001 \001(\0132\023.zsearch."
-      "LintResult*\260\001\n\020LintResultStatus\022\030\n\024LINT_"
-      "RESULT_RESERVED\020\000\022\022\n\016LINT_RESULT_NA\020\001\022\022\n"
-      "\016LINT_RESULT_NE\020\002\022\024\n\020LINT_RESULT_PASS\020\003\022"
-      "\024\n\020LINT_RESULT_FAIL\020\004\022\025\n\021LINT_RESULT_FAT"
-      "AL\020\005\022\027\n\023LINT_RESULT_UNKNOWN\020\006*[\n\013ZLintSt"
-      "atus\022\031\n\025ZLINT_STATUS_RESERVED\020\000\022\030\n\024ZLINT"
-      "_STATUS_SUCCESS\020\001\022\027\n\023ZLINT_STATUS_FAILED"
-      "\020\002b\006proto3"
+      "rch.LintResult\0227\n\032e_ext_san_dnsname_not_"
+      "fqdn\030S \001(\0132\023.zsearch.LintResult\022=\n e_ext"
+      "_san_edi_party_name_present\030T \001(\0132\023.zsea"
+      "rch.LintResult\0221\n\024e_ext_san_empty_name\030U"
+      " \001(\0132\023.zsearch.LintResult\022.\n\021e_ext_san_m"
+      "issing\030V \001(\0132\023.zsearch.LintResult\0221\n\024e_e"
+      "xt_san_no_entries\030W \001(\0132\023.zsearch.LintRe"
+      "sult\022C\n&e_ext_san_not_critical_without_s"
+      "ubject\030X \001(\0132\023.zsearch.LintResult\0229\n\034e_e"
+      "xt_san_other_name_present\030Y \001(\0132\023.zsearc"
+      "h.LintResult\022<\n\037e_ext_san_registered_id_"
+      "present\030Z \001(\0132\023.zsearch.LintResult\022<\n\037e_"
+      "ext_san_rfc822_format_invalid\030[ \001(\0132\023.zs"
+      "earch.LintResult\022:\n\035e_ext_san_rfc822_nam"
+      "e_present\030\\ \001(\0132\023.zsearch.LintResult\0225\n\030"
+      "e_ext_san_space_dns_name\030] \001(\0132\023.zsearch"
+      ".LintResult\022J\n-e_ext_san_uniform_resourc"
+      "e_identifier_present\030^ \001(\0132\023.zsearch.Lin"
+      "tResult\0229\n\034e_ext_san_uri_format_invalid\030"
+      "_ \001(\0132\023.zsearch.LintResult\022>\n!e_ext_san_"
+      "uri_host_not_fqdn_or_ip\030` \001(\0132\023.zsearch."
+      "LintResult\0222\n\025e_ext_san_uri_not_ia5\030a \001("
+      "\0132\023.zsearch.LintResult\0223\n\026e_ext_san_uri_"
+      "relative\030b \001(\0132\023.zsearch.LintResult\022B\n%e"
+      "_ext_subject_directory_attr_critical\030c \001"
+      "(\0132\023.zsearch.LintResult\022B\n%e_ext_subject"
+      "_key_identifier_critical\030d \001(\0132\023.zsearch"
+      ".LintResult\022D\n\'e_ext_subject_key_identif"
+      "ier_missing_ca\030e \001(\0132\023.zsearch.LintResul"
+      "t\022J\n-w_ext_subject_key_identifier_missin"
+      "g_sub_cert\030f \001(\0132\023.zsearch.LintResult\022H\n"
+      "+e_generalized_time_does_not_include_sec"
+      "onds\030g \001(\0132\023.zsearch.LintResult\022I\n,e_gen"
+      "eralized_time_includes_fraction_seconds\030"
+      "h \001(\0132\023.zsearch.LintResult\022;\n\036e_generali"
+      "zed_time_not_in_zulu\030i \001(\0132\023.zsearch.Lin"
+      "tResult\0227\n\032w_gtld_under_consideration\030j "
+      "\001(\0132\023.zsearch.LintResult\022>\n!e_ian_dns_na"
+      "me_includes_null_char\030k \001(\0132\023.zsearch.Li"
+      "ntResult\022>\n!e_ian_dns_name_starts_with_p"
+      "eriod\030l \001(\0132\023.zsearch.LintResult\0228\n\033w_ia"
+      "n_iana_pub_suffix_empty\030m \001(\0132\023.zsearch."
+      "LintResult\022>\n!e_inhibit_any_policy_not_c"
+      "ritical\030n \001(\0132\023.zsearch.LintResult\022:\n\035e_"
+      "invalid_certificate_version\030o \001(\0132\023.zsea"
+      "rch.LintResult\0221\n\024e_issuer_field_empty\030p"
+      " \001(\0132\023.zsearch.LintResult\0224\n\027e_name_cons"
+      "traint_empty\030q \001(\0132\023.zsearch.LintResult\022"
+      "A\n$e_name_constraint_maximum_not_absent\030"
+      "r \001(\0132\023.zsearch.LintResult\022\?\n\"e_name_con"
+      "straint_minimum_non_zero\030s \001(\0132\023.zsearch"
+      ".LintResult\022@\n#w_name_constraint_on_edi_"
+      "party_name\030t \001(\0132\023.zsearch.LintResult\022\?\n"
+      "\"w_name_constraint_on_registered_id\030u \001("
+      "\0132\023.zsearch.LintResult\0226\n\031w_name_constra"
+      "int_on_x400\030v \001(\0132\023.zsearch.LintResult\022F"
+      "\n)e_old_root_ca_rsa_mod_less_than_2048_b"
+      "its\030w \001(\0132\023.zsearch.LintResult\022E\n(e_old_"
+      "sub_ca_rsa_mod_less_than_1024_bits\030x \001(\013"
+      "2\023.zsearch.LintResult\022G\n*e_old_sub_cert_"
+      "rsa_mod_less_than_1024_bits\030y \001(\0132\023.zsea"
+      "rch.LintResult\022F\n)e_path_len_constraint_"
+      "improperly_included\030z \001(\0132\023.zsearch.Lint"
+      "Result\022\?\n\"e_path_len_constraint_zero_or_"
+      "less\030{ \001(\0132\023.zsearch.LintResult\022:\n\035e_pub"
+      "lic_key_type_not_allowed\030| \001(\0132\023.zsearch"
+      ".LintResult\022Z\n=w_root_ca_basic_constrain"
+      "ts_path_len_constraint_field_present\030} \001"
+      "(\0132\023.zsearch.LintResult\022;\n\036w_root_ca_con"
+      "tains_cert_policy\030~ \001(\0132\023.zsearch.LintRe"
+      "sult\022A\n$e_root_ca_extended_key_usage_pre"
+      "sent\030\177 \001(\0132\023.zsearch.LintResult\0220\n\022e_rsa"
+      "_exp_negative\030\200\001 \001(\0132\023.zsearch.LintResul"
+      "t\022@\n\"w_rsa_mod_factors_smaller_than_752\030"
+      "\201\001 \001(\0132\023.zsearch.LintResult\022;\n\035e_rsa_mod"
+      "_less_than_2048_bits\030\202\001 \001(\0132\023.zsearch.Li"
+      "ntResult\022/\n\021w_rsa_mod_not_odd\030\203\001 \001(\0132\023.z"
+      "search.LintResult\022@\n\"w_rsa_public_expone"
+      "nt_not_in_range\030\204\001 \001(\0132\023.zsearch.LintRes"
+      "ult\022;\n\035e_rsa_public_exponent_not_odd\030\205\001 "
+      "\001(\0132\023.zsearch.LintResult\022=\n\037e_rsa_public"
+      "_exponent_too_small\030\206\001 \001(\0132\023.zsearch.Lin"
+      "tResult\022\?\n!e_san_dns_name_includes_null_"
+      "char\030\207\001 \001(\0132\023.zsearch.LintResult\022\?\n!e_sa"
+      "n_dns_name_starts_with_period\030\210\001 \001(\0132\023.z"
+      "search.LintResult\0229\n\033w_san_iana_pub_suff"
+      "ix_empty\030\211\001 \001(\0132\023.zsearch.LintResult\022C\n%"
+      "e_serial_number_longer_than_20_octets\030\212\001"
+      " \001(\0132\023.zsearch.LintResult\022:\n\034e_serial_nu"
+      "mber_not_positive\030\213\001 \001(\0132\023.zsearch.LintR"
+      "esult\022J\n,w_sub_ca_aia_does_not_contain_i"
+      "ssuing_ca_url\030\214\001 \001(\0132\023.zsearch.LintResul"
+      "t\022D\n&e_sub_ca_aia_does_not_contain_ocsp_"
+      "url\030\215\001 \001(\0132\023.zsearch.LintResult\0222\n\024e_sub"
+      "_ca_aia_missing\030\216\001 \001(\0132\023.zsearch.LintRes"
+      "ult\022K\n-w_sub_ca_certificate_policies_mar"
+      "ked_critical\030\217\001 \001(\0132\023.zsearch.LintResult"
+      "\022C\n%e_sub_ca_certificate_policies_missin"
+      "g\030\220\001 \001(\0132\023.zsearch.LintResult\022S\n5e_sub_c"
+      "a_crl_distribution_points_does_not_conta"
+      "in_url\030\221\001 \001(\0132\023.zsearch.LintResult\022N\n0e_"
+      "sub_ca_crl_distribution_points_marked_cr"
+      "itical\030\222\001 \001(\0132\023.zsearch.LintResult\022F\n(e_"
+      "sub_ca_crl_distribution_points_missing\030\223"
+      "\001 \001(\0132\023.zsearch.LintResult\0223\n\025w_sub_ca_e"
+      "ku_critical\030\224\001 \001(\0132\023.zsearch.LintResult\022"
+      "D\n&w_sub_ca_name_constraints_not_critica"
+      "l\030\225\001 \001(\0132\023.zsearch.LintResult\022>\n e_sub_c"
+      "a_no_dns_name_constraints\030\226\001 \001(\0132\023.zsear"
+      "ch.LintResult\022=\n\037e_sub_ca_no_ip_name_con"
+      "straints\030\227\001 \001(\0132\023.zsearch.LintResult\022L\n."
+      "e_sub_cert_aia_does_not_contain_issuing_"
+      "ca_url\030\230\001 \001(\0132\023.zsearch.LintResult\022F\n(e_"
+      "sub_cert_aia_does_not_contain_ocsp_url\030\231"
+      "\001 \001(\0132\023.zsearch.LintResult\0224\n\026e_sub_cert"
+      "_aia_missing\030\232\001 \001(\0132\023.zsearch.LintResult"
+      "\022:\n\034e_sub_cert_cert_policy_empty\030\233\001 \001(\0132"
+      "\023.zsearch.LintResult\022M\n/w_sub_cert_certi"
+      "ficate_policies_marked_critical\030\234\001 \001(\0132\023"
+      ".zsearch.LintResult\022U\n7e_sub_cert_crl_di"
+      "stribution_points_does_not_contain_url\030\235"
+      "\001 \001(\0132\023.zsearch.LintResult\022P\n2e_sub_cert"
+      "_crl_distribution_points_marked_critical"
+      "\030\236\001 \001(\0132\023.zsearch.LintResult\0229\n\033w_sub_ce"
+      "rt_eku_extra_values\030\237\001 \001(\0132\023.zsearch.Lin"
+      "tResult\0224\n\026e_sub_cert_eku_missing\030\240\001 \001(\013"
+      "2\023.zsearch.LintResult\022L\n.e_sub_cert_eku_"
+      "server_auth_client_auth_missing\030\241\001 \001(\0132\023"
+      ".zsearch.LintResult\022D\n&e_sub_cert_key_us"
+      "age_cert_sign_bit_set\030\242\001 \001(\0132\023.zsearch.L"
+      "intResult\022=\n\037e_sub_cert_or_sub_ca_using_"
+      "sha1\030\243\001 \001(\0132\023.zsearch.LintResult\022A\n#w_su"
+      "b_cert_sha1_expiration_too_long\030\244\001 \001(\0132\023"
+      ".zsearch.LintResult\022>\n e_subject_common_"
+      "name_disallowed\030\245\001 \001(\0132\023.zsearch.LintRes"
+      "ult\022<\n\036i_subject_common_name_included\030\246\001"
+      " \001(\0132\023.zsearch.LintResult\022@\n\"e_subject_c"
+      "ommon_name_not_from_san\030\247\001 \001(\0132\023.zsearch"
+      ".LintResult\022G\n)e_subject_contains_noninf"
+      "ormational_value\030\250\001 \001(\0132\023.zsearch.LintRe"
+      "sult\022<\n\036e_subject_contains_reserved_ip\030\251"
+      "\001 \001(\0132\023.zsearch.LintResult\0227\n\031e_subject_"
+      "country_not_iso\030\252\001 \001(\0132\023.zsearch.LintRes"
+      "ult\0229\n\033e_subject_empty_without_san\030\253\001 \001("
+      "\0132\023.zsearch.LintResult\022C\n%e_subject_info"
+      "_access_marked_critical\030\254\001 \001(\0132\023.zsearch"
+      ".LintResult\022<\n\036e_subject_locality_withou"
+      "t_org\030\255\001 \001(\0132\023.zsearch.LintResult\022.\n\020e_s"
+      "ubject_not_dn\030\256\001 \001(\0132\023.zsearch.LintResul"
+      "t\022;\n\035e_subject_org_without_country\030\257\001 \001("
+      "\0132\023.zsearch.LintResult\022H\n*e_subject_org_"
+      "without_locality_or_province\030\260\001 \001(\0132\023.zs"
+      "earch.LintResult\022:\n\034e_subject_postal_wit"
+      "hout_org\030\261\001 \001(\0132\023.zsearch.LintResult\022<\n\036"
+      "e_subject_province_without_org\030\262\001 \001(\0132\023."
+      "zsearch.LintResult\022:\n\034e_subject_street_w"
+      "ithout_org\030\263\001 \001(\0132\023.zsearch.LintResult\022A"
+      "\n#e_utc_time_does_not_include_seconds\030\264\001"
+      " \001(\0132\023.zsearch.LintResult\0224\n\026e_utc_time_"
+      "not_in_zulu\030\265\001 \001(\0132\023.zsearch.LintResult\022"
+      ":\n\034e_validity_time_not_positive\030\266\001 \001(\0132\023"
+      ".zsearch.LintResult\0229\n\033e_wrong_time_form"
+      "at_pre2050\030\267\001 \001(\0132\023.zsearch.LintResult\0221"
+      "\n\023e_rsa_no_public_key\030\270\001 \001(\0132\023.zsearch.L"
+      "intResult\022E\n\'e_sub_cert_certificate_poli"
+      "cies_missing\030\271\001 \001(\0132\023.zsearch.LintResult"
+      "\022C\n%e_sub_cert_key_usage_crl_sign_bit_se"
+      "t\030\272\001 \001(\0132\023.zsearch.LintResult*\334\001\n\020LintRe"
+      "sultStatus\022\030\n\024LINT_RESULT_RESERVED\020\000\022\022\n\016"
+      "LINT_RESULT_NA\020\001\022\022\n\016LINT_RESULT_NE\020\002\022\024\n\020"
+      "LINT_RESULT_PASS\020\003\022\024\n\020LINT_RESULT_INFO\020\004"
+      "\022\024\n\020LINT_RESULT_WARN\020\005\022\024\n\020LINT_RESULT_FA"
+      "IL\020\006\022\025\n\021LINT_RESULT_FATAL\020\007\022\027\n\023LINT_RESU"
+      "LT_UNKNOWN\020\010*[\n\013ZLintStatus\022\031\n\025ZLINT_STA"
+      "TUS_RESERVED\020\000\022\030\n\024ZLINT_STATUS_SUCCESS\020\001"
+      "\022\027\n\023ZLINT_STATUS_FAILED\020\002b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 12330);
+      descriptor, 12313);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "zlint.proto", &protobuf_RegisterTypes);
   ::google::protobuf::internal::OnShutdown(&TableStruct::Shutdown);
@@ -1023,6 +1019,8 @@ bool LintResultStatus_IsValid(int value) {
     case 4:
     case 5:
     case 6:
+    case 7:
+    case 8:
       return true;
     default:
       return false;
@@ -2068,7 +2066,6 @@ const int Lints::kEExtSanContainsReservedIpFieldNumber;
 const int Lints::kWExtSanCriticalWithSubjectDnFieldNumber;
 const int Lints::kEExtSanDirectoryNamePresentFieldNumber;
 const int Lints::kEExtSanDnsNotIa5StringFieldNumber;
-const int Lints::kEExtSanDnsSyntaxIncorrectFieldNumber;
 const int Lints::kEExtSanDnsnameNotFqdnFieldNumber;
 const int Lints::kEExtSanEdiPartyNamePresentFieldNumber;
 const int Lints::kEExtSanEmptyNameFieldNumber;
@@ -2592,11 +2589,6 @@ Lints::Lints(const Lints& from)
     e_ext_san_dns_not_ia5_string_ = new ::zsearch::LintResult(*from.e_ext_san_dns_not_ia5_string_);
   } else {
     e_ext_san_dns_not_ia5_string_ = NULL;
-  }
-  if (from.has_e_ext_san_dns_syntax_incorrect()) {
-    e_ext_san_dns_syntax_incorrect_ = new ::zsearch::LintResult(*from.e_ext_san_dns_syntax_incorrect_);
-  } else {
-    e_ext_san_dns_syntax_incorrect_ = NULL;
   }
   if (from.has_e_ext_san_dnsname_not_fqdn()) {
     e_ext_san_dnsname_not_fqdn_ = new ::zsearch::LintResult(*from.e_ext_san_dnsname_not_fqdn_);
@@ -3377,9 +3369,6 @@ void Lints::SharedDtor() {
     delete e_ext_san_dns_not_ia5_string_;
   }
   if (this != internal_default_instance()) {
-    delete e_ext_san_dns_syntax_incorrect_;
-  }
-  if (this != internal_default_instance()) {
     delete e_ext_san_dnsname_not_fqdn_;
   }
   if (this != internal_default_instance()) {
@@ -4042,10 +4031,6 @@ void Lints::Clear() {
     delete e_ext_san_dns_not_ia5_string_;
   }
   e_ext_san_dns_not_ia5_string_ = NULL;
-  if (GetArenaNoVirtual() == NULL && e_ext_san_dns_syntax_incorrect_ != NULL) {
-    delete e_ext_san_dns_syntax_incorrect_;
-  }
-  e_ext_san_dns_syntax_incorrect_ = NULL;
   if (GetArenaNoVirtual() == NULL && e_ext_san_dnsname_not_fqdn_ != NULL) {
     delete e_ext_san_dnsname_not_fqdn_;
   }
@@ -5359,17 +5344,6 @@ bool Lints::MergePartialFromCodedStream(
         if (tag == 650u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ext_san_dns_not_ia5_string()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .zsearch.LintResult e_ext_san_dns_syntax_incorrect = 82;
-      case 82: {
-        if (tag == 658u) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
-               input, mutable_e_ext_san_dns_syntax_incorrect()));
         } else {
           goto handle_unusual;
         }
@@ -7030,12 +7004,6 @@ void Lints::SerializeWithCachedSizes(
       81, *this->e_ext_san_dns_not_ia5_string_, output);
   }
 
-  // .zsearch.LintResult e_ext_san_dns_syntax_incorrect = 82;
-  if (this->has_e_ext_san_dns_syntax_incorrect()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      82, *this->e_ext_san_dns_syntax_incorrect_, output);
-  }
-
   // .zsearch.LintResult e_ext_san_dnsname_not_fqdn = 83;
   if (this->has_e_ext_san_dnsname_not_fqdn()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
@@ -8232,13 +8200,6 @@ void Lints::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
         81, *this->e_ext_san_dns_not_ia5_string_, false, target);
-  }
-
-  // .zsearch.LintResult e_ext_san_dns_syntax_incorrect = 82;
-  if (this->has_e_ext_san_dns_syntax_incorrect()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageNoVirtualToArray(
-        82, *this->e_ext_san_dns_syntax_incorrect_, false, target);
   }
 
   // .zsearch.LintResult e_ext_san_dnsname_not_fqdn = 83;
@@ -9544,13 +9505,6 @@ size_t Lints::ByteSizeLong() const {
         *this->e_ext_san_dns_not_ia5_string_);
   }
 
-  // .zsearch.LintResult e_ext_san_dns_syntax_incorrect = 82;
-  if (this->has_e_ext_san_dns_syntax_incorrect()) {
-    total_size += 2 +
-      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-        *this->e_ext_san_dns_syntax_incorrect_);
-  }
-
   // .zsearch.LintResult e_ext_san_dnsname_not_fqdn = 83;
   if (this->has_e_ext_san_dnsname_not_fqdn()) {
     total_size += 2 +
@@ -10548,9 +10502,6 @@ void Lints::MergeFrom(const Lints& from) {
   if (from.has_e_ext_san_dns_not_ia5_string()) {
     mutable_e_ext_san_dns_not_ia5_string()->::zsearch::LintResult::MergeFrom(from.e_ext_san_dns_not_ia5_string());
   }
-  if (from.has_e_ext_san_dns_syntax_incorrect()) {
-    mutable_e_ext_san_dns_syntax_incorrect()->::zsearch::LintResult::MergeFrom(from.e_ext_san_dns_syntax_incorrect());
-  }
   if (from.has_e_ext_san_dnsname_not_fqdn()) {
     mutable_e_ext_san_dnsname_not_fqdn()->::zsearch::LintResult::MergeFrom(from.e_ext_san_dnsname_not_fqdn());
   }
@@ -10969,7 +10920,6 @@ void Lints::InternalSwap(Lints* other) {
   std::swap(w_ext_san_critical_with_subject_dn_, other->w_ext_san_critical_with_subject_dn_);
   std::swap(e_ext_san_directory_name_present_, other->e_ext_san_directory_name_present_);
   std::swap(e_ext_san_dns_not_ia5_string_, other->e_ext_san_dns_not_ia5_string_);
-  std::swap(e_ext_san_dns_syntax_incorrect_, other->e_ext_san_dns_syntax_incorrect_);
   std::swap(e_ext_san_dnsname_not_fqdn_, other->e_ext_san_dnsname_not_fqdn_);
   std::swap(e_ext_san_edi_party_name_present_, other->e_ext_san_edi_party_name_present_);
   std::swap(e_ext_san_empty_name_, other->e_ext_san_empty_name_);
@@ -14242,45 +14192,6 @@ void Lints::set_allocated_e_ext_san_dns_not_ia5_string(::zsearch::LintResult* e_
     
   }
   // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ext_san_dns_not_ia5_string)
-}
-
-// .zsearch.LintResult e_ext_san_dns_syntax_incorrect = 82;
-bool Lints::has_e_ext_san_dns_syntax_incorrect() const {
-  return this != internal_default_instance() && e_ext_san_dns_syntax_incorrect_ != NULL;
-}
-void Lints::clear_e_ext_san_dns_syntax_incorrect() {
-  if (GetArenaNoVirtual() == NULL && e_ext_san_dns_syntax_incorrect_ != NULL) delete e_ext_san_dns_syntax_incorrect_;
-  e_ext_san_dns_syntax_incorrect_ = NULL;
-}
-const ::zsearch::LintResult& Lints::e_ext_san_dns_syntax_incorrect() const {
-  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ext_san_dns_syntax_incorrect)
-  return e_ext_san_dns_syntax_incorrect_ != NULL ? *e_ext_san_dns_syntax_incorrect_
-                         : *::zsearch::LintResult::internal_default_instance();
-}
-::zsearch::LintResult* Lints::mutable_e_ext_san_dns_syntax_incorrect() {
-  
-  if (e_ext_san_dns_syntax_incorrect_ == NULL) {
-    e_ext_san_dns_syntax_incorrect_ = new ::zsearch::LintResult;
-  }
-  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ext_san_dns_syntax_incorrect)
-  return e_ext_san_dns_syntax_incorrect_;
-}
-::zsearch::LintResult* Lints::release_e_ext_san_dns_syntax_incorrect() {
-  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ext_san_dns_syntax_incorrect)
-  
-  ::zsearch::LintResult* temp = e_ext_san_dns_syntax_incorrect_;
-  e_ext_san_dns_syntax_incorrect_ = NULL;
-  return temp;
-}
-void Lints::set_allocated_e_ext_san_dns_syntax_incorrect(::zsearch::LintResult* e_ext_san_dns_syntax_incorrect) {
-  delete e_ext_san_dns_syntax_incorrect_;
-  e_ext_san_dns_syntax_incorrect_ = e_ext_san_dns_syntax_incorrect;
-  if (e_ext_san_dns_syntax_incorrect) {
-    
-  } else {
-    
-  }
-  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ext_san_dns_syntax_incorrect)
 }
 
 // .zsearch.LintResult e_ext_san_dnsname_not_fqdn = 83;

@@ -6,9 +6,11 @@ enum LintResultStatus {
     LINT_RESULT_NA = 1;
     LINT_RESULT_NE = 2;
     LINT_RESULT_PASS = 3;
-    LINT_RESULT_FAIL = 4;
-    LINT_RESULT_FATAL = 5;
-    LINT_RESULT_UNKNOWN = 6;
+    LINT_RESULT_INFO = 4;
+    LINT_RESULT_WARN = 5;
+    LINT_RESULT_FAIL = 6;
+    LINT_RESULT_FATAL = 7;
+    LINT_RESULT_UNKNOWN = 8;
 }
 
 message LintResult {
@@ -120,7 +122,7 @@ message Lints {
     LintResult w_ext_san_critical_with_subject_dn = 79;
     LintResult e_ext_san_directory_name_present = 80;
     LintResult e_ext_san_dns_not_ia5_string = 81;
-    LintResult e_ext_san_dns_syntax_incorrect = 82;
+    //LintResult e_ext_san_dns_syntax_incorrect = 82;
     LintResult e_ext_san_dnsname_not_fqdn = 83;
     LintResult e_ext_san_edi_party_name_present = 84;
     LintResult e_ext_san_empty_name = 85;

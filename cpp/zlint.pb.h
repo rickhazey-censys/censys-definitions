@@ -60,9 +60,11 @@ enum LintResultStatus {
   LINT_RESULT_NA = 1,
   LINT_RESULT_NE = 2,
   LINT_RESULT_PASS = 3,
-  LINT_RESULT_FAIL = 4,
-  LINT_RESULT_FATAL = 5,
-  LINT_RESULT_UNKNOWN = 6,
+  LINT_RESULT_INFO = 4,
+  LINT_RESULT_WARN = 5,
+  LINT_RESULT_FAIL = 6,
+  LINT_RESULT_FATAL = 7,
+  LINT_RESULT_UNKNOWN = 8,
   LintResultStatus_INT_MIN_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32min,
   LintResultStatus_INT_MAX_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32max
 };
@@ -1134,15 +1136,6 @@ class Lints : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
   ::zsearch::LintResult* release_e_ext_san_dns_not_ia5_string();
   void set_allocated_e_ext_san_dns_not_ia5_string(::zsearch::LintResult* e_ext_san_dns_not_ia5_string);
 
-  // .zsearch.LintResult e_ext_san_dns_syntax_incorrect = 82;
-  bool has_e_ext_san_dns_syntax_incorrect() const;
-  void clear_e_ext_san_dns_syntax_incorrect();
-  static const int kEExtSanDnsSyntaxIncorrectFieldNumber = 82;
-  const ::zsearch::LintResult& e_ext_san_dns_syntax_incorrect() const;
-  ::zsearch::LintResult* mutable_e_ext_san_dns_syntax_incorrect();
-  ::zsearch::LintResult* release_e_ext_san_dns_syntax_incorrect();
-  void set_allocated_e_ext_san_dns_syntax_incorrect(::zsearch::LintResult* e_ext_san_dns_syntax_incorrect);
-
   // .zsearch.LintResult e_ext_san_dnsname_not_fqdn = 83;
   bool has_e_ext_san_dnsname_not_fqdn() const;
   void clear_e_ext_san_dnsname_not_fqdn();
@@ -2164,7 +2157,6 @@ class Lints : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
   ::zsearch::LintResult* w_ext_san_critical_with_subject_dn_;
   ::zsearch::LintResult* e_ext_san_directory_name_present_;
   ::zsearch::LintResult* e_ext_san_dns_not_ia5_string_;
-  ::zsearch::LintResult* e_ext_san_dns_syntax_incorrect_;
   ::zsearch::LintResult* e_ext_san_dnsname_not_fqdn_;
   ::zsearch::LintResult* e_ext_san_edi_party_name_present_;
   ::zsearch::LintResult* e_ext_san_empty_name_;
@@ -5648,45 +5640,6 @@ inline void Lints::set_allocated_e_ext_san_dns_not_ia5_string(::zsearch::LintRes
     
   }
   // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ext_san_dns_not_ia5_string)
-}
-
-// .zsearch.LintResult e_ext_san_dns_syntax_incorrect = 82;
-inline bool Lints::has_e_ext_san_dns_syntax_incorrect() const {
-  return this != internal_default_instance() && e_ext_san_dns_syntax_incorrect_ != NULL;
-}
-inline void Lints::clear_e_ext_san_dns_syntax_incorrect() {
-  if (GetArenaNoVirtual() == NULL && e_ext_san_dns_syntax_incorrect_ != NULL) delete e_ext_san_dns_syntax_incorrect_;
-  e_ext_san_dns_syntax_incorrect_ = NULL;
-}
-inline const ::zsearch::LintResult& Lints::e_ext_san_dns_syntax_incorrect() const {
-  // @@protoc_insertion_point(field_get:zsearch.Lints.e_ext_san_dns_syntax_incorrect)
-  return e_ext_san_dns_syntax_incorrect_ != NULL ? *e_ext_san_dns_syntax_incorrect_
-                         : *::zsearch::LintResult::internal_default_instance();
-}
-inline ::zsearch::LintResult* Lints::mutable_e_ext_san_dns_syntax_incorrect() {
-  
-  if (e_ext_san_dns_syntax_incorrect_ == NULL) {
-    e_ext_san_dns_syntax_incorrect_ = new ::zsearch::LintResult;
-  }
-  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_ext_san_dns_syntax_incorrect)
-  return e_ext_san_dns_syntax_incorrect_;
-}
-inline ::zsearch::LintResult* Lints::release_e_ext_san_dns_syntax_incorrect() {
-  // @@protoc_insertion_point(field_release:zsearch.Lints.e_ext_san_dns_syntax_incorrect)
-  
-  ::zsearch::LintResult* temp = e_ext_san_dns_syntax_incorrect_;
-  e_ext_san_dns_syntax_incorrect_ = NULL;
-  return temp;
-}
-inline void Lints::set_allocated_e_ext_san_dns_syntax_incorrect(::zsearch::LintResult* e_ext_san_dns_syntax_incorrect) {
-  delete e_ext_san_dns_syntax_incorrect_;
-  e_ext_san_dns_syntax_incorrect_ = e_ext_san_dns_syntax_incorrect;
-  if (e_ext_san_dns_syntax_incorrect) {
-    
-  } else {
-    
-  }
-  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ext_san_dns_syntax_incorrect)
 }
 
 // .zsearch.LintResult e_ext_san_dnsname_not_fqdn = 83;
