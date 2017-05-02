@@ -7,10 +7,11 @@ enum LintResultStatus {
     LINT_RESULT_NE = 2;
     LINT_RESULT_PASS = 3;
     LINT_RESULT_INFO = 4;
-    LINT_RESULT_WARN = 5;
-    LINT_RESULT_FAIL = 6;
-    LINT_RESULT_FATAL = 7;
-    LINT_RESULT_UNKNOWN = 8;
+    LINT_RESULT_NOTICE = 5;
+    LINT_RESULT_WARN = 6;
+    LINT_RESULT_ERROR = 7;
+    LINT_RESULT_FATAL = 8;
+    LINT_RESULT_UNKNOWN = 9;
 }
 
 message LintResult {

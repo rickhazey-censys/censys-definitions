@@ -976,18 +976,19 @@ void AddDescriptorsImpl() {
       "intResult\022E\n\'e_sub_cert_certificate_poli"
       "cies_missing\030\271\001 \001(\0132\023.zsearch.LintResult"
       "\022C\n%e_sub_cert_key_usage_crl_sign_bit_se"
-      "t\030\272\001 \001(\0132\023.zsearch.LintResult*\334\001\n\020LintRe"
+      "t\030\272\001 \001(\0132\023.zsearch.LintResult*\365\001\n\020LintRe"
       "sultStatus\022\030\n\024LINT_RESULT_RESERVED\020\000\022\022\n\016"
       "LINT_RESULT_NA\020\001\022\022\n\016LINT_RESULT_NE\020\002\022\024\n\020"
       "LINT_RESULT_PASS\020\003\022\024\n\020LINT_RESULT_INFO\020\004"
-      "\022\024\n\020LINT_RESULT_WARN\020\005\022\024\n\020LINT_RESULT_FA"
-      "IL\020\006\022\025\n\021LINT_RESULT_FATAL\020\007\022\027\n\023LINT_RESU"
-      "LT_UNKNOWN\020\010*[\n\013ZLintStatus\022\031\n\025ZLINT_STA"
-      "TUS_RESERVED\020\000\022\030\n\024ZLINT_STATUS_SUCCESS\020\001"
-      "\022\027\n\023ZLINT_STATUS_FAILED\020\002b\006proto3"
+      "\022\026\n\022LINT_RESULT_NOTICE\020\005\022\024\n\020LINT_RESULT_"
+      "WARN\020\006\022\025\n\021LINT_RESULT_ERROR\020\007\022\025\n\021LINT_RE"
+      "SULT_FATAL\020\010\022\027\n\023LINT_RESULT_UNKNOWN\020\t*[\n"
+      "\013ZLintStatus\022\031\n\025ZLINT_STATUS_RESERVED\020\000\022"
+      "\030\n\024ZLINT_STATUS_SUCCESS\020\001\022\027\n\023ZLINT_STATU"
+      "S_FAILED\020\002b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 12313);
+      descriptor, 12338);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "zlint.proto", &protobuf_RegisterTypes);
   ::google::protobuf::internal::OnShutdown(&TableStruct::Shutdown);
@@ -1021,6 +1022,7 @@ bool LintResultStatus_IsValid(int value) {
     case 6:
     case 7:
     case 8:
+    case 9:
       return true;
     default:
       return false;
