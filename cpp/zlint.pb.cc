@@ -66,7 +66,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, e_ca_country_name_invalid_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, e_ca_country_name_missing_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, e_ca_crl_sign_not_set_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, i_ca_digital_signature_not_set_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, n_ca_digital_signature_not_set_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, e_ca_key_cert_sign_not_set_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, e_ca_key_usage_missing_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, e_ca_key_usage_not_critical_),
@@ -222,7 +222,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, e_sub_cert_or_sub_ca_using_sha1_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, w_sub_cert_sha1_expiration_too_long_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, e_subject_common_name_disallowed_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, i_subject_common_name_included_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, n_subject_common_name_included_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, e_subject_common_name_not_from_san_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, e_subject_contains_noninformational_value_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, e_subject_contains_reserved_ip_),
@@ -314,7 +314,7 @@ void TableStruct::InitDefaultsImpl() {
       ::zsearch::LintResult::internal_default_instance());
   _Lints_default_instance_.get_mutable()->e_ca_crl_sign_not_set_ = const_cast< ::zsearch::LintResult*>(
       ::zsearch::LintResult::internal_default_instance());
-  _Lints_default_instance_.get_mutable()->i_ca_digital_signature_not_set_ = const_cast< ::zsearch::LintResult*>(
+  _Lints_default_instance_.get_mutable()->n_ca_digital_signature_not_set_ = const_cast< ::zsearch::LintResult*>(
       ::zsearch::LintResult::internal_default_instance());
   _Lints_default_instance_.get_mutable()->e_ca_key_cert_sign_not_set_ = const_cast< ::zsearch::LintResult*>(
       ::zsearch::LintResult::internal_default_instance());
@@ -626,7 +626,7 @@ void TableStruct::InitDefaultsImpl() {
       ::zsearch::LintResult::internal_default_instance());
   _Lints_default_instance_.get_mutable()->e_subject_common_name_disallowed_ = const_cast< ::zsearch::LintResult*>(
       ::zsearch::LintResult::internal_default_instance());
-  _Lints_default_instance_.get_mutable()->i_subject_common_name_included_ = const_cast< ::zsearch::LintResult*>(
+  _Lints_default_instance_.get_mutable()->n_subject_common_name_included_ = const_cast< ::zsearch::LintResult*>(
       ::zsearch::LintResult::internal_default_instance());
   _Lints_default_instance_.get_mutable()->e_subject_common_name_not_from_san_ = const_cast< ::zsearch::LintResult*>(
       ::zsearch::LintResult::internal_default_instance());
@@ -695,7 +695,7 @@ void AddDescriptorsImpl() {
       "country_name_invalid\030\006 \001(\0132\023.zsearch.Lin"
       "tResult\0226\n\031e_ca_country_name_missing\030\007 \001"
       "(\0132\023.zsearch.LintResult\0222\n\025e_ca_crl_sign"
-      "_not_set\030\010 \001(\0132\023.zsearch.LintResult\022;\n\036i"
+      "_not_set\030\010 \001(\0132\023.zsearch.LintResult\022;\n\036n"
       "_ca_digital_signature_not_set\030\t \001(\0132\023.zs"
       "earch.LintResult\0227\n\032e_ca_key_cert_sign_n"
       "ot_set\030\n \001(\0132\023.zsearch.LintResult\0223\n\026e_c"
@@ -944,7 +944,7 @@ void AddDescriptorsImpl() {
       "b_cert_sha1_expiration_too_long\030\244\001 \001(\0132\023"
       ".zsearch.LintResult\022>\n e_subject_common_"
       "name_disallowed\030\245\001 \001(\0132\023.zsearch.LintRes"
-      "ult\022<\n\036i_subject_common_name_included\030\246\001"
+      "ult\022<\n\036n_subject_common_name_included\030\246\001"
       " \001(\0132\023.zsearch.LintResult\022@\n\"e_subject_c"
       "ommon_name_not_from_san\030\247\001 \001(\0132\023.zsearch"
       ".LintResult\022G\n)e_subject_contains_noninf"
@@ -1995,7 +1995,7 @@ const int Lints::kESanWildcardNotFirstFieldNumber;
 const int Lints::kECaCountryNameInvalidFieldNumber;
 const int Lints::kECaCountryNameMissingFieldNumber;
 const int Lints::kECaCrlSignNotSetFieldNumber;
-const int Lints::kICaDigitalSignatureNotSetFieldNumber;
+const int Lints::kNCaDigitalSignatureNotSetFieldNumber;
 const int Lints::kECaKeyCertSignNotSetFieldNumber;
 const int Lints::kECaKeyUsageMissingFieldNumber;
 const int Lints::kECaKeyUsageNotCriticalFieldNumber;
@@ -2151,7 +2151,7 @@ const int Lints::kESubCertKeyUsageCertSignBitSetFieldNumber;
 const int Lints::kESubCertOrSubCaUsingSha1FieldNumber;
 const int Lints::kWSubCertSha1ExpirationTooLongFieldNumber;
 const int Lints::kESubjectCommonNameDisallowedFieldNumber;
-const int Lints::kISubjectCommonNameIncludedFieldNumber;
+const int Lints::kNSubjectCommonNameIncludedFieldNumber;
 const int Lints::kESubjectCommonNameNotFromSanFieldNumber;
 const int Lints::kESubjectContainsNoninformationalValueFieldNumber;
 const int Lints::kESubjectContainsReservedIpFieldNumber;
@@ -2227,10 +2227,10 @@ Lints::Lints(const Lints& from)
   } else {
     e_ca_crl_sign_not_set_ = NULL;
   }
-  if (from.has_i_ca_digital_signature_not_set()) {
-    i_ca_digital_signature_not_set_ = new ::zsearch::LintResult(*from.i_ca_digital_signature_not_set_);
+  if (from.has_n_ca_digital_signature_not_set()) {
+    n_ca_digital_signature_not_set_ = new ::zsearch::LintResult(*from.n_ca_digital_signature_not_set_);
   } else {
-    i_ca_digital_signature_not_set_ = NULL;
+    n_ca_digital_signature_not_set_ = NULL;
   }
   if (from.has_e_ca_key_cert_sign_not_set()) {
     e_ca_key_cert_sign_not_set_ = new ::zsearch::LintResult(*from.e_ca_key_cert_sign_not_set_);
@@ -3007,10 +3007,10 @@ Lints::Lints(const Lints& from)
   } else {
     e_subject_common_name_disallowed_ = NULL;
   }
-  if (from.has_i_subject_common_name_included()) {
-    i_subject_common_name_included_ = new ::zsearch::LintResult(*from.i_subject_common_name_included_);
+  if (from.has_n_subject_common_name_included()) {
+    n_subject_common_name_included_ = new ::zsearch::LintResult(*from.n_subject_common_name_included_);
   } else {
-    i_subject_common_name_included_ = NULL;
+    n_subject_common_name_included_ = NULL;
   }
   if (from.has_e_subject_common_name_not_from_san()) {
     e_subject_common_name_not_from_san_ = new ::zsearch::LintResult(*from.e_subject_common_name_not_from_san_);
@@ -3152,7 +3152,7 @@ void Lints::SharedDtor() {
     delete e_ca_crl_sign_not_set_;
   }
   if (this != internal_default_instance()) {
-    delete i_ca_digital_signature_not_set_;
+    delete n_ca_digital_signature_not_set_;
   }
   if (this != internal_default_instance()) {
     delete e_ca_key_cert_sign_not_set_;
@@ -3620,7 +3620,7 @@ void Lints::SharedDtor() {
     delete e_subject_common_name_disallowed_;
   }
   if (this != internal_default_instance()) {
-    delete i_subject_common_name_included_;
+    delete n_subject_common_name_included_;
   }
   if (this != internal_default_instance()) {
     delete e_subject_common_name_not_from_san_;
@@ -3741,10 +3741,10 @@ void Lints::Clear() {
     delete e_ca_crl_sign_not_set_;
   }
   e_ca_crl_sign_not_set_ = NULL;
-  if (GetArenaNoVirtual() == NULL && i_ca_digital_signature_not_set_ != NULL) {
-    delete i_ca_digital_signature_not_set_;
+  if (GetArenaNoVirtual() == NULL && n_ca_digital_signature_not_set_ != NULL) {
+    delete n_ca_digital_signature_not_set_;
   }
-  i_ca_digital_signature_not_set_ = NULL;
+  n_ca_digital_signature_not_set_ = NULL;
   if (GetArenaNoVirtual() == NULL && e_ca_key_cert_sign_not_set_ != NULL) {
     delete e_ca_key_cert_sign_not_set_;
   }
@@ -4365,10 +4365,10 @@ void Lints::Clear() {
     delete e_subject_common_name_disallowed_;
   }
   e_subject_common_name_disallowed_ = NULL;
-  if (GetArenaNoVirtual() == NULL && i_subject_common_name_included_ != NULL) {
-    delete i_subject_common_name_included_;
+  if (GetArenaNoVirtual() == NULL && n_subject_common_name_included_ != NULL) {
+    delete n_subject_common_name_included_;
   }
-  i_subject_common_name_included_ = NULL;
+  n_subject_common_name_included_ = NULL;
   if (GetArenaNoVirtual() == NULL && e_subject_common_name_not_from_san_ != NULL) {
     delete e_subject_common_name_not_from_san_;
   }
@@ -4549,11 +4549,11 @@ bool Lints::MergePartialFromCodedStream(
         break;
       }
 
-      // .zsearch.LintResult i_ca_digital_signature_not_set = 9;
+      // .zsearch.LintResult n_ca_digital_signature_not_set = 9;
       case 9: {
         if (tag == 74u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
-               input, mutable_i_ca_digital_signature_not_set()));
+               input, mutable_n_ca_digital_signature_not_set()));
         } else {
           goto handle_unusual;
         }
@@ -6265,11 +6265,11 @@ bool Lints::MergePartialFromCodedStream(
         break;
       }
 
-      // .zsearch.LintResult i_subject_common_name_included = 166;
+      // .zsearch.LintResult n_subject_common_name_included = 166;
       case 166: {
         if (tag == 1330u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
-               input, mutable_i_subject_common_name_included()));
+               input, mutable_n_subject_common_name_included()));
         } else {
           goto handle_unusual;
         }
@@ -6568,10 +6568,10 @@ void Lints::SerializeWithCachedSizes(
       8, *this->e_ca_crl_sign_not_set_, output);
   }
 
-  // .zsearch.LintResult i_ca_digital_signature_not_set = 9;
-  if (this->has_i_ca_digital_signature_not_set()) {
+  // .zsearch.LintResult n_ca_digital_signature_not_set = 9;
+  if (this->has_n_ca_digital_signature_not_set()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      9, *this->i_ca_digital_signature_not_set_, output);
+      9, *this->n_ca_digital_signature_not_set_, output);
   }
 
   // .zsearch.LintResult e_ca_key_cert_sign_not_set = 10;
@@ -7504,10 +7504,10 @@ void Lints::SerializeWithCachedSizes(
       165, *this->e_subject_common_name_disallowed_, output);
   }
 
-  // .zsearch.LintResult i_subject_common_name_included = 166;
-  if (this->has_i_subject_common_name_included()) {
+  // .zsearch.LintResult n_subject_common_name_included = 166;
+  if (this->has_n_subject_common_name_included()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      166, *this->i_subject_common_name_included_, output);
+      166, *this->n_subject_common_name_included_, output);
   }
 
   // .zsearch.LintResult e_subject_common_name_not_from_san = 167;
@@ -7693,11 +7693,11 @@ void Lints::SerializeWithCachedSizes(
         8, *this->e_ca_crl_sign_not_set_, false, target);
   }
 
-  // .zsearch.LintResult i_ca_digital_signature_not_set = 9;
-  if (this->has_i_ca_digital_signature_not_set()) {
+  // .zsearch.LintResult n_ca_digital_signature_not_set = 9;
+  if (this->has_n_ca_digital_signature_not_set()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        9, *this->i_ca_digital_signature_not_set_, false, target);
+        9, *this->n_ca_digital_signature_not_set_, false, target);
   }
 
   // .zsearch.LintResult e_ca_key_cert_sign_not_set = 10;
@@ -8785,11 +8785,11 @@ void Lints::SerializeWithCachedSizes(
         165, *this->e_subject_common_name_disallowed_, false, target);
   }
 
-  // .zsearch.LintResult i_subject_common_name_included = 166;
-  if (this->has_i_subject_common_name_included()) {
+  // .zsearch.LintResult n_subject_common_name_included = 166;
+  if (this->has_n_subject_common_name_included()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        166, *this->i_subject_common_name_included_, false, target);
+        166, *this->n_subject_common_name_included_, false, target);
   }
 
   // .zsearch.LintResult e_subject_common_name_not_from_san = 167;
@@ -8996,11 +8996,11 @@ size_t Lints::ByteSizeLong() const {
         *this->e_ca_crl_sign_not_set_);
   }
 
-  // .zsearch.LintResult i_ca_digital_signature_not_set = 9;
-  if (this->has_i_ca_digital_signature_not_set()) {
+  // .zsearch.LintResult n_ca_digital_signature_not_set = 9;
+  if (this->has_n_ca_digital_signature_not_set()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-        *this->i_ca_digital_signature_not_set_);
+        *this->n_ca_digital_signature_not_set_);
   }
 
   // .zsearch.LintResult e_ca_key_cert_sign_not_set = 10;
@@ -10088,11 +10088,11 @@ size_t Lints::ByteSizeLong() const {
         *this->e_subject_common_name_disallowed_);
   }
 
-  // .zsearch.LintResult i_subject_common_name_included = 166;
-  if (this->has_i_subject_common_name_included()) {
+  // .zsearch.LintResult n_subject_common_name_included = 166;
+  if (this->has_n_subject_common_name_included()) {
     total_size += 2 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-        *this->i_subject_common_name_included_);
+        *this->n_subject_common_name_included_);
   }
 
   // .zsearch.LintResult e_subject_common_name_not_from_san = 167;
@@ -10285,8 +10285,8 @@ void Lints::MergeFrom(const Lints& from) {
   if (from.has_e_ca_crl_sign_not_set()) {
     mutable_e_ca_crl_sign_not_set()->::zsearch::LintResult::MergeFrom(from.e_ca_crl_sign_not_set());
   }
-  if (from.has_i_ca_digital_signature_not_set()) {
-    mutable_i_ca_digital_signature_not_set()->::zsearch::LintResult::MergeFrom(from.i_ca_digital_signature_not_set());
+  if (from.has_n_ca_digital_signature_not_set()) {
+    mutable_n_ca_digital_signature_not_set()->::zsearch::LintResult::MergeFrom(from.n_ca_digital_signature_not_set());
   }
   if (from.has_e_ca_key_cert_sign_not_set()) {
     mutable_e_ca_key_cert_sign_not_set()->::zsearch::LintResult::MergeFrom(from.e_ca_key_cert_sign_not_set());
@@ -10753,8 +10753,8 @@ void Lints::MergeFrom(const Lints& from) {
   if (from.has_e_subject_common_name_disallowed()) {
     mutable_e_subject_common_name_disallowed()->::zsearch::LintResult::MergeFrom(from.e_subject_common_name_disallowed());
   }
-  if (from.has_i_subject_common_name_included()) {
-    mutable_i_subject_common_name_included()->::zsearch::LintResult::MergeFrom(from.i_subject_common_name_included());
+  if (from.has_n_subject_common_name_included()) {
+    mutable_n_subject_common_name_included()->::zsearch::LintResult::MergeFrom(from.n_subject_common_name_included());
   }
   if (from.has_e_subject_common_name_not_from_san()) {
     mutable_e_subject_common_name_not_from_san()->::zsearch::LintResult::MergeFrom(from.e_subject_common_name_not_from_san());
@@ -10849,7 +10849,7 @@ void Lints::InternalSwap(Lints* other) {
   std::swap(e_ca_country_name_invalid_, other->e_ca_country_name_invalid_);
   std::swap(e_ca_country_name_missing_, other->e_ca_country_name_missing_);
   std::swap(e_ca_crl_sign_not_set_, other->e_ca_crl_sign_not_set_);
-  std::swap(i_ca_digital_signature_not_set_, other->i_ca_digital_signature_not_set_);
+  std::swap(n_ca_digital_signature_not_set_, other->n_ca_digital_signature_not_set_);
   std::swap(e_ca_key_cert_sign_not_set_, other->e_ca_key_cert_sign_not_set_);
   std::swap(e_ca_key_usage_missing_, other->e_ca_key_usage_missing_);
   std::swap(e_ca_key_usage_not_critical_, other->e_ca_key_usage_not_critical_);
@@ -11005,7 +11005,7 @@ void Lints::InternalSwap(Lints* other) {
   std::swap(e_sub_cert_or_sub_ca_using_sha1_, other->e_sub_cert_or_sub_ca_using_sha1_);
   std::swap(w_sub_cert_sha1_expiration_too_long_, other->w_sub_cert_sha1_expiration_too_long_);
   std::swap(e_subject_common_name_disallowed_, other->e_subject_common_name_disallowed_);
-  std::swap(i_subject_common_name_included_, other->i_subject_common_name_included_);
+  std::swap(n_subject_common_name_included_, other->n_subject_common_name_included_);
   std::swap(e_subject_common_name_not_from_san_, other->e_subject_common_name_not_from_san_);
   std::swap(e_subject_contains_noninformational_value_, other->e_subject_contains_noninformational_value_);
   std::swap(e_subject_contains_reserved_ip_, other->e_subject_contains_reserved_ip_);
@@ -11349,43 +11349,43 @@ void Lints::set_allocated_e_ca_crl_sign_not_set(::zsearch::LintResult* e_ca_crl_
   // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_ca_crl_sign_not_set)
 }
 
-// .zsearch.LintResult i_ca_digital_signature_not_set = 9;
-bool Lints::has_i_ca_digital_signature_not_set() const {
-  return this != internal_default_instance() && i_ca_digital_signature_not_set_ != NULL;
+// .zsearch.LintResult n_ca_digital_signature_not_set = 9;
+bool Lints::has_n_ca_digital_signature_not_set() const {
+  return this != internal_default_instance() && n_ca_digital_signature_not_set_ != NULL;
 }
-void Lints::clear_i_ca_digital_signature_not_set() {
-  if (GetArenaNoVirtual() == NULL && i_ca_digital_signature_not_set_ != NULL) delete i_ca_digital_signature_not_set_;
-  i_ca_digital_signature_not_set_ = NULL;
+void Lints::clear_n_ca_digital_signature_not_set() {
+  if (GetArenaNoVirtual() == NULL && n_ca_digital_signature_not_set_ != NULL) delete n_ca_digital_signature_not_set_;
+  n_ca_digital_signature_not_set_ = NULL;
 }
-const ::zsearch::LintResult& Lints::i_ca_digital_signature_not_set() const {
-  // @@protoc_insertion_point(field_get:zsearch.Lints.i_ca_digital_signature_not_set)
-  return i_ca_digital_signature_not_set_ != NULL ? *i_ca_digital_signature_not_set_
+const ::zsearch::LintResult& Lints::n_ca_digital_signature_not_set() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.n_ca_digital_signature_not_set)
+  return n_ca_digital_signature_not_set_ != NULL ? *n_ca_digital_signature_not_set_
                          : *::zsearch::LintResult::internal_default_instance();
 }
-::zsearch::LintResult* Lints::mutable_i_ca_digital_signature_not_set() {
+::zsearch::LintResult* Lints::mutable_n_ca_digital_signature_not_set() {
   
-  if (i_ca_digital_signature_not_set_ == NULL) {
-    i_ca_digital_signature_not_set_ = new ::zsearch::LintResult;
+  if (n_ca_digital_signature_not_set_ == NULL) {
+    n_ca_digital_signature_not_set_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:zsearch.Lints.i_ca_digital_signature_not_set)
-  return i_ca_digital_signature_not_set_;
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.n_ca_digital_signature_not_set)
+  return n_ca_digital_signature_not_set_;
 }
-::zsearch::LintResult* Lints::release_i_ca_digital_signature_not_set() {
-  // @@protoc_insertion_point(field_release:zsearch.Lints.i_ca_digital_signature_not_set)
+::zsearch::LintResult* Lints::release_n_ca_digital_signature_not_set() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.n_ca_digital_signature_not_set)
   
-  ::zsearch::LintResult* temp = i_ca_digital_signature_not_set_;
-  i_ca_digital_signature_not_set_ = NULL;
+  ::zsearch::LintResult* temp = n_ca_digital_signature_not_set_;
+  n_ca_digital_signature_not_set_ = NULL;
   return temp;
 }
-void Lints::set_allocated_i_ca_digital_signature_not_set(::zsearch::LintResult* i_ca_digital_signature_not_set) {
-  delete i_ca_digital_signature_not_set_;
-  i_ca_digital_signature_not_set_ = i_ca_digital_signature_not_set;
-  if (i_ca_digital_signature_not_set) {
+void Lints::set_allocated_n_ca_digital_signature_not_set(::zsearch::LintResult* n_ca_digital_signature_not_set) {
+  delete n_ca_digital_signature_not_set_;
+  n_ca_digital_signature_not_set_ = n_ca_digital_signature_not_set;
+  if (n_ca_digital_signature_not_set) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.i_ca_digital_signature_not_set)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.n_ca_digital_signature_not_set)
 }
 
 // .zsearch.LintResult e_ca_key_cert_sign_not_set = 10;
@@ -17433,43 +17433,43 @@ void Lints::set_allocated_e_subject_common_name_disallowed(::zsearch::LintResult
   // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_subject_common_name_disallowed)
 }
 
-// .zsearch.LintResult i_subject_common_name_included = 166;
-bool Lints::has_i_subject_common_name_included() const {
-  return this != internal_default_instance() && i_subject_common_name_included_ != NULL;
+// .zsearch.LintResult n_subject_common_name_included = 166;
+bool Lints::has_n_subject_common_name_included() const {
+  return this != internal_default_instance() && n_subject_common_name_included_ != NULL;
 }
-void Lints::clear_i_subject_common_name_included() {
-  if (GetArenaNoVirtual() == NULL && i_subject_common_name_included_ != NULL) delete i_subject_common_name_included_;
-  i_subject_common_name_included_ = NULL;
+void Lints::clear_n_subject_common_name_included() {
+  if (GetArenaNoVirtual() == NULL && n_subject_common_name_included_ != NULL) delete n_subject_common_name_included_;
+  n_subject_common_name_included_ = NULL;
 }
-const ::zsearch::LintResult& Lints::i_subject_common_name_included() const {
-  // @@protoc_insertion_point(field_get:zsearch.Lints.i_subject_common_name_included)
-  return i_subject_common_name_included_ != NULL ? *i_subject_common_name_included_
+const ::zsearch::LintResult& Lints::n_subject_common_name_included() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.n_subject_common_name_included)
+  return n_subject_common_name_included_ != NULL ? *n_subject_common_name_included_
                          : *::zsearch::LintResult::internal_default_instance();
 }
-::zsearch::LintResult* Lints::mutable_i_subject_common_name_included() {
+::zsearch::LintResult* Lints::mutable_n_subject_common_name_included() {
   
-  if (i_subject_common_name_included_ == NULL) {
-    i_subject_common_name_included_ = new ::zsearch::LintResult;
+  if (n_subject_common_name_included_ == NULL) {
+    n_subject_common_name_included_ = new ::zsearch::LintResult;
   }
-  // @@protoc_insertion_point(field_mutable:zsearch.Lints.i_subject_common_name_included)
-  return i_subject_common_name_included_;
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.n_subject_common_name_included)
+  return n_subject_common_name_included_;
 }
-::zsearch::LintResult* Lints::release_i_subject_common_name_included() {
-  // @@protoc_insertion_point(field_release:zsearch.Lints.i_subject_common_name_included)
+::zsearch::LintResult* Lints::release_n_subject_common_name_included() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.n_subject_common_name_included)
   
-  ::zsearch::LintResult* temp = i_subject_common_name_included_;
-  i_subject_common_name_included_ = NULL;
+  ::zsearch::LintResult* temp = n_subject_common_name_included_;
+  n_subject_common_name_included_ = NULL;
   return temp;
 }
-void Lints::set_allocated_i_subject_common_name_included(::zsearch::LintResult* i_subject_common_name_included) {
-  delete i_subject_common_name_included_;
-  i_subject_common_name_included_ = i_subject_common_name_included;
-  if (i_subject_common_name_included) {
+void Lints::set_allocated_n_subject_common_name_included(::zsearch::LintResult* n_subject_common_name_included) {
+  delete n_subject_common_name_included_;
+  n_subject_common_name_included_ = n_subject_common_name_included;
+  if (n_subject_common_name_included) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.i_subject_common_name_included)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.n_subject_common_name_included)
 }
 
 // .zsearch.LintResult e_subject_common_name_not_from_san = 167;
