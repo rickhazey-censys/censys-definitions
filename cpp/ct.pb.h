@@ -116,12 +116,13 @@ enum CTServer {
   CT_SERVER_NORDU_CT_PLAUSIBLE = 33,
   CT_SERVER_CERTIFICATETRANSPARENCY_CN_CT = 38,
   CT_SERVER_SHECA_CT = 42,
+  CT_SERVER_LETSENCRYPT_CT_CLICKY = 44,
   CTServer_INT_MIN_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32min,
   CTServer_INT_MAX_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32max
 };
 bool CTServer_IsValid(int value);
 const CTServer CTServer_MIN = CT_SERVER_RESERVED;
-const CTServer CTServer_MAX = CT_SERVER_SHECA_CT;
+const CTServer CTServer_MAX = CT_SERVER_LETSENCRYPT_CT_CLICKY;
 const int CTServer_ARRAYSIZE = CTServer_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* CTServer_descriptor();
@@ -641,6 +642,15 @@ class CTStatus : public ::google::protobuf::Message /* @@protoc_insertion_point(
   ::zsearch::CTServerStatus* release_certificatetransparency_cn_ct();
   void set_allocated_certificatetransparency_cn_ct(::zsearch::CTServerStatus* certificatetransparency_cn_ct);
 
+  // .zsearch.CTServerStatus letsencrypt_ct_clicky = 43;
+  bool has_letsencrypt_ct_clicky() const;
+  void clear_letsencrypt_ct_clicky();
+  static const int kLetsencryptCtClickyFieldNumber = 43;
+  const ::zsearch::CTServerStatus& letsencrypt_ct_clicky() const;
+  ::zsearch::CTServerStatus* mutable_letsencrypt_ct_clicky();
+  ::zsearch::CTServerStatus* release_letsencrypt_ct_clicky();
+  void set_allocated_letsencrypt_ct_clicky(::zsearch::CTServerStatus* letsencrypt_ct_clicky);
+
   // @@protoc_insertion_point(class_scope:zsearch.CTStatus)
  private:
 
@@ -678,6 +688,7 @@ class CTStatus : public ::google::protobuf::Message /* @@protoc_insertion_point(
   ::zsearch::CTServerStatus* certly_log_;
   ::zsearch::CTServerStatus* sheca_ct_;
   ::zsearch::CTServerStatus* certificatetransparency_cn_ct_;
+  ::zsearch::CTServerStatus* letsencrypt_ct_clicky_;
   mutable int _cached_size_;
   friend struct  protobuf_ct_2eproto::TableStruct;
 };
@@ -2260,6 +2271,45 @@ inline void CTStatus::set_allocated_certificatetransparency_cn_ct(::zsearch::CTS
     
   }
   // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.certificatetransparency_cn_ct)
+}
+
+// .zsearch.CTServerStatus letsencrypt_ct_clicky = 43;
+inline bool CTStatus::has_letsencrypt_ct_clicky() const {
+  return this != internal_default_instance() && letsencrypt_ct_clicky_ != NULL;
+}
+inline void CTStatus::clear_letsencrypt_ct_clicky() {
+  if (GetArenaNoVirtual() == NULL && letsencrypt_ct_clicky_ != NULL) delete letsencrypt_ct_clicky_;
+  letsencrypt_ct_clicky_ = NULL;
+}
+inline const ::zsearch::CTServerStatus& CTStatus::letsencrypt_ct_clicky() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.letsencrypt_ct_clicky)
+  return letsencrypt_ct_clicky_ != NULL ? *letsencrypt_ct_clicky_
+                         : *::zsearch::CTServerStatus::internal_default_instance();
+}
+inline ::zsearch::CTServerStatus* CTStatus::mutable_letsencrypt_ct_clicky() {
+  
+  if (letsencrypt_ct_clicky_ == NULL) {
+    letsencrypt_ct_clicky_ = new ::zsearch::CTServerStatus;
+  }
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.letsencrypt_ct_clicky)
+  return letsencrypt_ct_clicky_;
+}
+inline ::zsearch::CTServerStatus* CTStatus::release_letsencrypt_ct_clicky() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.letsencrypt_ct_clicky)
+  
+  ::zsearch::CTServerStatus* temp = letsencrypt_ct_clicky_;
+  letsencrypt_ct_clicky_ = NULL;
+  return temp;
+}
+inline void CTStatus::set_allocated_letsencrypt_ct_clicky(::zsearch::CTServerStatus* letsencrypt_ct_clicky) {
+  delete letsencrypt_ct_clicky_;
+  letsencrypt_ct_clicky_ = letsencrypt_ct_clicky;
+  if (letsencrypt_ct_clicky) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.letsencrypt_ct_clicky)
 }
 
 // -------------------------------------------------------------------

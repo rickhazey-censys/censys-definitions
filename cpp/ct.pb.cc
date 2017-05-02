@@ -84,6 +84,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, certly_log_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, sheca_ct_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, certificatetransparency_cn_ct_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, letsencrypt_ct_clicky_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SCT, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -96,7 +97,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
 static const ::google::protobuf::internal::MigrationSchema schemas[] = {
   { 0, -1, sizeof(CTServerStatus)},
   { 11, -1, sizeof(CTStatus)},
-  { 48, -1, sizeof(SCT)},
+  { 49, -1, sizeof(SCT)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -210,6 +211,8 @@ void TableStruct::InitDefaultsImpl() {
       ::zsearch::CTServerStatus::internal_default_instance());
   _CTStatus_default_instance_.get_mutable()->certificatetransparency_cn_ct_ = const_cast< ::zsearch::CTServerStatus*>(
       ::zsearch::CTServerStatus::internal_default_instance());
+  _CTStatus_default_instance_.get_mutable()->letsencrypt_ct_clicky_ = const_cast< ::zsearch::CTServerStatus*>(
+      ::zsearch::CTServerStatus::internal_default_instance());
   _SCT_default_instance_.get_mutable()->status_ = const_cast< ::zsearch::CTServerStatus*>(
       ::zsearch::CTServerStatus::internal_default_instance());
 }
@@ -226,7 +229,7 @@ void AddDescriptorsImpl() {
       "ull_timestamp\030\003 \001(\003\022\026\n\016push_timestamp\030\004 "
       "\001(\003\022*\n\013push_status\030\005 \001(\0162\025.zsearch.CTPus"
       "hStatus\022\013\n\003sct\030\006 \001(\014\022\022\n\npush_error\030\007 \001(\t"
-      "\"\317\014\n\010CTStatus\022+\n\ncensys_dev\030\001 \001(\0132\027.zsea"
+      "\"\207\r\n\010CTStatus\022+\n\ncensys_dev\030\001 \001(\0132\027.zsea"
       "rch.CTServerStatus\022\'\n\006censys\030\002 \001(\0132\027.zse"
       "arch.CTServerStatus\022/\n\016google_aviator\030\n "
       "\001(\0132\027.zsearch.CTServerStatus\022-\n\014google_p"
@@ -266,44 +269,47 @@ void AddDescriptorsImpl() {
       "\030\036 \001(\0132\027.zsearch.CTServerStatus\022)\n\010sheca"
       "_ct\030* \001(\0132\027.zsearch.CTServerStatus\022>\n\035ce"
       "rtificatetransparency_cn_ct\030& \001(\0132\027.zsea"
-      "rch.CTServerStatus\"c\n\003SCT\022\020\n\010sha256fp\030\001 "
-      "\001(\014\022!\n\006server\030\002 \001(\0162\021.zsearch.CTServer\022\'"
-      "\n\006status\030\003 \001(\0132\027.zsearch.CTServerStatus*"
-      "\353\001\n\014CTPushStatus\022\033\n\027CT_PUSH_STATUS_RESER"
-      "VED\020\000\022\032\n\026CT_PUSH_STATUS_UNKNOWN\020\001\022\032\n\026CT_"
-      "PUSH_STATUS_SUCCESS\020\002\022 \n\034CT_PUSH_STATUS_"
-      "UNKNOWN_ERROR\020\003\022\037\n\033CT_PUSH_STATUS_INVALI"
-      "D_ROOT\020\004\022!\n\035CT_PUSH_STATUS_ALREADY_EXIST"
-      "S\020\005\022 \n\034CT_PUSH_STATUS_WILL_NOT_PUSH\020\006*\207\010"
-      "\n\010CTServer\022\026\n\022CT_SERVER_RESERVED\020\000\022\037\n\033CT"
-      "_SERVER_CENSYS_PRODUCTION\020\001\022 \n\034CT_SERVER"
-      "_CENSYS_DEVELOPMENT\020\002\022\032\n\026CT_SERVER_GOOGL"
-      "E_PILOT\020\013\022\036\n\032CT_SERVER_GOOGLE_ROCKETEER\020"
-      "\014\022\037\n\033CT_SERVER_GOOGLE_SUBMARINER\020\r\022\035\n\031CT"
-      "_SERVER_GOOGLE_TESTTUBE\020\016\022\033\n\027CT_SERVER_G"
-      "OOGLE_ICARUS\020\017\022\035\n\031CT_SERVER_GOOGLE_SKYDI"
-      "VER\020\020\022\035\n\031CT_SERVER_GOOGLE_DAEDALUS\020\021\022\034\n\030"
-      "CT_SERVER_GOOGLE_AVIATOR\020\n\022\034\n\030CT_SERVER_"
-      "SYMANTEC_WS_CT\020\027\022\036\n\032CT_SERVER_SYMANTEC_W"
-      "S_VEGA\020\030\022\037\n\033CT_SERVER_SYMANTEC_WS_DENEB\020"
-      " \022 \n\034CT_SERVER_SYMANTEC_WS_SIRIUS\020%\022\031\n\025C"
-      "T_SERVER_COMODO_DODO\020#\022\034\n\030CT_SERVER_COMO"
-      "DO_MAMMOTH\020$\022\032\n\026CT_SERVER_COMODO_SABRE\020)"
-      "\022\032\n\026CT_SERVER_WOSIGN_CTLOG\020\031\022\027\n\023CT_SERVE"
-      "R_WOSIGN_CT\020\032\022\036\n\032CT_SERVER_VENAFI_API_CT"
-      "LOG\020\037\022#\n\037CT_SERVER_VENAFI_API_CTLOG_GEN2"
-      "\020\'\022\025\n\021CT_SERVER_GDCA_CT\020\034\022\030\n\024CT_SERVER_G"
-      "DCA_CTLOG\020\"\022\033\n\027CT_SERVER_IZENPE_COM_CT\020\025"
-      "\022\033\n\027CT_SERVER_IZENPE_EUS_CT\020\026\022\032\n\026CT_SERV"
-      "ER_DIGICERT_CT1\020\024\022\032\n\026CT_SERVER_DIGICERT_"
-      "CT2\020(\022\034\n\030CT_SERVER_CNNIC_CTSERVER\020\033\022\031\n\025C"
-      "T_SERVER_STARTSSL_CT\020\035\022\030\n\024CT_SERVER_CERT"
-      "LY_LOG\020\036\022 \n\034CT_SERVER_NORDU_CT_PLAUSIBLE"
-      "\020!\022+\n\'CT_SERVER_CERTIFICATETRANSPARENCY_"
-      "CN_CT\020&\022\026\n\022CT_SERVER_SHECA_CT\020*b\006proto3"
+      "rch.CTServerStatus\0226\n\025letsencrypt_ct_cli"
+      "cky\030+ \001(\0132\027.zsearch.CTServerStatus\"c\n\003SC"
+      "T\022\020\n\010sha256fp\030\001 \001(\014\022!\n\006server\030\002 \001(\0162\021.zs"
+      "earch.CTServer\022\'\n\006status\030\003 \001(\0132\027.zsearch"
+      ".CTServerStatus*\353\001\n\014CTPushStatus\022\033\n\027CT_P"
+      "USH_STATUS_RESERVED\020\000\022\032\n\026CT_PUSH_STATUS_"
+      "UNKNOWN\020\001\022\032\n\026CT_PUSH_STATUS_SUCCESS\020\002\022 \n"
+      "\034CT_PUSH_STATUS_UNKNOWN_ERROR\020\003\022\037\n\033CT_PU"
+      "SH_STATUS_INVALID_ROOT\020\004\022!\n\035CT_PUSH_STAT"
+      "US_ALREADY_EXISTS\020\005\022 \n\034CT_PUSH_STATUS_WI"
+      "LL_NOT_PUSH\020\006*\254\010\n\010CTServer\022\026\n\022CT_SERVER_"
+      "RESERVED\020\000\022\037\n\033CT_SERVER_CENSYS_PRODUCTIO"
+      "N\020\001\022 \n\034CT_SERVER_CENSYS_DEVELOPMENT\020\002\022\032\n"
+      "\026CT_SERVER_GOOGLE_PILOT\020\013\022\036\n\032CT_SERVER_G"
+      "OOGLE_ROCKETEER\020\014\022\037\n\033CT_SERVER_GOOGLE_SU"
+      "BMARINER\020\r\022\035\n\031CT_SERVER_GOOGLE_TESTTUBE\020"
+      "\016\022\033\n\027CT_SERVER_GOOGLE_ICARUS\020\017\022\035\n\031CT_SER"
+      "VER_GOOGLE_SKYDIVER\020\020\022\035\n\031CT_SERVER_GOOGL"
+      "E_DAEDALUS\020\021\022\034\n\030CT_SERVER_GOOGLE_AVIATOR"
+      "\020\n\022\034\n\030CT_SERVER_SYMANTEC_WS_CT\020\027\022\036\n\032CT_S"
+      "ERVER_SYMANTEC_WS_VEGA\020\030\022\037\n\033CT_SERVER_SY"
+      "MANTEC_WS_DENEB\020 \022 \n\034CT_SERVER_SYMANTEC_"
+      "WS_SIRIUS\020%\022\031\n\025CT_SERVER_COMODO_DODO\020#\022\034"
+      "\n\030CT_SERVER_COMODO_MAMMOTH\020$\022\032\n\026CT_SERVE"
+      "R_COMODO_SABRE\020)\022\032\n\026CT_SERVER_WOSIGN_CTL"
+      "OG\020\031\022\027\n\023CT_SERVER_WOSIGN_CT\020\032\022\036\n\032CT_SERV"
+      "ER_VENAFI_API_CTLOG\020\037\022#\n\037CT_SERVER_VENAF"
+      "I_API_CTLOG_GEN2\020\'\022\025\n\021CT_SERVER_GDCA_CT\020"
+      "\034\022\030\n\024CT_SERVER_GDCA_CTLOG\020\"\022\033\n\027CT_SERVER"
+      "_IZENPE_COM_CT\020\025\022\033\n\027CT_SERVER_IZENPE_EUS"
+      "_CT\020\026\022\032\n\026CT_SERVER_DIGICERT_CT1\020\024\022\032\n\026CT_"
+      "SERVER_DIGICERT_CT2\020(\022\034\n\030CT_SERVER_CNNIC"
+      "_CTSERVER\020\033\022\031\n\025CT_SERVER_STARTSSL_CT\020\035\022\030"
+      "\n\024CT_SERVER_CERTLY_LOG\020\036\022 \n\034CT_SERVER_NO"
+      "RDU_CT_PLAUSIBLE\020!\022+\n\'CT_SERVER_CERTIFIC"
+      "ATETRANSPARENCY_CN_CT\020&\022\026\n\022CT_SERVER_SHE"
+      "CA_CT\020*\022#\n\037CT_SERVER_LETSENCRYPT_CT_CLIC"
+      "KY\020,b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 3199);
+      descriptor, 3292);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "ct.proto", &protobuf_RegisterTypes);
   ::google::protobuf::internal::OnShutdown(&TableStruct::Shutdown);
@@ -381,6 +387,7 @@ bool CTServer_IsValid(int value) {
     case 40:
     case 41:
     case 42:
+    case 44:
       return true;
     default:
       return false;
@@ -1055,6 +1062,7 @@ const int CTStatus::kStartsslCtFieldNumber;
 const int CTStatus::kCertlyLogFieldNumber;
 const int CTStatus::kShecaCtFieldNumber;
 const int CTStatus::kCertificatetransparencyCnCtFieldNumber;
+const int CTStatus::kLetsencryptCtClickyFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 CTStatus::CTStatus()
@@ -1235,12 +1243,17 @@ CTStatus::CTStatus(const CTStatus& from)
   } else {
     certificatetransparency_cn_ct_ = NULL;
   }
+  if (from.has_letsencrypt_ct_clicky()) {
+    letsencrypt_ct_clicky_ = new ::zsearch::CTServerStatus(*from.letsencrypt_ct_clicky_);
+  } else {
+    letsencrypt_ct_clicky_ = NULL;
+  }
   // @@protoc_insertion_point(copy_constructor:zsearch.CTStatus)
 }
 
 void CTStatus::SharedCtor() {
-  ::memset(&censys_dev_, 0, reinterpret_cast<char*>(&certificatetransparency_cn_ct_) -
-    reinterpret_cast<char*>(&censys_dev_) + sizeof(certificatetransparency_cn_ct_));
+  ::memset(&censys_dev_, 0, reinterpret_cast<char*>(&letsencrypt_ct_clicky_) -
+    reinterpret_cast<char*>(&censys_dev_) + sizeof(letsencrypt_ct_clicky_));
   _cached_size_ = 0;
 }
 
@@ -1348,6 +1361,9 @@ void CTStatus::SharedDtor() {
   }
   if (this != internal_default_instance()) {
     delete certificatetransparency_cn_ct_;
+  }
+  if (this != internal_default_instance()) {
+    delete letsencrypt_ct_clicky_;
   }
 }
 
@@ -1508,6 +1524,10 @@ void CTStatus::Clear() {
     delete certificatetransparency_cn_ct_;
   }
   certificatetransparency_cn_ct_ = NULL;
+  if (GetArenaNoVirtual() == NULL && letsencrypt_ct_clicky_ != NULL) {
+    delete letsencrypt_ct_clicky_;
+  }
+  letsencrypt_ct_clicky_ = NULL;
 }
 
 bool CTStatus::MergePartialFromCodedStream(
@@ -1883,6 +1903,17 @@ bool CTStatus::MergePartialFromCodedStream(
         break;
       }
 
+      // .zsearch.CTServerStatus letsencrypt_ct_clicky = 43;
+      case 43: {
+        if (tag == 346u) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_letsencrypt_ct_clicky()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
       default: {
       handle_unusual:
         if (tag == 0 ||
@@ -2103,6 +2134,12 @@ void CTStatus::SerializeWithCachedSizes(
   if (this->has_sheca_ct()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       42, *this->sheca_ct_, output);
+  }
+
+  // .zsearch.CTServerStatus letsencrypt_ct_clicky = 43;
+  if (this->has_letsencrypt_ct_clicky()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      43, *this->letsencrypt_ct_clicky_, output);
   }
 
   // @@protoc_insertion_point(serialize_end:zsearch.CTStatus)
@@ -2341,6 +2378,13 @@ void CTStatus::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
         42, *this->sheca_ct_, false, target);
+  }
+
+  // .zsearch.CTServerStatus letsencrypt_ct_clicky = 43;
+  if (this->has_letsencrypt_ct_clicky()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageNoVirtualToArray(
+        43, *this->letsencrypt_ct_clicky_, false, target);
   }
 
   // @@protoc_insertion_point(serialize_to_array_end:zsearch.CTStatus)
@@ -2582,6 +2626,13 @@ size_t CTStatus::ByteSizeLong() const {
         *this->certificatetransparency_cn_ct_);
   }
 
+  // .zsearch.CTServerStatus letsencrypt_ct_clicky = 43;
+  if (this->has_letsencrypt_ct_clicky()) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        *this->letsencrypt_ct_clicky_);
+  }
+
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = cached_size;
@@ -2707,6 +2758,9 @@ void CTStatus::MergeFrom(const CTStatus& from) {
   if (from.has_certificatetransparency_cn_ct()) {
     mutable_certificatetransparency_cn_ct()->::zsearch::CTServerStatus::MergeFrom(from.certificatetransparency_cn_ct());
   }
+  if (from.has_letsencrypt_ct_clicky()) {
+    mutable_letsencrypt_ct_clicky()->::zsearch::CTServerStatus::MergeFrom(from.letsencrypt_ct_clicky());
+  }
 }
 
 void CTStatus::CopyFrom(const ::google::protobuf::Message& from) {
@@ -2765,6 +2819,7 @@ void CTStatus::InternalSwap(CTStatus* other) {
   std::swap(certly_log_, other->certly_log_);
   std::swap(sheca_ct_, other->sheca_ct_);
   std::swap(certificatetransparency_cn_ct_, other->certificatetransparency_cn_ct_);
+  std::swap(letsencrypt_ct_clicky_, other->letsencrypt_ct_clicky_);
   std::swap(_cached_size_, other->_cached_size_);
 }
 
@@ -4061,6 +4116,45 @@ void CTStatus::set_allocated_certificatetransparency_cn_ct(::zsearch::CTServerSt
     
   }
   // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.certificatetransparency_cn_ct)
+}
+
+// .zsearch.CTServerStatus letsencrypt_ct_clicky = 43;
+bool CTStatus::has_letsencrypt_ct_clicky() const {
+  return this != internal_default_instance() && letsencrypt_ct_clicky_ != NULL;
+}
+void CTStatus::clear_letsencrypt_ct_clicky() {
+  if (GetArenaNoVirtual() == NULL && letsencrypt_ct_clicky_ != NULL) delete letsencrypt_ct_clicky_;
+  letsencrypt_ct_clicky_ = NULL;
+}
+const ::zsearch::CTServerStatus& CTStatus::letsencrypt_ct_clicky() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.letsencrypt_ct_clicky)
+  return letsencrypt_ct_clicky_ != NULL ? *letsencrypt_ct_clicky_
+                         : *::zsearch::CTServerStatus::internal_default_instance();
+}
+::zsearch::CTServerStatus* CTStatus::mutable_letsencrypt_ct_clicky() {
+  
+  if (letsencrypt_ct_clicky_ == NULL) {
+    letsencrypt_ct_clicky_ = new ::zsearch::CTServerStatus;
+  }
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.letsencrypt_ct_clicky)
+  return letsencrypt_ct_clicky_;
+}
+::zsearch::CTServerStatus* CTStatus::release_letsencrypt_ct_clicky() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.letsencrypt_ct_clicky)
+  
+  ::zsearch::CTServerStatus* temp = letsencrypt_ct_clicky_;
+  letsencrypt_ct_clicky_ = NULL;
+  return temp;
+}
+void CTStatus::set_allocated_letsencrypt_ct_clicky(::zsearch::CTServerStatus* letsencrypt_ct_clicky) {
+  delete letsencrypt_ct_clicky_;
+  letsencrypt_ct_clicky_ = letsencrypt_ct_clicky;
+  if (letsencrypt_ct_clicky) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.letsencrypt_ct_clicky)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS

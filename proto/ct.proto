@@ -69,6 +69,8 @@ message CTStatus {
     CTServerStatus sheca_ct = 42;
 
     CTServerStatus certificatetransparency_cn_ct = 38;
+
+    CTServerStatus letsencrypt_ct_clicky = 43; // clicky.ct.letsencrypt.org
 }
 
 enum CTServer {
@@ -99,7 +101,7 @@ enum CTServer {
     CT_SERVER_WOSIGN_CT = 26; // DEPRECATED
     // Venafi
     CT_SERVER_VENAFI_API_CTLOG = 31; // ACTIVE ctlog.api.venafi.com
-    CT_SERVER_VENAFI_API_CTLOG_GEN2 = 39; // ACTIVE ctlog.api.venafi.com
+    CT_SERVER_VENAFI_API_CTLOG_GEN2 = 39; // TODO ACTIVE ctlog.api.venafi.com
     // GDCA
     CT_SERVER_GDCA_CT = 28; // ACTIVE ct.gdca.com.cn
     CT_SERVER_GDCA_CTLOG = 34; // ACTIVE ctlog.gdca.com.cn
@@ -117,6 +119,7 @@ enum CTServer {
     CT_SERVER_CERTIFICATETRANSPARENCY_CN_CT = 38; // ACTIVE www.certificatetransparency.cn/ct
     CT_SERVER_SHECA_CT = 42; // ACTIVE     https://ct.sheca.com
 
+    CT_SERVER_LETSENCRYPT_CT_CLICKY = 44; // clicky.ct.letsencrypt.org
 }
 
 message SCT {
