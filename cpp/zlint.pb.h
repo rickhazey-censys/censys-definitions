@@ -273,10 +273,10 @@ class ZLint : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
 
   // accessors -------------------------------------------------------
 
-  // .zsearch.Lints lints = 8;
+  // .zsearch.Lints lints = 9;
   bool has_lints() const;
   void clear_lints();
-  static const int kLintsFieldNumber = 8;
+  static const int kLintsFieldNumber = 9;
   const ::zsearch::Lints& lints() const;
   ::zsearch::Lints* mutable_lints();
   ::zsearch::Lints* release_lints();
@@ -306,21 +306,27 @@ class ZLint : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
   bool infos_present() const;
   void set_infos_present(bool value);
 
-  // bool warnings_present = 5;
+  // bool notices_present = 5;
+  void clear_notices_present();
+  static const int kNoticesPresentFieldNumber = 5;
+  bool notices_present() const;
+  void set_notices_present(bool value);
+
+  // bool warnings_present = 6;
   void clear_warnings_present();
-  static const int kWarningsPresentFieldNumber = 5;
+  static const int kWarningsPresentFieldNumber = 6;
   bool warnings_present() const;
   void set_warnings_present(bool value);
 
-  // bool errors_present = 6;
+  // bool errors_present = 7;
   void clear_errors_present();
-  static const int kErrorsPresentFieldNumber = 6;
+  static const int kErrorsPresentFieldNumber = 7;
   bool errors_present() const;
   void set_errors_present(bool value);
 
-  // bool fatals_present = 7;
+  // bool fatals_present = 8;
   void clear_fatals_present();
-  static const int kFatalsPresentFieldNumber = 7;
+  static const int kFatalsPresentFieldNumber = 8;
   bool fatals_present() const;
   void set_fatals_present(bool value);
 
@@ -333,6 +339,7 @@ class ZLint : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
   ::google::protobuf::int64 timestamp_;
   int status_;
   bool infos_present_;
+  bool notices_present_;
   bool warnings_present_;
   bool errors_present_;
   bool fatals_present_;
@@ -2399,7 +2406,21 @@ inline void ZLint::set_infos_present(bool value) {
   // @@protoc_insertion_point(field_set:zsearch.ZLint.infos_present)
 }
 
-// bool warnings_present = 5;
+// bool notices_present = 5;
+inline void ZLint::clear_notices_present() {
+  notices_present_ = false;
+}
+inline bool ZLint::notices_present() const {
+  // @@protoc_insertion_point(field_get:zsearch.ZLint.notices_present)
+  return notices_present_;
+}
+inline void ZLint::set_notices_present(bool value) {
+  
+  notices_present_ = value;
+  // @@protoc_insertion_point(field_set:zsearch.ZLint.notices_present)
+}
+
+// bool warnings_present = 6;
 inline void ZLint::clear_warnings_present() {
   warnings_present_ = false;
 }
@@ -2413,7 +2434,7 @@ inline void ZLint::set_warnings_present(bool value) {
   // @@protoc_insertion_point(field_set:zsearch.ZLint.warnings_present)
 }
 
-// bool errors_present = 6;
+// bool errors_present = 7;
 inline void ZLint::clear_errors_present() {
   errors_present_ = false;
 }
@@ -2427,7 +2448,7 @@ inline void ZLint::set_errors_present(bool value) {
   // @@protoc_insertion_point(field_set:zsearch.ZLint.errors_present)
 }
 
-// bool fatals_present = 7;
+// bool fatals_present = 8;
 inline void ZLint::clear_fatals_present() {
   fatals_present_ = false;
 }
@@ -2441,7 +2462,7 @@ inline void ZLint::set_fatals_present(bool value) {
   // @@protoc_insertion_point(field_set:zsearch.ZLint.fatals_present)
 }
 
-// .zsearch.Lints lints = 8;
+// .zsearch.Lints lints = 9;
 inline bool ZLint::has_lints() const {
   return this != internal_default_instance() && lints_ != NULL;
 }
