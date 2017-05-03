@@ -33,11 +33,12 @@ message ZLint {
     ZLintStatus status = 3;
 
     bool infos_present = 4;
-    bool warnings_present = 5;
-    bool errors_present = 6;
-    bool fatals_present = 7;
+    bool notices_present = 5;
+    bool warnings_present = 6;
+    bool errors_present = 7;
+    bool fatals_present = 8;
 
-    Lints lints = 8;
+    Lints lints = 9;
 }
 
 message Lints {
