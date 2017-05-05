@@ -51,20 +51,50 @@ enum CertificateRevocationReason {
     CERTIFICATE_REVOCATION_REASON_AA_COMPROMISE = 11;
 }
 
+message Path {
+    // Contains SHA256 fingerprints of a chain of certificates
+    repeated bytes sha256fp;
+}
+
 message RootStoreStatus {
-    // (trusted path || whitelisted) && other certificate validation (e.g., expiration)
+    // (has_trusted_path && !revoked && !blacklisted) || whitelisted
     bool valid = 1;
-    // was certificate ever valid in the past?
+
+    // True if the certificate is valid now or was ever valid in the past.
     bool was_valid = 2;
-    // does there exist a path from the certificate to the root store
-    bool trusted_path = 3;
-    bool was_trusted_path = 4;
-    // is the certificate explicitly blacklisted by the browser (e.g., OneCRL)
+
+    // True if there exists a path from the certificate to the root store.
+    bool has_trusted_path = 3;
+
+    // True if now or at some point in the past there existed a path from the
+    // certificate to the root store.
+    bool had_trusted_path = 4;
+
+    // True if the certificate is explicitly blacklisted by some method other
+    // than OneCRL / CRLSet. For example, a set of certificates revoked by
+    // Cloudflare are blacklisted by SPKI hash in Chrome.
     bool blacklisted = 5;
+
+    // True if the certificate is explicitly whitelisted, e.g. the set of
+    // trusted WoSign certificates Apple uses.
     bool whitelisted = 6;
+    
+    // Indicates if the certificate is a root, intermediate, or leaf.
     CertificateType type = 7;
-    // contains sha256fp of path to root store
-    repeated bytes path = 8;
+
+    // Current trusted paths to the root store. Only valid if
+    // `has_trusted_paths = true`.
+    repeated Path trusted_paths = 8;
+
+    // True if the certificate is revoked in any way.
+    bool revoked = 9;
+
+    // True if the certificate is in the revocation set for this. Only valid if
+    // `revoked = true`.
+    bool in_revocation_set = 10;
+
+    // The revocation reason listed in the CRL.
+    CertificateRevocationReason reason = 11;
 }
 
 message CertificateValidation {
