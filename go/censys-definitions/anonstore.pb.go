@@ -21,6 +21,7 @@ It has these top-level messages:
 	AnonymousRecord
 	AnonymousDelta
 	ExternalCertificate
+	Path
 	RootStoreStatus
 	CertificateValidation
 	MozillaSalesForceStatus

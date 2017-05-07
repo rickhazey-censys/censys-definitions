@@ -67,6 +67,9 @@ extern MetadatumDefaultTypeInternal _Metadatum_default_instance_;
 class MozillaSalesForceStatus;
 class MozillaSalesForceStatusDefaultTypeInternal;
 extern MozillaSalesForceStatusDefaultTypeInternal _MozillaSalesForceStatus_default_instance_;
+class Path;
+class PathDefaultTypeInternal;
+extern PathDefaultTypeInternal _Path_default_instance_;
 class RootStoreStatus;
 class RootStoreStatusDefaultTypeInternal;
 extern RootStoreStatusDefaultTypeInternal _RootStoreStatus_default_instance_;
@@ -203,6 +206,99 @@ inline bool CertificateRevocationReason_Parse(
 }
 // ===================================================================
 
+class Path : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zsearch.Path) */ {
+ public:
+  Path();
+  virtual ~Path();
+
+  Path(const Path& from);
+
+  inline Path& operator=(const Path& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const Path& default_instance();
+
+  static inline const Path* internal_default_instance() {
+    return reinterpret_cast<const Path*>(
+               &_Path_default_instance_);
+  }
+
+  void Swap(Path* other);
+
+  // implements Message ----------------------------------------------
+
+  inline Path* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  Path* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const Path& from);
+  void MergeFrom(const Path& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output)
+      const PROTOBUF_FINAL {
+    return InternalSerializeWithCachedSizesToArray(
+        ::google::protobuf::io::CodedOutputStream::IsDefaultSerializationDeterministic(), output);
+  }
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(Path* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // repeated bytes sha256fp = 1;
+  int sha256fp_size() const;
+  void clear_sha256fp();
+  static const int kSha256FpFieldNumber = 1;
+  const ::std::string& sha256fp(int index) const;
+  ::std::string* mutable_sha256fp(int index);
+  void set_sha256fp(int index, const ::std::string& value);
+  void set_sha256fp(int index, const char* value);
+  void set_sha256fp(int index, const void* value, size_t size);
+  ::std::string* add_sha256fp();
+  void add_sha256fp(const ::std::string& value);
+  void add_sha256fp(const char* value);
+  void add_sha256fp(const void* value, size_t size);
+  const ::google::protobuf::RepeatedPtrField< ::std::string>& sha256fp() const;
+  ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_sha256fp();
+
+  // @@protoc_insertion_point(class_scope:zsearch.Path)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::RepeatedPtrField< ::std::string> sha256fp_;
+  mutable int _cached_size_;
+  friend struct  protobuf_certificate_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
 class RootStoreStatus : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:zsearch.RootStoreStatus) */ {
  public:
   RootStoreStatus();
@@ -270,21 +366,17 @@ class RootStoreStatus : public ::google::protobuf::Message /* @@protoc_insertion
 
   // accessors -------------------------------------------------------
 
-  // repeated bytes path = 8;
-  int path_size() const;
-  void clear_path();
-  static const int kPathFieldNumber = 8;
-  const ::std::string& path(int index) const;
-  ::std::string* mutable_path(int index);
-  void set_path(int index, const ::std::string& value);
-  void set_path(int index, const char* value);
-  void set_path(int index, const void* value, size_t size);
-  ::std::string* add_path();
-  void add_path(const ::std::string& value);
-  void add_path(const char* value);
-  void add_path(const void* value, size_t size);
-  const ::google::protobuf::RepeatedPtrField< ::std::string>& path() const;
-  ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_path();
+  // repeated .zsearch.Path trusted_paths = 8;
+  int trusted_paths_size() const;
+  void clear_trusted_paths();
+  static const int kTrustedPathsFieldNumber = 8;
+  const ::zsearch::Path& trusted_paths(int index) const;
+  ::zsearch::Path* mutable_trusted_paths(int index);
+  ::zsearch::Path* add_trusted_paths();
+  ::google::protobuf::RepeatedPtrField< ::zsearch::Path >*
+      mutable_trusted_paths();
+  const ::google::protobuf::RepeatedPtrField< ::zsearch::Path >&
+      trusted_paths() const;
 
   // bool valid = 1;
   void clear_valid();
@@ -298,17 +390,17 @@ class RootStoreStatus : public ::google::protobuf::Message /* @@protoc_insertion
   bool was_valid() const;
   void set_was_valid(bool value);
 
-  // bool trusted_path = 3;
-  void clear_trusted_path();
-  static const int kTrustedPathFieldNumber = 3;
-  bool trusted_path() const;
-  void set_trusted_path(bool value);
+  // bool has_trusted_path = 3;
+  void clear_has_trusted_path();
+  static const int kHasTrustedPathFieldNumber = 3;
+  bool has_trusted_path() const;
+  void set_has_trusted_path(bool value);
 
-  // bool was_trusted_path = 4;
-  void clear_was_trusted_path();
-  static const int kWasTrustedPathFieldNumber = 4;
-  bool was_trusted_path() const;
-  void set_was_trusted_path(bool value);
+  // bool had_trusted_path = 4;
+  void clear_had_trusted_path();
+  static const int kHadTrustedPathFieldNumber = 4;
+  bool had_trusted_path() const;
+  void set_had_trusted_path(bool value);
 
   // bool blacklisted = 5;
   void clear_blacklisted();
@@ -322,6 +414,12 @@ class RootStoreStatus : public ::google::protobuf::Message /* @@protoc_insertion
   bool whitelisted() const;
   void set_whitelisted(bool value);
 
+  // bool in_revocation_set = 9;
+  void clear_in_revocation_set();
+  static const int kInRevocationSetFieldNumber = 9;
+  bool in_revocation_set() const;
+  void set_in_revocation_set(bool value);
+
   // .zsearch.CertificateType type = 7;
   void clear_type();
   static const int kTypeFieldNumber = 7;
@@ -332,13 +430,14 @@ class RootStoreStatus : public ::google::protobuf::Message /* @@protoc_insertion
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::RepeatedPtrField< ::std::string> path_;
+  ::google::protobuf::RepeatedPtrField< ::zsearch::Path > trusted_paths_;
   bool valid_;
   bool was_valid_;
-  bool trusted_path_;
-  bool was_trusted_path_;
+  bool has_trusted_path_;
+  bool had_trusted_path_;
   bool blacklisted_;
   bool whitelisted_;
+  bool in_revocation_set_;
   int type_;
   mutable int _cached_size_;
   friend struct  protobuf_certificate_2eproto::TableStruct;
@@ -1146,11 +1245,11 @@ class Certificate : public ::google::protobuf::Message /* @@protoc_insertion_poi
   bool is_precert() const;
   void set_is_precert(bool value);
 
-  // bool in_nss = 6;
-  void clear_in_nss();
-  static const int kInNssFieldNumber = 6;
-  bool in_nss() const;
-  void set_in_nss(bool value);
+  // bool expired = 48;
+  void clear_expired();
+  static const int kExpiredFieldNumber = 48;
+  bool expired() const;
+  void set_expired(bool value);
 
   // uint32 not_valid_after = 41;
   void clear_not_valid_after();
@@ -1164,11 +1263,11 @@ class Certificate : public ::google::protobuf::Message /* @@protoc_insertion_poi
   ::google::protobuf::uint32 not_valid_before() const;
   void set_not_valid_before(::google::protobuf::uint32 value);
 
-  // uint32 validation_timestamp = 10;
-  void clear_validation_timestamp();
-  static const int kValidationTimestampFieldNumber = 10;
-  ::google::protobuf::uint32 validation_timestamp() const;
-  void set_validation_timestamp(::google::protobuf::uint32 value);
+  // bool in_nss = 6;
+  void clear_in_nss();
+  static const int kInNssFieldNumber = 6;
+  bool in_nss() const;
+  void set_in_nss(bool value);
 
   // bool in_microsoft = 7 [deprecated = true];
   GOOGLE_PROTOBUF_DEPRECATED_ATTR void clear_in_microsoft();
@@ -1187,6 +1286,12 @@ class Certificate : public ::google::protobuf::Message /* @@protoc_insertion_poi
   GOOGLE_PROTOBUF_DEPRECATED_ATTR static const int kValidNssFieldNumber = 11;
   GOOGLE_PROTOBUF_DEPRECATED_ATTR bool valid_nss() const;
   GOOGLE_PROTOBUF_DEPRECATED_ATTR void set_valid_nss(bool value);
+
+  // uint32 validation_timestamp = 10;
+  void clear_validation_timestamp();
+  static const int kValidationTimestampFieldNumber = 10;
+  ::google::protobuf::uint32 validation_timestamp() const;
+  void set_validation_timestamp(::google::protobuf::uint32 value);
 
   // bool valid_microsoft = 12 [deprecated = true];
   GOOGLE_PROTOBUF_DEPRECATED_ATTR void clear_valid_microsoft();
@@ -1308,13 +1413,14 @@ class Certificate : public ::google::protobuf::Message /* @@protoc_insertion_poi
   bool seen_in_scan_;
   bool post_processed_;
   bool is_precert_;
-  bool in_nss_;
+  bool expired_;
   ::google::protobuf::uint32 not_valid_after_;
   ::google::protobuf::uint32 not_valid_before_;
-  ::google::protobuf::uint32 validation_timestamp_;
+  bool in_nss_;
   bool in_microsoft_;
   bool in_apple_;
   bool valid_nss_;
+  ::google::protobuf::uint32 validation_timestamp_;
   bool valid_microsoft_;
   bool valid_apple_;
   bool was_valid_nss_;
@@ -1340,6 +1446,65 @@ class Certificate : public ::google::protobuf::Message /* @@protoc_insertion_poi
 // ===================================================================
 
 #if !PROTOBUF_INLINE_NOT_IN_HEADERS
+// Path
+
+// repeated bytes sha256fp = 1;
+inline int Path::sha256fp_size() const {
+  return sha256fp_.size();
+}
+inline void Path::clear_sha256fp() {
+  sha256fp_.Clear();
+}
+inline const ::std::string& Path::sha256fp(int index) const {
+  // @@protoc_insertion_point(field_get:zsearch.Path.sha256fp)
+  return sha256fp_.Get(index);
+}
+inline ::std::string* Path::mutable_sha256fp(int index) {
+  // @@protoc_insertion_point(field_mutable:zsearch.Path.sha256fp)
+  return sha256fp_.Mutable(index);
+}
+inline void Path::set_sha256fp(int index, const ::std::string& value) {
+  // @@protoc_insertion_point(field_set:zsearch.Path.sha256fp)
+  sha256fp_.Mutable(index)->assign(value);
+}
+inline void Path::set_sha256fp(int index, const char* value) {
+  sha256fp_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:zsearch.Path.sha256fp)
+}
+inline void Path::set_sha256fp(int index, const void* value, size_t size) {
+  sha256fp_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_set_pointer:zsearch.Path.sha256fp)
+}
+inline ::std::string* Path::add_sha256fp() {
+  // @@protoc_insertion_point(field_add_mutable:zsearch.Path.sha256fp)
+  return sha256fp_.Add();
+}
+inline void Path::add_sha256fp(const ::std::string& value) {
+  sha256fp_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:zsearch.Path.sha256fp)
+}
+inline void Path::add_sha256fp(const char* value) {
+  sha256fp_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:zsearch.Path.sha256fp)
+}
+inline void Path::add_sha256fp(const void* value, size_t size) {
+  sha256fp_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:zsearch.Path.sha256fp)
+}
+inline const ::google::protobuf::RepeatedPtrField< ::std::string>&
+Path::sha256fp() const {
+  // @@protoc_insertion_point(field_list:zsearch.Path.sha256fp)
+  return sha256fp_;
+}
+inline ::google::protobuf::RepeatedPtrField< ::std::string>*
+Path::mutable_sha256fp() {
+  // @@protoc_insertion_point(field_mutable_list:zsearch.Path.sha256fp)
+  return &sha256fp_;
+}
+
+// -------------------------------------------------------------------
+
 // RootStoreStatus
 
 // bool valid = 1;
@@ -1370,32 +1535,32 @@ inline void RootStoreStatus::set_was_valid(bool value) {
   // @@protoc_insertion_point(field_set:zsearch.RootStoreStatus.was_valid)
 }
 
-// bool trusted_path = 3;
-inline void RootStoreStatus::clear_trusted_path() {
-  trusted_path_ = false;
+// bool has_trusted_path = 3;
+inline void RootStoreStatus::clear_has_trusted_path() {
+  has_trusted_path_ = false;
 }
-inline bool RootStoreStatus::trusted_path() const {
-  // @@protoc_insertion_point(field_get:zsearch.RootStoreStatus.trusted_path)
-  return trusted_path_;
+inline bool RootStoreStatus::has_trusted_path() const {
+  // @@protoc_insertion_point(field_get:zsearch.RootStoreStatus.has_trusted_path)
+  return has_trusted_path_;
 }
-inline void RootStoreStatus::set_trusted_path(bool value) {
+inline void RootStoreStatus::set_has_trusted_path(bool value) {
   
-  trusted_path_ = value;
-  // @@protoc_insertion_point(field_set:zsearch.RootStoreStatus.trusted_path)
+  has_trusted_path_ = value;
+  // @@protoc_insertion_point(field_set:zsearch.RootStoreStatus.has_trusted_path)
 }
 
-// bool was_trusted_path = 4;
-inline void RootStoreStatus::clear_was_trusted_path() {
-  was_trusted_path_ = false;
+// bool had_trusted_path = 4;
+inline void RootStoreStatus::clear_had_trusted_path() {
+  had_trusted_path_ = false;
 }
-inline bool RootStoreStatus::was_trusted_path() const {
-  // @@protoc_insertion_point(field_get:zsearch.RootStoreStatus.was_trusted_path)
-  return was_trusted_path_;
+inline bool RootStoreStatus::had_trusted_path() const {
+  // @@protoc_insertion_point(field_get:zsearch.RootStoreStatus.had_trusted_path)
+  return had_trusted_path_;
 }
-inline void RootStoreStatus::set_was_trusted_path(bool value) {
+inline void RootStoreStatus::set_had_trusted_path(bool value) {
   
-  was_trusted_path_ = value;
-  // @@protoc_insertion_point(field_set:zsearch.RootStoreStatus.was_trusted_path)
+  had_trusted_path_ = value;
+  // @@protoc_insertion_point(field_set:zsearch.RootStoreStatus.had_trusted_path)
 }
 
 // bool blacklisted = 5;
@@ -1440,59 +1605,48 @@ inline void RootStoreStatus::set_type(::zsearch::CertificateType value) {
   // @@protoc_insertion_point(field_set:zsearch.RootStoreStatus.type)
 }
 
-// repeated bytes path = 8;
-inline int RootStoreStatus::path_size() const {
-  return path_.size();
+// repeated .zsearch.Path trusted_paths = 8;
+inline int RootStoreStatus::trusted_paths_size() const {
+  return trusted_paths_.size();
 }
-inline void RootStoreStatus::clear_path() {
-  path_.Clear();
+inline void RootStoreStatus::clear_trusted_paths() {
+  trusted_paths_.Clear();
 }
-inline const ::std::string& RootStoreStatus::path(int index) const {
-  // @@protoc_insertion_point(field_get:zsearch.RootStoreStatus.path)
-  return path_.Get(index);
+inline const ::zsearch::Path& RootStoreStatus::trusted_paths(int index) const {
+  // @@protoc_insertion_point(field_get:zsearch.RootStoreStatus.trusted_paths)
+  return trusted_paths_.Get(index);
 }
-inline ::std::string* RootStoreStatus::mutable_path(int index) {
-  // @@protoc_insertion_point(field_mutable:zsearch.RootStoreStatus.path)
-  return path_.Mutable(index);
+inline ::zsearch::Path* RootStoreStatus::mutable_trusted_paths(int index) {
+  // @@protoc_insertion_point(field_mutable:zsearch.RootStoreStatus.trusted_paths)
+  return trusted_paths_.Mutable(index);
 }
-inline void RootStoreStatus::set_path(int index, const ::std::string& value) {
-  // @@protoc_insertion_point(field_set:zsearch.RootStoreStatus.path)
-  path_.Mutable(index)->assign(value);
+inline ::zsearch::Path* RootStoreStatus::add_trusted_paths() {
+  // @@protoc_insertion_point(field_add:zsearch.RootStoreStatus.trusted_paths)
+  return trusted_paths_.Add();
 }
-inline void RootStoreStatus::set_path(int index, const char* value) {
-  path_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:zsearch.RootStoreStatus.path)
+inline ::google::protobuf::RepeatedPtrField< ::zsearch::Path >*
+RootStoreStatus::mutable_trusted_paths() {
+  // @@protoc_insertion_point(field_mutable_list:zsearch.RootStoreStatus.trusted_paths)
+  return &trusted_paths_;
 }
-inline void RootStoreStatus::set_path(int index, const void* value, size_t size) {
-  path_.Mutable(index)->assign(
-    reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:zsearch.RootStoreStatus.path)
+inline const ::google::protobuf::RepeatedPtrField< ::zsearch::Path >&
+RootStoreStatus::trusted_paths() const {
+  // @@protoc_insertion_point(field_list:zsearch.RootStoreStatus.trusted_paths)
+  return trusted_paths_;
 }
-inline ::std::string* RootStoreStatus::add_path() {
-  // @@protoc_insertion_point(field_add_mutable:zsearch.RootStoreStatus.path)
-  return path_.Add();
+
+// bool in_revocation_set = 9;
+inline void RootStoreStatus::clear_in_revocation_set() {
+  in_revocation_set_ = false;
 }
-inline void RootStoreStatus::add_path(const ::std::string& value) {
-  path_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:zsearch.RootStoreStatus.path)
+inline bool RootStoreStatus::in_revocation_set() const {
+  // @@protoc_insertion_point(field_get:zsearch.RootStoreStatus.in_revocation_set)
+  return in_revocation_set_;
 }
-inline void RootStoreStatus::add_path(const char* value) {
-  path_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:zsearch.RootStoreStatus.path)
-}
-inline void RootStoreStatus::add_path(const void* value, size_t size) {
-  path_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:zsearch.RootStoreStatus.path)
-}
-inline const ::google::protobuf::RepeatedPtrField< ::std::string>&
-RootStoreStatus::path() const {
-  // @@protoc_insertion_point(field_list:zsearch.RootStoreStatus.path)
-  return path_;
-}
-inline ::google::protobuf::RepeatedPtrField< ::std::string>*
-RootStoreStatus::mutable_path() {
-  // @@protoc_insertion_point(field_mutable_list:zsearch.RootStoreStatus.path)
-  return &path_;
+inline void RootStoreStatus::set_in_revocation_set(bool value) {
+  
+  in_revocation_set_ = value;
+  // @@protoc_insertion_point(field_set:zsearch.RootStoreStatus.in_revocation_set)
 }
 
 // -------------------------------------------------------------------
@@ -2979,6 +3133,20 @@ inline void Certificate::set_not_valid_before(::google::protobuf::uint32 value) 
   // @@protoc_insertion_point(field_set:zsearch.Certificate.not_valid_before)
 }
 
+// bool expired = 48;
+inline void Certificate::clear_expired() {
+  expired_ = false;
+}
+inline bool Certificate::expired() const {
+  // @@protoc_insertion_point(field_get:zsearch.Certificate.expired)
+  return expired_;
+}
+inline void Certificate::set_expired(bool value) {
+  
+  expired_ = value;
+  // @@protoc_insertion_point(field_set:zsearch.Certificate.expired)
+}
+
 // bool in_nss = 6;
 inline void Certificate::clear_in_nss() {
   in_nss_ = false;
@@ -3313,6 +3481,8 @@ inline void Certificate::set_do_not_post_process(bool value) {
 }
 
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------
