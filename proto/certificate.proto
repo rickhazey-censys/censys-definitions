@@ -53,18 +53,15 @@ enum CertificateRevocationReason {
 
 message Path {
     // Contains SHA256 fingerprints of a chain of certificates
-    repeated bytes sha256fp;
+    repeated bytes sha256fp = 1;
 }
 
 message RootStoreStatus {
-    // (has_trusted_path && !revoked && !blacklisted) || whitelisted
+    // ((has_trusted_path && !revoked && !blacklisted) || whitelisted) && !expired
     bool valid = 1;
 
     // True if the certificate is valid now or was ever valid in the past.
     bool was_valid = 2;
-
-    // False if NotBefore < Now < NotAfter
-    bool expired;
 
     // True if there exists a path from the certificate to the root store.
     bool has_trusted_path = 3;
@@ -91,7 +88,9 @@ message RootStoreStatus {
 
     // True if the certificate is in the revocation set (e.g. OneCRL)
     // associated with this root store.
-    bool in_revocation_set = 10; }
+    bool in_revocation_set = 9;
+
+}
 
 message CertificateValidation {
     RootStoreStatus nss = 1;
@@ -166,9 +165,9 @@ message Certificate {
     // dump job can mark certificates as expired
     uint32 not_valid_after = 41;
     uint32 not_valid_before = 42;
+    bool expired = 48;
 
     // deprecated stuff
-
     bool in_nss = 6; // TODO [deprecated=true];
     bool in_microsoft = 7 [deprecated=true];
     bool in_apple = 8 [deprecated=true];

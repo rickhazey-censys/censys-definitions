@@ -103,6 +103,9 @@ extern MozillaOneCRLEntryDefaultTypeInternal _MozillaOneCRLEntry_default_instanc
 class MozillaSalesForceStatus;
 class MozillaSalesForceStatusDefaultTypeInternal;
 extern MozillaSalesForceStatusDefaultTypeInternal _MozillaSalesForceStatus_default_instance_;
+class Path;
+class PathDefaultTypeInternal;
+extern PathDefaultTypeInternal _Path_default_instance_;
 class ProtocolAtom;
 class ProtocolAtomDefaultTypeInternal;
 extern ProtocolAtomDefaultTypeInternal _ProtocolAtom_default_instance_;

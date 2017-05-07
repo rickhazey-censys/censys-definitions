@@ -18,6 +18,8 @@
 // @@protoc_insertion_point(includes)
 
 namespace zsearch {
+class PathDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<Path> {
+} _Path_default_instance_;
 class RootStoreStatusDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<RootStoreStatus> {
 } _RootStoreStatus_default_instance_;
 class CertificateValidationDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<CertificateValidation> {
@@ -36,24 +38,30 @@ namespace protobuf_certificate_2eproto {
 
 namespace {
 
-::google::protobuf::Metadata file_level_metadata[6];
+::google::protobuf::Metadata file_level_metadata[7];
 const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[4];
 
 }  // namespace
 
 const ::google::protobuf::uint32 TableStruct::offsets[] = {
   ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Path, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Path, sha256fp_),
+  ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RootStoreStatus, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RootStoreStatus, valid_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RootStoreStatus, was_valid_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RootStoreStatus, trusted_path_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RootStoreStatus, was_trusted_path_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RootStoreStatus, has_trusted_path_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RootStoreStatus, had_trusted_path_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RootStoreStatus, blacklisted_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RootStoreStatus, whitelisted_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RootStoreStatus, type_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RootStoreStatus, path_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RootStoreStatus, trusted_paths_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RootStoreStatus, in_revocation_set_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CertificateValidation, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -116,6 +124,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Certificate, is_precert_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Certificate, not_valid_after_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Certificate, not_valid_before_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Certificate, expired_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Certificate, in_nss_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Certificate, in_microsoft_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Certificate, in_apple_),
@@ -141,15 +150,17 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
 };
 
 static const ::google::protobuf::internal::MigrationSchema schemas[] = {
-  { 0, -1, sizeof(RootStoreStatus)},
-  { 12, -1, sizeof(CertificateValidation)},
-  { 22, -1, sizeof(MozillaSalesForceStatus)},
-  { 38, -1, sizeof(CertificateRevocation)},
-  { 44, -1, sizeof(CertificateAudit)},
-  { 49, -1, sizeof(Certificate)},
+  { 0, -1, sizeof(Path)},
+  { 5, -1, sizeof(RootStoreStatus)},
+  { 18, -1, sizeof(CertificateValidation)},
+  { 28, -1, sizeof(MozillaSalesForceStatus)},
+  { 44, -1, sizeof(CertificateRevocation)},
+  { 50, -1, sizeof(CertificateAudit)},
+  { 55, -1, sizeof(Certificate)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
+  reinterpret_cast<const ::google::protobuf::Message*>(&_Path_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_RootStoreStatus_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_CertificateValidation_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_MozillaSalesForceStatus_default_instance_),
@@ -176,24 +187,26 @@ void protobuf_AssignDescriptorsOnce() {
 void protobuf_RegisterTypes(const ::std::string&) GOOGLE_ATTRIBUTE_COLD;
 void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 6);
+  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 7);
 }
 
 }  // namespace
 
 void TableStruct::Shutdown() {
-  _RootStoreStatus_default_instance_.Shutdown();
+  _Path_default_instance_.Shutdown();
   delete file_level_metadata[0].reflection;
-  _CertificateValidation_default_instance_.Shutdown();
+  _RootStoreStatus_default_instance_.Shutdown();
   delete file_level_metadata[1].reflection;
-  _MozillaSalesForceStatus_default_instance_.Shutdown();
+  _CertificateValidation_default_instance_.Shutdown();
   delete file_level_metadata[2].reflection;
-  _CertificateRevocation_default_instance_.Shutdown();
+  _MozillaSalesForceStatus_default_instance_.Shutdown();
   delete file_level_metadata[3].reflection;
-  _CertificateAudit_default_instance_.Shutdown();
+  _CertificateRevocation_default_instance_.Shutdown();
   delete file_level_metadata[4].reflection;
-  _Certificate_default_instance_.Shutdown();
+  _CertificateAudit_default_instance_.Shutdown();
   delete file_level_metadata[5].reflection;
+  _Certificate_default_instance_.Shutdown();
+  delete file_level_metadata[6].reflection;
 }
 
 void TableStruct::InitDefaultsImpl() {
@@ -203,6 +216,7 @@ void TableStruct::InitDefaultsImpl() {
   ::zsearch::protobuf_common_2eproto::InitDefaults();
   ::zsearch::protobuf_zlint_2eproto::InitDefaults();
   ::zsearch::protobuf_ct_2eproto::InitDefaults();
+  _Path_default_instance_.DefaultConstruct();
   _RootStoreStatus_default_instance_.DefaultConstruct();
   _CertificateValidation_default_instance_.DefaultConstruct();
   _MozillaSalesForceStatus_default_instance_.DefaultConstruct();
@@ -245,99 +259,102 @@ void AddDescriptorsImpl() {
   InitDefaults();
   static const char descriptor[] = {
       "\n\021certificate.proto\022\007zsearch\032\014common.pro"
-      "to\032\013zlint.proto\032\010ct.proto\"\303\001\n\017RootStoreS"
-      "tatus\022\r\n\005valid\030\001 \001(\010\022\021\n\twas_valid\030\002 \001(\010\022"
-      "\024\n\014trusted_path\030\003 \001(\010\022\030\n\020was_trusted_pat"
-      "h\030\004 \001(\010\022\023\n\013blacklisted\030\005 \001(\010\022\023\n\013whitelis"
-      "ted\030\006 \001(\010\022&\n\004type\030\007 \001(\0162\030.zsearch.Certif"
-      "icateType\022\014\n\004path\030\010 \003(\014\"\234\002\n\025CertificateV"
-      "alidation\022%\n\003nss\030\001 \001(\0132\030.zsearch.RootSto"
-      "reStatus\022+\n\tmicrosoft\030\002 \001(\0132\030.zsearch.Ro"
-      "otStoreStatus\022\'\n\005apple\030\003 \001(\0132\030.zsearch.R"
-      "ootStoreStatus\022&\n\004java\030\004 \001(\0132\030.zsearch.R"
-      "ootStoreStatus\022)\n\007android\030\005 \001(\0132\030.zsearc"
-      "h.RootStoreStatus\0223\n\021google_ct_primary\030\n"
-      " \001(\0132\030.zsearch.RootStoreStatus\"\272\002\n\027Mozil"
-      "laSalesForceStatus\022\022\n\ncurrent_in\030\001 \001(\010\022\016"
-      "\n\006was_in\030\002 \001(\010\022\022\n\nowner_name\030\003 \001(\t\022\023\n\013pa"
-      "rent_name\030\004 \001(\t\022\030\n\020certificate_name\030\005 \001("
-      "\t\022\032\n\022certificate_policy\030\006 \001(\t\022(\n certifi"
-      "cation_practice_statement\030\007 \001(\t\022\031\n\021cp_sa"
-      "me_as_parent\030\010 \001(\010\022\034\n\024audit_same_as_pare"
-      "nt\030\t \001(\010\022\026\n\016standard_audit\030\n \001(\t\022\020\n\010br_a"
-      "udit\030\013 \001(\t\022\017\n\007auditor\030\014 \001(\t\"^\n\025Certifica"
-      "teRevocation\022\017\n\007revoked\030\001 \001(\010\0224\n\006reason\030"
-      "\002 \001(\0162$.zsearch.CertificateRevocationRea"
-      "son\"E\n\020CertificateAudit\0221\n\007mozilla\030\001 \001(\013"
-      "2 .zsearch.MozillaSalesForceStatus\"\356\t\n\013C"
-      "ertificate\022\016\n\006sha1fp\030\001 \001(\014\022\020\n\010sha256fp\030\002"
-      " \001(\014\022\013\n\003raw\030\003 \001(\014\022\016\n\006parsed\030\004 \001(\t\0225\n\014par"
-      "se_status\030, \001(\0162\037.zsearch.CertificatePar"
-      "seStatus\022\025\n\rparse_version\030\' \001(\r\022\023\n\013parse"
-      "_error\030/ \001(\t\022\017\n\007parents\030\005 \003(\014\022\027\n\017present"
-      "ed_chain\030- \003(\014\022*\n\006source\030\034 \001(\0162\032.zsearch"
-      ".CertificateSource\022\024\n\014seen_in_scan\030\035 \001(\010"
-      "\022\026\n\016post_processed\030\032 \001(\010\022\036\n\026post_process"
-      "_timestamp\030% \001(\r\0222\n\nvalidation\030# \001(\0132\036.z"
-      "search.CertificateValidation\022\035\n\002ct\030\036 \001(\013"
-      "2\021.zsearch.CTStatus\022\035\n\005zlint\030& \001(\0132\016.zse"
-      "arch.ZLint\0222\n\nrevocation\030+ \001(\0132\036.zsearch"
-      ".CertificateRevocation\022(\n\005audit\030. \001(\0132\031."
-      "zsearch.CertificateAudit\022\022\n\nis_precert\030 "
-      " \001(\010\022\027\n\017not_valid_after\030) \001(\r\022\030\n\020not_val"
-      "id_before\030* \001(\r\022\016\n\006in_nss\030\006 \001(\010\022\030\n\014in_mi"
-      "crosoft\030\007 \001(\010B\002\030\001\022\024\n\010in_apple\030\010 \001(\010B\002\030\001\022"
-      "\034\n\024validation_timestamp\030\n \001(\r\022\025\n\tvalid_n"
-      "ss\030\013 \001(\010B\002\030\001\022\033\n\017valid_microsoft\030\014 \001(\010B\002\030"
-      "\001\022\027\n\013valid_apple\030\r \001(\010B\002\030\001\022\025\n\rwas_valid_"
-      "nss\030\016 \001(\010\022\037\n\023was_valid_microsoft\030\017 \001(\010B\002"
-      "\030\001\022\033\n\017was_valid_apple\030\020 \001(\010B\002\030\001\022\026\n\nwas_i"
-      "n_nss\030\021 \001(\010B\002\030\001\022\034\n\020was_in_microsoft\030\022 \001("
-      "\010B\002\030\001\022\030\n\014was_in_apple\030\023 \001(\010B\002\030\001\022\031\n\021curre"
-      "nt_valid_nss\030\024 \001(\010\022#\n\027current_valid_micr"
-      "osoft\030\025 \001(\010B\002\030\001\022\037\n\023current_valid_apple\030\026"
-      " \001(\010B\002\030\001\022\026\n\016current_in_nss\030\027 \001(\010\022 \n\024curr"
-      "ent_in_microsoft\030\030 \001(\010B\002\030\001\022\034\n\020current_in"
-      "_apple\030\031 \001(\010B\002\030\001\0227\n\tnss_audit\030\037 \001(\0132 .zs"
-      "earch.MozillaSalesForceStatusB\002\030\001\022\037\n\023sho"
-      "uld_post_process\030\033 \001(\010B\002\030\001\022\037\n\023do_not_pos"
-      "t_process\030$ \001(\010B\002\030\001*\247\001\n\017CertificateType\022"
-      "\035\n\031CERTIFICATE_TYPE_RESERVED\020\000\022\034\n\030CERTIF"
-      "ICATE_TYPE_UNKNOWN\020\001\022\031\n\025CERTIFICATE_TYPE"
-      "_LEAF\020\002\022!\n\035CERTIFICATE_TYPE_INTERMEDIATE"
-      "\020\003\022\031\n\025CERTIFICATE_TYPE_ROOT\020\004*\267\002\n\021Certif"
-      "icateSource\022\037\n\033CERTIFICATE_SOURCE_RESERV"
-      "ED\020\000\022\036\n\032CERTIFICATE_SOURCE_UNKNOWN\020\001\022\033\n\027"
-      "CERTIFICATE_SOURCE_SCAN\020\002\022\031\n\025CERTIFICATE"
-      "_SOURCE_CT\020\003\022)\n%CERTIFICATE_SOURCE_MOZIL"
-      "LA_SALESFORCE\020\004\022\037\n\033CERTIFICATE_SOURCE_RE"
-      "SEARCH\020\005\022\035\n\031CERTIFICATE_SOURCE_RAPID7\020\006\022"
-      "\035\n\031CERTIFICATE_SOURCE_HUBBLE\020\007\022\037\n\033CERTIF"
-      "ICATE_SOURCE_CT_CHAIN\020\010*\327\001\n\026CertificateP"
-      "arseStatus\022%\n!CERTIFICATE_PARSE_STATUS_R"
-      "ESERVED\020\000\022$\n CERTIFICATE_PARSE_STATUS_UN"
-      "KNOWN\020\001\022$\n CERTIFICATE_PARSE_STATUS_SUCC"
-      "ESS\020\002\022!\n\035CERTIFICATE_PARSE_STATUS_FAIL\020\003"
-      "\022\'\n#CERTIFICATE_PARSE_STATUS_NOT_PARSED\020"
-      "\004*\364\004\n\033CertificateRevocationReason\022*\n&CER"
-      "TIFICATE_REVOCATION_REASON_RESERVED\020\000\022)\n"
-      "%CERTIFICATE_REVOCATION_REASON_UNKNOWN\020\001"
-      "\022-\n)CERTIFICATE_REVOCATION_REASON_UNSPEC"
-      "IFIED\020\002\0220\n,CERTIFICATE_REVOCATION_REASON"
-      "_KEY_COMPROMISE\020\003\022/\n+CERTIFICATE_REVOCAT"
-      "ION_REASON_CA_COMPROMISE\020\004\0225\n1CERTIFICAT"
-      "E_REVOCATION_REASON_AFFILIATION_CHANGED\020"
-      "\005\022,\n(CERTIFICATE_REVOCATION_REASON_SUPER"
-      "SEDED\020\006\0228\n4CERTIFICATE_REVOCATION_REASON"
-      "_CESSATION_OF_OPERATION\020\007\0222\n.CERTIFICATE"
-      "_REVOCATION_REASON_CERTIFICATE_HOLD\020\010\0221\n"
-      "-CERTIFICATE_REVOCATION_REASON_REMOVE_FR"
-      "OM_CRL\020\t\0225\n1CERTIFICATE_REVOCATION_REASO"
-      "N_PRIVILEGE_WITHDRAWN\020\n\022/\n+CERTIFICATE_R"
-      "EVOCATION_REASON_AA_COMPROMISE\020\013b\006proto3"
+      "to\032\013zlint.proto\032\010ct.proto\"\030\n\004Path\022\020\n\010sha"
+      "256fp\030\001 \003(\014\"\372\001\n\017RootStoreStatus\022\r\n\005valid"
+      "\030\001 \001(\010\022\021\n\twas_valid\030\002 \001(\010\022\030\n\020has_trusted"
+      "_path\030\003 \001(\010\022\030\n\020had_trusted_path\030\004 \001(\010\022\023\n"
+      "\013blacklisted\030\005 \001(\010\022\023\n\013whitelisted\030\006 \001(\010\022"
+      "&\n\004type\030\007 \001(\0162\030.zsearch.CertificateType\022"
+      "$\n\rtrusted_paths\030\010 \003(\0132\r.zsearch.Path\022\031\n"
+      "\021in_revocation_set\030\t \001(\010\"\234\002\n\025Certificate"
+      "Validation\022%\n\003nss\030\001 \001(\0132\030.zsearch.RootSt"
+      "oreStatus\022+\n\tmicrosoft\030\002 \001(\0132\030.zsearch.R"
+      "ootStoreStatus\022\'\n\005apple\030\003 \001(\0132\030.zsearch."
+      "RootStoreStatus\022&\n\004java\030\004 \001(\0132\030.zsearch."
+      "RootStoreStatus\022)\n\007android\030\005 \001(\0132\030.zsear"
+      "ch.RootStoreStatus\0223\n\021google_ct_primary\030"
+      "\n \001(\0132\030.zsearch.RootStoreStatus\"\272\002\n\027Mozi"
+      "llaSalesForceStatus\022\022\n\ncurrent_in\030\001 \001(\010\022"
+      "\016\n\006was_in\030\002 \001(\010\022\022\n\nowner_name\030\003 \001(\t\022\023\n\013p"
+      "arent_name\030\004 \001(\t\022\030\n\020certificate_name\030\005 \001"
+      "(\t\022\032\n\022certificate_policy\030\006 \001(\t\022(\n certif"
+      "ication_practice_statement\030\007 \001(\t\022\031\n\021cp_s"
+      "ame_as_parent\030\010 \001(\010\022\034\n\024audit_same_as_par"
+      "ent\030\t \001(\010\022\026\n\016standard_audit\030\n \001(\t\022\020\n\010br_"
+      "audit\030\013 \001(\t\022\017\n\007auditor\030\014 \001(\t\"^\n\025Certific"
+      "ateRevocation\022\017\n\007revoked\030\001 \001(\010\0224\n\006reason"
+      "\030\002 \001(\0162$.zsearch.CertificateRevocationRe"
+      "ason\"E\n\020CertificateAudit\0221\n\007mozilla\030\001 \001("
+      "\0132 .zsearch.MozillaSalesForceStatus\"\377\t\n\013"
+      "Certificate\022\016\n\006sha1fp\030\001 \001(\014\022\020\n\010sha256fp\030"
+      "\002 \001(\014\022\013\n\003raw\030\003 \001(\014\022\016\n\006parsed\030\004 \001(\t\0225\n\014pa"
+      "rse_status\030, \001(\0162\037.zsearch.CertificatePa"
+      "rseStatus\022\025\n\rparse_version\030\' \001(\r\022\023\n\013pars"
+      "e_error\030/ \001(\t\022\017\n\007parents\030\005 \003(\014\022\027\n\017presen"
+      "ted_chain\030- \003(\014\022*\n\006source\030\034 \001(\0162\032.zsearc"
+      "h.CertificateSource\022\024\n\014seen_in_scan\030\035 \001("
+      "\010\022\026\n\016post_processed\030\032 \001(\010\022\036\n\026post_proces"
+      "s_timestamp\030% \001(\r\0222\n\nvalidation\030# \001(\0132\036."
+      "zsearch.CertificateValidation\022\035\n\002ct\030\036 \001("
+      "\0132\021.zsearch.CTStatus\022\035\n\005zlint\030& \001(\0132\016.zs"
+      "earch.ZLint\0222\n\nrevocation\030+ \001(\0132\036.zsearc"
+      "h.CertificateRevocation\022(\n\005audit\030. \001(\0132\031"
+      ".zsearch.CertificateAudit\022\022\n\nis_precert\030"
+      "  \001(\010\022\027\n\017not_valid_after\030) \001(\r\022\030\n\020not_va"
+      "lid_before\030* \001(\r\022\017\n\007expired\0300 \001(\010\022\016\n\006in_"
+      "nss\030\006 \001(\010\022\030\n\014in_microsoft\030\007 \001(\010B\002\030\001\022\024\n\010i"
+      "n_apple\030\010 \001(\010B\002\030\001\022\034\n\024validation_timestam"
+      "p\030\n \001(\r\022\025\n\tvalid_nss\030\013 \001(\010B\002\030\001\022\033\n\017valid_"
+      "microsoft\030\014 \001(\010B\002\030\001\022\027\n\013valid_apple\030\r \001(\010"
+      "B\002\030\001\022\025\n\rwas_valid_nss\030\016 \001(\010\022\037\n\023was_valid"
+      "_microsoft\030\017 \001(\010B\002\030\001\022\033\n\017was_valid_apple\030"
+      "\020 \001(\010B\002\030\001\022\026\n\nwas_in_nss\030\021 \001(\010B\002\030\001\022\034\n\020was"
+      "_in_microsoft\030\022 \001(\010B\002\030\001\022\030\n\014was_in_apple\030"
+      "\023 \001(\010B\002\030\001\022\031\n\021current_valid_nss\030\024 \001(\010\022#\n\027"
+      "current_valid_microsoft\030\025 \001(\010B\002\030\001\022\037\n\023cur"
+      "rent_valid_apple\030\026 \001(\010B\002\030\001\022\026\n\016current_in"
+      "_nss\030\027 \001(\010\022 \n\024current_in_microsoft\030\030 \001(\010"
+      "B\002\030\001\022\034\n\020current_in_apple\030\031 \001(\010B\002\030\001\0227\n\tns"
+      "s_audit\030\037 \001(\0132 .zsearch.MozillaSalesForc"
+      "eStatusB\002\030\001\022\037\n\023should_post_process\030\033 \001(\010"
+      "B\002\030\001\022\037\n\023do_not_post_process\030$ \001(\010B\002\030\001*\247\001"
+      "\n\017CertificateType\022\035\n\031CERTIFICATE_TYPE_RE"
+      "SERVED\020\000\022\034\n\030CERTIFICATE_TYPE_UNKNOWN\020\001\022\031"
+      "\n\025CERTIFICATE_TYPE_LEAF\020\002\022!\n\035CERTIFICATE"
+      "_TYPE_INTERMEDIATE\020\003\022\031\n\025CERTIFICATE_TYPE"
+      "_ROOT\020\004*\267\002\n\021CertificateSource\022\037\n\033CERTIFI"
+      "CATE_SOURCE_RESERVED\020\000\022\036\n\032CERTIFICATE_SO"
+      "URCE_UNKNOWN\020\001\022\033\n\027CERTIFICATE_SOURCE_SCA"
+      "N\020\002\022\031\n\025CERTIFICATE_SOURCE_CT\020\003\022)\n%CERTIF"
+      "ICATE_SOURCE_MOZILLA_SALESFORCE\020\004\022\037\n\033CER"
+      "TIFICATE_SOURCE_RESEARCH\020\005\022\035\n\031CERTIFICAT"
+      "E_SOURCE_RAPID7\020\006\022\035\n\031CERTIFICATE_SOURCE_"
+      "HUBBLE\020\007\022\037\n\033CERTIFICATE_SOURCE_CT_CHAIN\020"
+      "\010*\327\001\n\026CertificateParseStatus\022%\n!CERTIFIC"
+      "ATE_PARSE_STATUS_RESERVED\020\000\022$\n CERTIFICA"
+      "TE_PARSE_STATUS_UNKNOWN\020\001\022$\n CERTIFICATE"
+      "_PARSE_STATUS_SUCCESS\020\002\022!\n\035CERTIFICATE_P"
+      "ARSE_STATUS_FAIL\020\003\022\'\n#CERTIFICATE_PARSE_"
+      "STATUS_NOT_PARSED\020\004*\364\004\n\033CertificateRevoc"
+      "ationReason\022*\n&CERTIFICATE_REVOCATION_RE"
+      "ASON_RESERVED\020\000\022)\n%CERTIFICATE_REVOCATIO"
+      "N_REASON_UNKNOWN\020\001\022-\n)CERTIFICATE_REVOCA"
+      "TION_REASON_UNSPECIFIED\020\002\0220\n,CERTIFICATE"
+      "_REVOCATION_REASON_KEY_COMPROMISE\020\003\022/\n+C"
+      "ERTIFICATE_REVOCATION_REASON_CA_COMPROMI"
+      "SE\020\004\0225\n1CERTIFICATE_REVOCATION_REASON_AF"
+      "FILIATION_CHANGED\020\005\022,\n(CERTIFICATE_REVOC"
+      "ATION_REASON_SUPERSEDED\020\006\0228\n4CERTIFICATE"
+      "_REVOCATION_REASON_CESSATION_OF_OPERATIO"
+      "N\020\007\0222\n.CERTIFICATE_REVOCATION_REASON_CER"
+      "TIFICATE_HOLD\020\010\0221\n-CERTIFICATE_REVOCATIO"
+      "N_REASON_REMOVE_FROM_CRL\020\t\0225\n1CERTIFICAT"
+      "E_REVOCATION_REASON_PRIVILEGE_WITHDRAWN\020"
+      "\n\022/\n+CERTIFICATE_REVOCATION_REASON_AA_CO"
+      "MPROMISE\020\013b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 3640);
+      descriptor, 3738);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "certificate.proto", &protobuf_RegisterTypes);
   ::zsearch::protobuf_common_2eproto::AddDescriptors();
@@ -442,14 +459,279 @@ bool CertificateRevocationReason_IsValid(int value) {
 // ===================================================================
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int Path::kSha256FpFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+Path::Path()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_certificate_2eproto::InitDefaults();
+  }
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:zsearch.Path)
+}
+Path::Path(const Path& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      sha256fp_(from.sha256fp_),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  // @@protoc_insertion_point(copy_constructor:zsearch.Path)
+}
+
+void Path::SharedCtor() {
+  _cached_size_ = 0;
+}
+
+Path::~Path() {
+  // @@protoc_insertion_point(destructor:zsearch.Path)
+  SharedDtor();
+}
+
+void Path::SharedDtor() {
+}
+
+void Path::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* Path::descriptor() {
+  protobuf_certificate_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_certificate_2eproto::file_level_metadata[0].descriptor;
+}
+
+const Path& Path::default_instance() {
+  protobuf_certificate_2eproto::InitDefaults();
+  return *internal_default_instance();
+}
+
+Path* Path::New(::google::protobuf::Arena* arena) const {
+  Path* n = new Path;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void Path::Clear() {
+// @@protoc_insertion_point(message_clear_start:zsearch.Path)
+  sha256fp_.Clear();
+}
+
+bool Path::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:zsearch.Path)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // repeated bytes sha256fp = 1;
+      case 1: {
+        if (tag == 10u) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
+                input, this->add_sha256fp()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormatLite::SkipField(input, tag));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:zsearch.Path)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:zsearch.Path)
+  return false;
+#undef DO_
+}
+
+void Path::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:zsearch.Path)
+  // repeated bytes sha256fp = 1;
+  for (int i = 0; i < this->sha256fp_size(); i++) {
+    ::google::protobuf::internal::WireFormatLite::WriteBytes(
+      1, this->sha256fp(i), output);
+  }
+
+  // @@protoc_insertion_point(serialize_end:zsearch.Path)
+}
+
+::google::protobuf::uint8* Path::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic;  // Unused
+  // @@protoc_insertion_point(serialize_to_array_start:zsearch.Path)
+  // repeated bytes sha256fp = 1;
+  for (int i = 0; i < this->sha256fp_size(); i++) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteBytesToArray(1, this->sha256fp(i), target);
+  }
+
+  // @@protoc_insertion_point(serialize_to_array_end:zsearch.Path)
+  return target;
+}
+
+size_t Path::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:zsearch.Path)
+  size_t total_size = 0;
+
+  // repeated bytes sha256fp = 1;
+  total_size += 1 *
+      ::google::protobuf::internal::FromIntSize(this->sha256fp_size());
+  for (int i = 0; i < this->sha256fp_size(); i++) {
+    total_size += ::google::protobuf::internal::WireFormatLite::BytesSize(
+      this->sha256fp(i));
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void Path::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:zsearch.Path)
+  GOOGLE_DCHECK_NE(&from, this);
+  const Path* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const Path>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:zsearch.Path)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:zsearch.Path)
+    MergeFrom(*source);
+  }
+}
+
+void Path::MergeFrom(const Path& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:zsearch.Path)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  sha256fp_.MergeFrom(from.sha256fp_);
+}
+
+void Path::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:zsearch.Path)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void Path::CopyFrom(const Path& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:zsearch.Path)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Path::IsInitialized() const {
+  return true;
+}
+
+void Path::Swap(Path* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void Path::InternalSwap(Path* other) {
+  sha256fp_.UnsafeArenaSwap(&other->sha256fp_);
+  std::swap(_cached_size_, other->_cached_size_);
+}
+
+::google::protobuf::Metadata Path::GetMetadata() const {
+  protobuf_certificate_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_certificate_2eproto::file_level_metadata[0];
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// Path
+
+// repeated bytes sha256fp = 1;
+int Path::sha256fp_size() const {
+  return sha256fp_.size();
+}
+void Path::clear_sha256fp() {
+  sha256fp_.Clear();
+}
+const ::std::string& Path::sha256fp(int index) const {
+  // @@protoc_insertion_point(field_get:zsearch.Path.sha256fp)
+  return sha256fp_.Get(index);
+}
+::std::string* Path::mutable_sha256fp(int index) {
+  // @@protoc_insertion_point(field_mutable:zsearch.Path.sha256fp)
+  return sha256fp_.Mutable(index);
+}
+void Path::set_sha256fp(int index, const ::std::string& value) {
+  // @@protoc_insertion_point(field_set:zsearch.Path.sha256fp)
+  sha256fp_.Mutable(index)->assign(value);
+}
+void Path::set_sha256fp(int index, const char* value) {
+  sha256fp_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:zsearch.Path.sha256fp)
+}
+void Path::set_sha256fp(int index, const void* value, size_t size) {
+  sha256fp_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_set_pointer:zsearch.Path.sha256fp)
+}
+::std::string* Path::add_sha256fp() {
+  // @@protoc_insertion_point(field_add_mutable:zsearch.Path.sha256fp)
+  return sha256fp_.Add();
+}
+void Path::add_sha256fp(const ::std::string& value) {
+  sha256fp_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:zsearch.Path.sha256fp)
+}
+void Path::add_sha256fp(const char* value) {
+  sha256fp_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:zsearch.Path.sha256fp)
+}
+void Path::add_sha256fp(const void* value, size_t size) {
+  sha256fp_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:zsearch.Path.sha256fp)
+}
+const ::google::protobuf::RepeatedPtrField< ::std::string>&
+Path::sha256fp() const {
+  // @@protoc_insertion_point(field_list:zsearch.Path.sha256fp)
+  return sha256fp_;
+}
+::google::protobuf::RepeatedPtrField< ::std::string>*
+Path::mutable_sha256fp() {
+  // @@protoc_insertion_point(field_mutable_list:zsearch.Path.sha256fp)
+  return &sha256fp_;
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int RootStoreStatus::kValidFieldNumber;
 const int RootStoreStatus::kWasValidFieldNumber;
-const int RootStoreStatus::kTrustedPathFieldNumber;
-const int RootStoreStatus::kWasTrustedPathFieldNumber;
+const int RootStoreStatus::kHasTrustedPathFieldNumber;
+const int RootStoreStatus::kHadTrustedPathFieldNumber;
 const int RootStoreStatus::kBlacklistedFieldNumber;
 const int RootStoreStatus::kWhitelistedFieldNumber;
 const int RootStoreStatus::kTypeFieldNumber;
-const int RootStoreStatus::kPathFieldNumber;
+const int RootStoreStatus::kTrustedPathsFieldNumber;
+const int RootStoreStatus::kInRevocationSetFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 RootStoreStatus::RootStoreStatus()
@@ -463,7 +745,7 @@ RootStoreStatus::RootStoreStatus()
 RootStoreStatus::RootStoreStatus(const RootStoreStatus& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
-      path_(from.path_),
+      trusted_paths_(from.trusted_paths_),
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::memcpy(&valid_, &from.valid_,
@@ -493,7 +775,7 @@ void RootStoreStatus::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* RootStoreStatus::descriptor() {
   protobuf_certificate_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_certificate_2eproto::file_level_metadata[0].descriptor;
+  return protobuf_certificate_2eproto::file_level_metadata[1].descriptor;
 }
 
 const RootStoreStatus& RootStoreStatus::default_instance() {
@@ -511,7 +793,7 @@ RootStoreStatus* RootStoreStatus::New(::google::protobuf::Arena* arena) const {
 
 void RootStoreStatus::Clear() {
 // @@protoc_insertion_point(message_clear_start:zsearch.RootStoreStatus)
-  path_.Clear();
+  trusted_paths_.Clear();
   ::memset(&valid_, 0, reinterpret_cast<char*>(&type_) -
     reinterpret_cast<char*>(&valid_) + sizeof(type_));
 }
@@ -552,26 +834,26 @@ bool RootStoreStatus::MergePartialFromCodedStream(
         break;
       }
 
-      // bool trusted_path = 3;
+      // bool has_trusted_path = 3;
       case 3: {
         if (tag == 24u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &trusted_path_)));
+                 input, &has_trusted_path_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // bool was_trusted_path = 4;
+      // bool had_trusted_path = 4;
       case 4: {
         if (tag == 32u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &was_trusted_path_)));
+                 input, &had_trusted_path_)));
         } else {
           goto handle_unusual;
         }
@@ -618,11 +900,26 @@ bool RootStoreStatus::MergePartialFromCodedStream(
         break;
       }
 
-      // repeated bytes path = 8;
+      // repeated .zsearch.Path trusted_paths = 8;
       case 8: {
         if (tag == 66u) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
-                input, this->add_path()));
+          DO_(input->IncrementRecursionDepth());
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtualNoRecursionDepth(
+                input, add_trusted_paths()));
+        } else {
+          goto handle_unusual;
+        }
+        input->UnsafeDecrementRecursionDepth();
+        break;
+      }
+
+      // bool in_revocation_set = 9;
+      case 9: {
+        if (tag == 72u) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &in_revocation_set_)));
         } else {
           goto handle_unusual;
         }
@@ -663,14 +960,14 @@ void RootStoreStatus::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteBool(2, this->was_valid(), output);
   }
 
-  // bool trusted_path = 3;
-  if (this->trusted_path() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteBool(3, this->trusted_path(), output);
+  // bool has_trusted_path = 3;
+  if (this->has_trusted_path() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(3, this->has_trusted_path(), output);
   }
 
-  // bool was_trusted_path = 4;
-  if (this->was_trusted_path() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteBool(4, this->was_trusted_path(), output);
+  // bool had_trusted_path = 4;
+  if (this->had_trusted_path() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(4, this->had_trusted_path(), output);
   }
 
   // bool blacklisted = 5;
@@ -689,10 +986,15 @@ void RootStoreStatus::SerializeWithCachedSizes(
       7, this->type(), output);
   }
 
-  // repeated bytes path = 8;
-  for (int i = 0; i < this->path_size(); i++) {
-    ::google::protobuf::internal::WireFormatLite::WriteBytes(
-      8, this->path(i), output);
+  // repeated .zsearch.Path trusted_paths = 8;
+  for (unsigned int i = 0, n = this->trusted_paths_size(); i < n; i++) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      8, this->trusted_paths(i), output);
+  }
+
+  // bool in_revocation_set = 9;
+  if (this->in_revocation_set() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(9, this->in_revocation_set(), output);
   }
 
   // @@protoc_insertion_point(serialize_end:zsearch.RootStoreStatus)
@@ -712,14 +1014,14 @@ void RootStoreStatus::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(2, this->was_valid(), target);
   }
 
-  // bool trusted_path = 3;
-  if (this->trusted_path() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(3, this->trusted_path(), target);
+  // bool has_trusted_path = 3;
+  if (this->has_trusted_path() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(3, this->has_trusted_path(), target);
   }
 
-  // bool was_trusted_path = 4;
-  if (this->was_trusted_path() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(4, this->was_trusted_path(), target);
+  // bool had_trusted_path = 4;
+  if (this->had_trusted_path() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(4, this->had_trusted_path(), target);
   }
 
   // bool blacklisted = 5;
@@ -738,10 +1040,16 @@ void RootStoreStatus::SerializeWithCachedSizes(
       7, this->type(), target);
   }
 
-  // repeated bytes path = 8;
-  for (int i = 0; i < this->path_size(); i++) {
+  // repeated .zsearch.Path trusted_paths = 8;
+  for (unsigned int i = 0, n = this->trusted_paths_size(); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
-      WriteBytesToArray(8, this->path(i), target);
+      InternalWriteMessageNoVirtualToArray(
+        8, this->trusted_paths(i), false, target);
+  }
+
+  // bool in_revocation_set = 9;
+  if (this->in_revocation_set() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(9, this->in_revocation_set(), target);
   }
 
   // @@protoc_insertion_point(serialize_to_array_end:zsearch.RootStoreStatus)
@@ -752,12 +1060,15 @@ size_t RootStoreStatus::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:zsearch.RootStoreStatus)
   size_t total_size = 0;
 
-  // repeated bytes path = 8;
-  total_size += 1 *
-      ::google::protobuf::internal::FromIntSize(this->path_size());
-  for (int i = 0; i < this->path_size(); i++) {
-    total_size += ::google::protobuf::internal::WireFormatLite::BytesSize(
-      this->path(i));
+  // repeated .zsearch.Path trusted_paths = 8;
+  {
+    unsigned int count = this->trusted_paths_size();
+    total_size += 1UL * count;
+    for (unsigned int i = 0; i < count; i++) {
+      total_size +=
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->trusted_paths(i));
+    }
   }
 
   // bool valid = 1;
@@ -770,13 +1081,13 @@ size_t RootStoreStatus::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
-  // bool trusted_path = 3;
-  if (this->trusted_path() != 0) {
+  // bool has_trusted_path = 3;
+  if (this->has_trusted_path() != 0) {
     total_size += 1 + 1;
   }
 
-  // bool was_trusted_path = 4;
-  if (this->was_trusted_path() != 0) {
+  // bool had_trusted_path = 4;
+  if (this->had_trusted_path() != 0) {
     total_size += 1 + 1;
   }
 
@@ -787,6 +1098,11 @@ size_t RootStoreStatus::ByteSizeLong() const {
 
   // bool whitelisted = 6;
   if (this->whitelisted() != 0) {
+    total_size += 1 + 1;
+  }
+
+  // bool in_revocation_set = 9;
+  if (this->in_revocation_set() != 0) {
     total_size += 1 + 1;
   }
 
@@ -822,24 +1138,27 @@ void RootStoreStatus::MergeFrom(const RootStoreStatus& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:zsearch.RootStoreStatus)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  path_.MergeFrom(from.path_);
+  trusted_paths_.MergeFrom(from.trusted_paths_);
   if (from.valid() != 0) {
     set_valid(from.valid());
   }
   if (from.was_valid() != 0) {
     set_was_valid(from.was_valid());
   }
-  if (from.trusted_path() != 0) {
-    set_trusted_path(from.trusted_path());
+  if (from.has_trusted_path() != 0) {
+    set_has_trusted_path(from.has_trusted_path());
   }
-  if (from.was_trusted_path() != 0) {
-    set_was_trusted_path(from.was_trusted_path());
+  if (from.had_trusted_path() != 0) {
+    set_had_trusted_path(from.had_trusted_path());
   }
   if (from.blacklisted() != 0) {
     set_blacklisted(from.blacklisted());
   }
   if (from.whitelisted() != 0) {
     set_whitelisted(from.whitelisted());
+  }
+  if (from.in_revocation_set() != 0) {
+    set_in_revocation_set(from.in_revocation_set());
   }
   if (from.type() != 0) {
     set_type(from.type());
@@ -869,20 +1188,21 @@ void RootStoreStatus::Swap(RootStoreStatus* other) {
   InternalSwap(other);
 }
 void RootStoreStatus::InternalSwap(RootStoreStatus* other) {
-  path_.UnsafeArenaSwap(&other->path_);
+  trusted_paths_.UnsafeArenaSwap(&other->trusted_paths_);
   std::swap(valid_, other->valid_);
   std::swap(was_valid_, other->was_valid_);
-  std::swap(trusted_path_, other->trusted_path_);
-  std::swap(was_trusted_path_, other->was_trusted_path_);
+  std::swap(has_trusted_path_, other->has_trusted_path_);
+  std::swap(had_trusted_path_, other->had_trusted_path_);
   std::swap(blacklisted_, other->blacklisted_);
   std::swap(whitelisted_, other->whitelisted_);
+  std::swap(in_revocation_set_, other->in_revocation_set_);
   std::swap(type_, other->type_);
   std::swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata RootStoreStatus::GetMetadata() const {
   protobuf_certificate_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_certificate_2eproto::file_level_metadata[0];
+  return protobuf_certificate_2eproto::file_level_metadata[1];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -916,32 +1236,32 @@ void RootStoreStatus::set_was_valid(bool value) {
   // @@protoc_insertion_point(field_set:zsearch.RootStoreStatus.was_valid)
 }
 
-// bool trusted_path = 3;
-void RootStoreStatus::clear_trusted_path() {
-  trusted_path_ = false;
+// bool has_trusted_path = 3;
+void RootStoreStatus::clear_has_trusted_path() {
+  has_trusted_path_ = false;
 }
-bool RootStoreStatus::trusted_path() const {
-  // @@protoc_insertion_point(field_get:zsearch.RootStoreStatus.trusted_path)
-  return trusted_path_;
+bool RootStoreStatus::has_trusted_path() const {
+  // @@protoc_insertion_point(field_get:zsearch.RootStoreStatus.has_trusted_path)
+  return has_trusted_path_;
 }
-void RootStoreStatus::set_trusted_path(bool value) {
+void RootStoreStatus::set_has_trusted_path(bool value) {
   
-  trusted_path_ = value;
-  // @@protoc_insertion_point(field_set:zsearch.RootStoreStatus.trusted_path)
+  has_trusted_path_ = value;
+  // @@protoc_insertion_point(field_set:zsearch.RootStoreStatus.has_trusted_path)
 }
 
-// bool was_trusted_path = 4;
-void RootStoreStatus::clear_was_trusted_path() {
-  was_trusted_path_ = false;
+// bool had_trusted_path = 4;
+void RootStoreStatus::clear_had_trusted_path() {
+  had_trusted_path_ = false;
 }
-bool RootStoreStatus::was_trusted_path() const {
-  // @@protoc_insertion_point(field_get:zsearch.RootStoreStatus.was_trusted_path)
-  return was_trusted_path_;
+bool RootStoreStatus::had_trusted_path() const {
+  // @@protoc_insertion_point(field_get:zsearch.RootStoreStatus.had_trusted_path)
+  return had_trusted_path_;
 }
-void RootStoreStatus::set_was_trusted_path(bool value) {
+void RootStoreStatus::set_had_trusted_path(bool value) {
   
-  was_trusted_path_ = value;
-  // @@protoc_insertion_point(field_set:zsearch.RootStoreStatus.was_trusted_path)
+  had_trusted_path_ = value;
+  // @@protoc_insertion_point(field_set:zsearch.RootStoreStatus.had_trusted_path)
 }
 
 // bool blacklisted = 5;
@@ -986,59 +1306,48 @@ void RootStoreStatus::set_type(::zsearch::CertificateType value) {
   // @@protoc_insertion_point(field_set:zsearch.RootStoreStatus.type)
 }
 
-// repeated bytes path = 8;
-int RootStoreStatus::path_size() const {
-  return path_.size();
+// repeated .zsearch.Path trusted_paths = 8;
+int RootStoreStatus::trusted_paths_size() const {
+  return trusted_paths_.size();
 }
-void RootStoreStatus::clear_path() {
-  path_.Clear();
+void RootStoreStatus::clear_trusted_paths() {
+  trusted_paths_.Clear();
 }
-const ::std::string& RootStoreStatus::path(int index) const {
-  // @@protoc_insertion_point(field_get:zsearch.RootStoreStatus.path)
-  return path_.Get(index);
+const ::zsearch::Path& RootStoreStatus::trusted_paths(int index) const {
+  // @@protoc_insertion_point(field_get:zsearch.RootStoreStatus.trusted_paths)
+  return trusted_paths_.Get(index);
 }
-::std::string* RootStoreStatus::mutable_path(int index) {
-  // @@protoc_insertion_point(field_mutable:zsearch.RootStoreStatus.path)
-  return path_.Mutable(index);
+::zsearch::Path* RootStoreStatus::mutable_trusted_paths(int index) {
+  // @@protoc_insertion_point(field_mutable:zsearch.RootStoreStatus.trusted_paths)
+  return trusted_paths_.Mutable(index);
 }
-void RootStoreStatus::set_path(int index, const ::std::string& value) {
-  // @@protoc_insertion_point(field_set:zsearch.RootStoreStatus.path)
-  path_.Mutable(index)->assign(value);
+::zsearch::Path* RootStoreStatus::add_trusted_paths() {
+  // @@protoc_insertion_point(field_add:zsearch.RootStoreStatus.trusted_paths)
+  return trusted_paths_.Add();
 }
-void RootStoreStatus::set_path(int index, const char* value) {
-  path_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:zsearch.RootStoreStatus.path)
+::google::protobuf::RepeatedPtrField< ::zsearch::Path >*
+RootStoreStatus::mutable_trusted_paths() {
+  // @@protoc_insertion_point(field_mutable_list:zsearch.RootStoreStatus.trusted_paths)
+  return &trusted_paths_;
 }
-void RootStoreStatus::set_path(int index, const void* value, size_t size) {
-  path_.Mutable(index)->assign(
-    reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:zsearch.RootStoreStatus.path)
+const ::google::protobuf::RepeatedPtrField< ::zsearch::Path >&
+RootStoreStatus::trusted_paths() const {
+  // @@protoc_insertion_point(field_list:zsearch.RootStoreStatus.trusted_paths)
+  return trusted_paths_;
 }
-::std::string* RootStoreStatus::add_path() {
-  // @@protoc_insertion_point(field_add_mutable:zsearch.RootStoreStatus.path)
-  return path_.Add();
+
+// bool in_revocation_set = 9;
+void RootStoreStatus::clear_in_revocation_set() {
+  in_revocation_set_ = false;
 }
-void RootStoreStatus::add_path(const ::std::string& value) {
-  path_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:zsearch.RootStoreStatus.path)
+bool RootStoreStatus::in_revocation_set() const {
+  // @@protoc_insertion_point(field_get:zsearch.RootStoreStatus.in_revocation_set)
+  return in_revocation_set_;
 }
-void RootStoreStatus::add_path(const char* value) {
-  path_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:zsearch.RootStoreStatus.path)
-}
-void RootStoreStatus::add_path(const void* value, size_t size) {
-  path_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:zsearch.RootStoreStatus.path)
-}
-const ::google::protobuf::RepeatedPtrField< ::std::string>&
-RootStoreStatus::path() const {
-  // @@protoc_insertion_point(field_list:zsearch.RootStoreStatus.path)
-  return path_;
-}
-::google::protobuf::RepeatedPtrField< ::std::string>*
-RootStoreStatus::mutable_path() {
-  // @@protoc_insertion_point(field_mutable_list:zsearch.RootStoreStatus.path)
-  return &path_;
+void RootStoreStatus::set_in_revocation_set(bool value) {
+  
+  in_revocation_set_ = value;
+  // @@protoc_insertion_point(field_set:zsearch.RootStoreStatus.in_revocation_set)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -1139,7 +1448,7 @@ void CertificateValidation::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* CertificateValidation::descriptor() {
   protobuf_certificate_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_certificate_2eproto::file_level_metadata[1].descriptor;
+  return protobuf_certificate_2eproto::file_level_metadata[2].descriptor;
 }
 
 const CertificateValidation& CertificateValidation::default_instance() {
@@ -1498,7 +1807,7 @@ void CertificateValidation::InternalSwap(CertificateValidation* other) {
 
 ::google::protobuf::Metadata CertificateValidation::GetMetadata() const {
   protobuf_certificate_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_certificate_2eproto::file_level_metadata[1];
+  return protobuf_certificate_2eproto::file_level_metadata[2];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -1845,7 +2154,7 @@ void MozillaSalesForceStatus::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* MozillaSalesForceStatus::descriptor() {
   protobuf_certificate_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_certificate_2eproto::file_level_metadata[2].descriptor;
+  return protobuf_certificate_2eproto::file_level_metadata[3].descriptor;
 }
 
 const MozillaSalesForceStatus& MozillaSalesForceStatus::default_instance() {
@@ -2492,7 +2801,7 @@ void MozillaSalesForceStatus::InternalSwap(MozillaSalesForceStatus* other) {
 
 ::google::protobuf::Metadata MozillaSalesForceStatus::GetMetadata() const {
   protobuf_certificate_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_certificate_2eproto::file_level_metadata[2];
+  return protobuf_certificate_2eproto::file_level_metadata[3];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -3019,7 +3328,7 @@ void CertificateRevocation::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* CertificateRevocation::descriptor() {
   protobuf_certificate_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_certificate_2eproto::file_level_metadata[3].descriptor;
+  return protobuf_certificate_2eproto::file_level_metadata[4].descriptor;
 }
 
 const CertificateRevocation& CertificateRevocation::default_instance() {
@@ -3214,7 +3523,7 @@ void CertificateRevocation::InternalSwap(CertificateRevocation* other) {
 
 ::google::protobuf::Metadata CertificateRevocation::GetMetadata() const {
   protobuf_certificate_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_certificate_2eproto::file_level_metadata[3];
+  return protobuf_certificate_2eproto::file_level_metadata[4];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -3300,7 +3609,7 @@ void CertificateAudit::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* CertificateAudit::descriptor() {
   protobuf_certificate_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_certificate_2eproto::file_level_metadata[4].descriptor;
+  return protobuf_certificate_2eproto::file_level_metadata[5].descriptor;
 }
 
 const CertificateAudit& CertificateAudit::default_instance() {
@@ -3464,7 +3773,7 @@ void CertificateAudit::InternalSwap(CertificateAudit* other) {
 
 ::google::protobuf::Metadata CertificateAudit::GetMetadata() const {
   protobuf_certificate_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_certificate_2eproto::file_level_metadata[4];
+  return protobuf_certificate_2eproto::file_level_metadata[5];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -3535,6 +3844,7 @@ const int Certificate::kAuditFieldNumber;
 const int Certificate::kIsPrecertFieldNumber;
 const int Certificate::kNotValidAfterFieldNumber;
 const int Certificate::kNotValidBeforeFieldNumber;
+const int Certificate::kExpiredFieldNumber;
 const int Certificate::kInNssFieldNumber;
 const int Certificate::kInMicrosoftFieldNumber;
 const int Certificate::kInAppleFieldNumber;
@@ -3679,7 +3989,7 @@ void Certificate::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* Certificate::descriptor() {
   protobuf_certificate_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_certificate_2eproto::file_level_metadata[5].descriptor;
+  return protobuf_certificate_2eproto::file_level_metadata[6].descriptor;
 }
 
 const Certificate& Certificate::default_instance() {
@@ -4285,6 +4595,19 @@ bool Certificate::MergePartialFromCodedStream(
         break;
       }
 
+      // bool expired = 48;
+      case 48: {
+        if (tag == 384u) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &expired_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
       default: {
       handle_unusual:
         if (tag == 0 ||
@@ -4547,6 +4870,11 @@ void Certificate::SerializeWithCachedSizes(
       47, this->parse_error(), output);
   }
 
+  // bool expired = 48;
+  if (this->expired() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(48, this->expired(), output);
+  }
+
   // @@protoc_insertion_point(serialize_end:zsearch.Certificate)
 }
 
@@ -4803,6 +5131,11 @@ void Certificate::SerializeWithCachedSizes(
         47, this->parse_error(), target);
   }
 
+  // bool expired = 48;
+  if (this->expired() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(48, this->expired(), target);
+  }
+
   // @@protoc_insertion_point(serialize_to_array_end:zsearch.Certificate)
   return target;
 }
@@ -4945,9 +5278,9 @@ size_t Certificate::ByteSizeLong() const {
     total_size += 2 + 1;
   }
 
-  // bool in_nss = 6;
-  if (this->in_nss() != 0) {
-    total_size += 1 + 1;
+  // bool expired = 48;
+  if (this->expired() != 0) {
+    total_size += 2 + 1;
   }
 
   // uint32 not_valid_after = 41;
@@ -4964,11 +5297,9 @@ size_t Certificate::ByteSizeLong() const {
         this->not_valid_before());
   }
 
-  // uint32 validation_timestamp = 10;
-  if (this->validation_timestamp() != 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::UInt32Size(
-        this->validation_timestamp());
+  // bool in_nss = 6;
+  if (this->in_nss() != 0) {
+    total_size += 1 + 1;
   }
 
   // bool in_microsoft = 7 [deprecated = true];
@@ -4984,6 +5315,13 @@ size_t Certificate::ByteSizeLong() const {
   // bool valid_nss = 11 [deprecated = true];
   if (this->valid_nss() != 0) {
     total_size += 1 + 1;
+  }
+
+  // uint32 validation_timestamp = 10;
+  if (this->validation_timestamp() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::UInt32Size(
+        this->validation_timestamp());
   }
 
   // bool valid_microsoft = 12 [deprecated = true];
@@ -5153,8 +5491,8 @@ void Certificate::MergeFrom(const Certificate& from) {
   if (from.is_precert() != 0) {
     set_is_precert(from.is_precert());
   }
-  if (from.in_nss() != 0) {
-    set_in_nss(from.in_nss());
+  if (from.expired() != 0) {
+    set_expired(from.expired());
   }
   if (from.not_valid_after() != 0) {
     set_not_valid_after(from.not_valid_after());
@@ -5162,8 +5500,8 @@ void Certificate::MergeFrom(const Certificate& from) {
   if (from.not_valid_before() != 0) {
     set_not_valid_before(from.not_valid_before());
   }
-  if (from.validation_timestamp() != 0) {
-    set_validation_timestamp(from.validation_timestamp());
+  if (from.in_nss() != 0) {
+    set_in_nss(from.in_nss());
   }
   if (from.in_microsoft() != 0) {
     set_in_microsoft(from.in_microsoft());
@@ -5173,6 +5511,9 @@ void Certificate::MergeFrom(const Certificate& from) {
   }
   if (from.valid_nss() != 0) {
     set_valid_nss(from.valid_nss());
+  }
+  if (from.validation_timestamp() != 0) {
+    set_validation_timestamp(from.validation_timestamp());
   }
   if (from.valid_microsoft() != 0) {
     set_valid_microsoft(from.valid_microsoft());
@@ -5267,13 +5608,14 @@ void Certificate::InternalSwap(Certificate* other) {
   std::swap(seen_in_scan_, other->seen_in_scan_);
   std::swap(post_processed_, other->post_processed_);
   std::swap(is_precert_, other->is_precert_);
-  std::swap(in_nss_, other->in_nss_);
+  std::swap(expired_, other->expired_);
   std::swap(not_valid_after_, other->not_valid_after_);
   std::swap(not_valid_before_, other->not_valid_before_);
-  std::swap(validation_timestamp_, other->validation_timestamp_);
+  std::swap(in_nss_, other->in_nss_);
   std::swap(in_microsoft_, other->in_microsoft_);
   std::swap(in_apple_, other->in_apple_);
   std::swap(valid_nss_, other->valid_nss_);
+  std::swap(validation_timestamp_, other->validation_timestamp_);
   std::swap(valid_microsoft_, other->valid_microsoft_);
   std::swap(valid_apple_, other->valid_apple_);
   std::swap(was_valid_nss_, other->was_valid_nss_);
@@ -5295,7 +5637,7 @@ void Certificate::InternalSwap(Certificate* other) {
 
 ::google::protobuf::Metadata Certificate::GetMetadata() const {
   protobuf_certificate_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_certificate_2eproto::file_level_metadata[5];
+  return protobuf_certificate_2eproto::file_level_metadata[6];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -5990,6 +6332,20 @@ void Certificate::set_not_valid_before(::google::protobuf::uint32 value) {
   
   not_valid_before_ = value;
   // @@protoc_insertion_point(field_set:zsearch.Certificate.not_valid_before)
+}
+
+// bool expired = 48;
+void Certificate::clear_expired() {
+  expired_ = false;
+}
+bool Certificate::expired() const {
+  // @@protoc_insertion_point(field_get:zsearch.Certificate.expired)
+  return expired_;
+}
+void Certificate::set_expired(bool value) {
+  
+  expired_ = value;
+  // @@protoc_insertion_point(field_set:zsearch.Certificate.expired)
 }
 
 // bool in_nss = 6;
