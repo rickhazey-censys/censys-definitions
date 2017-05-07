@@ -63,6 +63,9 @@ message RootStoreStatus {
     // True if the certificate is valid now or was ever valid in the past.
     bool was_valid = 2;
 
+    // False if NotBefore < Now < NotAfter
+    bool expired;
+
     // True if there exists a path from the certificate to the root store.
     bool has_trusted_path = 3;
 
@@ -86,16 +89,9 @@ message RootStoreStatus {
     // `has_trusted_paths = true`.
     repeated Path trusted_paths = 8;
 
-    // True if the certificate is revoked in any way.
-    bool revoked = 9;
-
-    // True if the certificate is in the revocation set for this. Only valid if
-    // `revoked = true`.
-    bool in_revocation_set = 10;
-
-    // The revocation reason listed in the CRL.
-    CertificateRevocationReason reason = 11;
-}
+    // True if the certificate is in the revocation set (e.g. OneCRL)
+    // associated with this root store.
+    bool in_revocation_set = 10; }
 
 message CertificateValidation {
     RootStoreStatus nss = 1;
