@@ -90,6 +90,8 @@ message RootStoreStatus {
     // associated with this root store.
     bool in_revocation_set = 9;
 
+    // SHA256 fingerprints of immediate parents.
+    repeated bytes parents = 10;
 }
 
 message CertificateValidation {

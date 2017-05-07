@@ -378,6 +378,22 @@ class RootStoreStatus : public ::google::protobuf::Message /* @@protoc_insertion
   const ::google::protobuf::RepeatedPtrField< ::zsearch::Path >&
       trusted_paths() const;
 
+  // repeated bytes parents = 10;
+  int parents_size() const;
+  void clear_parents();
+  static const int kParentsFieldNumber = 10;
+  const ::std::string& parents(int index) const;
+  ::std::string* mutable_parents(int index);
+  void set_parents(int index, const ::std::string& value);
+  void set_parents(int index, const char* value);
+  void set_parents(int index, const void* value, size_t size);
+  ::std::string* add_parents();
+  void add_parents(const ::std::string& value);
+  void add_parents(const char* value);
+  void add_parents(const void* value, size_t size);
+  const ::google::protobuf::RepeatedPtrField< ::std::string>& parents() const;
+  ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_parents();
+
   // bool valid = 1;
   void clear_valid();
   static const int kValidFieldNumber = 1;
@@ -431,6 +447,7 @@ class RootStoreStatus : public ::google::protobuf::Message /* @@protoc_insertion
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::RepeatedPtrField< ::zsearch::Path > trusted_paths_;
+  ::google::protobuf::RepeatedPtrField< ::std::string> parents_;
   bool valid_;
   bool was_valid_;
   bool has_trusted_path_;
@@ -1647,6 +1664,61 @@ inline void RootStoreStatus::set_in_revocation_set(bool value) {
   
   in_revocation_set_ = value;
   // @@protoc_insertion_point(field_set:zsearch.RootStoreStatus.in_revocation_set)
+}
+
+// repeated bytes parents = 10;
+inline int RootStoreStatus::parents_size() const {
+  return parents_.size();
+}
+inline void RootStoreStatus::clear_parents() {
+  parents_.Clear();
+}
+inline const ::std::string& RootStoreStatus::parents(int index) const {
+  // @@protoc_insertion_point(field_get:zsearch.RootStoreStatus.parents)
+  return parents_.Get(index);
+}
+inline ::std::string* RootStoreStatus::mutable_parents(int index) {
+  // @@protoc_insertion_point(field_mutable:zsearch.RootStoreStatus.parents)
+  return parents_.Mutable(index);
+}
+inline void RootStoreStatus::set_parents(int index, const ::std::string& value) {
+  // @@protoc_insertion_point(field_set:zsearch.RootStoreStatus.parents)
+  parents_.Mutable(index)->assign(value);
+}
+inline void RootStoreStatus::set_parents(int index, const char* value) {
+  parents_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:zsearch.RootStoreStatus.parents)
+}
+inline void RootStoreStatus::set_parents(int index, const void* value, size_t size) {
+  parents_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_set_pointer:zsearch.RootStoreStatus.parents)
+}
+inline ::std::string* RootStoreStatus::add_parents() {
+  // @@protoc_insertion_point(field_add_mutable:zsearch.RootStoreStatus.parents)
+  return parents_.Add();
+}
+inline void RootStoreStatus::add_parents(const ::std::string& value) {
+  parents_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:zsearch.RootStoreStatus.parents)
+}
+inline void RootStoreStatus::add_parents(const char* value) {
+  parents_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:zsearch.RootStoreStatus.parents)
+}
+inline void RootStoreStatus::add_parents(const void* value, size_t size) {
+  parents_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:zsearch.RootStoreStatus.parents)
+}
+inline const ::google::protobuf::RepeatedPtrField< ::std::string>&
+RootStoreStatus::parents() const {
+  // @@protoc_insertion_point(field_list:zsearch.RootStoreStatus.parents)
+  return parents_;
+}
+inline ::google::protobuf::RepeatedPtrField< ::std::string>*
+RootStoreStatus::mutable_parents() {
+  // @@protoc_insertion_point(field_mutable_list:zsearch.RootStoreStatus.parents)
+  return &parents_;
 }
 
 // -------------------------------------------------------------------

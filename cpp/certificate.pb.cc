@@ -62,6 +62,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RootStoreStatus, type_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RootStoreStatus, trusted_paths_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RootStoreStatus, in_revocation_set_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RootStoreStatus, parents_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CertificateValidation, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -152,11 +153,11 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
 static const ::google::protobuf::internal::MigrationSchema schemas[] = {
   { 0, -1, sizeof(Path)},
   { 5, -1, sizeof(RootStoreStatus)},
-  { 18, -1, sizeof(CertificateValidation)},
-  { 28, -1, sizeof(MozillaSalesForceStatus)},
-  { 44, -1, sizeof(CertificateRevocation)},
-  { 50, -1, sizeof(CertificateAudit)},
-  { 55, -1, sizeof(Certificate)},
+  { 19, -1, sizeof(CertificateValidation)},
+  { 29, -1, sizeof(MozillaSalesForceStatus)},
+  { 45, -1, sizeof(CertificateRevocation)},
+  { 51, -1, sizeof(CertificateAudit)},
+  { 56, -1, sizeof(Certificate)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -260,101 +261,101 @@ void AddDescriptorsImpl() {
   static const char descriptor[] = {
       "\n\021certificate.proto\022\007zsearch\032\014common.pro"
       "to\032\013zlint.proto\032\010ct.proto\"\030\n\004Path\022\020\n\010sha"
-      "256fp\030\001 \003(\014\"\372\001\n\017RootStoreStatus\022\r\n\005valid"
+      "256fp\030\001 \003(\014\"\213\002\n\017RootStoreStatus\022\r\n\005valid"
       "\030\001 \001(\010\022\021\n\twas_valid\030\002 \001(\010\022\030\n\020has_trusted"
       "_path\030\003 \001(\010\022\030\n\020had_trusted_path\030\004 \001(\010\022\023\n"
       "\013blacklisted\030\005 \001(\010\022\023\n\013whitelisted\030\006 \001(\010\022"
       "&\n\004type\030\007 \001(\0162\030.zsearch.CertificateType\022"
       "$\n\rtrusted_paths\030\010 \003(\0132\r.zsearch.Path\022\031\n"
-      "\021in_revocation_set\030\t \001(\010\"\234\002\n\025Certificate"
-      "Validation\022%\n\003nss\030\001 \001(\0132\030.zsearch.RootSt"
-      "oreStatus\022+\n\tmicrosoft\030\002 \001(\0132\030.zsearch.R"
-      "ootStoreStatus\022\'\n\005apple\030\003 \001(\0132\030.zsearch."
-      "RootStoreStatus\022&\n\004java\030\004 \001(\0132\030.zsearch."
-      "RootStoreStatus\022)\n\007android\030\005 \001(\0132\030.zsear"
-      "ch.RootStoreStatus\0223\n\021google_ct_primary\030"
-      "\n \001(\0132\030.zsearch.RootStoreStatus\"\272\002\n\027Mozi"
-      "llaSalesForceStatus\022\022\n\ncurrent_in\030\001 \001(\010\022"
-      "\016\n\006was_in\030\002 \001(\010\022\022\n\nowner_name\030\003 \001(\t\022\023\n\013p"
-      "arent_name\030\004 \001(\t\022\030\n\020certificate_name\030\005 \001"
-      "(\t\022\032\n\022certificate_policy\030\006 \001(\t\022(\n certif"
-      "ication_practice_statement\030\007 \001(\t\022\031\n\021cp_s"
-      "ame_as_parent\030\010 \001(\010\022\034\n\024audit_same_as_par"
-      "ent\030\t \001(\010\022\026\n\016standard_audit\030\n \001(\t\022\020\n\010br_"
-      "audit\030\013 \001(\t\022\017\n\007auditor\030\014 \001(\t\"^\n\025Certific"
-      "ateRevocation\022\017\n\007revoked\030\001 \001(\010\0224\n\006reason"
-      "\030\002 \001(\0162$.zsearch.CertificateRevocationRe"
-      "ason\"E\n\020CertificateAudit\0221\n\007mozilla\030\001 \001("
-      "\0132 .zsearch.MozillaSalesForceStatus\"\377\t\n\013"
-      "Certificate\022\016\n\006sha1fp\030\001 \001(\014\022\020\n\010sha256fp\030"
-      "\002 \001(\014\022\013\n\003raw\030\003 \001(\014\022\016\n\006parsed\030\004 \001(\t\0225\n\014pa"
-      "rse_status\030, \001(\0162\037.zsearch.CertificatePa"
-      "rseStatus\022\025\n\rparse_version\030\' \001(\r\022\023\n\013pars"
-      "e_error\030/ \001(\t\022\017\n\007parents\030\005 \003(\014\022\027\n\017presen"
-      "ted_chain\030- \003(\014\022*\n\006source\030\034 \001(\0162\032.zsearc"
-      "h.CertificateSource\022\024\n\014seen_in_scan\030\035 \001("
-      "\010\022\026\n\016post_processed\030\032 \001(\010\022\036\n\026post_proces"
-      "s_timestamp\030% \001(\r\0222\n\nvalidation\030# \001(\0132\036."
-      "zsearch.CertificateValidation\022\035\n\002ct\030\036 \001("
-      "\0132\021.zsearch.CTStatus\022\035\n\005zlint\030& \001(\0132\016.zs"
-      "earch.ZLint\0222\n\nrevocation\030+ \001(\0132\036.zsearc"
-      "h.CertificateRevocation\022(\n\005audit\030. \001(\0132\031"
-      ".zsearch.CertificateAudit\022\022\n\nis_precert\030"
-      "  \001(\010\022\027\n\017not_valid_after\030) \001(\r\022\030\n\020not_va"
-      "lid_before\030* \001(\r\022\017\n\007expired\0300 \001(\010\022\016\n\006in_"
-      "nss\030\006 \001(\010\022\030\n\014in_microsoft\030\007 \001(\010B\002\030\001\022\024\n\010i"
-      "n_apple\030\010 \001(\010B\002\030\001\022\034\n\024validation_timestam"
-      "p\030\n \001(\r\022\025\n\tvalid_nss\030\013 \001(\010B\002\030\001\022\033\n\017valid_"
-      "microsoft\030\014 \001(\010B\002\030\001\022\027\n\013valid_apple\030\r \001(\010"
-      "B\002\030\001\022\025\n\rwas_valid_nss\030\016 \001(\010\022\037\n\023was_valid"
-      "_microsoft\030\017 \001(\010B\002\030\001\022\033\n\017was_valid_apple\030"
-      "\020 \001(\010B\002\030\001\022\026\n\nwas_in_nss\030\021 \001(\010B\002\030\001\022\034\n\020was"
-      "_in_microsoft\030\022 \001(\010B\002\030\001\022\030\n\014was_in_apple\030"
-      "\023 \001(\010B\002\030\001\022\031\n\021current_valid_nss\030\024 \001(\010\022#\n\027"
-      "current_valid_microsoft\030\025 \001(\010B\002\030\001\022\037\n\023cur"
-      "rent_valid_apple\030\026 \001(\010B\002\030\001\022\026\n\016current_in"
-      "_nss\030\027 \001(\010\022 \n\024current_in_microsoft\030\030 \001(\010"
-      "B\002\030\001\022\034\n\020current_in_apple\030\031 \001(\010B\002\030\001\0227\n\tns"
-      "s_audit\030\037 \001(\0132 .zsearch.MozillaSalesForc"
-      "eStatusB\002\030\001\022\037\n\023should_post_process\030\033 \001(\010"
-      "B\002\030\001\022\037\n\023do_not_post_process\030$ \001(\010B\002\030\001*\247\001"
-      "\n\017CertificateType\022\035\n\031CERTIFICATE_TYPE_RE"
-      "SERVED\020\000\022\034\n\030CERTIFICATE_TYPE_UNKNOWN\020\001\022\031"
-      "\n\025CERTIFICATE_TYPE_LEAF\020\002\022!\n\035CERTIFICATE"
-      "_TYPE_INTERMEDIATE\020\003\022\031\n\025CERTIFICATE_TYPE"
-      "_ROOT\020\004*\267\002\n\021CertificateSource\022\037\n\033CERTIFI"
-      "CATE_SOURCE_RESERVED\020\000\022\036\n\032CERTIFICATE_SO"
-      "URCE_UNKNOWN\020\001\022\033\n\027CERTIFICATE_SOURCE_SCA"
-      "N\020\002\022\031\n\025CERTIFICATE_SOURCE_CT\020\003\022)\n%CERTIF"
-      "ICATE_SOURCE_MOZILLA_SALESFORCE\020\004\022\037\n\033CER"
-      "TIFICATE_SOURCE_RESEARCH\020\005\022\035\n\031CERTIFICAT"
-      "E_SOURCE_RAPID7\020\006\022\035\n\031CERTIFICATE_SOURCE_"
-      "HUBBLE\020\007\022\037\n\033CERTIFICATE_SOURCE_CT_CHAIN\020"
-      "\010*\327\001\n\026CertificateParseStatus\022%\n!CERTIFIC"
-      "ATE_PARSE_STATUS_RESERVED\020\000\022$\n CERTIFICA"
-      "TE_PARSE_STATUS_UNKNOWN\020\001\022$\n CERTIFICATE"
-      "_PARSE_STATUS_SUCCESS\020\002\022!\n\035CERTIFICATE_P"
-      "ARSE_STATUS_FAIL\020\003\022\'\n#CERTIFICATE_PARSE_"
-      "STATUS_NOT_PARSED\020\004*\364\004\n\033CertificateRevoc"
-      "ationReason\022*\n&CERTIFICATE_REVOCATION_RE"
-      "ASON_RESERVED\020\000\022)\n%CERTIFICATE_REVOCATIO"
-      "N_REASON_UNKNOWN\020\001\022-\n)CERTIFICATE_REVOCA"
-      "TION_REASON_UNSPECIFIED\020\002\0220\n,CERTIFICATE"
-      "_REVOCATION_REASON_KEY_COMPROMISE\020\003\022/\n+C"
-      "ERTIFICATE_REVOCATION_REASON_CA_COMPROMI"
-      "SE\020\004\0225\n1CERTIFICATE_REVOCATION_REASON_AF"
-      "FILIATION_CHANGED\020\005\022,\n(CERTIFICATE_REVOC"
-      "ATION_REASON_SUPERSEDED\020\006\0228\n4CERTIFICATE"
-      "_REVOCATION_REASON_CESSATION_OF_OPERATIO"
-      "N\020\007\0222\n.CERTIFICATE_REVOCATION_REASON_CER"
-      "TIFICATE_HOLD\020\010\0221\n-CERTIFICATE_REVOCATIO"
-      "N_REASON_REMOVE_FROM_CRL\020\t\0225\n1CERTIFICAT"
-      "E_REVOCATION_REASON_PRIVILEGE_WITHDRAWN\020"
-      "\n\022/\n+CERTIFICATE_REVOCATION_REASON_AA_CO"
-      "MPROMISE\020\013b\006proto3"
+      "\021in_revocation_set\030\t \001(\010\022\017\n\007parents\030\n \003("
+      "\014\"\234\002\n\025CertificateValidation\022%\n\003nss\030\001 \001(\013"
+      "2\030.zsearch.RootStoreStatus\022+\n\tmicrosoft\030"
+      "\002 \001(\0132\030.zsearch.RootStoreStatus\022\'\n\005apple"
+      "\030\003 \001(\0132\030.zsearch.RootStoreStatus\022&\n\004java"
+      "\030\004 \001(\0132\030.zsearch.RootStoreStatus\022)\n\007andr"
+      "oid\030\005 \001(\0132\030.zsearch.RootStoreStatus\0223\n\021g"
+      "oogle_ct_primary\030\n \001(\0132\030.zsearch.RootSto"
+      "reStatus\"\272\002\n\027MozillaSalesForceStatus\022\022\n\n"
+      "current_in\030\001 \001(\010\022\016\n\006was_in\030\002 \001(\010\022\022\n\nowne"
+      "r_name\030\003 \001(\t\022\023\n\013parent_name\030\004 \001(\t\022\030\n\020cer"
+      "tificate_name\030\005 \001(\t\022\032\n\022certificate_polic"
+      "y\030\006 \001(\t\022(\n certification_practice_statem"
+      "ent\030\007 \001(\t\022\031\n\021cp_same_as_parent\030\010 \001(\010\022\034\n\024"
+      "audit_same_as_parent\030\t \001(\010\022\026\n\016standard_a"
+      "udit\030\n \001(\t\022\020\n\010br_audit\030\013 \001(\t\022\017\n\007auditor\030"
+      "\014 \001(\t\"^\n\025CertificateRevocation\022\017\n\007revoke"
+      "d\030\001 \001(\010\0224\n\006reason\030\002 \001(\0162$.zsearch.Certif"
+      "icateRevocationReason\"E\n\020CertificateAudi"
+      "t\0221\n\007mozilla\030\001 \001(\0132 .zsearch.MozillaSale"
+      "sForceStatus\"\377\t\n\013Certificate\022\016\n\006sha1fp\030\001"
+      " \001(\014\022\020\n\010sha256fp\030\002 \001(\014\022\013\n\003raw\030\003 \001(\014\022\016\n\006p"
+      "arsed\030\004 \001(\t\0225\n\014parse_status\030, \001(\0162\037.zsea"
+      "rch.CertificateParseStatus\022\025\n\rparse_vers"
+      "ion\030\' \001(\r\022\023\n\013parse_error\030/ \001(\t\022\017\n\007parent"
+      "s\030\005 \003(\014\022\027\n\017presented_chain\030- \003(\014\022*\n\006sour"
+      "ce\030\034 \001(\0162\032.zsearch.CertificateSource\022\024\n\014"
+      "seen_in_scan\030\035 \001(\010\022\026\n\016post_processed\030\032 \001"
+      "(\010\022\036\n\026post_process_timestamp\030% \001(\r\0222\n\nva"
+      "lidation\030# \001(\0132\036.zsearch.CertificateVali"
+      "dation\022\035\n\002ct\030\036 \001(\0132\021.zsearch.CTStatus\022\035\n"
+      "\005zlint\030& \001(\0132\016.zsearch.ZLint\0222\n\nrevocati"
+      "on\030+ \001(\0132\036.zsearch.CertificateRevocation"
+      "\022(\n\005audit\030. \001(\0132\031.zsearch.CertificateAud"
+      "it\022\022\n\nis_precert\030  \001(\010\022\027\n\017not_valid_afte"
+      "r\030) \001(\r\022\030\n\020not_valid_before\030* \001(\r\022\017\n\007exp"
+      "ired\0300 \001(\010\022\016\n\006in_nss\030\006 \001(\010\022\030\n\014in_microso"
+      "ft\030\007 \001(\010B\002\030\001\022\024\n\010in_apple\030\010 \001(\010B\002\030\001\022\034\n\024va"
+      "lidation_timestamp\030\n \001(\r\022\025\n\tvalid_nss\030\013 "
+      "\001(\010B\002\030\001\022\033\n\017valid_microsoft\030\014 \001(\010B\002\030\001\022\027\n\013"
+      "valid_apple\030\r \001(\010B\002\030\001\022\025\n\rwas_valid_nss\030\016"
+      " \001(\010\022\037\n\023was_valid_microsoft\030\017 \001(\010B\002\030\001\022\033\n"
+      "\017was_valid_apple\030\020 \001(\010B\002\030\001\022\026\n\nwas_in_nss"
+      "\030\021 \001(\010B\002\030\001\022\034\n\020was_in_microsoft\030\022 \001(\010B\002\030\001"
+      "\022\030\n\014was_in_apple\030\023 \001(\010B\002\030\001\022\031\n\021current_va"
+      "lid_nss\030\024 \001(\010\022#\n\027current_valid_microsoft"
+      "\030\025 \001(\010B\002\030\001\022\037\n\023current_valid_apple\030\026 \001(\010B"
+      "\002\030\001\022\026\n\016current_in_nss\030\027 \001(\010\022 \n\024current_i"
+      "n_microsoft\030\030 \001(\010B\002\030\001\022\034\n\020current_in_appl"
+      "e\030\031 \001(\010B\002\030\001\0227\n\tnss_audit\030\037 \001(\0132 .zsearch"
+      ".MozillaSalesForceStatusB\002\030\001\022\037\n\023should_p"
+      "ost_process\030\033 \001(\010B\002\030\001\022\037\n\023do_not_post_pro"
+      "cess\030$ \001(\010B\002\030\001*\247\001\n\017CertificateType\022\035\n\031CE"
+      "RTIFICATE_TYPE_RESERVED\020\000\022\034\n\030CERTIFICATE"
+      "_TYPE_UNKNOWN\020\001\022\031\n\025CERTIFICATE_TYPE_LEAF"
+      "\020\002\022!\n\035CERTIFICATE_TYPE_INTERMEDIATE\020\003\022\031\n"
+      "\025CERTIFICATE_TYPE_ROOT\020\004*\267\002\n\021Certificate"
+      "Source\022\037\n\033CERTIFICATE_SOURCE_RESERVED\020\000\022"
+      "\036\n\032CERTIFICATE_SOURCE_UNKNOWN\020\001\022\033\n\027CERTI"
+      "FICATE_SOURCE_SCAN\020\002\022\031\n\025CERTIFICATE_SOUR"
+      "CE_CT\020\003\022)\n%CERTIFICATE_SOURCE_MOZILLA_SA"
+      "LESFORCE\020\004\022\037\n\033CERTIFICATE_SOURCE_RESEARC"
+      "H\020\005\022\035\n\031CERTIFICATE_SOURCE_RAPID7\020\006\022\035\n\031CE"
+      "RTIFICATE_SOURCE_HUBBLE\020\007\022\037\n\033CERTIFICATE"
+      "_SOURCE_CT_CHAIN\020\010*\327\001\n\026CertificateParseS"
+      "tatus\022%\n!CERTIFICATE_PARSE_STATUS_RESERV"
+      "ED\020\000\022$\n CERTIFICATE_PARSE_STATUS_UNKNOWN"
+      "\020\001\022$\n CERTIFICATE_PARSE_STATUS_SUCCESS\020\002"
+      "\022!\n\035CERTIFICATE_PARSE_STATUS_FAIL\020\003\022\'\n#C"
+      "ERTIFICATE_PARSE_STATUS_NOT_PARSED\020\004*\364\004\n"
+      "\033CertificateRevocationReason\022*\n&CERTIFIC"
+      "ATE_REVOCATION_REASON_RESERVED\020\000\022)\n%CERT"
+      "IFICATE_REVOCATION_REASON_UNKNOWN\020\001\022-\n)C"
+      "ERTIFICATE_REVOCATION_REASON_UNSPECIFIED"
+      "\020\002\0220\n,CERTIFICATE_REVOCATION_REASON_KEY_"
+      "COMPROMISE\020\003\022/\n+CERTIFICATE_REVOCATION_R"
+      "EASON_CA_COMPROMISE\020\004\0225\n1CERTIFICATE_REV"
+      "OCATION_REASON_AFFILIATION_CHANGED\020\005\022,\n("
+      "CERTIFICATE_REVOCATION_REASON_SUPERSEDED"
+      "\020\006\0228\n4CERTIFICATE_REVOCATION_REASON_CESS"
+      "ATION_OF_OPERATION\020\007\0222\n.CERTIFICATE_REVO"
+      "CATION_REASON_CERTIFICATE_HOLD\020\010\0221\n-CERT"
+      "IFICATE_REVOCATION_REASON_REMOVE_FROM_CR"
+      "L\020\t\0225\n1CERTIFICATE_REVOCATION_REASON_PRI"
+      "VILEGE_WITHDRAWN\020\n\022/\n+CERTIFICATE_REVOCA"
+      "TION_REASON_AA_COMPROMISE\020\013b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 3738);
+      descriptor, 3755);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "certificate.proto", &protobuf_RegisterTypes);
   ::zsearch::protobuf_common_2eproto::AddDescriptors();
@@ -732,6 +733,7 @@ const int RootStoreStatus::kWhitelistedFieldNumber;
 const int RootStoreStatus::kTypeFieldNumber;
 const int RootStoreStatus::kTrustedPathsFieldNumber;
 const int RootStoreStatus::kInRevocationSetFieldNumber;
+const int RootStoreStatus::kParentsFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 RootStoreStatus::RootStoreStatus()
@@ -746,6 +748,7 @@ RootStoreStatus::RootStoreStatus(const RootStoreStatus& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
       trusted_paths_(from.trusted_paths_),
+      parents_(from.parents_),
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::memcpy(&valid_, &from.valid_,
@@ -794,6 +797,7 @@ RootStoreStatus* RootStoreStatus::New(::google::protobuf::Arena* arena) const {
 void RootStoreStatus::Clear() {
 // @@protoc_insertion_point(message_clear_start:zsearch.RootStoreStatus)
   trusted_paths_.Clear();
+  parents_.Clear();
   ::memset(&valid_, 0, reinterpret_cast<char*>(&type_) -
     reinterpret_cast<char*>(&valid_) + sizeof(type_));
 }
@@ -926,6 +930,17 @@ bool RootStoreStatus::MergePartialFromCodedStream(
         break;
       }
 
+      // repeated bytes parents = 10;
+      case 10: {
+        if (tag == 82u) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
+                input, this->add_parents()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
       default: {
       handle_unusual:
         if (tag == 0 ||
@@ -997,6 +1012,12 @@ void RootStoreStatus::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteBool(9, this->in_revocation_set(), output);
   }
 
+  // repeated bytes parents = 10;
+  for (int i = 0; i < this->parents_size(); i++) {
+    ::google::protobuf::internal::WireFormatLite::WriteBytes(
+      10, this->parents(i), output);
+  }
+
   // @@protoc_insertion_point(serialize_end:zsearch.RootStoreStatus)
 }
 
@@ -1052,6 +1073,12 @@ void RootStoreStatus::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(9, this->in_revocation_set(), target);
   }
 
+  // repeated bytes parents = 10;
+  for (int i = 0; i < this->parents_size(); i++) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteBytesToArray(10, this->parents(i), target);
+  }
+
   // @@protoc_insertion_point(serialize_to_array_end:zsearch.RootStoreStatus)
   return target;
 }
@@ -1069,6 +1096,14 @@ size_t RootStoreStatus::ByteSizeLong() const {
         ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           this->trusted_paths(i));
     }
+  }
+
+  // repeated bytes parents = 10;
+  total_size += 1 *
+      ::google::protobuf::internal::FromIntSize(this->parents_size());
+  for (int i = 0; i < this->parents_size(); i++) {
+    total_size += ::google::protobuf::internal::WireFormatLite::BytesSize(
+      this->parents(i));
   }
 
   // bool valid = 1;
@@ -1139,6 +1174,7 @@ void RootStoreStatus::MergeFrom(const RootStoreStatus& from) {
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   trusted_paths_.MergeFrom(from.trusted_paths_);
+  parents_.MergeFrom(from.parents_);
   if (from.valid() != 0) {
     set_valid(from.valid());
   }
@@ -1189,6 +1225,7 @@ void RootStoreStatus::Swap(RootStoreStatus* other) {
 }
 void RootStoreStatus::InternalSwap(RootStoreStatus* other) {
   trusted_paths_.UnsafeArenaSwap(&other->trusted_paths_);
+  parents_.UnsafeArenaSwap(&other->parents_);
   std::swap(valid_, other->valid_);
   std::swap(was_valid_, other->was_valid_);
   std::swap(has_trusted_path_, other->has_trusted_path_);
@@ -1348,6 +1385,61 @@ void RootStoreStatus::set_in_revocation_set(bool value) {
   
   in_revocation_set_ = value;
   // @@protoc_insertion_point(field_set:zsearch.RootStoreStatus.in_revocation_set)
+}
+
+// repeated bytes parents = 10;
+int RootStoreStatus::parents_size() const {
+  return parents_.size();
+}
+void RootStoreStatus::clear_parents() {
+  parents_.Clear();
+}
+const ::std::string& RootStoreStatus::parents(int index) const {
+  // @@protoc_insertion_point(field_get:zsearch.RootStoreStatus.parents)
+  return parents_.Get(index);
+}
+::std::string* RootStoreStatus::mutable_parents(int index) {
+  // @@protoc_insertion_point(field_mutable:zsearch.RootStoreStatus.parents)
+  return parents_.Mutable(index);
+}
+void RootStoreStatus::set_parents(int index, const ::std::string& value) {
+  // @@protoc_insertion_point(field_set:zsearch.RootStoreStatus.parents)
+  parents_.Mutable(index)->assign(value);
+}
+void RootStoreStatus::set_parents(int index, const char* value) {
+  parents_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:zsearch.RootStoreStatus.parents)
+}
+void RootStoreStatus::set_parents(int index, const void* value, size_t size) {
+  parents_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_set_pointer:zsearch.RootStoreStatus.parents)
+}
+::std::string* RootStoreStatus::add_parents() {
+  // @@protoc_insertion_point(field_add_mutable:zsearch.RootStoreStatus.parents)
+  return parents_.Add();
+}
+void RootStoreStatus::add_parents(const ::std::string& value) {
+  parents_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:zsearch.RootStoreStatus.parents)
+}
+void RootStoreStatus::add_parents(const char* value) {
+  parents_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:zsearch.RootStoreStatus.parents)
+}
+void RootStoreStatus::add_parents(const void* value, size_t size) {
+  parents_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:zsearch.RootStoreStatus.parents)
+}
+const ::google::protobuf::RepeatedPtrField< ::std::string>&
+RootStoreStatus::parents() const {
+  // @@protoc_insertion_point(field_list:zsearch.RootStoreStatus.parents)
+  return parents_;
+}
+::google::protobuf::RepeatedPtrField< ::std::string>*
+RootStoreStatus::mutable_parents() {
+  // @@protoc_insertion_point(field_mutable_list:zsearch.RootStoreStatus.parents)
+  return &parents_;
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
