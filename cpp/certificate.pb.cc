@@ -55,7 +55,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   ~0u,  // no _oneof_case_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RootStoreStatus, valid_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RootStoreStatus, was_valid_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RootStoreStatus, has_trusted_path_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RootStoreStatus, trusted_path_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RootStoreStatus, had_trusted_path_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RootStoreStatus, blacklisted_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RootStoreStatus, whitelisted_),
@@ -261,101 +261,101 @@ void AddDescriptorsImpl() {
   static const char descriptor[] = {
       "\n\021certificate.proto\022\007zsearch\032\014common.pro"
       "to\032\013zlint.proto\032\010ct.proto\"\030\n\004Path\022\020\n\010sha"
-      "256fp\030\001 \003(\014\"\213\002\n\017RootStoreStatus\022\r\n\005valid"
-      "\030\001 \001(\010\022\021\n\twas_valid\030\002 \001(\010\022\030\n\020has_trusted"
-      "_path\030\003 \001(\010\022\030\n\020had_trusted_path\030\004 \001(\010\022\023\n"
-      "\013blacklisted\030\005 \001(\010\022\023\n\013whitelisted\030\006 \001(\010\022"
-      "&\n\004type\030\007 \001(\0162\030.zsearch.CertificateType\022"
-      "$\n\rtrusted_paths\030\010 \003(\0132\r.zsearch.Path\022\031\n"
-      "\021in_revocation_set\030\t \001(\010\022\017\n\007parents\030\n \003("
-      "\014\"\234\002\n\025CertificateValidation\022%\n\003nss\030\001 \001(\013"
-      "2\030.zsearch.RootStoreStatus\022+\n\tmicrosoft\030"
-      "\002 \001(\0132\030.zsearch.RootStoreStatus\022\'\n\005apple"
-      "\030\003 \001(\0132\030.zsearch.RootStoreStatus\022&\n\004java"
-      "\030\004 \001(\0132\030.zsearch.RootStoreStatus\022)\n\007andr"
-      "oid\030\005 \001(\0132\030.zsearch.RootStoreStatus\0223\n\021g"
-      "oogle_ct_primary\030\n \001(\0132\030.zsearch.RootSto"
-      "reStatus\"\272\002\n\027MozillaSalesForceStatus\022\022\n\n"
-      "current_in\030\001 \001(\010\022\016\n\006was_in\030\002 \001(\010\022\022\n\nowne"
-      "r_name\030\003 \001(\t\022\023\n\013parent_name\030\004 \001(\t\022\030\n\020cer"
-      "tificate_name\030\005 \001(\t\022\032\n\022certificate_polic"
-      "y\030\006 \001(\t\022(\n certification_practice_statem"
-      "ent\030\007 \001(\t\022\031\n\021cp_same_as_parent\030\010 \001(\010\022\034\n\024"
-      "audit_same_as_parent\030\t \001(\010\022\026\n\016standard_a"
-      "udit\030\n \001(\t\022\020\n\010br_audit\030\013 \001(\t\022\017\n\007auditor\030"
-      "\014 \001(\t\"^\n\025CertificateRevocation\022\017\n\007revoke"
-      "d\030\001 \001(\010\0224\n\006reason\030\002 \001(\0162$.zsearch.Certif"
-      "icateRevocationReason\"E\n\020CertificateAudi"
-      "t\0221\n\007mozilla\030\001 \001(\0132 .zsearch.MozillaSale"
-      "sForceStatus\"\377\t\n\013Certificate\022\016\n\006sha1fp\030\001"
-      " \001(\014\022\020\n\010sha256fp\030\002 \001(\014\022\013\n\003raw\030\003 \001(\014\022\016\n\006p"
-      "arsed\030\004 \001(\t\0225\n\014parse_status\030, \001(\0162\037.zsea"
-      "rch.CertificateParseStatus\022\025\n\rparse_vers"
-      "ion\030\' \001(\r\022\023\n\013parse_error\030/ \001(\t\022\017\n\007parent"
-      "s\030\005 \003(\014\022\027\n\017presented_chain\030- \003(\014\022*\n\006sour"
-      "ce\030\034 \001(\0162\032.zsearch.CertificateSource\022\024\n\014"
-      "seen_in_scan\030\035 \001(\010\022\026\n\016post_processed\030\032 \001"
-      "(\010\022\036\n\026post_process_timestamp\030% \001(\r\0222\n\nva"
-      "lidation\030# \001(\0132\036.zsearch.CertificateVali"
-      "dation\022\035\n\002ct\030\036 \001(\0132\021.zsearch.CTStatus\022\035\n"
-      "\005zlint\030& \001(\0132\016.zsearch.ZLint\0222\n\nrevocati"
-      "on\030+ \001(\0132\036.zsearch.CertificateRevocation"
-      "\022(\n\005audit\030. \001(\0132\031.zsearch.CertificateAud"
-      "it\022\022\n\nis_precert\030  \001(\010\022\027\n\017not_valid_afte"
-      "r\030) \001(\r\022\030\n\020not_valid_before\030* \001(\r\022\017\n\007exp"
-      "ired\0300 \001(\010\022\016\n\006in_nss\030\006 \001(\010\022\030\n\014in_microso"
-      "ft\030\007 \001(\010B\002\030\001\022\024\n\010in_apple\030\010 \001(\010B\002\030\001\022\034\n\024va"
-      "lidation_timestamp\030\n \001(\r\022\025\n\tvalid_nss\030\013 "
-      "\001(\010B\002\030\001\022\033\n\017valid_microsoft\030\014 \001(\010B\002\030\001\022\027\n\013"
-      "valid_apple\030\r \001(\010B\002\030\001\022\025\n\rwas_valid_nss\030\016"
-      " \001(\010\022\037\n\023was_valid_microsoft\030\017 \001(\010B\002\030\001\022\033\n"
-      "\017was_valid_apple\030\020 \001(\010B\002\030\001\022\026\n\nwas_in_nss"
-      "\030\021 \001(\010B\002\030\001\022\034\n\020was_in_microsoft\030\022 \001(\010B\002\030\001"
-      "\022\030\n\014was_in_apple\030\023 \001(\010B\002\030\001\022\031\n\021current_va"
-      "lid_nss\030\024 \001(\010\022#\n\027current_valid_microsoft"
-      "\030\025 \001(\010B\002\030\001\022\037\n\023current_valid_apple\030\026 \001(\010B"
-      "\002\030\001\022\026\n\016current_in_nss\030\027 \001(\010\022 \n\024current_i"
-      "n_microsoft\030\030 \001(\010B\002\030\001\022\034\n\020current_in_appl"
-      "e\030\031 \001(\010B\002\030\001\0227\n\tnss_audit\030\037 \001(\0132 .zsearch"
-      ".MozillaSalesForceStatusB\002\030\001\022\037\n\023should_p"
-      "ost_process\030\033 \001(\010B\002\030\001\022\037\n\023do_not_post_pro"
-      "cess\030$ \001(\010B\002\030\001*\247\001\n\017CertificateType\022\035\n\031CE"
-      "RTIFICATE_TYPE_RESERVED\020\000\022\034\n\030CERTIFICATE"
-      "_TYPE_UNKNOWN\020\001\022\031\n\025CERTIFICATE_TYPE_LEAF"
-      "\020\002\022!\n\035CERTIFICATE_TYPE_INTERMEDIATE\020\003\022\031\n"
-      "\025CERTIFICATE_TYPE_ROOT\020\004*\267\002\n\021Certificate"
-      "Source\022\037\n\033CERTIFICATE_SOURCE_RESERVED\020\000\022"
-      "\036\n\032CERTIFICATE_SOURCE_UNKNOWN\020\001\022\033\n\027CERTI"
-      "FICATE_SOURCE_SCAN\020\002\022\031\n\025CERTIFICATE_SOUR"
-      "CE_CT\020\003\022)\n%CERTIFICATE_SOURCE_MOZILLA_SA"
-      "LESFORCE\020\004\022\037\n\033CERTIFICATE_SOURCE_RESEARC"
-      "H\020\005\022\035\n\031CERTIFICATE_SOURCE_RAPID7\020\006\022\035\n\031CE"
-      "RTIFICATE_SOURCE_HUBBLE\020\007\022\037\n\033CERTIFICATE"
-      "_SOURCE_CT_CHAIN\020\010*\327\001\n\026CertificateParseS"
-      "tatus\022%\n!CERTIFICATE_PARSE_STATUS_RESERV"
-      "ED\020\000\022$\n CERTIFICATE_PARSE_STATUS_UNKNOWN"
-      "\020\001\022$\n CERTIFICATE_PARSE_STATUS_SUCCESS\020\002"
-      "\022!\n\035CERTIFICATE_PARSE_STATUS_FAIL\020\003\022\'\n#C"
-      "ERTIFICATE_PARSE_STATUS_NOT_PARSED\020\004*\364\004\n"
-      "\033CertificateRevocationReason\022*\n&CERTIFIC"
-      "ATE_REVOCATION_REASON_RESERVED\020\000\022)\n%CERT"
-      "IFICATE_REVOCATION_REASON_UNKNOWN\020\001\022-\n)C"
-      "ERTIFICATE_REVOCATION_REASON_UNSPECIFIED"
-      "\020\002\0220\n,CERTIFICATE_REVOCATION_REASON_KEY_"
-      "COMPROMISE\020\003\022/\n+CERTIFICATE_REVOCATION_R"
-      "EASON_CA_COMPROMISE\020\004\0225\n1CERTIFICATE_REV"
-      "OCATION_REASON_AFFILIATION_CHANGED\020\005\022,\n("
-      "CERTIFICATE_REVOCATION_REASON_SUPERSEDED"
-      "\020\006\0228\n4CERTIFICATE_REVOCATION_REASON_CESS"
-      "ATION_OF_OPERATION\020\007\0222\n.CERTIFICATE_REVO"
-      "CATION_REASON_CERTIFICATE_HOLD\020\010\0221\n-CERT"
-      "IFICATE_REVOCATION_REASON_REMOVE_FROM_CR"
-      "L\020\t\0225\n1CERTIFICATE_REVOCATION_REASON_PRI"
-      "VILEGE_WITHDRAWN\020\n\022/\n+CERTIFICATE_REVOCA"
-      "TION_REASON_AA_COMPROMISE\020\013b\006proto3"
+      "256fp\030\001 \003(\014\"\207\002\n\017RootStoreStatus\022\r\n\005valid"
+      "\030\001 \001(\010\022\021\n\twas_valid\030\002 \001(\010\022\024\n\014trusted_pat"
+      "h\030\003 \001(\010\022\030\n\020had_trusted_path\030\004 \001(\010\022\023\n\013bla"
+      "cklisted\030\005 \001(\010\022\023\n\013whitelisted\030\006 \001(\010\022&\n\004t"
+      "ype\030\007 \001(\0162\030.zsearch.CertificateType\022$\n\rt"
+      "rusted_paths\030\010 \003(\0132\r.zsearch.Path\022\031\n\021in_"
+      "revocation_set\030\t \001(\010\022\017\n\007parents\030\n \003(\014\"\234\002"
+      "\n\025CertificateValidation\022%\n\003nss\030\001 \001(\0132\030.z"
+      "search.RootStoreStatus\022+\n\tmicrosoft\030\002 \001("
+      "\0132\030.zsearch.RootStoreStatus\022\'\n\005apple\030\003 \001"
+      "(\0132\030.zsearch.RootStoreStatus\022&\n\004java\030\004 \001"
+      "(\0132\030.zsearch.RootStoreStatus\022)\n\007android\030"
+      "\005 \001(\0132\030.zsearch.RootStoreStatus\0223\n\021googl"
+      "e_ct_primary\030\n \001(\0132\030.zsearch.RootStoreSt"
+      "atus\"\272\002\n\027MozillaSalesForceStatus\022\022\n\ncurr"
+      "ent_in\030\001 \001(\010\022\016\n\006was_in\030\002 \001(\010\022\022\n\nowner_na"
+      "me\030\003 \001(\t\022\023\n\013parent_name\030\004 \001(\t\022\030\n\020certifi"
+      "cate_name\030\005 \001(\t\022\032\n\022certificate_policy\030\006 "
+      "\001(\t\022(\n certification_practice_statement\030"
+      "\007 \001(\t\022\031\n\021cp_same_as_parent\030\010 \001(\010\022\034\n\024audi"
+      "t_same_as_parent\030\t \001(\010\022\026\n\016standard_audit"
+      "\030\n \001(\t\022\020\n\010br_audit\030\013 \001(\t\022\017\n\007auditor\030\014 \001("
+      "\t\"^\n\025CertificateRevocation\022\017\n\007revoked\030\001 "
+      "\001(\010\0224\n\006reason\030\002 \001(\0162$.zsearch.Certificat"
+      "eRevocationReason\"E\n\020CertificateAudit\0221\n"
+      "\007mozilla\030\001 \001(\0132 .zsearch.MozillaSalesFor"
+      "ceStatus\"\377\t\n\013Certificate\022\016\n\006sha1fp\030\001 \001(\014"
+      "\022\020\n\010sha256fp\030\002 \001(\014\022\013\n\003raw\030\003 \001(\014\022\016\n\006parse"
+      "d\030\004 \001(\t\0225\n\014parse_status\030, \001(\0162\037.zsearch."
+      "CertificateParseStatus\022\025\n\rparse_version\030"
+      "\' \001(\r\022\023\n\013parse_error\030/ \001(\t\022\017\n\007parents\030\005 "
+      "\003(\014\022\027\n\017presented_chain\030- \003(\014\022*\n\006source\030\034"
+      " \001(\0162\032.zsearch.CertificateSource\022\024\n\014seen"
+      "_in_scan\030\035 \001(\010\022\026\n\016post_processed\030\032 \001(\010\022\036"
+      "\n\026post_process_timestamp\030% \001(\r\0222\n\nvalida"
+      "tion\030# \001(\0132\036.zsearch.CertificateValidati"
+      "on\022\035\n\002ct\030\036 \001(\0132\021.zsearch.CTStatus\022\035\n\005zli"
+      "nt\030& \001(\0132\016.zsearch.ZLint\0222\n\nrevocation\030+"
+      " \001(\0132\036.zsearch.CertificateRevocation\022(\n\005"
+      "audit\030. \001(\0132\031.zsearch.CertificateAudit\022\022"
+      "\n\nis_precert\030  \001(\010\022\027\n\017not_valid_after\030) "
+      "\001(\r\022\030\n\020not_valid_before\030* \001(\r\022\017\n\007expired"
+      "\0300 \001(\010\022\016\n\006in_nss\030\006 \001(\010\022\030\n\014in_microsoft\030\007"
+      " \001(\010B\002\030\001\022\024\n\010in_apple\030\010 \001(\010B\002\030\001\022\034\n\024valida"
+      "tion_timestamp\030\n \001(\r\022\025\n\tvalid_nss\030\013 \001(\010B"
+      "\002\030\001\022\033\n\017valid_microsoft\030\014 \001(\010B\002\030\001\022\027\n\013vali"
+      "d_apple\030\r \001(\010B\002\030\001\022\025\n\rwas_valid_nss\030\016 \001(\010"
+      "\022\037\n\023was_valid_microsoft\030\017 \001(\010B\002\030\001\022\033\n\017was"
+      "_valid_apple\030\020 \001(\010B\002\030\001\022\026\n\nwas_in_nss\030\021 \001"
+      "(\010B\002\030\001\022\034\n\020was_in_microsoft\030\022 \001(\010B\002\030\001\022\030\n\014"
+      "was_in_apple\030\023 \001(\010B\002\030\001\022\031\n\021current_valid_"
+      "nss\030\024 \001(\010\022#\n\027current_valid_microsoft\030\025 \001"
+      "(\010B\002\030\001\022\037\n\023current_valid_apple\030\026 \001(\010B\002\030\001\022"
+      "\026\n\016current_in_nss\030\027 \001(\010\022 \n\024current_in_mi"
+      "crosoft\030\030 \001(\010B\002\030\001\022\034\n\020current_in_apple\030\031 "
+      "\001(\010B\002\030\001\0227\n\tnss_audit\030\037 \001(\0132 .zsearch.Moz"
+      "illaSalesForceStatusB\002\030\001\022\037\n\023should_post_"
+      "process\030\033 \001(\010B\002\030\001\022\037\n\023do_not_post_process"
+      "\030$ \001(\010B\002\030\001*\247\001\n\017CertificateType\022\035\n\031CERTIF"
+      "ICATE_TYPE_RESERVED\020\000\022\034\n\030CERTIFICATE_TYP"
+      "E_UNKNOWN\020\001\022\031\n\025CERTIFICATE_TYPE_LEAF\020\002\022!"
+      "\n\035CERTIFICATE_TYPE_INTERMEDIATE\020\003\022\031\n\025CER"
+      "TIFICATE_TYPE_ROOT\020\004*\267\002\n\021CertificateSour"
+      "ce\022\037\n\033CERTIFICATE_SOURCE_RESERVED\020\000\022\036\n\032C"
+      "ERTIFICATE_SOURCE_UNKNOWN\020\001\022\033\n\027CERTIFICA"
+      "TE_SOURCE_SCAN\020\002\022\031\n\025CERTIFICATE_SOURCE_C"
+      "T\020\003\022)\n%CERTIFICATE_SOURCE_MOZILLA_SALESF"
+      "ORCE\020\004\022\037\n\033CERTIFICATE_SOURCE_RESEARCH\020\005\022"
+      "\035\n\031CERTIFICATE_SOURCE_RAPID7\020\006\022\035\n\031CERTIF"
+      "ICATE_SOURCE_HUBBLE\020\007\022\037\n\033CERTIFICATE_SOU"
+      "RCE_CT_CHAIN\020\010*\327\001\n\026CertificateParseStatu"
+      "s\022%\n!CERTIFICATE_PARSE_STATUS_RESERVED\020\000"
+      "\022$\n CERTIFICATE_PARSE_STATUS_UNKNOWN\020\001\022$"
+      "\n CERTIFICATE_PARSE_STATUS_SUCCESS\020\002\022!\n\035"
+      "CERTIFICATE_PARSE_STATUS_FAIL\020\003\022\'\n#CERTI"
+      "FICATE_PARSE_STATUS_NOT_PARSED\020\004*\364\004\n\033Cer"
+      "tificateRevocationReason\022*\n&CERTIFICATE_"
+      "REVOCATION_REASON_RESERVED\020\000\022)\n%CERTIFIC"
+      "ATE_REVOCATION_REASON_UNKNOWN\020\001\022-\n)CERTI"
+      "FICATE_REVOCATION_REASON_UNSPECIFIED\020\002\0220"
+      "\n,CERTIFICATE_REVOCATION_REASON_KEY_COMP"
+      "ROMISE\020\003\022/\n+CERTIFICATE_REVOCATION_REASO"
+      "N_CA_COMPROMISE\020\004\0225\n1CERTIFICATE_REVOCAT"
+      "ION_REASON_AFFILIATION_CHANGED\020\005\022,\n(CERT"
+      "IFICATE_REVOCATION_REASON_SUPERSEDED\020\006\0228"
+      "\n4CERTIFICATE_REVOCATION_REASON_CESSATIO"
+      "N_OF_OPERATION\020\007\0222\n.CERTIFICATE_REVOCATI"
+      "ON_REASON_CERTIFICATE_HOLD\020\010\0221\n-CERTIFIC"
+      "ATE_REVOCATION_REASON_REMOVE_FROM_CRL\020\t\022"
+      "5\n1CERTIFICATE_REVOCATION_REASON_PRIVILE"
+      "GE_WITHDRAWN\020\n\022/\n+CERTIFICATE_REVOCATION"
+      "_REASON_AA_COMPROMISE\020\013b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 3755);
+      descriptor, 3751);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "certificate.proto", &protobuf_RegisterTypes);
   ::zsearch::protobuf_common_2eproto::AddDescriptors();
@@ -726,7 +726,7 @@ Path::mutable_sha256fp() {
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int RootStoreStatus::kValidFieldNumber;
 const int RootStoreStatus::kWasValidFieldNumber;
-const int RootStoreStatus::kHasTrustedPathFieldNumber;
+const int RootStoreStatus::kTrustedPathFieldNumber;
 const int RootStoreStatus::kHadTrustedPathFieldNumber;
 const int RootStoreStatus::kBlacklistedFieldNumber;
 const int RootStoreStatus::kWhitelistedFieldNumber;
@@ -838,13 +838,13 @@ bool RootStoreStatus::MergePartialFromCodedStream(
         break;
       }
 
-      // bool has_trusted_path = 3;
+      // bool trusted_path = 3;
       case 3: {
         if (tag == 24u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &has_trusted_path_)));
+                 input, &trusted_path_)));
         } else {
           goto handle_unusual;
         }
@@ -975,9 +975,9 @@ void RootStoreStatus::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteBool(2, this->was_valid(), output);
   }
 
-  // bool has_trusted_path = 3;
-  if (this->has_trusted_path() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteBool(3, this->has_trusted_path(), output);
+  // bool trusted_path = 3;
+  if (this->trusted_path() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(3, this->trusted_path(), output);
   }
 
   // bool had_trusted_path = 4;
@@ -1035,9 +1035,9 @@ void RootStoreStatus::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(2, this->was_valid(), target);
   }
 
-  // bool has_trusted_path = 3;
-  if (this->has_trusted_path() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(3, this->has_trusted_path(), target);
+  // bool trusted_path = 3;
+  if (this->trusted_path() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(3, this->trusted_path(), target);
   }
 
   // bool had_trusted_path = 4;
@@ -1116,8 +1116,8 @@ size_t RootStoreStatus::ByteSizeLong() const {
     total_size += 1 + 1;
   }
 
-  // bool has_trusted_path = 3;
-  if (this->has_trusted_path() != 0) {
+  // bool trusted_path = 3;
+  if (this->trusted_path() != 0) {
     total_size += 1 + 1;
   }
 
@@ -1181,8 +1181,8 @@ void RootStoreStatus::MergeFrom(const RootStoreStatus& from) {
   if (from.was_valid() != 0) {
     set_was_valid(from.was_valid());
   }
-  if (from.has_trusted_path() != 0) {
-    set_has_trusted_path(from.has_trusted_path());
+  if (from.trusted_path() != 0) {
+    set_trusted_path(from.trusted_path());
   }
   if (from.had_trusted_path() != 0) {
     set_had_trusted_path(from.had_trusted_path());
@@ -1228,7 +1228,7 @@ void RootStoreStatus::InternalSwap(RootStoreStatus* other) {
   parents_.UnsafeArenaSwap(&other->parents_);
   std::swap(valid_, other->valid_);
   std::swap(was_valid_, other->was_valid_);
-  std::swap(has_trusted_path_, other->has_trusted_path_);
+  std::swap(trusted_path_, other->trusted_path_);
   std::swap(had_trusted_path_, other->had_trusted_path_);
   std::swap(blacklisted_, other->blacklisted_);
   std::swap(whitelisted_, other->whitelisted_);
@@ -1273,18 +1273,18 @@ void RootStoreStatus::set_was_valid(bool value) {
   // @@protoc_insertion_point(field_set:zsearch.RootStoreStatus.was_valid)
 }
 
-// bool has_trusted_path = 3;
-void RootStoreStatus::clear_has_trusted_path() {
-  has_trusted_path_ = false;
+// bool trusted_path = 3;
+void RootStoreStatus::clear_trusted_path() {
+  trusted_path_ = false;
 }
-bool RootStoreStatus::has_trusted_path() const {
-  // @@protoc_insertion_point(field_get:zsearch.RootStoreStatus.has_trusted_path)
-  return has_trusted_path_;
+bool RootStoreStatus::trusted_path() const {
+  // @@protoc_insertion_point(field_get:zsearch.RootStoreStatus.trusted_path)
+  return trusted_path_;
 }
-void RootStoreStatus::set_has_trusted_path(bool value) {
+void RootStoreStatus::set_trusted_path(bool value) {
   
-  has_trusted_path_ = value;
-  // @@protoc_insertion_point(field_set:zsearch.RootStoreStatus.has_trusted_path)
+  trusted_path_ = value;
+  // @@protoc_insertion_point(field_set:zsearch.RootStoreStatus.trusted_path)
 }
 
 // bool had_trusted_path = 4;
