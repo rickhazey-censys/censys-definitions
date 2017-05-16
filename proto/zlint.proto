@@ -229,5 +229,10 @@ message Lints {
     LintResult e_rsa_no_public_key = 184;
     LintResult e_sub_cert_certificate_policies_missing = 185;
     LintResult e_sub_cert_key_usage_crl_sign_bit_set = 186;
-    // highest ID in use is currently 186
+    LintResult e_subject_common_name_max_length = 187;
+    LintResult e_subject_locality_name_max_length = 188;
+    LintResult e_subject_organization_name_max_length = 189;
+    LintResult e_subject_organizational_unit_name_max_length = 190;
+    LintResult e_subject_state_name_max_length = 191;
+    // highest ID in use is currently 191
 }
