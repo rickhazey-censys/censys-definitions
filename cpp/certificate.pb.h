@@ -406,11 +406,11 @@ class RootStoreStatus : public ::google::protobuf::Message /* @@protoc_insertion
   bool was_valid() const;
   void set_was_valid(bool value);
 
-  // bool has_trusted_path = 3;
-  void clear_has_trusted_path();
-  static const int kHasTrustedPathFieldNumber = 3;
-  bool has_trusted_path() const;
-  void set_has_trusted_path(bool value);
+  // bool trusted_path = 3;
+  void clear_trusted_path();
+  static const int kTrustedPathFieldNumber = 3;
+  bool trusted_path() const;
+  void set_trusted_path(bool value);
 
   // bool had_trusted_path = 4;
   void clear_had_trusted_path();
@@ -450,7 +450,7 @@ class RootStoreStatus : public ::google::protobuf::Message /* @@protoc_insertion
   ::google::protobuf::RepeatedPtrField< ::std::string> parents_;
   bool valid_;
   bool was_valid_;
-  bool has_trusted_path_;
+  bool trusted_path_;
   bool had_trusted_path_;
   bool blacklisted_;
   bool whitelisted_;
@@ -1552,18 +1552,18 @@ inline void RootStoreStatus::set_was_valid(bool value) {
   // @@protoc_insertion_point(field_set:zsearch.RootStoreStatus.was_valid)
 }
 
-// bool has_trusted_path = 3;
-inline void RootStoreStatus::clear_has_trusted_path() {
-  has_trusted_path_ = false;
+// bool trusted_path = 3;
+inline void RootStoreStatus::clear_trusted_path() {
+  trusted_path_ = false;
 }
-inline bool RootStoreStatus::has_trusted_path() const {
-  // @@protoc_insertion_point(field_get:zsearch.RootStoreStatus.has_trusted_path)
-  return has_trusted_path_;
+inline bool RootStoreStatus::trusted_path() const {
+  // @@protoc_insertion_point(field_get:zsearch.RootStoreStatus.trusted_path)
+  return trusted_path_;
 }
-inline void RootStoreStatus::set_has_trusted_path(bool value) {
+inline void RootStoreStatus::set_trusted_path(bool value) {
   
-  has_trusted_path_ = value;
-  // @@protoc_insertion_point(field_set:zsearch.RootStoreStatus.has_trusted_path)
+  trusted_path_ = value;
+  // @@protoc_insertion_point(field_set:zsearch.RootStoreStatus.trusted_path)
 }
 
 // bool had_trusted_path = 4;

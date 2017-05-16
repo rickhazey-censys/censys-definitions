@@ -64,7 +64,7 @@ message RootStoreStatus {
     bool was_valid = 2;
 
     // True if there exists a path from the certificate to the root store.
-    bool has_trusted_path = 3;
+    bool trusted_path = 3;
 
     // True if now or at some point in the past there existed a path from the
     // certificate to the root store.
