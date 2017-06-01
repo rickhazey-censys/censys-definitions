@@ -2125,6 +2125,24 @@ class Lints : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
   ::zsearch::LintResult* release_e_subject_state_name_max_length();
   void set_allocated_e_subject_state_name_max_length(::zsearch::LintResult* e_subject_state_name_max_length);
 
+  // .zsearch.LintResult w_multiple_subject_RDN = 192;
+  bool has_w_multiple_subject_rdn() const;
+  void clear_w_multiple_subject_rdn();
+  static const int kWMultipleSubjectRDNFieldNumber = 192;
+  const ::zsearch::LintResult& w_multiple_subject_rdn() const;
+  ::zsearch::LintResult* mutable_w_multiple_subject_rdn();
+  ::zsearch::LintResult* release_w_multiple_subject_rdn();
+  void set_allocated_w_multiple_subject_rdn(::zsearch::LintResult* w_multiple_subject_rdn);
+
+  // .zsearch.LintResult w_multiple_issuer_RDN = 193;
+  bool has_w_multiple_issuer_rdn() const;
+  void clear_w_multiple_issuer_rdn();
+  static const int kWMultipleIssuerRDNFieldNumber = 193;
+  const ::zsearch::LintResult& w_multiple_issuer_rdn() const;
+  ::zsearch::LintResult* mutable_w_multiple_issuer_rdn();
+  ::zsearch::LintResult* release_w_multiple_issuer_rdn();
+  void set_allocated_w_multiple_issuer_rdn(::zsearch::LintResult* w_multiple_issuer_rdn);
+
   // @@protoc_insertion_point(class_scope:zsearch.Lints)
  private:
 
@@ -2319,6 +2337,8 @@ class Lints : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
   ::zsearch::LintResult* e_subject_organization_name_max_length_;
   ::zsearch::LintResult* e_subject_organizational_unit_name_max_length_;
   ::zsearch::LintResult* e_subject_state_name_max_length_;
+  ::zsearch::LintResult* w_multiple_subject_rdn_;
+  ::zsearch::LintResult* w_multiple_issuer_rdn_;
   mutable int _cached_size_;
   friend struct  protobuf_zlint_2eproto::TableStruct;
 };
@@ -9963,6 +9983,84 @@ inline void Lints::set_allocated_e_subject_state_name_max_length(::zsearch::Lint
     
   }
   // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_subject_state_name_max_length)
+}
+
+// .zsearch.LintResult w_multiple_subject_RDN = 192;
+inline bool Lints::has_w_multiple_subject_rdn() const {
+  return this != internal_default_instance() && w_multiple_subject_rdn_ != NULL;
+}
+inline void Lints::clear_w_multiple_subject_rdn() {
+  if (GetArenaNoVirtual() == NULL && w_multiple_subject_rdn_ != NULL) delete w_multiple_subject_rdn_;
+  w_multiple_subject_rdn_ = NULL;
+}
+inline const ::zsearch::LintResult& Lints::w_multiple_subject_rdn() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.w_multiple_subject_RDN)
+  return w_multiple_subject_rdn_ != NULL ? *w_multiple_subject_rdn_
+                         : *::zsearch::LintResult::internal_default_instance();
+}
+inline ::zsearch::LintResult* Lints::mutable_w_multiple_subject_rdn() {
+  
+  if (w_multiple_subject_rdn_ == NULL) {
+    w_multiple_subject_rdn_ = new ::zsearch::LintResult;
+  }
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.w_multiple_subject_RDN)
+  return w_multiple_subject_rdn_;
+}
+inline ::zsearch::LintResult* Lints::release_w_multiple_subject_rdn() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.w_multiple_subject_RDN)
+  
+  ::zsearch::LintResult* temp = w_multiple_subject_rdn_;
+  w_multiple_subject_rdn_ = NULL;
+  return temp;
+}
+inline void Lints::set_allocated_w_multiple_subject_rdn(::zsearch::LintResult* w_multiple_subject_rdn) {
+  delete w_multiple_subject_rdn_;
+  w_multiple_subject_rdn_ = w_multiple_subject_rdn;
+  if (w_multiple_subject_rdn) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.w_multiple_subject_RDN)
+}
+
+// .zsearch.LintResult w_multiple_issuer_RDN = 193;
+inline bool Lints::has_w_multiple_issuer_rdn() const {
+  return this != internal_default_instance() && w_multiple_issuer_rdn_ != NULL;
+}
+inline void Lints::clear_w_multiple_issuer_rdn() {
+  if (GetArenaNoVirtual() == NULL && w_multiple_issuer_rdn_ != NULL) delete w_multiple_issuer_rdn_;
+  w_multiple_issuer_rdn_ = NULL;
+}
+inline const ::zsearch::LintResult& Lints::w_multiple_issuer_rdn() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.w_multiple_issuer_RDN)
+  return w_multiple_issuer_rdn_ != NULL ? *w_multiple_issuer_rdn_
+                         : *::zsearch::LintResult::internal_default_instance();
+}
+inline ::zsearch::LintResult* Lints::mutable_w_multiple_issuer_rdn() {
+  
+  if (w_multiple_issuer_rdn_ == NULL) {
+    w_multiple_issuer_rdn_ = new ::zsearch::LintResult;
+  }
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.w_multiple_issuer_RDN)
+  return w_multiple_issuer_rdn_;
+}
+inline ::zsearch::LintResult* Lints::release_w_multiple_issuer_rdn() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.w_multiple_issuer_RDN)
+  
+  ::zsearch::LintResult* temp = w_multiple_issuer_rdn_;
+  w_multiple_issuer_rdn_ = NULL;
+  return temp;
+}
+inline void Lints::set_allocated_w_multiple_issuer_rdn(::zsearch::LintResult* w_multiple_issuer_rdn) {
+  delete w_multiple_issuer_rdn_;
+  w_multiple_issuer_rdn_ = w_multiple_issuer_rdn;
+  if (w_multiple_issuer_rdn) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.w_multiple_issuer_RDN)
 }
 
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS

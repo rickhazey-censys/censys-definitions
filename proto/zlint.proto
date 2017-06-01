@@ -234,5 +234,7 @@ message Lints {
     LintResult e_subject_organization_name_max_length = 189;
     LintResult e_subject_organizational_unit_name_max_length = 190;
     LintResult e_subject_state_name_max_length = 191;
-    // highest ID in use is currently 191
+    LintResult w_multiple_subject_RDN = 192;
+    LintResult w_multiple_issuer_RDN = 193;
+    // highest ID in use is currently 193
 }
