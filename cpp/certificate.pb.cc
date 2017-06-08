@@ -89,6 +89,9 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MozillaSalesForceStatus, standard_audit_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MozillaSalesForceStatus, br_audit_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MozillaSalesForceStatus, auditor_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MozillaSalesForceStatus, standard_audit_statement_timestamp_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MozillaSalesForceStatus, management_assertions_by_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MozillaSalesForceStatus, comments_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CertificateRevocation, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -155,9 +158,9 @@ static const ::google::protobuf::internal::MigrationSchema schemas[] = {
   { 5, -1, sizeof(RootStoreStatus)},
   { 19, -1, sizeof(CertificateValidation)},
   { 29, -1, sizeof(MozillaSalesForceStatus)},
-  { 45, -1, sizeof(CertificateRevocation)},
-  { 51, -1, sizeof(CertificateAudit)},
-  { 56, -1, sizeof(Certificate)},
+  { 48, -1, sizeof(CertificateRevocation)},
+  { 54, -1, sizeof(CertificateAudit)},
+  { 59, -1, sizeof(Certificate)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -275,7 +278,7 @@ void AddDescriptorsImpl() {
       "(\0132\030.zsearch.RootStoreStatus\022)\n\007android\030"
       "\005 \001(\0132\030.zsearch.RootStoreStatus\0223\n\021googl"
       "e_ct_primary\030\n \001(\0132\030.zsearch.RootStoreSt"
-      "atus\"\272\002\n\027MozillaSalesForceStatus\022\022\n\ncurr"
+      "atus\"\232\003\n\027MozillaSalesForceStatus\022\022\n\ncurr"
       "ent_in\030\001 \001(\010\022\016\n\006was_in\030\002 \001(\010\022\022\n\nowner_na"
       "me\030\003 \001(\t\022\023\n\013parent_name\030\004 \001(\t\022\030\n\020certifi"
       "cate_name\030\005 \001(\t\022\032\n\022certificate_policy\030\006 "
@@ -283,79 +286,82 @@ void AddDescriptorsImpl() {
       "\007 \001(\t\022\031\n\021cp_same_as_parent\030\010 \001(\010\022\034\n\024audi"
       "t_same_as_parent\030\t \001(\010\022\026\n\016standard_audit"
       "\030\n \001(\t\022\020\n\010br_audit\030\013 \001(\t\022\017\n\007auditor\030\014 \001("
-      "\t\"^\n\025CertificateRevocation\022\017\n\007revoked\030\001 "
-      "\001(\010\0224\n\006reason\030\002 \001(\0162$.zsearch.Certificat"
-      "eRevocationReason\"E\n\020CertificateAudit\0221\n"
-      "\007mozilla\030\001 \001(\0132 .zsearch.MozillaSalesFor"
-      "ceStatus\"\377\t\n\013Certificate\022\016\n\006sha1fp\030\001 \001(\014"
-      "\022\020\n\010sha256fp\030\002 \001(\014\022\013\n\003raw\030\003 \001(\014\022\016\n\006parse"
-      "d\030\004 \001(\t\0225\n\014parse_status\030, \001(\0162\037.zsearch."
-      "CertificateParseStatus\022\025\n\rparse_version\030"
-      "\' \001(\r\022\023\n\013parse_error\030/ \001(\t\022\017\n\007parents\030\005 "
-      "\003(\014\022\027\n\017presented_chain\030- \003(\014\022*\n\006source\030\034"
-      " \001(\0162\032.zsearch.CertificateSource\022\024\n\014seen"
-      "_in_scan\030\035 \001(\010\022\026\n\016post_processed\030\032 \001(\010\022\036"
-      "\n\026post_process_timestamp\030% \001(\r\0222\n\nvalida"
-      "tion\030# \001(\0132\036.zsearch.CertificateValidati"
-      "on\022\035\n\002ct\030\036 \001(\0132\021.zsearch.CTStatus\022\035\n\005zli"
-      "nt\030& \001(\0132\016.zsearch.ZLint\0222\n\nrevocation\030+"
-      " \001(\0132\036.zsearch.CertificateRevocation\022(\n\005"
-      "audit\030. \001(\0132\031.zsearch.CertificateAudit\022\022"
-      "\n\nis_precert\030  \001(\010\022\027\n\017not_valid_after\030) "
-      "\001(\r\022\030\n\020not_valid_before\030* \001(\r\022\017\n\007expired"
-      "\0300 \001(\010\022\016\n\006in_nss\030\006 \001(\010\022\030\n\014in_microsoft\030\007"
-      " \001(\010B\002\030\001\022\024\n\010in_apple\030\010 \001(\010B\002\030\001\022\034\n\024valida"
-      "tion_timestamp\030\n \001(\r\022\025\n\tvalid_nss\030\013 \001(\010B"
-      "\002\030\001\022\033\n\017valid_microsoft\030\014 \001(\010B\002\030\001\022\027\n\013vali"
-      "d_apple\030\r \001(\010B\002\030\001\022\025\n\rwas_valid_nss\030\016 \001(\010"
-      "\022\037\n\023was_valid_microsoft\030\017 \001(\010B\002\030\001\022\033\n\017was"
-      "_valid_apple\030\020 \001(\010B\002\030\001\022\026\n\nwas_in_nss\030\021 \001"
-      "(\010B\002\030\001\022\034\n\020was_in_microsoft\030\022 \001(\010B\002\030\001\022\030\n\014"
-      "was_in_apple\030\023 \001(\010B\002\030\001\022\031\n\021current_valid_"
-      "nss\030\024 \001(\010\022#\n\027current_valid_microsoft\030\025 \001"
-      "(\010B\002\030\001\022\037\n\023current_valid_apple\030\026 \001(\010B\002\030\001\022"
-      "\026\n\016current_in_nss\030\027 \001(\010\022 \n\024current_in_mi"
-      "crosoft\030\030 \001(\010B\002\030\001\022\034\n\020current_in_apple\030\031 "
-      "\001(\010B\002\030\001\0227\n\tnss_audit\030\037 \001(\0132 .zsearch.Moz"
-      "illaSalesForceStatusB\002\030\001\022\037\n\023should_post_"
-      "process\030\033 \001(\010B\002\030\001\022\037\n\023do_not_post_process"
-      "\030$ \001(\010B\002\030\001*\247\001\n\017CertificateType\022\035\n\031CERTIF"
-      "ICATE_TYPE_RESERVED\020\000\022\034\n\030CERTIFICATE_TYP"
-      "E_UNKNOWN\020\001\022\031\n\025CERTIFICATE_TYPE_LEAF\020\002\022!"
-      "\n\035CERTIFICATE_TYPE_INTERMEDIATE\020\003\022\031\n\025CER"
-      "TIFICATE_TYPE_ROOT\020\004*\267\002\n\021CertificateSour"
-      "ce\022\037\n\033CERTIFICATE_SOURCE_RESERVED\020\000\022\036\n\032C"
-      "ERTIFICATE_SOURCE_UNKNOWN\020\001\022\033\n\027CERTIFICA"
-      "TE_SOURCE_SCAN\020\002\022\031\n\025CERTIFICATE_SOURCE_C"
-      "T\020\003\022)\n%CERTIFICATE_SOURCE_MOZILLA_SALESF"
-      "ORCE\020\004\022\037\n\033CERTIFICATE_SOURCE_RESEARCH\020\005\022"
-      "\035\n\031CERTIFICATE_SOURCE_RAPID7\020\006\022\035\n\031CERTIF"
-      "ICATE_SOURCE_HUBBLE\020\007\022\037\n\033CERTIFICATE_SOU"
-      "RCE_CT_CHAIN\020\010*\327\001\n\026CertificateParseStatu"
-      "s\022%\n!CERTIFICATE_PARSE_STATUS_RESERVED\020\000"
-      "\022$\n CERTIFICATE_PARSE_STATUS_UNKNOWN\020\001\022$"
-      "\n CERTIFICATE_PARSE_STATUS_SUCCESS\020\002\022!\n\035"
-      "CERTIFICATE_PARSE_STATUS_FAIL\020\003\022\'\n#CERTI"
-      "FICATE_PARSE_STATUS_NOT_PARSED\020\004*\364\004\n\033Cer"
-      "tificateRevocationReason\022*\n&CERTIFICATE_"
-      "REVOCATION_REASON_RESERVED\020\000\022)\n%CERTIFIC"
-      "ATE_REVOCATION_REASON_UNKNOWN\020\001\022-\n)CERTI"
-      "FICATE_REVOCATION_REASON_UNSPECIFIED\020\002\0220"
-      "\n,CERTIFICATE_REVOCATION_REASON_KEY_COMP"
-      "ROMISE\020\003\022/\n+CERTIFICATE_REVOCATION_REASO"
-      "N_CA_COMPROMISE\020\004\0225\n1CERTIFICATE_REVOCAT"
-      "ION_REASON_AFFILIATION_CHANGED\020\005\022,\n(CERT"
-      "IFICATE_REVOCATION_REASON_SUPERSEDED\020\006\0228"
-      "\n4CERTIFICATE_REVOCATION_REASON_CESSATIO"
-      "N_OF_OPERATION\020\007\0222\n.CERTIFICATE_REVOCATI"
-      "ON_REASON_CERTIFICATE_HOLD\020\010\0221\n-CERTIFIC"
-      "ATE_REVOCATION_REASON_REMOVE_FROM_CRL\020\t\022"
-      "5\n1CERTIFICATE_REVOCATION_REASON_PRIVILE"
-      "GE_WITHDRAWN\020\n\022/\n+CERTIFICATE_REVOCATION"
-      "_REASON_AA_COMPROMISE\020\013b\006proto3"
+      "\t\022*\n\"standard_audit_statement_timestamp\030"
+      "\r \001(\r\022 \n\030management_assertions_by\030\016 \001(\t\022"
+      "\020\n\010comments\030\017 \001(\t\"^\n\025CertificateRevocati"
+      "on\022\017\n\007revoked\030\001 \001(\010\0224\n\006reason\030\002 \001(\0162$.zs"
+      "earch.CertificateRevocationReason\"E\n\020Cer"
+      "tificateAudit\0221\n\007mozilla\030\001 \001(\0132 .zsearch"
+      ".MozillaSalesForceStatus\"\377\t\n\013Certificate"
+      "\022\016\n\006sha1fp\030\001 \001(\014\022\020\n\010sha256fp\030\002 \001(\014\022\013\n\003ra"
+      "w\030\003 \001(\014\022\016\n\006parsed\030\004 \001(\t\0225\n\014parse_status\030"
+      ", \001(\0162\037.zsearch.CertificateParseStatus\022\025"
+      "\n\rparse_version\030\' \001(\r\022\023\n\013parse_error\030/ \001"
+      "(\t\022\017\n\007parents\030\005 \003(\014\022\027\n\017presented_chain\030-"
+      " \003(\014\022*\n\006source\030\034 \001(\0162\032.zsearch.Certifica"
+      "teSource\022\024\n\014seen_in_scan\030\035 \001(\010\022\026\n\016post_p"
+      "rocessed\030\032 \001(\010\022\036\n\026post_process_timestamp"
+      "\030% \001(\r\0222\n\nvalidation\030# \001(\0132\036.zsearch.Cer"
+      "tificateValidation\022\035\n\002ct\030\036 \001(\0132\021.zsearch"
+      ".CTStatus\022\035\n\005zlint\030& \001(\0132\016.zsearch.ZLint"
+      "\0222\n\nrevocation\030+ \001(\0132\036.zsearch.Certifica"
+      "teRevocation\022(\n\005audit\030. \001(\0132\031.zsearch.Ce"
+      "rtificateAudit\022\022\n\nis_precert\030  \001(\010\022\027\n\017no"
+      "t_valid_after\030) \001(\r\022\030\n\020not_valid_before\030"
+      "* \001(\r\022\017\n\007expired\0300 \001(\010\022\016\n\006in_nss\030\006 \001(\010\022\030"
+      "\n\014in_microsoft\030\007 \001(\010B\002\030\001\022\024\n\010in_apple\030\010 \001"
+      "(\010B\002\030\001\022\034\n\024validation_timestamp\030\n \001(\r\022\025\n\t"
+      "valid_nss\030\013 \001(\010B\002\030\001\022\033\n\017valid_microsoft\030\014"
+      " \001(\010B\002\030\001\022\027\n\013valid_apple\030\r \001(\010B\002\030\001\022\025\n\rwas"
+      "_valid_nss\030\016 \001(\010\022\037\n\023was_valid_microsoft\030"
+      "\017 \001(\010B\002\030\001\022\033\n\017was_valid_apple\030\020 \001(\010B\002\030\001\022\026"
+      "\n\nwas_in_nss\030\021 \001(\010B\002\030\001\022\034\n\020was_in_microso"
+      "ft\030\022 \001(\010B\002\030\001\022\030\n\014was_in_apple\030\023 \001(\010B\002\030\001\022\031"
+      "\n\021current_valid_nss\030\024 \001(\010\022#\n\027current_val"
+      "id_microsoft\030\025 \001(\010B\002\030\001\022\037\n\023current_valid_"
+      "apple\030\026 \001(\010B\002\030\001\022\026\n\016current_in_nss\030\027 \001(\010\022"
+      " \n\024current_in_microsoft\030\030 \001(\010B\002\030\001\022\034\n\020cur"
+      "rent_in_apple\030\031 \001(\010B\002\030\001\0227\n\tnss_audit\030\037 \001"
+      "(\0132 .zsearch.MozillaSalesForceStatusB\002\030\001"
+      "\022\037\n\023should_post_process\030\033 \001(\010B\002\030\001\022\037\n\023do_"
+      "not_post_process\030$ \001(\010B\002\030\001*\247\001\n\017Certifica"
+      "teType\022\035\n\031CERTIFICATE_TYPE_RESERVED\020\000\022\034\n"
+      "\030CERTIFICATE_TYPE_UNKNOWN\020\001\022\031\n\025CERTIFICA"
+      "TE_TYPE_LEAF\020\002\022!\n\035CERTIFICATE_TYPE_INTER"
+      "MEDIATE\020\003\022\031\n\025CERTIFICATE_TYPE_ROOT\020\004*\267\002\n"
+      "\021CertificateSource\022\037\n\033CERTIFICATE_SOURCE"
+      "_RESERVED\020\000\022\036\n\032CERTIFICATE_SOURCE_UNKNOW"
+      "N\020\001\022\033\n\027CERTIFICATE_SOURCE_SCAN\020\002\022\031\n\025CERT"
+      "IFICATE_SOURCE_CT\020\003\022)\n%CERTIFICATE_SOURC"
+      "E_MOZILLA_SALESFORCE\020\004\022\037\n\033CERTIFICATE_SO"
+      "URCE_RESEARCH\020\005\022\035\n\031CERTIFICATE_SOURCE_RA"
+      "PID7\020\006\022\035\n\031CERTIFICATE_SOURCE_HUBBLE\020\007\022\037\n"
+      "\033CERTIFICATE_SOURCE_CT_CHAIN\020\010*\327\001\n\026Certi"
+      "ficateParseStatus\022%\n!CERTIFICATE_PARSE_S"
+      "TATUS_RESERVED\020\000\022$\n CERTIFICATE_PARSE_ST"
+      "ATUS_UNKNOWN\020\001\022$\n CERTIFICATE_PARSE_STAT"
+      "US_SUCCESS\020\002\022!\n\035CERTIFICATE_PARSE_STATUS"
+      "_FAIL\020\003\022\'\n#CERTIFICATE_PARSE_STATUS_NOT_"
+      "PARSED\020\004*\364\004\n\033CertificateRevocationReason"
+      "\022*\n&CERTIFICATE_REVOCATION_REASON_RESERV"
+      "ED\020\000\022)\n%CERTIFICATE_REVOCATION_REASON_UN"
+      "KNOWN\020\001\022-\n)CERTIFICATE_REVOCATION_REASON"
+      "_UNSPECIFIED\020\002\0220\n,CERTIFICATE_REVOCATION"
+      "_REASON_KEY_COMPROMISE\020\003\022/\n+CERTIFICATE_"
+      "REVOCATION_REASON_CA_COMPROMISE\020\004\0225\n1CER"
+      "TIFICATE_REVOCATION_REASON_AFFILIATION_C"
+      "HANGED\020\005\022,\n(CERTIFICATE_REVOCATION_REASO"
+      "N_SUPERSEDED\020\006\0228\n4CERTIFICATE_REVOCATION"
+      "_REASON_CESSATION_OF_OPERATION\020\007\0222\n.CERT"
+      "IFICATE_REVOCATION_REASON_CERTIFICATE_HO"
+      "LD\020\010\0221\n-CERTIFICATE_REVOCATION_REASON_RE"
+      "MOVE_FROM_CRL\020\t\0225\n1CERTIFICATE_REVOCATIO"
+      "N_REASON_PRIVILEGE_WITHDRAWN\020\n\022/\n+CERTIF"
+      "ICATE_REVOCATION_REASON_AA_COMPROMISE\020\013b"
+      "\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 3751);
+      descriptor, 3847);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "certificate.proto", &protobuf_RegisterTypes);
   ::zsearch::protobuf_common_2eproto::AddDescriptors();
@@ -2156,6 +2162,9 @@ const int MozillaSalesForceStatus::kAuditSameAsParentFieldNumber;
 const int MozillaSalesForceStatus::kStandardAuditFieldNumber;
 const int MozillaSalesForceStatus::kBrAuditFieldNumber;
 const int MozillaSalesForceStatus::kAuditorFieldNumber;
+const int MozillaSalesForceStatus::kStandardAuditStatementTimestampFieldNumber;
+const int MozillaSalesForceStatus::kManagementAssertionsByFieldNumber;
+const int MozillaSalesForceStatus::kCommentsFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 MozillaSalesForceStatus::MozillaSalesForceStatus()
@@ -2203,9 +2212,17 @@ MozillaSalesForceStatus::MozillaSalesForceStatus(const MozillaSalesForceStatus& 
   if (from.auditor().size() > 0) {
     auditor_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.auditor_);
   }
+  management_assertions_by_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.management_assertions_by().size() > 0) {
+    management_assertions_by_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.management_assertions_by_);
+  }
+  comments_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.comments().size() > 0) {
+    comments_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.comments_);
+  }
   ::memcpy(&current_in_, &from.current_in_,
-    reinterpret_cast<char*>(&audit_same_as_parent_) -
-    reinterpret_cast<char*>(&current_in_) + sizeof(audit_same_as_parent_));
+    reinterpret_cast<char*>(&standard_audit_statement_timestamp_) -
+    reinterpret_cast<char*>(&current_in_) + sizeof(standard_audit_statement_timestamp_));
   // @@protoc_insertion_point(copy_constructor:zsearch.MozillaSalesForceStatus)
 }
 
@@ -2218,8 +2235,10 @@ void MozillaSalesForceStatus::SharedCtor() {
   standard_audit_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   br_audit_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   auditor_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  ::memset(&current_in_, 0, reinterpret_cast<char*>(&audit_same_as_parent_) -
-    reinterpret_cast<char*>(&current_in_) + sizeof(audit_same_as_parent_));
+  management_assertions_by_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  comments_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(&current_in_, 0, reinterpret_cast<char*>(&standard_audit_statement_timestamp_) -
+    reinterpret_cast<char*>(&current_in_) + sizeof(standard_audit_statement_timestamp_));
   _cached_size_ = 0;
 }
 
@@ -2237,6 +2256,8 @@ void MozillaSalesForceStatus::SharedDtor() {
   standard_audit_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   br_audit_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   auditor_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  management_assertions_by_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  comments_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
 void MozillaSalesForceStatus::SetCachedSize(int size) const {
@@ -2272,8 +2293,10 @@ void MozillaSalesForceStatus::Clear() {
   standard_audit_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   br_audit_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   auditor_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  ::memset(&current_in_, 0, reinterpret_cast<char*>(&audit_same_as_parent_) -
-    reinterpret_cast<char*>(&current_in_) + sizeof(audit_same_as_parent_));
+  management_assertions_by_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  comments_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(&current_in_, 0, reinterpret_cast<char*>(&standard_audit_statement_timestamp_) -
+    reinterpret_cast<char*>(&current_in_) + sizeof(standard_audit_statement_timestamp_));
 }
 
 bool MozillaSalesForceStatus::MergePartialFromCodedStream(
@@ -2458,6 +2481,49 @@ bool MozillaSalesForceStatus::MergePartialFromCodedStream(
         break;
       }
 
+      // uint32 standard_audit_statement_timestamp = 13;
+      case 13: {
+        if (tag == 104u) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &standard_audit_statement_timestamp_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string management_assertions_by = 14;
+      case 14: {
+        if (tag == 114u) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_management_assertions_by()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->management_assertions_by().data(), this->management_assertions_by().length(),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "zsearch.MozillaSalesForceStatus.management_assertions_by"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string comments = 15;
+      case 15: {
+        if (tag == 122u) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_comments()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->comments().data(), this->comments().length(),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "zsearch.MozillaSalesForceStatus.comments"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
       default: {
       handle_unusual:
         if (tag == 0 ||
@@ -2582,6 +2648,31 @@ void MozillaSalesForceStatus::SerializeWithCachedSizes(
       12, this->auditor(), output);
   }
 
+  // uint32 standard_audit_statement_timestamp = 13;
+  if (this->standard_audit_statement_timestamp() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(13, this->standard_audit_statement_timestamp(), output);
+  }
+
+  // string management_assertions_by = 14;
+  if (this->management_assertions_by().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->management_assertions_by().data(), this->management_assertions_by().length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "zsearch.MozillaSalesForceStatus.management_assertions_by");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      14, this->management_assertions_by(), output);
+  }
+
+  // string comments = 15;
+  if (this->comments().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->comments().data(), this->comments().length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "zsearch.MozillaSalesForceStatus.comments");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      15, this->comments(), output);
+  }
+
   // @@protoc_insertion_point(serialize_end:zsearch.MozillaSalesForceStatus)
 }
 
@@ -2697,6 +2788,33 @@ void MozillaSalesForceStatus::SerializeWithCachedSizes(
         12, this->auditor(), target);
   }
 
+  // uint32 standard_audit_statement_timestamp = 13;
+  if (this->standard_audit_statement_timestamp() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(13, this->standard_audit_statement_timestamp(), target);
+  }
+
+  // string management_assertions_by = 14;
+  if (this->management_assertions_by().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->management_assertions_by().data(), this->management_assertions_by().length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "zsearch.MozillaSalesForceStatus.management_assertions_by");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        14, this->management_assertions_by(), target);
+  }
+
+  // string comments = 15;
+  if (this->comments().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->comments().data(), this->comments().length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "zsearch.MozillaSalesForceStatus.comments");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        15, this->comments(), target);
+  }
+
   // @@protoc_insertion_point(serialize_to_array_end:zsearch.MozillaSalesForceStatus)
   return target;
 }
@@ -2761,6 +2879,20 @@ size_t MozillaSalesForceStatus::ByteSizeLong() const {
         this->auditor());
   }
 
+  // string management_assertions_by = 14;
+  if (this->management_assertions_by().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->management_assertions_by());
+  }
+
+  // string comments = 15;
+  if (this->comments().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->comments());
+  }
+
   // bool current_in = 1;
   if (this->current_in() != 0) {
     total_size += 1 + 1;
@@ -2779,6 +2911,13 @@ size_t MozillaSalesForceStatus::ByteSizeLong() const {
   // bool audit_same_as_parent = 9;
   if (this->audit_same_as_parent() != 0) {
     total_size += 1 + 1;
+  }
+
+  // uint32 standard_audit_statement_timestamp = 13;
+  if (this->standard_audit_statement_timestamp() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::UInt32Size(
+        this->standard_audit_statement_timestamp());
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
@@ -2839,6 +2978,14 @@ void MozillaSalesForceStatus::MergeFrom(const MozillaSalesForceStatus& from) {
 
     auditor_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.auditor_);
   }
+  if (from.management_assertions_by().size() > 0) {
+
+    management_assertions_by_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.management_assertions_by_);
+  }
+  if (from.comments().size() > 0) {
+
+    comments_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.comments_);
+  }
   if (from.current_in() != 0) {
     set_current_in(from.current_in());
   }
@@ -2850,6 +2997,9 @@ void MozillaSalesForceStatus::MergeFrom(const MozillaSalesForceStatus& from) {
   }
   if (from.audit_same_as_parent() != 0) {
     set_audit_same_as_parent(from.audit_same_as_parent());
+  }
+  if (from.standard_audit_statement_timestamp() != 0) {
+    set_standard_audit_statement_timestamp(from.standard_audit_statement_timestamp());
   }
 }
 
@@ -2884,10 +3034,13 @@ void MozillaSalesForceStatus::InternalSwap(MozillaSalesForceStatus* other) {
   standard_audit_.Swap(&other->standard_audit_);
   br_audit_.Swap(&other->br_audit_);
   auditor_.Swap(&other->auditor_);
+  management_assertions_by_.Swap(&other->management_assertions_by_);
+  comments_.Swap(&other->comments_);
   std::swap(current_in_, other->current_in_);
   std::swap(was_in_, other->was_in_);
   std::swap(cp_same_as_parent_, other->cp_same_as_parent_);
   std::swap(audit_same_as_parent_, other->audit_same_as_parent_);
+  std::swap(standard_audit_statement_timestamp_, other->standard_audit_statement_timestamp_);
   std::swap(_cached_size_, other->_cached_size_);
 }
 
@@ -3369,6 +3522,124 @@ void MozillaSalesForceStatus::set_allocated_auditor(::std::string* auditor) {
   }
   auditor_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), auditor);
   // @@protoc_insertion_point(field_set_allocated:zsearch.MozillaSalesForceStatus.auditor)
+}
+
+// uint32 standard_audit_statement_timestamp = 13;
+void MozillaSalesForceStatus::clear_standard_audit_statement_timestamp() {
+  standard_audit_statement_timestamp_ = 0u;
+}
+::google::protobuf::uint32 MozillaSalesForceStatus::standard_audit_statement_timestamp() const {
+  // @@protoc_insertion_point(field_get:zsearch.MozillaSalesForceStatus.standard_audit_statement_timestamp)
+  return standard_audit_statement_timestamp_;
+}
+void MozillaSalesForceStatus::set_standard_audit_statement_timestamp(::google::protobuf::uint32 value) {
+  
+  standard_audit_statement_timestamp_ = value;
+  // @@protoc_insertion_point(field_set:zsearch.MozillaSalesForceStatus.standard_audit_statement_timestamp)
+}
+
+// string management_assertions_by = 14;
+void MozillaSalesForceStatus::clear_management_assertions_by() {
+  management_assertions_by_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+const ::std::string& MozillaSalesForceStatus::management_assertions_by() const {
+  // @@protoc_insertion_point(field_get:zsearch.MozillaSalesForceStatus.management_assertions_by)
+  return management_assertions_by_.GetNoArena();
+}
+void MozillaSalesForceStatus::set_management_assertions_by(const ::std::string& value) {
+  
+  management_assertions_by_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zsearch.MozillaSalesForceStatus.management_assertions_by)
+}
+#if LANG_CXX11
+void MozillaSalesForceStatus::set_management_assertions_by(::std::string&& value) {
+  
+  management_assertions_by_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.MozillaSalesForceStatus.management_assertions_by)
+}
+#endif
+void MozillaSalesForceStatus::set_management_assertions_by(const char* value) {
+  
+  management_assertions_by_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zsearch.MozillaSalesForceStatus.management_assertions_by)
+}
+void MozillaSalesForceStatus::set_management_assertions_by(const char* value, size_t size) {
+  
+  management_assertions_by_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zsearch.MozillaSalesForceStatus.management_assertions_by)
+}
+::std::string* MozillaSalesForceStatus::mutable_management_assertions_by() {
+  
+  // @@protoc_insertion_point(field_mutable:zsearch.MozillaSalesForceStatus.management_assertions_by)
+  return management_assertions_by_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+::std::string* MozillaSalesForceStatus::release_management_assertions_by() {
+  // @@protoc_insertion_point(field_release:zsearch.MozillaSalesForceStatus.management_assertions_by)
+  
+  return management_assertions_by_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+void MozillaSalesForceStatus::set_allocated_management_assertions_by(::std::string* management_assertions_by) {
+  if (management_assertions_by != NULL) {
+    
+  } else {
+    
+  }
+  management_assertions_by_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), management_assertions_by);
+  // @@protoc_insertion_point(field_set_allocated:zsearch.MozillaSalesForceStatus.management_assertions_by)
+}
+
+// string comments = 15;
+void MozillaSalesForceStatus::clear_comments() {
+  comments_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+const ::std::string& MozillaSalesForceStatus::comments() const {
+  // @@protoc_insertion_point(field_get:zsearch.MozillaSalesForceStatus.comments)
+  return comments_.GetNoArena();
+}
+void MozillaSalesForceStatus::set_comments(const ::std::string& value) {
+  
+  comments_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zsearch.MozillaSalesForceStatus.comments)
+}
+#if LANG_CXX11
+void MozillaSalesForceStatus::set_comments(::std::string&& value) {
+  
+  comments_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.MozillaSalesForceStatus.comments)
+}
+#endif
+void MozillaSalesForceStatus::set_comments(const char* value) {
+  
+  comments_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zsearch.MozillaSalesForceStatus.comments)
+}
+void MozillaSalesForceStatus::set_comments(const char* value, size_t size) {
+  
+  comments_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zsearch.MozillaSalesForceStatus.comments)
+}
+::std::string* MozillaSalesForceStatus::mutable_comments() {
+  
+  // @@protoc_insertion_point(field_mutable:zsearch.MozillaSalesForceStatus.comments)
+  return comments_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+::std::string* MozillaSalesForceStatus::release_comments() {
+  // @@protoc_insertion_point(field_release:zsearch.MozillaSalesForceStatus.comments)
+  
+  return comments_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+void MozillaSalesForceStatus::set_allocated_comments(::std::string* comments) {
+  if (comments != NULL) {
+    
+  } else {
+    
+  }
+  comments_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), comments);
+  // @@protoc_insertion_point(field_set_allocated:zsearch.MozillaSalesForceStatus.comments)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS

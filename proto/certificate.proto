@@ -78,7 +78,7 @@ message RootStoreStatus {
     // True if the certificate is explicitly whitelisted, e.g. the set of
     // trusted WoSign certificates Apple uses.
     bool whitelisted = 6;
-    
+
     // Indicates if the certificate is a root, intermediate, or leaf.
     CertificateType type = 7;
 
@@ -117,6 +117,9 @@ message MozillaSalesForceStatus {
     string standard_audit = 10;
     string br_audit = 11;
     string auditor = 12;
+    uint32 standard_audit_statement_timestamp = 13;
+    string management_assertions_by = 14;
+    string comments = 15;
 }
 
 

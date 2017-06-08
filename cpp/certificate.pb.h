@@ -776,6 +776,34 @@ class MozillaSalesForceStatus : public ::google::protobuf::Message /* @@protoc_i
   ::std::string* release_auditor();
   void set_allocated_auditor(::std::string* auditor);
 
+  // string management_assertions_by = 14;
+  void clear_management_assertions_by();
+  static const int kManagementAssertionsByFieldNumber = 14;
+  const ::std::string& management_assertions_by() const;
+  void set_management_assertions_by(const ::std::string& value);
+  #if LANG_CXX11
+  void set_management_assertions_by(::std::string&& value);
+  #endif
+  void set_management_assertions_by(const char* value);
+  void set_management_assertions_by(const char* value, size_t size);
+  ::std::string* mutable_management_assertions_by();
+  ::std::string* release_management_assertions_by();
+  void set_allocated_management_assertions_by(::std::string* management_assertions_by);
+
+  // string comments = 15;
+  void clear_comments();
+  static const int kCommentsFieldNumber = 15;
+  const ::std::string& comments() const;
+  void set_comments(const ::std::string& value);
+  #if LANG_CXX11
+  void set_comments(::std::string&& value);
+  #endif
+  void set_comments(const char* value);
+  void set_comments(const char* value, size_t size);
+  ::std::string* mutable_comments();
+  ::std::string* release_comments();
+  void set_allocated_comments(::std::string* comments);
+
   // bool current_in = 1;
   void clear_current_in();
   static const int kCurrentInFieldNumber = 1;
@@ -800,6 +828,12 @@ class MozillaSalesForceStatus : public ::google::protobuf::Message /* @@protoc_i
   bool audit_same_as_parent() const;
   void set_audit_same_as_parent(bool value);
 
+  // uint32 standard_audit_statement_timestamp = 13;
+  void clear_standard_audit_statement_timestamp();
+  static const int kStandardAuditStatementTimestampFieldNumber = 13;
+  ::google::protobuf::uint32 standard_audit_statement_timestamp() const;
+  void set_standard_audit_statement_timestamp(::google::protobuf::uint32 value);
+
   // @@protoc_insertion_point(class_scope:zsearch.MozillaSalesForceStatus)
  private:
 
@@ -812,10 +846,13 @@ class MozillaSalesForceStatus : public ::google::protobuf::Message /* @@protoc_i
   ::google::protobuf::internal::ArenaStringPtr standard_audit_;
   ::google::protobuf::internal::ArenaStringPtr br_audit_;
   ::google::protobuf::internal::ArenaStringPtr auditor_;
+  ::google::protobuf::internal::ArenaStringPtr management_assertions_by_;
+  ::google::protobuf::internal::ArenaStringPtr comments_;
   bool current_in_;
   bool was_in_;
   bool cp_same_as_parent_;
   bool audit_same_as_parent_;
+  ::google::protobuf::uint32 standard_audit_statement_timestamp_;
   mutable int _cached_size_;
   friend struct  protobuf_certificate_2eproto::TableStruct;
 };
@@ -2433,6 +2470,124 @@ inline void MozillaSalesForceStatus::set_allocated_auditor(::std::string* audito
   }
   auditor_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), auditor);
   // @@protoc_insertion_point(field_set_allocated:zsearch.MozillaSalesForceStatus.auditor)
+}
+
+// uint32 standard_audit_statement_timestamp = 13;
+inline void MozillaSalesForceStatus::clear_standard_audit_statement_timestamp() {
+  standard_audit_statement_timestamp_ = 0u;
+}
+inline ::google::protobuf::uint32 MozillaSalesForceStatus::standard_audit_statement_timestamp() const {
+  // @@protoc_insertion_point(field_get:zsearch.MozillaSalesForceStatus.standard_audit_statement_timestamp)
+  return standard_audit_statement_timestamp_;
+}
+inline void MozillaSalesForceStatus::set_standard_audit_statement_timestamp(::google::protobuf::uint32 value) {
+  
+  standard_audit_statement_timestamp_ = value;
+  // @@protoc_insertion_point(field_set:zsearch.MozillaSalesForceStatus.standard_audit_statement_timestamp)
+}
+
+// string management_assertions_by = 14;
+inline void MozillaSalesForceStatus::clear_management_assertions_by() {
+  management_assertions_by_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& MozillaSalesForceStatus::management_assertions_by() const {
+  // @@protoc_insertion_point(field_get:zsearch.MozillaSalesForceStatus.management_assertions_by)
+  return management_assertions_by_.GetNoArena();
+}
+inline void MozillaSalesForceStatus::set_management_assertions_by(const ::std::string& value) {
+  
+  management_assertions_by_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zsearch.MozillaSalesForceStatus.management_assertions_by)
+}
+#if LANG_CXX11
+inline void MozillaSalesForceStatus::set_management_assertions_by(::std::string&& value) {
+  
+  management_assertions_by_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.MozillaSalesForceStatus.management_assertions_by)
+}
+#endif
+inline void MozillaSalesForceStatus::set_management_assertions_by(const char* value) {
+  
+  management_assertions_by_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zsearch.MozillaSalesForceStatus.management_assertions_by)
+}
+inline void MozillaSalesForceStatus::set_management_assertions_by(const char* value, size_t size) {
+  
+  management_assertions_by_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zsearch.MozillaSalesForceStatus.management_assertions_by)
+}
+inline ::std::string* MozillaSalesForceStatus::mutable_management_assertions_by() {
+  
+  // @@protoc_insertion_point(field_mutable:zsearch.MozillaSalesForceStatus.management_assertions_by)
+  return management_assertions_by_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* MozillaSalesForceStatus::release_management_assertions_by() {
+  // @@protoc_insertion_point(field_release:zsearch.MozillaSalesForceStatus.management_assertions_by)
+  
+  return management_assertions_by_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void MozillaSalesForceStatus::set_allocated_management_assertions_by(::std::string* management_assertions_by) {
+  if (management_assertions_by != NULL) {
+    
+  } else {
+    
+  }
+  management_assertions_by_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), management_assertions_by);
+  // @@protoc_insertion_point(field_set_allocated:zsearch.MozillaSalesForceStatus.management_assertions_by)
+}
+
+// string comments = 15;
+inline void MozillaSalesForceStatus::clear_comments() {
+  comments_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& MozillaSalesForceStatus::comments() const {
+  // @@protoc_insertion_point(field_get:zsearch.MozillaSalesForceStatus.comments)
+  return comments_.GetNoArena();
+}
+inline void MozillaSalesForceStatus::set_comments(const ::std::string& value) {
+  
+  comments_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zsearch.MozillaSalesForceStatus.comments)
+}
+#if LANG_CXX11
+inline void MozillaSalesForceStatus::set_comments(::std::string&& value) {
+  
+  comments_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.MozillaSalesForceStatus.comments)
+}
+#endif
+inline void MozillaSalesForceStatus::set_comments(const char* value) {
+  
+  comments_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zsearch.MozillaSalesForceStatus.comments)
+}
+inline void MozillaSalesForceStatus::set_comments(const char* value, size_t size) {
+  
+  comments_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zsearch.MozillaSalesForceStatus.comments)
+}
+inline ::std::string* MozillaSalesForceStatus::mutable_comments() {
+  
+  // @@protoc_insertion_point(field_mutable:zsearch.MozillaSalesForceStatus.comments)
+  return comments_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* MozillaSalesForceStatus::release_comments() {
+  // @@protoc_insertion_point(field_release:zsearch.MozillaSalesForceStatus.comments)
+  
+  return comments_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void MozillaSalesForceStatus::set_allocated_comments(::std::string* comments) {
+  if (comments != NULL) {
+    
+  } else {
+    
+  }
+  comments_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), comments);
+  // @@protoc_insertion_point(field_set_allocated:zsearch.MozillaSalesForceStatus.comments)
 }
 
 // -------------------------------------------------------------------

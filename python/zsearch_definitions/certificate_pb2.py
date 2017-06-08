@@ -23,7 +23,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='certificate.proto',
   package='zsearch',
   syntax='proto3',
-  serialized_pb=_b('\n\x11\x63\x65rtificate.proto\x12\x07zsearch\x1a\x0c\x63ommon.proto\x1a\x0bzlint.proto\x1a\x08\x63t.proto\"\x18\n\x04Path\x12\x10\n\x08sha256fp\x18\x01 \x03(\x0c\"\x87\x02\n\x0fRootStoreStatus\x12\r\n\x05valid\x18\x01 \x01(\x08\x12\x11\n\twas_valid\x18\x02 \x01(\x08\x12\x14\n\x0ctrusted_path\x18\x03 \x01(\x08\x12\x18\n\x10had_trusted_path\x18\x04 \x01(\x08\x12\x13\n\x0b\x62lacklisted\x18\x05 \x01(\x08\x12\x13\n\x0bwhitelisted\x18\x06 \x01(\x08\x12&\n\x04type\x18\x07 \x01(\x0e\x32\x18.zsearch.CertificateType\x12$\n\rtrusted_paths\x18\x08 \x03(\x0b\x32\r.zsearch.Path\x12\x19\n\x11in_revocation_set\x18\t \x01(\x08\x12\x0f\n\x07parents\x18\n \x03(\x0c\"\x9c\x02\n\x15\x43\x65rtificateValidation\x12%\n\x03nss\x18\x01 \x01(\x0b\x32\x18.zsearch.RootStoreStatus\x12+\n\tmicrosoft\x18\x02 \x01(\x0b\x32\x18.zsearch.RootStoreStatus\x12\'\n\x05\x61pple\x18\x03 \x01(\x0b\x32\x18.zsearch.RootStoreStatus\x12&\n\x04java\x18\x04 \x01(\x0b\x32\x18.zsearch.RootStoreStatus\x12)\n\x07\x61ndroid\x18\x05 \x01(\x0b\x32\x18.zsearch.RootStoreStatus\x12\x33\n\x11google_ct_primary\x18\n \x01(\x0b\x32\x18.zsearch.RootStoreStatus\"\xba\x02\n\x17MozillaSalesForceStatus\x12\x12\n\ncurrent_in\x18\x01 \x01(\x08\x12\x0e\n\x06was_in\x18\x02 \x01(\x08\x12\x12\n\nowner_name\x18\x03 \x01(\t\x12\x13\n\x0bparent_name\x18\x04 \x01(\t\x12\x18\n\x10\x63\x65rtificate_name\x18\x05 \x01(\t\x12\x1a\n\x12\x63\x65rtificate_policy\x18\x06 \x01(\t\x12(\n certification_practice_statement\x18\x07 \x01(\t\x12\x19\n\x11\x63p_same_as_parent\x18\x08 \x01(\x08\x12\x1c\n\x14\x61udit_same_as_parent\x18\t \x01(\x08\x12\x16\n\x0estandard_audit\x18\n \x01(\t\x12\x10\n\x08\x62r_audit\x18\x0b \x01(\t\x12\x0f\n\x07\x61uditor\x18\x0c \x01(\t\"^\n\x15\x43\x65rtificateRevocation\x12\x0f\n\x07revoked\x18\x01 \x01(\x08\x12\x34\n\x06reason\x18\x02 \x01(\x0e\x32$.zsearch.CertificateRevocationReason\"E\n\x10\x43\x65rtificateAudit\x12\x31\n\x07mozilla\x18\x01 \x01(\x0b\x32 .zsearch.MozillaSalesForceStatus\"\xff\t\n\x0b\x43\x65rtificate\x12\x0e\n\x06sha1fp\x18\x01 \x01(\x0c\x12\x10\n\x08sha256fp\x18\x02 \x01(\x0c\x12\x0b\n\x03raw\x18\x03 \x01(\x0c\x12\x0e\n\x06parsed\x18\x04 \x01(\t\x12\x35\n\x0cparse_status\x18, \x01(\x0e\x32\x1f.zsearch.CertificateParseStatus\x12\x15\n\rparse_version\x18\' \x01(\r\x12\x13\n\x0bparse_error\x18/ \x01(\t\x12\x0f\n\x07parents\x18\x05 \x03(\x0c\x12\x17\n\x0fpresented_chain\x18- \x03(\x0c\x12*\n\x06source\x18\x1c \x01(\x0e\x32\x1a.zsearch.CertificateSource\x12\x14\n\x0cseen_in_scan\x18\x1d \x01(\x08\x12\x16\n\x0epost_processed\x18\x1a \x01(\x08\x12\x1e\n\x16post_process_timestamp\x18% \x01(\r\x12\x32\n\nvalidation\x18# \x01(\x0b\x32\x1e.zsearch.CertificateValidation\x12\x1d\n\x02\x63t\x18\x1e \x01(\x0b\x32\x11.zsearch.CTStatus\x12\x1d\n\x05zlint\x18& \x01(\x0b\x32\x0e.zsearch.ZLint\x12\x32\n\nrevocation\x18+ \x01(\x0b\x32\x1e.zsearch.CertificateRevocation\x12(\n\x05\x61udit\x18. \x01(\x0b\x32\x19.zsearch.CertificateAudit\x12\x12\n\nis_precert\x18  \x01(\x08\x12\x17\n\x0fnot_valid_after\x18) \x01(\r\x12\x18\n\x10not_valid_before\x18* \x01(\r\x12\x0f\n\x07\x65xpired\x18\x30 \x01(\x08\x12\x0e\n\x06in_nss\x18\x06 \x01(\x08\x12\x18\n\x0cin_microsoft\x18\x07 \x01(\x08\x42\x02\x18\x01\x12\x14\n\x08in_apple\x18\x08 \x01(\x08\x42\x02\x18\x01\x12\x1c\n\x14validation_timestamp\x18\n \x01(\r\x12\x15\n\tvalid_nss\x18\x0b \x01(\x08\x42\x02\x18\x01\x12\x1b\n\x0fvalid_microsoft\x18\x0c \x01(\x08\x42\x02\x18\x01\x12\x17\n\x0bvalid_apple\x18\r \x01(\x08\x42\x02\x18\x01\x12\x15\n\rwas_valid_nss\x18\x0e \x01(\x08\x12\x1f\n\x13was_valid_microsoft\x18\x0f \x01(\x08\x42\x02\x18\x01\x12\x1b\n\x0fwas_valid_apple\x18\x10 \x01(\x08\x42\x02\x18\x01\x12\x16\n\nwas_in_nss\x18\x11 \x01(\x08\x42\x02\x18\x01\x12\x1c\n\x10was_in_microsoft\x18\x12 \x01(\x08\x42\x02\x18\x01\x12\x18\n\x0cwas_in_apple\x18\x13 \x01(\x08\x42\x02\x18\x01\x12\x19\n\x11\x63urrent_valid_nss\x18\x14 \x01(\x08\x12#\n\x17\x63urrent_valid_microsoft\x18\x15 \x01(\x08\x42\x02\x18\x01\x12\x1f\n\x13\x63urrent_valid_apple\x18\x16 \x01(\x08\x42\x02\x18\x01\x12\x16\n\x0e\x63urrent_in_nss\x18\x17 \x01(\x08\x12 \n\x14\x63urrent_in_microsoft\x18\x18 \x01(\x08\x42\x02\x18\x01\x12\x1c\n\x10\x63urrent_in_apple\x18\x19 \x01(\x08\x42\x02\x18\x01\x12\x37\n\tnss_audit\x18\x1f \x01(\x0b\x32 .zsearch.MozillaSalesForceStatusB\x02\x18\x01\x12\x1f\n\x13should_post_process\x18\x1b \x01(\x08\x42\x02\x18\x01\x12\x1f\n\x13\x64o_not_post_process\x18$ \x01(\x08\x42\x02\x18\x01*\xa7\x01\n\x0f\x43\x65rtificateType\x12\x1d\n\x19\x43\x45RTIFICATE_TYPE_RESERVED\x10\x00\x12\x1c\n\x18\x43\x45RTIFICATE_TYPE_UNKNOWN\x10\x01\x12\x19\n\x15\x43\x45RTIFICATE_TYPE_LEAF\x10\x02\x12!\n\x1d\x43\x45RTIFICATE_TYPE_INTERMEDIATE\x10\x03\x12\x19\n\x15\x43\x45RTIFICATE_TYPE_ROOT\x10\x04*\xb7\x02\n\x11\x43\x65rtificateSource\x12\x1f\n\x1b\x43\x45RTIFICATE_SOURCE_RESERVED\x10\x00\x12\x1e\n\x1a\x43\x45RTIFICATE_SOURCE_UNKNOWN\x10\x01\x12\x1b\n\x17\x43\x45RTIFICATE_SOURCE_SCAN\x10\x02\x12\x19\n\x15\x43\x45RTIFICATE_SOURCE_CT\x10\x03\x12)\n%CERTIFICATE_SOURCE_MOZILLA_SALESFORCE\x10\x04\x12\x1f\n\x1b\x43\x45RTIFICATE_SOURCE_RESEARCH\x10\x05\x12\x1d\n\x19\x43\x45RTIFICATE_SOURCE_RAPID7\x10\x06\x12\x1d\n\x19\x43\x45RTIFICATE_SOURCE_HUBBLE\x10\x07\x12\x1f\n\x1b\x43\x45RTIFICATE_SOURCE_CT_CHAIN\x10\x08*\xd7\x01\n\x16\x43\x65rtificateParseStatus\x12%\n!CERTIFICATE_PARSE_STATUS_RESERVED\x10\x00\x12$\n CERTIFICATE_PARSE_STATUS_UNKNOWN\x10\x01\x12$\n CERTIFICATE_PARSE_STATUS_SUCCESS\x10\x02\x12!\n\x1d\x43\x45RTIFICATE_PARSE_STATUS_FAIL\x10\x03\x12\'\n#CERTIFICATE_PARSE_STATUS_NOT_PARSED\x10\x04*\xf4\x04\n\x1b\x43\x65rtificateRevocationReason\x12*\n&CERTIFICATE_REVOCATION_REASON_RESERVED\x10\x00\x12)\n%CERTIFICATE_REVOCATION_REASON_UNKNOWN\x10\x01\x12-\n)CERTIFICATE_REVOCATION_REASON_UNSPECIFIED\x10\x02\x12\x30\n,CERTIFICATE_REVOCATION_REASON_KEY_COMPROMISE\x10\x03\x12/\n+CERTIFICATE_REVOCATION_REASON_CA_COMPROMISE\x10\x04\x12\x35\n1CERTIFICATE_REVOCATION_REASON_AFFILIATION_CHANGED\x10\x05\x12,\n(CERTIFICATE_REVOCATION_REASON_SUPERSEDED\x10\x06\x12\x38\n4CERTIFICATE_REVOCATION_REASON_CESSATION_OF_OPERATION\x10\x07\x12\x32\n.CERTIFICATE_REVOCATION_REASON_CERTIFICATE_HOLD\x10\x08\x12\x31\n-CERTIFICATE_REVOCATION_REASON_REMOVE_FROM_CRL\x10\t\x12\x35\n1CERTIFICATE_REVOCATION_REASON_PRIVILEGE_WITHDRAWN\x10\n\x12/\n+CERTIFICATE_REVOCATION_REASON_AA_COMPROMISE\x10\x0b\x62\x06proto3')
+  serialized_pb=_b('\n\x11\x63\x65rtificate.proto\x12\x07zsearch\x1a\x0c\x63ommon.proto\x1a\x0bzlint.proto\x1a\x08\x63t.proto\"\x18\n\x04Path\x12\x10\n\x08sha256fp\x18\x01 \x03(\x0c\"\x87\x02\n\x0fRootStoreStatus\x12\r\n\x05valid\x18\x01 \x01(\x08\x12\x11\n\twas_valid\x18\x02 \x01(\x08\x12\x14\n\x0ctrusted_path\x18\x03 \x01(\x08\x12\x18\n\x10had_trusted_path\x18\x04 \x01(\x08\x12\x13\n\x0b\x62lacklisted\x18\x05 \x01(\x08\x12\x13\n\x0bwhitelisted\x18\x06 \x01(\x08\x12&\n\x04type\x18\x07 \x01(\x0e\x32\x18.zsearch.CertificateType\x12$\n\rtrusted_paths\x18\x08 \x03(\x0b\x32\r.zsearch.Path\x12\x19\n\x11in_revocation_set\x18\t \x01(\x08\x12\x0f\n\x07parents\x18\n \x03(\x0c\"\x9c\x02\n\x15\x43\x65rtificateValidation\x12%\n\x03nss\x18\x01 \x01(\x0b\x32\x18.zsearch.RootStoreStatus\x12+\n\tmicrosoft\x18\x02 \x01(\x0b\x32\x18.zsearch.RootStoreStatus\x12\'\n\x05\x61pple\x18\x03 \x01(\x0b\x32\x18.zsearch.RootStoreStatus\x12&\n\x04java\x18\x04 \x01(\x0b\x32\x18.zsearch.RootStoreStatus\x12)\n\x07\x61ndroid\x18\x05 \x01(\x0b\x32\x18.zsearch.RootStoreStatus\x12\x33\n\x11google_ct_primary\x18\n \x01(\x0b\x32\x18.zsearch.RootStoreStatus\"\x9a\x03\n\x17MozillaSalesForceStatus\x12\x12\n\ncurrent_in\x18\x01 \x01(\x08\x12\x0e\n\x06was_in\x18\x02 \x01(\x08\x12\x12\n\nowner_name\x18\x03 \x01(\t\x12\x13\n\x0bparent_name\x18\x04 \x01(\t\x12\x18\n\x10\x63\x65rtificate_name\x18\x05 \x01(\t\x12\x1a\n\x12\x63\x65rtificate_policy\x18\x06 \x01(\t\x12(\n certification_practice_statement\x18\x07 \x01(\t\x12\x19\n\x11\x63p_same_as_parent\x18\x08 \x01(\x08\x12\x1c\n\x14\x61udit_same_as_parent\x18\t \x01(\x08\x12\x16\n\x0estandard_audit\x18\n \x01(\t\x12\x10\n\x08\x62r_audit\x18\x0b \x01(\t\x12\x0f\n\x07\x61uditor\x18\x0c \x01(\t\x12*\n\"standard_audit_statement_timestamp\x18\r \x01(\r\x12 \n\x18management_assertions_by\x18\x0e \x01(\t\x12\x10\n\x08\x63omments\x18\x0f \x01(\t\"^\n\x15\x43\x65rtificateRevocation\x12\x0f\n\x07revoked\x18\x01 \x01(\x08\x12\x34\n\x06reason\x18\x02 \x01(\x0e\x32$.zsearch.CertificateRevocationReason\"E\n\x10\x43\x65rtificateAudit\x12\x31\n\x07mozilla\x18\x01 \x01(\x0b\x32 .zsearch.MozillaSalesForceStatus\"\xff\t\n\x0b\x43\x65rtificate\x12\x0e\n\x06sha1fp\x18\x01 \x01(\x0c\x12\x10\n\x08sha256fp\x18\x02 \x01(\x0c\x12\x0b\n\x03raw\x18\x03 \x01(\x0c\x12\x0e\n\x06parsed\x18\x04 \x01(\t\x12\x35\n\x0cparse_status\x18, \x01(\x0e\x32\x1f.zsearch.CertificateParseStatus\x12\x15\n\rparse_version\x18\' \x01(\r\x12\x13\n\x0bparse_error\x18/ \x01(\t\x12\x0f\n\x07parents\x18\x05 \x03(\x0c\x12\x17\n\x0fpresented_chain\x18- \x03(\x0c\x12*\n\x06source\x18\x1c \x01(\x0e\x32\x1a.zsearch.CertificateSource\x12\x14\n\x0cseen_in_scan\x18\x1d \x01(\x08\x12\x16\n\x0epost_processed\x18\x1a \x01(\x08\x12\x1e\n\x16post_process_timestamp\x18% \x01(\r\x12\x32\n\nvalidation\x18# \x01(\x0b\x32\x1e.zsearch.CertificateValidation\x12\x1d\n\x02\x63t\x18\x1e \x01(\x0b\x32\x11.zsearch.CTStatus\x12\x1d\n\x05zlint\x18& \x01(\x0b\x32\x0e.zsearch.ZLint\x12\x32\n\nrevocation\x18+ \x01(\x0b\x32\x1e.zsearch.CertificateRevocation\x12(\n\x05\x61udit\x18. \x01(\x0b\x32\x19.zsearch.CertificateAudit\x12\x12\n\nis_precert\x18  \x01(\x08\x12\x17\n\x0fnot_valid_after\x18) \x01(\r\x12\x18\n\x10not_valid_before\x18* \x01(\r\x12\x0f\n\x07\x65xpired\x18\x30 \x01(\x08\x12\x0e\n\x06in_nss\x18\x06 \x01(\x08\x12\x18\n\x0cin_microsoft\x18\x07 \x01(\x08\x42\x02\x18\x01\x12\x14\n\x08in_apple\x18\x08 \x01(\x08\x42\x02\x18\x01\x12\x1c\n\x14validation_timestamp\x18\n \x01(\r\x12\x15\n\tvalid_nss\x18\x0b \x01(\x08\x42\x02\x18\x01\x12\x1b\n\x0fvalid_microsoft\x18\x0c \x01(\x08\x42\x02\x18\x01\x12\x17\n\x0bvalid_apple\x18\r \x01(\x08\x42\x02\x18\x01\x12\x15\n\rwas_valid_nss\x18\x0e \x01(\x08\x12\x1f\n\x13was_valid_microsoft\x18\x0f \x01(\x08\x42\x02\x18\x01\x12\x1b\n\x0fwas_valid_apple\x18\x10 \x01(\x08\x42\x02\x18\x01\x12\x16\n\nwas_in_nss\x18\x11 \x01(\x08\x42\x02\x18\x01\x12\x1c\n\x10was_in_microsoft\x18\x12 \x01(\x08\x42\x02\x18\x01\x12\x18\n\x0cwas_in_apple\x18\x13 \x01(\x08\x42\x02\x18\x01\x12\x19\n\x11\x63urrent_valid_nss\x18\x14 \x01(\x08\x12#\n\x17\x63urrent_valid_microsoft\x18\x15 \x01(\x08\x42\x02\x18\x01\x12\x1f\n\x13\x63urrent_valid_apple\x18\x16 \x01(\x08\x42\x02\x18\x01\x12\x16\n\x0e\x63urrent_in_nss\x18\x17 \x01(\x08\x12 \n\x14\x63urrent_in_microsoft\x18\x18 \x01(\x08\x42\x02\x18\x01\x12\x1c\n\x10\x63urrent_in_apple\x18\x19 \x01(\x08\x42\x02\x18\x01\x12\x37\n\tnss_audit\x18\x1f \x01(\x0b\x32 .zsearch.MozillaSalesForceStatusB\x02\x18\x01\x12\x1f\n\x13should_post_process\x18\x1b \x01(\x08\x42\x02\x18\x01\x12\x1f\n\x13\x64o_not_post_process\x18$ \x01(\x08\x42\x02\x18\x01*\xa7\x01\n\x0f\x43\x65rtificateType\x12\x1d\n\x19\x43\x45RTIFICATE_TYPE_RESERVED\x10\x00\x12\x1c\n\x18\x43\x45RTIFICATE_TYPE_UNKNOWN\x10\x01\x12\x19\n\x15\x43\x45RTIFICATE_TYPE_LEAF\x10\x02\x12!\n\x1d\x43\x45RTIFICATE_TYPE_INTERMEDIATE\x10\x03\x12\x19\n\x15\x43\x45RTIFICATE_TYPE_ROOT\x10\x04*\xb7\x02\n\x11\x43\x65rtificateSource\x12\x1f\n\x1b\x43\x45RTIFICATE_SOURCE_RESERVED\x10\x00\x12\x1e\n\x1a\x43\x45RTIFICATE_SOURCE_UNKNOWN\x10\x01\x12\x1b\n\x17\x43\x45RTIFICATE_SOURCE_SCAN\x10\x02\x12\x19\n\x15\x43\x45RTIFICATE_SOURCE_CT\x10\x03\x12)\n%CERTIFICATE_SOURCE_MOZILLA_SALESFORCE\x10\x04\x12\x1f\n\x1b\x43\x45RTIFICATE_SOURCE_RESEARCH\x10\x05\x12\x1d\n\x19\x43\x45RTIFICATE_SOURCE_RAPID7\x10\x06\x12\x1d\n\x19\x43\x45RTIFICATE_SOURCE_HUBBLE\x10\x07\x12\x1f\n\x1b\x43\x45RTIFICATE_SOURCE_CT_CHAIN\x10\x08*\xd7\x01\n\x16\x43\x65rtificateParseStatus\x12%\n!CERTIFICATE_PARSE_STATUS_RESERVED\x10\x00\x12$\n CERTIFICATE_PARSE_STATUS_UNKNOWN\x10\x01\x12$\n CERTIFICATE_PARSE_STATUS_SUCCESS\x10\x02\x12!\n\x1d\x43\x45RTIFICATE_PARSE_STATUS_FAIL\x10\x03\x12\'\n#CERTIFICATE_PARSE_STATUS_NOT_PARSED\x10\x04*\xf4\x04\n\x1b\x43\x65rtificateRevocationReason\x12*\n&CERTIFICATE_REVOCATION_REASON_RESERVED\x10\x00\x12)\n%CERTIFICATE_REVOCATION_REASON_UNKNOWN\x10\x01\x12-\n)CERTIFICATE_REVOCATION_REASON_UNSPECIFIED\x10\x02\x12\x30\n,CERTIFICATE_REVOCATION_REASON_KEY_COMPROMISE\x10\x03\x12/\n+CERTIFICATE_REVOCATION_REASON_CA_COMPROMISE\x10\x04\x12\x35\n1CERTIFICATE_REVOCATION_REASON_AFFILIATION_CHANGED\x10\x05\x12,\n(CERTIFICATE_REVOCATION_REASON_SUPERSEDED\x10\x06\x12\x38\n4CERTIFICATE_REVOCATION_REASON_CESSATION_OF_OPERATION\x10\x07\x12\x32\n.CERTIFICATE_REVOCATION_REASON_CERTIFICATE_HOLD\x10\x08\x12\x31\n-CERTIFICATE_REVOCATION_REASON_REMOVE_FROM_CRL\x10\t\x12\x35\n1CERTIFICATE_REVOCATION_REASON_PRIVILEGE_WITHDRAWN\x10\n\x12/\n+CERTIFICATE_REVOCATION_REASON_AA_COMPROMISE\x10\x0b\x62\x06proto3')
   ,
   dependencies=[common__pb2.DESCRIPTOR,zlint__pb2.DESCRIPTOR,ct__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -57,8 +57,8 @@ _CERTIFICATETYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2413,
-  serialized_end=2580,
+  serialized_start=2509,
+  serialized_end=2676,
 )
 _sym_db.RegisterEnumDescriptor(_CERTIFICATETYPE)
 
@@ -108,8 +108,8 @@ _CERTIFICATESOURCE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2583,
-  serialized_end=2894,
+  serialized_start=2679,
+  serialized_end=2990,
 )
 _sym_db.RegisterEnumDescriptor(_CERTIFICATESOURCE)
 
@@ -143,8 +143,8 @@ _CERTIFICATEPARSESTATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2897,
-  serialized_end=3112,
+  serialized_start=2993,
+  serialized_end=3208,
 )
 _sym_db.RegisterEnumDescriptor(_CERTIFICATEPARSESTATUS)
 
@@ -206,8 +206,8 @@ _CERTIFICATEREVOCATIONREASON = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=3115,
-  serialized_end=3743,
+  serialized_start=3211,
+  serialized_end=3839,
 )
 _sym_db.RegisterEnumDescriptor(_CERTIFICATEREVOCATIONREASON)
 
@@ -528,6 +528,27 @@ _MOZILLASALESFORCESTATUS = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='standard_audit_statement_timestamp', full_name='zsearch.MozillaSalesForceStatus.standard_audit_statement_timestamp', index=12,
+      number=13, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='management_assertions_by', full_name='zsearch.MozillaSalesForceStatus.management_assertions_by', index=13,
+      number=14, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='comments', full_name='zsearch.MozillaSalesForceStatus.comments', index=14,
+      number=15, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -541,7 +562,7 @@ _MOZILLASALESFORCESTATUS = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=647,
-  serialized_end=961,
+  serialized_end=1057,
 )
 
 
@@ -578,8 +599,8 @@ _CERTIFICATEREVOCATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=963,
-  serialized_end=1057,
+  serialized_start=1059,
+  serialized_end=1153,
 )
 
 
@@ -609,8 +630,8 @@ _CERTIFICATEAUDIT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1059,
-  serialized_end=1128,
+  serialized_start=1155,
+  serialized_end=1224,
 )
 
 
@@ -941,8 +962,8 @@ _CERTIFICATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1131,
-  serialized_end=2410,
+  serialized_start=1227,
+  serialized_end=2506,
 )
 
 _ROOTSTORESTATUS.fields_by_name['type'].enum_type = _CERTIFICATETYPE
