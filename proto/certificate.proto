@@ -105,8 +105,8 @@ message CertificateValidation {
 }
 
 message MozillaSalesForceStatus {
-    bool current_in = 1;
-    bool was_in = 2;
+    bool current_in_intermediates = 1;
+    bool was_in_intermediates = 2;
     string owner_name = 3;
     string parent_name = 4;
     string certificate_name = 5;
@@ -120,6 +120,19 @@ message MozillaSalesForceStatus {
     uint32 standard_audit_statement_timestamp = 13;
     string management_assertions_by = 14;
     string comments = 15;
+    // root fields
+    string ev_policy_oids = 16;
+    string approval_bug = 17;
+    string first_nss_release = 18;
+    string first_firefox_release = 19;
+    string ev_audit = 20;
+    bool current_in_roots = 21;
+    bool was_in_roots = 22;
+    string test_website_valid = 23;
+    string mozilla_applied_constraints = 24;
+    string company_website = 25;
+    string geographic_focus = 26;
+    string standard_audit_type = 27;
 }
 
 
