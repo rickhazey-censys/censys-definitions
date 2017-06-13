@@ -77,8 +77,8 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MozillaSalesForceStatus, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MozillaSalesForceStatus, current_in_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MozillaSalesForceStatus, was_in_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MozillaSalesForceStatus, current_in_intermediates_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MozillaSalesForceStatus, was_in_intermediates_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MozillaSalesForceStatus, owner_name_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MozillaSalesForceStatus, parent_name_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MozillaSalesForceStatus, certificate_name_),
@@ -92,6 +92,18 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MozillaSalesForceStatus, standard_audit_statement_timestamp_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MozillaSalesForceStatus, management_assertions_by_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MozillaSalesForceStatus, comments_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MozillaSalesForceStatus, ev_policy_oids_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MozillaSalesForceStatus, approval_bug_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MozillaSalesForceStatus, first_nss_release_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MozillaSalesForceStatus, first_firefox_release_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MozillaSalesForceStatus, ev_audit_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MozillaSalesForceStatus, current_in_roots_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MozillaSalesForceStatus, was_in_roots_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MozillaSalesForceStatus, test_website_valid_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MozillaSalesForceStatus, mozilla_applied_constraints_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MozillaSalesForceStatus, company_website_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MozillaSalesForceStatus, geographic_focus_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MozillaSalesForceStatus, standard_audit_type_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CertificateRevocation, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -158,9 +170,9 @@ static const ::google::protobuf::internal::MigrationSchema schemas[] = {
   { 5, -1, sizeof(RootStoreStatus)},
   { 19, -1, sizeof(CertificateValidation)},
   { 29, -1, sizeof(MozillaSalesForceStatus)},
-  { 48, -1, sizeof(CertificateRevocation)},
-  { 54, -1, sizeof(CertificateAudit)},
-  { 59, -1, sizeof(Certificate)},
+  { 60, -1, sizeof(CertificateRevocation)},
+  { 66, -1, sizeof(CertificateAudit)},
+  { 71, -1, sizeof(Certificate)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -278,90 +290,98 @@ void AddDescriptorsImpl() {
       "(\0132\030.zsearch.RootStoreStatus\022)\n\007android\030"
       "\005 \001(\0132\030.zsearch.RootStoreStatus\0223\n\021googl"
       "e_ct_primary\030\n \001(\0132\030.zsearch.RootStoreSt"
-      "atus\"\232\003\n\027MozillaSalesForceStatus\022\022\n\ncurr"
-      "ent_in\030\001 \001(\010\022\016\n\006was_in\030\002 \001(\010\022\022\n\nowner_na"
-      "me\030\003 \001(\t\022\023\n\013parent_name\030\004 \001(\t\022\030\n\020certifi"
-      "cate_name\030\005 \001(\t\022\032\n\022certificate_policy\030\006 "
-      "\001(\t\022(\n certification_practice_statement\030"
-      "\007 \001(\t\022\031\n\021cp_same_as_parent\030\010 \001(\010\022\034\n\024audi"
-      "t_same_as_parent\030\t \001(\010\022\026\n\016standard_audit"
-      "\030\n \001(\t\022\020\n\010br_audit\030\013 \001(\t\022\017\n\007auditor\030\014 \001("
-      "\t\022*\n\"standard_audit_statement_timestamp\030"
-      "\r \001(\r\022 \n\030management_assertions_by\030\016 \001(\t\022"
-      "\020\n\010comments\030\017 \001(\t\"^\n\025CertificateRevocati"
-      "on\022\017\n\007revoked\030\001 \001(\010\0224\n\006reason\030\002 \001(\0162$.zs"
-      "earch.CertificateRevocationReason\"E\n\020Cer"
-      "tificateAudit\0221\n\007mozilla\030\001 \001(\0132 .zsearch"
-      ".MozillaSalesForceStatus\"\377\t\n\013Certificate"
-      "\022\016\n\006sha1fp\030\001 \001(\014\022\020\n\010sha256fp\030\002 \001(\014\022\013\n\003ra"
-      "w\030\003 \001(\014\022\016\n\006parsed\030\004 \001(\t\0225\n\014parse_status\030"
-      ", \001(\0162\037.zsearch.CertificateParseStatus\022\025"
-      "\n\rparse_version\030\' \001(\r\022\023\n\013parse_error\030/ \001"
-      "(\t\022\017\n\007parents\030\005 \003(\014\022\027\n\017presented_chain\030-"
-      " \003(\014\022*\n\006source\030\034 \001(\0162\032.zsearch.Certifica"
-      "teSource\022\024\n\014seen_in_scan\030\035 \001(\010\022\026\n\016post_p"
-      "rocessed\030\032 \001(\010\022\036\n\026post_process_timestamp"
-      "\030% \001(\r\0222\n\nvalidation\030# \001(\0132\036.zsearch.Cer"
-      "tificateValidation\022\035\n\002ct\030\036 \001(\0132\021.zsearch"
-      ".CTStatus\022\035\n\005zlint\030& \001(\0132\016.zsearch.ZLint"
-      "\0222\n\nrevocation\030+ \001(\0132\036.zsearch.Certifica"
-      "teRevocation\022(\n\005audit\030. \001(\0132\031.zsearch.Ce"
-      "rtificateAudit\022\022\n\nis_precert\030  \001(\010\022\027\n\017no"
-      "t_valid_after\030) \001(\r\022\030\n\020not_valid_before\030"
-      "* \001(\r\022\017\n\007expired\0300 \001(\010\022\016\n\006in_nss\030\006 \001(\010\022\030"
-      "\n\014in_microsoft\030\007 \001(\010B\002\030\001\022\024\n\010in_apple\030\010 \001"
-      "(\010B\002\030\001\022\034\n\024validation_timestamp\030\n \001(\r\022\025\n\t"
-      "valid_nss\030\013 \001(\010B\002\030\001\022\033\n\017valid_microsoft\030\014"
-      " \001(\010B\002\030\001\022\027\n\013valid_apple\030\r \001(\010B\002\030\001\022\025\n\rwas"
-      "_valid_nss\030\016 \001(\010\022\037\n\023was_valid_microsoft\030"
-      "\017 \001(\010B\002\030\001\022\033\n\017was_valid_apple\030\020 \001(\010B\002\030\001\022\026"
-      "\n\nwas_in_nss\030\021 \001(\010B\002\030\001\022\034\n\020was_in_microso"
-      "ft\030\022 \001(\010B\002\030\001\022\030\n\014was_in_apple\030\023 \001(\010B\002\030\001\022\031"
-      "\n\021current_valid_nss\030\024 \001(\010\022#\n\027current_val"
-      "id_microsoft\030\025 \001(\010B\002\030\001\022\037\n\023current_valid_"
-      "apple\030\026 \001(\010B\002\030\001\022\026\n\016current_in_nss\030\027 \001(\010\022"
-      " \n\024current_in_microsoft\030\030 \001(\010B\002\030\001\022\034\n\020cur"
-      "rent_in_apple\030\031 \001(\010B\002\030\001\0227\n\tnss_audit\030\037 \001"
-      "(\0132 .zsearch.MozillaSalesForceStatusB\002\030\001"
-      "\022\037\n\023should_post_process\030\033 \001(\010B\002\030\001\022\037\n\023do_"
-      "not_post_process\030$ \001(\010B\002\030\001*\247\001\n\017Certifica"
-      "teType\022\035\n\031CERTIFICATE_TYPE_RESERVED\020\000\022\034\n"
-      "\030CERTIFICATE_TYPE_UNKNOWN\020\001\022\031\n\025CERTIFICA"
-      "TE_TYPE_LEAF\020\002\022!\n\035CERTIFICATE_TYPE_INTER"
-      "MEDIATE\020\003\022\031\n\025CERTIFICATE_TYPE_ROOT\020\004*\267\002\n"
-      "\021CertificateSource\022\037\n\033CERTIFICATE_SOURCE"
-      "_RESERVED\020\000\022\036\n\032CERTIFICATE_SOURCE_UNKNOW"
-      "N\020\001\022\033\n\027CERTIFICATE_SOURCE_SCAN\020\002\022\031\n\025CERT"
-      "IFICATE_SOURCE_CT\020\003\022)\n%CERTIFICATE_SOURC"
-      "E_MOZILLA_SALESFORCE\020\004\022\037\n\033CERTIFICATE_SO"
-      "URCE_RESEARCH\020\005\022\035\n\031CERTIFICATE_SOURCE_RA"
-      "PID7\020\006\022\035\n\031CERTIFICATE_SOURCE_HUBBLE\020\007\022\037\n"
-      "\033CERTIFICATE_SOURCE_CT_CHAIN\020\010*\327\001\n\026Certi"
-      "ficateParseStatus\022%\n!CERTIFICATE_PARSE_S"
-      "TATUS_RESERVED\020\000\022$\n CERTIFICATE_PARSE_ST"
-      "ATUS_UNKNOWN\020\001\022$\n CERTIFICATE_PARSE_STAT"
-      "US_SUCCESS\020\002\022!\n\035CERTIFICATE_PARSE_STATUS"
-      "_FAIL\020\003\022\'\n#CERTIFICATE_PARSE_STATUS_NOT_"
-      "PARSED\020\004*\364\004\n\033CertificateRevocationReason"
-      "\022*\n&CERTIFICATE_REVOCATION_REASON_RESERV"
-      "ED\020\000\022)\n%CERTIFICATE_REVOCATION_REASON_UN"
-      "KNOWN\020\001\022-\n)CERTIFICATE_REVOCATION_REASON"
-      "_UNSPECIFIED\020\002\0220\n,CERTIFICATE_REVOCATION"
-      "_REASON_KEY_COMPROMISE\020\003\022/\n+CERTIFICATE_"
-      "REVOCATION_REASON_CA_COMPROMISE\020\004\0225\n1CER"
-      "TIFICATE_REVOCATION_REASON_AFFILIATION_C"
-      "HANGED\020\005\022,\n(CERTIFICATE_REVOCATION_REASO"
-      "N_SUPERSEDED\020\006\0228\n4CERTIFICATE_REVOCATION"
-      "_REASON_CESSATION_OF_OPERATION\020\007\0222\n.CERT"
-      "IFICATE_REVOCATION_REASON_CERTIFICATE_HO"
-      "LD\020\010\0221\n-CERTIFICATE_REVOCATION_REASON_RE"
-      "MOVE_FROM_CRL\020\t\0225\n1CERTIFICATE_REVOCATIO"
-      "N_REASON_PRIVILEGE_WITHDRAWN\020\n\022/\n+CERTIF"
-      "ICATE_REVOCATION_REASON_AA_COMPROMISE\020\013b"
-      "\006proto3"
+      "atus\"\361\005\n\027MozillaSalesForceStatus\022 \n\030curr"
+      "ent_in_intermediates\030\001 \001(\010\022\034\n\024was_in_int"
+      "ermediates\030\002 \001(\010\022\022\n\nowner_name\030\003 \001(\t\022\023\n\013"
+      "parent_name\030\004 \001(\t\022\030\n\020certificate_name\030\005 "
+      "\001(\t\022\032\n\022certificate_policy\030\006 \001(\t\022(\n certi"
+      "fication_practice_statement\030\007 \001(\t\022\031\n\021cp_"
+      "same_as_parent\030\010 \001(\010\022\034\n\024audit_same_as_pa"
+      "rent\030\t \001(\010\022\026\n\016standard_audit\030\n \001(\t\022\020\n\010br"
+      "_audit\030\013 \001(\t\022\017\n\007auditor\030\014 \001(\t\022*\n\"standar"
+      "d_audit_statement_timestamp\030\r \001(\r\022 \n\030man"
+      "agement_assertions_by\030\016 \001(\t\022\020\n\010comments\030"
+      "\017 \001(\t\022\026\n\016ev_policy_oids\030\020 \001(\t\022\024\n\014approva"
+      "l_bug\030\021 \001(\t\022\031\n\021first_nss_release\030\022 \001(\t\022\035"
+      "\n\025first_firefox_release\030\023 \001(\t\022\020\n\010ev_audi"
+      "t\030\024 \001(\t\022\030\n\020current_in_roots\030\025 \001(\010\022\024\n\014was"
+      "_in_roots\030\026 \001(\010\022\032\n\022test_website_valid\030\027 "
+      "\001(\t\022#\n\033mozilla_applied_constraints\030\030 \001(\t"
+      "\022\027\n\017company_website\030\031 \001(\t\022\030\n\020geographic_"
+      "focus\030\032 \001(\t\022\033\n\023standard_audit_type\030\033 \001(\t"
+      "\"^\n\025CertificateRevocation\022\017\n\007revoked\030\001 \001"
+      "(\010\0224\n\006reason\030\002 \001(\0162$.zsearch.Certificate"
+      "RevocationReason\"E\n\020CertificateAudit\0221\n\007"
+      "mozilla\030\001 \001(\0132 .zsearch.MozillaSalesForc"
+      "eStatus\"\377\t\n\013Certificate\022\016\n\006sha1fp\030\001 \001(\014\022"
+      "\020\n\010sha256fp\030\002 \001(\014\022\013\n\003raw\030\003 \001(\014\022\016\n\006parsed"
+      "\030\004 \001(\t\0225\n\014parse_status\030, \001(\0162\037.zsearch.C"
+      "ertificateParseStatus\022\025\n\rparse_version\030\'"
+      " \001(\r\022\023\n\013parse_error\030/ \001(\t\022\017\n\007parents\030\005 \003"
+      "(\014\022\027\n\017presented_chain\030- \003(\014\022*\n\006source\030\034 "
+      "\001(\0162\032.zsearch.CertificateSource\022\024\n\014seen_"
+      "in_scan\030\035 \001(\010\022\026\n\016post_processed\030\032 \001(\010\022\036\n"
+      "\026post_process_timestamp\030% \001(\r\0222\n\nvalidat"
+      "ion\030# \001(\0132\036.zsearch.CertificateValidatio"
+      "n\022\035\n\002ct\030\036 \001(\0132\021.zsearch.CTStatus\022\035\n\005zlin"
+      "t\030& \001(\0132\016.zsearch.ZLint\0222\n\nrevocation\030+ "
+      "\001(\0132\036.zsearch.CertificateRevocation\022(\n\005a"
+      "udit\030. \001(\0132\031.zsearch.CertificateAudit\022\022\n"
+      "\nis_precert\030  \001(\010\022\027\n\017not_valid_after\030) \001"
+      "(\r\022\030\n\020not_valid_before\030* \001(\r\022\017\n\007expired\030"
+      "0 \001(\010\022\016\n\006in_nss\030\006 \001(\010\022\030\n\014in_microsoft\030\007 "
+      "\001(\010B\002\030\001\022\024\n\010in_apple\030\010 \001(\010B\002\030\001\022\034\n\024validat"
+      "ion_timestamp\030\n \001(\r\022\025\n\tvalid_nss\030\013 \001(\010B\002"
+      "\030\001\022\033\n\017valid_microsoft\030\014 \001(\010B\002\030\001\022\027\n\013valid"
+      "_apple\030\r \001(\010B\002\030\001\022\025\n\rwas_valid_nss\030\016 \001(\010\022"
+      "\037\n\023was_valid_microsoft\030\017 \001(\010B\002\030\001\022\033\n\017was_"
+      "valid_apple\030\020 \001(\010B\002\030\001\022\026\n\nwas_in_nss\030\021 \001("
+      "\010B\002\030\001\022\034\n\020was_in_microsoft\030\022 \001(\010B\002\030\001\022\030\n\014w"
+      "as_in_apple\030\023 \001(\010B\002\030\001\022\031\n\021current_valid_n"
+      "ss\030\024 \001(\010\022#\n\027current_valid_microsoft\030\025 \001("
+      "\010B\002\030\001\022\037\n\023current_valid_apple\030\026 \001(\010B\002\030\001\022\026"
+      "\n\016current_in_nss\030\027 \001(\010\022 \n\024current_in_mic"
+      "rosoft\030\030 \001(\010B\002\030\001\022\034\n\020current_in_apple\030\031 \001"
+      "(\010B\002\030\001\0227\n\tnss_audit\030\037 \001(\0132 .zsearch.Mozi"
+      "llaSalesForceStatusB\002\030\001\022\037\n\023should_post_p"
+      "rocess\030\033 \001(\010B\002\030\001\022\037\n\023do_not_post_process\030"
+      "$ \001(\010B\002\030\001*\247\001\n\017CertificateType\022\035\n\031CERTIFI"
+      "CATE_TYPE_RESERVED\020\000\022\034\n\030CERTIFICATE_TYPE"
+      "_UNKNOWN\020\001\022\031\n\025CERTIFICATE_TYPE_LEAF\020\002\022!\n"
+      "\035CERTIFICATE_TYPE_INTERMEDIATE\020\003\022\031\n\025CERT"
+      "IFICATE_TYPE_ROOT\020\004*\267\002\n\021CertificateSourc"
+      "e\022\037\n\033CERTIFICATE_SOURCE_RESERVED\020\000\022\036\n\032CE"
+      "RTIFICATE_SOURCE_UNKNOWN\020\001\022\033\n\027CERTIFICAT"
+      "E_SOURCE_SCAN\020\002\022\031\n\025CERTIFICATE_SOURCE_CT"
+      "\020\003\022)\n%CERTIFICATE_SOURCE_MOZILLA_SALESFO"
+      "RCE\020\004\022\037\n\033CERTIFICATE_SOURCE_RESEARCH\020\005\022\035"
+      "\n\031CERTIFICATE_SOURCE_RAPID7\020\006\022\035\n\031CERTIFI"
+      "CATE_SOURCE_HUBBLE\020\007\022\037\n\033CERTIFICATE_SOUR"
+      "CE_CT_CHAIN\020\010*\327\001\n\026CertificateParseStatus"
+      "\022%\n!CERTIFICATE_PARSE_STATUS_RESERVED\020\000\022"
+      "$\n CERTIFICATE_PARSE_STATUS_UNKNOWN\020\001\022$\n"
+      " CERTIFICATE_PARSE_STATUS_SUCCESS\020\002\022!\n\035C"
+      "ERTIFICATE_PARSE_STATUS_FAIL\020\003\022\'\n#CERTIF"
+      "ICATE_PARSE_STATUS_NOT_PARSED\020\004*\364\004\n\033Cert"
+      "ificateRevocationReason\022*\n&CERTIFICATE_R"
+      "EVOCATION_REASON_RESERVED\020\000\022)\n%CERTIFICA"
+      "TE_REVOCATION_REASON_UNKNOWN\020\001\022-\n)CERTIF"
+      "ICATE_REVOCATION_REASON_UNSPECIFIED\020\002\0220\n"
+      ",CERTIFICATE_REVOCATION_REASON_KEY_COMPR"
+      "OMISE\020\003\022/\n+CERTIFICATE_REVOCATION_REASON"
+      "_CA_COMPROMISE\020\004\0225\n1CERTIFICATE_REVOCATI"
+      "ON_REASON_AFFILIATION_CHANGED\020\005\022,\n(CERTI"
+      "FICATE_REVOCATION_REASON_SUPERSEDED\020\006\0228\n"
+      "4CERTIFICATE_REVOCATION_REASON_CESSATION"
+      "_OF_OPERATION\020\007\0222\n.CERTIFICATE_REVOCATIO"
+      "N_REASON_CERTIFICATE_HOLD\020\010\0221\n-CERTIFICA"
+      "TE_REVOCATION_REASON_REMOVE_FROM_CRL\020\t\0225"
+      "\n1CERTIFICATE_REVOCATION_REASON_PRIVILEG"
+      "E_WITHDRAWN\020\n\022/\n+CERTIFICATE_REVOCATION_"
+      "REASON_AA_COMPROMISE\020\013b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 3847);
+      descriptor, 4190);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "certificate.proto", &protobuf_RegisterTypes);
   ::zsearch::protobuf_common_2eproto::AddDescriptors();
@@ -2150,8 +2170,8 @@ void CertificateValidation::set_allocated_google_ct_primary(::zsearch::RootStore
 // ===================================================================
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int MozillaSalesForceStatus::kCurrentInFieldNumber;
-const int MozillaSalesForceStatus::kWasInFieldNumber;
+const int MozillaSalesForceStatus::kCurrentInIntermediatesFieldNumber;
+const int MozillaSalesForceStatus::kWasInIntermediatesFieldNumber;
 const int MozillaSalesForceStatus::kOwnerNameFieldNumber;
 const int MozillaSalesForceStatus::kParentNameFieldNumber;
 const int MozillaSalesForceStatus::kCertificateNameFieldNumber;
@@ -2165,6 +2185,18 @@ const int MozillaSalesForceStatus::kAuditorFieldNumber;
 const int MozillaSalesForceStatus::kStandardAuditStatementTimestampFieldNumber;
 const int MozillaSalesForceStatus::kManagementAssertionsByFieldNumber;
 const int MozillaSalesForceStatus::kCommentsFieldNumber;
+const int MozillaSalesForceStatus::kEvPolicyOidsFieldNumber;
+const int MozillaSalesForceStatus::kApprovalBugFieldNumber;
+const int MozillaSalesForceStatus::kFirstNssReleaseFieldNumber;
+const int MozillaSalesForceStatus::kFirstFirefoxReleaseFieldNumber;
+const int MozillaSalesForceStatus::kEvAuditFieldNumber;
+const int MozillaSalesForceStatus::kCurrentInRootsFieldNumber;
+const int MozillaSalesForceStatus::kWasInRootsFieldNumber;
+const int MozillaSalesForceStatus::kTestWebsiteValidFieldNumber;
+const int MozillaSalesForceStatus::kMozillaAppliedConstraintsFieldNumber;
+const int MozillaSalesForceStatus::kCompanyWebsiteFieldNumber;
+const int MozillaSalesForceStatus::kGeographicFocusFieldNumber;
+const int MozillaSalesForceStatus::kStandardAuditTypeFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 MozillaSalesForceStatus::MozillaSalesForceStatus()
@@ -2220,9 +2252,49 @@ MozillaSalesForceStatus::MozillaSalesForceStatus(const MozillaSalesForceStatus& 
   if (from.comments().size() > 0) {
     comments_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.comments_);
   }
-  ::memcpy(&current_in_, &from.current_in_,
-    reinterpret_cast<char*>(&standard_audit_statement_timestamp_) -
-    reinterpret_cast<char*>(&current_in_) + sizeof(standard_audit_statement_timestamp_));
+  ev_policy_oids_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.ev_policy_oids().size() > 0) {
+    ev_policy_oids_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.ev_policy_oids_);
+  }
+  approval_bug_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.approval_bug().size() > 0) {
+    approval_bug_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.approval_bug_);
+  }
+  first_nss_release_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.first_nss_release().size() > 0) {
+    first_nss_release_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.first_nss_release_);
+  }
+  first_firefox_release_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.first_firefox_release().size() > 0) {
+    first_firefox_release_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.first_firefox_release_);
+  }
+  ev_audit_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.ev_audit().size() > 0) {
+    ev_audit_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.ev_audit_);
+  }
+  test_website_valid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.test_website_valid().size() > 0) {
+    test_website_valid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.test_website_valid_);
+  }
+  mozilla_applied_constraints_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.mozilla_applied_constraints().size() > 0) {
+    mozilla_applied_constraints_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.mozilla_applied_constraints_);
+  }
+  company_website_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.company_website().size() > 0) {
+    company_website_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.company_website_);
+  }
+  geographic_focus_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.geographic_focus().size() > 0) {
+    geographic_focus_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.geographic_focus_);
+  }
+  standard_audit_type_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.standard_audit_type().size() > 0) {
+    standard_audit_type_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.standard_audit_type_);
+  }
+  ::memcpy(&current_in_intermediates_, &from.current_in_intermediates_,
+    reinterpret_cast<char*>(&was_in_roots_) -
+    reinterpret_cast<char*>(&current_in_intermediates_) + sizeof(was_in_roots_));
   // @@protoc_insertion_point(copy_constructor:zsearch.MozillaSalesForceStatus)
 }
 
@@ -2237,8 +2309,18 @@ void MozillaSalesForceStatus::SharedCtor() {
   auditor_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   management_assertions_by_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   comments_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  ::memset(&current_in_, 0, reinterpret_cast<char*>(&standard_audit_statement_timestamp_) -
-    reinterpret_cast<char*>(&current_in_) + sizeof(standard_audit_statement_timestamp_));
+  ev_policy_oids_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  approval_bug_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  first_nss_release_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  first_firefox_release_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ev_audit_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  test_website_valid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  mozilla_applied_constraints_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  company_website_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  geographic_focus_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  standard_audit_type_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(&current_in_intermediates_, 0, reinterpret_cast<char*>(&was_in_roots_) -
+    reinterpret_cast<char*>(&current_in_intermediates_) + sizeof(was_in_roots_));
   _cached_size_ = 0;
 }
 
@@ -2258,6 +2340,16 @@ void MozillaSalesForceStatus::SharedDtor() {
   auditor_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   management_assertions_by_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   comments_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ev_policy_oids_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  approval_bug_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  first_nss_release_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  first_firefox_release_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ev_audit_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  test_website_valid_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  mozilla_applied_constraints_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  company_website_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  geographic_focus_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  standard_audit_type_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
 void MozillaSalesForceStatus::SetCachedSize(int size) const {
@@ -2295,8 +2387,18 @@ void MozillaSalesForceStatus::Clear() {
   auditor_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   management_assertions_by_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   comments_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  ::memset(&current_in_, 0, reinterpret_cast<char*>(&standard_audit_statement_timestamp_) -
-    reinterpret_cast<char*>(&current_in_) + sizeof(standard_audit_statement_timestamp_));
+  ev_policy_oids_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  approval_bug_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  first_nss_release_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  first_firefox_release_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ev_audit_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  test_website_valid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  mozilla_applied_constraints_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  company_website_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  geographic_focus_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  standard_audit_type_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(&current_in_intermediates_, 0, reinterpret_cast<char*>(&was_in_roots_) -
+    reinterpret_cast<char*>(&current_in_intermediates_) + sizeof(was_in_roots_));
 }
 
 bool MozillaSalesForceStatus::MergePartialFromCodedStream(
@@ -2305,30 +2407,30 @@ bool MozillaSalesForceStatus::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:zsearch.MozillaSalesForceStatus)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(16383u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // bool current_in = 1;
+      // bool current_in_intermediates = 1;
       case 1: {
         if (tag == 8u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &current_in_)));
+                 input, &current_in_intermediates_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // bool was_in = 2;
+      // bool was_in_intermediates = 2;
       case 2: {
         if (tag == 16u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &was_in_)));
+                 input, &was_in_intermediates_)));
         } else {
           goto handle_unusual;
         }
@@ -2524,6 +2626,182 @@ bool MozillaSalesForceStatus::MergePartialFromCodedStream(
         break;
       }
 
+      // string ev_policy_oids = 16;
+      case 16: {
+        if (tag == 130u) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_ev_policy_oids()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->ev_policy_oids().data(), this->ev_policy_oids().length(),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "zsearch.MozillaSalesForceStatus.ev_policy_oids"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string approval_bug = 17;
+      case 17: {
+        if (tag == 138u) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_approval_bug()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->approval_bug().data(), this->approval_bug().length(),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "zsearch.MozillaSalesForceStatus.approval_bug"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string first_nss_release = 18;
+      case 18: {
+        if (tag == 146u) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_first_nss_release()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->first_nss_release().data(), this->first_nss_release().length(),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "zsearch.MozillaSalesForceStatus.first_nss_release"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string first_firefox_release = 19;
+      case 19: {
+        if (tag == 154u) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_first_firefox_release()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->first_firefox_release().data(), this->first_firefox_release().length(),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "zsearch.MozillaSalesForceStatus.first_firefox_release"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string ev_audit = 20;
+      case 20: {
+        if (tag == 162u) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_ev_audit()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->ev_audit().data(), this->ev_audit().length(),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "zsearch.MozillaSalesForceStatus.ev_audit"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // bool current_in_roots = 21;
+      case 21: {
+        if (tag == 168u) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &current_in_roots_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // bool was_in_roots = 22;
+      case 22: {
+        if (tag == 176u) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &was_in_roots_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string test_website_valid = 23;
+      case 23: {
+        if (tag == 186u) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_test_website_valid()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->test_website_valid().data(), this->test_website_valid().length(),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "zsearch.MozillaSalesForceStatus.test_website_valid"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string mozilla_applied_constraints = 24;
+      case 24: {
+        if (tag == 194u) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_mozilla_applied_constraints()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->mozilla_applied_constraints().data(), this->mozilla_applied_constraints().length(),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "zsearch.MozillaSalesForceStatus.mozilla_applied_constraints"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string company_website = 25;
+      case 25: {
+        if (tag == 202u) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_company_website()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->company_website().data(), this->company_website().length(),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "zsearch.MozillaSalesForceStatus.company_website"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string geographic_focus = 26;
+      case 26: {
+        if (tag == 210u) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_geographic_focus()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->geographic_focus().data(), this->geographic_focus().length(),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "zsearch.MozillaSalesForceStatus.geographic_focus"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string standard_audit_type = 27;
+      case 27: {
+        if (tag == 218u) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_standard_audit_type()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->standard_audit_type().data(), this->standard_audit_type().length(),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "zsearch.MozillaSalesForceStatus.standard_audit_type"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
       default: {
       handle_unusual:
         if (tag == 0 ||
@@ -2548,14 +2826,14 @@ failure:
 void MozillaSalesForceStatus::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:zsearch.MozillaSalesForceStatus)
-  // bool current_in = 1;
-  if (this->current_in() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteBool(1, this->current_in(), output);
+  // bool current_in_intermediates = 1;
+  if (this->current_in_intermediates() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(1, this->current_in_intermediates(), output);
   }
 
-  // bool was_in = 2;
-  if (this->was_in() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteBool(2, this->was_in(), output);
+  // bool was_in_intermediates = 2;
+  if (this->was_in_intermediates() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(2, this->was_in_intermediates(), output);
   }
 
   // string owner_name = 3;
@@ -2673,6 +2951,116 @@ void MozillaSalesForceStatus::SerializeWithCachedSizes(
       15, this->comments(), output);
   }
 
+  // string ev_policy_oids = 16;
+  if (this->ev_policy_oids().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->ev_policy_oids().data(), this->ev_policy_oids().length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "zsearch.MozillaSalesForceStatus.ev_policy_oids");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      16, this->ev_policy_oids(), output);
+  }
+
+  // string approval_bug = 17;
+  if (this->approval_bug().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->approval_bug().data(), this->approval_bug().length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "zsearch.MozillaSalesForceStatus.approval_bug");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      17, this->approval_bug(), output);
+  }
+
+  // string first_nss_release = 18;
+  if (this->first_nss_release().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->first_nss_release().data(), this->first_nss_release().length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "zsearch.MozillaSalesForceStatus.first_nss_release");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      18, this->first_nss_release(), output);
+  }
+
+  // string first_firefox_release = 19;
+  if (this->first_firefox_release().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->first_firefox_release().data(), this->first_firefox_release().length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "zsearch.MozillaSalesForceStatus.first_firefox_release");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      19, this->first_firefox_release(), output);
+  }
+
+  // string ev_audit = 20;
+  if (this->ev_audit().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->ev_audit().data(), this->ev_audit().length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "zsearch.MozillaSalesForceStatus.ev_audit");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      20, this->ev_audit(), output);
+  }
+
+  // bool current_in_roots = 21;
+  if (this->current_in_roots() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(21, this->current_in_roots(), output);
+  }
+
+  // bool was_in_roots = 22;
+  if (this->was_in_roots() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(22, this->was_in_roots(), output);
+  }
+
+  // string test_website_valid = 23;
+  if (this->test_website_valid().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->test_website_valid().data(), this->test_website_valid().length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "zsearch.MozillaSalesForceStatus.test_website_valid");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      23, this->test_website_valid(), output);
+  }
+
+  // string mozilla_applied_constraints = 24;
+  if (this->mozilla_applied_constraints().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->mozilla_applied_constraints().data(), this->mozilla_applied_constraints().length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "zsearch.MozillaSalesForceStatus.mozilla_applied_constraints");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      24, this->mozilla_applied_constraints(), output);
+  }
+
+  // string company_website = 25;
+  if (this->company_website().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->company_website().data(), this->company_website().length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "zsearch.MozillaSalesForceStatus.company_website");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      25, this->company_website(), output);
+  }
+
+  // string geographic_focus = 26;
+  if (this->geographic_focus().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->geographic_focus().data(), this->geographic_focus().length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "zsearch.MozillaSalesForceStatus.geographic_focus");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      26, this->geographic_focus(), output);
+  }
+
+  // string standard_audit_type = 27;
+  if (this->standard_audit_type().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->standard_audit_type().data(), this->standard_audit_type().length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "zsearch.MozillaSalesForceStatus.standard_audit_type");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      27, this->standard_audit_type(), output);
+  }
+
   // @@protoc_insertion_point(serialize_end:zsearch.MozillaSalesForceStatus)
 }
 
@@ -2680,14 +3068,14 @@ void MozillaSalesForceStatus::SerializeWithCachedSizes(
     bool deterministic, ::google::protobuf::uint8* target) const {
   (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:zsearch.MozillaSalesForceStatus)
-  // bool current_in = 1;
-  if (this->current_in() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(1, this->current_in(), target);
+  // bool current_in_intermediates = 1;
+  if (this->current_in_intermediates() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(1, this->current_in_intermediates(), target);
   }
 
-  // bool was_in = 2;
-  if (this->was_in() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(2, this->was_in(), target);
+  // bool was_in_intermediates = 2;
+  if (this->was_in_intermediates() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(2, this->was_in_intermediates(), target);
   }
 
   // string owner_name = 3;
@@ -2815,6 +3203,126 @@ void MozillaSalesForceStatus::SerializeWithCachedSizes(
         15, this->comments(), target);
   }
 
+  // string ev_policy_oids = 16;
+  if (this->ev_policy_oids().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->ev_policy_oids().data(), this->ev_policy_oids().length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "zsearch.MozillaSalesForceStatus.ev_policy_oids");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        16, this->ev_policy_oids(), target);
+  }
+
+  // string approval_bug = 17;
+  if (this->approval_bug().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->approval_bug().data(), this->approval_bug().length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "zsearch.MozillaSalesForceStatus.approval_bug");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        17, this->approval_bug(), target);
+  }
+
+  // string first_nss_release = 18;
+  if (this->first_nss_release().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->first_nss_release().data(), this->first_nss_release().length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "zsearch.MozillaSalesForceStatus.first_nss_release");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        18, this->first_nss_release(), target);
+  }
+
+  // string first_firefox_release = 19;
+  if (this->first_firefox_release().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->first_firefox_release().data(), this->first_firefox_release().length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "zsearch.MozillaSalesForceStatus.first_firefox_release");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        19, this->first_firefox_release(), target);
+  }
+
+  // string ev_audit = 20;
+  if (this->ev_audit().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->ev_audit().data(), this->ev_audit().length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "zsearch.MozillaSalesForceStatus.ev_audit");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        20, this->ev_audit(), target);
+  }
+
+  // bool current_in_roots = 21;
+  if (this->current_in_roots() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(21, this->current_in_roots(), target);
+  }
+
+  // bool was_in_roots = 22;
+  if (this->was_in_roots() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(22, this->was_in_roots(), target);
+  }
+
+  // string test_website_valid = 23;
+  if (this->test_website_valid().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->test_website_valid().data(), this->test_website_valid().length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "zsearch.MozillaSalesForceStatus.test_website_valid");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        23, this->test_website_valid(), target);
+  }
+
+  // string mozilla_applied_constraints = 24;
+  if (this->mozilla_applied_constraints().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->mozilla_applied_constraints().data(), this->mozilla_applied_constraints().length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "zsearch.MozillaSalesForceStatus.mozilla_applied_constraints");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        24, this->mozilla_applied_constraints(), target);
+  }
+
+  // string company_website = 25;
+  if (this->company_website().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->company_website().data(), this->company_website().length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "zsearch.MozillaSalesForceStatus.company_website");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        25, this->company_website(), target);
+  }
+
+  // string geographic_focus = 26;
+  if (this->geographic_focus().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->geographic_focus().data(), this->geographic_focus().length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "zsearch.MozillaSalesForceStatus.geographic_focus");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        26, this->geographic_focus(), target);
+  }
+
+  // string standard_audit_type = 27;
+  if (this->standard_audit_type().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->standard_audit_type().data(), this->standard_audit_type().length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "zsearch.MozillaSalesForceStatus.standard_audit_type");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        27, this->standard_audit_type(), target);
+  }
+
   // @@protoc_insertion_point(serialize_to_array_end:zsearch.MozillaSalesForceStatus)
   return target;
 }
@@ -2893,13 +3401,83 @@ size_t MozillaSalesForceStatus::ByteSizeLong() const {
         this->comments());
   }
 
-  // bool current_in = 1;
-  if (this->current_in() != 0) {
+  // string ev_policy_oids = 16;
+  if (this->ev_policy_oids().size() > 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->ev_policy_oids());
+  }
+
+  // string approval_bug = 17;
+  if (this->approval_bug().size() > 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->approval_bug());
+  }
+
+  // string first_nss_release = 18;
+  if (this->first_nss_release().size() > 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->first_nss_release());
+  }
+
+  // string first_firefox_release = 19;
+  if (this->first_firefox_release().size() > 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->first_firefox_release());
+  }
+
+  // string ev_audit = 20;
+  if (this->ev_audit().size() > 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->ev_audit());
+  }
+
+  // string test_website_valid = 23;
+  if (this->test_website_valid().size() > 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->test_website_valid());
+  }
+
+  // string mozilla_applied_constraints = 24;
+  if (this->mozilla_applied_constraints().size() > 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->mozilla_applied_constraints());
+  }
+
+  // string company_website = 25;
+  if (this->company_website().size() > 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->company_website());
+  }
+
+  // string geographic_focus = 26;
+  if (this->geographic_focus().size() > 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->geographic_focus());
+  }
+
+  // string standard_audit_type = 27;
+  if (this->standard_audit_type().size() > 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->standard_audit_type());
+  }
+
+  // bool current_in_intermediates = 1;
+  if (this->current_in_intermediates() != 0) {
     total_size += 1 + 1;
   }
 
-  // bool was_in = 2;
-  if (this->was_in() != 0) {
+  // bool was_in_intermediates = 2;
+  if (this->was_in_intermediates() != 0) {
     total_size += 1 + 1;
   }
 
@@ -2918,6 +3496,16 @@ size_t MozillaSalesForceStatus::ByteSizeLong() const {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::UInt32Size(
         this->standard_audit_statement_timestamp());
+  }
+
+  // bool current_in_roots = 21;
+  if (this->current_in_roots() != 0) {
+    total_size += 2 + 1;
+  }
+
+  // bool was_in_roots = 22;
+  if (this->was_in_roots() != 0) {
+    total_size += 2 + 1;
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
@@ -2986,11 +3574,51 @@ void MozillaSalesForceStatus::MergeFrom(const MozillaSalesForceStatus& from) {
 
     comments_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.comments_);
   }
-  if (from.current_in() != 0) {
-    set_current_in(from.current_in());
+  if (from.ev_policy_oids().size() > 0) {
+
+    ev_policy_oids_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.ev_policy_oids_);
   }
-  if (from.was_in() != 0) {
-    set_was_in(from.was_in());
+  if (from.approval_bug().size() > 0) {
+
+    approval_bug_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.approval_bug_);
+  }
+  if (from.first_nss_release().size() > 0) {
+
+    first_nss_release_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.first_nss_release_);
+  }
+  if (from.first_firefox_release().size() > 0) {
+
+    first_firefox_release_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.first_firefox_release_);
+  }
+  if (from.ev_audit().size() > 0) {
+
+    ev_audit_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.ev_audit_);
+  }
+  if (from.test_website_valid().size() > 0) {
+
+    test_website_valid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.test_website_valid_);
+  }
+  if (from.mozilla_applied_constraints().size() > 0) {
+
+    mozilla_applied_constraints_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.mozilla_applied_constraints_);
+  }
+  if (from.company_website().size() > 0) {
+
+    company_website_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.company_website_);
+  }
+  if (from.geographic_focus().size() > 0) {
+
+    geographic_focus_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.geographic_focus_);
+  }
+  if (from.standard_audit_type().size() > 0) {
+
+    standard_audit_type_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.standard_audit_type_);
+  }
+  if (from.current_in_intermediates() != 0) {
+    set_current_in_intermediates(from.current_in_intermediates());
+  }
+  if (from.was_in_intermediates() != 0) {
+    set_was_in_intermediates(from.was_in_intermediates());
   }
   if (from.cp_same_as_parent() != 0) {
     set_cp_same_as_parent(from.cp_same_as_parent());
@@ -3000,6 +3628,12 @@ void MozillaSalesForceStatus::MergeFrom(const MozillaSalesForceStatus& from) {
   }
   if (from.standard_audit_statement_timestamp() != 0) {
     set_standard_audit_statement_timestamp(from.standard_audit_statement_timestamp());
+  }
+  if (from.current_in_roots() != 0) {
+    set_current_in_roots(from.current_in_roots());
+  }
+  if (from.was_in_roots() != 0) {
+    set_was_in_roots(from.was_in_roots());
   }
 }
 
@@ -3036,11 +3670,23 @@ void MozillaSalesForceStatus::InternalSwap(MozillaSalesForceStatus* other) {
   auditor_.Swap(&other->auditor_);
   management_assertions_by_.Swap(&other->management_assertions_by_);
   comments_.Swap(&other->comments_);
-  std::swap(current_in_, other->current_in_);
-  std::swap(was_in_, other->was_in_);
+  ev_policy_oids_.Swap(&other->ev_policy_oids_);
+  approval_bug_.Swap(&other->approval_bug_);
+  first_nss_release_.Swap(&other->first_nss_release_);
+  first_firefox_release_.Swap(&other->first_firefox_release_);
+  ev_audit_.Swap(&other->ev_audit_);
+  test_website_valid_.Swap(&other->test_website_valid_);
+  mozilla_applied_constraints_.Swap(&other->mozilla_applied_constraints_);
+  company_website_.Swap(&other->company_website_);
+  geographic_focus_.Swap(&other->geographic_focus_);
+  standard_audit_type_.Swap(&other->standard_audit_type_);
+  std::swap(current_in_intermediates_, other->current_in_intermediates_);
+  std::swap(was_in_intermediates_, other->was_in_intermediates_);
   std::swap(cp_same_as_parent_, other->cp_same_as_parent_);
   std::swap(audit_same_as_parent_, other->audit_same_as_parent_);
   std::swap(standard_audit_statement_timestamp_, other->standard_audit_statement_timestamp_);
+  std::swap(current_in_roots_, other->current_in_roots_);
+  std::swap(was_in_roots_, other->was_in_roots_);
   std::swap(_cached_size_, other->_cached_size_);
 }
 
@@ -3052,32 +3698,32 @@ void MozillaSalesForceStatus::InternalSwap(MozillaSalesForceStatus* other) {
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // MozillaSalesForceStatus
 
-// bool current_in = 1;
-void MozillaSalesForceStatus::clear_current_in() {
-  current_in_ = false;
+// bool current_in_intermediates = 1;
+void MozillaSalesForceStatus::clear_current_in_intermediates() {
+  current_in_intermediates_ = false;
 }
-bool MozillaSalesForceStatus::current_in() const {
-  // @@protoc_insertion_point(field_get:zsearch.MozillaSalesForceStatus.current_in)
-  return current_in_;
+bool MozillaSalesForceStatus::current_in_intermediates() const {
+  // @@protoc_insertion_point(field_get:zsearch.MozillaSalesForceStatus.current_in_intermediates)
+  return current_in_intermediates_;
 }
-void MozillaSalesForceStatus::set_current_in(bool value) {
+void MozillaSalesForceStatus::set_current_in_intermediates(bool value) {
   
-  current_in_ = value;
-  // @@protoc_insertion_point(field_set:zsearch.MozillaSalesForceStatus.current_in)
+  current_in_intermediates_ = value;
+  // @@protoc_insertion_point(field_set:zsearch.MozillaSalesForceStatus.current_in_intermediates)
 }
 
-// bool was_in = 2;
-void MozillaSalesForceStatus::clear_was_in() {
-  was_in_ = false;
+// bool was_in_intermediates = 2;
+void MozillaSalesForceStatus::clear_was_in_intermediates() {
+  was_in_intermediates_ = false;
 }
-bool MozillaSalesForceStatus::was_in() const {
-  // @@protoc_insertion_point(field_get:zsearch.MozillaSalesForceStatus.was_in)
-  return was_in_;
+bool MozillaSalesForceStatus::was_in_intermediates() const {
+  // @@protoc_insertion_point(field_get:zsearch.MozillaSalesForceStatus.was_in_intermediates)
+  return was_in_intermediates_;
 }
-void MozillaSalesForceStatus::set_was_in(bool value) {
+void MozillaSalesForceStatus::set_was_in_intermediates(bool value) {
   
-  was_in_ = value;
-  // @@protoc_insertion_point(field_set:zsearch.MozillaSalesForceStatus.was_in)
+  was_in_intermediates_ = value;
+  // @@protoc_insertion_point(field_set:zsearch.MozillaSalesForceStatus.was_in_intermediates)
 }
 
 // string owner_name = 3;
@@ -3640,6 +4286,554 @@ void MozillaSalesForceStatus::set_allocated_comments(::std::string* comments) {
   }
   comments_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), comments);
   // @@protoc_insertion_point(field_set_allocated:zsearch.MozillaSalesForceStatus.comments)
+}
+
+// string ev_policy_oids = 16;
+void MozillaSalesForceStatus::clear_ev_policy_oids() {
+  ev_policy_oids_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+const ::std::string& MozillaSalesForceStatus::ev_policy_oids() const {
+  // @@protoc_insertion_point(field_get:zsearch.MozillaSalesForceStatus.ev_policy_oids)
+  return ev_policy_oids_.GetNoArena();
+}
+void MozillaSalesForceStatus::set_ev_policy_oids(const ::std::string& value) {
+  
+  ev_policy_oids_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zsearch.MozillaSalesForceStatus.ev_policy_oids)
+}
+#if LANG_CXX11
+void MozillaSalesForceStatus::set_ev_policy_oids(::std::string&& value) {
+  
+  ev_policy_oids_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.MozillaSalesForceStatus.ev_policy_oids)
+}
+#endif
+void MozillaSalesForceStatus::set_ev_policy_oids(const char* value) {
+  
+  ev_policy_oids_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zsearch.MozillaSalesForceStatus.ev_policy_oids)
+}
+void MozillaSalesForceStatus::set_ev_policy_oids(const char* value, size_t size) {
+  
+  ev_policy_oids_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zsearch.MozillaSalesForceStatus.ev_policy_oids)
+}
+::std::string* MozillaSalesForceStatus::mutable_ev_policy_oids() {
+  
+  // @@protoc_insertion_point(field_mutable:zsearch.MozillaSalesForceStatus.ev_policy_oids)
+  return ev_policy_oids_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+::std::string* MozillaSalesForceStatus::release_ev_policy_oids() {
+  // @@protoc_insertion_point(field_release:zsearch.MozillaSalesForceStatus.ev_policy_oids)
+  
+  return ev_policy_oids_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+void MozillaSalesForceStatus::set_allocated_ev_policy_oids(::std::string* ev_policy_oids) {
+  if (ev_policy_oids != NULL) {
+    
+  } else {
+    
+  }
+  ev_policy_oids_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ev_policy_oids);
+  // @@protoc_insertion_point(field_set_allocated:zsearch.MozillaSalesForceStatus.ev_policy_oids)
+}
+
+// string approval_bug = 17;
+void MozillaSalesForceStatus::clear_approval_bug() {
+  approval_bug_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+const ::std::string& MozillaSalesForceStatus::approval_bug() const {
+  // @@protoc_insertion_point(field_get:zsearch.MozillaSalesForceStatus.approval_bug)
+  return approval_bug_.GetNoArena();
+}
+void MozillaSalesForceStatus::set_approval_bug(const ::std::string& value) {
+  
+  approval_bug_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zsearch.MozillaSalesForceStatus.approval_bug)
+}
+#if LANG_CXX11
+void MozillaSalesForceStatus::set_approval_bug(::std::string&& value) {
+  
+  approval_bug_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.MozillaSalesForceStatus.approval_bug)
+}
+#endif
+void MozillaSalesForceStatus::set_approval_bug(const char* value) {
+  
+  approval_bug_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zsearch.MozillaSalesForceStatus.approval_bug)
+}
+void MozillaSalesForceStatus::set_approval_bug(const char* value, size_t size) {
+  
+  approval_bug_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zsearch.MozillaSalesForceStatus.approval_bug)
+}
+::std::string* MozillaSalesForceStatus::mutable_approval_bug() {
+  
+  // @@protoc_insertion_point(field_mutable:zsearch.MozillaSalesForceStatus.approval_bug)
+  return approval_bug_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+::std::string* MozillaSalesForceStatus::release_approval_bug() {
+  // @@protoc_insertion_point(field_release:zsearch.MozillaSalesForceStatus.approval_bug)
+  
+  return approval_bug_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+void MozillaSalesForceStatus::set_allocated_approval_bug(::std::string* approval_bug) {
+  if (approval_bug != NULL) {
+    
+  } else {
+    
+  }
+  approval_bug_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), approval_bug);
+  // @@protoc_insertion_point(field_set_allocated:zsearch.MozillaSalesForceStatus.approval_bug)
+}
+
+// string first_nss_release = 18;
+void MozillaSalesForceStatus::clear_first_nss_release() {
+  first_nss_release_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+const ::std::string& MozillaSalesForceStatus::first_nss_release() const {
+  // @@protoc_insertion_point(field_get:zsearch.MozillaSalesForceStatus.first_nss_release)
+  return first_nss_release_.GetNoArena();
+}
+void MozillaSalesForceStatus::set_first_nss_release(const ::std::string& value) {
+  
+  first_nss_release_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zsearch.MozillaSalesForceStatus.first_nss_release)
+}
+#if LANG_CXX11
+void MozillaSalesForceStatus::set_first_nss_release(::std::string&& value) {
+  
+  first_nss_release_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.MozillaSalesForceStatus.first_nss_release)
+}
+#endif
+void MozillaSalesForceStatus::set_first_nss_release(const char* value) {
+  
+  first_nss_release_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zsearch.MozillaSalesForceStatus.first_nss_release)
+}
+void MozillaSalesForceStatus::set_first_nss_release(const char* value, size_t size) {
+  
+  first_nss_release_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zsearch.MozillaSalesForceStatus.first_nss_release)
+}
+::std::string* MozillaSalesForceStatus::mutable_first_nss_release() {
+  
+  // @@protoc_insertion_point(field_mutable:zsearch.MozillaSalesForceStatus.first_nss_release)
+  return first_nss_release_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+::std::string* MozillaSalesForceStatus::release_first_nss_release() {
+  // @@protoc_insertion_point(field_release:zsearch.MozillaSalesForceStatus.first_nss_release)
+  
+  return first_nss_release_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+void MozillaSalesForceStatus::set_allocated_first_nss_release(::std::string* first_nss_release) {
+  if (first_nss_release != NULL) {
+    
+  } else {
+    
+  }
+  first_nss_release_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), first_nss_release);
+  // @@protoc_insertion_point(field_set_allocated:zsearch.MozillaSalesForceStatus.first_nss_release)
+}
+
+// string first_firefox_release = 19;
+void MozillaSalesForceStatus::clear_first_firefox_release() {
+  first_firefox_release_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+const ::std::string& MozillaSalesForceStatus::first_firefox_release() const {
+  // @@protoc_insertion_point(field_get:zsearch.MozillaSalesForceStatus.first_firefox_release)
+  return first_firefox_release_.GetNoArena();
+}
+void MozillaSalesForceStatus::set_first_firefox_release(const ::std::string& value) {
+  
+  first_firefox_release_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zsearch.MozillaSalesForceStatus.first_firefox_release)
+}
+#if LANG_CXX11
+void MozillaSalesForceStatus::set_first_firefox_release(::std::string&& value) {
+  
+  first_firefox_release_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.MozillaSalesForceStatus.first_firefox_release)
+}
+#endif
+void MozillaSalesForceStatus::set_first_firefox_release(const char* value) {
+  
+  first_firefox_release_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zsearch.MozillaSalesForceStatus.first_firefox_release)
+}
+void MozillaSalesForceStatus::set_first_firefox_release(const char* value, size_t size) {
+  
+  first_firefox_release_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zsearch.MozillaSalesForceStatus.first_firefox_release)
+}
+::std::string* MozillaSalesForceStatus::mutable_first_firefox_release() {
+  
+  // @@protoc_insertion_point(field_mutable:zsearch.MozillaSalesForceStatus.first_firefox_release)
+  return first_firefox_release_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+::std::string* MozillaSalesForceStatus::release_first_firefox_release() {
+  // @@protoc_insertion_point(field_release:zsearch.MozillaSalesForceStatus.first_firefox_release)
+  
+  return first_firefox_release_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+void MozillaSalesForceStatus::set_allocated_first_firefox_release(::std::string* first_firefox_release) {
+  if (first_firefox_release != NULL) {
+    
+  } else {
+    
+  }
+  first_firefox_release_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), first_firefox_release);
+  // @@protoc_insertion_point(field_set_allocated:zsearch.MozillaSalesForceStatus.first_firefox_release)
+}
+
+// string ev_audit = 20;
+void MozillaSalesForceStatus::clear_ev_audit() {
+  ev_audit_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+const ::std::string& MozillaSalesForceStatus::ev_audit() const {
+  // @@protoc_insertion_point(field_get:zsearch.MozillaSalesForceStatus.ev_audit)
+  return ev_audit_.GetNoArena();
+}
+void MozillaSalesForceStatus::set_ev_audit(const ::std::string& value) {
+  
+  ev_audit_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zsearch.MozillaSalesForceStatus.ev_audit)
+}
+#if LANG_CXX11
+void MozillaSalesForceStatus::set_ev_audit(::std::string&& value) {
+  
+  ev_audit_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.MozillaSalesForceStatus.ev_audit)
+}
+#endif
+void MozillaSalesForceStatus::set_ev_audit(const char* value) {
+  
+  ev_audit_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zsearch.MozillaSalesForceStatus.ev_audit)
+}
+void MozillaSalesForceStatus::set_ev_audit(const char* value, size_t size) {
+  
+  ev_audit_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zsearch.MozillaSalesForceStatus.ev_audit)
+}
+::std::string* MozillaSalesForceStatus::mutable_ev_audit() {
+  
+  // @@protoc_insertion_point(field_mutable:zsearch.MozillaSalesForceStatus.ev_audit)
+  return ev_audit_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+::std::string* MozillaSalesForceStatus::release_ev_audit() {
+  // @@protoc_insertion_point(field_release:zsearch.MozillaSalesForceStatus.ev_audit)
+  
+  return ev_audit_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+void MozillaSalesForceStatus::set_allocated_ev_audit(::std::string* ev_audit) {
+  if (ev_audit != NULL) {
+    
+  } else {
+    
+  }
+  ev_audit_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ev_audit);
+  // @@protoc_insertion_point(field_set_allocated:zsearch.MozillaSalesForceStatus.ev_audit)
+}
+
+// bool current_in_roots = 21;
+void MozillaSalesForceStatus::clear_current_in_roots() {
+  current_in_roots_ = false;
+}
+bool MozillaSalesForceStatus::current_in_roots() const {
+  // @@protoc_insertion_point(field_get:zsearch.MozillaSalesForceStatus.current_in_roots)
+  return current_in_roots_;
+}
+void MozillaSalesForceStatus::set_current_in_roots(bool value) {
+  
+  current_in_roots_ = value;
+  // @@protoc_insertion_point(field_set:zsearch.MozillaSalesForceStatus.current_in_roots)
+}
+
+// bool was_in_roots = 22;
+void MozillaSalesForceStatus::clear_was_in_roots() {
+  was_in_roots_ = false;
+}
+bool MozillaSalesForceStatus::was_in_roots() const {
+  // @@protoc_insertion_point(field_get:zsearch.MozillaSalesForceStatus.was_in_roots)
+  return was_in_roots_;
+}
+void MozillaSalesForceStatus::set_was_in_roots(bool value) {
+  
+  was_in_roots_ = value;
+  // @@protoc_insertion_point(field_set:zsearch.MozillaSalesForceStatus.was_in_roots)
+}
+
+// string test_website_valid = 23;
+void MozillaSalesForceStatus::clear_test_website_valid() {
+  test_website_valid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+const ::std::string& MozillaSalesForceStatus::test_website_valid() const {
+  // @@protoc_insertion_point(field_get:zsearch.MozillaSalesForceStatus.test_website_valid)
+  return test_website_valid_.GetNoArena();
+}
+void MozillaSalesForceStatus::set_test_website_valid(const ::std::string& value) {
+  
+  test_website_valid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zsearch.MozillaSalesForceStatus.test_website_valid)
+}
+#if LANG_CXX11
+void MozillaSalesForceStatus::set_test_website_valid(::std::string&& value) {
+  
+  test_website_valid_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.MozillaSalesForceStatus.test_website_valid)
+}
+#endif
+void MozillaSalesForceStatus::set_test_website_valid(const char* value) {
+  
+  test_website_valid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zsearch.MozillaSalesForceStatus.test_website_valid)
+}
+void MozillaSalesForceStatus::set_test_website_valid(const char* value, size_t size) {
+  
+  test_website_valid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zsearch.MozillaSalesForceStatus.test_website_valid)
+}
+::std::string* MozillaSalesForceStatus::mutable_test_website_valid() {
+  
+  // @@protoc_insertion_point(field_mutable:zsearch.MozillaSalesForceStatus.test_website_valid)
+  return test_website_valid_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+::std::string* MozillaSalesForceStatus::release_test_website_valid() {
+  // @@protoc_insertion_point(field_release:zsearch.MozillaSalesForceStatus.test_website_valid)
+  
+  return test_website_valid_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+void MozillaSalesForceStatus::set_allocated_test_website_valid(::std::string* test_website_valid) {
+  if (test_website_valid != NULL) {
+    
+  } else {
+    
+  }
+  test_website_valid_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), test_website_valid);
+  // @@protoc_insertion_point(field_set_allocated:zsearch.MozillaSalesForceStatus.test_website_valid)
+}
+
+// string mozilla_applied_constraints = 24;
+void MozillaSalesForceStatus::clear_mozilla_applied_constraints() {
+  mozilla_applied_constraints_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+const ::std::string& MozillaSalesForceStatus::mozilla_applied_constraints() const {
+  // @@protoc_insertion_point(field_get:zsearch.MozillaSalesForceStatus.mozilla_applied_constraints)
+  return mozilla_applied_constraints_.GetNoArena();
+}
+void MozillaSalesForceStatus::set_mozilla_applied_constraints(const ::std::string& value) {
+  
+  mozilla_applied_constraints_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zsearch.MozillaSalesForceStatus.mozilla_applied_constraints)
+}
+#if LANG_CXX11
+void MozillaSalesForceStatus::set_mozilla_applied_constraints(::std::string&& value) {
+  
+  mozilla_applied_constraints_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.MozillaSalesForceStatus.mozilla_applied_constraints)
+}
+#endif
+void MozillaSalesForceStatus::set_mozilla_applied_constraints(const char* value) {
+  
+  mozilla_applied_constraints_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zsearch.MozillaSalesForceStatus.mozilla_applied_constraints)
+}
+void MozillaSalesForceStatus::set_mozilla_applied_constraints(const char* value, size_t size) {
+  
+  mozilla_applied_constraints_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zsearch.MozillaSalesForceStatus.mozilla_applied_constraints)
+}
+::std::string* MozillaSalesForceStatus::mutable_mozilla_applied_constraints() {
+  
+  // @@protoc_insertion_point(field_mutable:zsearch.MozillaSalesForceStatus.mozilla_applied_constraints)
+  return mozilla_applied_constraints_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+::std::string* MozillaSalesForceStatus::release_mozilla_applied_constraints() {
+  // @@protoc_insertion_point(field_release:zsearch.MozillaSalesForceStatus.mozilla_applied_constraints)
+  
+  return mozilla_applied_constraints_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+void MozillaSalesForceStatus::set_allocated_mozilla_applied_constraints(::std::string* mozilla_applied_constraints) {
+  if (mozilla_applied_constraints != NULL) {
+    
+  } else {
+    
+  }
+  mozilla_applied_constraints_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), mozilla_applied_constraints);
+  // @@protoc_insertion_point(field_set_allocated:zsearch.MozillaSalesForceStatus.mozilla_applied_constraints)
+}
+
+// string company_website = 25;
+void MozillaSalesForceStatus::clear_company_website() {
+  company_website_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+const ::std::string& MozillaSalesForceStatus::company_website() const {
+  // @@protoc_insertion_point(field_get:zsearch.MozillaSalesForceStatus.company_website)
+  return company_website_.GetNoArena();
+}
+void MozillaSalesForceStatus::set_company_website(const ::std::string& value) {
+  
+  company_website_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zsearch.MozillaSalesForceStatus.company_website)
+}
+#if LANG_CXX11
+void MozillaSalesForceStatus::set_company_website(::std::string&& value) {
+  
+  company_website_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.MozillaSalesForceStatus.company_website)
+}
+#endif
+void MozillaSalesForceStatus::set_company_website(const char* value) {
+  
+  company_website_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zsearch.MozillaSalesForceStatus.company_website)
+}
+void MozillaSalesForceStatus::set_company_website(const char* value, size_t size) {
+  
+  company_website_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zsearch.MozillaSalesForceStatus.company_website)
+}
+::std::string* MozillaSalesForceStatus::mutable_company_website() {
+  
+  // @@protoc_insertion_point(field_mutable:zsearch.MozillaSalesForceStatus.company_website)
+  return company_website_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+::std::string* MozillaSalesForceStatus::release_company_website() {
+  // @@protoc_insertion_point(field_release:zsearch.MozillaSalesForceStatus.company_website)
+  
+  return company_website_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+void MozillaSalesForceStatus::set_allocated_company_website(::std::string* company_website) {
+  if (company_website != NULL) {
+    
+  } else {
+    
+  }
+  company_website_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), company_website);
+  // @@protoc_insertion_point(field_set_allocated:zsearch.MozillaSalesForceStatus.company_website)
+}
+
+// string geographic_focus = 26;
+void MozillaSalesForceStatus::clear_geographic_focus() {
+  geographic_focus_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+const ::std::string& MozillaSalesForceStatus::geographic_focus() const {
+  // @@protoc_insertion_point(field_get:zsearch.MozillaSalesForceStatus.geographic_focus)
+  return geographic_focus_.GetNoArena();
+}
+void MozillaSalesForceStatus::set_geographic_focus(const ::std::string& value) {
+  
+  geographic_focus_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zsearch.MozillaSalesForceStatus.geographic_focus)
+}
+#if LANG_CXX11
+void MozillaSalesForceStatus::set_geographic_focus(::std::string&& value) {
+  
+  geographic_focus_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.MozillaSalesForceStatus.geographic_focus)
+}
+#endif
+void MozillaSalesForceStatus::set_geographic_focus(const char* value) {
+  
+  geographic_focus_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zsearch.MozillaSalesForceStatus.geographic_focus)
+}
+void MozillaSalesForceStatus::set_geographic_focus(const char* value, size_t size) {
+  
+  geographic_focus_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zsearch.MozillaSalesForceStatus.geographic_focus)
+}
+::std::string* MozillaSalesForceStatus::mutable_geographic_focus() {
+  
+  // @@protoc_insertion_point(field_mutable:zsearch.MozillaSalesForceStatus.geographic_focus)
+  return geographic_focus_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+::std::string* MozillaSalesForceStatus::release_geographic_focus() {
+  // @@protoc_insertion_point(field_release:zsearch.MozillaSalesForceStatus.geographic_focus)
+  
+  return geographic_focus_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+void MozillaSalesForceStatus::set_allocated_geographic_focus(::std::string* geographic_focus) {
+  if (geographic_focus != NULL) {
+    
+  } else {
+    
+  }
+  geographic_focus_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), geographic_focus);
+  // @@protoc_insertion_point(field_set_allocated:zsearch.MozillaSalesForceStatus.geographic_focus)
+}
+
+// string standard_audit_type = 27;
+void MozillaSalesForceStatus::clear_standard_audit_type() {
+  standard_audit_type_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+const ::std::string& MozillaSalesForceStatus::standard_audit_type() const {
+  // @@protoc_insertion_point(field_get:zsearch.MozillaSalesForceStatus.standard_audit_type)
+  return standard_audit_type_.GetNoArena();
+}
+void MozillaSalesForceStatus::set_standard_audit_type(const ::std::string& value) {
+  
+  standard_audit_type_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zsearch.MozillaSalesForceStatus.standard_audit_type)
+}
+#if LANG_CXX11
+void MozillaSalesForceStatus::set_standard_audit_type(::std::string&& value) {
+  
+  standard_audit_type_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.MozillaSalesForceStatus.standard_audit_type)
+}
+#endif
+void MozillaSalesForceStatus::set_standard_audit_type(const char* value) {
+  
+  standard_audit_type_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zsearch.MozillaSalesForceStatus.standard_audit_type)
+}
+void MozillaSalesForceStatus::set_standard_audit_type(const char* value, size_t size) {
+  
+  standard_audit_type_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zsearch.MozillaSalesForceStatus.standard_audit_type)
+}
+::std::string* MozillaSalesForceStatus::mutable_standard_audit_type() {
+  
+  // @@protoc_insertion_point(field_mutable:zsearch.MozillaSalesForceStatus.standard_audit_type)
+  return standard_audit_type_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+::std::string* MozillaSalesForceStatus::release_standard_audit_type() {
+  // @@protoc_insertion_point(field_release:zsearch.MozillaSalesForceStatus.standard_audit_type)
+  
+  return standard_audit_type_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+void MozillaSalesForceStatus::set_allocated_standard_audit_type(::std::string* standard_audit_type) {
+  if (standard_audit_type != NULL) {
+    
+  } else {
+    
+  }
+  standard_audit_type_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), standard_audit_type);
+  // @@protoc_insertion_point(field_set_allocated:zsearch.MozillaSalesForceStatus.standard_audit_type)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS

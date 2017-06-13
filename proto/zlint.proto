@@ -236,5 +236,9 @@ message Lints {
     LintResult e_subject_state_name_max_length = 191;
     LintResult w_multiple_subject_RDN = 192;
     LintResult w_multiple_issuer_RDN = 193;
-    // highest ID in use is currently 193
+    LintResult w_issuer_dn_trailing_whitespace = 194;
+    LintResult w_issuer_dn_leading_whitespace = 195;
+    LintResult w_subject_dn_trailing_whitespace = 196;
+    LintResult w_subject_dn_leading_whitespace = 197;
+    // highest ID in use is currently 197
 }

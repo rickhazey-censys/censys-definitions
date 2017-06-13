@@ -2143,6 +2143,42 @@ class Lints : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
   ::zsearch::LintResult* release_w_multiple_issuer_rdn();
   void set_allocated_w_multiple_issuer_rdn(::zsearch::LintResult* w_multiple_issuer_rdn);
 
+  // .zsearch.LintResult w_issuer_dn_trailing_whitespace = 194;
+  bool has_w_issuer_dn_trailing_whitespace() const;
+  void clear_w_issuer_dn_trailing_whitespace();
+  static const int kWIssuerDnTrailingWhitespaceFieldNumber = 194;
+  const ::zsearch::LintResult& w_issuer_dn_trailing_whitespace() const;
+  ::zsearch::LintResult* mutable_w_issuer_dn_trailing_whitespace();
+  ::zsearch::LintResult* release_w_issuer_dn_trailing_whitespace();
+  void set_allocated_w_issuer_dn_trailing_whitespace(::zsearch::LintResult* w_issuer_dn_trailing_whitespace);
+
+  // .zsearch.LintResult w_issuer_dn_leading_whitespace = 195;
+  bool has_w_issuer_dn_leading_whitespace() const;
+  void clear_w_issuer_dn_leading_whitespace();
+  static const int kWIssuerDnLeadingWhitespaceFieldNumber = 195;
+  const ::zsearch::LintResult& w_issuer_dn_leading_whitespace() const;
+  ::zsearch::LintResult* mutable_w_issuer_dn_leading_whitespace();
+  ::zsearch::LintResult* release_w_issuer_dn_leading_whitespace();
+  void set_allocated_w_issuer_dn_leading_whitespace(::zsearch::LintResult* w_issuer_dn_leading_whitespace);
+
+  // .zsearch.LintResult w_subject_dn_trailing_whitespace = 196;
+  bool has_w_subject_dn_trailing_whitespace() const;
+  void clear_w_subject_dn_trailing_whitespace();
+  static const int kWSubjectDnTrailingWhitespaceFieldNumber = 196;
+  const ::zsearch::LintResult& w_subject_dn_trailing_whitespace() const;
+  ::zsearch::LintResult* mutable_w_subject_dn_trailing_whitespace();
+  ::zsearch::LintResult* release_w_subject_dn_trailing_whitespace();
+  void set_allocated_w_subject_dn_trailing_whitespace(::zsearch::LintResult* w_subject_dn_trailing_whitespace);
+
+  // .zsearch.LintResult w_subject_dn_leading_whitespace = 197;
+  bool has_w_subject_dn_leading_whitespace() const;
+  void clear_w_subject_dn_leading_whitespace();
+  static const int kWSubjectDnLeadingWhitespaceFieldNumber = 197;
+  const ::zsearch::LintResult& w_subject_dn_leading_whitespace() const;
+  ::zsearch::LintResult* mutable_w_subject_dn_leading_whitespace();
+  ::zsearch::LintResult* release_w_subject_dn_leading_whitespace();
+  void set_allocated_w_subject_dn_leading_whitespace(::zsearch::LintResult* w_subject_dn_leading_whitespace);
+
   // @@protoc_insertion_point(class_scope:zsearch.Lints)
  private:
 
@@ -2339,6 +2375,10 @@ class Lints : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
   ::zsearch::LintResult* e_subject_state_name_max_length_;
   ::zsearch::LintResult* w_multiple_subject_rdn_;
   ::zsearch::LintResult* w_multiple_issuer_rdn_;
+  ::zsearch::LintResult* w_issuer_dn_trailing_whitespace_;
+  ::zsearch::LintResult* w_issuer_dn_leading_whitespace_;
+  ::zsearch::LintResult* w_subject_dn_trailing_whitespace_;
+  ::zsearch::LintResult* w_subject_dn_leading_whitespace_;
   mutable int _cached_size_;
   friend struct  protobuf_zlint_2eproto::TableStruct;
 };
@@ -10061,6 +10101,162 @@ inline void Lints::set_allocated_w_multiple_issuer_rdn(::zsearch::LintResult* w_
     
   }
   // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.w_multiple_issuer_RDN)
+}
+
+// .zsearch.LintResult w_issuer_dn_trailing_whitespace = 194;
+inline bool Lints::has_w_issuer_dn_trailing_whitespace() const {
+  return this != internal_default_instance() && w_issuer_dn_trailing_whitespace_ != NULL;
+}
+inline void Lints::clear_w_issuer_dn_trailing_whitespace() {
+  if (GetArenaNoVirtual() == NULL && w_issuer_dn_trailing_whitespace_ != NULL) delete w_issuer_dn_trailing_whitespace_;
+  w_issuer_dn_trailing_whitespace_ = NULL;
+}
+inline const ::zsearch::LintResult& Lints::w_issuer_dn_trailing_whitespace() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.w_issuer_dn_trailing_whitespace)
+  return w_issuer_dn_trailing_whitespace_ != NULL ? *w_issuer_dn_trailing_whitespace_
+                         : *::zsearch::LintResult::internal_default_instance();
+}
+inline ::zsearch::LintResult* Lints::mutable_w_issuer_dn_trailing_whitespace() {
+  
+  if (w_issuer_dn_trailing_whitespace_ == NULL) {
+    w_issuer_dn_trailing_whitespace_ = new ::zsearch::LintResult;
+  }
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.w_issuer_dn_trailing_whitespace)
+  return w_issuer_dn_trailing_whitespace_;
+}
+inline ::zsearch::LintResult* Lints::release_w_issuer_dn_trailing_whitespace() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.w_issuer_dn_trailing_whitespace)
+  
+  ::zsearch::LintResult* temp = w_issuer_dn_trailing_whitespace_;
+  w_issuer_dn_trailing_whitespace_ = NULL;
+  return temp;
+}
+inline void Lints::set_allocated_w_issuer_dn_trailing_whitespace(::zsearch::LintResult* w_issuer_dn_trailing_whitespace) {
+  delete w_issuer_dn_trailing_whitespace_;
+  w_issuer_dn_trailing_whitespace_ = w_issuer_dn_trailing_whitespace;
+  if (w_issuer_dn_trailing_whitespace) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.w_issuer_dn_trailing_whitespace)
+}
+
+// .zsearch.LintResult w_issuer_dn_leading_whitespace = 195;
+inline bool Lints::has_w_issuer_dn_leading_whitespace() const {
+  return this != internal_default_instance() && w_issuer_dn_leading_whitespace_ != NULL;
+}
+inline void Lints::clear_w_issuer_dn_leading_whitespace() {
+  if (GetArenaNoVirtual() == NULL && w_issuer_dn_leading_whitespace_ != NULL) delete w_issuer_dn_leading_whitespace_;
+  w_issuer_dn_leading_whitespace_ = NULL;
+}
+inline const ::zsearch::LintResult& Lints::w_issuer_dn_leading_whitespace() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.w_issuer_dn_leading_whitespace)
+  return w_issuer_dn_leading_whitespace_ != NULL ? *w_issuer_dn_leading_whitespace_
+                         : *::zsearch::LintResult::internal_default_instance();
+}
+inline ::zsearch::LintResult* Lints::mutable_w_issuer_dn_leading_whitespace() {
+  
+  if (w_issuer_dn_leading_whitespace_ == NULL) {
+    w_issuer_dn_leading_whitespace_ = new ::zsearch::LintResult;
+  }
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.w_issuer_dn_leading_whitespace)
+  return w_issuer_dn_leading_whitespace_;
+}
+inline ::zsearch::LintResult* Lints::release_w_issuer_dn_leading_whitespace() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.w_issuer_dn_leading_whitespace)
+  
+  ::zsearch::LintResult* temp = w_issuer_dn_leading_whitespace_;
+  w_issuer_dn_leading_whitespace_ = NULL;
+  return temp;
+}
+inline void Lints::set_allocated_w_issuer_dn_leading_whitespace(::zsearch::LintResult* w_issuer_dn_leading_whitespace) {
+  delete w_issuer_dn_leading_whitespace_;
+  w_issuer_dn_leading_whitespace_ = w_issuer_dn_leading_whitespace;
+  if (w_issuer_dn_leading_whitespace) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.w_issuer_dn_leading_whitespace)
+}
+
+// .zsearch.LintResult w_subject_dn_trailing_whitespace = 196;
+inline bool Lints::has_w_subject_dn_trailing_whitespace() const {
+  return this != internal_default_instance() && w_subject_dn_trailing_whitespace_ != NULL;
+}
+inline void Lints::clear_w_subject_dn_trailing_whitespace() {
+  if (GetArenaNoVirtual() == NULL && w_subject_dn_trailing_whitespace_ != NULL) delete w_subject_dn_trailing_whitespace_;
+  w_subject_dn_trailing_whitespace_ = NULL;
+}
+inline const ::zsearch::LintResult& Lints::w_subject_dn_trailing_whitespace() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.w_subject_dn_trailing_whitespace)
+  return w_subject_dn_trailing_whitespace_ != NULL ? *w_subject_dn_trailing_whitespace_
+                         : *::zsearch::LintResult::internal_default_instance();
+}
+inline ::zsearch::LintResult* Lints::mutable_w_subject_dn_trailing_whitespace() {
+  
+  if (w_subject_dn_trailing_whitespace_ == NULL) {
+    w_subject_dn_trailing_whitespace_ = new ::zsearch::LintResult;
+  }
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.w_subject_dn_trailing_whitespace)
+  return w_subject_dn_trailing_whitespace_;
+}
+inline ::zsearch::LintResult* Lints::release_w_subject_dn_trailing_whitespace() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.w_subject_dn_trailing_whitespace)
+  
+  ::zsearch::LintResult* temp = w_subject_dn_trailing_whitespace_;
+  w_subject_dn_trailing_whitespace_ = NULL;
+  return temp;
+}
+inline void Lints::set_allocated_w_subject_dn_trailing_whitespace(::zsearch::LintResult* w_subject_dn_trailing_whitespace) {
+  delete w_subject_dn_trailing_whitespace_;
+  w_subject_dn_trailing_whitespace_ = w_subject_dn_trailing_whitespace;
+  if (w_subject_dn_trailing_whitespace) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.w_subject_dn_trailing_whitespace)
+}
+
+// .zsearch.LintResult w_subject_dn_leading_whitespace = 197;
+inline bool Lints::has_w_subject_dn_leading_whitespace() const {
+  return this != internal_default_instance() && w_subject_dn_leading_whitespace_ != NULL;
+}
+inline void Lints::clear_w_subject_dn_leading_whitespace() {
+  if (GetArenaNoVirtual() == NULL && w_subject_dn_leading_whitespace_ != NULL) delete w_subject_dn_leading_whitespace_;
+  w_subject_dn_leading_whitespace_ = NULL;
+}
+inline const ::zsearch::LintResult& Lints::w_subject_dn_leading_whitespace() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.w_subject_dn_leading_whitespace)
+  return w_subject_dn_leading_whitespace_ != NULL ? *w_subject_dn_leading_whitespace_
+                         : *::zsearch::LintResult::internal_default_instance();
+}
+inline ::zsearch::LintResult* Lints::mutable_w_subject_dn_leading_whitespace() {
+  
+  if (w_subject_dn_leading_whitespace_ == NULL) {
+    w_subject_dn_leading_whitespace_ = new ::zsearch::LintResult;
+  }
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.w_subject_dn_leading_whitespace)
+  return w_subject_dn_leading_whitespace_;
+}
+inline ::zsearch::LintResult* Lints::release_w_subject_dn_leading_whitespace() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.w_subject_dn_leading_whitespace)
+  
+  ::zsearch::LintResult* temp = w_subject_dn_leading_whitespace_;
+  w_subject_dn_leading_whitespace_ = NULL;
+  return temp;
+}
+inline void Lints::set_allocated_w_subject_dn_leading_whitespace(::zsearch::LintResult* w_subject_dn_leading_whitespace) {
+  delete w_subject_dn_leading_whitespace_;
+  w_subject_dn_leading_whitespace_ = w_subject_dn_leading_whitespace;
+  if (w_subject_dn_leading_whitespace) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.w_subject_dn_leading_whitespace)
 }
 
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS

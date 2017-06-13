@@ -804,17 +804,157 @@ class MozillaSalesForceStatus : public ::google::protobuf::Message /* @@protoc_i
   ::std::string* release_comments();
   void set_allocated_comments(::std::string* comments);
 
-  // bool current_in = 1;
-  void clear_current_in();
-  static const int kCurrentInFieldNumber = 1;
-  bool current_in() const;
-  void set_current_in(bool value);
+  // string ev_policy_oids = 16;
+  void clear_ev_policy_oids();
+  static const int kEvPolicyOidsFieldNumber = 16;
+  const ::std::string& ev_policy_oids() const;
+  void set_ev_policy_oids(const ::std::string& value);
+  #if LANG_CXX11
+  void set_ev_policy_oids(::std::string&& value);
+  #endif
+  void set_ev_policy_oids(const char* value);
+  void set_ev_policy_oids(const char* value, size_t size);
+  ::std::string* mutable_ev_policy_oids();
+  ::std::string* release_ev_policy_oids();
+  void set_allocated_ev_policy_oids(::std::string* ev_policy_oids);
 
-  // bool was_in = 2;
-  void clear_was_in();
-  static const int kWasInFieldNumber = 2;
-  bool was_in() const;
-  void set_was_in(bool value);
+  // string approval_bug = 17;
+  void clear_approval_bug();
+  static const int kApprovalBugFieldNumber = 17;
+  const ::std::string& approval_bug() const;
+  void set_approval_bug(const ::std::string& value);
+  #if LANG_CXX11
+  void set_approval_bug(::std::string&& value);
+  #endif
+  void set_approval_bug(const char* value);
+  void set_approval_bug(const char* value, size_t size);
+  ::std::string* mutable_approval_bug();
+  ::std::string* release_approval_bug();
+  void set_allocated_approval_bug(::std::string* approval_bug);
+
+  // string first_nss_release = 18;
+  void clear_first_nss_release();
+  static const int kFirstNssReleaseFieldNumber = 18;
+  const ::std::string& first_nss_release() const;
+  void set_first_nss_release(const ::std::string& value);
+  #if LANG_CXX11
+  void set_first_nss_release(::std::string&& value);
+  #endif
+  void set_first_nss_release(const char* value);
+  void set_first_nss_release(const char* value, size_t size);
+  ::std::string* mutable_first_nss_release();
+  ::std::string* release_first_nss_release();
+  void set_allocated_first_nss_release(::std::string* first_nss_release);
+
+  // string first_firefox_release = 19;
+  void clear_first_firefox_release();
+  static const int kFirstFirefoxReleaseFieldNumber = 19;
+  const ::std::string& first_firefox_release() const;
+  void set_first_firefox_release(const ::std::string& value);
+  #if LANG_CXX11
+  void set_first_firefox_release(::std::string&& value);
+  #endif
+  void set_first_firefox_release(const char* value);
+  void set_first_firefox_release(const char* value, size_t size);
+  ::std::string* mutable_first_firefox_release();
+  ::std::string* release_first_firefox_release();
+  void set_allocated_first_firefox_release(::std::string* first_firefox_release);
+
+  // string ev_audit = 20;
+  void clear_ev_audit();
+  static const int kEvAuditFieldNumber = 20;
+  const ::std::string& ev_audit() const;
+  void set_ev_audit(const ::std::string& value);
+  #if LANG_CXX11
+  void set_ev_audit(::std::string&& value);
+  #endif
+  void set_ev_audit(const char* value);
+  void set_ev_audit(const char* value, size_t size);
+  ::std::string* mutable_ev_audit();
+  ::std::string* release_ev_audit();
+  void set_allocated_ev_audit(::std::string* ev_audit);
+
+  // string test_website_valid = 23;
+  void clear_test_website_valid();
+  static const int kTestWebsiteValidFieldNumber = 23;
+  const ::std::string& test_website_valid() const;
+  void set_test_website_valid(const ::std::string& value);
+  #if LANG_CXX11
+  void set_test_website_valid(::std::string&& value);
+  #endif
+  void set_test_website_valid(const char* value);
+  void set_test_website_valid(const char* value, size_t size);
+  ::std::string* mutable_test_website_valid();
+  ::std::string* release_test_website_valid();
+  void set_allocated_test_website_valid(::std::string* test_website_valid);
+
+  // string mozilla_applied_constraints = 24;
+  void clear_mozilla_applied_constraints();
+  static const int kMozillaAppliedConstraintsFieldNumber = 24;
+  const ::std::string& mozilla_applied_constraints() const;
+  void set_mozilla_applied_constraints(const ::std::string& value);
+  #if LANG_CXX11
+  void set_mozilla_applied_constraints(::std::string&& value);
+  #endif
+  void set_mozilla_applied_constraints(const char* value);
+  void set_mozilla_applied_constraints(const char* value, size_t size);
+  ::std::string* mutable_mozilla_applied_constraints();
+  ::std::string* release_mozilla_applied_constraints();
+  void set_allocated_mozilla_applied_constraints(::std::string* mozilla_applied_constraints);
+
+  // string company_website = 25;
+  void clear_company_website();
+  static const int kCompanyWebsiteFieldNumber = 25;
+  const ::std::string& company_website() const;
+  void set_company_website(const ::std::string& value);
+  #if LANG_CXX11
+  void set_company_website(::std::string&& value);
+  #endif
+  void set_company_website(const char* value);
+  void set_company_website(const char* value, size_t size);
+  ::std::string* mutable_company_website();
+  ::std::string* release_company_website();
+  void set_allocated_company_website(::std::string* company_website);
+
+  // string geographic_focus = 26;
+  void clear_geographic_focus();
+  static const int kGeographicFocusFieldNumber = 26;
+  const ::std::string& geographic_focus() const;
+  void set_geographic_focus(const ::std::string& value);
+  #if LANG_CXX11
+  void set_geographic_focus(::std::string&& value);
+  #endif
+  void set_geographic_focus(const char* value);
+  void set_geographic_focus(const char* value, size_t size);
+  ::std::string* mutable_geographic_focus();
+  ::std::string* release_geographic_focus();
+  void set_allocated_geographic_focus(::std::string* geographic_focus);
+
+  // string standard_audit_type = 27;
+  void clear_standard_audit_type();
+  static const int kStandardAuditTypeFieldNumber = 27;
+  const ::std::string& standard_audit_type() const;
+  void set_standard_audit_type(const ::std::string& value);
+  #if LANG_CXX11
+  void set_standard_audit_type(::std::string&& value);
+  #endif
+  void set_standard_audit_type(const char* value);
+  void set_standard_audit_type(const char* value, size_t size);
+  ::std::string* mutable_standard_audit_type();
+  ::std::string* release_standard_audit_type();
+  void set_allocated_standard_audit_type(::std::string* standard_audit_type);
+
+  // bool current_in_intermediates = 1;
+  void clear_current_in_intermediates();
+  static const int kCurrentInIntermediatesFieldNumber = 1;
+  bool current_in_intermediates() const;
+  void set_current_in_intermediates(bool value);
+
+  // bool was_in_intermediates = 2;
+  void clear_was_in_intermediates();
+  static const int kWasInIntermediatesFieldNumber = 2;
+  bool was_in_intermediates() const;
+  void set_was_in_intermediates(bool value);
 
   // bool cp_same_as_parent = 8;
   void clear_cp_same_as_parent();
@@ -834,6 +974,18 @@ class MozillaSalesForceStatus : public ::google::protobuf::Message /* @@protoc_i
   ::google::protobuf::uint32 standard_audit_statement_timestamp() const;
   void set_standard_audit_statement_timestamp(::google::protobuf::uint32 value);
 
+  // bool current_in_roots = 21;
+  void clear_current_in_roots();
+  static const int kCurrentInRootsFieldNumber = 21;
+  bool current_in_roots() const;
+  void set_current_in_roots(bool value);
+
+  // bool was_in_roots = 22;
+  void clear_was_in_roots();
+  static const int kWasInRootsFieldNumber = 22;
+  bool was_in_roots() const;
+  void set_was_in_roots(bool value);
+
   // @@protoc_insertion_point(class_scope:zsearch.MozillaSalesForceStatus)
  private:
 
@@ -848,11 +1000,23 @@ class MozillaSalesForceStatus : public ::google::protobuf::Message /* @@protoc_i
   ::google::protobuf::internal::ArenaStringPtr auditor_;
   ::google::protobuf::internal::ArenaStringPtr management_assertions_by_;
   ::google::protobuf::internal::ArenaStringPtr comments_;
-  bool current_in_;
-  bool was_in_;
+  ::google::protobuf::internal::ArenaStringPtr ev_policy_oids_;
+  ::google::protobuf::internal::ArenaStringPtr approval_bug_;
+  ::google::protobuf::internal::ArenaStringPtr first_nss_release_;
+  ::google::protobuf::internal::ArenaStringPtr first_firefox_release_;
+  ::google::protobuf::internal::ArenaStringPtr ev_audit_;
+  ::google::protobuf::internal::ArenaStringPtr test_website_valid_;
+  ::google::protobuf::internal::ArenaStringPtr mozilla_applied_constraints_;
+  ::google::protobuf::internal::ArenaStringPtr company_website_;
+  ::google::protobuf::internal::ArenaStringPtr geographic_focus_;
+  ::google::protobuf::internal::ArenaStringPtr standard_audit_type_;
+  bool current_in_intermediates_;
+  bool was_in_intermediates_;
   bool cp_same_as_parent_;
   bool audit_same_as_parent_;
   ::google::protobuf::uint32 standard_audit_statement_timestamp_;
+  bool current_in_roots_;
+  bool was_in_roots_;
   mutable int _cached_size_;
   friend struct  protobuf_certificate_2eproto::TableStruct;
 };
@@ -2000,32 +2164,32 @@ inline void CertificateValidation::set_allocated_google_ct_primary(::zsearch::Ro
 
 // MozillaSalesForceStatus
 
-// bool current_in = 1;
-inline void MozillaSalesForceStatus::clear_current_in() {
-  current_in_ = false;
+// bool current_in_intermediates = 1;
+inline void MozillaSalesForceStatus::clear_current_in_intermediates() {
+  current_in_intermediates_ = false;
 }
-inline bool MozillaSalesForceStatus::current_in() const {
-  // @@protoc_insertion_point(field_get:zsearch.MozillaSalesForceStatus.current_in)
-  return current_in_;
+inline bool MozillaSalesForceStatus::current_in_intermediates() const {
+  // @@protoc_insertion_point(field_get:zsearch.MozillaSalesForceStatus.current_in_intermediates)
+  return current_in_intermediates_;
 }
-inline void MozillaSalesForceStatus::set_current_in(bool value) {
+inline void MozillaSalesForceStatus::set_current_in_intermediates(bool value) {
   
-  current_in_ = value;
-  // @@protoc_insertion_point(field_set:zsearch.MozillaSalesForceStatus.current_in)
+  current_in_intermediates_ = value;
+  // @@protoc_insertion_point(field_set:zsearch.MozillaSalesForceStatus.current_in_intermediates)
 }
 
-// bool was_in = 2;
-inline void MozillaSalesForceStatus::clear_was_in() {
-  was_in_ = false;
+// bool was_in_intermediates = 2;
+inline void MozillaSalesForceStatus::clear_was_in_intermediates() {
+  was_in_intermediates_ = false;
 }
-inline bool MozillaSalesForceStatus::was_in() const {
-  // @@protoc_insertion_point(field_get:zsearch.MozillaSalesForceStatus.was_in)
-  return was_in_;
+inline bool MozillaSalesForceStatus::was_in_intermediates() const {
+  // @@protoc_insertion_point(field_get:zsearch.MozillaSalesForceStatus.was_in_intermediates)
+  return was_in_intermediates_;
 }
-inline void MozillaSalesForceStatus::set_was_in(bool value) {
+inline void MozillaSalesForceStatus::set_was_in_intermediates(bool value) {
   
-  was_in_ = value;
-  // @@protoc_insertion_point(field_set:zsearch.MozillaSalesForceStatus.was_in)
+  was_in_intermediates_ = value;
+  // @@protoc_insertion_point(field_set:zsearch.MozillaSalesForceStatus.was_in_intermediates)
 }
 
 // string owner_name = 3;
@@ -2588,6 +2752,554 @@ inline void MozillaSalesForceStatus::set_allocated_comments(::std::string* comme
   }
   comments_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), comments);
   // @@protoc_insertion_point(field_set_allocated:zsearch.MozillaSalesForceStatus.comments)
+}
+
+// string ev_policy_oids = 16;
+inline void MozillaSalesForceStatus::clear_ev_policy_oids() {
+  ev_policy_oids_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& MozillaSalesForceStatus::ev_policy_oids() const {
+  // @@protoc_insertion_point(field_get:zsearch.MozillaSalesForceStatus.ev_policy_oids)
+  return ev_policy_oids_.GetNoArena();
+}
+inline void MozillaSalesForceStatus::set_ev_policy_oids(const ::std::string& value) {
+  
+  ev_policy_oids_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zsearch.MozillaSalesForceStatus.ev_policy_oids)
+}
+#if LANG_CXX11
+inline void MozillaSalesForceStatus::set_ev_policy_oids(::std::string&& value) {
+  
+  ev_policy_oids_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.MozillaSalesForceStatus.ev_policy_oids)
+}
+#endif
+inline void MozillaSalesForceStatus::set_ev_policy_oids(const char* value) {
+  
+  ev_policy_oids_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zsearch.MozillaSalesForceStatus.ev_policy_oids)
+}
+inline void MozillaSalesForceStatus::set_ev_policy_oids(const char* value, size_t size) {
+  
+  ev_policy_oids_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zsearch.MozillaSalesForceStatus.ev_policy_oids)
+}
+inline ::std::string* MozillaSalesForceStatus::mutable_ev_policy_oids() {
+  
+  // @@protoc_insertion_point(field_mutable:zsearch.MozillaSalesForceStatus.ev_policy_oids)
+  return ev_policy_oids_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* MozillaSalesForceStatus::release_ev_policy_oids() {
+  // @@protoc_insertion_point(field_release:zsearch.MozillaSalesForceStatus.ev_policy_oids)
+  
+  return ev_policy_oids_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void MozillaSalesForceStatus::set_allocated_ev_policy_oids(::std::string* ev_policy_oids) {
+  if (ev_policy_oids != NULL) {
+    
+  } else {
+    
+  }
+  ev_policy_oids_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ev_policy_oids);
+  // @@protoc_insertion_point(field_set_allocated:zsearch.MozillaSalesForceStatus.ev_policy_oids)
+}
+
+// string approval_bug = 17;
+inline void MozillaSalesForceStatus::clear_approval_bug() {
+  approval_bug_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& MozillaSalesForceStatus::approval_bug() const {
+  // @@protoc_insertion_point(field_get:zsearch.MozillaSalesForceStatus.approval_bug)
+  return approval_bug_.GetNoArena();
+}
+inline void MozillaSalesForceStatus::set_approval_bug(const ::std::string& value) {
+  
+  approval_bug_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zsearch.MozillaSalesForceStatus.approval_bug)
+}
+#if LANG_CXX11
+inline void MozillaSalesForceStatus::set_approval_bug(::std::string&& value) {
+  
+  approval_bug_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.MozillaSalesForceStatus.approval_bug)
+}
+#endif
+inline void MozillaSalesForceStatus::set_approval_bug(const char* value) {
+  
+  approval_bug_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zsearch.MozillaSalesForceStatus.approval_bug)
+}
+inline void MozillaSalesForceStatus::set_approval_bug(const char* value, size_t size) {
+  
+  approval_bug_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zsearch.MozillaSalesForceStatus.approval_bug)
+}
+inline ::std::string* MozillaSalesForceStatus::mutable_approval_bug() {
+  
+  // @@protoc_insertion_point(field_mutable:zsearch.MozillaSalesForceStatus.approval_bug)
+  return approval_bug_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* MozillaSalesForceStatus::release_approval_bug() {
+  // @@protoc_insertion_point(field_release:zsearch.MozillaSalesForceStatus.approval_bug)
+  
+  return approval_bug_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void MozillaSalesForceStatus::set_allocated_approval_bug(::std::string* approval_bug) {
+  if (approval_bug != NULL) {
+    
+  } else {
+    
+  }
+  approval_bug_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), approval_bug);
+  // @@protoc_insertion_point(field_set_allocated:zsearch.MozillaSalesForceStatus.approval_bug)
+}
+
+// string first_nss_release = 18;
+inline void MozillaSalesForceStatus::clear_first_nss_release() {
+  first_nss_release_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& MozillaSalesForceStatus::first_nss_release() const {
+  // @@protoc_insertion_point(field_get:zsearch.MozillaSalesForceStatus.first_nss_release)
+  return first_nss_release_.GetNoArena();
+}
+inline void MozillaSalesForceStatus::set_first_nss_release(const ::std::string& value) {
+  
+  first_nss_release_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zsearch.MozillaSalesForceStatus.first_nss_release)
+}
+#if LANG_CXX11
+inline void MozillaSalesForceStatus::set_first_nss_release(::std::string&& value) {
+  
+  first_nss_release_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.MozillaSalesForceStatus.first_nss_release)
+}
+#endif
+inline void MozillaSalesForceStatus::set_first_nss_release(const char* value) {
+  
+  first_nss_release_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zsearch.MozillaSalesForceStatus.first_nss_release)
+}
+inline void MozillaSalesForceStatus::set_first_nss_release(const char* value, size_t size) {
+  
+  first_nss_release_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zsearch.MozillaSalesForceStatus.first_nss_release)
+}
+inline ::std::string* MozillaSalesForceStatus::mutable_first_nss_release() {
+  
+  // @@protoc_insertion_point(field_mutable:zsearch.MozillaSalesForceStatus.first_nss_release)
+  return first_nss_release_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* MozillaSalesForceStatus::release_first_nss_release() {
+  // @@protoc_insertion_point(field_release:zsearch.MozillaSalesForceStatus.first_nss_release)
+  
+  return first_nss_release_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void MozillaSalesForceStatus::set_allocated_first_nss_release(::std::string* first_nss_release) {
+  if (first_nss_release != NULL) {
+    
+  } else {
+    
+  }
+  first_nss_release_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), first_nss_release);
+  // @@protoc_insertion_point(field_set_allocated:zsearch.MozillaSalesForceStatus.first_nss_release)
+}
+
+// string first_firefox_release = 19;
+inline void MozillaSalesForceStatus::clear_first_firefox_release() {
+  first_firefox_release_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& MozillaSalesForceStatus::first_firefox_release() const {
+  // @@protoc_insertion_point(field_get:zsearch.MozillaSalesForceStatus.first_firefox_release)
+  return first_firefox_release_.GetNoArena();
+}
+inline void MozillaSalesForceStatus::set_first_firefox_release(const ::std::string& value) {
+  
+  first_firefox_release_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zsearch.MozillaSalesForceStatus.first_firefox_release)
+}
+#if LANG_CXX11
+inline void MozillaSalesForceStatus::set_first_firefox_release(::std::string&& value) {
+  
+  first_firefox_release_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.MozillaSalesForceStatus.first_firefox_release)
+}
+#endif
+inline void MozillaSalesForceStatus::set_first_firefox_release(const char* value) {
+  
+  first_firefox_release_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zsearch.MozillaSalesForceStatus.first_firefox_release)
+}
+inline void MozillaSalesForceStatus::set_first_firefox_release(const char* value, size_t size) {
+  
+  first_firefox_release_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zsearch.MozillaSalesForceStatus.first_firefox_release)
+}
+inline ::std::string* MozillaSalesForceStatus::mutable_first_firefox_release() {
+  
+  // @@protoc_insertion_point(field_mutable:zsearch.MozillaSalesForceStatus.first_firefox_release)
+  return first_firefox_release_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* MozillaSalesForceStatus::release_first_firefox_release() {
+  // @@protoc_insertion_point(field_release:zsearch.MozillaSalesForceStatus.first_firefox_release)
+  
+  return first_firefox_release_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void MozillaSalesForceStatus::set_allocated_first_firefox_release(::std::string* first_firefox_release) {
+  if (first_firefox_release != NULL) {
+    
+  } else {
+    
+  }
+  first_firefox_release_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), first_firefox_release);
+  // @@protoc_insertion_point(field_set_allocated:zsearch.MozillaSalesForceStatus.first_firefox_release)
+}
+
+// string ev_audit = 20;
+inline void MozillaSalesForceStatus::clear_ev_audit() {
+  ev_audit_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& MozillaSalesForceStatus::ev_audit() const {
+  // @@protoc_insertion_point(field_get:zsearch.MozillaSalesForceStatus.ev_audit)
+  return ev_audit_.GetNoArena();
+}
+inline void MozillaSalesForceStatus::set_ev_audit(const ::std::string& value) {
+  
+  ev_audit_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zsearch.MozillaSalesForceStatus.ev_audit)
+}
+#if LANG_CXX11
+inline void MozillaSalesForceStatus::set_ev_audit(::std::string&& value) {
+  
+  ev_audit_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.MozillaSalesForceStatus.ev_audit)
+}
+#endif
+inline void MozillaSalesForceStatus::set_ev_audit(const char* value) {
+  
+  ev_audit_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zsearch.MozillaSalesForceStatus.ev_audit)
+}
+inline void MozillaSalesForceStatus::set_ev_audit(const char* value, size_t size) {
+  
+  ev_audit_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zsearch.MozillaSalesForceStatus.ev_audit)
+}
+inline ::std::string* MozillaSalesForceStatus::mutable_ev_audit() {
+  
+  // @@protoc_insertion_point(field_mutable:zsearch.MozillaSalesForceStatus.ev_audit)
+  return ev_audit_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* MozillaSalesForceStatus::release_ev_audit() {
+  // @@protoc_insertion_point(field_release:zsearch.MozillaSalesForceStatus.ev_audit)
+  
+  return ev_audit_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void MozillaSalesForceStatus::set_allocated_ev_audit(::std::string* ev_audit) {
+  if (ev_audit != NULL) {
+    
+  } else {
+    
+  }
+  ev_audit_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ev_audit);
+  // @@protoc_insertion_point(field_set_allocated:zsearch.MozillaSalesForceStatus.ev_audit)
+}
+
+// bool current_in_roots = 21;
+inline void MozillaSalesForceStatus::clear_current_in_roots() {
+  current_in_roots_ = false;
+}
+inline bool MozillaSalesForceStatus::current_in_roots() const {
+  // @@protoc_insertion_point(field_get:zsearch.MozillaSalesForceStatus.current_in_roots)
+  return current_in_roots_;
+}
+inline void MozillaSalesForceStatus::set_current_in_roots(bool value) {
+  
+  current_in_roots_ = value;
+  // @@protoc_insertion_point(field_set:zsearch.MozillaSalesForceStatus.current_in_roots)
+}
+
+// bool was_in_roots = 22;
+inline void MozillaSalesForceStatus::clear_was_in_roots() {
+  was_in_roots_ = false;
+}
+inline bool MozillaSalesForceStatus::was_in_roots() const {
+  // @@protoc_insertion_point(field_get:zsearch.MozillaSalesForceStatus.was_in_roots)
+  return was_in_roots_;
+}
+inline void MozillaSalesForceStatus::set_was_in_roots(bool value) {
+  
+  was_in_roots_ = value;
+  // @@protoc_insertion_point(field_set:zsearch.MozillaSalesForceStatus.was_in_roots)
+}
+
+// string test_website_valid = 23;
+inline void MozillaSalesForceStatus::clear_test_website_valid() {
+  test_website_valid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& MozillaSalesForceStatus::test_website_valid() const {
+  // @@protoc_insertion_point(field_get:zsearch.MozillaSalesForceStatus.test_website_valid)
+  return test_website_valid_.GetNoArena();
+}
+inline void MozillaSalesForceStatus::set_test_website_valid(const ::std::string& value) {
+  
+  test_website_valid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zsearch.MozillaSalesForceStatus.test_website_valid)
+}
+#if LANG_CXX11
+inline void MozillaSalesForceStatus::set_test_website_valid(::std::string&& value) {
+  
+  test_website_valid_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.MozillaSalesForceStatus.test_website_valid)
+}
+#endif
+inline void MozillaSalesForceStatus::set_test_website_valid(const char* value) {
+  
+  test_website_valid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zsearch.MozillaSalesForceStatus.test_website_valid)
+}
+inline void MozillaSalesForceStatus::set_test_website_valid(const char* value, size_t size) {
+  
+  test_website_valid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zsearch.MozillaSalesForceStatus.test_website_valid)
+}
+inline ::std::string* MozillaSalesForceStatus::mutable_test_website_valid() {
+  
+  // @@protoc_insertion_point(field_mutable:zsearch.MozillaSalesForceStatus.test_website_valid)
+  return test_website_valid_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* MozillaSalesForceStatus::release_test_website_valid() {
+  // @@protoc_insertion_point(field_release:zsearch.MozillaSalesForceStatus.test_website_valid)
+  
+  return test_website_valid_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void MozillaSalesForceStatus::set_allocated_test_website_valid(::std::string* test_website_valid) {
+  if (test_website_valid != NULL) {
+    
+  } else {
+    
+  }
+  test_website_valid_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), test_website_valid);
+  // @@protoc_insertion_point(field_set_allocated:zsearch.MozillaSalesForceStatus.test_website_valid)
+}
+
+// string mozilla_applied_constraints = 24;
+inline void MozillaSalesForceStatus::clear_mozilla_applied_constraints() {
+  mozilla_applied_constraints_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& MozillaSalesForceStatus::mozilla_applied_constraints() const {
+  // @@protoc_insertion_point(field_get:zsearch.MozillaSalesForceStatus.mozilla_applied_constraints)
+  return mozilla_applied_constraints_.GetNoArena();
+}
+inline void MozillaSalesForceStatus::set_mozilla_applied_constraints(const ::std::string& value) {
+  
+  mozilla_applied_constraints_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zsearch.MozillaSalesForceStatus.mozilla_applied_constraints)
+}
+#if LANG_CXX11
+inline void MozillaSalesForceStatus::set_mozilla_applied_constraints(::std::string&& value) {
+  
+  mozilla_applied_constraints_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.MozillaSalesForceStatus.mozilla_applied_constraints)
+}
+#endif
+inline void MozillaSalesForceStatus::set_mozilla_applied_constraints(const char* value) {
+  
+  mozilla_applied_constraints_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zsearch.MozillaSalesForceStatus.mozilla_applied_constraints)
+}
+inline void MozillaSalesForceStatus::set_mozilla_applied_constraints(const char* value, size_t size) {
+  
+  mozilla_applied_constraints_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zsearch.MozillaSalesForceStatus.mozilla_applied_constraints)
+}
+inline ::std::string* MozillaSalesForceStatus::mutable_mozilla_applied_constraints() {
+  
+  // @@protoc_insertion_point(field_mutable:zsearch.MozillaSalesForceStatus.mozilla_applied_constraints)
+  return mozilla_applied_constraints_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* MozillaSalesForceStatus::release_mozilla_applied_constraints() {
+  // @@protoc_insertion_point(field_release:zsearch.MozillaSalesForceStatus.mozilla_applied_constraints)
+  
+  return mozilla_applied_constraints_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void MozillaSalesForceStatus::set_allocated_mozilla_applied_constraints(::std::string* mozilla_applied_constraints) {
+  if (mozilla_applied_constraints != NULL) {
+    
+  } else {
+    
+  }
+  mozilla_applied_constraints_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), mozilla_applied_constraints);
+  // @@protoc_insertion_point(field_set_allocated:zsearch.MozillaSalesForceStatus.mozilla_applied_constraints)
+}
+
+// string company_website = 25;
+inline void MozillaSalesForceStatus::clear_company_website() {
+  company_website_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& MozillaSalesForceStatus::company_website() const {
+  // @@protoc_insertion_point(field_get:zsearch.MozillaSalesForceStatus.company_website)
+  return company_website_.GetNoArena();
+}
+inline void MozillaSalesForceStatus::set_company_website(const ::std::string& value) {
+  
+  company_website_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zsearch.MozillaSalesForceStatus.company_website)
+}
+#if LANG_CXX11
+inline void MozillaSalesForceStatus::set_company_website(::std::string&& value) {
+  
+  company_website_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.MozillaSalesForceStatus.company_website)
+}
+#endif
+inline void MozillaSalesForceStatus::set_company_website(const char* value) {
+  
+  company_website_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zsearch.MozillaSalesForceStatus.company_website)
+}
+inline void MozillaSalesForceStatus::set_company_website(const char* value, size_t size) {
+  
+  company_website_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zsearch.MozillaSalesForceStatus.company_website)
+}
+inline ::std::string* MozillaSalesForceStatus::mutable_company_website() {
+  
+  // @@protoc_insertion_point(field_mutable:zsearch.MozillaSalesForceStatus.company_website)
+  return company_website_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* MozillaSalesForceStatus::release_company_website() {
+  // @@protoc_insertion_point(field_release:zsearch.MozillaSalesForceStatus.company_website)
+  
+  return company_website_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void MozillaSalesForceStatus::set_allocated_company_website(::std::string* company_website) {
+  if (company_website != NULL) {
+    
+  } else {
+    
+  }
+  company_website_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), company_website);
+  // @@protoc_insertion_point(field_set_allocated:zsearch.MozillaSalesForceStatus.company_website)
+}
+
+// string geographic_focus = 26;
+inline void MozillaSalesForceStatus::clear_geographic_focus() {
+  geographic_focus_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& MozillaSalesForceStatus::geographic_focus() const {
+  // @@protoc_insertion_point(field_get:zsearch.MozillaSalesForceStatus.geographic_focus)
+  return geographic_focus_.GetNoArena();
+}
+inline void MozillaSalesForceStatus::set_geographic_focus(const ::std::string& value) {
+  
+  geographic_focus_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zsearch.MozillaSalesForceStatus.geographic_focus)
+}
+#if LANG_CXX11
+inline void MozillaSalesForceStatus::set_geographic_focus(::std::string&& value) {
+  
+  geographic_focus_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.MozillaSalesForceStatus.geographic_focus)
+}
+#endif
+inline void MozillaSalesForceStatus::set_geographic_focus(const char* value) {
+  
+  geographic_focus_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zsearch.MozillaSalesForceStatus.geographic_focus)
+}
+inline void MozillaSalesForceStatus::set_geographic_focus(const char* value, size_t size) {
+  
+  geographic_focus_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zsearch.MozillaSalesForceStatus.geographic_focus)
+}
+inline ::std::string* MozillaSalesForceStatus::mutable_geographic_focus() {
+  
+  // @@protoc_insertion_point(field_mutable:zsearch.MozillaSalesForceStatus.geographic_focus)
+  return geographic_focus_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* MozillaSalesForceStatus::release_geographic_focus() {
+  // @@protoc_insertion_point(field_release:zsearch.MozillaSalesForceStatus.geographic_focus)
+  
+  return geographic_focus_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void MozillaSalesForceStatus::set_allocated_geographic_focus(::std::string* geographic_focus) {
+  if (geographic_focus != NULL) {
+    
+  } else {
+    
+  }
+  geographic_focus_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), geographic_focus);
+  // @@protoc_insertion_point(field_set_allocated:zsearch.MozillaSalesForceStatus.geographic_focus)
+}
+
+// string standard_audit_type = 27;
+inline void MozillaSalesForceStatus::clear_standard_audit_type() {
+  standard_audit_type_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& MozillaSalesForceStatus::standard_audit_type() const {
+  // @@protoc_insertion_point(field_get:zsearch.MozillaSalesForceStatus.standard_audit_type)
+  return standard_audit_type_.GetNoArena();
+}
+inline void MozillaSalesForceStatus::set_standard_audit_type(const ::std::string& value) {
+  
+  standard_audit_type_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zsearch.MozillaSalesForceStatus.standard_audit_type)
+}
+#if LANG_CXX11
+inline void MozillaSalesForceStatus::set_standard_audit_type(::std::string&& value) {
+  
+  standard_audit_type_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.MozillaSalesForceStatus.standard_audit_type)
+}
+#endif
+inline void MozillaSalesForceStatus::set_standard_audit_type(const char* value) {
+  
+  standard_audit_type_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zsearch.MozillaSalesForceStatus.standard_audit_type)
+}
+inline void MozillaSalesForceStatus::set_standard_audit_type(const char* value, size_t size) {
+  
+  standard_audit_type_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zsearch.MozillaSalesForceStatus.standard_audit_type)
+}
+inline ::std::string* MozillaSalesForceStatus::mutable_standard_audit_type() {
+  
+  // @@protoc_insertion_point(field_mutable:zsearch.MozillaSalesForceStatus.standard_audit_type)
+  return standard_audit_type_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* MozillaSalesForceStatus::release_standard_audit_type() {
+  // @@protoc_insertion_point(field_release:zsearch.MozillaSalesForceStatus.standard_audit_type)
+  
+  return standard_audit_type_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void MozillaSalesForceStatus::set_allocated_standard_audit_type(::std::string* standard_audit_type) {
+  if (standard_audit_type != NULL) {
+    
+  } else {
+    
+  }
+  standard_audit_type_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), standard_audit_type);
+  // @@protoc_insertion_point(field_set_allocated:zsearch.MozillaSalesForceStatus.standard_audit_type)
 }
 
 // -------------------------------------------------------------------
