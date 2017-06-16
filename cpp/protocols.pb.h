@@ -72,12 +72,13 @@ enum Protocol {
   PROTO_LOOKUP = 24,
   PROTO_HTTP_WWW = 26,
   PROTO_HTTPS_WWW = 27,
+  PROTO_SMB = 28,
   Protocol_INT_MIN_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32min,
   Protocol_INT_MAX_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32max
 };
 bool Protocol_IsValid(int value);
 const Protocol Protocol_MIN = PROTO_RESERVED;
-const Protocol Protocol_MAX = PROTO_HTTPS_WWW;
+const Protocol Protocol_MAX = PROTO_SMB;
 const int Protocol_ARRAYSIZE = Protocol_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* Protocol_descriptor();

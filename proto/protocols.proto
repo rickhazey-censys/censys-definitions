@@ -30,7 +30,7 @@ enum Protocol {
     PROTO_LOOKUP = 24; // DNS lookups about a domain, e.g., DMARC record
     PROTO_HTTP_WWW = 26; // http://www.domain.tld, for use within Alexa
     PROTO_HTTPS_WWW = 27; // https://www.domain.tld, for use within Alexa
-
+    PROTO_SMB = 28;
 }
 
 enum Subprotocol {
@@ -98,6 +98,5 @@ enum Subprotocol {
     SUBPROTO_A = 223;
     SUBPROTO_MX = 224;
     SUBPROTO_AXFR = 225;
-
 }
 
