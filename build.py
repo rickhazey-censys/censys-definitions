@@ -17,6 +17,7 @@ TARGETS = [
     TARGET_PYTHON,
     TARGET_CPP,
 ]
+TARGET_ALL = "all"
 
 protobuf_prefixes = [
     "anonstore",
@@ -90,17 +91,23 @@ def main():
     parser.add_argument(
         'target', 
         metavar='TARGET',
-        choices=TARGETS,
+        choices=TARGETS + [TARGET_ALL],
         nargs=1,
-        help='one of {go, python, cpp}',
+        help='one of {go, python, cpp, all}',
     )
     args = parser.parse_args()
     target = args.target[0]
-    if target == TARGET_GO:
+
+    build_all = False
+    if target == TARGET_ALL:
+        build_all = True
+
+    if build_all or target == TARGET_GO:
         build_go()
-    elif target == TARGET_PYTHON:
+    elif build_all or target == TARGET_PYTHON:
+        print "yolo"
         build_python()
-    elif target == TARGET_CPP:
+    elif build_all or target == TARGET_CPP:
         build_cpp()
     return
 
