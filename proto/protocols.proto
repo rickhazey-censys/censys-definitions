@@ -74,6 +74,7 @@ enum Subprotocol {
     SUBPROTO_LOOKUP = 36; // Replacing OPEN_RESOLVER
     SUBPROTO_STATUS = 37;
     SUBPROTO_SZL = 38; // Siemens S/7 System Status Lists
+    SUBPROTO_V2 = 39; // Replaces 'banner' for SSH with ZGrab's XSSH grabber
 
     // System Records
     SUBPROTO_SYS_PUBLIC_LOCATION = 192;
@@ -99,4 +100,3 @@ enum Subprotocol {
     SUBPROTO_MX = 224;
     SUBPROTO_AXFR = 225;
 }
-
