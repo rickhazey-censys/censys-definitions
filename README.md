@@ -40,3 +40,14 @@ Regenerate everything:
 ```console
 $ ./build.py
 ```
+
+## Uploading zsearch-definitions to PyPi
+
+Bump the version number in `python/setup.py`. Be sure to commit & push this change.
+
+Then, in the `python` directory of this repo:
+```
+python setup.py sdist upload
+```
+
+Verify the update appears [on PyPi](https://pypi.python.org/pypi/zsearch-definitions).
