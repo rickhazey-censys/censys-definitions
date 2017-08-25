@@ -59,9 +59,12 @@ class AdminService(object):
             raise Exception("ZDB failure: %s" % retv.error)
         return retv
 
-    def dump_certificates(self, path, incremental=False, max_records=0):
-        retv = self._service.DumpCertificatesToJSON(rpc_pb2.Command(filepath=path,
-                incremental_dump=incremental, max_records=max_records), 8*60*60)
+    def dump_certificates(self, path, incremental=False, max_records=0,
+            start_prefix=0, stop_prefix=0):
+        cmd = rpc_pb2.Command(filepath=path, incremental_dump=False, 
+                 max_records=max_records, start_ip=start_prefix,
+                 stop_ip=stop_prefix)
+        retv = self._service.DumpCertificatesToJSON(cmd, 8*60*60)
         if retv.status != rpc_pb2.CommandReply.SUCCESS:
             raise Exception("ZDB failure: %s" % retv.error)
         return retv
