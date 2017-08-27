@@ -12,7 +12,7 @@ TARGET_GO = "go"
 TARGET_PYTHON = "python"
 TARGET_CPP = "cpp"
 
-TARGETS = [ 
+TARGETS = [
     TARGET_GO,
     TARGET_PYTHON,
     TARGET_CPP,
@@ -89,7 +89,7 @@ def build_cpp():
 def main():
     parser = argparse.ArgumentParser(description='Compile some protobufs.')
     parser.add_argument(
-        'target', 
+        'target',
         metavar='TARGET',
         choices=TARGETS + [TARGET_ALL],
         nargs=1,
@@ -105,7 +105,6 @@ def main():
     if build_all or target == TARGET_GO:
         build_go()
     elif build_all or target == TARGET_PYTHON:
-        print "yolo"
         build_python()
     elif build_all or target == TARGET_CPP:
         build_cpp()
