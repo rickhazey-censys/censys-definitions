@@ -1,4 +1,7 @@
-all: go python cpp
+all: go python cpp proto
+
+proto:
+	./build.py proto
 
 go: proto/*.proto
 	./build.py go
@@ -15,4 +18,4 @@ deploy: python
 clean:
 	rm -f go/*.go python/zsearch_definitions/*_pb2.py python/zsearch_definitions/*_grpc.py cpp/*.h cpp/*.cc
 
-.PHONY: deploy clean cpp python go
+.PHONY: deploy clean cpp python go proto

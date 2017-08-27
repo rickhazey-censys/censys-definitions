@@ -41,6 +41,9 @@ message ZLint {
     Lints lints = 9;
 }
 
+// DO NOT EDIT BELOW THIS LINE. MACHINE GENERATED.
+// __begin_zlint_proto
+
 message Lints {
 
     LintResult e_basic_constraints_not_critical = 1;

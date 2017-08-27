@@ -37,3 +37,7 @@
 python/build/*
 python/dist/*
 python/zsearch_definitions.egg-info/*
+
+# ZLint Descriptions
+zlint-state.json
+zlint-lints.json
