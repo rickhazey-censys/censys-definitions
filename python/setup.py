@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 setup(
     name = "zsearch-definitions",
     description = "Egg version of files that can be used for interacting with zdb through python",
-    version = "0.1.15",
+    version = "0.1.16",
     license = "Apache License, Version 2.0",
     author = "Censys Team",
     author_email = "team@censys.io",
