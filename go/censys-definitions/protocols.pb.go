@@ -110,7 +110,7 @@ var Protocol_value = map[string]int32{
 func (x Protocol) String() string {
 	return proto.EnumName(Protocol_name, int32(x))
 }
-func (Protocol) EnumDescriptor() ([]byte, []int) { return fileDescriptor5, []int{0} }
+func (Protocol) EnumDescriptor() ([]byte, []int) { return fileDescriptor6, []int{0} }
 
 type Subprotocol int32
 
@@ -306,18 +306,18 @@ var Subprotocol_value = map[string]int32{
 func (x Subprotocol) String() string {
 	return proto.EnumName(Subprotocol_name, int32(x))
 }
-func (Subprotocol) EnumDescriptor() ([]byte, []int) { return fileDescriptor5, []int{1} }
+func (Subprotocol) EnumDescriptor() ([]byte, []int) { return fileDescriptor6, []int{1} }
 
 func init() {
 	proto.RegisterEnum("zsearch.Protocol", Protocol_name, Protocol_value)
 	proto.RegisterEnum("zsearch.Subprotocol", Subprotocol_name, Subprotocol_value)
 }
 
-func init() { proto.RegisterFile("protocols.proto", fileDescriptor5) }
+func init() { proto.RegisterFile("protocols.proto", fileDescriptor6) }
 
-var fileDescriptor5 = []byte{
+var fileDescriptor6 = []byte{
 	// 840 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x6c, 0x94, 0xc9, 0x72, 0x1b, 0x37,
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x09, 0x6e, 0x88, 0x02, 0xff, 0x6c, 0x94, 0xc9, 0x72, 0x1b, 0x37,
 	0x13, 0xc7, 0xbf, 0xb1, 0x6c, 0x2d, 0xd0, 0xc2, 0xbf, 0x40, 0x89, 0xda, 0xe8, 0x2f, 0x72, 0x12,
 	0x27, 0x55, 0x3e, 0xa4, 0x62, 0xe9, 0x90, 0x33, 0x66, 0xd0, 0x22, 0xa7, 0x88, 0x99, 0x81, 0x01,
 	0x0c, 0x97, 0x5c, 0xa6, 0x62, 0x57, 0xaa, 0x72, 0x48, 0x95, 0x52, 0x76, 0x72, 0xc9, 0xd3, 0x65,

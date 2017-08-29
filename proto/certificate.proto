@@ -5,6 +5,7 @@ package zsearch;
 import "common.proto";
 import "zlint.proto";
 import "ct.proto";
+import "caa.proto";
 
 
 enum CertificateType {
@@ -173,6 +174,7 @@ message Certificate {
     CertificateValidation validation = 35;
     CTStatus ct = 30;
     ZLint zlint = 38;
+    CAALookup caa = 49;
     CertificateRevocation revocation = 43;
     CertificateAudit audit = 46;
     // store wheter record is precert so that CT synchronization
@@ -214,4 +216,5 @@ message Certificate {
     bool should_post_process = 27 [deprecated=true];
     bool do_not_post_process = 36 [deprecated=true];
 
+    // highest ID in use: 49
 }

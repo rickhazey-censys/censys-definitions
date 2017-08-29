@@ -35,11 +35,28 @@ const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[2];
 
 }  // namespace
 
+PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTableField
+    const TableStruct::entries[] = {
+  {0, 0, 0, ::google::protobuf::internal::kInvalidMask, 0, 0},
+};
+
+PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::AuxillaryParseTableField
+    const TableStruct::aux[] = {
+  ::google::protobuf::internal::AuxillaryParseTableField(),
+};
+PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTable const
+    TableStruct::schema[] = {
+  { NULL, NULL, 0, -1, -1, false },
+  { NULL, NULL, 0, -1, -1, false },
+  { NULL, NULL, 0, -1, -1, false },
+};
+
 const ::google::protobuf::uint32 TableStruct::offsets[] = {
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTServerStatus, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTServerStatus, index_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTServerStatus, ct_timestamp_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTServerStatus, pull_timestamp_),
@@ -51,6 +68,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, censys_dev_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, censys_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, google_aviator_),
@@ -89,6 +107,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SCT, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SCT, sha256fp_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SCT, server_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SCT, status_),
@@ -96,8 +115,8 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
 
 static const ::google::protobuf::internal::MigrationSchema schemas[] = {
   { 0, -1, sizeof(CTServerStatus)},
-  { 11, -1, sizeof(CTStatus)},
-  { 49, -1, sizeof(SCT)},
+  { 12, -1, sizeof(CTStatus)},
+  { 51, -1, sizeof(SCT)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -459,7 +478,7 @@ void CTServerStatus::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* CTServerStatus::descriptor() {
   protobuf_ct_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_ct_2eproto::file_level_metadata[0].descriptor;
+  return protobuf_ct_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
 const CTServerStatus& CTServerStatus::default_instance() {
@@ -495,7 +514,8 @@ bool CTServerStatus::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // int64 index = 1;
       case 1: {
-        if (tag == 8u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
@@ -508,7 +528,8 @@ bool CTServerStatus::MergePartialFromCodedStream(
 
       // int64 ct_timestamp = 2;
       case 2: {
-        if (tag == 16u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(16u)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
@@ -521,7 +542,8 @@ bool CTServerStatus::MergePartialFromCodedStream(
 
       // int64 pull_timestamp = 3;
       case 3: {
-        if (tag == 24u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(24u)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
@@ -534,7 +556,8 @@ bool CTServerStatus::MergePartialFromCodedStream(
 
       // int64 push_timestamp = 4;
       case 4: {
-        if (tag == 32u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(32u)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
@@ -547,7 +570,8 @@ bool CTServerStatus::MergePartialFromCodedStream(
 
       // .zsearch.CTPushStatus push_status = 5;
       case 5: {
-        if (tag == 40u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(40u)) {
           int value;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
@@ -561,7 +585,8 @@ bool CTServerStatus::MergePartialFromCodedStream(
 
       // bytes sct = 6;
       case 6: {
-        if (tag == 50u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(50u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
                 input, this->mutable_sct()));
         } else {
@@ -572,7 +597,8 @@ bool CTServerStatus::MergePartialFromCodedStream(
 
       // string push_error = 7;
       case 7: {
-        if (tag == 58u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(58u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_push_error()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -609,6 +635,9 @@ failure:
 void CTServerStatus::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:zsearch.CTServerStatus)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   // int64 index = 1;
   if (this->index() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt64(1, this->index(), output);
@@ -656,8 +685,10 @@ void CTServerStatus::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* CTServerStatus::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:zsearch.CTServerStatus)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   // int64 index = 1;
   if (this->index() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(1, this->index(), target);
@@ -784,6 +815,9 @@ void CTServerStatus::MergeFrom(const CTServerStatus& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:zsearch.CTServerStatus)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   if (from.sct().size() > 0) {
 
     sct_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.sct_);
@@ -844,7 +878,7 @@ void CTServerStatus::InternalSwap(CTServerStatus* other) {
 
 ::google::protobuf::Metadata CTServerStatus::GetMetadata() const {
   protobuf_ct_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_ct_2eproto::file_level_metadata[0];
+  return protobuf_ct_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -937,11 +971,12 @@ void CTServerStatus::set_sct(const ::std::string& value) {
 void CTServerStatus::set_sct(::std::string&& value) {
   
   sct_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.CTServerStatus.sct)
 }
 #endif
 void CTServerStatus::set_sct(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   
   sct_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.CTServerStatus.sct)
@@ -989,11 +1024,12 @@ void CTServerStatus::set_push_error(const ::std::string& value) {
 void CTServerStatus::set_push_error(::std::string&& value) {
   
   push_error_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.CTServerStatus.push_error)
 }
 #endif
 void CTServerStatus::set_push_error(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   
   push_error_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.CTServerStatus.push_error)
@@ -1133,11 +1169,6 @@ CTStatus::CTStatus(const CTStatus& from)
   } else {
     digicert_ct1_ = NULL;
   }
-  if (from.has_digicert_ct2()) {
-    digicert_ct2_ = new ::zsearch::CTServerStatus(*from.digicert_ct2_);
-  } else {
-    digicert_ct2_ = NULL;
-  }
   if (from.has_izenpe_com_ct()) {
     izenpe_com_ct_ = new ::zsearch::CTServerStatus(*from.izenpe_com_ct_);
   } else {
@@ -1158,31 +1189,6 @@ CTStatus::CTStatus(const CTStatus& from)
   } else {
     symantec_ws_vega_ = NULL;
   }
-  if (from.has_symantec_ws_sirius()) {
-    symantec_ws_sirius_ = new ::zsearch::CTServerStatus(*from.symantec_ws_sirius_);
-  } else {
-    symantec_ws_sirius_ = NULL;
-  }
-  if (from.has_symantec_ws_deneb()) {
-    symantec_ws_deneb_ = new ::zsearch::CTServerStatus(*from.symantec_ws_deneb_);
-  } else {
-    symantec_ws_deneb_ = NULL;
-  }
-  if (from.has_comodo_dodo()) {
-    comodo_dodo_ = new ::zsearch::CTServerStatus(*from.comodo_dodo_);
-  } else {
-    comodo_dodo_ = NULL;
-  }
-  if (from.has_comodo_mammoth()) {
-    comodo_mammoth_ = new ::zsearch::CTServerStatus(*from.comodo_mammoth_);
-  } else {
-    comodo_mammoth_ = NULL;
-  }
-  if (from.has_comodo_sabre()) {
-    comodo_sabre_ = new ::zsearch::CTServerStatus(*from.comodo_sabre_);
-  } else {
-    comodo_sabre_ = NULL;
-  }
   if (from.has_wosign_ctlog()) {
     wosign_ctlog_ = new ::zsearch::CTServerStatus(*from.wosign_ctlog_);
   } else {
@@ -1193,35 +1199,15 @@ CTStatus::CTStatus(const CTStatus& from)
   } else {
     wosign_ct_ = NULL;
   }
-  if (from.has_gdca_ct()) {
-    gdca_ct_ = new ::zsearch::CTServerStatus(*from.gdca_ct_);
-  } else {
-    gdca_ct_ = NULL;
-  }
-  if (from.has_gdca_ctlog()) {
-    gdca_ctlog_ = new ::zsearch::CTServerStatus(*from.gdca_ctlog_);
-  } else {
-    gdca_ctlog_ = NULL;
-  }
-  if (from.has_venafi_api_ctlog()) {
-    venafi_api_ctlog_ = new ::zsearch::CTServerStatus(*from.venafi_api_ctlog_);
-  } else {
-    venafi_api_ctlog_ = NULL;
-  }
-  if (from.has_venafi_api_ctlog_gen2()) {
-    venafi_api_ctlog_gen2_ = new ::zsearch::CTServerStatus(*from.venafi_api_ctlog_gen2_);
-  } else {
-    venafi_api_ctlog_gen2_ = NULL;
-  }
-  if (from.has_nordu_ct_plausible()) {
-    nordu_ct_plausible_ = new ::zsearch::CTServerStatus(*from.nordu_ct_plausible_);
-  } else {
-    nordu_ct_plausible_ = NULL;
-  }
   if (from.has_cnnic_ctserver()) {
     cnnic_ctserver_ = new ::zsearch::CTServerStatus(*from.cnnic_ctserver_);
   } else {
     cnnic_ctserver_ = NULL;
+  }
+  if (from.has_gdca_ct()) {
+    gdca_ct_ = new ::zsearch::CTServerStatus(*from.gdca_ct_);
+  } else {
+    gdca_ct_ = NULL;
   }
   if (from.has_startssl_ct()) {
     startssl_ct_ = new ::zsearch::CTServerStatus(*from.startssl_ct_);
@@ -1233,15 +1219,65 @@ CTStatus::CTStatus(const CTStatus& from)
   } else {
     certly_log_ = NULL;
   }
-  if (from.has_sheca_ct()) {
-    sheca_ct_ = new ::zsearch::CTServerStatus(*from.sheca_ct_);
+  if (from.has_venafi_api_ctlog()) {
+    venafi_api_ctlog_ = new ::zsearch::CTServerStatus(*from.venafi_api_ctlog_);
   } else {
-    sheca_ct_ = NULL;
+    venafi_api_ctlog_ = NULL;
+  }
+  if (from.has_symantec_ws_deneb()) {
+    symantec_ws_deneb_ = new ::zsearch::CTServerStatus(*from.symantec_ws_deneb_);
+  } else {
+    symantec_ws_deneb_ = NULL;
+  }
+  if (from.has_nordu_ct_plausible()) {
+    nordu_ct_plausible_ = new ::zsearch::CTServerStatus(*from.nordu_ct_plausible_);
+  } else {
+    nordu_ct_plausible_ = NULL;
+  }
+  if (from.has_comodo_dodo()) {
+    comodo_dodo_ = new ::zsearch::CTServerStatus(*from.comodo_dodo_);
+  } else {
+    comodo_dodo_ = NULL;
+  }
+  if (from.has_comodo_mammoth()) {
+    comodo_mammoth_ = new ::zsearch::CTServerStatus(*from.comodo_mammoth_);
+  } else {
+    comodo_mammoth_ = NULL;
+  }
+  if (from.has_gdca_ctlog()) {
+    gdca_ctlog_ = new ::zsearch::CTServerStatus(*from.gdca_ctlog_);
+  } else {
+    gdca_ctlog_ = NULL;
+  }
+  if (from.has_symantec_ws_sirius()) {
+    symantec_ws_sirius_ = new ::zsearch::CTServerStatus(*from.symantec_ws_sirius_);
+  } else {
+    symantec_ws_sirius_ = NULL;
   }
   if (from.has_certificatetransparency_cn_ct()) {
     certificatetransparency_cn_ct_ = new ::zsearch::CTServerStatus(*from.certificatetransparency_cn_ct_);
   } else {
     certificatetransparency_cn_ct_ = NULL;
+  }
+  if (from.has_venafi_api_ctlog_gen2()) {
+    venafi_api_ctlog_gen2_ = new ::zsearch::CTServerStatus(*from.venafi_api_ctlog_gen2_);
+  } else {
+    venafi_api_ctlog_gen2_ = NULL;
+  }
+  if (from.has_digicert_ct2()) {
+    digicert_ct2_ = new ::zsearch::CTServerStatus(*from.digicert_ct2_);
+  } else {
+    digicert_ct2_ = NULL;
+  }
+  if (from.has_comodo_sabre()) {
+    comodo_sabre_ = new ::zsearch::CTServerStatus(*from.comodo_sabre_);
+  } else {
+    comodo_sabre_ = NULL;
+  }
+  if (from.has_sheca_ct()) {
+    sheca_ct_ = new ::zsearch::CTServerStatus(*from.sheca_ct_);
+  } else {
+    sheca_ct_ = NULL;
   }
   if (from.has_letsencrypt_ct_clicky()) {
     letsencrypt_ct_clicky_ = new ::zsearch::CTServerStatus(*from.letsencrypt_ct_clicky_);
@@ -1297,9 +1333,6 @@ void CTStatus::SharedDtor() {
     delete digicert_ct1_;
   }
   if (this != internal_default_instance()) {
-    delete digicert_ct2_;
-  }
-  if (this != internal_default_instance()) {
     delete izenpe_com_ct_;
   }
   if (this != internal_default_instance()) {
@@ -1312,43 +1345,16 @@ void CTStatus::SharedDtor() {
     delete symantec_ws_vega_;
   }
   if (this != internal_default_instance()) {
-    delete symantec_ws_sirius_;
-  }
-  if (this != internal_default_instance()) {
-    delete symantec_ws_deneb_;
-  }
-  if (this != internal_default_instance()) {
-    delete comodo_dodo_;
-  }
-  if (this != internal_default_instance()) {
-    delete comodo_mammoth_;
-  }
-  if (this != internal_default_instance()) {
-    delete comodo_sabre_;
-  }
-  if (this != internal_default_instance()) {
     delete wosign_ctlog_;
   }
   if (this != internal_default_instance()) {
     delete wosign_ct_;
   }
   if (this != internal_default_instance()) {
-    delete gdca_ct_;
-  }
-  if (this != internal_default_instance()) {
-    delete gdca_ctlog_;
-  }
-  if (this != internal_default_instance()) {
-    delete venafi_api_ctlog_;
-  }
-  if (this != internal_default_instance()) {
-    delete venafi_api_ctlog_gen2_;
-  }
-  if (this != internal_default_instance()) {
-    delete nordu_ct_plausible_;
-  }
-  if (this != internal_default_instance()) {
     delete cnnic_ctserver_;
+  }
+  if (this != internal_default_instance()) {
+    delete gdca_ct_;
   }
   if (this != internal_default_instance()) {
     delete startssl_ct_;
@@ -1357,10 +1363,40 @@ void CTStatus::SharedDtor() {
     delete certly_log_;
   }
   if (this != internal_default_instance()) {
-    delete sheca_ct_;
+    delete venafi_api_ctlog_;
+  }
+  if (this != internal_default_instance()) {
+    delete symantec_ws_deneb_;
+  }
+  if (this != internal_default_instance()) {
+    delete nordu_ct_plausible_;
+  }
+  if (this != internal_default_instance()) {
+    delete comodo_dodo_;
+  }
+  if (this != internal_default_instance()) {
+    delete comodo_mammoth_;
+  }
+  if (this != internal_default_instance()) {
+    delete gdca_ctlog_;
+  }
+  if (this != internal_default_instance()) {
+    delete symantec_ws_sirius_;
   }
   if (this != internal_default_instance()) {
     delete certificatetransparency_cn_ct_;
+  }
+  if (this != internal_default_instance()) {
+    delete venafi_api_ctlog_gen2_;
+  }
+  if (this != internal_default_instance()) {
+    delete digicert_ct2_;
+  }
+  if (this != internal_default_instance()) {
+    delete comodo_sabre_;
+  }
+  if (this != internal_default_instance()) {
+    delete sheca_ct_;
   }
   if (this != internal_default_instance()) {
     delete letsencrypt_ct_clicky_;
@@ -1374,7 +1410,7 @@ void CTStatus::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* CTStatus::descriptor() {
   protobuf_ct_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_ct_2eproto::file_level_metadata[1].descriptor;
+  return protobuf_ct_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
 const CTStatus& CTStatus::default_instance() {
@@ -1436,10 +1472,6 @@ void CTStatus::Clear() {
     delete digicert_ct1_;
   }
   digicert_ct1_ = NULL;
-  if (GetArenaNoVirtual() == NULL && digicert_ct2_ != NULL) {
-    delete digicert_ct2_;
-  }
-  digicert_ct2_ = NULL;
   if (GetArenaNoVirtual() == NULL && izenpe_com_ct_ != NULL) {
     delete izenpe_com_ct_;
   }
@@ -1456,26 +1488,6 @@ void CTStatus::Clear() {
     delete symantec_ws_vega_;
   }
   symantec_ws_vega_ = NULL;
-  if (GetArenaNoVirtual() == NULL && symantec_ws_sirius_ != NULL) {
-    delete symantec_ws_sirius_;
-  }
-  symantec_ws_sirius_ = NULL;
-  if (GetArenaNoVirtual() == NULL && symantec_ws_deneb_ != NULL) {
-    delete symantec_ws_deneb_;
-  }
-  symantec_ws_deneb_ = NULL;
-  if (GetArenaNoVirtual() == NULL && comodo_dodo_ != NULL) {
-    delete comodo_dodo_;
-  }
-  comodo_dodo_ = NULL;
-  if (GetArenaNoVirtual() == NULL && comodo_mammoth_ != NULL) {
-    delete comodo_mammoth_;
-  }
-  comodo_mammoth_ = NULL;
-  if (GetArenaNoVirtual() == NULL && comodo_sabre_ != NULL) {
-    delete comodo_sabre_;
-  }
-  comodo_sabre_ = NULL;
   if (GetArenaNoVirtual() == NULL && wosign_ctlog_ != NULL) {
     delete wosign_ctlog_;
   }
@@ -1484,30 +1496,14 @@ void CTStatus::Clear() {
     delete wosign_ct_;
   }
   wosign_ct_ = NULL;
-  if (GetArenaNoVirtual() == NULL && gdca_ct_ != NULL) {
-    delete gdca_ct_;
-  }
-  gdca_ct_ = NULL;
-  if (GetArenaNoVirtual() == NULL && gdca_ctlog_ != NULL) {
-    delete gdca_ctlog_;
-  }
-  gdca_ctlog_ = NULL;
-  if (GetArenaNoVirtual() == NULL && venafi_api_ctlog_ != NULL) {
-    delete venafi_api_ctlog_;
-  }
-  venafi_api_ctlog_ = NULL;
-  if (GetArenaNoVirtual() == NULL && venafi_api_ctlog_gen2_ != NULL) {
-    delete venafi_api_ctlog_gen2_;
-  }
-  venafi_api_ctlog_gen2_ = NULL;
-  if (GetArenaNoVirtual() == NULL && nordu_ct_plausible_ != NULL) {
-    delete nordu_ct_plausible_;
-  }
-  nordu_ct_plausible_ = NULL;
   if (GetArenaNoVirtual() == NULL && cnnic_ctserver_ != NULL) {
     delete cnnic_ctserver_;
   }
   cnnic_ctserver_ = NULL;
+  if (GetArenaNoVirtual() == NULL && gdca_ct_ != NULL) {
+    delete gdca_ct_;
+  }
+  gdca_ct_ = NULL;
   if (GetArenaNoVirtual() == NULL && startssl_ct_ != NULL) {
     delete startssl_ct_;
   }
@@ -1516,14 +1512,54 @@ void CTStatus::Clear() {
     delete certly_log_;
   }
   certly_log_ = NULL;
-  if (GetArenaNoVirtual() == NULL && sheca_ct_ != NULL) {
-    delete sheca_ct_;
+  if (GetArenaNoVirtual() == NULL && venafi_api_ctlog_ != NULL) {
+    delete venafi_api_ctlog_;
   }
-  sheca_ct_ = NULL;
+  venafi_api_ctlog_ = NULL;
+  if (GetArenaNoVirtual() == NULL && symantec_ws_deneb_ != NULL) {
+    delete symantec_ws_deneb_;
+  }
+  symantec_ws_deneb_ = NULL;
+  if (GetArenaNoVirtual() == NULL && nordu_ct_plausible_ != NULL) {
+    delete nordu_ct_plausible_;
+  }
+  nordu_ct_plausible_ = NULL;
+  if (GetArenaNoVirtual() == NULL && comodo_dodo_ != NULL) {
+    delete comodo_dodo_;
+  }
+  comodo_dodo_ = NULL;
+  if (GetArenaNoVirtual() == NULL && comodo_mammoth_ != NULL) {
+    delete comodo_mammoth_;
+  }
+  comodo_mammoth_ = NULL;
+  if (GetArenaNoVirtual() == NULL && gdca_ctlog_ != NULL) {
+    delete gdca_ctlog_;
+  }
+  gdca_ctlog_ = NULL;
+  if (GetArenaNoVirtual() == NULL && symantec_ws_sirius_ != NULL) {
+    delete symantec_ws_sirius_;
+  }
+  symantec_ws_sirius_ = NULL;
   if (GetArenaNoVirtual() == NULL && certificatetransparency_cn_ct_ != NULL) {
     delete certificatetransparency_cn_ct_;
   }
   certificatetransparency_cn_ct_ = NULL;
+  if (GetArenaNoVirtual() == NULL && venafi_api_ctlog_gen2_ != NULL) {
+    delete venafi_api_ctlog_gen2_;
+  }
+  venafi_api_ctlog_gen2_ = NULL;
+  if (GetArenaNoVirtual() == NULL && digicert_ct2_ != NULL) {
+    delete digicert_ct2_;
+  }
+  digicert_ct2_ = NULL;
+  if (GetArenaNoVirtual() == NULL && comodo_sabre_ != NULL) {
+    delete comodo_sabre_;
+  }
+  comodo_sabre_ = NULL;
+  if (GetArenaNoVirtual() == NULL && sheca_ct_ != NULL) {
+    delete sheca_ct_;
+  }
+  sheca_ct_ = NULL;
   if (GetArenaNoVirtual() == NULL && letsencrypt_ct_clicky_ != NULL) {
     delete letsencrypt_ct_clicky_;
   }
@@ -1542,7 +1578,8 @@ bool CTStatus::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // .zsearch.CTServerStatus censys_dev = 1;
       case 1: {
-        if (tag == 10u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(10u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_censys_dev()));
         } else {
@@ -1553,7 +1590,8 @@ bool CTStatus::MergePartialFromCodedStream(
 
       // .zsearch.CTServerStatus censys = 2;
       case 2: {
-        if (tag == 18u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_censys()));
         } else {
@@ -1564,7 +1602,8 @@ bool CTStatus::MergePartialFromCodedStream(
 
       // .zsearch.CTServerStatus google_aviator = 10;
       case 10: {
-        if (tag == 82u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(82u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_google_aviator()));
         } else {
@@ -1575,7 +1614,8 @@ bool CTStatus::MergePartialFromCodedStream(
 
       // .zsearch.CTServerStatus google_pilot = 11;
       case 11: {
-        if (tag == 90u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(90u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_google_pilot()));
         } else {
@@ -1586,7 +1626,8 @@ bool CTStatus::MergePartialFromCodedStream(
 
       // .zsearch.CTServerStatus google_rocketeer = 12;
       case 12: {
-        if (tag == 98u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(98u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_google_rocketeer()));
         } else {
@@ -1597,7 +1638,8 @@ bool CTStatus::MergePartialFromCodedStream(
 
       // .zsearch.CTServerStatus google_submariner = 13;
       case 13: {
-        if (tag == 106u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(106u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_google_submariner()));
         } else {
@@ -1608,7 +1650,8 @@ bool CTStatus::MergePartialFromCodedStream(
 
       // .zsearch.CTServerStatus google_testtube = 14;
       case 14: {
-        if (tag == 114u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(114u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_google_testtube()));
         } else {
@@ -1619,7 +1662,8 @@ bool CTStatus::MergePartialFromCodedStream(
 
       // .zsearch.CTServerStatus google_icarus = 15;
       case 15: {
-        if (tag == 122u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(122u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_google_icarus()));
         } else {
@@ -1630,7 +1674,8 @@ bool CTStatus::MergePartialFromCodedStream(
 
       // .zsearch.CTServerStatus google_skydiver = 16;
       case 16: {
-        if (tag == 130u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(130u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_google_skydiver()));
         } else {
@@ -1641,7 +1686,8 @@ bool CTStatus::MergePartialFromCodedStream(
 
       // .zsearch.CTServerStatus google_daedalus = 17;
       case 17: {
-        if (tag == 138u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(138u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_google_daedalus()));
         } else {
@@ -1652,7 +1698,8 @@ bool CTStatus::MergePartialFromCodedStream(
 
       // .zsearch.CTServerStatus digicert_ct1 = 20;
       case 20: {
-        if (tag == 162u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(162u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_digicert_ct1()));
         } else {
@@ -1663,7 +1710,8 @@ bool CTStatus::MergePartialFromCodedStream(
 
       // .zsearch.CTServerStatus izenpe_com_ct = 21;
       case 21: {
-        if (tag == 170u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(170u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_izenpe_com_ct()));
         } else {
@@ -1674,7 +1722,8 @@ bool CTStatus::MergePartialFromCodedStream(
 
       // .zsearch.CTServerStatus izenpe_eus_ct = 22;
       case 22: {
-        if (tag == 178u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(178u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_izenpe_eus_ct()));
         } else {
@@ -1685,7 +1734,8 @@ bool CTStatus::MergePartialFromCodedStream(
 
       // .zsearch.CTServerStatus symantec_ws_ct = 23;
       case 23: {
-        if (tag == 186u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(186u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_symantec_ws_ct()));
         } else {
@@ -1696,7 +1746,8 @@ bool CTStatus::MergePartialFromCodedStream(
 
       // .zsearch.CTServerStatus symantec_ws_vega = 24;
       case 24: {
-        if (tag == 194u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(194u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_symantec_ws_vega()));
         } else {
@@ -1707,7 +1758,8 @@ bool CTStatus::MergePartialFromCodedStream(
 
       // .zsearch.CTServerStatus wosign_ctlog = 25;
       case 25: {
-        if (tag == 202u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(202u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_wosign_ctlog()));
         } else {
@@ -1718,7 +1770,8 @@ bool CTStatus::MergePartialFromCodedStream(
 
       // .zsearch.CTServerStatus wosign_ct = 26;
       case 26: {
-        if (tag == 210u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(210u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_wosign_ct()));
         } else {
@@ -1729,7 +1782,8 @@ bool CTStatus::MergePartialFromCodedStream(
 
       // .zsearch.CTServerStatus cnnic_ctserver = 27;
       case 27: {
-        if (tag == 218u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(218u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_cnnic_ctserver()));
         } else {
@@ -1740,7 +1794,8 @@ bool CTStatus::MergePartialFromCodedStream(
 
       // .zsearch.CTServerStatus gdca_ct = 28;
       case 28: {
-        if (tag == 226u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(226u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_gdca_ct()));
         } else {
@@ -1751,7 +1806,8 @@ bool CTStatus::MergePartialFromCodedStream(
 
       // .zsearch.CTServerStatus startssl_ct = 29;
       case 29: {
-        if (tag == 234u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(234u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_startssl_ct()));
         } else {
@@ -1762,7 +1818,8 @@ bool CTStatus::MergePartialFromCodedStream(
 
       // .zsearch.CTServerStatus certly_log = 30;
       case 30: {
-        if (tag == 242u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(242u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_certly_log()));
         } else {
@@ -1773,7 +1830,8 @@ bool CTStatus::MergePartialFromCodedStream(
 
       // .zsearch.CTServerStatus venafi_api_ctlog = 31;
       case 31: {
-        if (tag == 250u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(250u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_venafi_api_ctlog()));
         } else {
@@ -1784,7 +1842,8 @@ bool CTStatus::MergePartialFromCodedStream(
 
       // .zsearch.CTServerStatus symantec_ws_deneb = 32;
       case 32: {
-        if (tag == 258u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(258u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_symantec_ws_deneb()));
         } else {
@@ -1795,7 +1854,8 @@ bool CTStatus::MergePartialFromCodedStream(
 
       // .zsearch.CTServerStatus nordu_ct_plausible = 33;
       case 33: {
-        if (tag == 266u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(266u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_nordu_ct_plausible()));
         } else {
@@ -1806,7 +1866,8 @@ bool CTStatus::MergePartialFromCodedStream(
 
       // .zsearch.CTServerStatus comodo_dodo = 34;
       case 34: {
-        if (tag == 274u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(274u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_comodo_dodo()));
         } else {
@@ -1817,7 +1878,8 @@ bool CTStatus::MergePartialFromCodedStream(
 
       // .zsearch.CTServerStatus comodo_mammoth = 35;
       case 35: {
-        if (tag == 282u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(282u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_comodo_mammoth()));
         } else {
@@ -1828,7 +1890,8 @@ bool CTStatus::MergePartialFromCodedStream(
 
       // .zsearch.CTServerStatus gdca_ctlog = 36;
       case 36: {
-        if (tag == 290u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(290u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_gdca_ctlog()));
         } else {
@@ -1839,7 +1902,8 @@ bool CTStatus::MergePartialFromCodedStream(
 
       // .zsearch.CTServerStatus symantec_ws_sirius = 37;
       case 37: {
-        if (tag == 298u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(298u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_symantec_ws_sirius()));
         } else {
@@ -1850,7 +1914,8 @@ bool CTStatus::MergePartialFromCodedStream(
 
       // .zsearch.CTServerStatus certificatetransparency_cn_ct = 38;
       case 38: {
-        if (tag == 306u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(306u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_certificatetransparency_cn_ct()));
         } else {
@@ -1861,7 +1926,8 @@ bool CTStatus::MergePartialFromCodedStream(
 
       // .zsearch.CTServerStatus venafi_api_ctlog_gen2 = 39;
       case 39: {
-        if (tag == 314u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(314u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_venafi_api_ctlog_gen2()));
         } else {
@@ -1872,7 +1938,8 @@ bool CTStatus::MergePartialFromCodedStream(
 
       // .zsearch.CTServerStatus digicert_ct2 = 40;
       case 40: {
-        if (tag == 322u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(322u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_digicert_ct2()));
         } else {
@@ -1883,7 +1950,8 @@ bool CTStatus::MergePartialFromCodedStream(
 
       // .zsearch.CTServerStatus comodo_sabre = 41;
       case 41: {
-        if (tag == 330u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(330u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_comodo_sabre()));
         } else {
@@ -1894,7 +1962,8 @@ bool CTStatus::MergePartialFromCodedStream(
 
       // .zsearch.CTServerStatus sheca_ct = 42;
       case 42: {
-        if (tag == 338u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(338u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_sheca_ct()));
         } else {
@@ -1905,7 +1974,8 @@ bool CTStatus::MergePartialFromCodedStream(
 
       // .zsearch.CTServerStatus letsencrypt_ct_clicky = 43;
       case 43: {
-        if (tag == 346u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(346u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_letsencrypt_ct_clicky()));
         } else {
@@ -1938,6 +2008,9 @@ failure:
 void CTStatus::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:zsearch.CTStatus)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   // .zsearch.CTServerStatus censys_dev = 1;
   if (this->has_censys_dev()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
@@ -2147,244 +2220,246 @@ void CTStatus::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* CTStatus::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:zsearch.CTStatus)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   // .zsearch.CTServerStatus censys_dev = 1;
   if (this->has_censys_dev()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        1, *this->censys_dev_, false, target);
+        1, *this->censys_dev_, deterministic, target);
   }
 
   // .zsearch.CTServerStatus censys = 2;
   if (this->has_censys()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        2, *this->censys_, false, target);
+        2, *this->censys_, deterministic, target);
   }
 
   // .zsearch.CTServerStatus google_aviator = 10;
   if (this->has_google_aviator()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        10, *this->google_aviator_, false, target);
+        10, *this->google_aviator_, deterministic, target);
   }
 
   // .zsearch.CTServerStatus google_pilot = 11;
   if (this->has_google_pilot()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        11, *this->google_pilot_, false, target);
+        11, *this->google_pilot_, deterministic, target);
   }
 
   // .zsearch.CTServerStatus google_rocketeer = 12;
   if (this->has_google_rocketeer()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        12, *this->google_rocketeer_, false, target);
+        12, *this->google_rocketeer_, deterministic, target);
   }
 
   // .zsearch.CTServerStatus google_submariner = 13;
   if (this->has_google_submariner()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        13, *this->google_submariner_, false, target);
+        13, *this->google_submariner_, deterministic, target);
   }
 
   // .zsearch.CTServerStatus google_testtube = 14;
   if (this->has_google_testtube()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        14, *this->google_testtube_, false, target);
+        14, *this->google_testtube_, deterministic, target);
   }
 
   // .zsearch.CTServerStatus google_icarus = 15;
   if (this->has_google_icarus()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        15, *this->google_icarus_, false, target);
+        15, *this->google_icarus_, deterministic, target);
   }
 
   // .zsearch.CTServerStatus google_skydiver = 16;
   if (this->has_google_skydiver()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        16, *this->google_skydiver_, false, target);
+        16, *this->google_skydiver_, deterministic, target);
   }
 
   // .zsearch.CTServerStatus google_daedalus = 17;
   if (this->has_google_daedalus()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        17, *this->google_daedalus_, false, target);
+        17, *this->google_daedalus_, deterministic, target);
   }
 
   // .zsearch.CTServerStatus digicert_ct1 = 20;
   if (this->has_digicert_ct1()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        20, *this->digicert_ct1_, false, target);
+        20, *this->digicert_ct1_, deterministic, target);
   }
 
   // .zsearch.CTServerStatus izenpe_com_ct = 21;
   if (this->has_izenpe_com_ct()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        21, *this->izenpe_com_ct_, false, target);
+        21, *this->izenpe_com_ct_, deterministic, target);
   }
 
   // .zsearch.CTServerStatus izenpe_eus_ct = 22;
   if (this->has_izenpe_eus_ct()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        22, *this->izenpe_eus_ct_, false, target);
+        22, *this->izenpe_eus_ct_, deterministic, target);
   }
 
   // .zsearch.CTServerStatus symantec_ws_ct = 23;
   if (this->has_symantec_ws_ct()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        23, *this->symantec_ws_ct_, false, target);
+        23, *this->symantec_ws_ct_, deterministic, target);
   }
 
   // .zsearch.CTServerStatus symantec_ws_vega = 24;
   if (this->has_symantec_ws_vega()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        24, *this->symantec_ws_vega_, false, target);
+        24, *this->symantec_ws_vega_, deterministic, target);
   }
 
   // .zsearch.CTServerStatus wosign_ctlog = 25;
   if (this->has_wosign_ctlog()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        25, *this->wosign_ctlog_, false, target);
+        25, *this->wosign_ctlog_, deterministic, target);
   }
 
   // .zsearch.CTServerStatus wosign_ct = 26;
   if (this->has_wosign_ct()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        26, *this->wosign_ct_, false, target);
+        26, *this->wosign_ct_, deterministic, target);
   }
 
   // .zsearch.CTServerStatus cnnic_ctserver = 27;
   if (this->has_cnnic_ctserver()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        27, *this->cnnic_ctserver_, false, target);
+        27, *this->cnnic_ctserver_, deterministic, target);
   }
 
   // .zsearch.CTServerStatus gdca_ct = 28;
   if (this->has_gdca_ct()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        28, *this->gdca_ct_, false, target);
+        28, *this->gdca_ct_, deterministic, target);
   }
 
   // .zsearch.CTServerStatus startssl_ct = 29;
   if (this->has_startssl_ct()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        29, *this->startssl_ct_, false, target);
+        29, *this->startssl_ct_, deterministic, target);
   }
 
   // .zsearch.CTServerStatus certly_log = 30;
   if (this->has_certly_log()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        30, *this->certly_log_, false, target);
+        30, *this->certly_log_, deterministic, target);
   }
 
   // .zsearch.CTServerStatus venafi_api_ctlog = 31;
   if (this->has_venafi_api_ctlog()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        31, *this->venafi_api_ctlog_, false, target);
+        31, *this->venafi_api_ctlog_, deterministic, target);
   }
 
   // .zsearch.CTServerStatus symantec_ws_deneb = 32;
   if (this->has_symantec_ws_deneb()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        32, *this->symantec_ws_deneb_, false, target);
+        32, *this->symantec_ws_deneb_, deterministic, target);
   }
 
   // .zsearch.CTServerStatus nordu_ct_plausible = 33;
   if (this->has_nordu_ct_plausible()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        33, *this->nordu_ct_plausible_, false, target);
+        33, *this->nordu_ct_plausible_, deterministic, target);
   }
 
   // .zsearch.CTServerStatus comodo_dodo = 34;
   if (this->has_comodo_dodo()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        34, *this->comodo_dodo_, false, target);
+        34, *this->comodo_dodo_, deterministic, target);
   }
 
   // .zsearch.CTServerStatus comodo_mammoth = 35;
   if (this->has_comodo_mammoth()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        35, *this->comodo_mammoth_, false, target);
+        35, *this->comodo_mammoth_, deterministic, target);
   }
 
   // .zsearch.CTServerStatus gdca_ctlog = 36;
   if (this->has_gdca_ctlog()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        36, *this->gdca_ctlog_, false, target);
+        36, *this->gdca_ctlog_, deterministic, target);
   }
 
   // .zsearch.CTServerStatus symantec_ws_sirius = 37;
   if (this->has_symantec_ws_sirius()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        37, *this->symantec_ws_sirius_, false, target);
+        37, *this->symantec_ws_sirius_, deterministic, target);
   }
 
   // .zsearch.CTServerStatus certificatetransparency_cn_ct = 38;
   if (this->has_certificatetransparency_cn_ct()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        38, *this->certificatetransparency_cn_ct_, false, target);
+        38, *this->certificatetransparency_cn_ct_, deterministic, target);
   }
 
   // .zsearch.CTServerStatus venafi_api_ctlog_gen2 = 39;
   if (this->has_venafi_api_ctlog_gen2()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        39, *this->venafi_api_ctlog_gen2_, false, target);
+        39, *this->venafi_api_ctlog_gen2_, deterministic, target);
   }
 
   // .zsearch.CTServerStatus digicert_ct2 = 40;
   if (this->has_digicert_ct2()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        40, *this->digicert_ct2_, false, target);
+        40, *this->digicert_ct2_, deterministic, target);
   }
 
   // .zsearch.CTServerStatus comodo_sabre = 41;
   if (this->has_comodo_sabre()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        41, *this->comodo_sabre_, false, target);
+        41, *this->comodo_sabre_, deterministic, target);
   }
 
   // .zsearch.CTServerStatus sheca_ct = 42;
   if (this->has_sheca_ct()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        42, *this->sheca_ct_, false, target);
+        42, *this->sheca_ct_, deterministic, target);
   }
 
   // .zsearch.CTServerStatus letsencrypt_ct_clicky = 43;
   if (this->has_letsencrypt_ct_clicky()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        43, *this->letsencrypt_ct_clicky_, false, target);
+        43, *this->letsencrypt_ct_clicky_, deterministic, target);
   }
 
   // @@protoc_insertion_point(serialize_to_array_end:zsearch.CTStatus)
@@ -2472,13 +2547,6 @@ size_t CTStatus::ByteSizeLong() const {
         *this->digicert_ct1_);
   }
 
-  // .zsearch.CTServerStatus digicert_ct2 = 40;
-  if (this->has_digicert_ct2()) {
-    total_size += 2 +
-      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-        *this->digicert_ct2_);
-  }
-
   // .zsearch.CTServerStatus izenpe_com_ct = 21;
   if (this->has_izenpe_com_ct()) {
     total_size += 2 +
@@ -2507,41 +2575,6 @@ size_t CTStatus::ByteSizeLong() const {
         *this->symantec_ws_vega_);
   }
 
-  // .zsearch.CTServerStatus symantec_ws_sirius = 37;
-  if (this->has_symantec_ws_sirius()) {
-    total_size += 2 +
-      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-        *this->symantec_ws_sirius_);
-  }
-
-  // .zsearch.CTServerStatus symantec_ws_deneb = 32;
-  if (this->has_symantec_ws_deneb()) {
-    total_size += 2 +
-      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-        *this->symantec_ws_deneb_);
-  }
-
-  // .zsearch.CTServerStatus comodo_dodo = 34;
-  if (this->has_comodo_dodo()) {
-    total_size += 2 +
-      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-        *this->comodo_dodo_);
-  }
-
-  // .zsearch.CTServerStatus comodo_mammoth = 35;
-  if (this->has_comodo_mammoth()) {
-    total_size += 2 +
-      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-        *this->comodo_mammoth_);
-  }
-
-  // .zsearch.CTServerStatus comodo_sabre = 41;
-  if (this->has_comodo_sabre()) {
-    total_size += 2 +
-      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-        *this->comodo_sabre_);
-  }
-
   // .zsearch.CTServerStatus wosign_ctlog = 25;
   if (this->has_wosign_ctlog()) {
     total_size += 2 +
@@ -2556,46 +2589,18 @@ size_t CTStatus::ByteSizeLong() const {
         *this->wosign_ct_);
   }
 
-  // .zsearch.CTServerStatus gdca_ct = 28;
-  if (this->has_gdca_ct()) {
-    total_size += 2 +
-      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-        *this->gdca_ct_);
-  }
-
-  // .zsearch.CTServerStatus gdca_ctlog = 36;
-  if (this->has_gdca_ctlog()) {
-    total_size += 2 +
-      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-        *this->gdca_ctlog_);
-  }
-
-  // .zsearch.CTServerStatus venafi_api_ctlog = 31;
-  if (this->has_venafi_api_ctlog()) {
-    total_size += 2 +
-      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-        *this->venafi_api_ctlog_);
-  }
-
-  // .zsearch.CTServerStatus venafi_api_ctlog_gen2 = 39;
-  if (this->has_venafi_api_ctlog_gen2()) {
-    total_size += 2 +
-      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-        *this->venafi_api_ctlog_gen2_);
-  }
-
-  // .zsearch.CTServerStatus nordu_ct_plausible = 33;
-  if (this->has_nordu_ct_plausible()) {
-    total_size += 2 +
-      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-        *this->nordu_ct_plausible_);
-  }
-
   // .zsearch.CTServerStatus cnnic_ctserver = 27;
   if (this->has_cnnic_ctserver()) {
     total_size += 2 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->cnnic_ctserver_);
+  }
+
+  // .zsearch.CTServerStatus gdca_ct = 28;
+  if (this->has_gdca_ct()) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        *this->gdca_ct_);
   }
 
   // .zsearch.CTServerStatus startssl_ct = 29;
@@ -2612,11 +2617,53 @@ size_t CTStatus::ByteSizeLong() const {
         *this->certly_log_);
   }
 
-  // .zsearch.CTServerStatus sheca_ct = 42;
-  if (this->has_sheca_ct()) {
+  // .zsearch.CTServerStatus venafi_api_ctlog = 31;
+  if (this->has_venafi_api_ctlog()) {
     total_size += 2 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-        *this->sheca_ct_);
+        *this->venafi_api_ctlog_);
+  }
+
+  // .zsearch.CTServerStatus symantec_ws_deneb = 32;
+  if (this->has_symantec_ws_deneb()) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        *this->symantec_ws_deneb_);
+  }
+
+  // .zsearch.CTServerStatus nordu_ct_plausible = 33;
+  if (this->has_nordu_ct_plausible()) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        *this->nordu_ct_plausible_);
+  }
+
+  // .zsearch.CTServerStatus comodo_dodo = 34;
+  if (this->has_comodo_dodo()) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        *this->comodo_dodo_);
+  }
+
+  // .zsearch.CTServerStatus comodo_mammoth = 35;
+  if (this->has_comodo_mammoth()) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        *this->comodo_mammoth_);
+  }
+
+  // .zsearch.CTServerStatus gdca_ctlog = 36;
+  if (this->has_gdca_ctlog()) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        *this->gdca_ctlog_);
+  }
+
+  // .zsearch.CTServerStatus symantec_ws_sirius = 37;
+  if (this->has_symantec_ws_sirius()) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        *this->symantec_ws_sirius_);
   }
 
   // .zsearch.CTServerStatus certificatetransparency_cn_ct = 38;
@@ -2624,6 +2671,34 @@ size_t CTStatus::ByteSizeLong() const {
     total_size += 2 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->certificatetransparency_cn_ct_);
+  }
+
+  // .zsearch.CTServerStatus venafi_api_ctlog_gen2 = 39;
+  if (this->has_venafi_api_ctlog_gen2()) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        *this->venafi_api_ctlog_gen2_);
+  }
+
+  // .zsearch.CTServerStatus digicert_ct2 = 40;
+  if (this->has_digicert_ct2()) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        *this->digicert_ct2_);
+  }
+
+  // .zsearch.CTServerStatus comodo_sabre = 41;
+  if (this->has_comodo_sabre()) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        *this->comodo_sabre_);
+  }
+
+  // .zsearch.CTServerStatus sheca_ct = 42;
+  if (this->has_sheca_ct()) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        *this->sheca_ct_);
   }
 
   // .zsearch.CTServerStatus letsencrypt_ct_clicky = 43;
@@ -2659,6 +2734,9 @@ void CTStatus::MergeFrom(const CTStatus& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:zsearch.CTStatus)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   if (from.has_censys_dev()) {
     mutable_censys_dev()->::zsearch::CTServerStatus::MergeFrom(from.censys_dev());
   }
@@ -2692,9 +2770,6 @@ void CTStatus::MergeFrom(const CTStatus& from) {
   if (from.has_digicert_ct1()) {
     mutable_digicert_ct1()->::zsearch::CTServerStatus::MergeFrom(from.digicert_ct1());
   }
-  if (from.has_digicert_ct2()) {
-    mutable_digicert_ct2()->::zsearch::CTServerStatus::MergeFrom(from.digicert_ct2());
-  }
   if (from.has_izenpe_com_ct()) {
     mutable_izenpe_com_ct()->::zsearch::CTServerStatus::MergeFrom(from.izenpe_com_ct());
   }
@@ -2707,44 +2782,17 @@ void CTStatus::MergeFrom(const CTStatus& from) {
   if (from.has_symantec_ws_vega()) {
     mutable_symantec_ws_vega()->::zsearch::CTServerStatus::MergeFrom(from.symantec_ws_vega());
   }
-  if (from.has_symantec_ws_sirius()) {
-    mutable_symantec_ws_sirius()->::zsearch::CTServerStatus::MergeFrom(from.symantec_ws_sirius());
-  }
-  if (from.has_symantec_ws_deneb()) {
-    mutable_symantec_ws_deneb()->::zsearch::CTServerStatus::MergeFrom(from.symantec_ws_deneb());
-  }
-  if (from.has_comodo_dodo()) {
-    mutable_comodo_dodo()->::zsearch::CTServerStatus::MergeFrom(from.comodo_dodo());
-  }
-  if (from.has_comodo_mammoth()) {
-    mutable_comodo_mammoth()->::zsearch::CTServerStatus::MergeFrom(from.comodo_mammoth());
-  }
-  if (from.has_comodo_sabre()) {
-    mutable_comodo_sabre()->::zsearch::CTServerStatus::MergeFrom(from.comodo_sabre());
-  }
   if (from.has_wosign_ctlog()) {
     mutable_wosign_ctlog()->::zsearch::CTServerStatus::MergeFrom(from.wosign_ctlog());
   }
   if (from.has_wosign_ct()) {
     mutable_wosign_ct()->::zsearch::CTServerStatus::MergeFrom(from.wosign_ct());
   }
-  if (from.has_gdca_ct()) {
-    mutable_gdca_ct()->::zsearch::CTServerStatus::MergeFrom(from.gdca_ct());
-  }
-  if (from.has_gdca_ctlog()) {
-    mutable_gdca_ctlog()->::zsearch::CTServerStatus::MergeFrom(from.gdca_ctlog());
-  }
-  if (from.has_venafi_api_ctlog()) {
-    mutable_venafi_api_ctlog()->::zsearch::CTServerStatus::MergeFrom(from.venafi_api_ctlog());
-  }
-  if (from.has_venafi_api_ctlog_gen2()) {
-    mutable_venafi_api_ctlog_gen2()->::zsearch::CTServerStatus::MergeFrom(from.venafi_api_ctlog_gen2());
-  }
-  if (from.has_nordu_ct_plausible()) {
-    mutable_nordu_ct_plausible()->::zsearch::CTServerStatus::MergeFrom(from.nordu_ct_plausible());
-  }
   if (from.has_cnnic_ctserver()) {
     mutable_cnnic_ctserver()->::zsearch::CTServerStatus::MergeFrom(from.cnnic_ctserver());
+  }
+  if (from.has_gdca_ct()) {
+    mutable_gdca_ct()->::zsearch::CTServerStatus::MergeFrom(from.gdca_ct());
   }
   if (from.has_startssl_ct()) {
     mutable_startssl_ct()->::zsearch::CTServerStatus::MergeFrom(from.startssl_ct());
@@ -2752,11 +2800,41 @@ void CTStatus::MergeFrom(const CTStatus& from) {
   if (from.has_certly_log()) {
     mutable_certly_log()->::zsearch::CTServerStatus::MergeFrom(from.certly_log());
   }
-  if (from.has_sheca_ct()) {
-    mutable_sheca_ct()->::zsearch::CTServerStatus::MergeFrom(from.sheca_ct());
+  if (from.has_venafi_api_ctlog()) {
+    mutable_venafi_api_ctlog()->::zsearch::CTServerStatus::MergeFrom(from.venafi_api_ctlog());
+  }
+  if (from.has_symantec_ws_deneb()) {
+    mutable_symantec_ws_deneb()->::zsearch::CTServerStatus::MergeFrom(from.symantec_ws_deneb());
+  }
+  if (from.has_nordu_ct_plausible()) {
+    mutable_nordu_ct_plausible()->::zsearch::CTServerStatus::MergeFrom(from.nordu_ct_plausible());
+  }
+  if (from.has_comodo_dodo()) {
+    mutable_comodo_dodo()->::zsearch::CTServerStatus::MergeFrom(from.comodo_dodo());
+  }
+  if (from.has_comodo_mammoth()) {
+    mutable_comodo_mammoth()->::zsearch::CTServerStatus::MergeFrom(from.comodo_mammoth());
+  }
+  if (from.has_gdca_ctlog()) {
+    mutable_gdca_ctlog()->::zsearch::CTServerStatus::MergeFrom(from.gdca_ctlog());
+  }
+  if (from.has_symantec_ws_sirius()) {
+    mutable_symantec_ws_sirius()->::zsearch::CTServerStatus::MergeFrom(from.symantec_ws_sirius());
   }
   if (from.has_certificatetransparency_cn_ct()) {
     mutable_certificatetransparency_cn_ct()->::zsearch::CTServerStatus::MergeFrom(from.certificatetransparency_cn_ct());
+  }
+  if (from.has_venafi_api_ctlog_gen2()) {
+    mutable_venafi_api_ctlog_gen2()->::zsearch::CTServerStatus::MergeFrom(from.venafi_api_ctlog_gen2());
+  }
+  if (from.has_digicert_ct2()) {
+    mutable_digicert_ct2()->::zsearch::CTServerStatus::MergeFrom(from.digicert_ct2());
+  }
+  if (from.has_comodo_sabre()) {
+    mutable_comodo_sabre()->::zsearch::CTServerStatus::MergeFrom(from.comodo_sabre());
+  }
+  if (from.has_sheca_ct()) {
+    mutable_sheca_ct()->::zsearch::CTServerStatus::MergeFrom(from.sheca_ct());
   }
   if (from.has_letsencrypt_ct_clicky()) {
     mutable_letsencrypt_ct_clicky()->::zsearch::CTServerStatus::MergeFrom(from.letsencrypt_ct_clicky());
@@ -2797,35 +2875,35 @@ void CTStatus::InternalSwap(CTStatus* other) {
   std::swap(google_skydiver_, other->google_skydiver_);
   std::swap(google_daedalus_, other->google_daedalus_);
   std::swap(digicert_ct1_, other->digicert_ct1_);
-  std::swap(digicert_ct2_, other->digicert_ct2_);
   std::swap(izenpe_com_ct_, other->izenpe_com_ct_);
   std::swap(izenpe_eus_ct_, other->izenpe_eus_ct_);
   std::swap(symantec_ws_ct_, other->symantec_ws_ct_);
   std::swap(symantec_ws_vega_, other->symantec_ws_vega_);
-  std::swap(symantec_ws_sirius_, other->symantec_ws_sirius_);
-  std::swap(symantec_ws_deneb_, other->symantec_ws_deneb_);
-  std::swap(comodo_dodo_, other->comodo_dodo_);
-  std::swap(comodo_mammoth_, other->comodo_mammoth_);
-  std::swap(comodo_sabre_, other->comodo_sabre_);
   std::swap(wosign_ctlog_, other->wosign_ctlog_);
   std::swap(wosign_ct_, other->wosign_ct_);
-  std::swap(gdca_ct_, other->gdca_ct_);
-  std::swap(gdca_ctlog_, other->gdca_ctlog_);
-  std::swap(venafi_api_ctlog_, other->venafi_api_ctlog_);
-  std::swap(venafi_api_ctlog_gen2_, other->venafi_api_ctlog_gen2_);
-  std::swap(nordu_ct_plausible_, other->nordu_ct_plausible_);
   std::swap(cnnic_ctserver_, other->cnnic_ctserver_);
+  std::swap(gdca_ct_, other->gdca_ct_);
   std::swap(startssl_ct_, other->startssl_ct_);
   std::swap(certly_log_, other->certly_log_);
-  std::swap(sheca_ct_, other->sheca_ct_);
+  std::swap(venafi_api_ctlog_, other->venafi_api_ctlog_);
+  std::swap(symantec_ws_deneb_, other->symantec_ws_deneb_);
+  std::swap(nordu_ct_plausible_, other->nordu_ct_plausible_);
+  std::swap(comodo_dodo_, other->comodo_dodo_);
+  std::swap(comodo_mammoth_, other->comodo_mammoth_);
+  std::swap(gdca_ctlog_, other->gdca_ctlog_);
+  std::swap(symantec_ws_sirius_, other->symantec_ws_sirius_);
   std::swap(certificatetransparency_cn_ct_, other->certificatetransparency_cn_ct_);
+  std::swap(venafi_api_ctlog_gen2_, other->venafi_api_ctlog_gen2_);
+  std::swap(digicert_ct2_, other->digicert_ct2_);
+  std::swap(comodo_sabre_, other->comodo_sabre_);
+  std::swap(sheca_ct_, other->sheca_ct_);
   std::swap(letsencrypt_ct_clicky_, other->letsencrypt_ct_clicky_);
   std::swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata CTStatus::GetMetadata() const {
   protobuf_ct_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_ct_2eproto::file_level_metadata[1];
+  return protobuf_ct_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -4219,7 +4297,7 @@ void SCT::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* SCT::descriptor() {
   protobuf_ct_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_ct_2eproto::file_level_metadata[2].descriptor;
+  return protobuf_ct_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
 const SCT& SCT::default_instance() {
@@ -4257,7 +4335,8 @@ bool SCT::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // bytes sha256fp = 1;
       case 1: {
-        if (tag == 10u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(10u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
                 input, this->mutable_sha256fp()));
         } else {
@@ -4268,7 +4347,8 @@ bool SCT::MergePartialFromCodedStream(
 
       // .zsearch.CTServer server = 2;
       case 2: {
-        if (tag == 16u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(16u)) {
           int value;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
@@ -4282,7 +4362,8 @@ bool SCT::MergePartialFromCodedStream(
 
       // .zsearch.CTServerStatus status = 3;
       case 3: {
-        if (tag == 26u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(26u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_status()));
         } else {
@@ -4315,6 +4396,9 @@ failure:
 void SCT::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:zsearch.SCT)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   // bytes sha256fp = 1;
   if (this->sha256fp().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::WriteBytesMaybeAliased(
@@ -4338,8 +4422,10 @@ void SCT::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* SCT::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:zsearch.SCT)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   // bytes sha256fp = 1;
   if (this->sha256fp().size() > 0) {
     target =
@@ -4357,7 +4443,7 @@ void SCT::SerializeWithCachedSizes(
   if (this->has_status()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        3, *this->status_, false, target);
+        3, *this->status_, deterministic, target);
   }
 
   // @@protoc_insertion_point(serialize_to_array_end:zsearch.SCT)
@@ -4414,6 +4500,9 @@ void SCT::MergeFrom(const SCT& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:zsearch.SCT)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   if (from.sha256fp().size() > 0) {
 
     sha256fp_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.sha256fp_);
@@ -4457,7 +4546,7 @@ void SCT::InternalSwap(SCT* other) {
 
 ::google::protobuf::Metadata SCT::GetMetadata() const {
   protobuf_ct_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_ct_2eproto::file_level_metadata[2];
+  return protobuf_ct_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -4480,11 +4569,12 @@ void SCT::set_sha256fp(const ::std::string& value) {
 void SCT::set_sha256fp(::std::string&& value) {
   
   sha256fp_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.SCT.sha256fp)
 }
 #endif
 void SCT::set_sha256fp(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   
   sha256fp_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.SCT.sha256fp)

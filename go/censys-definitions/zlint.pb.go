@@ -56,7 +56,7 @@ var LintResultStatus_value = map[string]int32{
 func (x LintResultStatus) String() string {
 	return proto.EnumName(LintResultStatus_name, int32(x))
 }
-func (LintResultStatus) EnumDescriptor() ([]byte, []int) { return fileDescriptor9, []int{0} }
+func (LintResultStatus) EnumDescriptor() ([]byte, []int) { return fileDescriptor10, []int{0} }
 
 // This enum is for zlint process status
 type ZLintStatus int32
@@ -81,7 +81,7 @@ var ZLintStatus_value = map[string]int32{
 func (x ZLintStatus) String() string {
 	return proto.EnumName(ZLintStatus_name, int32(x))
 }
-func (ZLintStatus) EnumDescriptor() ([]byte, []int) { return fileDescriptor9, []int{1} }
+func (ZLintStatus) EnumDescriptor() ([]byte, []int) { return fileDescriptor10, []int{1} }
 
 type LintResult struct {
 	Result  LintResultStatus `protobuf:"varint,1,opt,name=result,enum=zsearch.LintResultStatus" json:"result,omitempty"`
@@ -91,7 +91,7 @@ type LintResult struct {
 func (m *LintResult) Reset()                    { *m = LintResult{} }
 func (m *LintResult) String() string            { return proto.CompactTextString(m) }
 func (*LintResult) ProtoMessage()               {}
-func (*LintResult) Descriptor() ([]byte, []int) { return fileDescriptor9, []int{0} }
+func (*LintResult) Descriptor() ([]byte, []int) { return fileDescriptor10, []int{0} }
 
 func (m *LintResult) GetResult() LintResultStatus {
 	if m != nil {
@@ -122,7 +122,7 @@ type ZLint struct {
 func (m *ZLint) Reset()                    { *m = ZLint{} }
 func (m *ZLint) String() string            { return proto.CompactTextString(m) }
 func (*ZLint) ProtoMessage()               {}
-func (*ZLint) Descriptor() ([]byte, []int) { return fileDescriptor9, []int{1} }
+func (*ZLint) Descriptor() ([]byte, []int) { return fileDescriptor10, []int{1} }
 
 func (m *ZLint) GetVersion() int64 {
 	if m != nil {
@@ -390,7 +390,7 @@ type Lints struct {
 func (m *Lints) Reset()                    { *m = Lints{} }
 func (m *Lints) String() string            { return proto.CompactTextString(m) }
 func (*Lints) ProtoMessage()               {}
-func (*Lints) Descriptor() ([]byte, []int) { return fileDescriptor9, []int{2} }
+func (*Lints) Descriptor() ([]byte, []int) { return fileDescriptor10, []int{2} }
 
 func (m *Lints) GetEBasicConstraintsNotCritical() *LintResult {
 	if m != nil {
@@ -1772,11 +1772,11 @@ func init() {
 	proto.RegisterEnum("zsearch.ZLintStatus", ZLintStatus_name, ZLintStatus_value)
 }
 
-func init() { proto.RegisterFile("zlint.proto", fileDescriptor9) }
+func init() { proto.RegisterFile("zlint.proto", fileDescriptor10) }
 
-var fileDescriptor9 = []byte{
+var fileDescriptor10 = []byte{
 	// 5054 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x94, 0x7c, 0xf9, 0x9f, 0x1b, 0xb7,
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x09, 0x6e, 0x88, 0x02, 0xff, 0x94, 0x7c, 0xf9, 0x9f, 0x1b, 0xb7,
 	0x79, 0xfe, 0x97, 0x76, 0x64, 0xc7, 0x70, 0x2c, 0xaf, 0x46, 0x87, 0x47, 0x3e, 0x64, 0x45, 0xb2,
 	0x25, 0x59, 0xb6, 0x15, 0x69, 0x25, 0x7d, 0xed, 0x1e, 0x49, 0xb3, 0xe2, 0x72, 0x1d, 0x46, 0xbb,
 	0xe4, 0x9a, 0xdc, 0x95, 0x2c, 0x39, 0xc9, 0x18, 0x9c, 0x01, 0x49, 0x58, 0x43, 0x80, 0x02, 0x30,

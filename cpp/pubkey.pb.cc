@@ -41,11 +41,29 @@ const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[1];
 
 }  // namespace
 
+PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTableField
+    const TableStruct::entries[] = {
+  {0, 0, 0, ::google::protobuf::internal::kInvalidMask, 0, 0},
+};
+
+PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::AuxillaryParseTableField
+    const TableStruct::aux[] = {
+  ::google::protobuf::internal::AuxillaryParseTableField(),
+};
+PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTable const
+    TableStruct::schema[] = {
+  { NULL, NULL, 0, -1, -1, false },
+  { NULL, NULL, 0, -1, -1, false },
+  { NULL, NULL, 0, -1, -1, false },
+  { NULL, NULL, 0, -1, -1, false },
+};
+
 const ::google::protobuf::uint32 TableStruct::offsets[] = {
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RSACryptographicKey, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RSACryptographicKey, modulus_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RSACryptographicKey, exponent_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RSACryptographicKey, p_),
@@ -54,6 +72,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DSACryptographicKey, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DSACryptographicKey, p_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DSACryptographicKey, q_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(DSACryptographicKey, g_),
@@ -63,6 +82,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ECCCryptographicKey, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ECCCryptographicKey, curve_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ECCCryptographicKey, x_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ECCCryptographicKey, y_),
@@ -71,10 +91,11 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CryptographicKey, _internal_metadata_),
   ~0u,  // no _extensions_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CryptographicKey, _oneof_case_[0]),
+  ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CryptographicKey, type_),
-  PROTO2_GENERATED_DEFAULT_ONEOF_FIELD_OFFSET((&_CryptographicKey_default_instance_), rsa_),
-  PROTO2_GENERATED_DEFAULT_ONEOF_FIELD_OFFSET((&_CryptographicKey_default_instance_), dsa_),
-  PROTO2_GENERATED_DEFAULT_ONEOF_FIELD_OFFSET((&_CryptographicKey_default_instance_), ecc_),
+  GOOGLE_PROTOBUF_GENERATED_DEFAULT_ONEOF_FIELD_OFFSET((&_CryptographicKey_default_instance_), rsa_),
+  GOOGLE_PROTOBUF_GENERATED_DEFAULT_ONEOF_FIELD_OFFSET((&_CryptographicKey_default_instance_), dsa_),
+  GOOGLE_PROTOBUF_GENERATED_DEFAULT_ONEOF_FIELD_OFFSET((&_CryptographicKey_default_instance_), ecc_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CryptographicKey, broken_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CryptographicKey, common_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CryptographicKey, debian_),
@@ -83,9 +104,9 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
 
 static const ::google::protobuf::internal::MigrationSchema schemas[] = {
   { 0, -1, sizeof(RSACryptographicKey)},
-  { 8, -1, sizeof(DSACryptographicKey)},
-  { 17, -1, sizeof(ECCCryptographicKey)},
-  { 25, -1, sizeof(CryptographicKey)},
+  { 9, -1, sizeof(DSACryptographicKey)},
+  { 19, -1, sizeof(ECCCryptographicKey)},
+  { 28, -1, sizeof(CryptographicKey)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -287,7 +308,7 @@ void RSACryptographicKey::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* RSACryptographicKey::descriptor() {
   protobuf_pubkey_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_pubkey_2eproto::file_level_metadata[0].descriptor;
+  return protobuf_pubkey_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
 const RSACryptographicKey& RSACryptographicKey::default_instance() {
@@ -323,7 +344,8 @@ bool RSACryptographicKey::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // bytes modulus = 1;
       case 1: {
-        if (tag == 10u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(10u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
                 input, this->mutable_modulus()));
         } else {
@@ -334,7 +356,8 @@ bool RSACryptographicKey::MergePartialFromCodedStream(
 
       // bytes exponent = 2;
       case 2: {
-        if (tag == 18u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
                 input, this->mutable_exponent()));
         } else {
@@ -345,7 +368,8 @@ bool RSACryptographicKey::MergePartialFromCodedStream(
 
       // bytes p = 3;
       case 3: {
-        if (tag == 26u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(26u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
                 input, this->mutable_p()));
         } else {
@@ -356,7 +380,8 @@ bool RSACryptographicKey::MergePartialFromCodedStream(
 
       // bytes q = 4;
       case 4: {
-        if (tag == 34u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(34u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
                 input, this->mutable_q()));
         } else {
@@ -389,6 +414,9 @@ failure:
 void RSACryptographicKey::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:zsearch.RSACryptographicKey)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   // bytes modulus = 1;
   if (this->modulus().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::WriteBytesMaybeAliased(
@@ -418,8 +446,10 @@ void RSACryptographicKey::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* RSACryptographicKey::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:zsearch.RSACryptographicKey)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   // bytes modulus = 1;
   if (this->modulus().size() > 0) {
     target =
@@ -510,6 +540,9 @@ void RSACryptographicKey::MergeFrom(const RSACryptographicKey& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:zsearch.RSACryptographicKey)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   if (from.modulus().size() > 0) {
 
     modulus_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.modulus_);
@@ -560,7 +593,7 @@ void RSACryptographicKey::InternalSwap(RSACryptographicKey* other) {
 
 ::google::protobuf::Metadata RSACryptographicKey::GetMetadata() const {
   protobuf_pubkey_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_pubkey_2eproto::file_level_metadata[0];
+  return protobuf_pubkey_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -583,11 +616,12 @@ void RSACryptographicKey::set_modulus(const ::std::string& value) {
 void RSACryptographicKey::set_modulus(::std::string&& value) {
   
   modulus_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.RSACryptographicKey.modulus)
 }
 #endif
 void RSACryptographicKey::set_modulus(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   
   modulus_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.RSACryptographicKey.modulus)
@@ -635,11 +669,12 @@ void RSACryptographicKey::set_exponent(const ::std::string& value) {
 void RSACryptographicKey::set_exponent(::std::string&& value) {
   
   exponent_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.RSACryptographicKey.exponent)
 }
 #endif
 void RSACryptographicKey::set_exponent(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   
   exponent_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.RSACryptographicKey.exponent)
@@ -687,11 +722,12 @@ void RSACryptographicKey::set_p(const ::std::string& value) {
 void RSACryptographicKey::set_p(::std::string&& value) {
   
   p_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.RSACryptographicKey.p)
 }
 #endif
 void RSACryptographicKey::set_p(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   
   p_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.RSACryptographicKey.p)
@@ -739,11 +775,12 @@ void RSACryptographicKey::set_q(const ::std::string& value) {
 void RSACryptographicKey::set_q(::std::string&& value) {
   
   q_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.RSACryptographicKey.q)
 }
 #endif
 void RSACryptographicKey::set_q(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   
   q_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.RSACryptographicKey.q)
@@ -851,7 +888,7 @@ void DSACryptographicKey::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* DSACryptographicKey::descriptor() {
   protobuf_pubkey_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_pubkey_2eproto::file_level_metadata[1].descriptor;
+  return protobuf_pubkey_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
 const DSACryptographicKey& DSACryptographicKey::default_instance() {
@@ -888,7 +925,8 @@ bool DSACryptographicKey::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // bytes p = 1;
       case 1: {
-        if (tag == 10u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(10u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
                 input, this->mutable_p()));
         } else {
@@ -899,7 +937,8 @@ bool DSACryptographicKey::MergePartialFromCodedStream(
 
       // bytes q = 2;
       case 2: {
-        if (tag == 18u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
                 input, this->mutable_q()));
         } else {
@@ -910,7 +949,8 @@ bool DSACryptographicKey::MergePartialFromCodedStream(
 
       // bytes g = 3;
       case 3: {
-        if (tag == 26u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(26u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
                 input, this->mutable_g()));
         } else {
@@ -921,7 +961,8 @@ bool DSACryptographicKey::MergePartialFromCodedStream(
 
       // bytes y = 4;
       case 4: {
-        if (tag == 34u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(34u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
                 input, this->mutable_y()));
         } else {
@@ -932,7 +973,8 @@ bool DSACryptographicKey::MergePartialFromCodedStream(
 
       // bytes x = 5;
       case 5: {
-        if (tag == 42u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(42u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
                 input, this->mutable_x()));
         } else {
@@ -965,6 +1007,9 @@ failure:
 void DSACryptographicKey::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:zsearch.DSACryptographicKey)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   // bytes p = 1;
   if (this->p().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::WriteBytesMaybeAliased(
@@ -1000,8 +1045,10 @@ void DSACryptographicKey::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* DSACryptographicKey::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:zsearch.DSACryptographicKey)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   // bytes p = 1;
   if (this->p().size() > 0) {
     target =
@@ -1106,6 +1153,9 @@ void DSACryptographicKey::MergeFrom(const DSACryptographicKey& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:zsearch.DSACryptographicKey)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   if (from.p().size() > 0) {
 
     p_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.p_);
@@ -1161,7 +1211,7 @@ void DSACryptographicKey::InternalSwap(DSACryptographicKey* other) {
 
 ::google::protobuf::Metadata DSACryptographicKey::GetMetadata() const {
   protobuf_pubkey_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_pubkey_2eproto::file_level_metadata[1];
+  return protobuf_pubkey_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -1184,11 +1234,12 @@ void DSACryptographicKey::set_p(const ::std::string& value) {
 void DSACryptographicKey::set_p(::std::string&& value) {
   
   p_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.DSACryptographicKey.p)
 }
 #endif
 void DSACryptographicKey::set_p(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   
   p_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.DSACryptographicKey.p)
@@ -1236,11 +1287,12 @@ void DSACryptographicKey::set_q(const ::std::string& value) {
 void DSACryptographicKey::set_q(::std::string&& value) {
   
   q_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.DSACryptographicKey.q)
 }
 #endif
 void DSACryptographicKey::set_q(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   
   q_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.DSACryptographicKey.q)
@@ -1288,11 +1340,12 @@ void DSACryptographicKey::set_g(const ::std::string& value) {
 void DSACryptographicKey::set_g(::std::string&& value) {
   
   g_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.DSACryptographicKey.g)
 }
 #endif
 void DSACryptographicKey::set_g(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   
   g_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.DSACryptographicKey.g)
@@ -1340,11 +1393,12 @@ void DSACryptographicKey::set_y(const ::std::string& value) {
 void DSACryptographicKey::set_y(::std::string&& value) {
   
   y_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.DSACryptographicKey.y)
 }
 #endif
 void DSACryptographicKey::set_y(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   
   y_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.DSACryptographicKey.y)
@@ -1392,11 +1446,12 @@ void DSACryptographicKey::set_x(const ::std::string& value) {
 void DSACryptographicKey::set_x(::std::string&& value) {
   
   x_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.DSACryptographicKey.x)
 }
 #endif
 void DSACryptographicKey::set_x(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   
   x_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.DSACryptographicKey.x)
@@ -1493,7 +1548,7 @@ void ECCCryptographicKey::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* ECCCryptographicKey::descriptor() {
   protobuf_pubkey_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_pubkey_2eproto::file_level_metadata[2].descriptor;
+  return protobuf_pubkey_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
 const ECCCryptographicKey& ECCCryptographicKey::default_instance() {
@@ -1529,7 +1584,8 @@ bool ECCCryptographicKey::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // uint32 curve = 1;
       case 1: {
-        if (tag == 8u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -1542,7 +1598,8 @@ bool ECCCryptographicKey::MergePartialFromCodedStream(
 
       // bytes x = 2;
       case 2: {
-        if (tag == 18u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
                 input, this->mutable_x()));
         } else {
@@ -1553,7 +1610,8 @@ bool ECCCryptographicKey::MergePartialFromCodedStream(
 
       // bytes y = 3;
       case 3: {
-        if (tag == 26u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(26u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
                 input, this->mutable_y()));
         } else {
@@ -1564,7 +1622,8 @@ bool ECCCryptographicKey::MergePartialFromCodedStream(
 
       // bytes private = 4;
       case 4: {
-        if (tag == 34u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(34u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
                 input, this->mutable_private_()));
         } else {
@@ -1597,6 +1656,9 @@ failure:
 void ECCCryptographicKey::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:zsearch.ECCCryptographicKey)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   // uint32 curve = 1;
   if (this->curve() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->curve(), output);
@@ -1625,8 +1687,10 @@ void ECCCryptographicKey::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* ECCCryptographicKey::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:zsearch.ECCCryptographicKey)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   // uint32 curve = 1;
   if (this->curve() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->curve(), target);
@@ -1715,6 +1779,9 @@ void ECCCryptographicKey::MergeFrom(const ECCCryptographicKey& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:zsearch.ECCCryptographicKey)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   if (from.x().size() > 0) {
 
     x_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.x_);
@@ -1764,7 +1831,7 @@ void ECCCryptographicKey::InternalSwap(ECCCryptographicKey* other) {
 
 ::google::protobuf::Metadata ECCCryptographicKey::GetMetadata() const {
   protobuf_pubkey_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_pubkey_2eproto::file_level_metadata[2];
+  return protobuf_pubkey_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -1801,11 +1868,12 @@ void ECCCryptographicKey::set_x(const ::std::string& value) {
 void ECCCryptographicKey::set_x(::std::string&& value) {
   
   x_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.ECCCryptographicKey.x)
 }
 #endif
 void ECCCryptographicKey::set_x(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   
   x_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.ECCCryptographicKey.x)
@@ -1853,11 +1921,12 @@ void ECCCryptographicKey::set_y(const ::std::string& value) {
 void ECCCryptographicKey::set_y(::std::string&& value) {
   
   y_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.ECCCryptographicKey.y)
 }
 #endif
 void ECCCryptographicKey::set_y(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   
   y_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.ECCCryptographicKey.y)
@@ -1905,11 +1974,12 @@ void ECCCryptographicKey::set_private_(const ::std::string& value) {
 void ECCCryptographicKey::set_private_(::std::string&& value) {
   
   private__.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.ECCCryptographicKey.private)
 }
 #endif
 void ECCCryptographicKey::set_private_(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   
   private__.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.ECCCryptographicKey.private)
@@ -2016,7 +2086,7 @@ void CryptographicKey::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* CryptographicKey::descriptor() {
   protobuf_pubkey_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_pubkey_2eproto::file_level_metadata[3].descriptor;
+  return protobuf_pubkey_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
 const CryptographicKey& CryptographicKey::default_instance() {
@@ -2074,7 +2144,8 @@ bool CryptographicKey::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // .zsearch.CryptographicKey.KeyType type = 1;
       case 1: {
-        if (tag == 8u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u)) {
           int value;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
@@ -2088,7 +2159,8 @@ bool CryptographicKey::MergePartialFromCodedStream(
 
       // .zsearch.RSACryptographicKey rsa = 2;
       case 2: {
-        if (tag == 18u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_rsa()));
         } else {
@@ -2099,7 +2171,8 @@ bool CryptographicKey::MergePartialFromCodedStream(
 
       // .zsearch.DSACryptographicKey dsa = 3;
       case 3: {
-        if (tag == 26u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(26u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_dsa()));
         } else {
@@ -2110,7 +2183,8 @@ bool CryptographicKey::MergePartialFromCodedStream(
 
       // .zsearch.ECCCryptographicKey ecc = 4;
       case 4: {
-        if (tag == 34u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(34u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_ecc()));
         } else {
@@ -2121,7 +2195,8 @@ bool CryptographicKey::MergePartialFromCodedStream(
 
       // bool broken = 5;
       case 5: {
-        if (tag == 40u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(40u)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -2134,7 +2209,8 @@ bool CryptographicKey::MergePartialFromCodedStream(
 
       // bool common = 6;
       case 6: {
-        if (tag == 48u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(48u)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -2147,7 +2223,8 @@ bool CryptographicKey::MergePartialFromCodedStream(
 
       // bool debian = 7;
       case 7: {
-        if (tag == 56u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(56u)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -2182,6 +2259,9 @@ failure:
 void CryptographicKey::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:zsearch.CryptographicKey)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   // .zsearch.CryptographicKey.KeyType type = 1;
   if (this->type() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteEnum(
@@ -2226,8 +2306,10 @@ void CryptographicKey::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* CryptographicKey::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:zsearch.CryptographicKey)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   // .zsearch.CryptographicKey.KeyType type = 1;
   if (this->type() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
@@ -2238,21 +2320,21 @@ void CryptographicKey::SerializeWithCachedSizes(
   if (has_rsa()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        2, *key_oneof_.rsa_, false, target);
+        2, *key_oneof_.rsa_, deterministic, target);
   }
 
   // .zsearch.DSACryptographicKey dsa = 3;
   if (has_dsa()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        3, *key_oneof_.dsa_, false, target);
+        3, *key_oneof_.dsa_, deterministic, target);
   }
 
   // .zsearch.ECCCryptographicKey ecc = 4;
   if (has_ecc()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        4, *key_oneof_.ecc_, false, target);
+        4, *key_oneof_.ecc_, deterministic, target);
   }
 
   // bool broken = 5;
@@ -2351,6 +2433,9 @@ void CryptographicKey::MergeFrom(const CryptographicKey& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:zsearch.CryptographicKey)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   if (from.type() != 0) {
     set_type(from.type());
   }
@@ -2416,7 +2501,7 @@ void CryptographicKey::InternalSwap(CryptographicKey* other) {
 
 ::google::protobuf::Metadata CryptographicKey::GetMetadata() const {
   protobuf_pubkey_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_pubkey_2eproto::file_level_metadata[3];
+  return protobuf_pubkey_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS

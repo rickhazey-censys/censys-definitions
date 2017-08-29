@@ -38,6 +38,10 @@ python/build/*
 python/dist/*
 python/zsearch_definitions.egg-info/*
 
+# IntelliJ
+*.idea
+*.iml
+
 # ZLint Descriptions
 zlint-state.json
 zlint-lints.json

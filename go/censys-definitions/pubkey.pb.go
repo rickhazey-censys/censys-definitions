@@ -41,7 +41,7 @@ var CryptographicKey_KeyType_value = map[string]int32{
 func (x CryptographicKey_KeyType) String() string {
 	return proto.EnumName(CryptographicKey_KeyType_name, int32(x))
 }
-func (CryptographicKey_KeyType) EnumDescriptor() ([]byte, []int) { return fileDescriptor6, []int{3, 0} }
+func (CryptographicKey_KeyType) EnumDescriptor() ([]byte, []int) { return fileDescriptor7, []int{3, 0} }
 
 type RSACryptographicKey struct {
 	Modulus  []byte `protobuf:"bytes,1,opt,name=modulus,proto3" json:"modulus,omitempty"`
@@ -53,7 +53,7 @@ type RSACryptographicKey struct {
 func (m *RSACryptographicKey) Reset()                    { *m = RSACryptographicKey{} }
 func (m *RSACryptographicKey) String() string            { return proto.CompactTextString(m) }
 func (*RSACryptographicKey) ProtoMessage()               {}
-func (*RSACryptographicKey) Descriptor() ([]byte, []int) { return fileDescriptor6, []int{0} }
+func (*RSACryptographicKey) Descriptor() ([]byte, []int) { return fileDescriptor7, []int{0} }
 
 func (m *RSACryptographicKey) GetModulus() []byte {
 	if m != nil {
@@ -94,7 +94,7 @@ type DSACryptographicKey struct {
 func (m *DSACryptographicKey) Reset()                    { *m = DSACryptographicKey{} }
 func (m *DSACryptographicKey) String() string            { return proto.CompactTextString(m) }
 func (*DSACryptographicKey) ProtoMessage()               {}
-func (*DSACryptographicKey) Descriptor() ([]byte, []int) { return fileDescriptor6, []int{1} }
+func (*DSACryptographicKey) Descriptor() ([]byte, []int) { return fileDescriptor7, []int{1} }
 
 func (m *DSACryptographicKey) GetP() []byte {
 	if m != nil {
@@ -141,7 +141,7 @@ type ECCCryptographicKey struct {
 func (m *ECCCryptographicKey) Reset()                    { *m = ECCCryptographicKey{} }
 func (m *ECCCryptographicKey) String() string            { return proto.CompactTextString(m) }
 func (*ECCCryptographicKey) ProtoMessage()               {}
-func (*ECCCryptographicKey) Descriptor() ([]byte, []int) { return fileDescriptor6, []int{2} }
+func (*ECCCryptographicKey) Descriptor() ([]byte, []int) { return fileDescriptor7, []int{2} }
 
 func (m *ECCCryptographicKey) GetCurve() uint32 {
 	if m != nil {
@@ -186,7 +186,7 @@ type CryptographicKey struct {
 func (m *CryptographicKey) Reset()                    { *m = CryptographicKey{} }
 func (m *CryptographicKey) String() string            { return proto.CompactTextString(m) }
 func (*CryptographicKey) ProtoMessage()               {}
-func (*CryptographicKey) Descriptor() ([]byte, []int) { return fileDescriptor6, []int{3} }
+func (*CryptographicKey) Descriptor() ([]byte, []int) { return fileDescriptor7, []int{3} }
 
 type isCryptographicKey_KeyOneof interface {
 	isCryptographicKey_KeyOneof()
@@ -363,11 +363,11 @@ func init() {
 	proto.RegisterEnum("zsearch.CryptographicKey_KeyType", CryptographicKey_KeyType_name, CryptographicKey_KeyType_value)
 }
 
-func init() { proto.RegisterFile("pubkey.proto", fileDescriptor6) }
+func init() { proto.RegisterFile("pubkey.proto", fileDescriptor7) }
 
-var fileDescriptor6 = []byte{
+var fileDescriptor7 = []byte{
 	// 392 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x6c, 0x92, 0xcf, 0x8f, 0x94, 0x30,
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x09, 0x6e, 0x88, 0x02, 0xff, 0x6c, 0x92, 0xcf, 0x8f, 0x94, 0x30,
 	0x14, 0xc7, 0x17, 0x98, 0x1d, 0xc6, 0x37, 0x68, 0x48, 0xc7, 0x98, 0x66, 0xe3, 0x41, 0x39, 0x79,
 	0x22, 0x66, 0x8d, 0x67, 0x33, 0x02, 0x89, 0xc9, 0x24, 0x63, 0x52, 0xfc, 0x71, 0xf0, 0x60, 0xa0,
 	0x54, 0x76, 0x32, 0x0e, 0xed, 0x16, 0xd8, 0x50, 0xff, 0x6f, 0xef, 0xa6, 0x2d, 0x6c, 0xd6, 0x1d,

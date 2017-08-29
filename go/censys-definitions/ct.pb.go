@@ -47,7 +47,7 @@ var CTPushStatus_value = map[string]int32{
 func (x CTPushStatus) String() string {
 	return proto.EnumName(CTPushStatus_name, int32(x))
 }
-func (CTPushStatus) EnumDescriptor() ([]byte, []int) { return fileDescriptor3, []int{0} }
+func (CTPushStatus) EnumDescriptor() ([]byte, []int) { return fileDescriptor4, []int{0} }
 
 type CTServer int32
 
@@ -177,7 +177,7 @@ var CTServer_value = map[string]int32{
 func (x CTServer) String() string {
 	return proto.EnumName(CTServer_name, int32(x))
 }
-func (CTServer) EnumDescriptor() ([]byte, []int) { return fileDescriptor3, []int{1} }
+func (CTServer) EnumDescriptor() ([]byte, []int) { return fileDescriptor4, []int{1} }
 
 type CTServerStatus struct {
 	Index int64 `protobuf:"varint,1,opt,name=index" json:"index,omitempty"`
@@ -195,7 +195,7 @@ type CTServerStatus struct {
 func (m *CTServerStatus) Reset()                    { *m = CTServerStatus{} }
 func (m *CTServerStatus) String() string            { return proto.CompactTextString(m) }
 func (*CTServerStatus) ProtoMessage()               {}
-func (*CTServerStatus) Descriptor() ([]byte, []int) { return fileDescriptor3, []int{0} }
+func (*CTServerStatus) Descriptor() ([]byte, []int) { return fileDescriptor4, []int{0} }
 
 func (m *CTServerStatus) GetIndex() int64 {
 	if m != nil {
@@ -286,7 +286,7 @@ type CTStatus struct {
 func (m *CTStatus) Reset()                    { *m = CTStatus{} }
 func (m *CTStatus) String() string            { return proto.CompactTextString(m) }
 func (*CTStatus) ProtoMessage()               {}
-func (*CTStatus) Descriptor() ([]byte, []int) { return fileDescriptor3, []int{1} }
+func (*CTStatus) Descriptor() ([]byte, []int) { return fileDescriptor4, []int{1} }
 
 func (m *CTStatus) GetCensysDev() *CTServerStatus {
 	if m != nil {
@@ -535,7 +535,7 @@ type SCT struct {
 func (m *SCT) Reset()                    { *m = SCT{} }
 func (m *SCT) String() string            { return proto.CompactTextString(m) }
 func (*SCT) ProtoMessage()               {}
-func (*SCT) Descriptor() ([]byte, []int) { return fileDescriptor3, []int{2} }
+func (*SCT) Descriptor() ([]byte, []int) { return fileDescriptor4, []int{2} }
 
 func (m *SCT) GetSha256Fp() []byte {
 	if m != nil {
@@ -566,11 +566,11 @@ func init() {
 	proto.RegisterEnum("zsearch.CTServer", CTServer_name, CTServer_value)
 }
 
-func init() { proto.RegisterFile("ct.proto", fileDescriptor3) }
+func init() { proto.RegisterFile("ct.proto", fileDescriptor4) }
 
-var fileDescriptor3 = []byte{
+var fileDescriptor4 = []byte{
 	// 1461 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x8c, 0x97, 0x6f, 0x53, 0xdc, 0xb8,
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x09, 0x6e, 0x88, 0x02, 0xff, 0x8c, 0x97, 0x6f, 0x53, 0xdc, 0xb8,
 	0x19, 0xc0, 0x0b, 0x5c, 0x08, 0x11, 0x7f, 0x22, 0x74, 0x21, 0x28, 0x10, 0x12, 0x42, 0x2e, 0x17,
 	0x92, 0xeb, 0xa4, 0xcd, 0xb6, 0xcd, 0x74, 0xfa, 0x6f, 0x6a, 0x64, 0x1d, 0x71, 0xf1, 0xda, 0x3b,
 	0x92, 0x76, 0xe9, 0xb6, 0x2f, 0x34, 0xc6, 0xab, 0x2c, 0x9e, 0xec, 0xda, 0x3b, 0xb6, 0x96, 0x2b,

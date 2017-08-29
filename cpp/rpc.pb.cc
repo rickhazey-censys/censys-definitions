@@ -30,6 +30,10 @@ class StatisticsPairDefaultTypeInternal : public ::google::protobuf::internal::E
 } _StatisticsPair_default_instance_;
 class StoreStatisticsDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<StoreStatistics> {
 } _StoreStatistics_default_instance_;
+class ServerStatistics_StoreStatisticsEntryDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<ServerStatistics::ServerStatistics_StoreStatisticsEntry> {
+} _ServerStatistics_StoreStatisticsEntry_default_instance_;
+class ServerStatistics_AnonymousStoreStatisticsEntryDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<ServerStatistics::ServerStatistics_AnonymousStoreStatisticsEntry> {
+} _ServerStatistics_AnonymousStoreStatisticsEntry_default_instance_;
 class ServerStatisticsDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<ServerStatistics> {
 } _ServerStatistics_default_instance_;
 class PruneStatisticsDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<PruneStatistics> {
@@ -61,17 +65,50 @@ const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[4];
 
 }  // namespace
 
+PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTableField
+    const TableStruct::entries[] = {
+  {0, 0, 0, ::google::protobuf::internal::kInvalidMask, 0, 0},
+};
+
+PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::AuxillaryParseTableField
+    const TableStruct::aux[] = {
+  ::google::protobuf::internal::AuxillaryParseTableField(),
+};
+PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTable const
+    TableStruct::schema[] = {
+  { NULL, NULL, 0, -1, -1, false },
+  { NULL, NULL, 0, -1, -1, false },
+  { NULL, NULL, 0, -1, -1, false },
+  { NULL, NULL, 0, -1, -1, false },
+  { NULL, NULL, 0, -1, -1, false },
+  { NULL, NULL, 0, -1, -1, false },
+  { NULL, NULL, 0, -1, -1, false },
+  { NULL, NULL, 0, -1, -1, false },
+  { NULL, NULL, 0, -1, -1, false },
+  { NULL, NULL, 0, -1, -1, false },
+  { NULL, NULL, 0, -1, -1, false },
+  { NULL, NULL, 0, -1, -1, false },
+  { NULL, NULL, 0, -1, -1, false },
+  { NULL, NULL, 0, -1, -1, false },
+  { NULL, NULL, 0, -1, -1, false },
+  { NULL, NULL, 0, -1, -1, false },
+  { NULL, NULL, 0, -1, -1, false },
+  { NULL, NULL, 0, -1, -1, false },
+};
+
 const ::google::protobuf::uint32 TableStruct::offsets[] = {
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MinScanId, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MinScanId, key_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MinScanId, min_scan_id_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MozillaOneCRLEntry, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MozillaOneCRLEntry, issuer_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MozillaOneCRLEntry, serial_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MozillaOneCRLEntry, id_),
@@ -80,6 +117,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Command, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Command, incremental_dump_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Command, min_scan_ids_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Command, filepath_),
@@ -92,6 +130,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AnonymousStoreStatistics, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AnonymousStoreStatistics, total_records_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AnonymousStoreStatistics, records_added_last_reset_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AnonymousStoreStatistics, records_updated_last_reset_),
@@ -105,6 +144,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(StatisticsPair, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(StatisticsPair, port_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(StatisticsPair, protocol_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(StatisticsPair, subprotocol_),
@@ -113,24 +153,28 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(StoreStatistics, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(StoreStatistics, global_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(StoreStatistics, protocols_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ServerStatistics, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ServerStatistics, store_statistics_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ServerStatistics, anonymous_store_statistics_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PruneStatistics, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PruneStatistics, key_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PruneStatistics, records_pruned_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandReply, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandReply, status_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandReply, error_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CommandReply, stats_),
@@ -139,6 +183,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(HostQuery, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(HostQuery, ip_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(HostQuery, domain_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(HostQuery, port_),
@@ -149,6 +194,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(HostQueryResponse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(HostQueryResponse, status_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(HostQueryResponse, ip_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(HostQueryResponse, domain_),
@@ -162,11 +208,13 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AnonymousQuery, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AnonymousQuery, sha256fp_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AnonymousQueryResponse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AnonymousQueryResponse, sha256fp_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AnonymousQueryResponse, status_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AnonymousQueryResponse, record_),
@@ -176,6 +224,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UserDataRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UserDataRequest, ip_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UserDataRequest, domain_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UserDataRequest, data_),
@@ -183,31 +232,33 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RootStoreQuery, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RootStoreQuery, type_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RootStoreReply, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RootStoreReply, certificates_),
 };
 
 static const ::google::protobuf::internal::MigrationSchema schemas[] = {
   { 0, -1, sizeof(MinScanId)},
-  { 6, -1, sizeof(MozillaOneCRLEntry)},
-  { 14, -1, sizeof(Command)},
-  { 26, -1, sizeof(AnonymousStoreStatistics)},
-  { 39, -1, sizeof(StatisticsPair)},
-  { 47, -1, sizeof(StoreStatistics)},
-  { 53, -1, sizeof(ServerStatistics)},
-  { 59, -1, sizeof(PruneStatistics)},
-  { 65, -1, sizeof(CommandReply)},
-  { 73, -1, sizeof(HostQuery)},
-  { 83, -1, sizeof(HostQueryResponse)},
-  { 96, -1, sizeof(AnonymousQuery)},
-  { 101, -1, sizeof(AnonymousQueryResponse)},
-  { 110, -1, sizeof(UserDataRequest)},
-  { 117, -1, sizeof(RootStoreQuery)},
-  { 122, -1, sizeof(RootStoreReply)},
+  { 7, -1, sizeof(MozillaOneCRLEntry)},
+  { 16, -1, sizeof(Command)},
+  { 29, -1, sizeof(AnonymousStoreStatistics)},
+  { 43, -1, sizeof(StatisticsPair)},
+  { 52, -1, sizeof(StoreStatistics)},
+  { 59, -1, sizeof(ServerStatistics)},
+  { 66, -1, sizeof(PruneStatistics)},
+  { 73, -1, sizeof(CommandReply)},
+  { 82, -1, sizeof(HostQuery)},
+  { 93, -1, sizeof(HostQueryResponse)},
+  { 107, -1, sizeof(AnonymousQuery)},
+  { 113, -1, sizeof(AnonymousQueryResponse)},
+  { 123, -1, sizeof(UserDataRequest)},
+  { 131, -1, sizeof(RootStoreQuery)},
+  { 137, -1, sizeof(RootStoreReply)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -217,6 +268,8 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::google::protobuf::Message*>(&_AnonymousStoreStatistics_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_StatisticsPair_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_StoreStatistics_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_ServerStatistics_StoreStatisticsEntry_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_ServerStatistics_AnonymousStoreStatisticsEntry_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_ServerStatistics_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_PruneStatistics_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&_CommandReply_default_instance_),
@@ -237,6 +290,8 @@ void protobuf_AssignDescriptors() {
   AssignDescriptors(
       "rpc.proto", schemas, file_default_instances, TableStruct::offsets, factory,
       file_level_metadata, file_level_enum_descriptors, NULL);
+file_level_metadata[6].reflection = ServerStatistics::ServerStatistics_StoreStatisticsEntry::CreateReflection(file_level_metadata[6].descriptor, _ServerStatistics_StoreStatisticsEntry_default_instance_.get_mutable());
+file_level_metadata[7].reflection = ServerStatistics::ServerStatistics_AnonymousStoreStatisticsEntry::CreateReflection(file_level_metadata[7].descriptor, _ServerStatistics_AnonymousStoreStatisticsEntry_default_instance_.get_mutable());
 }
 
 void protobuf_AssignDescriptorsOnce() {
@@ -248,26 +303,6 @@ void protobuf_RegisterTypes(const ::std::string&) GOOGLE_ATTRIBUTE_COLD;
 void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
   ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 18);
-  const ::google::protobuf::Descriptor* ServerStatistics_StoreStatisticsEntry_descriptor = protobuf_rpc_2eproto::file_level_metadata[6].descriptor;
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-        ServerStatistics_StoreStatisticsEntry_descriptor,
-        ::google::protobuf::internal::MapEntry<
-            ::std::string,
-            ::zsearch::StoreStatistics,
-            ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
-            ::google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,
-            0>::CreateDefaultInstance(
-                ServerStatistics_StoreStatisticsEntry_descriptor));
-  const ::google::protobuf::Descriptor* ServerStatistics_AnonymousStoreStatisticsEntry_descriptor = protobuf_rpc_2eproto::file_level_metadata[7].descriptor;
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-        ServerStatistics_AnonymousStoreStatisticsEntry_descriptor,
-        ::google::protobuf::internal::MapEntry<
-            ::std::string,
-            ::zsearch::AnonymousStoreStatistics,
-            ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
-            ::google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,
-            0>::CreateDefaultInstance(
-                ServerStatistics_AnonymousStoreStatisticsEntry_descriptor));
 }
 
 }  // namespace
@@ -305,6 +340,8 @@ void TableStruct::Shutdown() {
   delete file_level_metadata[16].reflection;
   _RootStoreReply_default_instance_.Shutdown();
   delete file_level_metadata[17].reflection;
+  delete file_level_metadata[6].reflection;
+  delete file_level_metadata[7].reflection;
 }
 
 void TableStruct::InitDefaultsImpl() {
@@ -321,6 +358,8 @@ void TableStruct::InitDefaultsImpl() {
   _AnonymousStoreStatistics_default_instance_.DefaultConstruct();
   _StatisticsPair_default_instance_.DefaultConstruct();
   _StoreStatistics_default_instance_.DefaultConstruct();
+  _ServerStatistics_StoreStatisticsEntry_default_instance_.DefaultConstruct();
+  _ServerStatistics_AnonymousStoreStatisticsEntry_default_instance_.DefaultConstruct();
   _ServerStatistics_default_instance_.DefaultConstruct();
   _PruneStatistics_default_instance_.DefaultConstruct();
   _CommandReply_default_instance_.DefaultConstruct();
@@ -337,6 +376,10 @@ void TableStruct::InitDefaultsImpl() {
       ::zsearch::AnonymousStoreStatistics::internal_default_instance());
   _StoreStatistics_default_instance_.get_mutable()->global_ = const_cast< ::zsearch::AnonymousStoreStatistics*>(
       ::zsearch::AnonymousStoreStatistics::internal_default_instance());
+  _ServerStatistics_StoreStatisticsEntry_default_instance_.get_mutable()->set_default_instance(_ServerStatistics_StoreStatisticsEntry_default_instance_.get_mutable());
+  _ServerStatistics_StoreStatisticsEntry_default_instance_.get_mutable()->InitAsDefaultInstance();
+  _ServerStatistics_AnonymousStoreStatisticsEntry_default_instance_.get_mutable()->set_default_instance(_ServerStatistics_AnonymousStoreStatisticsEntry_default_instance_.get_mutable());
+  _ServerStatistics_AnonymousStoreStatisticsEntry_default_instance_.get_mutable()->InitAsDefaultInstance();
   _PruneStatistics_default_instance_.get_mutable()->key_ = const_cast< ::zsearch::AnonymousKey*>(
       ::zsearch::AnonymousKey::internal_default_instance());
   _CommandReply_default_instance_.get_mutable()->stats_ = const_cast< ::zsearch::ServerStatistics*>(
@@ -606,7 +649,7 @@ void MinScanId::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* MinScanId::descriptor() {
   protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_rpc_2eproto::file_level_metadata[0].descriptor;
+  return protobuf_rpc_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
 const MinScanId& MinScanId::default_instance() {
@@ -643,7 +686,8 @@ bool MinScanId::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // .zsearch.AnonymousKey key = 1;
       case 1: {
-        if (tag == 10u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(10u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_key()));
         } else {
@@ -654,7 +698,8 @@ bool MinScanId::MergePartialFromCodedStream(
 
       // uint32 min_scan_id = 2;
       case 2: {
-        if (tag == 16u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(16u)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -689,6 +734,9 @@ failure:
 void MinScanId::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:zsearch.MinScanId)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   // .zsearch.AnonymousKey key = 1;
   if (this->has_key()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
@@ -705,13 +753,15 @@ void MinScanId::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* MinScanId::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:zsearch.MinScanId)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   // .zsearch.AnonymousKey key = 1;
   if (this->has_key()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        1, *this->key_, false, target);
+        1, *this->key_, deterministic, target);
   }
 
   // uint32 min_scan_id = 2;
@@ -767,6 +817,9 @@ void MinScanId::MergeFrom(const MinScanId& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:zsearch.MinScanId)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   if (from.has_key()) {
     mutable_key()->::zsearch::AnonymousKey::MergeFrom(from.key());
   }
@@ -805,7 +858,7 @@ void MinScanId::InternalSwap(MinScanId* other) {
 
 ::google::protobuf::Metadata MinScanId::GetMetadata() const {
   protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_rpc_2eproto::file_level_metadata[0];
+  return protobuf_rpc_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -930,7 +983,7 @@ void MozillaOneCRLEntry::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* MozillaOneCRLEntry::descriptor() {
   protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_rpc_2eproto::file_level_metadata[1].descriptor;
+  return protobuf_rpc_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
 const MozillaOneCRLEntry& MozillaOneCRLEntry::default_instance() {
@@ -966,7 +1019,8 @@ bool MozillaOneCRLEntry::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // bytes issuer = 1;
       case 1: {
-        if (tag == 10u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(10u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
                 input, this->mutable_issuer()));
         } else {
@@ -977,7 +1031,8 @@ bool MozillaOneCRLEntry::MergePartialFromCodedStream(
 
       // bytes serial = 2;
       case 2: {
-        if (tag == 18u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
                 input, this->mutable_serial()));
         } else {
@@ -988,7 +1043,8 @@ bool MozillaOneCRLEntry::MergePartialFromCodedStream(
 
       // string id = 3;
       case 3: {
-        if (tag == 26u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(26u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_id()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -1003,7 +1059,8 @@ bool MozillaOneCRLEntry::MergePartialFromCodedStream(
 
       // uint32 last_modified = 4;
       case 4: {
-        if (tag == 32u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(32u)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -1038,6 +1095,9 @@ failure:
 void MozillaOneCRLEntry::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:zsearch.MozillaOneCRLEntry)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   // bytes issuer = 1;
   if (this->issuer().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::WriteBytesMaybeAliased(
@@ -1070,8 +1130,10 @@ void MozillaOneCRLEntry::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* MozillaOneCRLEntry::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:zsearch.MozillaOneCRLEntry)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   // bytes issuer = 1;
   if (this->issuer().size() > 0) {
     target =
@@ -1164,6 +1226,9 @@ void MozillaOneCRLEntry::MergeFrom(const MozillaOneCRLEntry& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:zsearch.MozillaOneCRLEntry)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   if (from.issuer().size() > 0) {
 
     issuer_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.issuer_);
@@ -1213,7 +1278,7 @@ void MozillaOneCRLEntry::InternalSwap(MozillaOneCRLEntry* other) {
 
 ::google::protobuf::Metadata MozillaOneCRLEntry::GetMetadata() const {
   protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_rpc_2eproto::file_level_metadata[1];
+  return protobuf_rpc_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -1236,11 +1301,12 @@ void MozillaOneCRLEntry::set_issuer(const ::std::string& value) {
 void MozillaOneCRLEntry::set_issuer(::std::string&& value) {
   
   issuer_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.MozillaOneCRLEntry.issuer)
 }
 #endif
 void MozillaOneCRLEntry::set_issuer(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   
   issuer_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.MozillaOneCRLEntry.issuer)
@@ -1288,11 +1354,12 @@ void MozillaOneCRLEntry::set_serial(const ::std::string& value) {
 void MozillaOneCRLEntry::set_serial(::std::string&& value) {
   
   serial_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.MozillaOneCRLEntry.serial)
 }
 #endif
 void MozillaOneCRLEntry::set_serial(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   
   serial_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.MozillaOneCRLEntry.serial)
@@ -1340,11 +1407,12 @@ void MozillaOneCRLEntry::set_id(const ::std::string& value) {
 void MozillaOneCRLEntry::set_id(::std::string&& value) {
   
   id_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.MozillaOneCRLEntry.id)
 }
 #endif
 void MozillaOneCRLEntry::set_id(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   
   id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.MozillaOneCRLEntry.id)
@@ -1452,7 +1520,7 @@ void Command::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* Command::descriptor() {
   protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_rpc_2eproto::file_level_metadata[2].descriptor;
+  return protobuf_rpc_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
 const Command& Command::default_instance() {
@@ -1489,7 +1557,8 @@ bool Command::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // bool incremental_dump = 1;
       case 1: {
-        if (tag == 8u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -1502,20 +1571,20 @@ bool Command::MergePartialFromCodedStream(
 
       // repeated .zsearch.MinScanId min_scan_ids = 2;
       case 2: {
-        if (tag == 18u) {
-          DO_(input->IncrementRecursionDepth());
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtualNoRecursionDepth(
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                 input, add_min_scan_ids()));
         } else {
           goto handle_unusual;
         }
-        input->UnsafeDecrementRecursionDepth();
         break;
       }
 
       // string filepath = 3;
       case 3: {
-        if (tag == 26u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(26u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_filepath()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -1530,7 +1599,8 @@ bool Command::MergePartialFromCodedStream(
 
       // uint32 max_records = 4;
       case 4: {
-        if (tag == 32u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(32u)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -1543,7 +1613,8 @@ bool Command::MergePartialFromCodedStream(
 
       // uint32 start_ip = 5;
       case 5: {
-        if (tag == 40u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(40u)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -1556,7 +1627,8 @@ bool Command::MergePartialFromCodedStream(
 
       // uint32 stop_ip = 6;
       case 6: {
-        if (tag == 48u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(48u)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -1569,20 +1641,20 @@ bool Command::MergePartialFromCodedStream(
 
       // repeated .zsearch.MozillaOneCRLEntry one_crl_entries = 7;
       case 7: {
-        if (tag == 58u) {
-          DO_(input->IncrementRecursionDepth());
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtualNoRecursionDepth(
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(58u)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                 input, add_one_crl_entries()));
         } else {
           goto handle_unusual;
         }
-        input->UnsafeDecrementRecursionDepth();
         break;
       }
 
       // uint32 threads = 8;
       case 8: {
-        if (tag == 64u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(64u)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -1617,6 +1689,9 @@ failure:
 void Command::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:zsearch.Command)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   // bool incremental_dump = 1;
   if (this->incremental_dump() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteBool(1, this->incremental_dump(), output);
@@ -1669,8 +1744,10 @@ void Command::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* Command::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:zsearch.Command)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   // bool incremental_dump = 1;
   if (this->incremental_dump() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(1, this->incremental_dump(), target);
@@ -1680,7 +1757,7 @@ void Command::SerializeWithCachedSizes(
   for (unsigned int i = 0, n = this->min_scan_ids_size(); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        2, this->min_scan_ids(i), false, target);
+        2, this->min_scan_ids(i), deterministic, target);
   }
 
   // string filepath = 3;
@@ -1713,7 +1790,7 @@ void Command::SerializeWithCachedSizes(
   for (unsigned int i = 0, n = this->one_crl_entries_size(); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        7, this->one_crl_entries(i), false, target);
+        7, this->one_crl_entries(i), deterministic, target);
   }
 
   // uint32 threads = 8;
@@ -1817,6 +1894,9 @@ void Command::MergeFrom(const Command& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:zsearch.Command)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   min_scan_ids_.MergeFrom(from.min_scan_ids_);
   one_crl_entries_.MergeFrom(from.one_crl_entries_);
   if (from.filepath().size() > 0) {
@@ -1863,8 +1943,8 @@ void Command::Swap(Command* other) {
   InternalSwap(other);
 }
 void Command::InternalSwap(Command* other) {
-  min_scan_ids_.UnsafeArenaSwap(&other->min_scan_ids_);
-  one_crl_entries_.UnsafeArenaSwap(&other->one_crl_entries_);
+  min_scan_ids_.InternalSwap(&other->min_scan_ids_);
+  one_crl_entries_.InternalSwap(&other->one_crl_entries_);
   filepath_.Swap(&other->filepath_);
   std::swap(incremental_dump_, other->incremental_dump_);
   std::swap(max_records_, other->max_records_);
@@ -1876,7 +1956,7 @@ void Command::InternalSwap(Command* other) {
 
 ::google::protobuf::Metadata Command::GetMetadata() const {
   protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_rpc_2eproto::file_level_metadata[2];
+  return protobuf_rpc_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -1943,11 +2023,12 @@ void Command::set_filepath(const ::std::string& value) {
 void Command::set_filepath(::std::string&& value) {
   
   filepath_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.Command.filepath)
 }
 #endif
 void Command::set_filepath(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   
   filepath_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.Command.filepath)
@@ -2132,7 +2213,7 @@ void AnonymousStoreStatistics::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* AnonymousStoreStatistics::descriptor() {
   protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_rpc_2eproto::file_level_metadata[3].descriptor;
+  return protobuf_rpc_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
 const AnonymousStoreStatistics& AnonymousStoreStatistics::default_instance() {
@@ -2168,7 +2249,8 @@ bool AnonymousStoreStatistics::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // uint64 total_records = 1;
       case 1: {
-        if (tag == 8u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>(
@@ -2181,7 +2263,8 @@ bool AnonymousStoreStatistics::MergePartialFromCodedStream(
 
       // uint64 records_added_last_reset = 2;
       case 2: {
-        if (tag == 16u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(16u)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>(
@@ -2194,7 +2277,8 @@ bool AnonymousStoreStatistics::MergePartialFromCodedStream(
 
       // uint64 records_updated_last_reset = 3;
       case 3: {
-        if (tag == 24u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(24u)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>(
@@ -2207,7 +2291,8 @@ bool AnonymousStoreStatistics::MergePartialFromCodedStream(
 
       // uint64 records_unchanged_last_reset = 4;
       case 4: {
-        if (tag == 32u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(32u)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>(
@@ -2220,7 +2305,8 @@ bool AnonymousStoreStatistics::MergePartialFromCodedStream(
 
       // uint64 records_received = 5;
       case 5: {
-        if (tag == 40u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(40u)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>(
@@ -2233,7 +2319,8 @@ bool AnonymousStoreStatistics::MergePartialFromCodedStream(
 
       // uint32 records_in_redis_queue = 6;
       case 6: {
-        if (tag == 48u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(48u)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -2246,7 +2333,8 @@ bool AnonymousStoreStatistics::MergePartialFromCodedStream(
 
       // string redis_queue_name = 7;
       case 7: {
-        if (tag == 58u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(58u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_redis_queue_name()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -2261,7 +2349,8 @@ bool AnonymousStoreStatistics::MergePartialFromCodedStream(
 
       // string queue_type = 8;
       case 8: {
-        if (tag == 66u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(66u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_queue_type()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -2276,7 +2365,8 @@ bool AnonymousStoreStatistics::MergePartialFromCodedStream(
 
       // uint32 worker_threads = 9;
       case 9: {
-        if (tag == 72u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(72u)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -2311,6 +2401,9 @@ failure:
 void AnonymousStoreStatistics::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:zsearch.AnonymousStoreStatistics)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   // uint64 total_records = 1;
   if (this->total_records() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt64(1, this->total_records(), output);
@@ -2371,8 +2464,10 @@ void AnonymousStoreStatistics::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* AnonymousStoreStatistics::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:zsearch.AnonymousStoreStatistics)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   // uint64 total_records = 1;
   if (this->total_records() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(1, this->total_records(), target);
@@ -2527,6 +2622,9 @@ void AnonymousStoreStatistics::MergeFrom(const AnonymousStoreStatistics& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:zsearch.AnonymousStoreStatistics)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   if (from.redis_queue_name().size() > 0) {
 
     redis_queue_name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.redis_queue_name_);
@@ -2595,7 +2693,7 @@ void AnonymousStoreStatistics::InternalSwap(AnonymousStoreStatistics* other) {
 
 ::google::protobuf::Metadata AnonymousStoreStatistics::GetMetadata() const {
   protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_rpc_2eproto::file_level_metadata[3];
+  return protobuf_rpc_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -2702,11 +2800,12 @@ void AnonymousStoreStatistics::set_redis_queue_name(const ::std::string& value) 
 void AnonymousStoreStatistics::set_redis_queue_name(::std::string&& value) {
   
   redis_queue_name_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.AnonymousStoreStatistics.redis_queue_name)
 }
 #endif
 void AnonymousStoreStatistics::set_redis_queue_name(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   
   redis_queue_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.AnonymousStoreStatistics.redis_queue_name)
@@ -2754,11 +2853,12 @@ void AnonymousStoreStatistics::set_queue_type(const ::std::string& value) {
 void AnonymousStoreStatistics::set_queue_type(::std::string&& value) {
   
   queue_type_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.AnonymousStoreStatistics.queue_type)
 }
 #endif
 void AnonymousStoreStatistics::set_queue_type(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   
   queue_type_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.AnonymousStoreStatistics.queue_type)
@@ -2862,7 +2962,7 @@ void StatisticsPair::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* StatisticsPair::descriptor() {
   protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_rpc_2eproto::file_level_metadata[4].descriptor;
+  return protobuf_rpc_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
 const StatisticsPair& StatisticsPair::default_instance() {
@@ -2900,7 +3000,8 @@ bool StatisticsPair::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // uint32 port = 1;
       case 1: {
-        if (tag == 8u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -2913,7 +3014,8 @@ bool StatisticsPair::MergePartialFromCodedStream(
 
       // uint32 protocol = 2;
       case 2: {
-        if (tag == 16u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(16u)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -2926,7 +3028,8 @@ bool StatisticsPair::MergePartialFromCodedStream(
 
       // uint32 subprotocol = 3;
       case 3: {
-        if (tag == 24u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(24u)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -2939,7 +3042,8 @@ bool StatisticsPair::MergePartialFromCodedStream(
 
       // .zsearch.AnonymousStoreStatistics statistics = 4;
       case 4: {
-        if (tag == 34u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(34u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_statistics()));
         } else {
@@ -2972,6 +3076,9 @@ failure:
 void StatisticsPair::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:zsearch.StatisticsPair)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   // uint32 port = 1;
   if (this->port() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->port(), output);
@@ -2998,8 +3105,10 @@ void StatisticsPair::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* StatisticsPair::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:zsearch.StatisticsPair)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   // uint32 port = 1;
   if (this->port() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->port(), target);
@@ -3019,7 +3128,7 @@ void StatisticsPair::SerializeWithCachedSizes(
   if (this->has_statistics()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        4, *this->statistics_, false, target);
+        4, *this->statistics_, deterministic, target);
   }
 
   // @@protoc_insertion_point(serialize_to_array_end:zsearch.StatisticsPair)
@@ -3084,6 +3193,9 @@ void StatisticsPair::MergeFrom(const StatisticsPair& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:zsearch.StatisticsPair)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   if (from.has_statistics()) {
     mutable_statistics()->::zsearch::AnonymousStoreStatistics::MergeFrom(from.statistics());
   }
@@ -3130,7 +3242,7 @@ void StatisticsPair::InternalSwap(StatisticsPair* other) {
 
 ::google::protobuf::Metadata StatisticsPair::GetMetadata() const {
   protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_rpc_2eproto::file_level_metadata[4];
+  return protobuf_rpc_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -3271,7 +3383,7 @@ void StoreStatistics::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* StoreStatistics::descriptor() {
   protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_rpc_2eproto::file_level_metadata[5].descriptor;
+  return protobuf_rpc_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
 const StoreStatistics& StoreStatistics::default_instance() {
@@ -3308,7 +3420,8 @@ bool StoreStatistics::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // .zsearch.AnonymousStoreStatistics global = 1;
       case 1: {
-        if (tag == 10u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(10u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_global()));
         } else {
@@ -3319,14 +3432,13 @@ bool StoreStatistics::MergePartialFromCodedStream(
 
       // repeated .zsearch.StatisticsPair protocols = 2;
       case 2: {
-        if (tag == 18u) {
-          DO_(input->IncrementRecursionDepth());
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtualNoRecursionDepth(
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                 input, add_protocols()));
         } else {
           goto handle_unusual;
         }
-        input->UnsafeDecrementRecursionDepth();
         break;
       }
 
@@ -3354,6 +3466,9 @@ failure:
 void StoreStatistics::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:zsearch.StoreStatistics)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   // .zsearch.AnonymousStoreStatistics global = 1;
   if (this->has_global()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
@@ -3371,20 +3486,22 @@ void StoreStatistics::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* StoreStatistics::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:zsearch.StoreStatistics)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   // .zsearch.AnonymousStoreStatistics global = 1;
   if (this->has_global()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        1, *this->global_, false, target);
+        1, *this->global_, deterministic, target);
   }
 
   // repeated .zsearch.StatisticsPair protocols = 2;
   for (unsigned int i = 0, n = this->protocols_size(); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        2, this->protocols(i), false, target);
+        2, this->protocols(i), deterministic, target);
   }
 
   // @@protoc_insertion_point(serialize_to_array_end:zsearch.StoreStatistics)
@@ -3439,6 +3556,9 @@ void StoreStatistics::MergeFrom(const StoreStatistics& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:zsearch.StoreStatistics)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   protocols_.MergeFrom(from.protocols_);
   if (from.has_global()) {
     mutable_global()->::zsearch::AnonymousStoreStatistics::MergeFrom(from.global());
@@ -3468,14 +3588,14 @@ void StoreStatistics::Swap(StoreStatistics* other) {
   InternalSwap(other);
 }
 void StoreStatistics::InternalSwap(StoreStatistics* other) {
-  protocols_.UnsafeArenaSwap(&other->protocols_);
+  protocols_.InternalSwap(&other->protocols_);
   std::swap(global_, other->global_);
   std::swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata StoreStatistics::GetMetadata() const {
   protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_rpc_2eproto::file_level_metadata[5];
+  return protobuf_rpc_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -3554,10 +3674,38 @@ StoreStatistics::protocols() const {
 
 // ===================================================================
 
+ServerStatistics::ServerStatistics_StoreStatisticsEntry::ServerStatistics_StoreStatisticsEntry() {}
+ServerStatistics::ServerStatistics_StoreStatisticsEntry::ServerStatistics_StoreStatisticsEntry(::google::protobuf::Arena* arena) : SuperType(arena) {}
+::google::protobuf::Metadata ServerStatistics::ServerStatistics_StoreStatisticsEntry::GetMetadata() const {
+  protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_rpc_2eproto::file_level_metadata[6];
+}
+void ServerStatistics::ServerStatistics_StoreStatisticsEntry::MergeFrom(
+    const ::google::protobuf::Message& other) {
+  ::google::protobuf::Message::MergeFrom(other);
+}
+void ServerStatistics::ServerStatistics_StoreStatisticsEntry::MergeFrom(const ServerStatistics_StoreStatisticsEntry& other) {
+  MergeFromInternal(other);
+}
+
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // ===================================================================
+
+ServerStatistics::ServerStatistics_AnonymousStoreStatisticsEntry::ServerStatistics_AnonymousStoreStatisticsEntry() {}
+ServerStatistics::ServerStatistics_AnonymousStoreStatisticsEntry::ServerStatistics_AnonymousStoreStatisticsEntry(::google::protobuf::Arena* arena) : SuperType(arena) {}
+::google::protobuf::Metadata ServerStatistics::ServerStatistics_AnonymousStoreStatisticsEntry::GetMetadata() const {
+  protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_rpc_2eproto::file_level_metadata[7];
+}
+void ServerStatistics::ServerStatistics_AnonymousStoreStatisticsEntry::MergeFrom(
+    const ::google::protobuf::Message& other) {
+  ::google::protobuf::Message::MergeFrom(other);
+}
+void ServerStatistics::ServerStatistics_AnonymousStoreStatisticsEntry::MergeFrom(const ServerStatistics_AnonymousStoreStatisticsEntry& other) {
+  MergeFromInternal(other);
+}
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -3582,32 +3730,12 @@ ServerStatistics::ServerStatistics(const ServerStatistics& from)
       _internal_metadata_(NULL),
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  const ::google::protobuf::Descriptor*& ServerStatistics_StoreStatisticsEntry_descriptor = protobuf_rpc_2eproto::file_level_metadata[6].descriptor;
-  const ::google::protobuf::Descriptor*& ServerStatistics_AnonymousStoreStatisticsEntry_descriptor = protobuf_rpc_2eproto::file_level_metadata[7].descriptor;
-  store_statistics_.SetAssignDescriptorCallback(
-      protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce);
-  store_statistics_.SetEntryDescriptor(
-      &ServerStatistics_StoreStatisticsEntry_descriptor);
   store_statistics_.MergeFrom(from.store_statistics_);
-  anonymous_store_statistics_.SetAssignDescriptorCallback(
-      protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce);
-  anonymous_store_statistics_.SetEntryDescriptor(
-      &ServerStatistics_AnonymousStoreStatisticsEntry_descriptor);
   anonymous_store_statistics_.MergeFrom(from.anonymous_store_statistics_);
   // @@protoc_insertion_point(copy_constructor:zsearch.ServerStatistics)
 }
 
 void ServerStatistics::SharedCtor() {
-  const ::google::protobuf::Descriptor*& ServerStatistics_StoreStatisticsEntry_descriptor = protobuf_rpc_2eproto::file_level_metadata[6].descriptor;
-  const ::google::protobuf::Descriptor*& ServerStatistics_AnonymousStoreStatisticsEntry_descriptor = protobuf_rpc_2eproto::file_level_metadata[7].descriptor;
-  store_statistics_.SetAssignDescriptorCallback(
-      protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce);
-  store_statistics_.SetEntryDescriptor(
-      &ServerStatistics_StoreStatisticsEntry_descriptor);
-  anonymous_store_statistics_.SetAssignDescriptorCallback(
-      protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce);
-  anonymous_store_statistics_.SetEntryDescriptor(
-      &ServerStatistics_AnonymousStoreStatisticsEntry_descriptor);
   _cached_size_ = 0;
 }
 
@@ -3626,7 +3754,7 @@ void ServerStatistics::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* ServerStatistics::descriptor() {
   protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_rpc_2eproto::file_level_metadata[8].descriptor;
+  return protobuf_rpc_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
 const ServerStatistics& ServerStatistics::default_instance() {
@@ -3660,9 +3788,10 @@ bool ServerStatistics::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // map<string, .zsearch.StoreStatistics> store_statistics = 1;
       case 1: {
-        if (tag == 10u) {
-          DO_(input->IncrementRecursionDepth());
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(10u)) {
           ServerStatistics_StoreStatisticsEntry::Parser< ::google::protobuf::internal::MapField<
+              ServerStatistics_StoreStatisticsEntry,
               ::std::string, ::zsearch::StoreStatistics,
               ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
               ::google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,
@@ -3677,15 +3806,15 @@ bool ServerStatistics::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
-        input->UnsafeDecrementRecursionDepth();
         break;
       }
 
       // map<string, .zsearch.AnonymousStoreStatistics> anonymous_store_statistics = 2;
       case 2: {
-        if (tag == 18u) {
-          DO_(input->IncrementRecursionDepth());
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u)) {
           ServerStatistics_AnonymousStoreStatisticsEntry::Parser< ::google::protobuf::internal::MapField<
+              ServerStatistics_AnonymousStoreStatisticsEntry,
               ::std::string, ::zsearch::AnonymousStoreStatistics,
               ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
               ::google::protobuf::internal::WireFormatLite::TYPE_MESSAGE,
@@ -3700,7 +3829,6 @@ bool ServerStatistics::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
-        input->UnsafeDecrementRecursionDepth();
         break;
       }
 
@@ -3728,6 +3856,9 @@ failure:
 void ServerStatistics::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:zsearch.ServerStatistics)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   // map<string, .zsearch.StoreStatistics> store_statistics = 1;
   if (!this->store_statistics().empty()) {
     typedef ::google::protobuf::Map< ::std::string, ::zsearch::StoreStatistics >::const_pointer
@@ -3831,8 +3962,10 @@ void ServerStatistics::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* ServerStatistics::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:zsearch.ServerStatistics)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   // map<string, .zsearch.StoreStatistics> store_statistics = 1;
   if (!this->store_statistics().empty()) {
     typedef ::google::protobuf::Map< ::std::string, ::zsearch::StoreStatistics >::const_pointer
@@ -4001,6 +4134,9 @@ void ServerStatistics::MergeFrom(const ServerStatistics& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:zsearch.ServerStatistics)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   store_statistics_.MergeFrom(from.store_statistics_);
   anonymous_store_statistics_.MergeFrom(from.anonymous_store_statistics_);
 }
@@ -4035,7 +4171,7 @@ void ServerStatistics::InternalSwap(ServerStatistics* other) {
 
 ::google::protobuf::Metadata ServerStatistics::GetMetadata() const {
   protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_rpc_2eproto::file_level_metadata[8];
+  return protobuf_rpc_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -4132,7 +4268,7 @@ void PruneStatistics::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* PruneStatistics::descriptor() {
   protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_rpc_2eproto::file_level_metadata[9].descriptor;
+  return protobuf_rpc_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
 const PruneStatistics& PruneStatistics::default_instance() {
@@ -4169,7 +4305,8 @@ bool PruneStatistics::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // .zsearch.AnonymousKey key = 1;
       case 1: {
-        if (tag == 10u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(10u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_key()));
         } else {
@@ -4180,7 +4317,8 @@ bool PruneStatistics::MergePartialFromCodedStream(
 
       // uint64 records_pruned = 2;
       case 2: {
-        if (tag == 16u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(16u)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>(
@@ -4215,6 +4353,9 @@ failure:
 void PruneStatistics::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:zsearch.PruneStatistics)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   // .zsearch.AnonymousKey key = 1;
   if (this->has_key()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
@@ -4231,13 +4372,15 @@ void PruneStatistics::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* PruneStatistics::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:zsearch.PruneStatistics)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   // .zsearch.AnonymousKey key = 1;
   if (this->has_key()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        1, *this->key_, false, target);
+        1, *this->key_, deterministic, target);
   }
 
   // uint64 records_pruned = 2;
@@ -4293,6 +4436,9 @@ void PruneStatistics::MergeFrom(const PruneStatistics& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:zsearch.PruneStatistics)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   if (from.has_key()) {
     mutable_key()->::zsearch::AnonymousKey::MergeFrom(from.key());
   }
@@ -4331,7 +4477,7 @@ void PruneStatistics::InternalSwap(PruneStatistics* other) {
 
 ::google::protobuf::Metadata PruneStatistics::GetMetadata() const {
   protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_rpc_2eproto::file_level_metadata[9];
+  return protobuf_rpc_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -4454,7 +4600,7 @@ void CommandReply::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* CommandReply::descriptor() {
   protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_rpc_2eproto::file_level_metadata[10].descriptor;
+  return protobuf_rpc_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
 const CommandReply& CommandReply::default_instance() {
@@ -4493,7 +4639,8 @@ bool CommandReply::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // .zsearch.CommandReply.CommandStatus status = 1;
       case 1: {
-        if (tag == 8u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u)) {
           int value;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
@@ -4507,7 +4654,8 @@ bool CommandReply::MergePartialFromCodedStream(
 
       // string error = 2;
       case 2: {
-        if (tag == 18u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_error()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -4522,7 +4670,8 @@ bool CommandReply::MergePartialFromCodedStream(
 
       // .zsearch.ServerStatistics stats = 3;
       case 3: {
-        if (tag == 26u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(26u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_stats()));
         } else {
@@ -4533,14 +4682,13 @@ bool CommandReply::MergePartialFromCodedStream(
 
       // repeated .zsearch.PruneStatistics prune_statistics = 4;
       case 4: {
-        if (tag == 34u) {
-          DO_(input->IncrementRecursionDepth());
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtualNoRecursionDepth(
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(34u)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                 input, add_prune_statistics()));
         } else {
           goto handle_unusual;
         }
-        input->UnsafeDecrementRecursionDepth();
         break;
       }
 
@@ -4568,6 +4716,9 @@ failure:
 void CommandReply::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:zsearch.CommandReply)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   // .zsearch.CommandReply.CommandStatus status = 1;
   if (this->status() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteEnum(
@@ -4601,8 +4752,10 @@ void CommandReply::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* CommandReply::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:zsearch.CommandReply)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   // .zsearch.CommandReply.CommandStatus status = 1;
   if (this->status() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
@@ -4624,14 +4777,14 @@ void CommandReply::SerializeWithCachedSizes(
   if (this->has_stats()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        3, *this->stats_, false, target);
+        3, *this->stats_, deterministic, target);
   }
 
   // repeated .zsearch.PruneStatistics prune_statistics = 4;
   for (unsigned int i = 0, n = this->prune_statistics_size(); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        4, this->prune_statistics(i), false, target);
+        4, this->prune_statistics(i), deterministic, target);
   }
 
   // @@protoc_insertion_point(serialize_to_array_end:zsearch.CommandReply)
@@ -4699,6 +4852,9 @@ void CommandReply::MergeFrom(const CommandReply& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:zsearch.CommandReply)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   prune_statistics_.MergeFrom(from.prune_statistics_);
   if (from.error().size() > 0) {
 
@@ -4735,7 +4891,7 @@ void CommandReply::Swap(CommandReply* other) {
   InternalSwap(other);
 }
 void CommandReply::InternalSwap(CommandReply* other) {
-  prune_statistics_.UnsafeArenaSwap(&other->prune_statistics_);
+  prune_statistics_.InternalSwap(&other->prune_statistics_);
   error_.Swap(&other->error_);
   std::swap(stats_, other->stats_);
   std::swap(status_, other->status_);
@@ -4744,7 +4900,7 @@ void CommandReply::InternalSwap(CommandReply* other) {
 
 ::google::protobuf::Metadata CommandReply::GetMetadata() const {
   protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_rpc_2eproto::file_level_metadata[10];
+  return protobuf_rpc_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -4781,11 +4937,12 @@ void CommandReply::set_error(const ::std::string& value) {
 void CommandReply::set_error(::std::string&& value) {
   
   error_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.CommandReply.error)
 }
 #endif
 void CommandReply::set_error(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   
   error_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.CommandReply.error)
@@ -4944,7 +5101,7 @@ void HostQuery::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* HostQuery::descriptor() {
   protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_rpc_2eproto::file_level_metadata[11].descriptor;
+  return protobuf_rpc_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
 const HostQuery& HostQuery::default_instance() {
@@ -4979,7 +5136,8 @@ bool HostQuery::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // fixed32 ip = 1;
       case 1: {
-        if (tag == 13u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(13u)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_FIXED32>(
@@ -4992,7 +5150,8 @@ bool HostQuery::MergePartialFromCodedStream(
 
       // string domain = 2;
       case 2: {
-        if (tag == 18u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_domain()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -5007,7 +5166,8 @@ bool HostQuery::MergePartialFromCodedStream(
 
       // uint32 port = 3;
       case 3: {
-        if (tag == 24u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(24u)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -5020,7 +5180,8 @@ bool HostQuery::MergePartialFromCodedStream(
 
       // uint32 protocol = 4;
       case 4: {
-        if (tag == 32u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(32u)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -5033,7 +5194,8 @@ bool HostQuery::MergePartialFromCodedStream(
 
       // uint32 subprotocol = 5;
       case 5: {
-        if (tag == 40u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(40u)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -5046,7 +5208,8 @@ bool HostQuery::MergePartialFromCodedStream(
 
       // uint32 max_records = 6;
       case 6: {
-        if (tag == 48u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(48u)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -5081,6 +5244,9 @@ failure:
 void HostQuery::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:zsearch.HostQuery)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   // fixed32 ip = 1;
   if (this->ip() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteFixed32(1, this->ip(), output);
@@ -5121,8 +5287,10 @@ void HostQuery::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* HostQuery::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:zsearch.HostQuery)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   // fixed32 ip = 1;
   if (this->ip() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteFixed32ToArray(1, this->ip(), target);
@@ -5233,6 +5401,9 @@ void HostQuery::MergeFrom(const HostQuery& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:zsearch.HostQuery)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   if (from.domain().size() > 0) {
 
     domain_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.domain_);
@@ -5288,7 +5459,7 @@ void HostQuery::InternalSwap(HostQuery* other) {
 
 ::google::protobuf::Metadata HostQuery::GetMetadata() const {
   protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_rpc_2eproto::file_level_metadata[11];
+  return protobuf_rpc_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -5325,11 +5496,12 @@ void HostQuery::set_domain(const ::std::string& value) {
 void HostQuery::set_domain(::std::string&& value) {
   
   domain_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.HostQuery.domain)
 }
 #endif
 void HostQuery::set_domain(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   
   domain_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.HostQuery.domain)
@@ -5493,7 +5665,7 @@ void HostQueryResponse::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* HostQueryResponse::descriptor() {
   protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_rpc_2eproto::file_level_metadata[12].descriptor;
+  return protobuf_rpc_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
 const HostQueryResponse& HostQueryResponse::default_instance() {
@@ -5534,7 +5706,8 @@ bool HostQueryResponse::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // .zsearch.HostQueryResponse.ResponseStatus status = 1;
       case 1: {
-        if (tag == 8u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u)) {
           int value;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
@@ -5548,7 +5721,8 @@ bool HostQueryResponse::MergePartialFromCodedStream(
 
       // fixed32 ip = 2;
       case 2: {
-        if (tag == 21u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(21u)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_FIXED32>(
@@ -5561,7 +5735,8 @@ bool HostQueryResponse::MergePartialFromCodedStream(
 
       // string domain = 3;
       case 3: {
-        if (tag == 26u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(26u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_domain()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -5576,7 +5751,8 @@ bool HostQueryResponse::MergePartialFromCodedStream(
 
       // uint32 port = 4;
       case 4: {
-        if (tag == 32u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(32u)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -5589,7 +5765,8 @@ bool HostQueryResponse::MergePartialFromCodedStream(
 
       // uint32 protocol = 5;
       case 5: {
-        if (tag == 40u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(40u)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -5602,7 +5779,8 @@ bool HostQueryResponse::MergePartialFromCodedStream(
 
       // uint32 subprotocol = 6;
       case 6: {
-        if (tag == 48u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(48u)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -5615,7 +5793,8 @@ bool HostQueryResponse::MergePartialFromCodedStream(
 
       // .zsearch.Record record = 7;
       case 7: {
-        if (tag == 58u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(58u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_record()));
         } else {
@@ -5626,20 +5805,20 @@ bool HostQueryResponse::MergePartialFromCodedStream(
 
       // repeated .zsearch.Record records = 8;
       case 8: {
-        if (tag == 66u) {
-          DO_(input->IncrementRecursionDepth());
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtualNoRecursionDepth(
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(66u)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                 input, add_records()));
         } else {
           goto handle_unusual;
         }
-        input->UnsafeDecrementRecursionDepth();
         break;
       }
 
       // string error = 9;
       case 9: {
-        if (tag == 74u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(74u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_error()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -5676,6 +5855,9 @@ failure:
 void HostQueryResponse::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:zsearch.HostQueryResponse)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   // .zsearch.HostQueryResponse.ResponseStatus status = 1;
   if (this->status() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteEnum(
@@ -5739,8 +5921,10 @@ void HostQueryResponse::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* HostQueryResponse::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:zsearch.HostQueryResponse)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   // .zsearch.HostQueryResponse.ResponseStatus status = 1;
   if (this->status() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
@@ -5782,14 +5966,14 @@ void HostQueryResponse::SerializeWithCachedSizes(
   if (this->has_record()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        7, *this->record_, false, target);
+        7, *this->record_, deterministic, target);
   }
 
   // repeated .zsearch.Record records = 8;
   for (unsigned int i = 0, n = this->records_size(); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        8, this->records(i), false, target);
+        8, this->records(i), deterministic, target);
   }
 
   // string error = 9;
@@ -5901,6 +6085,9 @@ void HostQueryResponse::MergeFrom(const HostQueryResponse& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:zsearch.HostQueryResponse)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   records_.MergeFrom(from.records_);
   if (from.domain().size() > 0) {
 
@@ -5953,7 +6140,7 @@ void HostQueryResponse::Swap(HostQueryResponse* other) {
   InternalSwap(other);
 }
 void HostQueryResponse::InternalSwap(HostQueryResponse* other) {
-  records_.UnsafeArenaSwap(&other->records_);
+  records_.InternalSwap(&other->records_);
   domain_.Swap(&other->domain_);
   error_.Swap(&other->error_);
   std::swap(record_, other->record_);
@@ -5967,7 +6154,7 @@ void HostQueryResponse::InternalSwap(HostQueryResponse* other) {
 
 ::google::protobuf::Metadata HostQueryResponse::GetMetadata() const {
   protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_rpc_2eproto::file_level_metadata[12];
+  return protobuf_rpc_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -6018,11 +6205,12 @@ void HostQueryResponse::set_domain(const ::std::string& value) {
 void HostQueryResponse::set_domain(::std::string&& value) {
   
   domain_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.HostQueryResponse.domain)
 }
 #endif
 void HostQueryResponse::set_domain(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   
   domain_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.HostQueryResponse.domain)
@@ -6181,11 +6369,12 @@ void HostQueryResponse::set_error(const ::std::string& value) {
 void HostQueryResponse::set_error(::std::string&& value) {
   
   error_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.HostQueryResponse.error)
 }
 #endif
 void HostQueryResponse::set_error(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   
   error_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.HostQueryResponse.error)
@@ -6265,7 +6454,7 @@ void AnonymousQuery::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* AnonymousQuery::descriptor() {
   protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_rpc_2eproto::file_level_metadata[13].descriptor;
+  return protobuf_rpc_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
 const AnonymousQuery& AnonymousQuery::default_instance() {
@@ -6298,7 +6487,8 @@ bool AnonymousQuery::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // bytes sha256fp = 1;
       case 1: {
-        if (tag == 10u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(10u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
                 input, this->mutable_sha256fp()));
         } else {
@@ -6331,6 +6521,9 @@ failure:
 void AnonymousQuery::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:zsearch.AnonymousQuery)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   // bytes sha256fp = 1;
   if (this->sha256fp().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::WriteBytesMaybeAliased(
@@ -6342,8 +6535,10 @@ void AnonymousQuery::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* AnonymousQuery::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:zsearch.AnonymousQuery)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   // bytes sha256fp = 1;
   if (this->sha256fp().size() > 0) {
     target =
@@ -6392,6 +6587,9 @@ void AnonymousQuery::MergeFrom(const AnonymousQuery& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:zsearch.AnonymousQuery)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   if (from.sha256fp().size() > 0) {
 
     sha256fp_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.sha256fp_);
@@ -6427,7 +6625,7 @@ void AnonymousQuery::InternalSwap(AnonymousQuery* other) {
 
 ::google::protobuf::Metadata AnonymousQuery::GetMetadata() const {
   protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_rpc_2eproto::file_level_metadata[13];
+  return protobuf_rpc_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -6450,11 +6648,12 @@ void AnonymousQuery::set_sha256fp(const ::std::string& value) {
 void AnonymousQuery::set_sha256fp(::std::string&& value) {
   
   sha256fp_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.AnonymousQuery.sha256fp)
 }
 #endif
 void AnonymousQuery::set_sha256fp(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   
   sha256fp_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.AnonymousQuery.sha256fp)
@@ -6556,7 +6755,7 @@ void AnonymousQueryResponse::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* AnonymousQueryResponse::descriptor() {
   protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_rpc_2eproto::file_level_metadata[14].descriptor;
+  return protobuf_rpc_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
 const AnonymousQueryResponse& AnonymousQueryResponse::default_instance() {
@@ -6596,7 +6795,8 @@ bool AnonymousQueryResponse::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // bytes sha256fp = 1;
       case 1: {
-        if (tag == 10u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(10u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
                 input, this->mutable_sha256fp()));
         } else {
@@ -6607,7 +6807,8 @@ bool AnonymousQueryResponse::MergePartialFromCodedStream(
 
       // .zsearch.AnonymousQueryResponse.ResponseStatus status = 2;
       case 2: {
-        if (tag == 16u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(16u)) {
           int value;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
@@ -6621,7 +6822,8 @@ bool AnonymousQueryResponse::MergePartialFromCodedStream(
 
       // .zsearch.AnonymousRecord record = 3;
       case 3: {
-        if (tag == 26u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(26u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_record()));
         } else {
@@ -6632,20 +6834,20 @@ bool AnonymousQueryResponse::MergePartialFromCodedStream(
 
       // repeated .zsearch.AnonymousRecord records = 4;
       case 4: {
-        if (tag == 34u) {
-          DO_(input->IncrementRecursionDepth());
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtualNoRecursionDepth(
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(34u)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                 input, add_records()));
         } else {
           goto handle_unusual;
         }
-        input->UnsafeDecrementRecursionDepth();
         break;
       }
 
       // string error = 59;
       case 59: {
-        if (tag == 474u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(474u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_error()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -6682,6 +6884,9 @@ failure:
 void AnonymousQueryResponse::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:zsearch.AnonymousQueryResponse)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   // bytes sha256fp = 1;
   if (this->sha256fp().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::WriteBytesMaybeAliased(
@@ -6721,8 +6926,10 @@ void AnonymousQueryResponse::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* AnonymousQueryResponse::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:zsearch.AnonymousQueryResponse)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   // bytes sha256fp = 1;
   if (this->sha256fp().size() > 0) {
     target =
@@ -6740,14 +6947,14 @@ void AnonymousQueryResponse::SerializeWithCachedSizes(
   if (this->has_record()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        3, *this->record_, false, target);
+        3, *this->record_, deterministic, target);
   }
 
   // repeated .zsearch.AnonymousRecord records = 4;
   for (unsigned int i = 0, n = this->records_size(); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        4, this->records(i), false, target);
+        4, this->records(i), deterministic, target);
   }
 
   // string error = 59;
@@ -6833,6 +7040,9 @@ void AnonymousQueryResponse::MergeFrom(const AnonymousQueryResponse& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:zsearch.AnonymousQueryResponse)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   records_.MergeFrom(from.records_);
   if (from.sha256fp().size() > 0) {
 
@@ -6873,7 +7083,7 @@ void AnonymousQueryResponse::Swap(AnonymousQueryResponse* other) {
   InternalSwap(other);
 }
 void AnonymousQueryResponse::InternalSwap(AnonymousQueryResponse* other) {
-  records_.UnsafeArenaSwap(&other->records_);
+  records_.InternalSwap(&other->records_);
   sha256fp_.Swap(&other->sha256fp_);
   error_.Swap(&other->error_);
   std::swap(record_, other->record_);
@@ -6883,7 +7093,7 @@ void AnonymousQueryResponse::InternalSwap(AnonymousQueryResponse* other) {
 
 ::google::protobuf::Metadata AnonymousQueryResponse::GetMetadata() const {
   protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_rpc_2eproto::file_level_metadata[14];
+  return protobuf_rpc_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -6906,11 +7116,12 @@ void AnonymousQueryResponse::set_sha256fp(const ::std::string& value) {
 void AnonymousQueryResponse::set_sha256fp(::std::string&& value) {
   
   sha256fp_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.AnonymousQueryResponse.sha256fp)
 }
 #endif
 void AnonymousQueryResponse::set_sha256fp(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   
   sha256fp_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.AnonymousQueryResponse.sha256fp)
@@ -7041,11 +7252,12 @@ void AnonymousQueryResponse::set_error(const ::std::string& value) {
 void AnonymousQueryResponse::set_error(::std::string&& value) {
   
   error_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.AnonymousQueryResponse.error)
 }
 #endif
 void AnonymousQueryResponse::set_error(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   
   error_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.AnonymousQueryResponse.error)
@@ -7138,7 +7350,7 @@ void UserDataRequest::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* UserDataRequest::descriptor() {
   protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_rpc_2eproto::file_level_metadata[15].descriptor;
+  return protobuf_rpc_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
 const UserDataRequest& UserDataRequest::default_instance() {
@@ -7176,7 +7388,8 @@ bool UserDataRequest::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // fixed32 ip = 1;
       case 1: {
-        if (tag == 13u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(13u)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_FIXED32>(
@@ -7189,7 +7402,8 @@ bool UserDataRequest::MergePartialFromCodedStream(
 
       // string domain = 2;
       case 2: {
-        if (tag == 18u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_domain()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -7204,7 +7418,8 @@ bool UserDataRequest::MergePartialFromCodedStream(
 
       // .zsearch.UserdataAtom data = 3;
       case 3: {
-        if (tag == 26u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(26u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_data()));
         } else {
@@ -7237,6 +7452,9 @@ failure:
 void UserDataRequest::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:zsearch.UserDataRequest)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   // fixed32 ip = 1;
   if (this->ip() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteFixed32(1, this->ip(), output);
@@ -7263,8 +7481,10 @@ void UserDataRequest::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* UserDataRequest::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:zsearch.UserDataRequest)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   // fixed32 ip = 1;
   if (this->ip() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteFixed32ToArray(1, this->ip(), target);
@@ -7285,7 +7505,7 @@ void UserDataRequest::SerializeWithCachedSizes(
   if (this->has_data()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        3, *this->data_, false, target);
+        3, *this->data_, deterministic, target);
   }
 
   // @@protoc_insertion_point(serialize_to_array_end:zsearch.UserDataRequest)
@@ -7341,6 +7561,9 @@ void UserDataRequest::MergeFrom(const UserDataRequest& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:zsearch.UserDataRequest)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   if (from.domain().size() > 0) {
 
     domain_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.domain_);
@@ -7384,7 +7607,7 @@ void UserDataRequest::InternalSwap(UserDataRequest* other) {
 
 ::google::protobuf::Metadata UserDataRequest::GetMetadata() const {
   protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_rpc_2eproto::file_level_metadata[15];
+  return protobuf_rpc_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -7421,11 +7644,12 @@ void UserDataRequest::set_domain(const ::std::string& value) {
 void UserDataRequest::set_domain(::std::string&& value) {
   
   domain_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.UserDataRequest.domain)
 }
 #endif
 void UserDataRequest::set_domain(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   
   domain_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.UserDataRequest.domain)
@@ -7540,7 +7764,7 @@ void RootStoreQuery::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* RootStoreQuery::descriptor() {
   protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_rpc_2eproto::file_level_metadata[16].descriptor;
+  return protobuf_rpc_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
 const RootStoreQuery& RootStoreQuery::default_instance() {
@@ -7573,7 +7797,8 @@ bool RootStoreQuery::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // .zsearch.RootStoreQuery.RootStoreQueryType type = 1;
       case 1: {
-        if (tag == 8u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u)) {
           int value;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
@@ -7609,6 +7834,9 @@ failure:
 void RootStoreQuery::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:zsearch.RootStoreQuery)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   // .zsearch.RootStoreQuery.RootStoreQueryType type = 1;
   if (this->type() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteEnum(
@@ -7620,8 +7848,10 @@ void RootStoreQuery::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* RootStoreQuery::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:zsearch.RootStoreQuery)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   // .zsearch.RootStoreQuery.RootStoreQueryType type = 1;
   if (this->type() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
@@ -7668,6 +7898,9 @@ void RootStoreQuery::MergeFrom(const RootStoreQuery& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:zsearch.RootStoreQuery)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   if (from.type() != 0) {
     set_type(from.type());
   }
@@ -7702,7 +7935,7 @@ void RootStoreQuery::InternalSwap(RootStoreQuery* other) {
 
 ::google::protobuf::Metadata RootStoreQuery::GetMetadata() const {
   protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_rpc_2eproto::file_level_metadata[16];
+  return protobuf_rpc_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -7766,7 +7999,7 @@ void RootStoreReply::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* RootStoreReply::descriptor() {
   protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_rpc_2eproto::file_level_metadata[17].descriptor;
+  return protobuf_rpc_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
 const RootStoreReply& RootStoreReply::default_instance() {
@@ -7799,14 +8032,13 @@ bool RootStoreReply::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // repeated .zsearch.Certificate certificates = 1;
       case 1: {
-        if (tag == 10u) {
-          DO_(input->IncrementRecursionDepth());
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtualNoRecursionDepth(
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(10u)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                 input, add_certificates()));
         } else {
           goto handle_unusual;
         }
-        input->UnsafeDecrementRecursionDepth();
         break;
       }
 
@@ -7834,6 +8066,9 @@ failure:
 void RootStoreReply::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:zsearch.RootStoreReply)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   // repeated .zsearch.Certificate certificates = 1;
   for (unsigned int i = 0, n = this->certificates_size(); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
@@ -7845,13 +8080,15 @@ void RootStoreReply::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* RootStoreReply::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:zsearch.RootStoreReply)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   // repeated .zsearch.Certificate certificates = 1;
   for (unsigned int i = 0, n = this->certificates_size(); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        1, this->certificates(i), false, target);
+        1, this->certificates(i), deterministic, target);
   }
 
   // @@protoc_insertion_point(serialize_to_array_end:zsearch.RootStoreReply)
@@ -7899,6 +8136,9 @@ void RootStoreReply::MergeFrom(const RootStoreReply& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:zsearch.RootStoreReply)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   certificates_.MergeFrom(from.certificates_);
 }
 
@@ -7925,13 +8165,13 @@ void RootStoreReply::Swap(RootStoreReply* other) {
   InternalSwap(other);
 }
 void RootStoreReply::InternalSwap(RootStoreReply* other) {
-  certificates_.UnsafeArenaSwap(&other->certificates_);
+  certificates_.InternalSwap(&other->certificates_);
   std::swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata RootStoreReply::GetMetadata() const {
   protobuf_rpc_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_rpc_2eproto::file_level_metadata[17];
+  return protobuf_rpc_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS

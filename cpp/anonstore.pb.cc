@@ -41,21 +41,38 @@ const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[2];
 
 }  // namespace
 
+PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTableField
+    const TableStruct::entries[] = {
+  {0, 0, 0, ::google::protobuf::internal::kInvalidMask, 0, 0},
+};
+
+PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::AuxillaryParseTableField
+    const TableStruct::aux[] = {
+  ::google::protobuf::internal::AuxillaryParseTableField(),
+};
+PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTable const
+    TableStruct::schema[] = {
+  { NULL, NULL, 0, -1, -1, false },
+  { NULL, NULL, 0, -1, -1, false },
+  { NULL, NULL, 0, -1, -1, false },
+};
+
 const ::google::protobuf::uint32 TableStruct::offsets[] = {
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AnonymousRecord, _internal_metadata_),
   ~0u,  // no _extensions_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AnonymousRecord, _oneof_case_[0]),
+  ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AnonymousRecord, sha256fp_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AnonymousRecord, timestamp_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AnonymousRecord, scan_id_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AnonymousRecord, exported_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AnonymousRecord, userdata_),
-  PROTO2_GENERATED_DEFAULT_ONEOF_FIELD_OFFSET((&_AnonymousRecord_default_instance_), data_),
-  PROTO2_GENERATED_DEFAULT_ONEOF_FIELD_OFFSET((&_AnonymousRecord_default_instance_), raw_data_),
-  PROTO2_GENERATED_DEFAULT_ONEOF_FIELD_OFFSET((&_AnonymousRecord_default_instance_), certificate_),
-  PROTO2_GENERATED_DEFAULT_ONEOF_FIELD_OFFSET((&_AnonymousRecord_default_instance_), key_),
-  PROTO2_GENERATED_DEFAULT_ONEOF_FIELD_OFFSET((&_AnonymousRecord_default_instance_), as_),
+  GOOGLE_PROTOBUF_GENERATED_DEFAULT_ONEOF_FIELD_OFFSET((&_AnonymousRecord_default_instance_), data_),
+  GOOGLE_PROTOBUF_GENERATED_DEFAULT_ONEOF_FIELD_OFFSET((&_AnonymousRecord_default_instance_), raw_data_),
+  GOOGLE_PROTOBUF_GENERATED_DEFAULT_ONEOF_FIELD_OFFSET((&_AnonymousRecord_default_instance_), certificate_),
+  GOOGLE_PROTOBUF_GENERATED_DEFAULT_ONEOF_FIELD_OFFSET((&_AnonymousRecord_default_instance_), key_),
+  GOOGLE_PROTOBUF_GENERATED_DEFAULT_ONEOF_FIELD_OFFSET((&_AnonymousRecord_default_instance_), as_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AnonymousRecord, metadata_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AnonymousRecord, tags_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AnonymousRecord, updated_at_),
@@ -65,6 +82,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AnonymousDelta, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AnonymousDelta, delta_type_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AnonymousDelta, delta_scope_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AnonymousDelta, record_),
@@ -72,6 +90,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ExternalCertificate, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ExternalCertificate, source_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ExternalCertificate, anonymous_record_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ExternalCertificate, ct_server_),
@@ -82,8 +101,8 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
 
 static const ::google::protobuf::internal::MigrationSchema schemas[] = {
   { 0, -1, sizeof(AnonymousRecord)},
-  { 19, -1, sizeof(AnonymousDelta)},
-  { 26, -1, sizeof(ExternalCertificate)},
+  { 20, -1, sizeof(AnonymousDelta)},
+  { 28, -1, sizeof(ExternalCertificate)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -370,7 +389,7 @@ void AnonymousRecord::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* AnonymousRecord::descriptor() {
   protobuf_anonstore_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_anonstore_2eproto::file_level_metadata[0].descriptor;
+  return protobuf_anonstore_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
 const AnonymousRecord& AnonymousRecord::default_instance() {
@@ -443,7 +462,8 @@ bool AnonymousRecord::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // bytes sha256fp = 1;
       case 1: {
-        if (tag == 10u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(10u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
                 input, this->mutable_sha256fp()));
         } else {
@@ -454,7 +474,8 @@ bool AnonymousRecord::MergePartialFromCodedStream(
 
       // sfixed64 timestamp = 2;
       case 2: {
-        if (tag == 17u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(17u)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_SFIXED64>(
@@ -467,7 +488,8 @@ bool AnonymousRecord::MergePartialFromCodedStream(
 
       // uint32 scan_id = 3;
       case 3: {
-        if (tag == 24u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(24u)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -480,7 +502,8 @@ bool AnonymousRecord::MergePartialFromCodedStream(
 
       // bool exported = 4 [deprecated = true];
       case 4: {
-        if (tag == 32u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(32u)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -493,7 +516,8 @@ bool AnonymousRecord::MergePartialFromCodedStream(
 
       // .zsearch.UserdataAtom userdata = 5;
       case 5: {
-        if (tag == 42u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(42u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_userdata()));
         } else {
@@ -504,7 +528,8 @@ bool AnonymousRecord::MergePartialFromCodedStream(
 
       // string data = 6;
       case 6: {
-        if (tag == 50u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(50u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_data()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -519,7 +544,8 @@ bool AnonymousRecord::MergePartialFromCodedStream(
 
       // bytes raw_data = 7;
       case 7: {
-        if (tag == 58u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(58u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
                 input, this->mutable_raw_data()));
         } else {
@@ -530,7 +556,8 @@ bool AnonymousRecord::MergePartialFromCodedStream(
 
       // .zsearch.Certificate certificate = 8;
       case 8: {
-        if (tag == 66u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(66u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_certificate()));
         } else {
@@ -541,7 +568,8 @@ bool AnonymousRecord::MergePartialFromCodedStream(
 
       // .zsearch.CryptographicKey key = 9;
       case 9: {
-        if (tag == 74u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(74u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_key()));
         } else {
@@ -552,7 +580,8 @@ bool AnonymousRecord::MergePartialFromCodedStream(
 
       // .zsearch.ASAtom as = 10;
       case 10: {
-        if (tag == 82u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(82u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_as()));
         } else {
@@ -563,20 +592,20 @@ bool AnonymousRecord::MergePartialFromCodedStream(
 
       // repeated .zsearch.Metadatum metadata = 14;
       case 14: {
-        if (tag == 114u) {
-          DO_(input->IncrementRecursionDepth());
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtualNoRecursionDepth(
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(114u)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                 input, add_metadata()));
         } else {
           goto handle_unusual;
         }
-        input->UnsafeDecrementRecursionDepth();
         break;
       }
 
       // repeated string tags = 15;
       case 15: {
-        if (tag == 122u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(122u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->add_tags()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -592,7 +621,8 @@ bool AnonymousRecord::MergePartialFromCodedStream(
 
       // fixed32 updated_at = 16;
       case 16: {
-        if (tag == 133u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(133u)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_FIXED32>(
@@ -605,7 +635,8 @@ bool AnonymousRecord::MergePartialFromCodedStream(
 
       // fixed32 added_at = 17;
       case 17: {
-        if (tag == 141u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(141u)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_FIXED32>(
@@ -640,6 +671,9 @@ failure:
 void AnonymousRecord::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:zsearch.AnonymousRecord)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   // bytes sha256fp = 1;
   if (this->sha256fp().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::WriteBytesMaybeAliased(
@@ -708,7 +742,7 @@ void AnonymousRecord::SerializeWithCachedSizes(
   }
 
   // repeated string tags = 15;
-  for (int i = 0; i < this->tags_size(); i++) {
+  for (int i = 0, n = this->tags_size(); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->tags(i).data(), this->tags(i).length(),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
@@ -732,8 +766,10 @@ void AnonymousRecord::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* AnonymousRecord::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:zsearch.AnonymousRecord)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   // bytes sha256fp = 1;
   if (this->sha256fp().size() > 0) {
     target =
@@ -760,7 +796,7 @@ void AnonymousRecord::SerializeWithCachedSizes(
   if (this->has_userdata()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        5, *this->userdata_, false, target);
+        5, *this->userdata_, deterministic, target);
   }
 
   // string data = 6;
@@ -785,32 +821,32 @@ void AnonymousRecord::SerializeWithCachedSizes(
   if (has_certificate()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        8, *oneof_data_.certificate_, false, target);
+        8, *oneof_data_.certificate_, deterministic, target);
   }
 
   // .zsearch.CryptographicKey key = 9;
   if (has_key()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        9, *oneof_data_.key_, false, target);
+        9, *oneof_data_.key_, deterministic, target);
   }
 
   // .zsearch.ASAtom as = 10;
   if (has_as()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        10, *oneof_data_.as_, false, target);
+        10, *oneof_data_.as_, deterministic, target);
   }
 
   // repeated .zsearch.Metadatum metadata = 14;
   for (unsigned int i = 0, n = this->metadata_size(); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        14, this->metadata(i), false, target);
+        14, this->metadata(i), deterministic, target);
   }
 
   // repeated string tags = 15;
-  for (int i = 0; i < this->tags_size(); i++) {
+  for (int i = 0, n = this->tags_size(); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->tags(i).data(), this->tags(i).length(),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
@@ -851,7 +887,7 @@ size_t AnonymousRecord::ByteSizeLong() const {
   // repeated string tags = 15;
   total_size += 1 *
       ::google::protobuf::internal::FromIntSize(this->tags_size());
-  for (int i = 0; i < this->tags_size(); i++) {
+  for (int i = 0, n = this->tags_size(); i < n; i++) {
     total_size += ::google::protobuf::internal::WireFormatLite::StringSize(
       this->tags(i));
   }
@@ -963,6 +999,9 @@ void AnonymousRecord::MergeFrom(const AnonymousRecord& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:zsearch.AnonymousRecord)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   metadata_.MergeFrom(from.metadata_);
   tags_.MergeFrom(from.tags_);
   if (from.sha256fp().size() > 0) {
@@ -1037,8 +1076,8 @@ void AnonymousRecord::Swap(AnonymousRecord* other) {
   InternalSwap(other);
 }
 void AnonymousRecord::InternalSwap(AnonymousRecord* other) {
-  metadata_.UnsafeArenaSwap(&other->metadata_);
-  tags_.UnsafeArenaSwap(&other->tags_);
+  metadata_.InternalSwap(&other->metadata_);
+  tags_.InternalSwap(&other->tags_);
   sha256fp_.Swap(&other->sha256fp_);
   std::swap(userdata_, other->userdata_);
   std::swap(timestamp_, other->timestamp_);
@@ -1053,7 +1092,7 @@ void AnonymousRecord::InternalSwap(AnonymousRecord* other) {
 
 ::google::protobuf::Metadata AnonymousRecord::GetMetadata() const {
   protobuf_anonstore_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_anonstore_2eproto::file_level_metadata[0];
+  return protobuf_anonstore_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -1076,11 +1115,12 @@ void AnonymousRecord::set_sha256fp(const ::std::string& value) {
 void AnonymousRecord::set_sha256fp(::std::string&& value) {
   
   sha256fp_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.AnonymousRecord.sha256fp)
 }
 #endif
 void AnonymousRecord::set_sha256fp(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   
   sha256fp_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.AnonymousRecord.sha256fp)
@@ -1231,11 +1271,12 @@ void AnonymousRecord::set_data(::std::string&& value) {
     oneof_data_.data_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   }
   oneof_data_.data_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.AnonymousRecord.data)
 }
 #endif
 void AnonymousRecord::set_data(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   if (!has_data()) {
     clear_oneof_data();
     set_has_data();
@@ -1325,11 +1366,12 @@ void AnonymousRecord::set_raw_data(::std::string&& value) {
     oneof_data_.raw_data_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   }
   oneof_data_.raw_data_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.AnonymousRecord.raw_data)
 }
 #endif
 void AnonymousRecord::set_raw_data(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   if (!has_raw_data()) {
     clear_oneof_data();
     set_has_raw_data();
@@ -1573,7 +1615,14 @@ void AnonymousRecord::set_tags(int index, const ::std::string& value) {
   // @@protoc_insertion_point(field_set:zsearch.AnonymousRecord.tags)
   tags_.Mutable(index)->assign(value);
 }
+#if LANG_CXX11
+void AnonymousRecord::set_tags(int index, ::std::string&& value) {
+  // @@protoc_insertion_point(field_set:zsearch.AnonymousRecord.tags)
+  tags_.Mutable(index)->assign(std::move(value));
+}
+#endif
 void AnonymousRecord::set_tags(int index, const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   tags_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:zsearch.AnonymousRecord.tags)
 }
@@ -1590,7 +1639,14 @@ void AnonymousRecord::add_tags(const ::std::string& value) {
   tags_.Add()->assign(value);
   // @@protoc_insertion_point(field_add:zsearch.AnonymousRecord.tags)
 }
+#if LANG_CXX11
+void AnonymousRecord::add_tags(::std::string&& value) {
+  tags_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:zsearch.AnonymousRecord.tags)
+}
+#endif
 void AnonymousRecord::add_tags(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   tags_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:zsearch.AnonymousRecord.tags)
 }
@@ -1704,7 +1760,7 @@ void AnonymousDelta::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* AnonymousDelta::descriptor() {
   protobuf_anonstore_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_anonstore_2eproto::file_level_metadata[1].descriptor;
+  return protobuf_anonstore_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
 const AnonymousDelta& AnonymousDelta::default_instance() {
@@ -1742,7 +1798,8 @@ bool AnonymousDelta::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // .zsearch.AnonymousDelta.DeltaType delta_type = 1;
       case 1: {
-        if (tag == 8u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u)) {
           int value;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
@@ -1756,7 +1813,8 @@ bool AnonymousDelta::MergePartialFromCodedStream(
 
       // .zsearch.AnonymousDelta.DeltaScope delta_scope = 2;
       case 2: {
-        if (tag == 16u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(16u)) {
           int value;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
@@ -1770,7 +1828,8 @@ bool AnonymousDelta::MergePartialFromCodedStream(
 
       // .zsearch.AnonymousRecord record = 3;
       case 3: {
-        if (tag == 26u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(26u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_record()));
         } else {
@@ -1803,6 +1862,9 @@ failure:
 void AnonymousDelta::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:zsearch.AnonymousDelta)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   // .zsearch.AnonymousDelta.DeltaType delta_type = 1;
   if (this->delta_type() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteEnum(
@@ -1826,8 +1888,10 @@ void AnonymousDelta::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* AnonymousDelta::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:zsearch.AnonymousDelta)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   // .zsearch.AnonymousDelta.DeltaType delta_type = 1;
   if (this->delta_type() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
@@ -1844,7 +1908,7 @@ void AnonymousDelta::SerializeWithCachedSizes(
   if (this->has_record()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        3, *this->record_, false, target);
+        3, *this->record_, deterministic, target);
   }
 
   // @@protoc_insertion_point(serialize_to_array_end:zsearch.AnonymousDelta)
@@ -1900,6 +1964,9 @@ void AnonymousDelta::MergeFrom(const AnonymousDelta& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:zsearch.AnonymousDelta)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   if (from.has_record()) {
     mutable_record()->::zsearch::AnonymousRecord::MergeFrom(from.record());
   }
@@ -1942,7 +2009,7 @@ void AnonymousDelta::InternalSwap(AnonymousDelta* other) {
 
 ::google::protobuf::Metadata AnonymousDelta::GetMetadata() const {
   protobuf_anonstore_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_anonstore_2eproto::file_level_metadata[1];
+  return protobuf_anonstore_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -2098,7 +2165,7 @@ void ExternalCertificate::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* ExternalCertificate::descriptor() {
   protobuf_anonstore_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_anonstore_2eproto::file_level_metadata[2].descriptor;
+  return protobuf_anonstore_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
 const ExternalCertificate& ExternalCertificate::default_instance() {
@@ -2145,7 +2212,8 @@ bool ExternalCertificate::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // .zsearch.CertificateSource source = 1;
       case 1: {
-        if (tag == 8u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u)) {
           int value;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
@@ -2159,7 +2227,8 @@ bool ExternalCertificate::MergePartialFromCodedStream(
 
       // .zsearch.AnonymousRecord anonymous_record = 2;
       case 2: {
-        if (tag == 18u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_anonymous_record()));
         } else {
@@ -2170,7 +2239,8 @@ bool ExternalCertificate::MergePartialFromCodedStream(
 
       // .zsearch.CTServer ct_server = 3;
       case 3: {
-        if (tag == 24u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(24u)) {
           int value;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
@@ -2184,7 +2254,8 @@ bool ExternalCertificate::MergePartialFromCodedStream(
 
       // .zsearch.CTServerStatus ct_status = 4;
       case 4: {
-        if (tag == 34u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(34u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_ct_status()));
         } else {
@@ -2195,7 +2266,8 @@ bool ExternalCertificate::MergePartialFromCodedStream(
 
       // .zsearch.MozillaSalesForceStatus nss_status = 5;
       case 5: {
-        if (tag == 42u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(42u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_nss_status()));
         } else {
@@ -2206,7 +2278,8 @@ bool ExternalCertificate::MergePartialFromCodedStream(
 
       // bytes tbsHash = 6;
       case 6: {
-        if (tag == 50u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(50u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
                 input, this->mutable_tbshash()));
         } else {
@@ -2239,6 +2312,9 @@ failure:
 void ExternalCertificate::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:zsearch.ExternalCertificate)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   // .zsearch.CertificateSource source = 1;
   if (this->source() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteEnum(
@@ -2280,8 +2356,10 @@ void ExternalCertificate::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* ExternalCertificate::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:zsearch.ExternalCertificate)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   // .zsearch.CertificateSource source = 1;
   if (this->source() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
@@ -2292,7 +2370,7 @@ void ExternalCertificate::SerializeWithCachedSizes(
   if (this->has_anonymous_record()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        2, *this->anonymous_record_, false, target);
+        2, *this->anonymous_record_, deterministic, target);
   }
 
   // .zsearch.CTServer ct_server = 3;
@@ -2305,14 +2383,14 @@ void ExternalCertificate::SerializeWithCachedSizes(
   if (this->has_ct_status()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        4, *this->ct_status_, false, target);
+        4, *this->ct_status_, deterministic, target);
   }
 
   // .zsearch.MozillaSalesForceStatus nss_status = 5;
   if (this->has_nss_status()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        5, *this->nss_status_, false, target);
+        5, *this->nss_status_, deterministic, target);
   }
 
   // bytes tbsHash = 6;
@@ -2396,6 +2474,9 @@ void ExternalCertificate::MergeFrom(const ExternalCertificate& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:zsearch.ExternalCertificate)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   if (from.tbshash().size() > 0) {
 
     tbshash_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.tbshash_);
@@ -2451,7 +2532,7 @@ void ExternalCertificate::InternalSwap(ExternalCertificate* other) {
 
 ::google::protobuf::Metadata ExternalCertificate::GetMetadata() const {
   protobuf_anonstore_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_anonstore_2eproto::file_level_metadata[2];
+  return protobuf_anonstore_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -2619,11 +2700,12 @@ void ExternalCertificate::set_tbshash(const ::std::string& value) {
 void ExternalCertificate::set_tbshash(::std::string&& value) {
   
   tbshash_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.ExternalCertificate.tbsHash)
 }
 #endif
 void ExternalCertificate::set_tbshash(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   
   tbshash_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.ExternalCertificate.tbsHash)

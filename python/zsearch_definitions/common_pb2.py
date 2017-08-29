@@ -22,7 +22,6 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_pb=_b('\n\x0c\x63ommon.proto\x12\x07zsearch\"\'\n\tMetadatum\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\"\xc1\x01\n\x0cUserdataAtom\x12\x15\n\rprivate_notes\x18\x01 \x01(\t\x12\x14\n\x0cpublic_notes\x18\x02 \x01(\t\x12,\n\x10private_metadata\x18\x03 \x03(\x0b\x32\x12.zsearch.Metadatum\x12+\n\x0fpublic_metadata\x18\x04 \x03(\x0b\x32\x12.zsearch.Metadatum\x12\x14\n\x0cprivate_tags\x18\x05 \x03(\t\x12\x13\n\x0bpublic_tags\x18\x06 \x03(\t\"\xb3\x01\n\x06\x41SAtom\x12\x0b\n\x03\x61sn\x18\x01 \x01(\r\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\x12\x10\n\x04path\x18\x03 \x03(\rB\x02\x10\x01\x12\'\n\x03rir\x18\x04 \x01(\x0e\x32\x1a.zsearch.RegionalRegistrar\x12\x12\n\nbgp_prefix\x18\x05 \x01(\t\x12\x0c\n\x04name\x18\x06 \x01(\t\x12\x14\n\x0c\x63ountry_code\x18\x07 \x01(\t\x12\x14\n\x0corganization\x18\x08 \x01(\t*L\n\tDeltaType\x12\x0f\n\x0b\x44T_RESERVED\x10\x00\x12\r\n\tDT_UPDATE\x10\x01\x12\r\n\tDT_DELETE\x10\x02\x12\x10\n\x0c\x44T_NO_CHANGE\x10\x03*\x82\x01\n\x11RegionalRegistrar\x12\x10\n\x0cRIR_RESERVED\x10\x00\x12\x0c\n\x08RIR_ARIN\x10\x01\x12\x0c\n\x08RIR_RIPE\x10\x02\x12\r\n\tRIR_APNIC\x10\x03\x12\x0f\n\x0bRIR_AFRINIC\x10\x04\x12\x0e\n\nRIR_LACNIC\x10\x05\x12\x0f\n\x0bRIR_UNKNOWN\x10\x06\x62\x06proto3')
 )
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 _DELTATYPE = _descriptor.EnumDescriptor(
   name='DeltaType',
@@ -303,6 +302,7 @@ DESCRIPTOR.message_types_by_name['UserdataAtom'] = _USERDATAATOM
 DESCRIPTOR.message_types_by_name['ASAtom'] = _ASATOM
 DESCRIPTOR.enum_types_by_name['DeltaType'] = _DELTATYPE
 DESCRIPTOR.enum_types_by_name['RegionalRegistrar'] = _REGIONALREGISTRAR
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 Metadatum = _reflection.GeneratedProtocolMessageType('Metadatum', (_message.Message,), dict(
   DESCRIPTOR = _METADATUM,

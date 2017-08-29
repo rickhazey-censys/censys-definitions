@@ -35,17 +35,35 @@ const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[2];
 
 }  // namespace
 
+PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTableField
+    const TableStruct::entries[] = {
+  {0, 0, 0, ::google::protobuf::internal::kInvalidMask, 0, 0},
+};
+
+PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::AuxillaryParseTableField
+    const TableStruct::aux[] = {
+  ::google::protobuf::internal::AuxillaryParseTableField(),
+};
+PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTable const
+    TableStruct::schema[] = {
+  { NULL, NULL, 0, -1, -1, false },
+  { NULL, NULL, 0, -1, -1, false },
+  { NULL, NULL, 0, -1, -1, false },
+};
+
 const ::google::protobuf::uint32 TableStruct::offsets[] = {
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Metadatum, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Metadatum, key_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Metadatum, value_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UserdataAtom, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UserdataAtom, private_notes_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UserdataAtom, public_notes_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(UserdataAtom, private_metadata_),
@@ -56,6 +74,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ASAtom, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ASAtom, asn_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ASAtom, description_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ASAtom, path_),
@@ -68,8 +87,8 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
 
 static const ::google::protobuf::internal::MigrationSchema schemas[] = {
   { 0, -1, sizeof(Metadatum)},
-  { 6, -1, sizeof(UserdataAtom)},
-  { 16, -1, sizeof(ASAtom)},
+  { 7, -1, sizeof(UserdataAtom)},
+  { 18, -1, sizeof(ASAtom)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -254,7 +273,7 @@ void Metadatum::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* Metadatum::descriptor() {
   protobuf_common_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_common_2eproto::file_level_metadata[0].descriptor;
+  return protobuf_common_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
 const Metadatum& Metadatum::default_instance() {
@@ -288,7 +307,8 @@ bool Metadatum::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // string key = 1;
       case 1: {
-        if (tag == 10u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(10u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_key()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -303,7 +323,8 @@ bool Metadatum::MergePartialFromCodedStream(
 
       // string value = 2;
       case 2: {
-        if (tag == 18u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_value()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -340,6 +361,9 @@ failure:
 void Metadatum::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:zsearch.Metadatum)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   // string key = 1;
   if (this->key().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -365,8 +389,10 @@ void Metadatum::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* Metadatum::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:zsearch.Metadatum)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   // string key = 1;
   if (this->key().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -437,6 +463,9 @@ void Metadatum::MergeFrom(const Metadatum& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:zsearch.Metadatum)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   if (from.key().size() > 0) {
 
     key_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.key_);
@@ -477,7 +506,7 @@ void Metadatum::InternalSwap(Metadatum* other) {
 
 ::google::protobuf::Metadata Metadatum::GetMetadata() const {
   protobuf_common_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_common_2eproto::file_level_metadata[0];
+  return protobuf_common_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -500,11 +529,12 @@ void Metadatum::set_key(const ::std::string& value) {
 void Metadatum::set_key(::std::string&& value) {
   
   key_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.Metadatum.key)
 }
 #endif
 void Metadatum::set_key(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   
   key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.Metadatum.key)
@@ -552,11 +582,12 @@ void Metadatum::set_value(const ::std::string& value) {
 void Metadatum::set_value(::std::string&& value) {
   
   value_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.Metadatum.value)
 }
 #endif
 void Metadatum::set_value(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   
   value_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.Metadatum.value)
@@ -651,7 +682,7 @@ void UserdataAtom::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* UserdataAtom::descriptor() {
   protobuf_common_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_common_2eproto::file_level_metadata[1].descriptor;
+  return protobuf_common_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
 const UserdataAtom& UserdataAtom::default_instance() {
@@ -689,7 +720,8 @@ bool UserdataAtom::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // string private_notes = 1;
       case 1: {
-        if (tag == 10u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(10u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_private_notes()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -704,7 +736,8 @@ bool UserdataAtom::MergePartialFromCodedStream(
 
       // string public_notes = 2;
       case 2: {
-        if (tag == 18u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_public_notes()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -719,33 +752,32 @@ bool UserdataAtom::MergePartialFromCodedStream(
 
       // repeated .zsearch.Metadatum private_metadata = 3;
       case 3: {
-        if (tag == 26u) {
-          DO_(input->IncrementRecursionDepth());
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtualNoRecursionDepth(
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(26u)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                 input, add_private_metadata()));
         } else {
           goto handle_unusual;
         }
-        input->UnsafeDecrementRecursionDepth();
         break;
       }
 
       // repeated .zsearch.Metadatum public_metadata = 4;
       case 4: {
-        if (tag == 34u) {
-          DO_(input->IncrementRecursionDepth());
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtualNoRecursionDepth(
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(34u)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                 input, add_public_metadata()));
         } else {
           goto handle_unusual;
         }
-        input->UnsafeDecrementRecursionDepth();
         break;
       }
 
       // repeated string private_tags = 5;
       case 5: {
-        if (tag == 42u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(42u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->add_private_tags()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -761,7 +793,8 @@ bool UserdataAtom::MergePartialFromCodedStream(
 
       // repeated string public_tags = 6;
       case 6: {
-        if (tag == 50u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(50u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->add_public_tags()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -799,6 +832,9 @@ failure:
 void UserdataAtom::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:zsearch.UserdataAtom)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   // string private_notes = 1;
   if (this->private_notes().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -832,7 +868,7 @@ void UserdataAtom::SerializeWithCachedSizes(
   }
 
   // repeated string private_tags = 5;
-  for (int i = 0; i < this->private_tags_size(); i++) {
+  for (int i = 0, n = this->private_tags_size(); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->private_tags(i).data(), this->private_tags(i).length(),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
@@ -842,7 +878,7 @@ void UserdataAtom::SerializeWithCachedSizes(
   }
 
   // repeated string public_tags = 6;
-  for (int i = 0; i < this->public_tags_size(); i++) {
+  for (int i = 0, n = this->public_tags_size(); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->public_tags(i).data(), this->public_tags(i).length(),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
@@ -856,8 +892,10 @@ void UserdataAtom::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* UserdataAtom::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:zsearch.UserdataAtom)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   // string private_notes = 1;
   if (this->private_notes().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -884,18 +922,18 @@ void UserdataAtom::SerializeWithCachedSizes(
   for (unsigned int i = 0, n = this->private_metadata_size(); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        3, this->private_metadata(i), false, target);
+        3, this->private_metadata(i), deterministic, target);
   }
 
   // repeated .zsearch.Metadatum public_metadata = 4;
   for (unsigned int i = 0, n = this->public_metadata_size(); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        4, this->public_metadata(i), false, target);
+        4, this->public_metadata(i), deterministic, target);
   }
 
   // repeated string private_tags = 5;
-  for (int i = 0; i < this->private_tags_size(); i++) {
+  for (int i = 0, n = this->private_tags_size(); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->private_tags(i).data(), this->private_tags(i).length(),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
@@ -905,7 +943,7 @@ void UserdataAtom::SerializeWithCachedSizes(
   }
 
   // repeated string public_tags = 6;
-  for (int i = 0; i < this->public_tags_size(); i++) {
+  for (int i = 0, n = this->public_tags_size(); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->public_tags(i).data(), this->public_tags(i).length(),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
@@ -947,7 +985,7 @@ size_t UserdataAtom::ByteSizeLong() const {
   // repeated string private_tags = 5;
   total_size += 1 *
       ::google::protobuf::internal::FromIntSize(this->private_tags_size());
-  for (int i = 0; i < this->private_tags_size(); i++) {
+  for (int i = 0, n = this->private_tags_size(); i < n; i++) {
     total_size += ::google::protobuf::internal::WireFormatLite::StringSize(
       this->private_tags(i));
   }
@@ -955,7 +993,7 @@ size_t UserdataAtom::ByteSizeLong() const {
   // repeated string public_tags = 6;
   total_size += 1 *
       ::google::protobuf::internal::FromIntSize(this->public_tags_size());
-  for (int i = 0; i < this->public_tags_size(); i++) {
+  for (int i = 0, n = this->public_tags_size(); i < n; i++) {
     total_size += ::google::protobuf::internal::WireFormatLite::StringSize(
       this->public_tags(i));
   }
@@ -1000,6 +1038,9 @@ void UserdataAtom::MergeFrom(const UserdataAtom& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:zsearch.UserdataAtom)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   private_metadata_.MergeFrom(from.private_metadata_);
   public_metadata_.MergeFrom(from.public_metadata_);
   private_tags_.MergeFrom(from.private_tags_);
@@ -1037,10 +1078,10 @@ void UserdataAtom::Swap(UserdataAtom* other) {
   InternalSwap(other);
 }
 void UserdataAtom::InternalSwap(UserdataAtom* other) {
-  private_metadata_.UnsafeArenaSwap(&other->private_metadata_);
-  public_metadata_.UnsafeArenaSwap(&other->public_metadata_);
-  private_tags_.UnsafeArenaSwap(&other->private_tags_);
-  public_tags_.UnsafeArenaSwap(&other->public_tags_);
+  private_metadata_.InternalSwap(&other->private_metadata_);
+  public_metadata_.InternalSwap(&other->public_metadata_);
+  private_tags_.InternalSwap(&other->private_tags_);
+  public_tags_.InternalSwap(&other->public_tags_);
   private_notes_.Swap(&other->private_notes_);
   public_notes_.Swap(&other->public_notes_);
   std::swap(_cached_size_, other->_cached_size_);
@@ -1048,7 +1089,7 @@ void UserdataAtom::InternalSwap(UserdataAtom* other) {
 
 ::google::protobuf::Metadata UserdataAtom::GetMetadata() const {
   protobuf_common_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_common_2eproto::file_level_metadata[1];
+  return protobuf_common_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -1071,11 +1112,12 @@ void UserdataAtom::set_private_notes(const ::std::string& value) {
 void UserdataAtom::set_private_notes(::std::string&& value) {
   
   private_notes_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.UserdataAtom.private_notes)
 }
 #endif
 void UserdataAtom::set_private_notes(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   
   private_notes_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.UserdataAtom.private_notes)
@@ -1123,11 +1165,12 @@ void UserdataAtom::set_public_notes(const ::std::string& value) {
 void UserdataAtom::set_public_notes(::std::string&& value) {
   
   public_notes_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.UserdataAtom.public_notes)
 }
 #endif
 void UserdataAtom::set_public_notes(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   
   public_notes_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.UserdataAtom.public_notes)
@@ -1237,7 +1280,14 @@ void UserdataAtom::set_private_tags(int index, const ::std::string& value) {
   // @@protoc_insertion_point(field_set:zsearch.UserdataAtom.private_tags)
   private_tags_.Mutable(index)->assign(value);
 }
+#if LANG_CXX11
+void UserdataAtom::set_private_tags(int index, ::std::string&& value) {
+  // @@protoc_insertion_point(field_set:zsearch.UserdataAtom.private_tags)
+  private_tags_.Mutable(index)->assign(std::move(value));
+}
+#endif
 void UserdataAtom::set_private_tags(int index, const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   private_tags_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:zsearch.UserdataAtom.private_tags)
 }
@@ -1254,7 +1304,14 @@ void UserdataAtom::add_private_tags(const ::std::string& value) {
   private_tags_.Add()->assign(value);
   // @@protoc_insertion_point(field_add:zsearch.UserdataAtom.private_tags)
 }
+#if LANG_CXX11
+void UserdataAtom::add_private_tags(::std::string&& value) {
+  private_tags_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:zsearch.UserdataAtom.private_tags)
+}
+#endif
 void UserdataAtom::add_private_tags(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   private_tags_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:zsearch.UserdataAtom.private_tags)
 }
@@ -1292,7 +1349,14 @@ void UserdataAtom::set_public_tags(int index, const ::std::string& value) {
   // @@protoc_insertion_point(field_set:zsearch.UserdataAtom.public_tags)
   public_tags_.Mutable(index)->assign(value);
 }
+#if LANG_CXX11
+void UserdataAtom::set_public_tags(int index, ::std::string&& value) {
+  // @@protoc_insertion_point(field_set:zsearch.UserdataAtom.public_tags)
+  public_tags_.Mutable(index)->assign(std::move(value));
+}
+#endif
 void UserdataAtom::set_public_tags(int index, const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   public_tags_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:zsearch.UserdataAtom.public_tags)
 }
@@ -1309,7 +1373,14 @@ void UserdataAtom::add_public_tags(const ::std::string& value) {
   public_tags_.Add()->assign(value);
   // @@protoc_insertion_point(field_add:zsearch.UserdataAtom.public_tags)
 }
+#if LANG_CXX11
+void UserdataAtom::add_public_tags(::std::string&& value) {
+  public_tags_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:zsearch.UserdataAtom.public_tags)
+}
+#endif
 void UserdataAtom::add_public_tags(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   public_tags_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:zsearch.UserdataAtom.public_tags)
 }
@@ -1414,7 +1485,7 @@ void ASAtom::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* ASAtom::descriptor() {
   protobuf_common_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_common_2eproto::file_level_metadata[2].descriptor;
+  return protobuf_common_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
 const ASAtom& ASAtom::default_instance() {
@@ -1454,7 +1525,8 @@ bool ASAtom::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // uint32 asn = 1;
       case 1: {
-        if (tag == 8u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -1467,7 +1539,8 @@ bool ASAtom::MergePartialFromCodedStream(
 
       // string description = 2;
       case 2: {
-        if (tag == 18u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_description()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -1482,11 +1555,13 @@ bool ASAtom::MergePartialFromCodedStream(
 
       // repeated uint32 path = 3 [packed = true];
       case 3: {
-        if (tag == 26u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(26u)) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadPackedPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
                  input, this->mutable_path())));
-        } else if (tag == 24u) {
+        } else if (static_cast< ::google::protobuf::uint8>(tag) ==
+                   static_cast< ::google::protobuf::uint8>(24u)) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadRepeatedPrimitiveNoInline<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
                  1, 26u, input, this->mutable_path())));
@@ -1498,7 +1573,8 @@ bool ASAtom::MergePartialFromCodedStream(
 
       // .zsearch.RegionalRegistrar rir = 4;
       case 4: {
-        if (tag == 32u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(32u)) {
           int value;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
@@ -1512,7 +1588,8 @@ bool ASAtom::MergePartialFromCodedStream(
 
       // string bgp_prefix = 5;
       case 5: {
-        if (tag == 42u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(42u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_bgp_prefix()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -1527,7 +1604,8 @@ bool ASAtom::MergePartialFromCodedStream(
 
       // string name = 6;
       case 6: {
-        if (tag == 50u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(50u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_name()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -1542,7 +1620,8 @@ bool ASAtom::MergePartialFromCodedStream(
 
       // string country_code = 7;
       case 7: {
-        if (tag == 58u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(58u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_country_code()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -1557,7 +1636,8 @@ bool ASAtom::MergePartialFromCodedStream(
 
       // string organization = 8;
       case 8: {
-        if (tag == 66u) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(66u)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_organization()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -1594,6 +1674,9 @@ failure:
 void ASAtom::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:zsearch.ASAtom)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   // uint32 asn = 1;
   if (this->asn() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->asn(), output);
@@ -1614,7 +1697,7 @@ void ASAtom::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteTag(3, ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED, output);
     output->WriteVarint32(_path_cached_byte_size_);
   }
-  for (int i = 0; i < this->path_size(); i++) {
+  for (int i = 0, n = this->path_size(); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32NoTag(
       this->path(i), output);
   }
@@ -1670,8 +1753,10 @@ void ASAtom::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* ASAtom::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:zsearch.ASAtom)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   // uint32 asn = 1;
   if (this->asn() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->asn(), target);
@@ -1696,10 +1781,8 @@ void ASAtom::SerializeWithCachedSizes(
       target);
     target = ::google::protobuf::io::CodedOutputStream::WriteVarint32ToArray(
       _path_cached_byte_size_, target);
-  }
-  for (int i = 0; i < this->path_size(); i++) {
     target = ::google::protobuf::internal::WireFormatLite::
-      WriteUInt32NoTagToArray(this->path(i), target);
+      WriteUInt32NoTagToArray(this->path_, target);
   }
 
   // .zsearch.RegionalRegistrar rir = 4;
@@ -1849,6 +1932,9 @@ void ASAtom::MergeFrom(const ASAtom& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:zsearch.ASAtom)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   path_.MergeFrom(from.path_);
   if (from.description().size() > 0) {
 
@@ -1901,7 +1987,7 @@ void ASAtom::Swap(ASAtom* other) {
   InternalSwap(other);
 }
 void ASAtom::InternalSwap(ASAtom* other) {
-  path_.UnsafeArenaSwap(&other->path_);
+  path_.InternalSwap(&other->path_);
   description_.Swap(&other->description_);
   bgp_prefix_.Swap(&other->bgp_prefix_);
   name_.Swap(&other->name_);
@@ -1914,7 +2000,7 @@ void ASAtom::InternalSwap(ASAtom* other) {
 
 ::google::protobuf::Metadata ASAtom::GetMetadata() const {
   protobuf_common_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_common_2eproto::file_level_metadata[2];
+  return protobuf_common_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -1951,11 +2037,12 @@ void ASAtom::set_description(const ::std::string& value) {
 void ASAtom::set_description(::std::string&& value) {
   
   description_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.ASAtom.description)
 }
 #endif
 void ASAtom::set_description(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   
   description_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.ASAtom.description)
@@ -2047,11 +2134,12 @@ void ASAtom::set_bgp_prefix(const ::std::string& value) {
 void ASAtom::set_bgp_prefix(::std::string&& value) {
   
   bgp_prefix_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.ASAtom.bgp_prefix)
 }
 #endif
 void ASAtom::set_bgp_prefix(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   
   bgp_prefix_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.ASAtom.bgp_prefix)
@@ -2099,11 +2187,12 @@ void ASAtom::set_name(const ::std::string& value) {
 void ASAtom::set_name(::std::string&& value) {
   
   name_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.ASAtom.name)
 }
 #endif
 void ASAtom::set_name(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   
   name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.ASAtom.name)
@@ -2151,11 +2240,12 @@ void ASAtom::set_country_code(const ::std::string& value) {
 void ASAtom::set_country_code(::std::string&& value) {
   
   country_code_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.ASAtom.country_code)
 }
 #endif
 void ASAtom::set_country_code(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   
   country_code_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.ASAtom.country_code)
@@ -2203,11 +2293,12 @@ void ASAtom::set_organization(const ::std::string& value) {
 void ASAtom::set_organization(::std::string&& value) {
   
   organization_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.ASAtom.organization)
 }
 #endif
 void ASAtom::set_organization(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   
   organization_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.ASAtom.organization)
