@@ -43,38 +43,16 @@ const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[4];
 
 }  // namespace
 
-PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTableField
-    const TableStruct::entries[] = {
-  {0, 0, 0, ::google::protobuf::internal::kInvalidMask, 0, 0},
-};
-
-PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::AuxillaryParseTableField
-    const TableStruct::aux[] = {
-  ::google::protobuf::internal::AuxillaryParseTableField(),
-};
-PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTable const
-    TableStruct::schema[] = {
-  { NULL, NULL, 0, -1, -1, false },
-  { NULL, NULL, 0, -1, -1, false },
-  { NULL, NULL, 0, -1, -1, false },
-  { NULL, NULL, 0, -1, -1, false },
-  { NULL, NULL, 0, -1, -1, false },
-  { NULL, NULL, 0, -1, -1, false },
-  { NULL, NULL, 0, -1, -1, false },
-};
-
 const ::google::protobuf::uint32 TableStruct::offsets[] = {
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Path, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Path, sha256fp_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RootStoreStatus, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RootStoreStatus, valid_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RootStoreStatus, was_valid_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(RootStoreStatus, trusted_path_),
@@ -89,7 +67,6 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CertificateValidation, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CertificateValidation, nss_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CertificateValidation, microsoft_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CertificateValidation, apple_),
@@ -100,7 +77,6 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MozillaSalesForceStatus, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MozillaSalesForceStatus, current_in_intermediates_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MozillaSalesForceStatus, was_in_intermediates_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MozillaSalesForceStatus, owner_name_),
@@ -132,20 +108,17 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CertificateRevocation, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CertificateRevocation, revoked_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CertificateRevocation, reason_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CertificateAudit, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CertificateAudit, mozilla_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Certificate, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Certificate, sha1fp_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Certificate, sha256fp_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Certificate, raw_),
@@ -155,6 +128,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Certificate, parse_error_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Certificate, parents_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Certificate, presented_chain_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Certificate, parent_spki_subject_fp_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Certificate, source_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Certificate, seen_in_scan_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Certificate, post_processed_),
@@ -195,12 +169,12 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
 
 static const ::google::protobuf::internal::MigrationSchema schemas[] = {
   { 0, -1, sizeof(Path)},
-  { 6, -1, sizeof(RootStoreStatus)},
-  { 21, -1, sizeof(CertificateValidation)},
-  { 32, -1, sizeof(MozillaSalesForceStatus)},
-  { 64, -1, sizeof(CertificateRevocation)},
-  { 71, -1, sizeof(CertificateAudit)},
-  { 77, -1, sizeof(Certificate)},
+  { 5, -1, sizeof(RootStoreStatus)},
+  { 19, -1, sizeof(CertificateValidation)},
+  { 29, -1, sizeof(MozillaSalesForceStatus)},
+  { 60, -1, sizeof(CertificateRevocation)},
+  { 66, -1, sizeof(CertificateAudit)},
+  { 71, -1, sizeof(Certificate)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -344,76 +318,77 @@ void AddDescriptorsImpl() {
       "revoked\030\001 \001(\010\0224\n\006reason\030\002 \001(\0162$.zsearch."
       "CertificateRevocationReason\"E\n\020Certifica"
       "teAudit\0221\n\007mozilla\030\001 \001(\0132 .zsearch.Mozil"
-      "laSalesForceStatus\"\240\n\n\013Certificate\022\016\n\006sh"
+      "laSalesForceStatus\"\300\n\n\013Certificate\022\016\n\006sh"
       "a1fp\030\001 \001(\014\022\020\n\010sha256fp\030\002 \001(\014\022\013\n\003raw\030\003 \001("
       "\014\022\016\n\006parsed\030\004 \001(\t\0225\n\014parse_status\030, \001(\0162"
       "\037.zsearch.CertificateParseStatus\022\025\n\rpars"
       "e_version\030\' \001(\r\022\023\n\013parse_error\030/ \001(\t\022\017\n\007"
-      "parents\030\005 \003(\014\022\027\n\017presented_chain\030- \003(\014\022*"
-      "\n\006source\030\034 \001(\0162\032.zsearch.CertificateSour"
-      "ce\022\024\n\014seen_in_scan\030\035 \001(\010\022\026\n\016post_process"
-      "ed\030\032 \001(\010\022\036\n\026post_process_timestamp\030% \001(\r"
-      "\0222\n\nvalidation\030# \001(\0132\036.zsearch.Certifica"
-      "teValidation\022\035\n\002ct\030\036 \001(\0132\021.zsearch.CTSta"
-      "tus\022\035\n\005zlint\030& \001(\0132\016.zsearch.ZLint\022\037\n\003ca"
-      "a\0301 \001(\0132\022.zsearch.CAALookup\0222\n\nrevocatio"
-      "n\030+ \001(\0132\036.zsearch.CertificateRevocation\022"
-      "(\n\005audit\030. \001(\0132\031.zsearch.CertificateAudi"
-      "t\022\022\n\nis_precert\030  \001(\010\022\027\n\017not_valid_after"
-      "\030) \001(\r\022\030\n\020not_valid_before\030* \001(\r\022\017\n\007expi"
-      "red\0300 \001(\010\022\016\n\006in_nss\030\006 \001(\010\022\030\n\014in_microsof"
-      "t\030\007 \001(\010B\002\030\001\022\024\n\010in_apple\030\010 \001(\010B\002\030\001\022\034\n\024val"
-      "idation_timestamp\030\n \001(\r\022\025\n\tvalid_nss\030\013 \001"
-      "(\010B\002\030\001\022\033\n\017valid_microsoft\030\014 \001(\010B\002\030\001\022\027\n\013v"
-      "alid_apple\030\r \001(\010B\002\030\001\022\025\n\rwas_valid_nss\030\016 "
-      "\001(\010\022\037\n\023was_valid_microsoft\030\017 \001(\010B\002\030\001\022\033\n\017"
-      "was_valid_apple\030\020 \001(\010B\002\030\001\022\026\n\nwas_in_nss\030"
-      "\021 \001(\010B\002\030\001\022\034\n\020was_in_microsoft\030\022 \001(\010B\002\030\001\022"
-      "\030\n\014was_in_apple\030\023 \001(\010B\002\030\001\022\031\n\021current_val"
-      "id_nss\030\024 \001(\010\022#\n\027current_valid_microsoft\030"
-      "\025 \001(\010B\002\030\001\022\037\n\023current_valid_apple\030\026 \001(\010B\002"
-      "\030\001\022\026\n\016current_in_nss\030\027 \001(\010\022 \n\024current_in"
-      "_microsoft\030\030 \001(\010B\002\030\001\022\034\n\020current_in_apple"
-      "\030\031 \001(\010B\002\030\001\0227\n\tnss_audit\030\037 \001(\0132 .zsearch."
-      "MozillaSalesForceStatusB\002\030\001\022\037\n\023should_po"
-      "st_process\030\033 \001(\010B\002\030\001\022\037\n\023do_not_post_proc"
-      "ess\030$ \001(\010B\002\030\001*\247\001\n\017CertificateType\022\035\n\031CER"
-      "TIFICATE_TYPE_RESERVED\020\000\022\034\n\030CERTIFICATE_"
-      "TYPE_UNKNOWN\020\001\022\031\n\025CERTIFICATE_TYPE_LEAF\020"
-      "\002\022!\n\035CERTIFICATE_TYPE_INTERMEDIATE\020\003\022\031\n\025"
-      "CERTIFICATE_TYPE_ROOT\020\004*\267\002\n\021CertificateS"
-      "ource\022\037\n\033CERTIFICATE_SOURCE_RESERVED\020\000\022\036"
-      "\n\032CERTIFICATE_SOURCE_UNKNOWN\020\001\022\033\n\027CERTIF"
-      "ICATE_SOURCE_SCAN\020\002\022\031\n\025CERTIFICATE_SOURC"
-      "E_CT\020\003\022)\n%CERTIFICATE_SOURCE_MOZILLA_SAL"
-      "ESFORCE\020\004\022\037\n\033CERTIFICATE_SOURCE_RESEARCH"
-      "\020\005\022\035\n\031CERTIFICATE_SOURCE_RAPID7\020\006\022\035\n\031CER"
-      "TIFICATE_SOURCE_HUBBLE\020\007\022\037\n\033CERTIFICATE_"
-      "SOURCE_CT_CHAIN\020\010*\327\001\n\026CertificateParseSt"
-      "atus\022%\n!CERTIFICATE_PARSE_STATUS_RESERVE"
-      "D\020\000\022$\n CERTIFICATE_PARSE_STATUS_UNKNOWN\020"
-      "\001\022$\n CERTIFICATE_PARSE_STATUS_SUCCESS\020\002\022"
-      "!\n\035CERTIFICATE_PARSE_STATUS_FAIL\020\003\022\'\n#CE"
-      "RTIFICATE_PARSE_STATUS_NOT_PARSED\020\004*\364\004\n\033"
-      "CertificateRevocationReason\022*\n&CERTIFICA"
-      "TE_REVOCATION_REASON_RESERVED\020\000\022)\n%CERTI"
-      "FICATE_REVOCATION_REASON_UNKNOWN\020\001\022-\n)CE"
-      "RTIFICATE_REVOCATION_REASON_UNSPECIFIED\020"
-      "\002\0220\n,CERTIFICATE_REVOCATION_REASON_KEY_C"
-      "OMPROMISE\020\003\022/\n+CERTIFICATE_REVOCATION_RE"
-      "ASON_CA_COMPROMISE\020\004\0225\n1CERTIFICATE_REVO"
-      "CATION_REASON_AFFILIATION_CHANGED\020\005\022,\n(C"
-      "ERTIFICATE_REVOCATION_REASON_SUPERSEDED\020"
-      "\006\0228\n4CERTIFICATE_REVOCATION_REASON_CESSA"
-      "TION_OF_OPERATION\020\007\0222\n.CERTIFICATE_REVOC"
-      "ATION_REASON_CERTIFICATE_HOLD\020\010\0221\n-CERTI"
-      "FICATE_REVOCATION_REASON_REMOVE_FROM_CRL"
-      "\020\t\0225\n1CERTIFICATE_REVOCATION_REASON_PRIV"
-      "ILEGE_WITHDRAWN\020\n\022/\n+CERTIFICATE_REVOCAT"
-      "ION_REASON_AA_COMPROMISE\020\013b\006proto3"
+      "parents\030\005 \003(\014\022\027\n\017presented_chain\030- \003(\014\022\036"
+      "\n\026parent_spki_subject_fp\0302 \001(\014\022*\n\006source"
+      "\030\034 \001(\0162\032.zsearch.CertificateSource\022\024\n\014se"
+      "en_in_scan\030\035 \001(\010\022\026\n\016post_processed\030\032 \001(\010"
+      "\022\036\n\026post_process_timestamp\030% \001(\r\0222\n\nvali"
+      "dation\030# \001(\0132\036.zsearch.CertificateValida"
+      "tion\022\035\n\002ct\030\036 \001(\0132\021.zsearch.CTStatus\022\035\n\005z"
+      "lint\030& \001(\0132\016.zsearch.ZLint\022\037\n\003caa\0301 \001(\0132"
+      "\022.zsearch.CAALookup\0222\n\nrevocation\030+ \001(\0132"
+      "\036.zsearch.CertificateRevocation\022(\n\005audit"
+      "\030. \001(\0132\031.zsearch.CertificateAudit\022\022\n\nis_"
+      "precert\030  \001(\010\022\027\n\017not_valid_after\030) \001(\r\022\030"
+      "\n\020not_valid_before\030* \001(\r\022\017\n\007expired\0300 \001("
+      "\010\022\016\n\006in_nss\030\006 \001(\010\022\030\n\014in_microsoft\030\007 \001(\010B"
+      "\002\030\001\022\024\n\010in_apple\030\010 \001(\010B\002\030\001\022\034\n\024validation_"
+      "timestamp\030\n \001(\r\022\025\n\tvalid_nss\030\013 \001(\010B\002\030\001\022\033"
+      "\n\017valid_microsoft\030\014 \001(\010B\002\030\001\022\027\n\013valid_app"
+      "le\030\r \001(\010B\002\030\001\022\025\n\rwas_valid_nss\030\016 \001(\010\022\037\n\023w"
+      "as_valid_microsoft\030\017 \001(\010B\002\030\001\022\033\n\017was_vali"
+      "d_apple\030\020 \001(\010B\002\030\001\022\026\n\nwas_in_nss\030\021 \001(\010B\002\030"
+      "\001\022\034\n\020was_in_microsoft\030\022 \001(\010B\002\030\001\022\030\n\014was_i"
+      "n_apple\030\023 \001(\010B\002\030\001\022\031\n\021current_valid_nss\030\024"
+      " \001(\010\022#\n\027current_valid_microsoft\030\025 \001(\010B\002\030"
+      "\001\022\037\n\023current_valid_apple\030\026 \001(\010B\002\030\001\022\026\n\016cu"
+      "rrent_in_nss\030\027 \001(\010\022 \n\024current_in_microso"
+      "ft\030\030 \001(\010B\002\030\001\022\034\n\020current_in_apple\030\031 \001(\010B\002"
+      "\030\001\0227\n\tnss_audit\030\037 \001(\0132 .zsearch.MozillaS"
+      "alesForceStatusB\002\030\001\022\037\n\023should_post_proce"
+      "ss\030\033 \001(\010B\002\030\001\022\037\n\023do_not_post_process\030$ \001("
+      "\010B\002\030\001*\247\001\n\017CertificateType\022\035\n\031CERTIFICATE"
+      "_TYPE_RESERVED\020\000\022\034\n\030CERTIFICATE_TYPE_UNK"
+      "NOWN\020\001\022\031\n\025CERTIFICATE_TYPE_LEAF\020\002\022!\n\035CER"
+      "TIFICATE_TYPE_INTERMEDIATE\020\003\022\031\n\025CERTIFIC"
+      "ATE_TYPE_ROOT\020\004*\267\002\n\021CertificateSource\022\037\n"
+      "\033CERTIFICATE_SOURCE_RESERVED\020\000\022\036\n\032CERTIF"
+      "ICATE_SOURCE_UNKNOWN\020\001\022\033\n\027CERTIFICATE_SO"
+      "URCE_SCAN\020\002\022\031\n\025CERTIFICATE_SOURCE_CT\020\003\022)"
+      "\n%CERTIFICATE_SOURCE_MOZILLA_SALESFORCE\020"
+      "\004\022\037\n\033CERTIFICATE_SOURCE_RESEARCH\020\005\022\035\n\031CE"
+      "RTIFICATE_SOURCE_RAPID7\020\006\022\035\n\031CERTIFICATE"
+      "_SOURCE_HUBBLE\020\007\022\037\n\033CERTIFICATE_SOURCE_C"
+      "T_CHAIN\020\010*\327\001\n\026CertificateParseStatus\022%\n!"
+      "CERTIFICATE_PARSE_STATUS_RESERVED\020\000\022$\n C"
+      "ERTIFICATE_PARSE_STATUS_UNKNOWN\020\001\022$\n CER"
+      "TIFICATE_PARSE_STATUS_SUCCESS\020\002\022!\n\035CERTI"
+      "FICATE_PARSE_STATUS_FAIL\020\003\022\'\n#CERTIFICAT"
+      "E_PARSE_STATUS_NOT_PARSED\020\004*\364\004\n\033Certific"
+      "ateRevocationReason\022*\n&CERTIFICATE_REVOC"
+      "ATION_REASON_RESERVED\020\000\022)\n%CERTIFICATE_R"
+      "EVOCATION_REASON_UNKNOWN\020\001\022-\n)CERTIFICAT"
+      "E_REVOCATION_REASON_UNSPECIFIED\020\002\0220\n,CER"
+      "TIFICATE_REVOCATION_REASON_KEY_COMPROMIS"
+      "E\020\003\022/\n+CERTIFICATE_REVOCATION_REASON_CA_"
+      "COMPROMISE\020\004\0225\n1CERTIFICATE_REVOCATION_R"
+      "EASON_AFFILIATION_CHANGED\020\005\022,\n(CERTIFICA"
+      "TE_REVOCATION_REASON_SUPERSEDED\020\006\0228\n4CER"
+      "TIFICATE_REVOCATION_REASON_CESSATION_OF_"
+      "OPERATION\020\007\0222\n.CERTIFICATE_REVOCATION_RE"
+      "ASON_CERTIFICATE_HOLD\020\010\0221\n-CERTIFICATE_R"
+      "EVOCATION_REASON_REMOVE_FROM_CRL\020\t\0225\n1CE"
+      "RTIFICATE_REVOCATION_REASON_PRIVILEGE_WI"
+      "THDRAWN\020\n\022/\n+CERTIFICATE_REVOCATION_REAS"
+      "ON_AA_COMPROMISE\020\013b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 4234);
+      descriptor, 4266);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "certificate.proto", &protobuf_RegisterTypes);
   ::zsearch::protobuf_common_2eproto::AddDescriptors();
@@ -558,7 +533,7 @@ void Path::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* Path::descriptor() {
   protobuf_certificate_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_certificate_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+  return protobuf_certificate_2eproto::file_level_metadata[0].descriptor;
 }
 
 const Path& Path::default_instance() {
@@ -591,8 +566,7 @@ bool Path::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // repeated bytes sha256fp = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u)) {
+        if (tag == 10u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
                 input, this->add_sha256fp()));
         } else {
@@ -625,11 +599,8 @@ failure:
 void Path::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:zsearch.Path)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
   // repeated bytes sha256fp = 1;
-  for (int i = 0, n = this->sha256fp_size(); i < n; i++) {
+  for (int i = 0; i < this->sha256fp_size(); i++) {
     ::google::protobuf::internal::WireFormatLite::WriteBytes(
       1, this->sha256fp(i), output);
   }
@@ -639,12 +610,10 @@ void Path::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* Path::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:zsearch.Path)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
   // repeated bytes sha256fp = 1;
-  for (int i = 0, n = this->sha256fp_size(); i < n; i++) {
+  for (int i = 0; i < this->sha256fp_size(); i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteBytesToArray(1, this->sha256fp(i), target);
   }
@@ -660,7 +629,7 @@ size_t Path::ByteSizeLong() const {
   // repeated bytes sha256fp = 1;
   total_size += 1 *
       ::google::protobuf::internal::FromIntSize(this->sha256fp_size());
-  for (int i = 0, n = this->sha256fp_size(); i < n; i++) {
+  for (int i = 0; i < this->sha256fp_size(); i++) {
     total_size += ::google::protobuf::internal::WireFormatLite::BytesSize(
       this->sha256fp(i));
   }
@@ -691,9 +660,6 @@ void Path::MergeFrom(const Path& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:zsearch.Path)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
   sha256fp_.MergeFrom(from.sha256fp_);
 }
 
@@ -720,13 +686,13 @@ void Path::Swap(Path* other) {
   InternalSwap(other);
 }
 void Path::InternalSwap(Path* other) {
-  sha256fp_.InternalSwap(&other->sha256fp_);
+  sha256fp_.UnsafeArenaSwap(&other->sha256fp_);
   std::swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata Path::GetMetadata() const {
   protobuf_certificate_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_certificate_2eproto::file_level_metadata[kIndexInFileMessages];
+  return protobuf_certificate_2eproto::file_level_metadata[0];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -751,14 +717,7 @@ void Path::set_sha256fp(int index, const ::std::string& value) {
   // @@protoc_insertion_point(field_set:zsearch.Path.sha256fp)
   sha256fp_.Mutable(index)->assign(value);
 }
-#if LANG_CXX11
-void Path::set_sha256fp(int index, ::std::string&& value) {
-  // @@protoc_insertion_point(field_set:zsearch.Path.sha256fp)
-  sha256fp_.Mutable(index)->assign(std::move(value));
-}
-#endif
 void Path::set_sha256fp(int index, const char* value) {
-  GOOGLE_DCHECK(value != NULL);
   sha256fp_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:zsearch.Path.sha256fp)
 }
@@ -775,14 +734,7 @@ void Path::add_sha256fp(const ::std::string& value) {
   sha256fp_.Add()->assign(value);
   // @@protoc_insertion_point(field_add:zsearch.Path.sha256fp)
 }
-#if LANG_CXX11
-void Path::add_sha256fp(::std::string&& value) {
-  sha256fp_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:zsearch.Path.sha256fp)
-}
-#endif
 void Path::add_sha256fp(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
   sha256fp_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:zsearch.Path.sha256fp)
 }
@@ -860,7 +812,7 @@ void RootStoreStatus::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* RootStoreStatus::descriptor() {
   protobuf_certificate_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_certificate_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+  return protobuf_certificate_2eproto::file_level_metadata[1].descriptor;
 }
 
 const RootStoreStatus& RootStoreStatus::default_instance() {
@@ -896,8 +848,7 @@ bool RootStoreStatus::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // bool valid = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(8u)) {
+        if (tag == 8u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -910,8 +861,7 @@ bool RootStoreStatus::MergePartialFromCodedStream(
 
       // bool was_valid = 2;
       case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(16u)) {
+        if (tag == 16u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -924,8 +874,7 @@ bool RootStoreStatus::MergePartialFromCodedStream(
 
       // bool trusted_path = 3;
       case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(24u)) {
+        if (tag == 24u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -938,8 +887,7 @@ bool RootStoreStatus::MergePartialFromCodedStream(
 
       // bool had_trusted_path = 4;
       case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(32u)) {
+        if (tag == 32u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -952,8 +900,7 @@ bool RootStoreStatus::MergePartialFromCodedStream(
 
       // bool blacklisted = 5;
       case 5: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(40u)) {
+        if (tag == 40u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -966,8 +913,7 @@ bool RootStoreStatus::MergePartialFromCodedStream(
 
       // bool whitelisted = 6;
       case 6: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(48u)) {
+        if (tag == 48u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -980,8 +926,7 @@ bool RootStoreStatus::MergePartialFromCodedStream(
 
       // .zsearch.CertificateType type = 7;
       case 7: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(56u)) {
+        if (tag == 56u) {
           int value;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
@@ -995,20 +940,20 @@ bool RootStoreStatus::MergePartialFromCodedStream(
 
       // repeated .zsearch.Path trusted_paths = 8;
       case 8: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(66u)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+        if (tag == 66u) {
+          DO_(input->IncrementRecursionDepth());
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtualNoRecursionDepth(
                 input, add_trusted_paths()));
         } else {
           goto handle_unusual;
         }
+        input->UnsafeDecrementRecursionDepth();
         break;
       }
 
       // bool in_revocation_set = 9;
       case 9: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(72u)) {
+        if (tag == 72u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -1021,8 +966,7 @@ bool RootStoreStatus::MergePartialFromCodedStream(
 
       // repeated bytes parents = 10;
       case 10: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(82u)) {
+        if (tag == 82u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
                 input, this->add_parents()));
         } else {
@@ -1055,9 +999,6 @@ failure:
 void RootStoreStatus::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:zsearch.RootStoreStatus)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
   // bool valid = 1;
   if (this->valid() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteBool(1, this->valid(), output);
@@ -1106,7 +1047,7 @@ void RootStoreStatus::SerializeWithCachedSizes(
   }
 
   // repeated bytes parents = 10;
-  for (int i = 0, n = this->parents_size(); i < n; i++) {
+  for (int i = 0; i < this->parents_size(); i++) {
     ::google::protobuf::internal::WireFormatLite::WriteBytes(
       10, this->parents(i), output);
   }
@@ -1116,10 +1057,8 @@ void RootStoreStatus::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* RootStoreStatus::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:zsearch.RootStoreStatus)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
   // bool valid = 1;
   if (this->valid() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(1, this->valid(), target);
@@ -1160,7 +1099,7 @@ void RootStoreStatus::SerializeWithCachedSizes(
   for (unsigned int i = 0, n = this->trusted_paths_size(); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        8, this->trusted_paths(i), deterministic, target);
+        8, this->trusted_paths(i), false, target);
   }
 
   // bool in_revocation_set = 9;
@@ -1169,7 +1108,7 @@ void RootStoreStatus::SerializeWithCachedSizes(
   }
 
   // repeated bytes parents = 10;
-  for (int i = 0, n = this->parents_size(); i < n; i++) {
+  for (int i = 0; i < this->parents_size(); i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteBytesToArray(10, this->parents(i), target);
   }
@@ -1196,7 +1135,7 @@ size_t RootStoreStatus::ByteSizeLong() const {
   // repeated bytes parents = 10;
   total_size += 1 *
       ::google::protobuf::internal::FromIntSize(this->parents_size());
-  for (int i = 0, n = this->parents_size(); i < n; i++) {
+  for (int i = 0; i < this->parents_size(); i++) {
     total_size += ::google::protobuf::internal::WireFormatLite::BytesSize(
       this->parents(i));
   }
@@ -1268,9 +1207,6 @@ void RootStoreStatus::MergeFrom(const RootStoreStatus& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:zsearch.RootStoreStatus)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
   trusted_paths_.MergeFrom(from.trusted_paths_);
   parents_.MergeFrom(from.parents_);
   if (from.valid() != 0) {
@@ -1322,8 +1258,8 @@ void RootStoreStatus::Swap(RootStoreStatus* other) {
   InternalSwap(other);
 }
 void RootStoreStatus::InternalSwap(RootStoreStatus* other) {
-  trusted_paths_.InternalSwap(&other->trusted_paths_);
-  parents_.InternalSwap(&other->parents_);
+  trusted_paths_.UnsafeArenaSwap(&other->trusted_paths_);
+  parents_.UnsafeArenaSwap(&other->parents_);
   std::swap(valid_, other->valid_);
   std::swap(was_valid_, other->was_valid_);
   std::swap(trusted_path_, other->trusted_path_);
@@ -1337,7 +1273,7 @@ void RootStoreStatus::InternalSwap(RootStoreStatus* other) {
 
 ::google::protobuf::Metadata RootStoreStatus::GetMetadata() const {
   protobuf_certificate_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_certificate_2eproto::file_level_metadata[kIndexInFileMessages];
+  return protobuf_certificate_2eproto::file_level_metadata[1];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -1504,14 +1440,7 @@ void RootStoreStatus::set_parents(int index, const ::std::string& value) {
   // @@protoc_insertion_point(field_set:zsearch.RootStoreStatus.parents)
   parents_.Mutable(index)->assign(value);
 }
-#if LANG_CXX11
-void RootStoreStatus::set_parents(int index, ::std::string&& value) {
-  // @@protoc_insertion_point(field_set:zsearch.RootStoreStatus.parents)
-  parents_.Mutable(index)->assign(std::move(value));
-}
-#endif
 void RootStoreStatus::set_parents(int index, const char* value) {
-  GOOGLE_DCHECK(value != NULL);
   parents_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:zsearch.RootStoreStatus.parents)
 }
@@ -1528,14 +1457,7 @@ void RootStoreStatus::add_parents(const ::std::string& value) {
   parents_.Add()->assign(value);
   // @@protoc_insertion_point(field_add:zsearch.RootStoreStatus.parents)
 }
-#if LANG_CXX11
-void RootStoreStatus::add_parents(::std::string&& value) {
-  parents_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:zsearch.RootStoreStatus.parents)
-}
-#endif
 void RootStoreStatus::add_parents(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
   parents_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:zsearch.RootStoreStatus.parents)
 }
@@ -1652,7 +1574,7 @@ void CertificateValidation::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* CertificateValidation::descriptor() {
   protobuf_certificate_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_certificate_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+  return protobuf_certificate_2eproto::file_level_metadata[2].descriptor;
 }
 
 const CertificateValidation& CertificateValidation::default_instance() {
@@ -1708,8 +1630,7 @@ bool CertificateValidation::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // .zsearch.RootStoreStatus nss = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u)) {
+        if (tag == 10u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_nss()));
         } else {
@@ -1720,8 +1641,7 @@ bool CertificateValidation::MergePartialFromCodedStream(
 
       // .zsearch.RootStoreStatus microsoft = 2;
       case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(18u)) {
+        if (tag == 18u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_microsoft()));
         } else {
@@ -1732,8 +1652,7 @@ bool CertificateValidation::MergePartialFromCodedStream(
 
       // .zsearch.RootStoreStatus apple = 3;
       case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(26u)) {
+        if (tag == 26u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_apple()));
         } else {
@@ -1744,8 +1663,7 @@ bool CertificateValidation::MergePartialFromCodedStream(
 
       // .zsearch.RootStoreStatus java = 4;
       case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(34u)) {
+        if (tag == 34u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_java()));
         } else {
@@ -1756,8 +1674,7 @@ bool CertificateValidation::MergePartialFromCodedStream(
 
       // .zsearch.RootStoreStatus android = 5;
       case 5: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(42u)) {
+        if (tag == 42u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_android()));
         } else {
@@ -1768,8 +1685,7 @@ bool CertificateValidation::MergePartialFromCodedStream(
 
       // .zsearch.RootStoreStatus google_ct_primary = 10;
       case 10: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(82u)) {
+        if (tag == 82u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_google_ct_primary()));
         } else {
@@ -1802,9 +1718,6 @@ failure:
 void CertificateValidation::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:zsearch.CertificateValidation)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
   // .zsearch.RootStoreStatus nss = 1;
   if (this->has_nss()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
@@ -1846,50 +1759,48 @@ void CertificateValidation::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* CertificateValidation::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:zsearch.CertificateValidation)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
   // .zsearch.RootStoreStatus nss = 1;
   if (this->has_nss()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        1, *this->nss_, deterministic, target);
+        1, *this->nss_, false, target);
   }
 
   // .zsearch.RootStoreStatus microsoft = 2;
   if (this->has_microsoft()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        2, *this->microsoft_, deterministic, target);
+        2, *this->microsoft_, false, target);
   }
 
   // .zsearch.RootStoreStatus apple = 3;
   if (this->has_apple()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        3, *this->apple_, deterministic, target);
+        3, *this->apple_, false, target);
   }
 
   // .zsearch.RootStoreStatus java = 4;
   if (this->has_java()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        4, *this->java_, deterministic, target);
+        4, *this->java_, false, target);
   }
 
   // .zsearch.RootStoreStatus android = 5;
   if (this->has_android()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        5, *this->android_, deterministic, target);
+        5, *this->android_, false, target);
   }
 
   // .zsearch.RootStoreStatus google_ct_primary = 10;
   if (this->has_google_ct_primary()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        10, *this->google_ct_primary_, deterministic, target);
+        10, *this->google_ct_primary_, false, target);
   }
 
   // @@protoc_insertion_point(serialize_to_array_end:zsearch.CertificateValidation)
@@ -1968,9 +1879,6 @@ void CertificateValidation::MergeFrom(const CertificateValidation& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:zsearch.CertificateValidation)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
   if (from.has_nss()) {
     mutable_nss()->::zsearch::RootStoreStatus::MergeFrom(from.nss());
   }
@@ -2025,7 +1933,7 @@ void CertificateValidation::InternalSwap(CertificateValidation* other) {
 
 ::google::protobuf::Metadata CertificateValidation::GetMetadata() const {
   protobuf_certificate_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_certificate_2eproto::file_level_metadata[kIndexInFileMessages];
+  return protobuf_certificate_2eproto::file_level_metadata[2];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -2459,7 +2367,7 @@ void MozillaSalesForceStatus::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* MozillaSalesForceStatus::descriptor() {
   protobuf_certificate_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_certificate_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+  return protobuf_certificate_2eproto::file_level_metadata[3].descriptor;
 }
 
 const MozillaSalesForceStatus& MozillaSalesForceStatus::default_instance() {
@@ -2513,8 +2421,7 @@ bool MozillaSalesForceStatus::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // bool current_in_intermediates = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(8u)) {
+        if (tag == 8u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -2527,8 +2434,7 @@ bool MozillaSalesForceStatus::MergePartialFromCodedStream(
 
       // bool was_in_intermediates = 2;
       case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(16u)) {
+        if (tag == 16u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -2541,8 +2447,7 @@ bool MozillaSalesForceStatus::MergePartialFromCodedStream(
 
       // string owner_name = 3;
       case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(26u)) {
+        if (tag == 26u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_owner_name()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -2557,8 +2462,7 @@ bool MozillaSalesForceStatus::MergePartialFromCodedStream(
 
       // string parent_name = 4;
       case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(34u)) {
+        if (tag == 34u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_parent_name()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -2573,8 +2477,7 @@ bool MozillaSalesForceStatus::MergePartialFromCodedStream(
 
       // string certificate_name = 5;
       case 5: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(42u)) {
+        if (tag == 42u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_certificate_name()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -2589,8 +2492,7 @@ bool MozillaSalesForceStatus::MergePartialFromCodedStream(
 
       // string certificate_policy = 6;
       case 6: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(50u)) {
+        if (tag == 50u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_certificate_policy()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -2605,8 +2507,7 @@ bool MozillaSalesForceStatus::MergePartialFromCodedStream(
 
       // string certification_practice_statement = 7;
       case 7: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(58u)) {
+        if (tag == 58u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_certification_practice_statement()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -2621,8 +2522,7 @@ bool MozillaSalesForceStatus::MergePartialFromCodedStream(
 
       // bool cp_same_as_parent = 8;
       case 8: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(64u)) {
+        if (tag == 64u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -2635,8 +2535,7 @@ bool MozillaSalesForceStatus::MergePartialFromCodedStream(
 
       // bool audit_same_as_parent = 9;
       case 9: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(72u)) {
+        if (tag == 72u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -2649,8 +2548,7 @@ bool MozillaSalesForceStatus::MergePartialFromCodedStream(
 
       // string standard_audit = 10;
       case 10: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(82u)) {
+        if (tag == 82u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_standard_audit()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -2665,8 +2563,7 @@ bool MozillaSalesForceStatus::MergePartialFromCodedStream(
 
       // string br_audit = 11;
       case 11: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(90u)) {
+        if (tag == 90u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_br_audit()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -2681,8 +2578,7 @@ bool MozillaSalesForceStatus::MergePartialFromCodedStream(
 
       // string auditor = 12;
       case 12: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(98u)) {
+        if (tag == 98u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_auditor()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -2697,8 +2593,7 @@ bool MozillaSalesForceStatus::MergePartialFromCodedStream(
 
       // uint32 standard_audit_statement_timestamp = 13;
       case 13: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(104u)) {
+        if (tag == 104u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -2711,8 +2606,7 @@ bool MozillaSalesForceStatus::MergePartialFromCodedStream(
 
       // string management_assertions_by = 14;
       case 14: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(114u)) {
+        if (tag == 114u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_management_assertions_by()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -2727,8 +2621,7 @@ bool MozillaSalesForceStatus::MergePartialFromCodedStream(
 
       // string comments = 15;
       case 15: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(122u)) {
+        if (tag == 122u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_comments()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -2743,8 +2636,7 @@ bool MozillaSalesForceStatus::MergePartialFromCodedStream(
 
       // string ev_policy_oids = 16;
       case 16: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(130u)) {
+        if (tag == 130u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_ev_policy_oids()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -2759,8 +2651,7 @@ bool MozillaSalesForceStatus::MergePartialFromCodedStream(
 
       // string approval_bug = 17;
       case 17: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(138u)) {
+        if (tag == 138u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_approval_bug()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -2775,8 +2666,7 @@ bool MozillaSalesForceStatus::MergePartialFromCodedStream(
 
       // string first_nss_release = 18;
       case 18: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(146u)) {
+        if (tag == 146u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_first_nss_release()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -2791,8 +2681,7 @@ bool MozillaSalesForceStatus::MergePartialFromCodedStream(
 
       // string first_firefox_release = 19;
       case 19: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(154u)) {
+        if (tag == 154u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_first_firefox_release()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -2807,8 +2696,7 @@ bool MozillaSalesForceStatus::MergePartialFromCodedStream(
 
       // string ev_audit = 20;
       case 20: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(162u)) {
+        if (tag == 162u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_ev_audit()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -2823,8 +2711,7 @@ bool MozillaSalesForceStatus::MergePartialFromCodedStream(
 
       // bool current_in_roots = 21;
       case 21: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(168u)) {
+        if (tag == 168u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -2837,8 +2724,7 @@ bool MozillaSalesForceStatus::MergePartialFromCodedStream(
 
       // bool was_in_roots = 22;
       case 22: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(176u)) {
+        if (tag == 176u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -2851,8 +2737,7 @@ bool MozillaSalesForceStatus::MergePartialFromCodedStream(
 
       // string test_website_valid = 23;
       case 23: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(186u)) {
+        if (tag == 186u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_test_website_valid()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -2867,8 +2752,7 @@ bool MozillaSalesForceStatus::MergePartialFromCodedStream(
 
       // string mozilla_applied_constraints = 24;
       case 24: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(194u)) {
+        if (tag == 194u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_mozilla_applied_constraints()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -2883,8 +2767,7 @@ bool MozillaSalesForceStatus::MergePartialFromCodedStream(
 
       // string company_website = 25;
       case 25: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(202u)) {
+        if (tag == 202u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_company_website()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -2899,8 +2782,7 @@ bool MozillaSalesForceStatus::MergePartialFromCodedStream(
 
       // string geographic_focus = 26;
       case 26: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(210u)) {
+        if (tag == 210u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_geographic_focus()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -2915,8 +2797,7 @@ bool MozillaSalesForceStatus::MergePartialFromCodedStream(
 
       // string standard_audit_type = 27;
       case 27: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(218u)) {
+        if (tag == 218u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_standard_audit_type()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -2953,9 +2834,6 @@ failure:
 void MozillaSalesForceStatus::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:zsearch.MozillaSalesForceStatus)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
   // bool current_in_intermediates = 1;
   if (this->current_in_intermediates() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteBool(1, this->current_in_intermediates(), output);
@@ -3196,10 +3074,8 @@ void MozillaSalesForceStatus::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* MozillaSalesForceStatus::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:zsearch.MozillaSalesForceStatus)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
   // bool current_in_intermediates = 1;
   if (this->current_in_intermediates() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(1, this->current_in_intermediates(), target);
@@ -3666,9 +3542,6 @@ void MozillaSalesForceStatus::MergeFrom(const MozillaSalesForceStatus& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:zsearch.MozillaSalesForceStatus)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
   if (from.owner_name().size() > 0) {
 
     owner_name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.owner_name_);
@@ -3827,7 +3700,7 @@ void MozillaSalesForceStatus::InternalSwap(MozillaSalesForceStatus* other) {
 
 ::google::protobuf::Metadata MozillaSalesForceStatus::GetMetadata() const {
   protobuf_certificate_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_certificate_2eproto::file_level_metadata[kIndexInFileMessages];
+  return protobuf_certificate_2eproto::file_level_metadata[3];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -3878,12 +3751,11 @@ void MozillaSalesForceStatus::set_owner_name(const ::std::string& value) {
 void MozillaSalesForceStatus::set_owner_name(::std::string&& value) {
   
   owner_name_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.MozillaSalesForceStatus.owner_name)
 }
 #endif
 void MozillaSalesForceStatus::set_owner_name(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
   
   owner_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.MozillaSalesForceStatus.owner_name)
@@ -3931,12 +3803,11 @@ void MozillaSalesForceStatus::set_parent_name(const ::std::string& value) {
 void MozillaSalesForceStatus::set_parent_name(::std::string&& value) {
   
   parent_name_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.MozillaSalesForceStatus.parent_name)
 }
 #endif
 void MozillaSalesForceStatus::set_parent_name(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
   
   parent_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.MozillaSalesForceStatus.parent_name)
@@ -3984,12 +3855,11 @@ void MozillaSalesForceStatus::set_certificate_name(const ::std::string& value) {
 void MozillaSalesForceStatus::set_certificate_name(::std::string&& value) {
   
   certificate_name_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.MozillaSalesForceStatus.certificate_name)
 }
 #endif
 void MozillaSalesForceStatus::set_certificate_name(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
   
   certificate_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.MozillaSalesForceStatus.certificate_name)
@@ -4037,12 +3907,11 @@ void MozillaSalesForceStatus::set_certificate_policy(const ::std::string& value)
 void MozillaSalesForceStatus::set_certificate_policy(::std::string&& value) {
   
   certificate_policy_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.MozillaSalesForceStatus.certificate_policy)
 }
 #endif
 void MozillaSalesForceStatus::set_certificate_policy(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
   
   certificate_policy_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.MozillaSalesForceStatus.certificate_policy)
@@ -4090,12 +3959,11 @@ void MozillaSalesForceStatus::set_certification_practice_statement(const ::std::
 void MozillaSalesForceStatus::set_certification_practice_statement(::std::string&& value) {
   
   certification_practice_statement_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.MozillaSalesForceStatus.certification_practice_statement)
 }
 #endif
 void MozillaSalesForceStatus::set_certification_practice_statement(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
   
   certification_practice_statement_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.MozillaSalesForceStatus.certification_practice_statement)
@@ -4171,12 +4039,11 @@ void MozillaSalesForceStatus::set_standard_audit(const ::std::string& value) {
 void MozillaSalesForceStatus::set_standard_audit(::std::string&& value) {
   
   standard_audit_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.MozillaSalesForceStatus.standard_audit)
 }
 #endif
 void MozillaSalesForceStatus::set_standard_audit(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
   
   standard_audit_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.MozillaSalesForceStatus.standard_audit)
@@ -4224,12 +4091,11 @@ void MozillaSalesForceStatus::set_br_audit(const ::std::string& value) {
 void MozillaSalesForceStatus::set_br_audit(::std::string&& value) {
   
   br_audit_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.MozillaSalesForceStatus.br_audit)
 }
 #endif
 void MozillaSalesForceStatus::set_br_audit(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
   
   br_audit_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.MozillaSalesForceStatus.br_audit)
@@ -4277,12 +4143,11 @@ void MozillaSalesForceStatus::set_auditor(const ::std::string& value) {
 void MozillaSalesForceStatus::set_auditor(::std::string&& value) {
   
   auditor_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.MozillaSalesForceStatus.auditor)
 }
 #endif
 void MozillaSalesForceStatus::set_auditor(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
   
   auditor_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.MozillaSalesForceStatus.auditor)
@@ -4344,12 +4209,11 @@ void MozillaSalesForceStatus::set_management_assertions_by(const ::std::string& 
 void MozillaSalesForceStatus::set_management_assertions_by(::std::string&& value) {
   
   management_assertions_by_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.MozillaSalesForceStatus.management_assertions_by)
 }
 #endif
 void MozillaSalesForceStatus::set_management_assertions_by(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
   
   management_assertions_by_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.MozillaSalesForceStatus.management_assertions_by)
@@ -4397,12 +4261,11 @@ void MozillaSalesForceStatus::set_comments(const ::std::string& value) {
 void MozillaSalesForceStatus::set_comments(::std::string&& value) {
   
   comments_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.MozillaSalesForceStatus.comments)
 }
 #endif
 void MozillaSalesForceStatus::set_comments(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
   
   comments_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.MozillaSalesForceStatus.comments)
@@ -4450,12 +4313,11 @@ void MozillaSalesForceStatus::set_ev_policy_oids(const ::std::string& value) {
 void MozillaSalesForceStatus::set_ev_policy_oids(::std::string&& value) {
   
   ev_policy_oids_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.MozillaSalesForceStatus.ev_policy_oids)
 }
 #endif
 void MozillaSalesForceStatus::set_ev_policy_oids(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
   
   ev_policy_oids_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.MozillaSalesForceStatus.ev_policy_oids)
@@ -4503,12 +4365,11 @@ void MozillaSalesForceStatus::set_approval_bug(const ::std::string& value) {
 void MozillaSalesForceStatus::set_approval_bug(::std::string&& value) {
   
   approval_bug_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.MozillaSalesForceStatus.approval_bug)
 }
 #endif
 void MozillaSalesForceStatus::set_approval_bug(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
   
   approval_bug_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.MozillaSalesForceStatus.approval_bug)
@@ -4556,12 +4417,11 @@ void MozillaSalesForceStatus::set_first_nss_release(const ::std::string& value) 
 void MozillaSalesForceStatus::set_first_nss_release(::std::string&& value) {
   
   first_nss_release_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.MozillaSalesForceStatus.first_nss_release)
 }
 #endif
 void MozillaSalesForceStatus::set_first_nss_release(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
   
   first_nss_release_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.MozillaSalesForceStatus.first_nss_release)
@@ -4609,12 +4469,11 @@ void MozillaSalesForceStatus::set_first_firefox_release(const ::std::string& val
 void MozillaSalesForceStatus::set_first_firefox_release(::std::string&& value) {
   
   first_firefox_release_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.MozillaSalesForceStatus.first_firefox_release)
 }
 #endif
 void MozillaSalesForceStatus::set_first_firefox_release(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
   
   first_firefox_release_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.MozillaSalesForceStatus.first_firefox_release)
@@ -4662,12 +4521,11 @@ void MozillaSalesForceStatus::set_ev_audit(const ::std::string& value) {
 void MozillaSalesForceStatus::set_ev_audit(::std::string&& value) {
   
   ev_audit_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.MozillaSalesForceStatus.ev_audit)
 }
 #endif
 void MozillaSalesForceStatus::set_ev_audit(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
   
   ev_audit_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.MozillaSalesForceStatus.ev_audit)
@@ -4743,12 +4601,11 @@ void MozillaSalesForceStatus::set_test_website_valid(const ::std::string& value)
 void MozillaSalesForceStatus::set_test_website_valid(::std::string&& value) {
   
   test_website_valid_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.MozillaSalesForceStatus.test_website_valid)
 }
 #endif
 void MozillaSalesForceStatus::set_test_website_valid(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
   
   test_website_valid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.MozillaSalesForceStatus.test_website_valid)
@@ -4796,12 +4653,11 @@ void MozillaSalesForceStatus::set_mozilla_applied_constraints(const ::std::strin
 void MozillaSalesForceStatus::set_mozilla_applied_constraints(::std::string&& value) {
   
   mozilla_applied_constraints_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.MozillaSalesForceStatus.mozilla_applied_constraints)
 }
 #endif
 void MozillaSalesForceStatus::set_mozilla_applied_constraints(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
   
   mozilla_applied_constraints_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.MozillaSalesForceStatus.mozilla_applied_constraints)
@@ -4849,12 +4705,11 @@ void MozillaSalesForceStatus::set_company_website(const ::std::string& value) {
 void MozillaSalesForceStatus::set_company_website(::std::string&& value) {
   
   company_website_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.MozillaSalesForceStatus.company_website)
 }
 #endif
 void MozillaSalesForceStatus::set_company_website(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
   
   company_website_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.MozillaSalesForceStatus.company_website)
@@ -4902,12 +4757,11 @@ void MozillaSalesForceStatus::set_geographic_focus(const ::std::string& value) {
 void MozillaSalesForceStatus::set_geographic_focus(::std::string&& value) {
   
   geographic_focus_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.MozillaSalesForceStatus.geographic_focus)
 }
 #endif
 void MozillaSalesForceStatus::set_geographic_focus(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
   
   geographic_focus_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.MozillaSalesForceStatus.geographic_focus)
@@ -4955,12 +4809,11 @@ void MozillaSalesForceStatus::set_standard_audit_type(const ::std::string& value
 void MozillaSalesForceStatus::set_standard_audit_type(::std::string&& value) {
   
   standard_audit_type_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.MozillaSalesForceStatus.standard_audit_type)
 }
 #endif
 void MozillaSalesForceStatus::set_standard_audit_type(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
   
   standard_audit_type_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.MozillaSalesForceStatus.standard_audit_type)
@@ -5040,7 +4893,7 @@ void CertificateRevocation::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* CertificateRevocation::descriptor() {
   protobuf_certificate_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_certificate_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+  return protobuf_certificate_2eproto::file_level_metadata[4].descriptor;
 }
 
 const CertificateRevocation& CertificateRevocation::default_instance() {
@@ -5074,8 +4927,7 @@ bool CertificateRevocation::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // bool revoked = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(8u)) {
+        if (tag == 8u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -5088,8 +4940,7 @@ bool CertificateRevocation::MergePartialFromCodedStream(
 
       // .zsearch.CertificateRevocationReason reason = 2;
       case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(16u)) {
+        if (tag == 16u) {
           int value;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
@@ -5125,9 +4976,6 @@ failure:
 void CertificateRevocation::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:zsearch.CertificateRevocation)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
   // bool revoked = 1;
   if (this->revoked() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteBool(1, this->revoked(), output);
@@ -5144,10 +4992,8 @@ void CertificateRevocation::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* CertificateRevocation::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:zsearch.CertificateRevocation)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
   // bool revoked = 1;
   if (this->revoked() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(1, this->revoked(), target);
@@ -5204,9 +5050,6 @@ void CertificateRevocation::MergeFrom(const CertificateRevocation& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:zsearch.CertificateRevocation)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
   if (from.revoked() != 0) {
     set_revoked(from.revoked());
   }
@@ -5245,7 +5088,7 @@ void CertificateRevocation::InternalSwap(CertificateRevocation* other) {
 
 ::google::protobuf::Metadata CertificateRevocation::GetMetadata() const {
   protobuf_certificate_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_certificate_2eproto::file_level_metadata[kIndexInFileMessages];
+  return protobuf_certificate_2eproto::file_level_metadata[4];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -5331,7 +5174,7 @@ void CertificateAudit::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* CertificateAudit::descriptor() {
   protobuf_certificate_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_certificate_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+  return protobuf_certificate_2eproto::file_level_metadata[5].descriptor;
 }
 
 const CertificateAudit& CertificateAudit::default_instance() {
@@ -5367,8 +5210,7 @@ bool CertificateAudit::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // .zsearch.MozillaSalesForceStatus mozilla = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u)) {
+        if (tag == 10u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_mozilla()));
         } else {
@@ -5401,9 +5243,6 @@ failure:
 void CertificateAudit::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:zsearch.CertificateAudit)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
   // .zsearch.MozillaSalesForceStatus mozilla = 1;
   if (this->has_mozilla()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
@@ -5415,15 +5254,13 @@ void CertificateAudit::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* CertificateAudit::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:zsearch.CertificateAudit)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
   // .zsearch.MozillaSalesForceStatus mozilla = 1;
   if (this->has_mozilla()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        1, *this->mozilla_, deterministic, target);
+        1, *this->mozilla_, false, target);
   }
 
   // @@protoc_insertion_point(serialize_to_array_end:zsearch.CertificateAudit)
@@ -5467,9 +5304,6 @@ void CertificateAudit::MergeFrom(const CertificateAudit& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:zsearch.CertificateAudit)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
   if (from.has_mozilla()) {
     mutable_mozilla()->::zsearch::MozillaSalesForceStatus::MergeFrom(from.mozilla());
   }
@@ -5504,7 +5338,7 @@ void CertificateAudit::InternalSwap(CertificateAudit* other) {
 
 ::google::protobuf::Metadata CertificateAudit::GetMetadata() const {
   protobuf_certificate_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_certificate_2eproto::file_level_metadata[kIndexInFileMessages];
+  return protobuf_certificate_2eproto::file_level_metadata[5];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -5563,6 +5397,7 @@ const int Certificate::kParseVersionFieldNumber;
 const int Certificate::kParseErrorFieldNumber;
 const int Certificate::kParentsFieldNumber;
 const int Certificate::kPresentedChainFieldNumber;
+const int Certificate::kParentSpkiSubjectFpFieldNumber;
 const int Certificate::kSourceFieldNumber;
 const int Certificate::kSeenInScanFieldNumber;
 const int Certificate::kPostProcessedFieldNumber;
@@ -5636,25 +5471,29 @@ Certificate::Certificate(const Certificate& from)
   if (from.parse_error().size() > 0) {
     parse_error_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.parse_error_);
   }
-  if (from.has_ct()) {
-    ct_ = new ::zsearch::CTStatus(*from.ct_);
-  } else {
-    ct_ = NULL;
-  }
-  if (from.has_nss_audit()) {
-    nss_audit_ = new ::zsearch::MozillaSalesForceStatus(*from.nss_audit_);
-  } else {
-    nss_audit_ = NULL;
+  parent_spki_subject_fp_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.parent_spki_subject_fp().size() > 0) {
+    parent_spki_subject_fp_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.parent_spki_subject_fp_);
   }
   if (from.has_validation()) {
     validation_ = new ::zsearch::CertificateValidation(*from.validation_);
   } else {
     validation_ = NULL;
   }
+  if (from.has_ct()) {
+    ct_ = new ::zsearch::CTStatus(*from.ct_);
+  } else {
+    ct_ = NULL;
+  }
   if (from.has_zlint()) {
     zlint_ = new ::zsearch::ZLint(*from.zlint_);
   } else {
     zlint_ = NULL;
+  }
+  if (from.has_caa()) {
+    caa_ = new ::zsearch::CAALookup(*from.caa_);
+  } else {
+    caa_ = NULL;
   }
   if (from.has_revocation()) {
     revocation_ = new ::zsearch::CertificateRevocation(*from.revocation_);
@@ -5666,14 +5505,14 @@ Certificate::Certificate(const Certificate& from)
   } else {
     audit_ = NULL;
   }
-  if (from.has_caa()) {
-    caa_ = new ::zsearch::CAALookup(*from.caa_);
+  if (from.has_nss_audit()) {
+    nss_audit_ = new ::zsearch::MozillaSalesForceStatus(*from.nss_audit_);
   } else {
-    caa_ = NULL;
+    nss_audit_ = NULL;
   }
-  ::memcpy(&in_nss_, &from.in_nss_,
-    reinterpret_cast<char*>(&parse_status_) -
-    reinterpret_cast<char*>(&in_nss_) + sizeof(parse_status_));
+  ::memcpy(&parse_status_, &from.parse_status_,
+    reinterpret_cast<char*>(&do_not_post_process_) -
+    reinterpret_cast<char*>(&parse_status_) + sizeof(do_not_post_process_));
   // @@protoc_insertion_point(copy_constructor:zsearch.Certificate)
 }
 
@@ -5683,8 +5522,9 @@ void Certificate::SharedCtor() {
   raw_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   parsed_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   parse_error_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  ::memset(&ct_, 0, reinterpret_cast<char*>(&parse_status_) -
-    reinterpret_cast<char*>(&ct_) + sizeof(parse_status_));
+  parent_spki_subject_fp_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(&validation_, 0, reinterpret_cast<char*>(&do_not_post_process_) -
+    reinterpret_cast<char*>(&validation_) + sizeof(do_not_post_process_));
   _cached_size_ = 0;
 }
 
@@ -5699,17 +5539,18 @@ void Certificate::SharedDtor() {
   raw_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   parsed_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   parse_error_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != internal_default_instance()) {
-    delete ct_;
-  }
-  if (this != internal_default_instance()) {
-    delete nss_audit_;
-  }
+  parent_spki_subject_fp_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) {
     delete validation_;
   }
   if (this != internal_default_instance()) {
+    delete ct_;
+  }
+  if (this != internal_default_instance()) {
     delete zlint_;
+  }
+  if (this != internal_default_instance()) {
+    delete caa_;
   }
   if (this != internal_default_instance()) {
     delete revocation_;
@@ -5718,7 +5559,7 @@ void Certificate::SharedDtor() {
     delete audit_;
   }
   if (this != internal_default_instance()) {
-    delete caa_;
+    delete nss_audit_;
   }
 }
 
@@ -5729,7 +5570,7 @@ void Certificate::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* Certificate::descriptor() {
   protobuf_certificate_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_certificate_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+  return protobuf_certificate_2eproto::file_level_metadata[6].descriptor;
 }
 
 const Certificate& Certificate::default_instance() {
@@ -5754,22 +5595,23 @@ void Certificate::Clear() {
   raw_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   parsed_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   parse_error_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (GetArenaNoVirtual() == NULL && ct_ != NULL) {
-    delete ct_;
-  }
-  ct_ = NULL;
-  if (GetArenaNoVirtual() == NULL && nss_audit_ != NULL) {
-    delete nss_audit_;
-  }
-  nss_audit_ = NULL;
+  parent_spki_subject_fp_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (GetArenaNoVirtual() == NULL && validation_ != NULL) {
     delete validation_;
   }
   validation_ = NULL;
+  if (GetArenaNoVirtual() == NULL && ct_ != NULL) {
+    delete ct_;
+  }
+  ct_ = NULL;
   if (GetArenaNoVirtual() == NULL && zlint_ != NULL) {
     delete zlint_;
   }
   zlint_ = NULL;
+  if (GetArenaNoVirtual() == NULL && caa_ != NULL) {
+    delete caa_;
+  }
+  caa_ = NULL;
   if (GetArenaNoVirtual() == NULL && revocation_ != NULL) {
     delete revocation_;
   }
@@ -5778,12 +5620,12 @@ void Certificate::Clear() {
     delete audit_;
   }
   audit_ = NULL;
-  if (GetArenaNoVirtual() == NULL && caa_ != NULL) {
-    delete caa_;
+  if (GetArenaNoVirtual() == NULL && nss_audit_ != NULL) {
+    delete nss_audit_;
   }
-  caa_ = NULL;
-  ::memset(&in_nss_, 0, reinterpret_cast<char*>(&parse_status_) -
-    reinterpret_cast<char*>(&in_nss_) + sizeof(parse_status_));
+  nss_audit_ = NULL;
+  ::memset(&parse_status_, 0, reinterpret_cast<char*>(&do_not_post_process_) -
+    reinterpret_cast<char*>(&parse_status_) + sizeof(do_not_post_process_));
 }
 
 bool Certificate::MergePartialFromCodedStream(
@@ -5798,8 +5640,7 @@ bool Certificate::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // bytes sha1fp = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u)) {
+        if (tag == 10u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
                 input, this->mutable_sha1fp()));
         } else {
@@ -5810,8 +5651,7 @@ bool Certificate::MergePartialFromCodedStream(
 
       // bytes sha256fp = 2;
       case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(18u)) {
+        if (tag == 18u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
                 input, this->mutable_sha256fp()));
         } else {
@@ -5822,8 +5662,7 @@ bool Certificate::MergePartialFromCodedStream(
 
       // bytes raw = 3;
       case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(26u)) {
+        if (tag == 26u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
                 input, this->mutable_raw()));
         } else {
@@ -5834,8 +5673,7 @@ bool Certificate::MergePartialFromCodedStream(
 
       // string parsed = 4;
       case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(34u)) {
+        if (tag == 34u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_parsed()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -5850,8 +5688,7 @@ bool Certificate::MergePartialFromCodedStream(
 
       // repeated bytes parents = 5;
       case 5: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(42u)) {
+        if (tag == 42u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
                 input, this->add_parents()));
         } else {
@@ -5862,8 +5699,7 @@ bool Certificate::MergePartialFromCodedStream(
 
       // bool in_nss = 6;
       case 6: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(48u)) {
+        if (tag == 48u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -5876,8 +5712,7 @@ bool Certificate::MergePartialFromCodedStream(
 
       // bool in_microsoft = 7 [deprecated = true];
       case 7: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(56u)) {
+        if (tag == 56u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -5890,8 +5725,7 @@ bool Certificate::MergePartialFromCodedStream(
 
       // bool in_apple = 8 [deprecated = true];
       case 8: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(64u)) {
+        if (tag == 64u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -5904,8 +5738,7 @@ bool Certificate::MergePartialFromCodedStream(
 
       // uint32 validation_timestamp = 10;
       case 10: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(80u)) {
+        if (tag == 80u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -5918,8 +5751,7 @@ bool Certificate::MergePartialFromCodedStream(
 
       // bool valid_nss = 11 [deprecated = true];
       case 11: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(88u)) {
+        if (tag == 88u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -5932,8 +5764,7 @@ bool Certificate::MergePartialFromCodedStream(
 
       // bool valid_microsoft = 12 [deprecated = true];
       case 12: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(96u)) {
+        if (tag == 96u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -5946,8 +5777,7 @@ bool Certificate::MergePartialFromCodedStream(
 
       // bool valid_apple = 13 [deprecated = true];
       case 13: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(104u)) {
+        if (tag == 104u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -5960,8 +5790,7 @@ bool Certificate::MergePartialFromCodedStream(
 
       // bool was_valid_nss = 14;
       case 14: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(112u)) {
+        if (tag == 112u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -5974,8 +5803,7 @@ bool Certificate::MergePartialFromCodedStream(
 
       // bool was_valid_microsoft = 15 [deprecated = true];
       case 15: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(120u)) {
+        if (tag == 120u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -5988,8 +5816,7 @@ bool Certificate::MergePartialFromCodedStream(
 
       // bool was_valid_apple = 16 [deprecated = true];
       case 16: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(128u)) {
+        if (tag == 128u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -6002,8 +5829,7 @@ bool Certificate::MergePartialFromCodedStream(
 
       // bool was_in_nss = 17 [deprecated = true];
       case 17: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(136u)) {
+        if (tag == 136u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -6016,8 +5842,7 @@ bool Certificate::MergePartialFromCodedStream(
 
       // bool was_in_microsoft = 18 [deprecated = true];
       case 18: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(144u)) {
+        if (tag == 144u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -6030,8 +5855,7 @@ bool Certificate::MergePartialFromCodedStream(
 
       // bool was_in_apple = 19 [deprecated = true];
       case 19: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(152u)) {
+        if (tag == 152u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -6044,8 +5868,7 @@ bool Certificate::MergePartialFromCodedStream(
 
       // bool current_valid_nss = 20;
       case 20: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(160u)) {
+        if (tag == 160u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -6058,8 +5881,7 @@ bool Certificate::MergePartialFromCodedStream(
 
       // bool current_valid_microsoft = 21 [deprecated = true];
       case 21: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(168u)) {
+        if (tag == 168u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -6072,8 +5894,7 @@ bool Certificate::MergePartialFromCodedStream(
 
       // bool current_valid_apple = 22 [deprecated = true];
       case 22: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(176u)) {
+        if (tag == 176u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -6086,8 +5907,7 @@ bool Certificate::MergePartialFromCodedStream(
 
       // bool current_in_nss = 23;
       case 23: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(184u)) {
+        if (tag == 184u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -6100,8 +5920,7 @@ bool Certificate::MergePartialFromCodedStream(
 
       // bool current_in_microsoft = 24 [deprecated = true];
       case 24: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(192u)) {
+        if (tag == 192u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -6114,8 +5933,7 @@ bool Certificate::MergePartialFromCodedStream(
 
       // bool current_in_apple = 25 [deprecated = true];
       case 25: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(200u)) {
+        if (tag == 200u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -6128,8 +5946,7 @@ bool Certificate::MergePartialFromCodedStream(
 
       // bool post_processed = 26;
       case 26: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(208u)) {
+        if (tag == 208u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -6142,8 +5959,7 @@ bool Certificate::MergePartialFromCodedStream(
 
       // bool should_post_process = 27 [deprecated = true];
       case 27: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(216u)) {
+        if (tag == 216u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -6156,8 +5972,7 @@ bool Certificate::MergePartialFromCodedStream(
 
       // .zsearch.CertificateSource source = 28;
       case 28: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(224u)) {
+        if (tag == 224u) {
           int value;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
@@ -6171,8 +5986,7 @@ bool Certificate::MergePartialFromCodedStream(
 
       // bool seen_in_scan = 29;
       case 29: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(232u)) {
+        if (tag == 232u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -6185,8 +5999,7 @@ bool Certificate::MergePartialFromCodedStream(
 
       // .zsearch.CTStatus ct = 30;
       case 30: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(242u)) {
+        if (tag == 242u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_ct()));
         } else {
@@ -6197,8 +6010,7 @@ bool Certificate::MergePartialFromCodedStream(
 
       // .zsearch.MozillaSalesForceStatus nss_audit = 31 [deprecated = true];
       case 31: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(250u)) {
+        if (tag == 250u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_nss_audit()));
         } else {
@@ -6209,8 +6021,7 @@ bool Certificate::MergePartialFromCodedStream(
 
       // bool is_precert = 32;
       case 32: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(256u)) {
+        if (tag == 256u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -6223,8 +6034,7 @@ bool Certificate::MergePartialFromCodedStream(
 
       // .zsearch.CertificateValidation validation = 35;
       case 35: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(282u)) {
+        if (tag == 282u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_validation()));
         } else {
@@ -6235,8 +6045,7 @@ bool Certificate::MergePartialFromCodedStream(
 
       // bool do_not_post_process = 36 [deprecated = true];
       case 36: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(288u)) {
+        if (tag == 288u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -6249,8 +6058,7 @@ bool Certificate::MergePartialFromCodedStream(
 
       // uint32 post_process_timestamp = 37;
       case 37: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(296u)) {
+        if (tag == 296u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -6263,8 +6071,7 @@ bool Certificate::MergePartialFromCodedStream(
 
       // .zsearch.ZLint zlint = 38;
       case 38: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(306u)) {
+        if (tag == 306u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_zlint()));
         } else {
@@ -6275,8 +6082,7 @@ bool Certificate::MergePartialFromCodedStream(
 
       // uint32 parse_version = 39;
       case 39: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(312u)) {
+        if (tag == 312u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -6289,8 +6095,7 @@ bool Certificate::MergePartialFromCodedStream(
 
       // uint32 not_valid_after = 41;
       case 41: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(328u)) {
+        if (tag == 328u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -6303,8 +6108,7 @@ bool Certificate::MergePartialFromCodedStream(
 
       // uint32 not_valid_before = 42;
       case 42: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(336u)) {
+        if (tag == 336u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -6317,8 +6121,7 @@ bool Certificate::MergePartialFromCodedStream(
 
       // .zsearch.CertificateRevocation revocation = 43;
       case 43: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(346u)) {
+        if (tag == 346u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_revocation()));
         } else {
@@ -6329,8 +6132,7 @@ bool Certificate::MergePartialFromCodedStream(
 
       // .zsearch.CertificateParseStatus parse_status = 44;
       case 44: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(352u)) {
+        if (tag == 352u) {
           int value;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
@@ -6344,8 +6146,7 @@ bool Certificate::MergePartialFromCodedStream(
 
       // repeated bytes presented_chain = 45;
       case 45: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(362u)) {
+        if (tag == 362u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
                 input, this->add_presented_chain()));
         } else {
@@ -6356,8 +6157,7 @@ bool Certificate::MergePartialFromCodedStream(
 
       // .zsearch.CertificateAudit audit = 46;
       case 46: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(370u)) {
+        if (tag == 370u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_audit()));
         } else {
@@ -6368,8 +6168,7 @@ bool Certificate::MergePartialFromCodedStream(
 
       // string parse_error = 47;
       case 47: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(378u)) {
+        if (tag == 378u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_parse_error()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -6384,8 +6183,7 @@ bool Certificate::MergePartialFromCodedStream(
 
       // bool expired = 48;
       case 48: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(384u)) {
+        if (tag == 384u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -6398,10 +6196,20 @@ bool Certificate::MergePartialFromCodedStream(
 
       // .zsearch.CAALookup caa = 49;
       case 49: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(394u)) {
+        if (tag == 394u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_caa()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // bytes parent_spki_subject_fp = 50;
+      case 50: {
+        if (tag == 402u) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
+                input, this->mutable_parent_spki_subject_fp()));
         } else {
           goto handle_unusual;
         }
@@ -6432,9 +6240,6 @@ failure:
 void Certificate::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:zsearch.Certificate)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
   // bytes sha1fp = 1;
   if (this->sha1fp().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::WriteBytesMaybeAliased(
@@ -6464,7 +6269,7 @@ void Certificate::SerializeWithCachedSizes(
   }
 
   // repeated bytes parents = 5;
-  for (int i = 0, n = this->parents_size(); i < n; i++) {
+  for (int i = 0; i < this->parents_size(); i++) {
     ::google::protobuf::internal::WireFormatLite::WriteBytes(
       5, this->parents(i), output);
   }
@@ -6652,7 +6457,7 @@ void Certificate::SerializeWithCachedSizes(
   }
 
   // repeated bytes presented_chain = 45;
-  for (int i = 0, n = this->presented_chain_size(); i < n; i++) {
+  for (int i = 0; i < this->presented_chain_size(); i++) {
     ::google::protobuf::internal::WireFormatLite::WriteBytes(
       45, this->presented_chain(i), output);
   }
@@ -6684,15 +6489,19 @@ void Certificate::SerializeWithCachedSizes(
       49, *this->caa_, output);
   }
 
+  // bytes parent_spki_subject_fp = 50;
+  if (this->parent_spki_subject_fp().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteBytesMaybeAliased(
+      50, this->parent_spki_subject_fp(), output);
+  }
+
   // @@protoc_insertion_point(serialize_end:zsearch.Certificate)
 }
 
 ::google::protobuf::uint8* Certificate::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:zsearch.Certificate)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
   // bytes sha1fp = 1;
   if (this->sha1fp().size() > 0) {
     target =
@@ -6726,7 +6535,7 @@ void Certificate::SerializeWithCachedSizes(
   }
 
   // repeated bytes parents = 5;
-  for (int i = 0, n = this->parents_size(); i < n; i++) {
+  for (int i = 0; i < this->parents_size(); i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteBytesToArray(5, this->parents(i), target);
   }
@@ -6851,14 +6660,14 @@ void Certificate::SerializeWithCachedSizes(
   if (this->has_ct()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        30, *this->ct_, deterministic, target);
+        30, *this->ct_, false, target);
   }
 
   // .zsearch.MozillaSalesForceStatus nss_audit = 31 [deprecated = true];
   if (this->has_nss_audit()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        31, *this->nss_audit_, deterministic, target);
+        31, *this->nss_audit_, false, target);
   }
 
   // bool is_precert = 32;
@@ -6870,7 +6679,7 @@ void Certificate::SerializeWithCachedSizes(
   if (this->has_validation()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        35, *this->validation_, deterministic, target);
+        35, *this->validation_, false, target);
   }
 
   // bool do_not_post_process = 36 [deprecated = true];
@@ -6887,7 +6696,7 @@ void Certificate::SerializeWithCachedSizes(
   if (this->has_zlint()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        38, *this->zlint_, deterministic, target);
+        38, *this->zlint_, false, target);
   }
 
   // uint32 parse_version = 39;
@@ -6909,7 +6718,7 @@ void Certificate::SerializeWithCachedSizes(
   if (this->has_revocation()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        43, *this->revocation_, deterministic, target);
+        43, *this->revocation_, false, target);
   }
 
   // .zsearch.CertificateParseStatus parse_status = 44;
@@ -6919,7 +6728,7 @@ void Certificate::SerializeWithCachedSizes(
   }
 
   // repeated bytes presented_chain = 45;
-  for (int i = 0, n = this->presented_chain_size(); i < n; i++) {
+  for (int i = 0; i < this->presented_chain_size(); i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       WriteBytesToArray(45, this->presented_chain(i), target);
   }
@@ -6928,7 +6737,7 @@ void Certificate::SerializeWithCachedSizes(
   if (this->has_audit()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        46, *this->audit_, deterministic, target);
+        46, *this->audit_, false, target);
   }
 
   // string parse_error = 47;
@@ -6951,7 +6760,14 @@ void Certificate::SerializeWithCachedSizes(
   if (this->has_caa()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        49, *this->caa_, deterministic, target);
+        49, *this->caa_, false, target);
+  }
+
+  // bytes parent_spki_subject_fp = 50;
+  if (this->parent_spki_subject_fp().size() > 0) {
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteBytesToArray(
+        50, this->parent_spki_subject_fp(), target);
   }
 
   // @@protoc_insertion_point(serialize_to_array_end:zsearch.Certificate)
@@ -6965,7 +6781,7 @@ size_t Certificate::ByteSizeLong() const {
   // repeated bytes parents = 5;
   total_size += 1 *
       ::google::protobuf::internal::FromIntSize(this->parents_size());
-  for (int i = 0, n = this->parents_size(); i < n; i++) {
+  for (int i = 0; i < this->parents_size(); i++) {
     total_size += ::google::protobuf::internal::WireFormatLite::BytesSize(
       this->parents(i));
   }
@@ -6973,7 +6789,7 @@ size_t Certificate::ByteSizeLong() const {
   // repeated bytes presented_chain = 45;
   total_size += 2 *
       ::google::protobuf::internal::FromIntSize(this->presented_chain_size());
-  for (int i = 0, n = this->presented_chain_size(); i < n; i++) {
+  for (int i = 0; i < this->presented_chain_size(); i++) {
     total_size += ::google::protobuf::internal::WireFormatLite::BytesSize(
       this->presented_chain(i));
   }
@@ -7013,18 +6829,11 @@ size_t Certificate::ByteSizeLong() const {
         this->parse_error());
   }
 
-  // .zsearch.CTStatus ct = 30;
-  if (this->has_ct()) {
+  // bytes parent_spki_subject_fp = 50;
+  if (this->parent_spki_subject_fp().size() > 0) {
     total_size += 2 +
-      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-        *this->ct_);
-  }
-
-  // .zsearch.MozillaSalesForceStatus nss_audit = 31 [deprecated = true];
-  if (this->has_nss_audit()) {
-    total_size += 2 +
-      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-        *this->nss_audit_);
+      ::google::protobuf::internal::WireFormatLite::BytesSize(
+        this->parent_spki_subject_fp());
   }
 
   // .zsearch.CertificateValidation validation = 35;
@@ -7034,11 +6843,25 @@ size_t Certificate::ByteSizeLong() const {
         *this->validation_);
   }
 
+  // .zsearch.CTStatus ct = 30;
+  if (this->has_ct()) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        *this->ct_);
+  }
+
   // .zsearch.ZLint zlint = 38;
   if (this->has_zlint()) {
     total_size += 2 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->zlint_);
+  }
+
+  // .zsearch.CAALookup caa = 49;
+  if (this->has_caa()) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        *this->caa_);
   }
 
   // .zsearch.CertificateRevocation revocation = 43;
@@ -7055,11 +6878,71 @@ size_t Certificate::ByteSizeLong() const {
         *this->audit_);
   }
 
-  // .zsearch.CAALookup caa = 49;
-  if (this->has_caa()) {
+  // .zsearch.MozillaSalesForceStatus nss_audit = 31 [deprecated = true];
+  if (this->has_nss_audit()) {
     total_size += 2 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-        *this->caa_);
+        *this->nss_audit_);
+  }
+
+  // .zsearch.CertificateParseStatus parse_status = 44;
+  if (this->parse_status() != 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::EnumSize(this->parse_status());
+  }
+
+  // uint32 parse_version = 39;
+  if (this->parse_version() != 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::UInt32Size(
+        this->parse_version());
+  }
+
+  // .zsearch.CertificateSource source = 28;
+  if (this->source() != 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::EnumSize(this->source());
+  }
+
+  // uint32 post_process_timestamp = 37;
+  if (this->post_process_timestamp() != 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::UInt32Size(
+        this->post_process_timestamp());
+  }
+
+  // bool seen_in_scan = 29;
+  if (this->seen_in_scan() != 0) {
+    total_size += 2 + 1;
+  }
+
+  // bool post_processed = 26;
+  if (this->post_processed() != 0) {
+    total_size += 2 + 1;
+  }
+
+  // bool is_precert = 32;
+  if (this->is_precert() != 0) {
+    total_size += 2 + 1;
+  }
+
+  // bool expired = 48;
+  if (this->expired() != 0) {
+    total_size += 2 + 1;
+  }
+
+  // uint32 not_valid_after = 41;
+  if (this->not_valid_after() != 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::UInt32Size(
+        this->not_valid_after());
+  }
+
+  // uint32 not_valid_before = 42;
+  if (this->not_valid_before() != 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::UInt32Size(
+        this->not_valid_before());
   }
 
   // bool in_nss = 6;
@@ -7149,12 +7032,6 @@ size_t Certificate::ByteSizeLong() const {
     total_size += 2 + 1;
   }
 
-  // .zsearch.CertificateSource source = 28;
-  if (this->source() != 0) {
-    total_size += 2 +
-      ::google::protobuf::internal::WireFormatLite::EnumSize(this->source());
-  }
-
   // bool current_in_microsoft = 24 [deprecated = true];
   if (this->current_in_microsoft() != 0) {
     total_size += 2 + 1;
@@ -7173,60 +7050,6 @@ size_t Certificate::ByteSizeLong() const {
   // bool do_not_post_process = 36 [deprecated = true];
   if (this->do_not_post_process() != 0) {
     total_size += 2 + 1;
-  }
-
-  // bool seen_in_scan = 29;
-  if (this->seen_in_scan() != 0) {
-    total_size += 2 + 1;
-  }
-
-  // bool post_processed = 26;
-  if (this->post_processed() != 0) {
-    total_size += 2 + 1;
-  }
-
-  // bool is_precert = 32;
-  if (this->is_precert() != 0) {
-    total_size += 2 + 1;
-  }
-
-  // bool expired = 48;
-  if (this->expired() != 0) {
-    total_size += 2 + 1;
-  }
-
-  // uint32 post_process_timestamp = 37;
-  if (this->post_process_timestamp() != 0) {
-    total_size += 2 +
-      ::google::protobuf::internal::WireFormatLite::UInt32Size(
-        this->post_process_timestamp());
-  }
-
-  // uint32 parse_version = 39;
-  if (this->parse_version() != 0) {
-    total_size += 2 +
-      ::google::protobuf::internal::WireFormatLite::UInt32Size(
-        this->parse_version());
-  }
-
-  // uint32 not_valid_after = 41;
-  if (this->not_valid_after() != 0) {
-    total_size += 2 +
-      ::google::protobuf::internal::WireFormatLite::UInt32Size(
-        this->not_valid_after());
-  }
-
-  // uint32 not_valid_before = 42;
-  if (this->not_valid_before() != 0) {
-    total_size += 2 +
-      ::google::protobuf::internal::WireFormatLite::UInt32Size(
-        this->not_valid_before());
-  }
-
-  // .zsearch.CertificateParseStatus parse_status = 44;
-  if (this->parse_status() != 0) {
-    total_size += 2 +
-      ::google::protobuf::internal::WireFormatLite::EnumSize(this->parse_status());
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
@@ -7255,9 +7078,6 @@ void Certificate::MergeFrom(const Certificate& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:zsearch.Certificate)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
   parents_.MergeFrom(from.parents_);
   presented_chain_.MergeFrom(from.presented_chain_);
   if (from.sha1fp().size() > 0) {
@@ -7280,17 +7100,21 @@ void Certificate::MergeFrom(const Certificate& from) {
 
     parse_error_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.parse_error_);
   }
-  if (from.has_ct()) {
-    mutable_ct()->::zsearch::CTStatus::MergeFrom(from.ct());
-  }
-  if (from.has_nss_audit()) {
-    mutable_nss_audit()->::zsearch::MozillaSalesForceStatus::MergeFrom(from.nss_audit());
+  if (from.parent_spki_subject_fp().size() > 0) {
+
+    parent_spki_subject_fp_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.parent_spki_subject_fp_);
   }
   if (from.has_validation()) {
     mutable_validation()->::zsearch::CertificateValidation::MergeFrom(from.validation());
   }
+  if (from.has_ct()) {
+    mutable_ct()->::zsearch::CTStatus::MergeFrom(from.ct());
+  }
   if (from.has_zlint()) {
     mutable_zlint()->::zsearch::ZLint::MergeFrom(from.zlint());
+  }
+  if (from.has_caa()) {
+    mutable_caa()->::zsearch::CAALookup::MergeFrom(from.caa());
   }
   if (from.has_revocation()) {
     mutable_revocation()->::zsearch::CertificateRevocation::MergeFrom(from.revocation());
@@ -7298,8 +7122,38 @@ void Certificate::MergeFrom(const Certificate& from) {
   if (from.has_audit()) {
     mutable_audit()->::zsearch::CertificateAudit::MergeFrom(from.audit());
   }
-  if (from.has_caa()) {
-    mutable_caa()->::zsearch::CAALookup::MergeFrom(from.caa());
+  if (from.has_nss_audit()) {
+    mutable_nss_audit()->::zsearch::MozillaSalesForceStatus::MergeFrom(from.nss_audit());
+  }
+  if (from.parse_status() != 0) {
+    set_parse_status(from.parse_status());
+  }
+  if (from.parse_version() != 0) {
+    set_parse_version(from.parse_version());
+  }
+  if (from.source() != 0) {
+    set_source(from.source());
+  }
+  if (from.post_process_timestamp() != 0) {
+    set_post_process_timestamp(from.post_process_timestamp());
+  }
+  if (from.seen_in_scan() != 0) {
+    set_seen_in_scan(from.seen_in_scan());
+  }
+  if (from.post_processed() != 0) {
+    set_post_processed(from.post_processed());
+  }
+  if (from.is_precert() != 0) {
+    set_is_precert(from.is_precert());
+  }
+  if (from.expired() != 0) {
+    set_expired(from.expired());
+  }
+  if (from.not_valid_after() != 0) {
+    set_not_valid_after(from.not_valid_after());
+  }
+  if (from.not_valid_before() != 0) {
+    set_not_valid_before(from.not_valid_before());
   }
   if (from.in_nss() != 0) {
     set_in_nss(from.in_nss());
@@ -7352,9 +7206,6 @@ void Certificate::MergeFrom(const Certificate& from) {
   if (from.current_in_nss() != 0) {
     set_current_in_nss(from.current_in_nss());
   }
-  if (from.source() != 0) {
-    set_source(from.source());
-  }
   if (from.current_in_microsoft() != 0) {
     set_current_in_microsoft(from.current_in_microsoft());
   }
@@ -7366,33 +7217,6 @@ void Certificate::MergeFrom(const Certificate& from) {
   }
   if (from.do_not_post_process() != 0) {
     set_do_not_post_process(from.do_not_post_process());
-  }
-  if (from.seen_in_scan() != 0) {
-    set_seen_in_scan(from.seen_in_scan());
-  }
-  if (from.post_processed() != 0) {
-    set_post_processed(from.post_processed());
-  }
-  if (from.is_precert() != 0) {
-    set_is_precert(from.is_precert());
-  }
-  if (from.expired() != 0) {
-    set_expired(from.expired());
-  }
-  if (from.post_process_timestamp() != 0) {
-    set_post_process_timestamp(from.post_process_timestamp());
-  }
-  if (from.parse_version() != 0) {
-    set_parse_version(from.parse_version());
-  }
-  if (from.not_valid_after() != 0) {
-    set_not_valid_after(from.not_valid_after());
-  }
-  if (from.not_valid_before() != 0) {
-    set_not_valid_before(from.not_valid_before());
-  }
-  if (from.parse_status() != 0) {
-    set_parse_status(from.parse_status());
   }
 }
 
@@ -7419,20 +7243,31 @@ void Certificate::Swap(Certificate* other) {
   InternalSwap(other);
 }
 void Certificate::InternalSwap(Certificate* other) {
-  parents_.InternalSwap(&other->parents_);
-  presented_chain_.InternalSwap(&other->presented_chain_);
+  parents_.UnsafeArenaSwap(&other->parents_);
+  presented_chain_.UnsafeArenaSwap(&other->presented_chain_);
   sha1fp_.Swap(&other->sha1fp_);
   sha256fp_.Swap(&other->sha256fp_);
   raw_.Swap(&other->raw_);
   parsed_.Swap(&other->parsed_);
   parse_error_.Swap(&other->parse_error_);
-  std::swap(ct_, other->ct_);
-  std::swap(nss_audit_, other->nss_audit_);
+  parent_spki_subject_fp_.Swap(&other->parent_spki_subject_fp_);
   std::swap(validation_, other->validation_);
+  std::swap(ct_, other->ct_);
   std::swap(zlint_, other->zlint_);
+  std::swap(caa_, other->caa_);
   std::swap(revocation_, other->revocation_);
   std::swap(audit_, other->audit_);
-  std::swap(caa_, other->caa_);
+  std::swap(nss_audit_, other->nss_audit_);
+  std::swap(parse_status_, other->parse_status_);
+  std::swap(parse_version_, other->parse_version_);
+  std::swap(source_, other->source_);
+  std::swap(post_process_timestamp_, other->post_process_timestamp_);
+  std::swap(seen_in_scan_, other->seen_in_scan_);
+  std::swap(post_processed_, other->post_processed_);
+  std::swap(is_precert_, other->is_precert_);
+  std::swap(expired_, other->expired_);
+  std::swap(not_valid_after_, other->not_valid_after_);
+  std::swap(not_valid_before_, other->not_valid_before_);
   std::swap(in_nss_, other->in_nss_);
   std::swap(in_microsoft_, other->in_microsoft_);
   std::swap(in_apple_, other->in_apple_);
@@ -7450,26 +7285,16 @@ void Certificate::InternalSwap(Certificate* other) {
   std::swap(current_valid_microsoft_, other->current_valid_microsoft_);
   std::swap(current_valid_apple_, other->current_valid_apple_);
   std::swap(current_in_nss_, other->current_in_nss_);
-  std::swap(source_, other->source_);
   std::swap(current_in_microsoft_, other->current_in_microsoft_);
   std::swap(current_in_apple_, other->current_in_apple_);
   std::swap(should_post_process_, other->should_post_process_);
   std::swap(do_not_post_process_, other->do_not_post_process_);
-  std::swap(seen_in_scan_, other->seen_in_scan_);
-  std::swap(post_processed_, other->post_processed_);
-  std::swap(is_precert_, other->is_precert_);
-  std::swap(expired_, other->expired_);
-  std::swap(post_process_timestamp_, other->post_process_timestamp_);
-  std::swap(parse_version_, other->parse_version_);
-  std::swap(not_valid_after_, other->not_valid_after_);
-  std::swap(not_valid_before_, other->not_valid_before_);
-  std::swap(parse_status_, other->parse_status_);
   std::swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata Certificate::GetMetadata() const {
   protobuf_certificate_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_certificate_2eproto::file_level_metadata[kIndexInFileMessages];
+  return protobuf_certificate_2eproto::file_level_metadata[6];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -7492,12 +7317,11 @@ void Certificate::set_sha1fp(const ::std::string& value) {
 void Certificate::set_sha1fp(::std::string&& value) {
   
   sha1fp_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.Certificate.sha1fp)
 }
 #endif
 void Certificate::set_sha1fp(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
   
   sha1fp_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.Certificate.sha1fp)
@@ -7545,12 +7369,11 @@ void Certificate::set_sha256fp(const ::std::string& value) {
 void Certificate::set_sha256fp(::std::string&& value) {
   
   sha256fp_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.Certificate.sha256fp)
 }
 #endif
 void Certificate::set_sha256fp(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
   
   sha256fp_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.Certificate.sha256fp)
@@ -7598,12 +7421,11 @@ void Certificate::set_raw(const ::std::string& value) {
 void Certificate::set_raw(::std::string&& value) {
   
   raw_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.Certificate.raw)
 }
 #endif
 void Certificate::set_raw(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
   
   raw_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.Certificate.raw)
@@ -7651,12 +7473,11 @@ void Certificate::set_parsed(const ::std::string& value) {
 void Certificate::set_parsed(::std::string&& value) {
   
   parsed_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.Certificate.parsed)
 }
 #endif
 void Certificate::set_parsed(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
   
   parsed_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.Certificate.parsed)
@@ -7732,12 +7553,11 @@ void Certificate::set_parse_error(const ::std::string& value) {
 void Certificate::set_parse_error(::std::string&& value) {
   
   parse_error_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.Certificate.parse_error)
 }
 #endif
 void Certificate::set_parse_error(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
   
   parse_error_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.Certificate.parse_error)
@@ -7787,14 +7607,7 @@ void Certificate::set_parents(int index, const ::std::string& value) {
   // @@protoc_insertion_point(field_set:zsearch.Certificate.parents)
   parents_.Mutable(index)->assign(value);
 }
-#if LANG_CXX11
-void Certificate::set_parents(int index, ::std::string&& value) {
-  // @@protoc_insertion_point(field_set:zsearch.Certificate.parents)
-  parents_.Mutable(index)->assign(std::move(value));
-}
-#endif
 void Certificate::set_parents(int index, const char* value) {
-  GOOGLE_DCHECK(value != NULL);
   parents_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:zsearch.Certificate.parents)
 }
@@ -7811,14 +7624,7 @@ void Certificate::add_parents(const ::std::string& value) {
   parents_.Add()->assign(value);
   // @@protoc_insertion_point(field_add:zsearch.Certificate.parents)
 }
-#if LANG_CXX11
-void Certificate::add_parents(::std::string&& value) {
-  parents_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:zsearch.Certificate.parents)
-}
-#endif
 void Certificate::add_parents(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
   parents_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:zsearch.Certificate.parents)
 }
@@ -7856,14 +7662,7 @@ void Certificate::set_presented_chain(int index, const ::std::string& value) {
   // @@protoc_insertion_point(field_set:zsearch.Certificate.presented_chain)
   presented_chain_.Mutable(index)->assign(value);
 }
-#if LANG_CXX11
-void Certificate::set_presented_chain(int index, ::std::string&& value) {
-  // @@protoc_insertion_point(field_set:zsearch.Certificate.presented_chain)
-  presented_chain_.Mutable(index)->assign(std::move(value));
-}
-#endif
 void Certificate::set_presented_chain(int index, const char* value) {
-  GOOGLE_DCHECK(value != NULL);
   presented_chain_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:zsearch.Certificate.presented_chain)
 }
@@ -7880,14 +7679,7 @@ void Certificate::add_presented_chain(const ::std::string& value) {
   presented_chain_.Add()->assign(value);
   // @@protoc_insertion_point(field_add:zsearch.Certificate.presented_chain)
 }
-#if LANG_CXX11
-void Certificate::add_presented_chain(::std::string&& value) {
-  presented_chain_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:zsearch.Certificate.presented_chain)
-}
-#endif
 void Certificate::add_presented_chain(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
   presented_chain_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:zsearch.Certificate.presented_chain)
 }
@@ -7904,6 +7696,58 @@ Certificate::presented_chain() const {
 Certificate::mutable_presented_chain() {
   // @@protoc_insertion_point(field_mutable_list:zsearch.Certificate.presented_chain)
   return &presented_chain_;
+}
+
+// bytes parent_spki_subject_fp = 50;
+void Certificate::clear_parent_spki_subject_fp() {
+  parent_spki_subject_fp_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+const ::std::string& Certificate::parent_spki_subject_fp() const {
+  // @@protoc_insertion_point(field_get:zsearch.Certificate.parent_spki_subject_fp)
+  return parent_spki_subject_fp_.GetNoArena();
+}
+void Certificate::set_parent_spki_subject_fp(const ::std::string& value) {
+  
+  parent_spki_subject_fp_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:zsearch.Certificate.parent_spki_subject_fp)
+}
+#if LANG_CXX11
+void Certificate::set_parent_spki_subject_fp(::std::string&& value) {
+  
+  parent_spki_subject_fp_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:zsearch.Certificate.parent_spki_subject_fp)
+}
+#endif
+void Certificate::set_parent_spki_subject_fp(const char* value) {
+  
+  parent_spki_subject_fp_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:zsearch.Certificate.parent_spki_subject_fp)
+}
+void Certificate::set_parent_spki_subject_fp(const void* value, size_t size) {
+  
+  parent_spki_subject_fp_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:zsearch.Certificate.parent_spki_subject_fp)
+}
+::std::string* Certificate::mutable_parent_spki_subject_fp() {
+  
+  // @@protoc_insertion_point(field_mutable:zsearch.Certificate.parent_spki_subject_fp)
+  return parent_spki_subject_fp_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+::std::string* Certificate::release_parent_spki_subject_fp() {
+  // @@protoc_insertion_point(field_release:zsearch.Certificate.parent_spki_subject_fp)
+  
+  return parent_spki_subject_fp_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+void Certificate::set_allocated_parent_spki_subject_fp(::std::string* parent_spki_subject_fp) {
+  if (parent_spki_subject_fp != NULL) {
+    
+  } else {
+    
+  }
+  parent_spki_subject_fp_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), parent_spki_subject_fp);
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Certificate.parent_spki_subject_fp)
 }
 
 // .zsearch.CertificateSource source = 28;

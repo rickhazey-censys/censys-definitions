@@ -30,9 +30,6 @@ namespace zsearch {
 //
 class AdminService final {
  public:
-  static constexpr char const* service_full_name() {
-    return "zsearch.AdminService";
-  }
   class StubInterface {
    public:
     virtual ~StubInterface() {}
@@ -1440,9 +1437,6 @@ class AdminService final {
 
 class QueryService final {
  public:
-  static constexpr char const* service_full_name() {
-    return "zsearch.QueryService";
-  }
   class StubInterface {
    public:
     virtual ~StubInterface() {}

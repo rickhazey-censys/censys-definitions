@@ -71,7 +71,7 @@ AdminService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& chann
 }
 
 ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AdminService::Stub::AsyncShutdownRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>::Create(channel_.get(), cq, rpcmethod_Shutdown_, context, request);
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>(channel_.get(), cq, rpcmethod_Shutdown_, context, request);
 }
 
 ::grpc::Status AdminService::Stub::Status(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) {
@@ -79,7 +79,7 @@ AdminService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& chann
 }
 
 ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AdminService::Stub::AsyncStatusRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>::Create(channel_.get(), cq, rpcmethod_Status_, context, request);
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>(channel_.get(), cq, rpcmethod_Status_, context, request);
 }
 
 ::grpc::Status AdminService::Stub::Statistics(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) {
@@ -87,7 +87,7 @@ AdminService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& chann
 }
 
 ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AdminService::Stub::AsyncStatisticsRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>::Create(channel_.get(), cq, rpcmethod_Statistics_, context, request);
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>(channel_.get(), cq, rpcmethod_Statistics_, context, request);
 }
 
 ::grpc::Status AdminService::Stub::PruneIPv4(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) {
@@ -95,7 +95,7 @@ AdminService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& chann
 }
 
 ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AdminService::Stub::AsyncPruneIPv4Raw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>::Create(channel_.get(), cq, rpcmethod_PruneIPv4_, context, request);
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>(channel_.get(), cq, rpcmethod_PruneIPv4_, context, request);
 }
 
 ::grpc::Status AdminService::Stub::PruneDomain(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) {
@@ -103,7 +103,7 @@ AdminService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& chann
 }
 
 ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AdminService::Stub::AsyncPruneDomainRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>::Create(channel_.get(), cq, rpcmethod_PruneDomain_, context, request);
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>(channel_.get(), cq, rpcmethod_PruneDomain_, context, request);
 }
 
 ::grpc::Status AdminService::Stub::UpdateASData(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) {
@@ -111,7 +111,7 @@ AdminService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& chann
 }
 
 ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AdminService::Stub::AsyncUpdateASDataRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>::Create(channel_.get(), cq, rpcmethod_UpdateASData_, context, request);
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>(channel_.get(), cq, rpcmethod_UpdateASData_, context, request);
 }
 
 ::grpc::Status AdminService::Stub::UpdateLocationData(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) {
@@ -119,7 +119,7 @@ AdminService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& chann
 }
 
 ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AdminService::Stub::AsyncUpdateLocationDataRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>::Create(channel_.get(), cq, rpcmethod_UpdateLocationData_, context, request);
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>(channel_.get(), cq, rpcmethod_UpdateLocationData_, context, request);
 }
 
 ::grpc::Status AdminService::Stub::ValidateCertificates(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) {
@@ -127,7 +127,7 @@ AdminService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& chann
 }
 
 ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AdminService::Stub::AsyncValidateCertificatesRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>::Create(channel_.get(), cq, rpcmethod_ValidateCertificates_, context, request);
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>(channel_.get(), cq, rpcmethod_ValidateCertificates_, context, request);
 }
 
 ::grpc::Status AdminService::Stub::FixCertificateSource(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) {
@@ -135,7 +135,7 @@ AdminService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& chann
 }
 
 ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AdminService::Stub::AsyncFixCertificateSourceRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>::Create(channel_.get(), cq, rpcmethod_FixCertificateSource_, context, request);
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>(channel_.get(), cq, rpcmethod_FixCertificateSource_, context, request);
 }
 
 ::grpc::Status AdminService::Stub::DumpIPv4ToJSON(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) {
@@ -143,7 +143,7 @@ AdminService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& chann
 }
 
 ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AdminService::Stub::AsyncDumpIPv4ToJSONRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>::Create(channel_.get(), cq, rpcmethod_DumpIPv4ToJSON_, context, request);
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>(channel_.get(), cq, rpcmethod_DumpIPv4ToJSON_, context, request);
 }
 
 ::grpc::Status AdminService::Stub::DumpDomainToJSON(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) {
@@ -151,7 +151,7 @@ AdminService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& chann
 }
 
 ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AdminService::Stub::AsyncDumpDomainToJSONRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>::Create(channel_.get(), cq, rpcmethod_DumpDomainToJSON_, context, request);
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>(channel_.get(), cq, rpcmethod_DumpDomainToJSON_, context, request);
 }
 
 ::grpc::Status AdminService::Stub::DumpCertificatesToJSON(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) {
@@ -159,7 +159,7 @@ AdminService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& chann
 }
 
 ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AdminService::Stub::AsyncDumpCertificatesToJSONRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>::Create(channel_.get(), cq, rpcmethod_DumpCertificatesToJSON_, context, request);
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>(channel_.get(), cq, rpcmethod_DumpCertificatesToJSON_, context, request);
 }
 
 ::grpc::Status AdminService::Stub::DumpKeysToJSON(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) {
@@ -167,7 +167,7 @@ AdminService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& chann
 }
 
 ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AdminService::Stub::AsyncDumpKeysToJSONRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>::Create(channel_.get(), cq, rpcmethod_DumpKeysToJSON_, context, request);
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>(channel_.get(), cq, rpcmethod_DumpKeysToJSON_, context, request);
 }
 
 ::grpc::Status AdminService::Stub::RegenerateIPv4Deltas(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) {
@@ -175,7 +175,7 @@ AdminService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& chann
 }
 
 ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AdminService::Stub::AsyncRegenerateIPv4DeltasRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>::Create(channel_.get(), cq, rpcmethod_RegenerateIPv4Deltas_, context, request);
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>(channel_.get(), cq, rpcmethod_RegenerateIPv4Deltas_, context, request);
 }
 
 ::grpc::Status AdminService::Stub::RegenerateDomainDeltas(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) {
@@ -183,7 +183,7 @@ AdminService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& chann
 }
 
 ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AdminService::Stub::AsyncRegenerateDomainDeltasRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>::Create(channel_.get(), cq, rpcmethod_RegenerateDomainDeltas_, context, request);
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>(channel_.get(), cq, rpcmethod_RegenerateDomainDeltas_, context, request);
 }
 
 ::grpc::Status AdminService::Stub::RegenerateCertificateDeltas(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) {
@@ -191,7 +191,7 @@ AdminService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& chann
 }
 
 ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AdminService::Stub::AsyncRegenerateCertificateDeltasRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>::Create(channel_.get(), cq, rpcmethod_RegenerateCertificateDeltas_, context, request);
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>(channel_.get(), cq, rpcmethod_RegenerateCertificateDeltas_, context, request);
 }
 
 ::grpc::Status AdminService::Stub::RegenerateSingleCertificateDelta(::grpc::ClientContext* context, const ::zsearch::AnonymousQuery& request, ::zsearch::CommandReply* response) {
@@ -199,7 +199,7 @@ AdminService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& chann
 }
 
 ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AdminService::Stub::AsyncRegenerateSingleCertificateDeltaRaw(::grpc::ClientContext* context, const ::zsearch::AnonymousQuery& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>::Create(channel_.get(), cq, rpcmethod_RegenerateSingleCertificateDelta_, context, request);
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>(channel_.get(), cq, rpcmethod_RegenerateSingleCertificateDelta_, context, request);
 }
 
 ::grpc::Status AdminService::Stub::ReprocessCertificates(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) {
@@ -207,7 +207,7 @@ AdminService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& chann
 }
 
 ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AdminService::Stub::AsyncReprocessCertificatesRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>::Create(channel_.get(), cq, rpcmethod_ReprocessCertificates_, context, request);
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>(channel_.get(), cq, rpcmethod_ReprocessCertificates_, context, request);
 }
 
 ::grpc::Status AdminService::Stub::ReprocessSingleCertificate(::grpc::ClientContext* context, const ::zsearch::AnonymousQuery& request, ::zsearch::CommandReply* response) {
@@ -215,7 +215,7 @@ AdminService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& chann
 }
 
 ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AdminService::Stub::AsyncReprocessSingleCertificateRaw(::grpc::ClientContext* context, const ::zsearch::AnonymousQuery& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>::Create(channel_.get(), cq, rpcmethod_ReprocessSingleCertificate_, context, request);
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>(channel_.get(), cq, rpcmethod_ReprocessSingleCertificate_, context, request);
 }
 
 ::grpc::Status AdminService::Stub::Ping(::grpc::ClientContext* context, const ::zsearch::Command& request, ::zsearch::CommandReply* response) {
@@ -223,7 +223,7 @@ AdminService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& chann
 }
 
 ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* AdminService::Stub::AsyncPingRaw(::grpc::ClientContext* context, const ::zsearch::Command& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>::Create(channel_.get(), cq, rpcmethod_Ping_, context, request);
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>(channel_.get(), cq, rpcmethod_Ping_, context, request);
 }
 
 AdminService::Service::Service() {
@@ -531,7 +531,7 @@ QueryService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& chann
 }
 
 ::grpc::ClientAsyncResponseReader< ::zsearch::HostQueryResponse>* QueryService::Stub::AsyncGetHostIPv4RecordRaw(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::ClientAsyncResponseReader< ::zsearch::HostQueryResponse>::Create(channel_.get(), cq, rpcmethod_GetHostIPv4Record_, context, request);
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::HostQueryResponse>(channel_.get(), cq, rpcmethod_GetHostIPv4Record_, context, request);
 }
 
 ::grpc::Status QueryService::Stub::PutHostIPv4Record(::grpc::ClientContext* context, const ::zsearch::Record& request, ::zsearch::Delta* response) {
@@ -539,7 +539,7 @@ QueryService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& chann
 }
 
 ::grpc::ClientAsyncResponseReader< ::zsearch::Delta>* QueryService::Stub::AsyncPutHostIPv4RecordRaw(::grpc::ClientContext* context, const ::zsearch::Record& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::ClientAsyncResponseReader< ::zsearch::Delta>::Create(channel_.get(), cq, rpcmethod_PutHostIPv4Record_, context, request);
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::Delta>(channel_.get(), cq, rpcmethod_PutHostIPv4Record_, context, request);
 }
 
 ::grpc::Status QueryService::Stub::DelHostIPv4Record(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::zsearch::Delta* response) {
@@ -547,7 +547,7 @@ QueryService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& chann
 }
 
 ::grpc::ClientAsyncResponseReader< ::zsearch::Delta>* QueryService::Stub::AsyncDelHostIPv4RecordRaw(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::ClientAsyncResponseReader< ::zsearch::Delta>::Create(channel_.get(), cq, rpcmethod_DelHostIPv4Record_, context, request);
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::Delta>(channel_.get(), cq, rpcmethod_DelHostIPv4Record_, context, request);
 }
 
 ::grpc::Status QueryService::Stub::GetAllIPv4Records(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::zsearch::HostQueryResponse* response) {
@@ -555,7 +555,7 @@ QueryService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& chann
 }
 
 ::grpc::ClientAsyncResponseReader< ::zsearch::HostQueryResponse>* QueryService::Stub::AsyncGetAllIPv4RecordsRaw(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::ClientAsyncResponseReader< ::zsearch::HostQueryResponse>::Create(channel_.get(), cq, rpcmethod_GetAllIPv4Records_, context, request);
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::HostQueryResponse>(channel_.get(), cq, rpcmethod_GetAllIPv4Records_, context, request);
 }
 
 ::grpc::Status QueryService::Stub::GetHostIPv4Delta(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::zsearch::Delta* response) {
@@ -563,7 +563,7 @@ QueryService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& chann
 }
 
 ::grpc::ClientAsyncResponseReader< ::zsearch::Delta>* QueryService::Stub::AsyncGetHostIPv4DeltaRaw(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::ClientAsyncResponseReader< ::zsearch::Delta>::Create(channel_.get(), cq, rpcmethod_GetHostIPv4Delta_, context, request);
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::Delta>(channel_.get(), cq, rpcmethod_GetHostIPv4Delta_, context, request);
 }
 
 ::grpc::Status QueryService::Stub::GetHostDomainRecord(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::zsearch::HostQueryResponse* response) {
@@ -571,7 +571,7 @@ QueryService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& chann
 }
 
 ::grpc::ClientAsyncResponseReader< ::zsearch::HostQueryResponse>* QueryService::Stub::AsyncGetHostDomainRecordRaw(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::ClientAsyncResponseReader< ::zsearch::HostQueryResponse>::Create(channel_.get(), cq, rpcmethod_GetHostDomainRecord_, context, request);
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::HostQueryResponse>(channel_.get(), cq, rpcmethod_GetHostDomainRecord_, context, request);
 }
 
 ::grpc::Status QueryService::Stub::PutHostDomainRecord(::grpc::ClientContext* context, const ::zsearch::Record& request, ::zsearch::Delta* response) {
@@ -579,7 +579,7 @@ QueryService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& chann
 }
 
 ::grpc::ClientAsyncResponseReader< ::zsearch::Delta>* QueryService::Stub::AsyncPutHostDomainRecordRaw(::grpc::ClientContext* context, const ::zsearch::Record& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::ClientAsyncResponseReader< ::zsearch::Delta>::Create(channel_.get(), cq, rpcmethod_PutHostDomainRecord_, context, request);
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::Delta>(channel_.get(), cq, rpcmethod_PutHostDomainRecord_, context, request);
 }
 
 ::grpc::Status QueryService::Stub::DelHostDomainRecord(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::zsearch::Delta* response) {
@@ -587,7 +587,7 @@ QueryService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& chann
 }
 
 ::grpc::ClientAsyncResponseReader< ::zsearch::Delta>* QueryService::Stub::AsyncDelHostDomainRecordRaw(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::ClientAsyncResponseReader< ::zsearch::Delta>::Create(channel_.get(), cq, rpcmethod_DelHostDomainRecord_, context, request);
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::Delta>(channel_.get(), cq, rpcmethod_DelHostDomainRecord_, context, request);
 }
 
 ::grpc::Status QueryService::Stub::GetAllDomainRecords(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::zsearch::HostQueryResponse* response) {
@@ -595,7 +595,7 @@ QueryService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& chann
 }
 
 ::grpc::ClientAsyncResponseReader< ::zsearch::HostQueryResponse>* QueryService::Stub::AsyncGetAllDomainRecordsRaw(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::ClientAsyncResponseReader< ::zsearch::HostQueryResponse>::Create(channel_.get(), cq, rpcmethod_GetAllDomainRecords_, context, request);
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::HostQueryResponse>(channel_.get(), cq, rpcmethod_GetAllDomainRecords_, context, request);
 }
 
 ::grpc::Status QueryService::Stub::GetHostDomainDelta(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::zsearch::Delta* response) {
@@ -603,7 +603,7 @@ QueryService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& chann
 }
 
 ::grpc::ClientAsyncResponseReader< ::zsearch::Delta>* QueryService::Stub::AsyncGetHostDomainDeltaRaw(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::ClientAsyncResponseReader< ::zsearch::Delta>::Create(channel_.get(), cq, rpcmethod_GetHostDomainDelta_, context, request);
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::Delta>(channel_.get(), cq, rpcmethod_GetHostDomainDelta_, context, request);
 }
 
 ::grpc::Status QueryService::Stub::GetCertificate(::grpc::ClientContext* context, const ::zsearch::AnonymousQuery& request, ::zsearch::AnonymousQueryResponse* response) {
@@ -611,7 +611,7 @@ QueryService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& chann
 }
 
 ::grpc::ClientAsyncResponseReader< ::zsearch::AnonymousQueryResponse>* QueryService::Stub::AsyncGetCertificateRaw(::grpc::ClientContext* context, const ::zsearch::AnonymousQuery& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::ClientAsyncResponseReader< ::zsearch::AnonymousQueryResponse>::Create(channel_.get(), cq, rpcmethod_GetCertificate_, context, request);
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::AnonymousQueryResponse>(channel_.get(), cq, rpcmethod_GetCertificate_, context, request);
 }
 
 ::grpc::Status QueryService::Stub::UpsertCertificate(::grpc::ClientContext* context, const ::zsearch::AnonymousRecord& request, ::zsearch::AnonymousDelta* response) {
@@ -619,7 +619,7 @@ QueryService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& chann
 }
 
 ::grpc::ClientAsyncResponseReader< ::zsearch::AnonymousDelta>* QueryService::Stub::AsyncUpsertCertificateRaw(::grpc::ClientContext* context, const ::zsearch::AnonymousRecord& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::ClientAsyncResponseReader< ::zsearch::AnonymousDelta>::Create(channel_.get(), cq, rpcmethod_UpsertCertificate_, context, request);
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::AnonymousDelta>(channel_.get(), cq, rpcmethod_UpsertCertificate_, context, request);
 }
 
 ::grpc::Status QueryService::Stub::UpsertRawCertificate(::grpc::ClientContext* context, const ::zsearch::AnonymousRecord& request, ::zsearch::AnonymousDelta* response) {
@@ -627,7 +627,7 @@ QueryService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& chann
 }
 
 ::grpc::ClientAsyncResponseReader< ::zsearch::AnonymousDelta>* QueryService::Stub::AsyncUpsertRawCertificateRaw(::grpc::ClientContext* context, const ::zsearch::AnonymousRecord& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::ClientAsyncResponseReader< ::zsearch::AnonymousDelta>::Create(channel_.get(), cq, rpcmethod_UpsertRawCertificate_, context, request);
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::AnonymousDelta>(channel_.get(), cq, rpcmethod_UpsertRawCertificate_, context, request);
 }
 
 ::grpc::Status QueryService::Stub::GetCryptographicKey(::grpc::ClientContext* context, const ::zsearch::AnonymousQuery& request, ::zsearch::AnonymousQueryResponse* response) {
@@ -635,7 +635,7 @@ QueryService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& chann
 }
 
 ::grpc::ClientAsyncResponseReader< ::zsearch::AnonymousQueryResponse>* QueryService::Stub::AsyncGetCryptographicKeyRaw(::grpc::ClientContext* context, const ::zsearch::AnonymousQuery& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::ClientAsyncResponseReader< ::zsearch::AnonymousQueryResponse>::Create(channel_.get(), cq, rpcmethod_GetCryptographicKey_, context, request);
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::AnonymousQueryResponse>(channel_.get(), cq, rpcmethod_GetCryptographicKey_, context, request);
 }
 
 ::grpc::Status QueryService::Stub::UpsertCryptographicKey(::grpc::ClientContext* context, const ::zsearch::AnonymousRecord& request, ::zsearch::AnonymousDelta* response) {
@@ -643,7 +643,7 @@ QueryService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& chann
 }
 
 ::grpc::ClientAsyncResponseReader< ::zsearch::AnonymousDelta>* QueryService::Stub::AsyncUpsertCryptographicKeyRaw(::grpc::ClientContext* context, const ::zsearch::AnonymousRecord& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::ClientAsyncResponseReader< ::zsearch::AnonymousDelta>::Create(channel_.get(), cq, rpcmethod_UpsertCryptographicKey_, context, request);
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::AnonymousDelta>(channel_.get(), cq, rpcmethod_UpsertCryptographicKey_, context, request);
 }
 
 ::grpc::Status QueryService::Stub::GetPublicLocation(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::zsearch::LocationAtom* response) {
@@ -651,7 +651,7 @@ QueryService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& chann
 }
 
 ::grpc::ClientAsyncResponseReader< ::zsearch::LocationAtom>* QueryService::Stub::AsyncGetPublicLocationRaw(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::ClientAsyncResponseReader< ::zsearch::LocationAtom>::Create(channel_.get(), cq, rpcmethod_GetPublicLocation_, context, request);
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::LocationAtom>(channel_.get(), cq, rpcmethod_GetPublicLocation_, context, request);
 }
 
 ::grpc::Status QueryService::Stub::GetRestrictedLocation(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::zsearch::LocationAtom* response) {
@@ -659,7 +659,7 @@ QueryService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& chann
 }
 
 ::grpc::ClientAsyncResponseReader< ::zsearch::LocationAtom>* QueryService::Stub::AsyncGetRestrictedLocationRaw(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::ClientAsyncResponseReader< ::zsearch::LocationAtom>::Create(channel_.get(), cq, rpcmethod_GetRestrictedLocation_, context, request);
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::LocationAtom>(channel_.get(), cq, rpcmethod_GetRestrictedLocation_, context, request);
 }
 
 ::grpc::Status QueryService::Stub::GetWHOIS(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::zsearch::Record* response) {
@@ -667,7 +667,7 @@ QueryService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& chann
 }
 
 ::grpc::ClientAsyncResponseReader< ::zsearch::Record>* QueryService::Stub::AsyncGetWHOISRaw(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::ClientAsyncResponseReader< ::zsearch::Record>::Create(channel_.get(), cq, rpcmethod_GetWHOIS_, context, request);
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::Record>(channel_.get(), cq, rpcmethod_GetWHOIS_, context, request);
 }
 
 ::grpc::Status QueryService::Stub::GetUserMetadata(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::zsearch::Record* response) {
@@ -675,7 +675,7 @@ QueryService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& chann
 }
 
 ::grpc::ClientAsyncResponseReader< ::zsearch::Record>* QueryService::Stub::AsyncGetUserMetadataRaw(::grpc::ClientContext* context, const ::zsearch::HostQuery& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::ClientAsyncResponseReader< ::zsearch::Record>::Create(channel_.get(), cq, rpcmethod_GetUserMetadata_, context, request);
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::Record>(channel_.get(), cq, rpcmethod_GetUserMetadata_, context, request);
 }
 
 ::grpc::Status QueryService::Stub::PutUserMetadata(::grpc::ClientContext* context, const ::zsearch::Record& request, ::zsearch::CommandReply* response) {
@@ -683,7 +683,7 @@ QueryService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& chann
 }
 
 ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>* QueryService::Stub::AsyncPutUserMetadataRaw(::grpc::ClientContext* context, const ::zsearch::Record& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>::Create(channel_.get(), cq, rpcmethod_PutUserMetadata_, context, request);
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::CommandReply>(channel_.get(), cq, rpcmethod_PutUserMetadata_, context, request);
 }
 
 ::grpc::Status QueryService::Stub::GetRootStore(::grpc::ClientContext* context, const ::zsearch::RootStoreQuery& request, ::zsearch::RootStoreReply* response) {
@@ -691,7 +691,7 @@ QueryService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& chann
 }
 
 ::grpc::ClientAsyncResponseReader< ::zsearch::RootStoreReply>* QueryService::Stub::AsyncGetRootStoreRaw(::grpc::ClientContext* context, const ::zsearch::RootStoreQuery& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::ClientAsyncResponseReader< ::zsearch::RootStoreReply>::Create(channel_.get(), cq, rpcmethod_GetRootStore_, context, request);
+  return new ::grpc::ClientAsyncResponseReader< ::zsearch::RootStoreReply>(channel_.get(), cq, rpcmethod_GetRootStore_, context, request);
 }
 
 QueryService::Service::Service() {

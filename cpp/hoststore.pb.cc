@@ -50,36 +50,15 @@ namespace {
 
 }  // namespace
 
-PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTableField
-    const TableStruct::entries[] = {
-  {0, 0, 0, ::google::protobuf::internal::kInvalidMask, 0, 0},
-};
-
-PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::AuxillaryParseTableField
-    const TableStruct::aux[] = {
-  ::google::protobuf::internal::AuxillaryParseTableField(),
-};
-PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTable const
-    TableStruct::schema[] = {
-  { NULL, NULL, 0, -1, -1, false },
-  { NULL, NULL, 0, -1, -1, false },
-  { NULL, NULL, 0, -1, -1, false },
-  { NULL, NULL, 0, -1, -1, false },
-  { NULL, NULL, 0, -1, -1, false },
-  { NULL, NULL, 0, -1, -1, false },
-};
-
 const ::google::protobuf::uint32 TableStruct::offsets[] = {
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(WHOISAtom, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LocationAtom, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LocationAtom, continent_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LocationAtom, country_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LocationAtom, country_code_),
@@ -95,7 +74,6 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ProtocolAtom, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ProtocolAtom, metadata_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ProtocolAtom, tags_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ProtocolAtom, data_),
@@ -103,7 +81,6 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AnonymousKey, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AnonymousKey, port_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AnonymousKey, protocol_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AnonymousKey, subprotocol_),
@@ -111,7 +88,6 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Record, _internal_metadata_),
   ~0u,  // no _extensions_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Record, _oneof_case_[0]),
-  ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Record, ip_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Record, port_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Record, protocol_),
@@ -122,22 +98,21 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Record, sha256fp_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Record, first_seen_at_scan_id_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Record, last_seen_at_scan_id_),
-  GOOGLE_PROTOBUF_GENERATED_DEFAULT_ONEOF_FIELD_OFFSET((&_Record_default_instance_), atom_),
-  GOOGLE_PROTOBUF_GENERATED_DEFAULT_ONEOF_FIELD_OFFSET((&_Record_default_instance_), private_location_),
-  GOOGLE_PROTOBUF_GENERATED_DEFAULT_ONEOF_FIELD_OFFSET((&_Record_default_instance_), as_atom_),
-  GOOGLE_PROTOBUF_GENERATED_DEFAULT_ONEOF_FIELD_OFFSET((&_Record_default_instance_), whois_),
-  GOOGLE_PROTOBUF_GENERATED_DEFAULT_ONEOF_FIELD_OFFSET((&_Record_default_instance_), userdata_),
-  GOOGLE_PROTOBUF_GENERATED_DEFAULT_ONEOF_FIELD_OFFSET((&_Record_default_instance_), public_location_),
-  GOOGLE_PROTOBUF_GENERATED_DEFAULT_ONEOF_FIELD_OFFSET((&_Record_default_instance_), alexa_rank_),
-  GOOGLE_PROTOBUF_GENERATED_DEFAULT_ONEOF_FIELD_OFFSET((&_Record_default_instance_), quantcast_rank_),
-  GOOGLE_PROTOBUF_GENERATED_DEFAULT_ONEOF_FIELD_OFFSET((&_Record_default_instance_), cisco_umbrella_rank_),
+  PROTO2_GENERATED_DEFAULT_ONEOF_FIELD_OFFSET((&_Record_default_instance_), atom_),
+  PROTO2_GENERATED_DEFAULT_ONEOF_FIELD_OFFSET((&_Record_default_instance_), private_location_),
+  PROTO2_GENERATED_DEFAULT_ONEOF_FIELD_OFFSET((&_Record_default_instance_), as_atom_),
+  PROTO2_GENERATED_DEFAULT_ONEOF_FIELD_OFFSET((&_Record_default_instance_), whois_),
+  PROTO2_GENERATED_DEFAULT_ONEOF_FIELD_OFFSET((&_Record_default_instance_), userdata_),
+  PROTO2_GENERATED_DEFAULT_ONEOF_FIELD_OFFSET((&_Record_default_instance_), public_location_),
+  PROTO2_GENERATED_DEFAULT_ONEOF_FIELD_OFFSET((&_Record_default_instance_), alexa_rank_),
+  PROTO2_GENERATED_DEFAULT_ONEOF_FIELD_OFFSET((&_Record_default_instance_), quantcast_rank_),
+  PROTO2_GENERATED_DEFAULT_ONEOF_FIELD_OFFSET((&_Record_default_instance_), cisco_umbrella_rank_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Record, version_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Record, data_oneof_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Delta, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Delta, delta_type_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Delta, ip_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Delta, domain_),
@@ -147,11 +122,11 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
 
 static const ::google::protobuf::internal::MigrationSchema schemas[] = {
   { 0, -1, sizeof(WHOISAtom)},
-  { 5, -1, sizeof(LocationAtom)},
-  { 21, -1, sizeof(ProtocolAtom)},
-  { 29, -1, sizeof(AnonymousKey)},
-  { 37, -1, sizeof(Record)},
-  { 63, -1, sizeof(Delta)},
+  { 4, -1, sizeof(LocationAtom)},
+  { 19, -1, sizeof(ProtocolAtom)},
+  { 26, -1, sizeof(AnonymousKey)},
+  { 33, -1, sizeof(Record)},
+  { 58, -1, sizeof(Delta)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -328,7 +303,7 @@ void WHOISAtom::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* WHOISAtom::descriptor() {
   protobuf_hoststore_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_hoststore_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+  return protobuf_hoststore_2eproto::file_level_metadata[0].descriptor;
 }
 
 const WHOISAtom& WHOISAtom::default_instance() {
@@ -377,18 +352,13 @@ failure:
 void WHOISAtom::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:zsearch.WHOISAtom)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
   // @@protoc_insertion_point(serialize_end:zsearch.WHOISAtom)
 }
 
 ::google::protobuf::uint8* WHOISAtom::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:zsearch.WHOISAtom)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
   // @@protoc_insertion_point(serialize_to_array_end:zsearch.WHOISAtom)
   return target;
 }
@@ -423,9 +393,6 @@ void WHOISAtom::MergeFrom(const WHOISAtom& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:zsearch.WHOISAtom)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
 }
 
 void WHOISAtom::CopyFrom(const ::google::protobuf::Message& from) {
@@ -456,7 +423,7 @@ void WHOISAtom::InternalSwap(WHOISAtom* other) {
 
 ::google::protobuf::Metadata WHOISAtom::GetMetadata() const {
   protobuf_hoststore_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_hoststore_2eproto::file_level_metadata[kIndexInFileMessages];
+  return protobuf_hoststore_2eproto::file_level_metadata[0];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -574,7 +541,7 @@ void LocationAtom::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* LocationAtom::descriptor() {
   protobuf_hoststore_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_hoststore_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+  return protobuf_hoststore_2eproto::file_level_metadata[1].descriptor;
 }
 
 const LocationAtom& LocationAtom::default_instance() {
@@ -617,8 +584,7 @@ bool LocationAtom::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // string continent = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u)) {
+        if (tag == 10u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_continent()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -633,8 +599,7 @@ bool LocationAtom::MergePartialFromCodedStream(
 
       // string country = 2;
       case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(18u)) {
+        if (tag == 18u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_country()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -649,8 +614,7 @@ bool LocationAtom::MergePartialFromCodedStream(
 
       // string country_code = 3;
       case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(26u)) {
+        if (tag == 26u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_country_code()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -665,8 +629,7 @@ bool LocationAtom::MergePartialFromCodedStream(
 
       // string city = 4;
       case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(34u)) {
+        if (tag == 34u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_city()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -681,8 +644,7 @@ bool LocationAtom::MergePartialFromCodedStream(
 
       // string postal_code = 5;
       case 5: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(42u)) {
+        if (tag == 42u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_postal_code()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -697,8 +659,7 @@ bool LocationAtom::MergePartialFromCodedStream(
 
       // string timezone = 6;
       case 6: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(50u)) {
+        if (tag == 50u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_timezone()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -713,8 +674,7 @@ bool LocationAtom::MergePartialFromCodedStream(
 
       // string province = 7;
       case 7: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(58u)) {
+        if (tag == 58u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_province()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -729,8 +689,7 @@ bool LocationAtom::MergePartialFromCodedStream(
 
       // double latitude = 8;
       case 8: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(65u)) {
+        if (tag == 65u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
@@ -743,8 +702,7 @@ bool LocationAtom::MergePartialFromCodedStream(
 
       // double longitude = 9;
       case 9: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(73u)) {
+        if (tag == 73u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
@@ -757,8 +715,7 @@ bool LocationAtom::MergePartialFromCodedStream(
 
       // string registered_country = 10;
       case 10: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(82u)) {
+        if (tag == 82u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_registered_country()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -773,8 +730,7 @@ bool LocationAtom::MergePartialFromCodedStream(
 
       // string registered_country_code = 11;
       case 11: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(90u)) {
+        if (tag == 90u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_registered_country_code()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -811,9 +767,6 @@ failure:
 void LocationAtom::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:zsearch.LocationAtom)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
   // string continent = 1;
   if (this->continent().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -919,10 +872,8 @@ void LocationAtom::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* LocationAtom::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:zsearch.LocationAtom)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
   // string continent = 1;
   if (this->continent().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -1139,9 +1090,6 @@ void LocationAtom::MergeFrom(const LocationAtom& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:zsearch.LocationAtom)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
   if (from.continent().size() > 0) {
 
     continent_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.continent_);
@@ -1225,7 +1173,7 @@ void LocationAtom::InternalSwap(LocationAtom* other) {
 
 ::google::protobuf::Metadata LocationAtom::GetMetadata() const {
   protobuf_hoststore_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_hoststore_2eproto::file_level_metadata[kIndexInFileMessages];
+  return protobuf_hoststore_2eproto::file_level_metadata[1];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -1248,12 +1196,11 @@ void LocationAtom::set_continent(const ::std::string& value) {
 void LocationAtom::set_continent(::std::string&& value) {
   
   continent_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.LocationAtom.continent)
 }
 #endif
 void LocationAtom::set_continent(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
   
   continent_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.LocationAtom.continent)
@@ -1301,12 +1248,11 @@ void LocationAtom::set_country(const ::std::string& value) {
 void LocationAtom::set_country(::std::string&& value) {
   
   country_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.LocationAtom.country)
 }
 #endif
 void LocationAtom::set_country(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
   
   country_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.LocationAtom.country)
@@ -1354,12 +1300,11 @@ void LocationAtom::set_country_code(const ::std::string& value) {
 void LocationAtom::set_country_code(::std::string&& value) {
   
   country_code_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.LocationAtom.country_code)
 }
 #endif
 void LocationAtom::set_country_code(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
   
   country_code_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.LocationAtom.country_code)
@@ -1407,12 +1352,11 @@ void LocationAtom::set_city(const ::std::string& value) {
 void LocationAtom::set_city(::std::string&& value) {
   
   city_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.LocationAtom.city)
 }
 #endif
 void LocationAtom::set_city(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
   
   city_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.LocationAtom.city)
@@ -1460,12 +1404,11 @@ void LocationAtom::set_postal_code(const ::std::string& value) {
 void LocationAtom::set_postal_code(::std::string&& value) {
   
   postal_code_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.LocationAtom.postal_code)
 }
 #endif
 void LocationAtom::set_postal_code(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
   
   postal_code_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.LocationAtom.postal_code)
@@ -1513,12 +1456,11 @@ void LocationAtom::set_timezone(const ::std::string& value) {
 void LocationAtom::set_timezone(::std::string&& value) {
   
   timezone_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.LocationAtom.timezone)
 }
 #endif
 void LocationAtom::set_timezone(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
   
   timezone_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.LocationAtom.timezone)
@@ -1566,12 +1508,11 @@ void LocationAtom::set_province(const ::std::string& value) {
 void LocationAtom::set_province(::std::string&& value) {
   
   province_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.LocationAtom.province)
 }
 #endif
 void LocationAtom::set_province(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
   
   province_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.LocationAtom.province)
@@ -1647,12 +1588,11 @@ void LocationAtom::set_registered_country(const ::std::string& value) {
 void LocationAtom::set_registered_country(::std::string&& value) {
   
   registered_country_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.LocationAtom.registered_country)
 }
 #endif
 void LocationAtom::set_registered_country(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
   
   registered_country_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.LocationAtom.registered_country)
@@ -1700,12 +1640,11 @@ void LocationAtom::set_registered_country_code(const ::std::string& value) {
 void LocationAtom::set_registered_country_code(::std::string&& value) {
   
   registered_country_code_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.LocationAtom.registered_country_code)
 }
 #endif
 void LocationAtom::set_registered_country_code(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
   
   registered_country_code_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.LocationAtom.registered_country_code)
@@ -1789,7 +1728,7 @@ void ProtocolAtom::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* ProtocolAtom::descriptor() {
   protobuf_hoststore_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_hoststore_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+  return protobuf_hoststore_2eproto::file_level_metadata[2].descriptor;
 }
 
 const ProtocolAtom& ProtocolAtom::default_instance() {
@@ -1824,20 +1763,20 @@ bool ProtocolAtom::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // repeated .zsearch.Metadatum metadata = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+        if (tag == 10u) {
+          DO_(input->IncrementRecursionDepth());
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtualNoRecursionDepth(
                 input, add_metadata()));
         } else {
           goto handle_unusual;
         }
+        input->UnsafeDecrementRecursionDepth();
         break;
       }
 
       // repeated string tags = 2;
       case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(18u)) {
+        if (tag == 18u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->add_tags()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -1853,8 +1792,7 @@ bool ProtocolAtom::MergePartialFromCodedStream(
 
       // string data = 3;
       case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(26u)) {
+        if (tag == 26u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_data()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -1891,9 +1829,6 @@ failure:
 void ProtocolAtom::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:zsearch.ProtocolAtom)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
   // repeated .zsearch.Metadatum metadata = 1;
   for (unsigned int i = 0, n = this->metadata_size(); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
@@ -1901,7 +1836,7 @@ void ProtocolAtom::SerializeWithCachedSizes(
   }
 
   // repeated string tags = 2;
-  for (int i = 0, n = this->tags_size(); i < n; i++) {
+  for (int i = 0; i < this->tags_size(); i++) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->tags(i).data(), this->tags(i).length(),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
@@ -1925,19 +1860,17 @@ void ProtocolAtom::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* ProtocolAtom::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:zsearch.ProtocolAtom)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
   // repeated .zsearch.Metadatum metadata = 1;
   for (unsigned int i = 0, n = this->metadata_size(); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        1, this->metadata(i), deterministic, target);
+        1, this->metadata(i), false, target);
   }
 
   // repeated string tags = 2;
-  for (int i = 0, n = this->tags_size(); i < n; i++) {
+  for (int i = 0; i < this->tags_size(); i++) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->tags(i).data(), this->tags(i).length(),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
@@ -1979,7 +1912,7 @@ size_t ProtocolAtom::ByteSizeLong() const {
   // repeated string tags = 2;
   total_size += 1 *
       ::google::protobuf::internal::FromIntSize(this->tags_size());
-  for (int i = 0, n = this->tags_size(); i < n; i++) {
+  for (int i = 0; i < this->tags_size(); i++) {
     total_size += ::google::protobuf::internal::WireFormatLite::StringSize(
       this->tags(i));
   }
@@ -2017,9 +1950,6 @@ void ProtocolAtom::MergeFrom(const ProtocolAtom& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:zsearch.ProtocolAtom)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
   metadata_.MergeFrom(from.metadata_);
   tags_.MergeFrom(from.tags_);
   if (from.data().size() > 0) {
@@ -2051,15 +1981,15 @@ void ProtocolAtom::Swap(ProtocolAtom* other) {
   InternalSwap(other);
 }
 void ProtocolAtom::InternalSwap(ProtocolAtom* other) {
-  metadata_.InternalSwap(&other->metadata_);
-  tags_.InternalSwap(&other->tags_);
+  metadata_.UnsafeArenaSwap(&other->metadata_);
+  tags_.UnsafeArenaSwap(&other->tags_);
   data_.Swap(&other->data_);
   std::swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata ProtocolAtom::GetMetadata() const {
   protobuf_hoststore_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_hoststore_2eproto::file_level_metadata[kIndexInFileMessages];
+  return protobuf_hoststore_2eproto::file_level_metadata[2];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -2114,14 +2044,7 @@ void ProtocolAtom::set_tags(int index, const ::std::string& value) {
   // @@protoc_insertion_point(field_set:zsearch.ProtocolAtom.tags)
   tags_.Mutable(index)->assign(value);
 }
-#if LANG_CXX11
-void ProtocolAtom::set_tags(int index, ::std::string&& value) {
-  // @@protoc_insertion_point(field_set:zsearch.ProtocolAtom.tags)
-  tags_.Mutable(index)->assign(std::move(value));
-}
-#endif
 void ProtocolAtom::set_tags(int index, const char* value) {
-  GOOGLE_DCHECK(value != NULL);
   tags_.Mutable(index)->assign(value);
   // @@protoc_insertion_point(field_set_char:zsearch.ProtocolAtom.tags)
 }
@@ -2138,14 +2061,7 @@ void ProtocolAtom::add_tags(const ::std::string& value) {
   tags_.Add()->assign(value);
   // @@protoc_insertion_point(field_add:zsearch.ProtocolAtom.tags)
 }
-#if LANG_CXX11
-void ProtocolAtom::add_tags(::std::string&& value) {
-  tags_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:zsearch.ProtocolAtom.tags)
-}
-#endif
 void ProtocolAtom::add_tags(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
   tags_.Add()->assign(value);
   // @@protoc_insertion_point(field_add_char:zsearch.ProtocolAtom.tags)
 }
@@ -2181,12 +2097,11 @@ void ProtocolAtom::set_data(const ::std::string& value) {
 void ProtocolAtom::set_data(::std::string&& value) {
   
   data_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.ProtocolAtom.data)
 }
 #endif
 void ProtocolAtom::set_data(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
   
   data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.ProtocolAtom.data)
@@ -2267,7 +2182,7 @@ void AnonymousKey::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* AnonymousKey::descriptor() {
   protobuf_hoststore_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_hoststore_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+  return protobuf_hoststore_2eproto::file_level_metadata[3].descriptor;
 }
 
 const AnonymousKey& AnonymousKey::default_instance() {
@@ -2301,8 +2216,7 @@ bool AnonymousKey::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // uint32 port = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(8u)) {
+        if (tag == 8u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -2315,8 +2229,7 @@ bool AnonymousKey::MergePartialFromCodedStream(
 
       // uint32 protocol = 2;
       case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(16u)) {
+        if (tag == 16u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -2329,8 +2242,7 @@ bool AnonymousKey::MergePartialFromCodedStream(
 
       // uint32 subprotocol = 3;
       case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(24u)) {
+        if (tag == 24u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -2365,9 +2277,6 @@ failure:
 void AnonymousKey::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:zsearch.AnonymousKey)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
   // uint32 port = 1;
   if (this->port() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->port(), output);
@@ -2388,10 +2297,8 @@ void AnonymousKey::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* AnonymousKey::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:zsearch.AnonymousKey)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
   // uint32 port = 1;
   if (this->port() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->port(), target);
@@ -2462,9 +2369,6 @@ void AnonymousKey::MergeFrom(const AnonymousKey& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:zsearch.AnonymousKey)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
   if (from.port() != 0) {
     set_port(from.port());
   }
@@ -2507,7 +2411,7 @@ void AnonymousKey::InternalSwap(AnonymousKey* other) {
 
 ::google::protobuf::Metadata AnonymousKey::GetMetadata() const {
   protobuf_hoststore_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_hoststore_2eproto::file_level_metadata[kIndexInFileMessages];
+  return protobuf_hoststore_2eproto::file_level_metadata[3];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -2680,7 +2584,7 @@ void Record::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* Record::descriptor() {
   protobuf_hoststore_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_hoststore_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+  return protobuf_hoststore_2eproto::file_level_metadata[4].descriptor;
 }
 
 const Record& Record::default_instance() {
@@ -2764,8 +2668,7 @@ bool Record::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // fixed32 ip = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(13u)) {
+        if (tag == 13u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_FIXED32>(
@@ -2778,8 +2681,7 @@ bool Record::MergePartialFromCodedStream(
 
       // uint32 port = 2;
       case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(16u)) {
+        if (tag == 16u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -2792,8 +2694,7 @@ bool Record::MergePartialFromCodedStream(
 
       // uint32 protocol = 3;
       case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(24u)) {
+        if (tag == 24u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -2806,8 +2707,7 @@ bool Record::MergePartialFromCodedStream(
 
       // uint32 subprotocol = 4;
       case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(32u)) {
+        if (tag == 32u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -2820,8 +2720,7 @@ bool Record::MergePartialFromCodedStream(
 
       // string domain = 5;
       case 5: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(42u)) {
+        if (tag == 42u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_domain()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -2836,8 +2735,7 @@ bool Record::MergePartialFromCodedStream(
 
       // fixed32 timestamp = 6;
       case 6: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(53u)) {
+        if (tag == 53u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_FIXED32>(
@@ -2850,8 +2748,7 @@ bool Record::MergePartialFromCodedStream(
 
       // uint32 scanid = 7;
       case 7: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(56u)) {
+        if (tag == 56u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -2864,8 +2761,7 @@ bool Record::MergePartialFromCodedStream(
 
       // bytes sha256fp = 8;
       case 8: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(66u)) {
+        if (tag == 66u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
                 input, this->mutable_sha256fp()));
         } else {
@@ -2876,8 +2772,7 @@ bool Record::MergePartialFromCodedStream(
 
       // uint32 first_seen_at_scan_id = 9;
       case 9: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(72u)) {
+        if (tag == 72u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -2890,8 +2785,7 @@ bool Record::MergePartialFromCodedStream(
 
       // uint32 last_seen_at_scan_id = 10;
       case 10: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(80u)) {
+        if (tag == 80u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -2904,8 +2798,7 @@ bool Record::MergePartialFromCodedStream(
 
       // .zsearch.ProtocolAtom atom = 11;
       case 11: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(90u)) {
+        if (tag == 90u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_atom()));
         } else {
@@ -2916,8 +2809,7 @@ bool Record::MergePartialFromCodedStream(
 
       // .zsearch.LocationAtom private_location = 12;
       case 12: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(98u)) {
+        if (tag == 98u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_private_location()));
         } else {
@@ -2928,8 +2820,7 @@ bool Record::MergePartialFromCodedStream(
 
       // .zsearch.ASAtom as_atom = 13;
       case 13: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(106u)) {
+        if (tag == 106u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_as_atom()));
         } else {
@@ -2940,8 +2831,7 @@ bool Record::MergePartialFromCodedStream(
 
       // .zsearch.WHOISAtom whois = 14;
       case 14: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(114u)) {
+        if (tag == 114u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_whois()));
         } else {
@@ -2952,8 +2842,7 @@ bool Record::MergePartialFromCodedStream(
 
       // .zsearch.UserdataAtom userdata = 15;
       case 15: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(122u)) {
+        if (tag == 122u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_userdata()));
         } else {
@@ -2964,8 +2853,7 @@ bool Record::MergePartialFromCodedStream(
 
       // uint32 alexa_rank = 16;
       case 16: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(128u)) {
+        if (tag == 128u) {
           clear_data_oneof();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -2979,8 +2867,7 @@ bool Record::MergePartialFromCodedStream(
 
       // .zsearch.LocationAtom public_location = 17;
       case 17: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(138u)) {
+        if (tag == 138u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_public_location()));
         } else {
@@ -2991,8 +2878,7 @@ bool Record::MergePartialFromCodedStream(
 
       // uint64 version = 18;
       case 18: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(144u)) {
+        if (tag == 144u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>(
@@ -3005,8 +2891,7 @@ bool Record::MergePartialFromCodedStream(
 
       // uint32 quantcast_rank = 19;
       case 19: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(152u)) {
+        if (tag == 152u) {
           clear_data_oneof();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -3020,8 +2905,7 @@ bool Record::MergePartialFromCodedStream(
 
       // uint32 cisco_umbrella_rank = 20;
       case 20: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(160u)) {
+        if (tag == 160u) {
           clear_data_oneof();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -3057,9 +2941,6 @@ failure:
 void Record::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:zsearch.Record)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
   // fixed32 ip = 1;
   if (this->ip() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteFixed32(1, this->ip(), output);
@@ -3177,10 +3058,8 @@ void Record::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* Record::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:zsearch.Record)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
   // fixed32 ip = 1;
   if (this->ip() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteFixed32ToArray(1, this->ip(), target);
@@ -3243,35 +3122,35 @@ void Record::SerializeWithCachedSizes(
   if (has_atom()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        11, *data_oneof_.atom_, deterministic, target);
+        11, *data_oneof_.atom_, false, target);
   }
 
   // .zsearch.LocationAtom private_location = 12;
   if (has_private_location()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        12, *data_oneof_.private_location_, deterministic, target);
+        12, *data_oneof_.private_location_, false, target);
   }
 
   // .zsearch.ASAtom as_atom = 13;
   if (has_as_atom()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        13, *data_oneof_.as_atom_, deterministic, target);
+        13, *data_oneof_.as_atom_, false, target);
   }
 
   // .zsearch.WHOISAtom whois = 14;
   if (has_whois()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        14, *data_oneof_.whois_, deterministic, target);
+        14, *data_oneof_.whois_, false, target);
   }
 
   // .zsearch.UserdataAtom userdata = 15;
   if (has_userdata()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        15, *data_oneof_.userdata_, deterministic, target);
+        15, *data_oneof_.userdata_, false, target);
   }
 
   // uint32 alexa_rank = 16;
@@ -3283,7 +3162,7 @@ void Record::SerializeWithCachedSizes(
   if (has_public_location()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        17, *data_oneof_.public_location_, deterministic, target);
+        17, *data_oneof_.public_location_, false, target);
   }
 
   // uint64 version = 18;
@@ -3476,9 +3355,6 @@ void Record::MergeFrom(const Record& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:zsearch.Record)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
   if (from.domain().size() > 0) {
 
     domain_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.domain_);
@@ -3598,7 +3474,7 @@ void Record::InternalSwap(Record* other) {
 
 ::google::protobuf::Metadata Record::GetMetadata() const {
   protobuf_hoststore_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_hoststore_2eproto::file_level_metadata[kIndexInFileMessages];
+  return protobuf_hoststore_2eproto::file_level_metadata[4];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -3677,12 +3553,11 @@ void Record::set_domain(const ::std::string& value) {
 void Record::set_domain(::std::string&& value) {
   
   domain_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.Record.domain)
 }
 #endif
 void Record::set_domain(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
   
   domain_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.Record.domain)
@@ -3758,12 +3633,11 @@ void Record::set_sha256fp(const ::std::string& value) {
 void Record::set_sha256fp(::std::string&& value) {
   
   sha256fp_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.Record.sha256fp)
 }
 #endif
 void Record::set_sha256fp(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
   
   sha256fp_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.Record.sha256fp)
@@ -4279,7 +4153,7 @@ void Delta::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* Delta::descriptor() {
   protobuf_hoststore_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_hoststore_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+  return protobuf_hoststore_2eproto::file_level_metadata[5].descriptor;
 }
 
 const Delta& Delta::default_instance() {
@@ -4315,8 +4189,7 @@ bool Delta::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // .zsearch.DeltaType delta_type = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(8u)) {
+        if (tag == 8u) {
           int value;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
@@ -4330,8 +4203,7 @@ bool Delta::MergePartialFromCodedStream(
 
       // fixed32 ip = 2;
       case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(21u)) {
+        if (tag == 21u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_FIXED32>(
@@ -4344,8 +4216,7 @@ bool Delta::MergePartialFromCodedStream(
 
       // string domain = 3;
       case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(26u)) {
+        if (tag == 26u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_domain()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -4360,8 +4231,7 @@ bool Delta::MergePartialFromCodedStream(
 
       // uint64 version = 4;
       case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(32u)) {
+        if (tag == 32u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>(
@@ -4374,13 +4244,14 @@ bool Delta::MergePartialFromCodedStream(
 
       // repeated .zsearch.Record records = 5;
       case 5: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(42u)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+        if (tag == 42u) {
+          DO_(input->IncrementRecursionDepth());
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtualNoRecursionDepth(
                 input, add_records()));
         } else {
           goto handle_unusual;
         }
+        input->UnsafeDecrementRecursionDepth();
         break;
       }
 
@@ -4408,9 +4279,6 @@ failure:
 void Delta::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:zsearch.Delta)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
   // .zsearch.DeltaType delta_type = 1;
   if (this->delta_type() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteEnum(
@@ -4448,10 +4316,8 @@ void Delta::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* Delta::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:zsearch.Delta)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
   // .zsearch.DeltaType delta_type = 1;
   if (this->delta_type() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
@@ -4483,7 +4349,7 @@ void Delta::SerializeWithCachedSizes(
   for (unsigned int i = 0, n = this->records_size(); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        5, this->records(i), deterministic, target);
+        5, this->records(i), false, target);
   }
 
   // @@protoc_insertion_point(serialize_to_array_end:zsearch.Delta)
@@ -4556,9 +4422,6 @@ void Delta::MergeFrom(const Delta& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:zsearch.Delta)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
   records_.MergeFrom(from.records_);
   if (from.domain().size() > 0) {
 
@@ -4598,7 +4461,7 @@ void Delta::Swap(Delta* other) {
   InternalSwap(other);
 }
 void Delta::InternalSwap(Delta* other) {
-  records_.InternalSwap(&other->records_);
+  records_.UnsafeArenaSwap(&other->records_);
   domain_.Swap(&other->domain_);
   std::swap(delta_type_, other->delta_type_);
   std::swap(ip_, other->ip_);
@@ -4608,7 +4471,7 @@ void Delta::InternalSwap(Delta* other) {
 
 ::google::protobuf::Metadata Delta::GetMetadata() const {
   protobuf_hoststore_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_hoststore_2eproto::file_level_metadata[kIndexInFileMessages];
+  return protobuf_hoststore_2eproto::file_level_metadata[5];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -4659,12 +4522,11 @@ void Delta::set_domain(const ::std::string& value) {
 void Delta::set_domain(::std::string&& value) {
   
   domain_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.Delta.domain)
 }
 #endif
 void Delta::set_domain(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
   
   domain_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.Delta.domain)

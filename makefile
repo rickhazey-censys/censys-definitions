@@ -1,7 +1,4 @@
-all: go python cpp proto
-
-proto:
-	./build.py proto
+all: go python cpp
 
 go: proto/*.proto
 	./build.py go

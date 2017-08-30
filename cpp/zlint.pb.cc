@@ -35,35 +35,17 @@ const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[2];
 
 }  // namespace
 
-PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTableField
-    const TableStruct::entries[] = {
-  {0, 0, 0, ::google::protobuf::internal::kInvalidMask, 0, 0},
-};
-
-PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::AuxillaryParseTableField
-    const TableStruct::aux[] = {
-  ::google::protobuf::internal::AuxillaryParseTableField(),
-};
-PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTable const
-    TableStruct::schema[] = {
-  { NULL, NULL, 0, -1, -1, false },
-  { NULL, NULL, 0, -1, -1, false },
-  { NULL, NULL, 0, -1, -1, false },
-};
-
 const ::google::protobuf::uint32 TableStruct::offsets[] = {
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LintResult, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LintResult, result_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(LintResult, details_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ZLint, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ZLint, version_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ZLint, timestamp_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ZLint, status_),
@@ -77,7 +59,6 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, e_basic_constraints_not_critical_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, e_ian_bare_wildcard_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, e_ian_wildcard_not_first_),
@@ -278,8 +259,8 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
 
 static const ::google::protobuf::internal::MigrationSchema schemas[] = {
   { 0, -1, sizeof(LintResult)},
-  { 7, -1, sizeof(ZLint)},
-  { 21, -1, sizeof(Lints)},
+  { 6, -1, sizeof(ZLint)},
+  { 19, -1, sizeof(Lints)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -1166,7 +1147,7 @@ void LintResult::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* LintResult::descriptor() {
   protobuf_zlint_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_zlint_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+  return protobuf_zlint_2eproto::file_level_metadata[0].descriptor;
 }
 
 const LintResult& LintResult::default_instance() {
@@ -1200,8 +1181,7 @@ bool LintResult::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // .zsearch.LintResultStatus result = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(8u)) {
+        if (tag == 8u) {
           int value;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
@@ -1215,8 +1195,7 @@ bool LintResult::MergePartialFromCodedStream(
 
       // string details = 2;
       case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(18u)) {
+        if (tag == 18u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_details()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -1253,9 +1232,6 @@ failure:
 void LintResult::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:zsearch.LintResult)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
   // .zsearch.LintResultStatus result = 1;
   if (this->result() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteEnum(
@@ -1277,10 +1253,8 @@ void LintResult::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* LintResult::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:zsearch.LintResult)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
   // .zsearch.LintResultStatus result = 1;
   if (this->result() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
@@ -1345,9 +1319,6 @@ void LintResult::MergeFrom(const LintResult& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:zsearch.LintResult)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
   if (from.details().size() > 0) {
 
     details_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.details_);
@@ -1387,7 +1358,7 @@ void LintResult::InternalSwap(LintResult* other) {
 
 ::google::protobuf::Metadata LintResult::GetMetadata() const {
   protobuf_zlint_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_zlint_2eproto::file_level_metadata[kIndexInFileMessages];
+  return protobuf_zlint_2eproto::file_level_metadata[0];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -1424,12 +1395,11 @@ void LintResult::set_details(const ::std::string& value) {
 void LintResult::set_details(::std::string&& value) {
   
   details_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:zsearch.LintResult.details)
 }
 #endif
 void LintResult::set_details(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
   
   details_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:zsearch.LintResult.details)
@@ -1524,7 +1494,7 @@ void ZLint::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* ZLint::descriptor() {
   protobuf_zlint_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_zlint_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+  return protobuf_zlint_2eproto::file_level_metadata[1].descriptor;
 }
 
 const ZLint& ZLint::default_instance() {
@@ -1562,8 +1532,7 @@ bool ZLint::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // int64 version = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(8u)) {
+        if (tag == 8u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
@@ -1576,8 +1545,7 @@ bool ZLint::MergePartialFromCodedStream(
 
       // int64 timestamp = 2;
       case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(16u)) {
+        if (tag == 16u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
@@ -1590,8 +1558,7 @@ bool ZLint::MergePartialFromCodedStream(
 
       // .zsearch.ZLintStatus status = 3;
       case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(24u)) {
+        if (tag == 24u) {
           int value;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
@@ -1605,8 +1572,7 @@ bool ZLint::MergePartialFromCodedStream(
 
       // bool infos_present = 4;
       case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(32u)) {
+        if (tag == 32u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -1619,8 +1585,7 @@ bool ZLint::MergePartialFromCodedStream(
 
       // bool notices_present = 5;
       case 5: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(40u)) {
+        if (tag == 40u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -1633,8 +1598,7 @@ bool ZLint::MergePartialFromCodedStream(
 
       // bool warnings_present = 6;
       case 6: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(48u)) {
+        if (tag == 48u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -1647,8 +1611,7 @@ bool ZLint::MergePartialFromCodedStream(
 
       // bool errors_present = 7;
       case 7: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(56u)) {
+        if (tag == 56u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -1661,8 +1624,7 @@ bool ZLint::MergePartialFromCodedStream(
 
       // bool fatals_present = 8;
       case 8: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(64u)) {
+        if (tag == 64u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -1675,8 +1637,7 @@ bool ZLint::MergePartialFromCodedStream(
 
       // .zsearch.Lints lints = 9;
       case 9: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(74u)) {
+        if (tag == 74u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_lints()));
         } else {
@@ -1709,9 +1670,6 @@ failure:
 void ZLint::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:zsearch.ZLint)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
   // int64 version = 1;
   if (this->version() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt64(1, this->version(), output);
@@ -1764,10 +1722,8 @@ void ZLint::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* ZLint::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:zsearch.ZLint)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
   // int64 version = 1;
   if (this->version() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(1, this->version(), target);
@@ -1813,7 +1769,7 @@ void ZLint::SerializeWithCachedSizes(
   if (this->has_lints()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        9, *this->lints_, deterministic, target);
+        9, *this->lints_, false, target);
   }
 
   // @@protoc_insertion_point(serialize_to_array_end:zsearch.ZLint)
@@ -1902,9 +1858,6 @@ void ZLint::MergeFrom(const ZLint& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:zsearch.ZLint)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
   if (from.has_lints()) {
     mutable_lints()->::zsearch::Lints::MergeFrom(from.lints());
   }
@@ -1971,7 +1924,7 @@ void ZLint::InternalSwap(ZLint* other) {
 
 ::google::protobuf::Metadata ZLint::GetMetadata() const {
   protobuf_zlint_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_zlint_2eproto::file_level_metadata[kIndexInFileMessages];
+  return protobuf_zlint_2eproto::file_level_metadata[1];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -3936,7 +3889,7 @@ void Lints::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* Lints::descriptor() {
   protobuf_zlint_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_zlint_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+  return protobuf_zlint_2eproto::file_level_metadata[2].descriptor;
 }
 
 const Lints& Lints::default_instance() {
@@ -4752,8 +4705,7 @@ bool Lints::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // .zsearch.LintResult e_basic_constraints_not_critical = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u)) {
+        if (tag == 10u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_basic_constraints_not_critical()));
         } else {
@@ -4764,8 +4716,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ian_bare_wildcard = 2;
       case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(18u)) {
+        if (tag == 18u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ian_bare_wildcard()));
         } else {
@@ -4776,8 +4727,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ian_wildcard_not_first = 3;
       case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(26u)) {
+        if (tag == 26u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ian_wildcard_not_first()));
         } else {
@@ -4788,8 +4738,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_san_bare_wildcard = 4;
       case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(34u)) {
+        if (tag == 34u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_san_bare_wildcard()));
         } else {
@@ -4800,8 +4749,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_san_wildcard_not_first = 5;
       case 5: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(42u)) {
+        if (tag == 42u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_san_wildcard_not_first()));
         } else {
@@ -4812,8 +4760,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ca_country_name_invalid = 6;
       case 6: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(50u)) {
+        if (tag == 50u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ca_country_name_invalid()));
         } else {
@@ -4824,8 +4771,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ca_country_name_missing = 7;
       case 7: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(58u)) {
+        if (tag == 58u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ca_country_name_missing()));
         } else {
@@ -4836,8 +4782,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ca_crl_sign_not_set = 8;
       case 8: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(66u)) {
+        if (tag == 66u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ca_crl_sign_not_set()));
         } else {
@@ -4848,8 +4793,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult n_ca_digital_signature_not_set = 9;
       case 9: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(74u)) {
+        if (tag == 74u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_n_ca_digital_signature_not_set()));
         } else {
@@ -4860,8 +4804,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ca_key_cert_sign_not_set = 10;
       case 10: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(82u)) {
+        if (tag == 82u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ca_key_cert_sign_not_set()));
         } else {
@@ -4872,8 +4815,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ca_key_usage_missing = 11;
       case 11: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(90u)) {
+        if (tag == 90u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ca_key_usage_missing()));
         } else {
@@ -4884,8 +4826,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ca_key_usage_not_critical = 12;
       case 12: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(98u)) {
+        if (tag == 98u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ca_key_usage_not_critical()));
         } else {
@@ -4896,8 +4837,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ca_organization_name_missing = 13;
       case 13: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(106u)) {
+        if (tag == 106u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ca_organization_name_missing()));
         } else {
@@ -4908,8 +4848,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ca_subject_field_empty = 14;
       case 14: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(114u)) {
+        if (tag == 114u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ca_subject_field_empty()));
         } else {
@@ -4920,8 +4859,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_cert_contains_unique_identifier = 15;
       case 15: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(122u)) {
+        if (tag == 122u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_cert_contains_unique_identifier()));
         } else {
@@ -4932,8 +4870,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_cert_extensions_version_not_3 = 16;
       case 16: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(130u)) {
+        if (tag == 130u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_cert_extensions_version_not_3()));
         } else {
@@ -4944,8 +4881,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_cab_dv_conflicts_with_locality = 17;
       case 17: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(138u)) {
+        if (tag == 138u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_cab_dv_conflicts_with_locality()));
         } else {
@@ -4956,8 +4892,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_cab_dv_conflicts_with_org = 18;
       case 18: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(146u)) {
+        if (tag == 146u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_cab_dv_conflicts_with_org()));
         } else {
@@ -4968,8 +4903,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_cab_dv_conflicts_with_postal = 19;
       case 19: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(154u)) {
+        if (tag == 154u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_cab_dv_conflicts_with_postal()));
         } else {
@@ -4980,8 +4914,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_cab_dv_conflicts_with_province = 20;
       case 20: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(162u)) {
+        if (tag == 162u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_cab_dv_conflicts_with_province()));
         } else {
@@ -4992,8 +4925,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_cab_dv_conflicts_with_street = 21;
       case 21: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(170u)) {
+        if (tag == 170u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_cab_dv_conflicts_with_street()));
         } else {
@@ -5004,8 +4936,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_cert_policy_iv_requires_country = 22;
       case 22: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(178u)) {
+        if (tag == 178u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_cert_policy_iv_requires_country()));
         } else {
@@ -5016,8 +4947,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_cert_policy_iv_requires_province_or_locality = 23;
       case 23: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(186u)) {
+        if (tag == 186u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_cert_policy_iv_requires_province_or_locality()));
         } else {
@@ -5028,8 +4958,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_cert_policy_ov_requires_country = 24;
       case 24: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(194u)) {
+        if (tag == 194u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_cert_policy_ov_requires_country()));
         } else {
@@ -5040,8 +4969,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_cert_policy_ov_requires_province_or_locality = 25;
       case 25: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(202u)) {
+        if (tag == 202u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_cert_policy_ov_requires_province_or_locality()));
         } else {
@@ -5052,8 +4980,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_cab_ov_requires_org = 26;
       case 26: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(210u)) {
+        if (tag == 210u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_cab_ov_requires_org()));
         } else {
@@ -5064,8 +4991,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_cab_iv_requires_personal_name = 27;
       case 27: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(218u)) {
+        if (tag == 218u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_cab_iv_requires_personal_name()));
         } else {
@@ -5076,8 +5002,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_cert_unique_identifier_version_not_2_or_3 = 28;
       case 28: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(226u)) {
+        if (tag == 226u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_cert_unique_identifier_version_not_2_or_3()));
         } else {
@@ -5088,8 +5013,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_dh_params_missing = 29;
       case 29: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(234u)) {
+        if (tag == 234u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_dh_params_missing()));
         } else {
@@ -5100,8 +5024,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_distribution_point_incomplete = 30;
       case 30: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(242u)) {
+        if (tag == 242u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_distribution_point_incomplete()));
         } else {
@@ -5112,8 +5035,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult w_distribution_point_missing_ldap_or_uri = 31;
       case 31: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(250u)) {
+        if (tag == 250u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_w_distribution_point_missing_ldap_or_uri()));
         } else {
@@ -5124,8 +5046,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_dsa_improper_modulus_or_divisor_size = 32;
       case 32: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(258u)) {
+        if (tag == 258u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_dsa_improper_modulus_or_divisor_size()));
         } else {
@@ -5136,8 +5057,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_dsa_shorter_than_2048_bits = 33;
       case 33: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(266u)) {
+        if (tag == 266u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_dsa_shorter_than_2048_bits()));
         } else {
@@ -5148,8 +5068,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ec_improper_curves = 34;
       case 34: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(274u)) {
+        if (tag == 274u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ec_improper_curves()));
         } else {
@@ -5160,8 +5079,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult w_eku_critical_improperly = 35;
       case 35: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(282u)) {
+        if (tag == 282u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_w_eku_critical_improperly()));
         } else {
@@ -5172,8 +5090,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ev_business_category_missing = 36;
       case 36: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(290u)) {
+        if (tag == 290u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ev_business_category_missing()));
         } else {
@@ -5184,8 +5101,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ev_country_name_missing = 37;
       case 37: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(298u)) {
+        if (tag == 298u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ev_country_name_missing()));
         } else {
@@ -5196,8 +5112,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ev_locality_name_missing = 38;
       case 38: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(306u)) {
+        if (tag == 306u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ev_locality_name_missing()));
         } else {
@@ -5208,8 +5123,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ev_organization_name_missing = 39;
       case 39: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(314u)) {
+        if (tag == 314u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ev_organization_name_missing()));
         } else {
@@ -5220,8 +5134,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ev_serial_number_missing = 40;
       case 40: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(322u)) {
+        if (tag == 322u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ev_serial_number_missing()));
         } else {
@@ -5232,8 +5145,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ev_valid_time_too_long = 41;
       case 41: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(330u)) {
+        if (tag == 330u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ev_valid_time_too_long()));
         } else {
@@ -5244,8 +5156,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult w_ext_aia_access_location_missing = 42;
       case 42: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(338u)) {
+        if (tag == 338u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_w_ext_aia_access_location_missing()));
         } else {
@@ -5256,8 +5167,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ext_aia_marked_critical = 43;
       case 43: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(346u)) {
+        if (tag == 346u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ext_aia_marked_critical()));
         } else {
@@ -5268,8 +5178,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ext_authority_key_identifier_critical = 44;
       case 44: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(354u)) {
+        if (tag == 354u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ext_authority_key_identifier_critical()));
         } else {
@@ -5280,8 +5189,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ext_authority_key_identifier_missing = 45;
       case 45: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(362u)) {
+        if (tag == 362u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ext_authority_key_identifier_missing()));
         } else {
@@ -5292,8 +5200,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ext_authority_key_identifier_no_key_identifier = 46;
       case 46: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(370u)) {
+        if (tag == 370u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ext_authority_key_identifier_no_key_identifier()));
         } else {
@@ -5304,8 +5211,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult w_ext_cert_policy_contains_noticeref = 47;
       case 47: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(378u)) {
+        if (tag == 378u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_w_ext_cert_policy_contains_noticeref()));
         } else {
@@ -5316,8 +5222,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ext_cert_policy_disallowed_any_policy_qualifier = 48;
       case 48: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(386u)) {
+        if (tag == 386u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ext_cert_policy_disallowed_any_policy_qualifier()));
         } else {
@@ -5328,8 +5233,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ext_cert_policy_duplicate = 49;
       case 49: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(394u)) {
+        if (tag == 394u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ext_cert_policy_duplicate()));
         } else {
@@ -5340,8 +5244,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ext_cert_policy_explicit_text_ia5_string = 50;
       case 50: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(402u)) {
+        if (tag == 402u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ext_cert_policy_explicit_text_ia5_string()));
         } else {
@@ -5352,8 +5255,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult w_ext_cert_policy_explicit_text_includes_control = 51;
       case 51: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(410u)) {
+        if (tag == 410u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_w_ext_cert_policy_explicit_text_includes_control()));
         } else {
@@ -5364,8 +5266,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult w_ext_cert_policy_explicit_text_not_nfc = 52;
       case 52: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(418u)) {
+        if (tag == 418u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_w_ext_cert_policy_explicit_text_not_nfc()));
         } else {
@@ -5376,8 +5277,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult w_ext_cert_policy_explicit_text_not_utf8 = 53;
       case 53: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(426u)) {
+        if (tag == 426u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_w_ext_cert_policy_explicit_text_not_utf8()));
         } else {
@@ -5388,8 +5288,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ext_cert_policy_explicit_text_too_long = 54;
       case 54: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(434u)) {
+        if (tag == 434u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ext_cert_policy_explicit_text_too_long()));
         } else {
@@ -5400,8 +5299,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult w_ext_crl_distribution_marked_critical = 55;
       case 55: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(442u)) {
+        if (tag == 442u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_w_ext_crl_distribution_marked_critical()));
         } else {
@@ -5412,8 +5310,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ext_duplicate_extension = 56;
       case 56: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(450u)) {
+        if (tag == 450u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ext_duplicate_extension()));
         } else {
@@ -5424,8 +5321,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ext_freshest_crl_marked_critical = 57;
       case 57: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(458u)) {
+        if (tag == 458u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ext_freshest_crl_marked_critical()));
         } else {
@@ -5436,8 +5332,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult w_ext_ian_critical = 58;
       case 58: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(466u)) {
+        if (tag == 466u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_w_ext_ian_critical()));
         } else {
@@ -5448,8 +5343,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ext_ian_dns_not_ia5_string = 59;
       case 59: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(474u)) {
+        if (tag == 474u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ext_ian_dns_not_ia5_string()));
         } else {
@@ -5460,8 +5354,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ext_ian_empty_name = 60;
       case 60: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(482u)) {
+        if (tag == 482u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ext_ian_empty_name()));
         } else {
@@ -5472,8 +5365,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ext_ian_no_entries = 61;
       case 61: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(490u)) {
+        if (tag == 490u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ext_ian_no_entries()));
         } else {
@@ -5484,8 +5376,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ext_ian_rfc822_format_invalid = 62;
       case 62: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(498u)) {
+        if (tag == 498u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ext_ian_rfc822_format_invalid()));
         } else {
@@ -5496,8 +5387,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ext_ian_space_dns_name = 63;
       case 63: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(506u)) {
+        if (tag == 506u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ext_ian_space_dns_name()));
         } else {
@@ -5508,8 +5398,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ext_ian_uri_format_invalid = 64;
       case 64: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(514u)) {
+        if (tag == 514u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ext_ian_uri_format_invalid()));
         } else {
@@ -5520,8 +5409,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ext_ian_uri_host_not_fqdn_or_ip = 65;
       case 65: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(522u)) {
+        if (tag == 522u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ext_ian_uri_host_not_fqdn_or_ip()));
         } else {
@@ -5532,8 +5420,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ext_ian_uri_not_ia5 = 66;
       case 66: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(530u)) {
+        if (tag == 530u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ext_ian_uri_not_ia5()));
         } else {
@@ -5544,8 +5431,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ext_ian_uri_relative = 67;
       case 67: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(538u)) {
+        if (tag == 538u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ext_ian_uri_relative()));
         } else {
@@ -5556,8 +5442,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ext_key_usage_cert_sign_without_ca = 68;
       case 68: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(546u)) {
+        if (tag == 546u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ext_key_usage_cert_sign_without_ca()));
         } else {
@@ -5568,8 +5453,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult w_ext_key_usage_not_critical = 69;
       case 69: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(554u)) {
+        if (tag == 554u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_w_ext_key_usage_not_critical()));
         } else {
@@ -5580,8 +5464,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ext_key_usage_without_bits = 70;
       case 70: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(562u)) {
+        if (tag == 562u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ext_key_usage_without_bits()));
         } else {
@@ -5592,8 +5475,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ext_name_constraints_not_critical = 71;
       case 71: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(570u)) {
+        if (tag == 570u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ext_name_constraints_not_critical()));
         } else {
@@ -5604,8 +5486,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ext_name_constraints_not_in_ca = 72;
       case 72: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(578u)) {
+        if (tag == 578u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ext_name_constraints_not_in_ca()));
         } else {
@@ -5616,8 +5497,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ext_policy_constraints_empty = 73;
       case 73: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(586u)) {
+        if (tag == 586u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ext_policy_constraints_empty()));
         } else {
@@ -5628,8 +5508,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ext_policy_constraints_not_critical = 74;
       case 74: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(594u)) {
+        if (tag == 594u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ext_policy_constraints_not_critical()));
         } else {
@@ -5640,8 +5519,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ext_policy_map_any_policy = 75;
       case 75: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(602u)) {
+        if (tag == 602u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ext_policy_map_any_policy()));
         } else {
@@ -5652,8 +5530,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult w_ext_policy_map_not_critical = 76;
       case 76: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(610u)) {
+        if (tag == 610u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_w_ext_policy_map_not_critical()));
         } else {
@@ -5664,8 +5541,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult w_ext_policy_map_not_in_cert_policy = 77;
       case 77: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(618u)) {
+        if (tag == 618u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_w_ext_policy_map_not_in_cert_policy()));
         } else {
@@ -5676,8 +5552,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ext_san_contains_reserved_ip = 78;
       case 78: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(626u)) {
+        if (tag == 626u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ext_san_contains_reserved_ip()));
         } else {
@@ -5688,8 +5563,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult w_ext_san_critical_with_subject_dn = 79;
       case 79: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(634u)) {
+        if (tag == 634u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_w_ext_san_critical_with_subject_dn()));
         } else {
@@ -5700,8 +5574,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ext_san_directory_name_present = 80;
       case 80: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(642u)) {
+        if (tag == 642u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ext_san_directory_name_present()));
         } else {
@@ -5712,8 +5585,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ext_san_dns_not_ia5_string = 81;
       case 81: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(650u)) {
+        if (tag == 650u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ext_san_dns_not_ia5_string()));
         } else {
@@ -5724,8 +5596,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ext_san_dnsname_not_fqdn = 83;
       case 83: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(666u)) {
+        if (tag == 666u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ext_san_dnsname_not_fqdn()));
         } else {
@@ -5736,8 +5607,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ext_san_edi_party_name_present = 84;
       case 84: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(674u)) {
+        if (tag == 674u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ext_san_edi_party_name_present()));
         } else {
@@ -5748,8 +5618,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ext_san_empty_name = 85;
       case 85: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(682u)) {
+        if (tag == 682u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ext_san_empty_name()));
         } else {
@@ -5760,8 +5629,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ext_san_missing = 86;
       case 86: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(690u)) {
+        if (tag == 690u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ext_san_missing()));
         } else {
@@ -5772,8 +5640,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ext_san_no_entries = 87;
       case 87: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(698u)) {
+        if (tag == 698u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ext_san_no_entries()));
         } else {
@@ -5784,8 +5651,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ext_san_not_critical_without_subject = 88;
       case 88: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(706u)) {
+        if (tag == 706u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ext_san_not_critical_without_subject()));
         } else {
@@ -5796,8 +5662,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ext_san_other_name_present = 89;
       case 89: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(714u)) {
+        if (tag == 714u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ext_san_other_name_present()));
         } else {
@@ -5808,8 +5673,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ext_san_registered_id_present = 90;
       case 90: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(722u)) {
+        if (tag == 722u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ext_san_registered_id_present()));
         } else {
@@ -5820,8 +5684,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ext_san_rfc822_format_invalid = 91;
       case 91: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(730u)) {
+        if (tag == 730u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ext_san_rfc822_format_invalid()));
         } else {
@@ -5832,8 +5695,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ext_san_rfc822_name_present = 92;
       case 92: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(738u)) {
+        if (tag == 738u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ext_san_rfc822_name_present()));
         } else {
@@ -5844,8 +5706,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ext_san_space_dns_name = 93;
       case 93: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(746u)) {
+        if (tag == 746u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ext_san_space_dns_name()));
         } else {
@@ -5856,8 +5717,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ext_san_uniform_resource_identifier_present = 94;
       case 94: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(754u)) {
+        if (tag == 754u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ext_san_uniform_resource_identifier_present()));
         } else {
@@ -5868,8 +5728,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ext_san_uri_format_invalid = 95;
       case 95: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(762u)) {
+        if (tag == 762u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ext_san_uri_format_invalid()));
         } else {
@@ -5880,8 +5739,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ext_san_uri_host_not_fqdn_or_ip = 96;
       case 96: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(770u)) {
+        if (tag == 770u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ext_san_uri_host_not_fqdn_or_ip()));
         } else {
@@ -5892,8 +5750,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ext_san_uri_not_ia5 = 97;
       case 97: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(778u)) {
+        if (tag == 778u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ext_san_uri_not_ia5()));
         } else {
@@ -5904,8 +5761,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ext_san_uri_relative = 98;
       case 98: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(786u)) {
+        if (tag == 786u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ext_san_uri_relative()));
         } else {
@@ -5916,8 +5772,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ext_subject_directory_attr_critical = 99;
       case 99: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(794u)) {
+        if (tag == 794u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ext_subject_directory_attr_critical()));
         } else {
@@ -5928,8 +5783,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ext_subject_key_identifier_critical = 100;
       case 100: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(802u)) {
+        if (tag == 802u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ext_subject_key_identifier_critical()));
         } else {
@@ -5940,8 +5794,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ext_subject_key_identifier_missing_ca = 101;
       case 101: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(810u)) {
+        if (tag == 810u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ext_subject_key_identifier_missing_ca()));
         } else {
@@ -5952,8 +5805,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult w_ext_subject_key_identifier_missing_sub_cert = 102;
       case 102: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(818u)) {
+        if (tag == 818u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_w_ext_subject_key_identifier_missing_sub_cert()));
         } else {
@@ -5964,8 +5816,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_generalized_time_does_not_include_seconds = 103;
       case 103: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(826u)) {
+        if (tag == 826u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_generalized_time_does_not_include_seconds()));
         } else {
@@ -5976,8 +5827,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_generalized_time_includes_fraction_seconds = 104;
       case 104: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(834u)) {
+        if (tag == 834u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_generalized_time_includes_fraction_seconds()));
         } else {
@@ -5988,8 +5838,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_generalized_time_not_in_zulu = 105;
       case 105: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(842u)) {
+        if (tag == 842u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_generalized_time_not_in_zulu()));
         } else {
@@ -6000,8 +5849,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult w_gtld_under_consideration = 106;
       case 106: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(850u)) {
+        if (tag == 850u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_w_gtld_under_consideration()));
         } else {
@@ -6012,8 +5860,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ian_dns_name_includes_null_char = 107;
       case 107: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(858u)) {
+        if (tag == 858u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ian_dns_name_includes_null_char()));
         } else {
@@ -6024,8 +5871,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_ian_dns_name_starts_with_period = 108;
       case 108: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(866u)) {
+        if (tag == 866u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_ian_dns_name_starts_with_period()));
         } else {
@@ -6036,8 +5882,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult w_ian_iana_pub_suffix_empty = 109;
       case 109: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(874u)) {
+        if (tag == 874u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_w_ian_iana_pub_suffix_empty()));
         } else {
@@ -6048,8 +5893,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_inhibit_any_policy_not_critical = 110;
       case 110: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(882u)) {
+        if (tag == 882u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_inhibit_any_policy_not_critical()));
         } else {
@@ -6060,8 +5904,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_invalid_certificate_version = 111;
       case 111: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(890u)) {
+        if (tag == 890u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_invalid_certificate_version()));
         } else {
@@ -6072,8 +5915,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_issuer_field_empty = 112;
       case 112: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(898u)) {
+        if (tag == 898u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_issuer_field_empty()));
         } else {
@@ -6084,8 +5926,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_name_constraint_empty = 113;
       case 113: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(906u)) {
+        if (tag == 906u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_name_constraint_empty()));
         } else {
@@ -6096,8 +5937,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_name_constraint_maximum_not_absent = 114;
       case 114: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(914u)) {
+        if (tag == 914u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_name_constraint_maximum_not_absent()));
         } else {
@@ -6108,8 +5948,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_name_constraint_minimum_non_zero = 115;
       case 115: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(922u)) {
+        if (tag == 922u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_name_constraint_minimum_non_zero()));
         } else {
@@ -6120,8 +5959,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult w_name_constraint_on_edi_party_name = 116;
       case 116: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(930u)) {
+        if (tag == 930u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_w_name_constraint_on_edi_party_name()));
         } else {
@@ -6132,8 +5970,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult w_name_constraint_on_registered_id = 117;
       case 117: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(938u)) {
+        if (tag == 938u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_w_name_constraint_on_registered_id()));
         } else {
@@ -6144,8 +5981,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult w_name_constraint_on_x400 = 118;
       case 118: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(946u)) {
+        if (tag == 946u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_w_name_constraint_on_x400()));
         } else {
@@ -6156,8 +5992,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_old_root_ca_rsa_mod_less_than_2048_bits = 119;
       case 119: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(954u)) {
+        if (tag == 954u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_old_root_ca_rsa_mod_less_than_2048_bits()));
         } else {
@@ -6168,8 +6003,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_old_sub_ca_rsa_mod_less_than_1024_bits = 120;
       case 120: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(962u)) {
+        if (tag == 962u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_old_sub_ca_rsa_mod_less_than_1024_bits()));
         } else {
@@ -6180,8 +6014,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_old_sub_cert_rsa_mod_less_than_1024_bits = 121;
       case 121: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(970u)) {
+        if (tag == 970u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_old_sub_cert_rsa_mod_less_than_1024_bits()));
         } else {
@@ -6192,8 +6025,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_path_len_constraint_improperly_included = 122;
       case 122: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(978u)) {
+        if (tag == 978u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_path_len_constraint_improperly_included()));
         } else {
@@ -6204,8 +6036,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_path_len_constraint_zero_or_less = 123;
       case 123: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(986u)) {
+        if (tag == 986u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_path_len_constraint_zero_or_less()));
         } else {
@@ -6216,8 +6047,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_public_key_type_not_allowed = 124;
       case 124: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(994u)) {
+        if (tag == 994u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_public_key_type_not_allowed()));
         } else {
@@ -6228,8 +6058,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult w_root_ca_basic_constraints_path_len_constraint_field_present = 125;
       case 125: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1002u)) {
+        if (tag == 1002u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_w_root_ca_basic_constraints_path_len_constraint_field_present()));
         } else {
@@ -6240,8 +6069,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult w_root_ca_contains_cert_policy = 126;
       case 126: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1010u)) {
+        if (tag == 1010u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_w_root_ca_contains_cert_policy()));
         } else {
@@ -6252,8 +6080,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_root_ca_extended_key_usage_present = 127;
       case 127: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1018u)) {
+        if (tag == 1018u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_root_ca_extended_key_usage_present()));
         } else {
@@ -6264,8 +6091,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_rsa_exp_negative = 128;
       case 128: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1026u)) {
+        if (tag == 1026u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_rsa_exp_negative()));
         } else {
@@ -6276,8 +6102,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult w_rsa_mod_factors_smaller_than_752 = 129;
       case 129: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1034u)) {
+        if (tag == 1034u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_w_rsa_mod_factors_smaller_than_752()));
         } else {
@@ -6288,8 +6113,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_rsa_mod_less_than_2048_bits = 130;
       case 130: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1042u)) {
+        if (tag == 1042u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_rsa_mod_less_than_2048_bits()));
         } else {
@@ -6300,8 +6124,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult w_rsa_mod_not_odd = 131;
       case 131: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1050u)) {
+        if (tag == 1050u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_w_rsa_mod_not_odd()));
         } else {
@@ -6312,8 +6135,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult w_rsa_public_exponent_not_in_range = 132;
       case 132: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1058u)) {
+        if (tag == 1058u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_w_rsa_public_exponent_not_in_range()));
         } else {
@@ -6324,8 +6146,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_rsa_public_exponent_not_odd = 133;
       case 133: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1066u)) {
+        if (tag == 1066u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_rsa_public_exponent_not_odd()));
         } else {
@@ -6336,8 +6157,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_rsa_public_exponent_too_small = 134;
       case 134: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1074u)) {
+        if (tag == 1074u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_rsa_public_exponent_too_small()));
         } else {
@@ -6348,8 +6168,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_san_dns_name_includes_null_char = 135;
       case 135: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1082u)) {
+        if (tag == 1082u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_san_dns_name_includes_null_char()));
         } else {
@@ -6360,8 +6179,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_san_dns_name_starts_with_period = 136;
       case 136: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1090u)) {
+        if (tag == 1090u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_san_dns_name_starts_with_period()));
         } else {
@@ -6372,8 +6190,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult w_san_iana_pub_suffix_empty = 137;
       case 137: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1098u)) {
+        if (tag == 1098u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_w_san_iana_pub_suffix_empty()));
         } else {
@@ -6384,8 +6201,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_serial_number_longer_than_20_octets = 138;
       case 138: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1106u)) {
+        if (tag == 1106u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_serial_number_longer_than_20_octets()));
         } else {
@@ -6396,8 +6212,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_serial_number_not_positive = 139;
       case 139: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1114u)) {
+        if (tag == 1114u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_serial_number_not_positive()));
         } else {
@@ -6408,8 +6223,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult w_sub_ca_aia_does_not_contain_issuing_ca_url = 140;
       case 140: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1122u)) {
+        if (tag == 1122u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_w_sub_ca_aia_does_not_contain_issuing_ca_url()));
         } else {
@@ -6420,8 +6234,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_sub_ca_aia_does_not_contain_ocsp_url = 141;
       case 141: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1130u)) {
+        if (tag == 1130u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_sub_ca_aia_does_not_contain_ocsp_url()));
         } else {
@@ -6432,8 +6245,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_sub_ca_aia_missing = 142;
       case 142: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1138u)) {
+        if (tag == 1138u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_sub_ca_aia_missing()));
         } else {
@@ -6444,8 +6256,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult w_sub_ca_certificate_policies_marked_critical = 143;
       case 143: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1146u)) {
+        if (tag == 1146u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_w_sub_ca_certificate_policies_marked_critical()));
         } else {
@@ -6456,8 +6267,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_sub_ca_certificate_policies_missing = 144;
       case 144: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1154u)) {
+        if (tag == 1154u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_sub_ca_certificate_policies_missing()));
         } else {
@@ -6468,8 +6278,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_sub_ca_crl_distribution_points_does_not_contain_url = 145;
       case 145: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1162u)) {
+        if (tag == 1162u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_sub_ca_crl_distribution_points_does_not_contain_url()));
         } else {
@@ -6480,8 +6289,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_sub_ca_crl_distribution_points_marked_critical = 146;
       case 146: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1170u)) {
+        if (tag == 1170u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_sub_ca_crl_distribution_points_marked_critical()));
         } else {
@@ -6492,8 +6300,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_sub_ca_crl_distribution_points_missing = 147;
       case 147: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1178u)) {
+        if (tag == 1178u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_sub_ca_crl_distribution_points_missing()));
         } else {
@@ -6504,8 +6311,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult w_sub_ca_eku_critical = 148;
       case 148: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1186u)) {
+        if (tag == 1186u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_w_sub_ca_eku_critical()));
         } else {
@@ -6516,8 +6322,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult w_sub_ca_name_constraints_not_critical = 149;
       case 149: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1194u)) {
+        if (tag == 1194u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_w_sub_ca_name_constraints_not_critical()));
         } else {
@@ -6528,8 +6333,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_sub_ca_no_dns_name_constraints = 150;
       case 150: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1202u)) {
+        if (tag == 1202u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_sub_ca_no_dns_name_constraints()));
         } else {
@@ -6540,8 +6344,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_sub_ca_no_ip_name_constraints = 151;
       case 151: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1210u)) {
+        if (tag == 1210u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_sub_ca_no_ip_name_constraints()));
         } else {
@@ -6552,8 +6355,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_sub_cert_aia_does_not_contain_issuing_ca_url = 152;
       case 152: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1218u)) {
+        if (tag == 1218u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_sub_cert_aia_does_not_contain_issuing_ca_url()));
         } else {
@@ -6564,8 +6366,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_sub_cert_aia_does_not_contain_ocsp_url = 153;
       case 153: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1226u)) {
+        if (tag == 1226u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_sub_cert_aia_does_not_contain_ocsp_url()));
         } else {
@@ -6576,8 +6377,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_sub_cert_aia_missing = 154;
       case 154: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1234u)) {
+        if (tag == 1234u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_sub_cert_aia_missing()));
         } else {
@@ -6588,8 +6388,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_sub_cert_cert_policy_empty = 155;
       case 155: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1242u)) {
+        if (tag == 1242u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_sub_cert_cert_policy_empty()));
         } else {
@@ -6600,8 +6399,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult w_sub_cert_certificate_policies_marked_critical = 156;
       case 156: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1250u)) {
+        if (tag == 1250u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_w_sub_cert_certificate_policies_marked_critical()));
         } else {
@@ -6612,8 +6410,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_sub_cert_crl_distribution_points_does_not_contain_url = 157;
       case 157: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1258u)) {
+        if (tag == 1258u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_sub_cert_crl_distribution_points_does_not_contain_url()));
         } else {
@@ -6624,8 +6421,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_sub_cert_crl_distribution_points_marked_critical = 158;
       case 158: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1266u)) {
+        if (tag == 1266u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_sub_cert_crl_distribution_points_marked_critical()));
         } else {
@@ -6636,8 +6432,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult w_sub_cert_eku_extra_values = 159;
       case 159: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1274u)) {
+        if (tag == 1274u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_w_sub_cert_eku_extra_values()));
         } else {
@@ -6648,8 +6443,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_sub_cert_eku_missing = 160;
       case 160: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1282u)) {
+        if (tag == 1282u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_sub_cert_eku_missing()));
         } else {
@@ -6660,8 +6454,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_sub_cert_eku_server_auth_client_auth_missing = 161;
       case 161: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1290u)) {
+        if (tag == 1290u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_sub_cert_eku_server_auth_client_auth_missing()));
         } else {
@@ -6672,8 +6465,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_sub_cert_key_usage_cert_sign_bit_set = 162;
       case 162: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1298u)) {
+        if (tag == 1298u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_sub_cert_key_usage_cert_sign_bit_set()));
         } else {
@@ -6684,8 +6476,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_sub_cert_or_sub_ca_using_sha1 = 163;
       case 163: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1306u)) {
+        if (tag == 1306u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_sub_cert_or_sub_ca_using_sha1()));
         } else {
@@ -6696,8 +6487,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult w_sub_cert_sha1_expiration_too_long = 164;
       case 164: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1314u)) {
+        if (tag == 1314u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_w_sub_cert_sha1_expiration_too_long()));
         } else {
@@ -6708,8 +6498,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_subject_common_name_disallowed = 165;
       case 165: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1322u)) {
+        if (tag == 1322u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_subject_common_name_disallowed()));
         } else {
@@ -6720,8 +6509,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult n_subject_common_name_included = 166;
       case 166: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1330u)) {
+        if (tag == 1330u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_n_subject_common_name_included()));
         } else {
@@ -6732,8 +6520,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_subject_common_name_not_from_san = 167;
       case 167: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1338u)) {
+        if (tag == 1338u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_subject_common_name_not_from_san()));
         } else {
@@ -6744,8 +6531,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_subject_contains_noninformational_value = 168;
       case 168: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1346u)) {
+        if (tag == 1346u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_subject_contains_noninformational_value()));
         } else {
@@ -6756,8 +6542,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_subject_contains_reserved_ip = 169;
       case 169: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1354u)) {
+        if (tag == 1354u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_subject_contains_reserved_ip()));
         } else {
@@ -6768,8 +6553,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_subject_country_not_iso = 170;
       case 170: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1362u)) {
+        if (tag == 1362u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_subject_country_not_iso()));
         } else {
@@ -6780,8 +6564,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_subject_empty_without_san = 171;
       case 171: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1370u)) {
+        if (tag == 1370u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_subject_empty_without_san()));
         } else {
@@ -6792,8 +6575,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_subject_info_access_marked_critical = 172;
       case 172: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1378u)) {
+        if (tag == 1378u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_subject_info_access_marked_critical()));
         } else {
@@ -6804,8 +6586,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_subject_locality_without_org = 173;
       case 173: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1386u)) {
+        if (tag == 1386u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_subject_locality_without_org()));
         } else {
@@ -6816,8 +6597,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_subject_not_dn = 174;
       case 174: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1394u)) {
+        if (tag == 1394u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_subject_not_dn()));
         } else {
@@ -6828,8 +6608,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_subject_org_without_country = 175;
       case 175: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1402u)) {
+        if (tag == 1402u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_subject_org_without_country()));
         } else {
@@ -6840,8 +6619,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_subject_org_without_locality_or_province = 176;
       case 176: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1410u)) {
+        if (tag == 1410u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_subject_org_without_locality_or_province()));
         } else {
@@ -6852,8 +6630,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_subject_postal_without_org = 177;
       case 177: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1418u)) {
+        if (tag == 1418u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_subject_postal_without_org()));
         } else {
@@ -6864,8 +6641,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_subject_province_without_org = 178;
       case 178: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1426u)) {
+        if (tag == 1426u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_subject_province_without_org()));
         } else {
@@ -6876,8 +6652,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_subject_street_without_org = 179;
       case 179: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1434u)) {
+        if (tag == 1434u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_subject_street_without_org()));
         } else {
@@ -6888,8 +6663,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_utc_time_does_not_include_seconds = 180;
       case 180: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1442u)) {
+        if (tag == 1442u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_utc_time_does_not_include_seconds()));
         } else {
@@ -6900,8 +6674,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_utc_time_not_in_zulu = 181;
       case 181: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1450u)) {
+        if (tag == 1450u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_utc_time_not_in_zulu()));
         } else {
@@ -6912,8 +6685,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_validity_time_not_positive = 182;
       case 182: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1458u)) {
+        if (tag == 1458u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_validity_time_not_positive()));
         } else {
@@ -6924,8 +6696,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_wrong_time_format_pre2050 = 183;
       case 183: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1466u)) {
+        if (tag == 1466u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_wrong_time_format_pre2050()));
         } else {
@@ -6936,8 +6707,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_rsa_no_public_key = 184;
       case 184: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1474u)) {
+        if (tag == 1474u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_rsa_no_public_key()));
         } else {
@@ -6948,8 +6718,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_sub_cert_certificate_policies_missing = 185;
       case 185: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1482u)) {
+        if (tag == 1482u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_sub_cert_certificate_policies_missing()));
         } else {
@@ -6960,8 +6729,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_sub_cert_key_usage_crl_sign_bit_set = 186;
       case 186: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1490u)) {
+        if (tag == 1490u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_sub_cert_key_usage_crl_sign_bit_set()));
         } else {
@@ -6972,8 +6740,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_subject_common_name_max_length = 187;
       case 187: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1498u)) {
+        if (tag == 1498u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_subject_common_name_max_length()));
         } else {
@@ -6984,8 +6751,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_subject_locality_name_max_length = 188;
       case 188: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1506u)) {
+        if (tag == 1506u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_subject_locality_name_max_length()));
         } else {
@@ -6996,8 +6762,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_subject_organization_name_max_length = 189;
       case 189: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1514u)) {
+        if (tag == 1514u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_subject_organization_name_max_length()));
         } else {
@@ -7008,8 +6773,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_subject_organizational_unit_name_max_length = 190;
       case 190: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1522u)) {
+        if (tag == 1522u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_subject_organizational_unit_name_max_length()));
         } else {
@@ -7020,8 +6784,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult e_subject_state_name_max_length = 191;
       case 191: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1530u)) {
+        if (tag == 1530u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_e_subject_state_name_max_length()));
         } else {
@@ -7032,8 +6795,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult w_multiple_subject_rdn = 192;
       case 192: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1538u)) {
+        if (tag == 1538u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_w_multiple_subject_rdn()));
         } else {
@@ -7044,8 +6806,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult w_multiple_issuer_rdn = 193;
       case 193: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1546u)) {
+        if (tag == 1546u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_w_multiple_issuer_rdn()));
         } else {
@@ -7056,8 +6817,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult w_issuer_dn_trailing_whitespace = 194;
       case 194: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1554u)) {
+        if (tag == 1554u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_w_issuer_dn_trailing_whitespace()));
         } else {
@@ -7068,8 +6828,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult w_issuer_dn_leading_whitespace = 195;
       case 195: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1562u)) {
+        if (tag == 1562u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_w_issuer_dn_leading_whitespace()));
         } else {
@@ -7080,8 +6839,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult w_subject_dn_trailing_whitespace = 196;
       case 196: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1570u)) {
+        if (tag == 1570u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_w_subject_dn_trailing_whitespace()));
         } else {
@@ -7092,8 +6850,7 @@ bool Lints::MergePartialFromCodedStream(
 
       // .zsearch.LintResult w_subject_dn_leading_whitespace = 197;
       case 197: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1578u)) {
+        if (tag == 1578u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_w_subject_dn_leading_whitespace()));
         } else {
@@ -7126,9 +6883,6 @@ failure:
 void Lints::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:zsearch.Lints)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
   // .zsearch.LintResult e_basic_constraints_not_critical = 1;
   if (this->has_e_basic_constraints_not_critical()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
@@ -8310,1380 +8064,1378 @@ void Lints::SerializeWithCachedSizes(
 
 ::google::protobuf::uint8* Lints::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:zsearch.Lints)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
   // .zsearch.LintResult e_basic_constraints_not_critical = 1;
   if (this->has_e_basic_constraints_not_critical()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        1, *this->e_basic_constraints_not_critical_, deterministic, target);
+        1, *this->e_basic_constraints_not_critical_, false, target);
   }
 
   // .zsearch.LintResult e_ian_bare_wildcard = 2;
   if (this->has_e_ian_bare_wildcard()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        2, *this->e_ian_bare_wildcard_, deterministic, target);
+        2, *this->e_ian_bare_wildcard_, false, target);
   }
 
   // .zsearch.LintResult e_ian_wildcard_not_first = 3;
   if (this->has_e_ian_wildcard_not_first()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        3, *this->e_ian_wildcard_not_first_, deterministic, target);
+        3, *this->e_ian_wildcard_not_first_, false, target);
   }
 
   // .zsearch.LintResult e_san_bare_wildcard = 4;
   if (this->has_e_san_bare_wildcard()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        4, *this->e_san_bare_wildcard_, deterministic, target);
+        4, *this->e_san_bare_wildcard_, false, target);
   }
 
   // .zsearch.LintResult e_san_wildcard_not_first = 5;
   if (this->has_e_san_wildcard_not_first()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        5, *this->e_san_wildcard_not_first_, deterministic, target);
+        5, *this->e_san_wildcard_not_first_, false, target);
   }
 
   // .zsearch.LintResult e_ca_country_name_invalid = 6;
   if (this->has_e_ca_country_name_invalid()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        6, *this->e_ca_country_name_invalid_, deterministic, target);
+        6, *this->e_ca_country_name_invalid_, false, target);
   }
 
   // .zsearch.LintResult e_ca_country_name_missing = 7;
   if (this->has_e_ca_country_name_missing()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        7, *this->e_ca_country_name_missing_, deterministic, target);
+        7, *this->e_ca_country_name_missing_, false, target);
   }
 
   // .zsearch.LintResult e_ca_crl_sign_not_set = 8;
   if (this->has_e_ca_crl_sign_not_set()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        8, *this->e_ca_crl_sign_not_set_, deterministic, target);
+        8, *this->e_ca_crl_sign_not_set_, false, target);
   }
 
   // .zsearch.LintResult n_ca_digital_signature_not_set = 9;
   if (this->has_n_ca_digital_signature_not_set()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        9, *this->n_ca_digital_signature_not_set_, deterministic, target);
+        9, *this->n_ca_digital_signature_not_set_, false, target);
   }
 
   // .zsearch.LintResult e_ca_key_cert_sign_not_set = 10;
   if (this->has_e_ca_key_cert_sign_not_set()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        10, *this->e_ca_key_cert_sign_not_set_, deterministic, target);
+        10, *this->e_ca_key_cert_sign_not_set_, false, target);
   }
 
   // .zsearch.LintResult e_ca_key_usage_missing = 11;
   if (this->has_e_ca_key_usage_missing()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        11, *this->e_ca_key_usage_missing_, deterministic, target);
+        11, *this->e_ca_key_usage_missing_, false, target);
   }
 
   // .zsearch.LintResult e_ca_key_usage_not_critical = 12;
   if (this->has_e_ca_key_usage_not_critical()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        12, *this->e_ca_key_usage_not_critical_, deterministic, target);
+        12, *this->e_ca_key_usage_not_critical_, false, target);
   }
 
   // .zsearch.LintResult e_ca_organization_name_missing = 13;
   if (this->has_e_ca_organization_name_missing()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        13, *this->e_ca_organization_name_missing_, deterministic, target);
+        13, *this->e_ca_organization_name_missing_, false, target);
   }
 
   // .zsearch.LintResult e_ca_subject_field_empty = 14;
   if (this->has_e_ca_subject_field_empty()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        14, *this->e_ca_subject_field_empty_, deterministic, target);
+        14, *this->e_ca_subject_field_empty_, false, target);
   }
 
   // .zsearch.LintResult e_cert_contains_unique_identifier = 15;
   if (this->has_e_cert_contains_unique_identifier()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        15, *this->e_cert_contains_unique_identifier_, deterministic, target);
+        15, *this->e_cert_contains_unique_identifier_, false, target);
   }
 
   // .zsearch.LintResult e_cert_extensions_version_not_3 = 16;
   if (this->has_e_cert_extensions_version_not_3()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        16, *this->e_cert_extensions_version_not_3_, deterministic, target);
+        16, *this->e_cert_extensions_version_not_3_, false, target);
   }
 
   // .zsearch.LintResult e_cab_dv_conflicts_with_locality = 17;
   if (this->has_e_cab_dv_conflicts_with_locality()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        17, *this->e_cab_dv_conflicts_with_locality_, deterministic, target);
+        17, *this->e_cab_dv_conflicts_with_locality_, false, target);
   }
 
   // .zsearch.LintResult e_cab_dv_conflicts_with_org = 18;
   if (this->has_e_cab_dv_conflicts_with_org()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        18, *this->e_cab_dv_conflicts_with_org_, deterministic, target);
+        18, *this->e_cab_dv_conflicts_with_org_, false, target);
   }
 
   // .zsearch.LintResult e_cab_dv_conflicts_with_postal = 19;
   if (this->has_e_cab_dv_conflicts_with_postal()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        19, *this->e_cab_dv_conflicts_with_postal_, deterministic, target);
+        19, *this->e_cab_dv_conflicts_with_postal_, false, target);
   }
 
   // .zsearch.LintResult e_cab_dv_conflicts_with_province = 20;
   if (this->has_e_cab_dv_conflicts_with_province()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        20, *this->e_cab_dv_conflicts_with_province_, deterministic, target);
+        20, *this->e_cab_dv_conflicts_with_province_, false, target);
   }
 
   // .zsearch.LintResult e_cab_dv_conflicts_with_street = 21;
   if (this->has_e_cab_dv_conflicts_with_street()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        21, *this->e_cab_dv_conflicts_with_street_, deterministic, target);
+        21, *this->e_cab_dv_conflicts_with_street_, false, target);
   }
 
   // .zsearch.LintResult e_cert_policy_iv_requires_country = 22;
   if (this->has_e_cert_policy_iv_requires_country()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        22, *this->e_cert_policy_iv_requires_country_, deterministic, target);
+        22, *this->e_cert_policy_iv_requires_country_, false, target);
   }
 
   // .zsearch.LintResult e_cert_policy_iv_requires_province_or_locality = 23;
   if (this->has_e_cert_policy_iv_requires_province_or_locality()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        23, *this->e_cert_policy_iv_requires_province_or_locality_, deterministic, target);
+        23, *this->e_cert_policy_iv_requires_province_or_locality_, false, target);
   }
 
   // .zsearch.LintResult e_cert_policy_ov_requires_country = 24;
   if (this->has_e_cert_policy_ov_requires_country()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        24, *this->e_cert_policy_ov_requires_country_, deterministic, target);
+        24, *this->e_cert_policy_ov_requires_country_, false, target);
   }
 
   // .zsearch.LintResult e_cert_policy_ov_requires_province_or_locality = 25;
   if (this->has_e_cert_policy_ov_requires_province_or_locality()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        25, *this->e_cert_policy_ov_requires_province_or_locality_, deterministic, target);
+        25, *this->e_cert_policy_ov_requires_province_or_locality_, false, target);
   }
 
   // .zsearch.LintResult e_cab_ov_requires_org = 26;
   if (this->has_e_cab_ov_requires_org()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        26, *this->e_cab_ov_requires_org_, deterministic, target);
+        26, *this->e_cab_ov_requires_org_, false, target);
   }
 
   // .zsearch.LintResult e_cab_iv_requires_personal_name = 27;
   if (this->has_e_cab_iv_requires_personal_name()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        27, *this->e_cab_iv_requires_personal_name_, deterministic, target);
+        27, *this->e_cab_iv_requires_personal_name_, false, target);
   }
 
   // .zsearch.LintResult e_cert_unique_identifier_version_not_2_or_3 = 28;
   if (this->has_e_cert_unique_identifier_version_not_2_or_3()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        28, *this->e_cert_unique_identifier_version_not_2_or_3_, deterministic, target);
+        28, *this->e_cert_unique_identifier_version_not_2_or_3_, false, target);
   }
 
   // .zsearch.LintResult e_dh_params_missing = 29;
   if (this->has_e_dh_params_missing()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        29, *this->e_dh_params_missing_, deterministic, target);
+        29, *this->e_dh_params_missing_, false, target);
   }
 
   // .zsearch.LintResult e_distribution_point_incomplete = 30;
   if (this->has_e_distribution_point_incomplete()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        30, *this->e_distribution_point_incomplete_, deterministic, target);
+        30, *this->e_distribution_point_incomplete_, false, target);
   }
 
   // .zsearch.LintResult w_distribution_point_missing_ldap_or_uri = 31;
   if (this->has_w_distribution_point_missing_ldap_or_uri()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        31, *this->w_distribution_point_missing_ldap_or_uri_, deterministic, target);
+        31, *this->w_distribution_point_missing_ldap_or_uri_, false, target);
   }
 
   // .zsearch.LintResult e_dsa_improper_modulus_or_divisor_size = 32;
   if (this->has_e_dsa_improper_modulus_or_divisor_size()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        32, *this->e_dsa_improper_modulus_or_divisor_size_, deterministic, target);
+        32, *this->e_dsa_improper_modulus_or_divisor_size_, false, target);
   }
 
   // .zsearch.LintResult e_dsa_shorter_than_2048_bits = 33;
   if (this->has_e_dsa_shorter_than_2048_bits()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        33, *this->e_dsa_shorter_than_2048_bits_, deterministic, target);
+        33, *this->e_dsa_shorter_than_2048_bits_, false, target);
   }
 
   // .zsearch.LintResult e_ec_improper_curves = 34;
   if (this->has_e_ec_improper_curves()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        34, *this->e_ec_improper_curves_, deterministic, target);
+        34, *this->e_ec_improper_curves_, false, target);
   }
 
   // .zsearch.LintResult w_eku_critical_improperly = 35;
   if (this->has_w_eku_critical_improperly()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        35, *this->w_eku_critical_improperly_, deterministic, target);
+        35, *this->w_eku_critical_improperly_, false, target);
   }
 
   // .zsearch.LintResult e_ev_business_category_missing = 36;
   if (this->has_e_ev_business_category_missing()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        36, *this->e_ev_business_category_missing_, deterministic, target);
+        36, *this->e_ev_business_category_missing_, false, target);
   }
 
   // .zsearch.LintResult e_ev_country_name_missing = 37;
   if (this->has_e_ev_country_name_missing()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        37, *this->e_ev_country_name_missing_, deterministic, target);
+        37, *this->e_ev_country_name_missing_, false, target);
   }
 
   // .zsearch.LintResult e_ev_locality_name_missing = 38;
   if (this->has_e_ev_locality_name_missing()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        38, *this->e_ev_locality_name_missing_, deterministic, target);
+        38, *this->e_ev_locality_name_missing_, false, target);
   }
 
   // .zsearch.LintResult e_ev_organization_name_missing = 39;
   if (this->has_e_ev_organization_name_missing()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        39, *this->e_ev_organization_name_missing_, deterministic, target);
+        39, *this->e_ev_organization_name_missing_, false, target);
   }
 
   // .zsearch.LintResult e_ev_serial_number_missing = 40;
   if (this->has_e_ev_serial_number_missing()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        40, *this->e_ev_serial_number_missing_, deterministic, target);
+        40, *this->e_ev_serial_number_missing_, false, target);
   }
 
   // .zsearch.LintResult e_ev_valid_time_too_long = 41;
   if (this->has_e_ev_valid_time_too_long()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        41, *this->e_ev_valid_time_too_long_, deterministic, target);
+        41, *this->e_ev_valid_time_too_long_, false, target);
   }
 
   // .zsearch.LintResult w_ext_aia_access_location_missing = 42;
   if (this->has_w_ext_aia_access_location_missing()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        42, *this->w_ext_aia_access_location_missing_, deterministic, target);
+        42, *this->w_ext_aia_access_location_missing_, false, target);
   }
 
   // .zsearch.LintResult e_ext_aia_marked_critical = 43;
   if (this->has_e_ext_aia_marked_critical()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        43, *this->e_ext_aia_marked_critical_, deterministic, target);
+        43, *this->e_ext_aia_marked_critical_, false, target);
   }
 
   // .zsearch.LintResult e_ext_authority_key_identifier_critical = 44;
   if (this->has_e_ext_authority_key_identifier_critical()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        44, *this->e_ext_authority_key_identifier_critical_, deterministic, target);
+        44, *this->e_ext_authority_key_identifier_critical_, false, target);
   }
 
   // .zsearch.LintResult e_ext_authority_key_identifier_missing = 45;
   if (this->has_e_ext_authority_key_identifier_missing()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        45, *this->e_ext_authority_key_identifier_missing_, deterministic, target);
+        45, *this->e_ext_authority_key_identifier_missing_, false, target);
   }
 
   // .zsearch.LintResult e_ext_authority_key_identifier_no_key_identifier = 46;
   if (this->has_e_ext_authority_key_identifier_no_key_identifier()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        46, *this->e_ext_authority_key_identifier_no_key_identifier_, deterministic, target);
+        46, *this->e_ext_authority_key_identifier_no_key_identifier_, false, target);
   }
 
   // .zsearch.LintResult w_ext_cert_policy_contains_noticeref = 47;
   if (this->has_w_ext_cert_policy_contains_noticeref()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        47, *this->w_ext_cert_policy_contains_noticeref_, deterministic, target);
+        47, *this->w_ext_cert_policy_contains_noticeref_, false, target);
   }
 
   // .zsearch.LintResult e_ext_cert_policy_disallowed_any_policy_qualifier = 48;
   if (this->has_e_ext_cert_policy_disallowed_any_policy_qualifier()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        48, *this->e_ext_cert_policy_disallowed_any_policy_qualifier_, deterministic, target);
+        48, *this->e_ext_cert_policy_disallowed_any_policy_qualifier_, false, target);
   }
 
   // .zsearch.LintResult e_ext_cert_policy_duplicate = 49;
   if (this->has_e_ext_cert_policy_duplicate()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        49, *this->e_ext_cert_policy_duplicate_, deterministic, target);
+        49, *this->e_ext_cert_policy_duplicate_, false, target);
   }
 
   // .zsearch.LintResult e_ext_cert_policy_explicit_text_ia5_string = 50;
   if (this->has_e_ext_cert_policy_explicit_text_ia5_string()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        50, *this->e_ext_cert_policy_explicit_text_ia5_string_, deterministic, target);
+        50, *this->e_ext_cert_policy_explicit_text_ia5_string_, false, target);
   }
 
   // .zsearch.LintResult w_ext_cert_policy_explicit_text_includes_control = 51;
   if (this->has_w_ext_cert_policy_explicit_text_includes_control()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        51, *this->w_ext_cert_policy_explicit_text_includes_control_, deterministic, target);
+        51, *this->w_ext_cert_policy_explicit_text_includes_control_, false, target);
   }
 
   // .zsearch.LintResult w_ext_cert_policy_explicit_text_not_nfc = 52;
   if (this->has_w_ext_cert_policy_explicit_text_not_nfc()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        52, *this->w_ext_cert_policy_explicit_text_not_nfc_, deterministic, target);
+        52, *this->w_ext_cert_policy_explicit_text_not_nfc_, false, target);
   }
 
   // .zsearch.LintResult w_ext_cert_policy_explicit_text_not_utf8 = 53;
   if (this->has_w_ext_cert_policy_explicit_text_not_utf8()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        53, *this->w_ext_cert_policy_explicit_text_not_utf8_, deterministic, target);
+        53, *this->w_ext_cert_policy_explicit_text_not_utf8_, false, target);
   }
 
   // .zsearch.LintResult e_ext_cert_policy_explicit_text_too_long = 54;
   if (this->has_e_ext_cert_policy_explicit_text_too_long()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        54, *this->e_ext_cert_policy_explicit_text_too_long_, deterministic, target);
+        54, *this->e_ext_cert_policy_explicit_text_too_long_, false, target);
   }
 
   // .zsearch.LintResult w_ext_crl_distribution_marked_critical = 55;
   if (this->has_w_ext_crl_distribution_marked_critical()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        55, *this->w_ext_crl_distribution_marked_critical_, deterministic, target);
+        55, *this->w_ext_crl_distribution_marked_critical_, false, target);
   }
 
   // .zsearch.LintResult e_ext_duplicate_extension = 56;
   if (this->has_e_ext_duplicate_extension()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        56, *this->e_ext_duplicate_extension_, deterministic, target);
+        56, *this->e_ext_duplicate_extension_, false, target);
   }
 
   // .zsearch.LintResult e_ext_freshest_crl_marked_critical = 57;
   if (this->has_e_ext_freshest_crl_marked_critical()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        57, *this->e_ext_freshest_crl_marked_critical_, deterministic, target);
+        57, *this->e_ext_freshest_crl_marked_critical_, false, target);
   }
 
   // .zsearch.LintResult w_ext_ian_critical = 58;
   if (this->has_w_ext_ian_critical()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        58, *this->w_ext_ian_critical_, deterministic, target);
+        58, *this->w_ext_ian_critical_, false, target);
   }
 
   // .zsearch.LintResult e_ext_ian_dns_not_ia5_string = 59;
   if (this->has_e_ext_ian_dns_not_ia5_string()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        59, *this->e_ext_ian_dns_not_ia5_string_, deterministic, target);
+        59, *this->e_ext_ian_dns_not_ia5_string_, false, target);
   }
 
   // .zsearch.LintResult e_ext_ian_empty_name = 60;
   if (this->has_e_ext_ian_empty_name()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        60, *this->e_ext_ian_empty_name_, deterministic, target);
+        60, *this->e_ext_ian_empty_name_, false, target);
   }
 
   // .zsearch.LintResult e_ext_ian_no_entries = 61;
   if (this->has_e_ext_ian_no_entries()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        61, *this->e_ext_ian_no_entries_, deterministic, target);
+        61, *this->e_ext_ian_no_entries_, false, target);
   }
 
   // .zsearch.LintResult e_ext_ian_rfc822_format_invalid = 62;
   if (this->has_e_ext_ian_rfc822_format_invalid()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        62, *this->e_ext_ian_rfc822_format_invalid_, deterministic, target);
+        62, *this->e_ext_ian_rfc822_format_invalid_, false, target);
   }
 
   // .zsearch.LintResult e_ext_ian_space_dns_name = 63;
   if (this->has_e_ext_ian_space_dns_name()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        63, *this->e_ext_ian_space_dns_name_, deterministic, target);
+        63, *this->e_ext_ian_space_dns_name_, false, target);
   }
 
   // .zsearch.LintResult e_ext_ian_uri_format_invalid = 64;
   if (this->has_e_ext_ian_uri_format_invalid()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        64, *this->e_ext_ian_uri_format_invalid_, deterministic, target);
+        64, *this->e_ext_ian_uri_format_invalid_, false, target);
   }
 
   // .zsearch.LintResult e_ext_ian_uri_host_not_fqdn_or_ip = 65;
   if (this->has_e_ext_ian_uri_host_not_fqdn_or_ip()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        65, *this->e_ext_ian_uri_host_not_fqdn_or_ip_, deterministic, target);
+        65, *this->e_ext_ian_uri_host_not_fqdn_or_ip_, false, target);
   }
 
   // .zsearch.LintResult e_ext_ian_uri_not_ia5 = 66;
   if (this->has_e_ext_ian_uri_not_ia5()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        66, *this->e_ext_ian_uri_not_ia5_, deterministic, target);
+        66, *this->e_ext_ian_uri_not_ia5_, false, target);
   }
 
   // .zsearch.LintResult e_ext_ian_uri_relative = 67;
   if (this->has_e_ext_ian_uri_relative()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        67, *this->e_ext_ian_uri_relative_, deterministic, target);
+        67, *this->e_ext_ian_uri_relative_, false, target);
   }
 
   // .zsearch.LintResult e_ext_key_usage_cert_sign_without_ca = 68;
   if (this->has_e_ext_key_usage_cert_sign_without_ca()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        68, *this->e_ext_key_usage_cert_sign_without_ca_, deterministic, target);
+        68, *this->e_ext_key_usage_cert_sign_without_ca_, false, target);
   }
 
   // .zsearch.LintResult w_ext_key_usage_not_critical = 69;
   if (this->has_w_ext_key_usage_not_critical()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        69, *this->w_ext_key_usage_not_critical_, deterministic, target);
+        69, *this->w_ext_key_usage_not_critical_, false, target);
   }
 
   // .zsearch.LintResult e_ext_key_usage_without_bits = 70;
   if (this->has_e_ext_key_usage_without_bits()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        70, *this->e_ext_key_usage_without_bits_, deterministic, target);
+        70, *this->e_ext_key_usage_without_bits_, false, target);
   }
 
   // .zsearch.LintResult e_ext_name_constraints_not_critical = 71;
   if (this->has_e_ext_name_constraints_not_critical()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        71, *this->e_ext_name_constraints_not_critical_, deterministic, target);
+        71, *this->e_ext_name_constraints_not_critical_, false, target);
   }
 
   // .zsearch.LintResult e_ext_name_constraints_not_in_ca = 72;
   if (this->has_e_ext_name_constraints_not_in_ca()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        72, *this->e_ext_name_constraints_not_in_ca_, deterministic, target);
+        72, *this->e_ext_name_constraints_not_in_ca_, false, target);
   }
 
   // .zsearch.LintResult e_ext_policy_constraints_empty = 73;
   if (this->has_e_ext_policy_constraints_empty()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        73, *this->e_ext_policy_constraints_empty_, deterministic, target);
+        73, *this->e_ext_policy_constraints_empty_, false, target);
   }
 
   // .zsearch.LintResult e_ext_policy_constraints_not_critical = 74;
   if (this->has_e_ext_policy_constraints_not_critical()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        74, *this->e_ext_policy_constraints_not_critical_, deterministic, target);
+        74, *this->e_ext_policy_constraints_not_critical_, false, target);
   }
 
   // .zsearch.LintResult e_ext_policy_map_any_policy = 75;
   if (this->has_e_ext_policy_map_any_policy()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        75, *this->e_ext_policy_map_any_policy_, deterministic, target);
+        75, *this->e_ext_policy_map_any_policy_, false, target);
   }
 
   // .zsearch.LintResult w_ext_policy_map_not_critical = 76;
   if (this->has_w_ext_policy_map_not_critical()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        76, *this->w_ext_policy_map_not_critical_, deterministic, target);
+        76, *this->w_ext_policy_map_not_critical_, false, target);
   }
 
   // .zsearch.LintResult w_ext_policy_map_not_in_cert_policy = 77;
   if (this->has_w_ext_policy_map_not_in_cert_policy()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        77, *this->w_ext_policy_map_not_in_cert_policy_, deterministic, target);
+        77, *this->w_ext_policy_map_not_in_cert_policy_, false, target);
   }
 
   // .zsearch.LintResult e_ext_san_contains_reserved_ip = 78;
   if (this->has_e_ext_san_contains_reserved_ip()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        78, *this->e_ext_san_contains_reserved_ip_, deterministic, target);
+        78, *this->e_ext_san_contains_reserved_ip_, false, target);
   }
 
   // .zsearch.LintResult w_ext_san_critical_with_subject_dn = 79;
   if (this->has_w_ext_san_critical_with_subject_dn()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        79, *this->w_ext_san_critical_with_subject_dn_, deterministic, target);
+        79, *this->w_ext_san_critical_with_subject_dn_, false, target);
   }
 
   // .zsearch.LintResult e_ext_san_directory_name_present = 80;
   if (this->has_e_ext_san_directory_name_present()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        80, *this->e_ext_san_directory_name_present_, deterministic, target);
+        80, *this->e_ext_san_directory_name_present_, false, target);
   }
 
   // .zsearch.LintResult e_ext_san_dns_not_ia5_string = 81;
   if (this->has_e_ext_san_dns_not_ia5_string()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        81, *this->e_ext_san_dns_not_ia5_string_, deterministic, target);
+        81, *this->e_ext_san_dns_not_ia5_string_, false, target);
   }
 
   // .zsearch.LintResult e_ext_san_dnsname_not_fqdn = 83;
   if (this->has_e_ext_san_dnsname_not_fqdn()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        83, *this->e_ext_san_dnsname_not_fqdn_, deterministic, target);
+        83, *this->e_ext_san_dnsname_not_fqdn_, false, target);
   }
 
   // .zsearch.LintResult e_ext_san_edi_party_name_present = 84;
   if (this->has_e_ext_san_edi_party_name_present()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        84, *this->e_ext_san_edi_party_name_present_, deterministic, target);
+        84, *this->e_ext_san_edi_party_name_present_, false, target);
   }
 
   // .zsearch.LintResult e_ext_san_empty_name = 85;
   if (this->has_e_ext_san_empty_name()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        85, *this->e_ext_san_empty_name_, deterministic, target);
+        85, *this->e_ext_san_empty_name_, false, target);
   }
 
   // .zsearch.LintResult e_ext_san_missing = 86;
   if (this->has_e_ext_san_missing()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        86, *this->e_ext_san_missing_, deterministic, target);
+        86, *this->e_ext_san_missing_, false, target);
   }
 
   // .zsearch.LintResult e_ext_san_no_entries = 87;
   if (this->has_e_ext_san_no_entries()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        87, *this->e_ext_san_no_entries_, deterministic, target);
+        87, *this->e_ext_san_no_entries_, false, target);
   }
 
   // .zsearch.LintResult e_ext_san_not_critical_without_subject = 88;
   if (this->has_e_ext_san_not_critical_without_subject()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        88, *this->e_ext_san_not_critical_without_subject_, deterministic, target);
+        88, *this->e_ext_san_not_critical_without_subject_, false, target);
   }
 
   // .zsearch.LintResult e_ext_san_other_name_present = 89;
   if (this->has_e_ext_san_other_name_present()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        89, *this->e_ext_san_other_name_present_, deterministic, target);
+        89, *this->e_ext_san_other_name_present_, false, target);
   }
 
   // .zsearch.LintResult e_ext_san_registered_id_present = 90;
   if (this->has_e_ext_san_registered_id_present()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        90, *this->e_ext_san_registered_id_present_, deterministic, target);
+        90, *this->e_ext_san_registered_id_present_, false, target);
   }
 
   // .zsearch.LintResult e_ext_san_rfc822_format_invalid = 91;
   if (this->has_e_ext_san_rfc822_format_invalid()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        91, *this->e_ext_san_rfc822_format_invalid_, deterministic, target);
+        91, *this->e_ext_san_rfc822_format_invalid_, false, target);
   }
 
   // .zsearch.LintResult e_ext_san_rfc822_name_present = 92;
   if (this->has_e_ext_san_rfc822_name_present()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        92, *this->e_ext_san_rfc822_name_present_, deterministic, target);
+        92, *this->e_ext_san_rfc822_name_present_, false, target);
   }
 
   // .zsearch.LintResult e_ext_san_space_dns_name = 93;
   if (this->has_e_ext_san_space_dns_name()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        93, *this->e_ext_san_space_dns_name_, deterministic, target);
+        93, *this->e_ext_san_space_dns_name_, false, target);
   }
 
   // .zsearch.LintResult e_ext_san_uniform_resource_identifier_present = 94;
   if (this->has_e_ext_san_uniform_resource_identifier_present()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        94, *this->e_ext_san_uniform_resource_identifier_present_, deterministic, target);
+        94, *this->e_ext_san_uniform_resource_identifier_present_, false, target);
   }
 
   // .zsearch.LintResult e_ext_san_uri_format_invalid = 95;
   if (this->has_e_ext_san_uri_format_invalid()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        95, *this->e_ext_san_uri_format_invalid_, deterministic, target);
+        95, *this->e_ext_san_uri_format_invalid_, false, target);
   }
 
   // .zsearch.LintResult e_ext_san_uri_host_not_fqdn_or_ip = 96;
   if (this->has_e_ext_san_uri_host_not_fqdn_or_ip()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        96, *this->e_ext_san_uri_host_not_fqdn_or_ip_, deterministic, target);
+        96, *this->e_ext_san_uri_host_not_fqdn_or_ip_, false, target);
   }
 
   // .zsearch.LintResult e_ext_san_uri_not_ia5 = 97;
   if (this->has_e_ext_san_uri_not_ia5()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        97, *this->e_ext_san_uri_not_ia5_, deterministic, target);
+        97, *this->e_ext_san_uri_not_ia5_, false, target);
   }
 
   // .zsearch.LintResult e_ext_san_uri_relative = 98;
   if (this->has_e_ext_san_uri_relative()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        98, *this->e_ext_san_uri_relative_, deterministic, target);
+        98, *this->e_ext_san_uri_relative_, false, target);
   }
 
   // .zsearch.LintResult e_ext_subject_directory_attr_critical = 99;
   if (this->has_e_ext_subject_directory_attr_critical()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        99, *this->e_ext_subject_directory_attr_critical_, deterministic, target);
+        99, *this->e_ext_subject_directory_attr_critical_, false, target);
   }
 
   // .zsearch.LintResult e_ext_subject_key_identifier_critical = 100;
   if (this->has_e_ext_subject_key_identifier_critical()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        100, *this->e_ext_subject_key_identifier_critical_, deterministic, target);
+        100, *this->e_ext_subject_key_identifier_critical_, false, target);
   }
 
   // .zsearch.LintResult e_ext_subject_key_identifier_missing_ca = 101;
   if (this->has_e_ext_subject_key_identifier_missing_ca()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        101, *this->e_ext_subject_key_identifier_missing_ca_, deterministic, target);
+        101, *this->e_ext_subject_key_identifier_missing_ca_, false, target);
   }
 
   // .zsearch.LintResult w_ext_subject_key_identifier_missing_sub_cert = 102;
   if (this->has_w_ext_subject_key_identifier_missing_sub_cert()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        102, *this->w_ext_subject_key_identifier_missing_sub_cert_, deterministic, target);
+        102, *this->w_ext_subject_key_identifier_missing_sub_cert_, false, target);
   }
 
   // .zsearch.LintResult e_generalized_time_does_not_include_seconds = 103;
   if (this->has_e_generalized_time_does_not_include_seconds()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        103, *this->e_generalized_time_does_not_include_seconds_, deterministic, target);
+        103, *this->e_generalized_time_does_not_include_seconds_, false, target);
   }
 
   // .zsearch.LintResult e_generalized_time_includes_fraction_seconds = 104;
   if (this->has_e_generalized_time_includes_fraction_seconds()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        104, *this->e_generalized_time_includes_fraction_seconds_, deterministic, target);
+        104, *this->e_generalized_time_includes_fraction_seconds_, false, target);
   }
 
   // .zsearch.LintResult e_generalized_time_not_in_zulu = 105;
   if (this->has_e_generalized_time_not_in_zulu()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        105, *this->e_generalized_time_not_in_zulu_, deterministic, target);
+        105, *this->e_generalized_time_not_in_zulu_, false, target);
   }
 
   // .zsearch.LintResult w_gtld_under_consideration = 106;
   if (this->has_w_gtld_under_consideration()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        106, *this->w_gtld_under_consideration_, deterministic, target);
+        106, *this->w_gtld_under_consideration_, false, target);
   }
 
   // .zsearch.LintResult e_ian_dns_name_includes_null_char = 107;
   if (this->has_e_ian_dns_name_includes_null_char()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        107, *this->e_ian_dns_name_includes_null_char_, deterministic, target);
+        107, *this->e_ian_dns_name_includes_null_char_, false, target);
   }
 
   // .zsearch.LintResult e_ian_dns_name_starts_with_period = 108;
   if (this->has_e_ian_dns_name_starts_with_period()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        108, *this->e_ian_dns_name_starts_with_period_, deterministic, target);
+        108, *this->e_ian_dns_name_starts_with_period_, false, target);
   }
 
   // .zsearch.LintResult w_ian_iana_pub_suffix_empty = 109;
   if (this->has_w_ian_iana_pub_suffix_empty()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        109, *this->w_ian_iana_pub_suffix_empty_, deterministic, target);
+        109, *this->w_ian_iana_pub_suffix_empty_, false, target);
   }
 
   // .zsearch.LintResult e_inhibit_any_policy_not_critical = 110;
   if (this->has_e_inhibit_any_policy_not_critical()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        110, *this->e_inhibit_any_policy_not_critical_, deterministic, target);
+        110, *this->e_inhibit_any_policy_not_critical_, false, target);
   }
 
   // .zsearch.LintResult e_invalid_certificate_version = 111;
   if (this->has_e_invalid_certificate_version()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        111, *this->e_invalid_certificate_version_, deterministic, target);
+        111, *this->e_invalid_certificate_version_, false, target);
   }
 
   // .zsearch.LintResult e_issuer_field_empty = 112;
   if (this->has_e_issuer_field_empty()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        112, *this->e_issuer_field_empty_, deterministic, target);
+        112, *this->e_issuer_field_empty_, false, target);
   }
 
   // .zsearch.LintResult e_name_constraint_empty = 113;
   if (this->has_e_name_constraint_empty()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        113, *this->e_name_constraint_empty_, deterministic, target);
+        113, *this->e_name_constraint_empty_, false, target);
   }
 
   // .zsearch.LintResult e_name_constraint_maximum_not_absent = 114;
   if (this->has_e_name_constraint_maximum_not_absent()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        114, *this->e_name_constraint_maximum_not_absent_, deterministic, target);
+        114, *this->e_name_constraint_maximum_not_absent_, false, target);
   }
 
   // .zsearch.LintResult e_name_constraint_minimum_non_zero = 115;
   if (this->has_e_name_constraint_minimum_non_zero()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        115, *this->e_name_constraint_minimum_non_zero_, deterministic, target);
+        115, *this->e_name_constraint_minimum_non_zero_, false, target);
   }
 
   // .zsearch.LintResult w_name_constraint_on_edi_party_name = 116;
   if (this->has_w_name_constraint_on_edi_party_name()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        116, *this->w_name_constraint_on_edi_party_name_, deterministic, target);
+        116, *this->w_name_constraint_on_edi_party_name_, false, target);
   }
 
   // .zsearch.LintResult w_name_constraint_on_registered_id = 117;
   if (this->has_w_name_constraint_on_registered_id()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        117, *this->w_name_constraint_on_registered_id_, deterministic, target);
+        117, *this->w_name_constraint_on_registered_id_, false, target);
   }
 
   // .zsearch.LintResult w_name_constraint_on_x400 = 118;
   if (this->has_w_name_constraint_on_x400()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        118, *this->w_name_constraint_on_x400_, deterministic, target);
+        118, *this->w_name_constraint_on_x400_, false, target);
   }
 
   // .zsearch.LintResult e_old_root_ca_rsa_mod_less_than_2048_bits = 119;
   if (this->has_e_old_root_ca_rsa_mod_less_than_2048_bits()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        119, *this->e_old_root_ca_rsa_mod_less_than_2048_bits_, deterministic, target);
+        119, *this->e_old_root_ca_rsa_mod_less_than_2048_bits_, false, target);
   }
 
   // .zsearch.LintResult e_old_sub_ca_rsa_mod_less_than_1024_bits = 120;
   if (this->has_e_old_sub_ca_rsa_mod_less_than_1024_bits()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        120, *this->e_old_sub_ca_rsa_mod_less_than_1024_bits_, deterministic, target);
+        120, *this->e_old_sub_ca_rsa_mod_less_than_1024_bits_, false, target);
   }
 
   // .zsearch.LintResult e_old_sub_cert_rsa_mod_less_than_1024_bits = 121;
   if (this->has_e_old_sub_cert_rsa_mod_less_than_1024_bits()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        121, *this->e_old_sub_cert_rsa_mod_less_than_1024_bits_, deterministic, target);
+        121, *this->e_old_sub_cert_rsa_mod_less_than_1024_bits_, false, target);
   }
 
   // .zsearch.LintResult e_path_len_constraint_improperly_included = 122;
   if (this->has_e_path_len_constraint_improperly_included()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        122, *this->e_path_len_constraint_improperly_included_, deterministic, target);
+        122, *this->e_path_len_constraint_improperly_included_, false, target);
   }
 
   // .zsearch.LintResult e_path_len_constraint_zero_or_less = 123;
   if (this->has_e_path_len_constraint_zero_or_less()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        123, *this->e_path_len_constraint_zero_or_less_, deterministic, target);
+        123, *this->e_path_len_constraint_zero_or_less_, false, target);
   }
 
   // .zsearch.LintResult e_public_key_type_not_allowed = 124;
   if (this->has_e_public_key_type_not_allowed()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        124, *this->e_public_key_type_not_allowed_, deterministic, target);
+        124, *this->e_public_key_type_not_allowed_, false, target);
   }
 
   // .zsearch.LintResult w_root_ca_basic_constraints_path_len_constraint_field_present = 125;
   if (this->has_w_root_ca_basic_constraints_path_len_constraint_field_present()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        125, *this->w_root_ca_basic_constraints_path_len_constraint_field_present_, deterministic, target);
+        125, *this->w_root_ca_basic_constraints_path_len_constraint_field_present_, false, target);
   }
 
   // .zsearch.LintResult w_root_ca_contains_cert_policy = 126;
   if (this->has_w_root_ca_contains_cert_policy()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        126, *this->w_root_ca_contains_cert_policy_, deterministic, target);
+        126, *this->w_root_ca_contains_cert_policy_, false, target);
   }
 
   // .zsearch.LintResult e_root_ca_extended_key_usage_present = 127;
   if (this->has_e_root_ca_extended_key_usage_present()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        127, *this->e_root_ca_extended_key_usage_present_, deterministic, target);
+        127, *this->e_root_ca_extended_key_usage_present_, false, target);
   }
 
   // .zsearch.LintResult e_rsa_exp_negative = 128;
   if (this->has_e_rsa_exp_negative()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        128, *this->e_rsa_exp_negative_, deterministic, target);
+        128, *this->e_rsa_exp_negative_, false, target);
   }
 
   // .zsearch.LintResult w_rsa_mod_factors_smaller_than_752 = 129;
   if (this->has_w_rsa_mod_factors_smaller_than_752()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        129, *this->w_rsa_mod_factors_smaller_than_752_, deterministic, target);
+        129, *this->w_rsa_mod_factors_smaller_than_752_, false, target);
   }
 
   // .zsearch.LintResult e_rsa_mod_less_than_2048_bits = 130;
   if (this->has_e_rsa_mod_less_than_2048_bits()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        130, *this->e_rsa_mod_less_than_2048_bits_, deterministic, target);
+        130, *this->e_rsa_mod_less_than_2048_bits_, false, target);
   }
 
   // .zsearch.LintResult w_rsa_mod_not_odd = 131;
   if (this->has_w_rsa_mod_not_odd()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        131, *this->w_rsa_mod_not_odd_, deterministic, target);
+        131, *this->w_rsa_mod_not_odd_, false, target);
   }
 
   // .zsearch.LintResult w_rsa_public_exponent_not_in_range = 132;
   if (this->has_w_rsa_public_exponent_not_in_range()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        132, *this->w_rsa_public_exponent_not_in_range_, deterministic, target);
+        132, *this->w_rsa_public_exponent_not_in_range_, false, target);
   }
 
   // .zsearch.LintResult e_rsa_public_exponent_not_odd = 133;
   if (this->has_e_rsa_public_exponent_not_odd()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        133, *this->e_rsa_public_exponent_not_odd_, deterministic, target);
+        133, *this->e_rsa_public_exponent_not_odd_, false, target);
   }
 
   // .zsearch.LintResult e_rsa_public_exponent_too_small = 134;
   if (this->has_e_rsa_public_exponent_too_small()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        134, *this->e_rsa_public_exponent_too_small_, deterministic, target);
+        134, *this->e_rsa_public_exponent_too_small_, false, target);
   }
 
   // .zsearch.LintResult e_san_dns_name_includes_null_char = 135;
   if (this->has_e_san_dns_name_includes_null_char()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        135, *this->e_san_dns_name_includes_null_char_, deterministic, target);
+        135, *this->e_san_dns_name_includes_null_char_, false, target);
   }
 
   // .zsearch.LintResult e_san_dns_name_starts_with_period = 136;
   if (this->has_e_san_dns_name_starts_with_period()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        136, *this->e_san_dns_name_starts_with_period_, deterministic, target);
+        136, *this->e_san_dns_name_starts_with_period_, false, target);
   }
 
   // .zsearch.LintResult w_san_iana_pub_suffix_empty = 137;
   if (this->has_w_san_iana_pub_suffix_empty()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        137, *this->w_san_iana_pub_suffix_empty_, deterministic, target);
+        137, *this->w_san_iana_pub_suffix_empty_, false, target);
   }
 
   // .zsearch.LintResult e_serial_number_longer_than_20_octets = 138;
   if (this->has_e_serial_number_longer_than_20_octets()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        138, *this->e_serial_number_longer_than_20_octets_, deterministic, target);
+        138, *this->e_serial_number_longer_than_20_octets_, false, target);
   }
 
   // .zsearch.LintResult e_serial_number_not_positive = 139;
   if (this->has_e_serial_number_not_positive()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        139, *this->e_serial_number_not_positive_, deterministic, target);
+        139, *this->e_serial_number_not_positive_, false, target);
   }
 
   // .zsearch.LintResult w_sub_ca_aia_does_not_contain_issuing_ca_url = 140;
   if (this->has_w_sub_ca_aia_does_not_contain_issuing_ca_url()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        140, *this->w_sub_ca_aia_does_not_contain_issuing_ca_url_, deterministic, target);
+        140, *this->w_sub_ca_aia_does_not_contain_issuing_ca_url_, false, target);
   }
 
   // .zsearch.LintResult e_sub_ca_aia_does_not_contain_ocsp_url = 141;
   if (this->has_e_sub_ca_aia_does_not_contain_ocsp_url()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        141, *this->e_sub_ca_aia_does_not_contain_ocsp_url_, deterministic, target);
+        141, *this->e_sub_ca_aia_does_not_contain_ocsp_url_, false, target);
   }
 
   // .zsearch.LintResult e_sub_ca_aia_missing = 142;
   if (this->has_e_sub_ca_aia_missing()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        142, *this->e_sub_ca_aia_missing_, deterministic, target);
+        142, *this->e_sub_ca_aia_missing_, false, target);
   }
 
   // .zsearch.LintResult w_sub_ca_certificate_policies_marked_critical = 143;
   if (this->has_w_sub_ca_certificate_policies_marked_critical()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        143, *this->w_sub_ca_certificate_policies_marked_critical_, deterministic, target);
+        143, *this->w_sub_ca_certificate_policies_marked_critical_, false, target);
   }
 
   // .zsearch.LintResult e_sub_ca_certificate_policies_missing = 144;
   if (this->has_e_sub_ca_certificate_policies_missing()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        144, *this->e_sub_ca_certificate_policies_missing_, deterministic, target);
+        144, *this->e_sub_ca_certificate_policies_missing_, false, target);
   }
 
   // .zsearch.LintResult e_sub_ca_crl_distribution_points_does_not_contain_url = 145;
   if (this->has_e_sub_ca_crl_distribution_points_does_not_contain_url()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        145, *this->e_sub_ca_crl_distribution_points_does_not_contain_url_, deterministic, target);
+        145, *this->e_sub_ca_crl_distribution_points_does_not_contain_url_, false, target);
   }
 
   // .zsearch.LintResult e_sub_ca_crl_distribution_points_marked_critical = 146;
   if (this->has_e_sub_ca_crl_distribution_points_marked_critical()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        146, *this->e_sub_ca_crl_distribution_points_marked_critical_, deterministic, target);
+        146, *this->e_sub_ca_crl_distribution_points_marked_critical_, false, target);
   }
 
   // .zsearch.LintResult e_sub_ca_crl_distribution_points_missing = 147;
   if (this->has_e_sub_ca_crl_distribution_points_missing()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        147, *this->e_sub_ca_crl_distribution_points_missing_, deterministic, target);
+        147, *this->e_sub_ca_crl_distribution_points_missing_, false, target);
   }
 
   // .zsearch.LintResult w_sub_ca_eku_critical = 148;
   if (this->has_w_sub_ca_eku_critical()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        148, *this->w_sub_ca_eku_critical_, deterministic, target);
+        148, *this->w_sub_ca_eku_critical_, false, target);
   }
 
   // .zsearch.LintResult w_sub_ca_name_constraints_not_critical = 149;
   if (this->has_w_sub_ca_name_constraints_not_critical()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        149, *this->w_sub_ca_name_constraints_not_critical_, deterministic, target);
+        149, *this->w_sub_ca_name_constraints_not_critical_, false, target);
   }
 
   // .zsearch.LintResult e_sub_ca_no_dns_name_constraints = 150;
   if (this->has_e_sub_ca_no_dns_name_constraints()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        150, *this->e_sub_ca_no_dns_name_constraints_, deterministic, target);
+        150, *this->e_sub_ca_no_dns_name_constraints_, false, target);
   }
 
   // .zsearch.LintResult e_sub_ca_no_ip_name_constraints = 151;
   if (this->has_e_sub_ca_no_ip_name_constraints()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        151, *this->e_sub_ca_no_ip_name_constraints_, deterministic, target);
+        151, *this->e_sub_ca_no_ip_name_constraints_, false, target);
   }
 
   // .zsearch.LintResult e_sub_cert_aia_does_not_contain_issuing_ca_url = 152;
   if (this->has_e_sub_cert_aia_does_not_contain_issuing_ca_url()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        152, *this->e_sub_cert_aia_does_not_contain_issuing_ca_url_, deterministic, target);
+        152, *this->e_sub_cert_aia_does_not_contain_issuing_ca_url_, false, target);
   }
 
   // .zsearch.LintResult e_sub_cert_aia_does_not_contain_ocsp_url = 153;
   if (this->has_e_sub_cert_aia_does_not_contain_ocsp_url()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        153, *this->e_sub_cert_aia_does_not_contain_ocsp_url_, deterministic, target);
+        153, *this->e_sub_cert_aia_does_not_contain_ocsp_url_, false, target);
   }
 
   // .zsearch.LintResult e_sub_cert_aia_missing = 154;
   if (this->has_e_sub_cert_aia_missing()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        154, *this->e_sub_cert_aia_missing_, deterministic, target);
+        154, *this->e_sub_cert_aia_missing_, false, target);
   }
 
   // .zsearch.LintResult e_sub_cert_cert_policy_empty = 155;
   if (this->has_e_sub_cert_cert_policy_empty()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        155, *this->e_sub_cert_cert_policy_empty_, deterministic, target);
+        155, *this->e_sub_cert_cert_policy_empty_, false, target);
   }
 
   // .zsearch.LintResult w_sub_cert_certificate_policies_marked_critical = 156;
   if (this->has_w_sub_cert_certificate_policies_marked_critical()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        156, *this->w_sub_cert_certificate_policies_marked_critical_, deterministic, target);
+        156, *this->w_sub_cert_certificate_policies_marked_critical_, false, target);
   }
 
   // .zsearch.LintResult e_sub_cert_crl_distribution_points_does_not_contain_url = 157;
   if (this->has_e_sub_cert_crl_distribution_points_does_not_contain_url()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        157, *this->e_sub_cert_crl_distribution_points_does_not_contain_url_, deterministic, target);
+        157, *this->e_sub_cert_crl_distribution_points_does_not_contain_url_, false, target);
   }
 
   // .zsearch.LintResult e_sub_cert_crl_distribution_points_marked_critical = 158;
   if (this->has_e_sub_cert_crl_distribution_points_marked_critical()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        158, *this->e_sub_cert_crl_distribution_points_marked_critical_, deterministic, target);
+        158, *this->e_sub_cert_crl_distribution_points_marked_critical_, false, target);
   }
 
   // .zsearch.LintResult w_sub_cert_eku_extra_values = 159;
   if (this->has_w_sub_cert_eku_extra_values()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        159, *this->w_sub_cert_eku_extra_values_, deterministic, target);
+        159, *this->w_sub_cert_eku_extra_values_, false, target);
   }
 
   // .zsearch.LintResult e_sub_cert_eku_missing = 160;
   if (this->has_e_sub_cert_eku_missing()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        160, *this->e_sub_cert_eku_missing_, deterministic, target);
+        160, *this->e_sub_cert_eku_missing_, false, target);
   }
 
   // .zsearch.LintResult e_sub_cert_eku_server_auth_client_auth_missing = 161;
   if (this->has_e_sub_cert_eku_server_auth_client_auth_missing()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        161, *this->e_sub_cert_eku_server_auth_client_auth_missing_, deterministic, target);
+        161, *this->e_sub_cert_eku_server_auth_client_auth_missing_, false, target);
   }
 
   // .zsearch.LintResult e_sub_cert_key_usage_cert_sign_bit_set = 162;
   if (this->has_e_sub_cert_key_usage_cert_sign_bit_set()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        162, *this->e_sub_cert_key_usage_cert_sign_bit_set_, deterministic, target);
+        162, *this->e_sub_cert_key_usage_cert_sign_bit_set_, false, target);
   }
 
   // .zsearch.LintResult e_sub_cert_or_sub_ca_using_sha1 = 163;
   if (this->has_e_sub_cert_or_sub_ca_using_sha1()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        163, *this->e_sub_cert_or_sub_ca_using_sha1_, deterministic, target);
+        163, *this->e_sub_cert_or_sub_ca_using_sha1_, false, target);
   }
 
   // .zsearch.LintResult w_sub_cert_sha1_expiration_too_long = 164;
   if (this->has_w_sub_cert_sha1_expiration_too_long()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        164, *this->w_sub_cert_sha1_expiration_too_long_, deterministic, target);
+        164, *this->w_sub_cert_sha1_expiration_too_long_, false, target);
   }
 
   // .zsearch.LintResult e_subject_common_name_disallowed = 165;
   if (this->has_e_subject_common_name_disallowed()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        165, *this->e_subject_common_name_disallowed_, deterministic, target);
+        165, *this->e_subject_common_name_disallowed_, false, target);
   }
 
   // .zsearch.LintResult n_subject_common_name_included = 166;
   if (this->has_n_subject_common_name_included()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        166, *this->n_subject_common_name_included_, deterministic, target);
+        166, *this->n_subject_common_name_included_, false, target);
   }
 
   // .zsearch.LintResult e_subject_common_name_not_from_san = 167;
   if (this->has_e_subject_common_name_not_from_san()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        167, *this->e_subject_common_name_not_from_san_, deterministic, target);
+        167, *this->e_subject_common_name_not_from_san_, false, target);
   }
 
   // .zsearch.LintResult e_subject_contains_noninformational_value = 168;
   if (this->has_e_subject_contains_noninformational_value()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        168, *this->e_subject_contains_noninformational_value_, deterministic, target);
+        168, *this->e_subject_contains_noninformational_value_, false, target);
   }
 
   // .zsearch.LintResult e_subject_contains_reserved_ip = 169;
   if (this->has_e_subject_contains_reserved_ip()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        169, *this->e_subject_contains_reserved_ip_, deterministic, target);
+        169, *this->e_subject_contains_reserved_ip_, false, target);
   }
 
   // .zsearch.LintResult e_subject_country_not_iso = 170;
   if (this->has_e_subject_country_not_iso()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        170, *this->e_subject_country_not_iso_, deterministic, target);
+        170, *this->e_subject_country_not_iso_, false, target);
   }
 
   // .zsearch.LintResult e_subject_empty_without_san = 171;
   if (this->has_e_subject_empty_without_san()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        171, *this->e_subject_empty_without_san_, deterministic, target);
+        171, *this->e_subject_empty_without_san_, false, target);
   }
 
   // .zsearch.LintResult e_subject_info_access_marked_critical = 172;
   if (this->has_e_subject_info_access_marked_critical()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        172, *this->e_subject_info_access_marked_critical_, deterministic, target);
+        172, *this->e_subject_info_access_marked_critical_, false, target);
   }
 
   // .zsearch.LintResult e_subject_locality_without_org = 173;
   if (this->has_e_subject_locality_without_org()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        173, *this->e_subject_locality_without_org_, deterministic, target);
+        173, *this->e_subject_locality_without_org_, false, target);
   }
 
   // .zsearch.LintResult e_subject_not_dn = 174;
   if (this->has_e_subject_not_dn()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        174, *this->e_subject_not_dn_, deterministic, target);
+        174, *this->e_subject_not_dn_, false, target);
   }
 
   // .zsearch.LintResult e_subject_org_without_country = 175;
   if (this->has_e_subject_org_without_country()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        175, *this->e_subject_org_without_country_, deterministic, target);
+        175, *this->e_subject_org_without_country_, false, target);
   }
 
   // .zsearch.LintResult e_subject_org_without_locality_or_province = 176;
   if (this->has_e_subject_org_without_locality_or_province()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        176, *this->e_subject_org_without_locality_or_province_, deterministic, target);
+        176, *this->e_subject_org_without_locality_or_province_, false, target);
   }
 
   // .zsearch.LintResult e_subject_postal_without_org = 177;
   if (this->has_e_subject_postal_without_org()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        177, *this->e_subject_postal_without_org_, deterministic, target);
+        177, *this->e_subject_postal_without_org_, false, target);
   }
 
   // .zsearch.LintResult e_subject_province_without_org = 178;
   if (this->has_e_subject_province_without_org()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        178, *this->e_subject_province_without_org_, deterministic, target);
+        178, *this->e_subject_province_without_org_, false, target);
   }
 
   // .zsearch.LintResult e_subject_street_without_org = 179;
   if (this->has_e_subject_street_without_org()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        179, *this->e_subject_street_without_org_, deterministic, target);
+        179, *this->e_subject_street_without_org_, false, target);
   }
 
   // .zsearch.LintResult e_utc_time_does_not_include_seconds = 180;
   if (this->has_e_utc_time_does_not_include_seconds()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        180, *this->e_utc_time_does_not_include_seconds_, deterministic, target);
+        180, *this->e_utc_time_does_not_include_seconds_, false, target);
   }
 
   // .zsearch.LintResult e_utc_time_not_in_zulu = 181;
   if (this->has_e_utc_time_not_in_zulu()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        181, *this->e_utc_time_not_in_zulu_, deterministic, target);
+        181, *this->e_utc_time_not_in_zulu_, false, target);
   }
 
   // .zsearch.LintResult e_validity_time_not_positive = 182;
   if (this->has_e_validity_time_not_positive()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        182, *this->e_validity_time_not_positive_, deterministic, target);
+        182, *this->e_validity_time_not_positive_, false, target);
   }
 
   // .zsearch.LintResult e_wrong_time_format_pre2050 = 183;
   if (this->has_e_wrong_time_format_pre2050()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        183, *this->e_wrong_time_format_pre2050_, deterministic, target);
+        183, *this->e_wrong_time_format_pre2050_, false, target);
   }
 
   // .zsearch.LintResult e_rsa_no_public_key = 184;
   if (this->has_e_rsa_no_public_key()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        184, *this->e_rsa_no_public_key_, deterministic, target);
+        184, *this->e_rsa_no_public_key_, false, target);
   }
 
   // .zsearch.LintResult e_sub_cert_certificate_policies_missing = 185;
   if (this->has_e_sub_cert_certificate_policies_missing()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        185, *this->e_sub_cert_certificate_policies_missing_, deterministic, target);
+        185, *this->e_sub_cert_certificate_policies_missing_, false, target);
   }
 
   // .zsearch.LintResult e_sub_cert_key_usage_crl_sign_bit_set = 186;
   if (this->has_e_sub_cert_key_usage_crl_sign_bit_set()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        186, *this->e_sub_cert_key_usage_crl_sign_bit_set_, deterministic, target);
+        186, *this->e_sub_cert_key_usage_crl_sign_bit_set_, false, target);
   }
 
   // .zsearch.LintResult e_subject_common_name_max_length = 187;
   if (this->has_e_subject_common_name_max_length()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        187, *this->e_subject_common_name_max_length_, deterministic, target);
+        187, *this->e_subject_common_name_max_length_, false, target);
   }
 
   // .zsearch.LintResult e_subject_locality_name_max_length = 188;
   if (this->has_e_subject_locality_name_max_length()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        188, *this->e_subject_locality_name_max_length_, deterministic, target);
+        188, *this->e_subject_locality_name_max_length_, false, target);
   }
 
   // .zsearch.LintResult e_subject_organization_name_max_length = 189;
   if (this->has_e_subject_organization_name_max_length()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        189, *this->e_subject_organization_name_max_length_, deterministic, target);
+        189, *this->e_subject_organization_name_max_length_, false, target);
   }
 
   // .zsearch.LintResult e_subject_organizational_unit_name_max_length = 190;
   if (this->has_e_subject_organizational_unit_name_max_length()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        190, *this->e_subject_organizational_unit_name_max_length_, deterministic, target);
+        190, *this->e_subject_organizational_unit_name_max_length_, false, target);
   }
 
   // .zsearch.LintResult e_subject_state_name_max_length = 191;
   if (this->has_e_subject_state_name_max_length()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        191, *this->e_subject_state_name_max_length_, deterministic, target);
+        191, *this->e_subject_state_name_max_length_, false, target);
   }
 
   // .zsearch.LintResult w_multiple_subject_rdn = 192;
   if (this->has_w_multiple_subject_rdn()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        192, *this->w_multiple_subject_rdn_, deterministic, target);
+        192, *this->w_multiple_subject_rdn_, false, target);
   }
 
   // .zsearch.LintResult w_multiple_issuer_rdn = 193;
   if (this->has_w_multiple_issuer_rdn()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        193, *this->w_multiple_issuer_rdn_, deterministic, target);
+        193, *this->w_multiple_issuer_rdn_, false, target);
   }
 
   // .zsearch.LintResult w_issuer_dn_trailing_whitespace = 194;
   if (this->has_w_issuer_dn_trailing_whitespace()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        194, *this->w_issuer_dn_trailing_whitespace_, deterministic, target);
+        194, *this->w_issuer_dn_trailing_whitespace_, false, target);
   }
 
   // .zsearch.LintResult w_issuer_dn_leading_whitespace = 195;
   if (this->has_w_issuer_dn_leading_whitespace()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        195, *this->w_issuer_dn_leading_whitespace_, deterministic, target);
+        195, *this->w_issuer_dn_leading_whitespace_, false, target);
   }
 
   // .zsearch.LintResult w_subject_dn_trailing_whitespace = 196;
   if (this->has_w_subject_dn_trailing_whitespace()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        196, *this->w_subject_dn_trailing_whitespace_, deterministic, target);
+        196, *this->w_subject_dn_trailing_whitespace_, false, target);
   }
 
   // .zsearch.LintResult w_subject_dn_leading_whitespace = 197;
   if (this->has_w_subject_dn_leading_whitespace()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        197, *this->w_subject_dn_leading_whitespace_, deterministic, target);
+        197, *this->w_subject_dn_leading_whitespace_, false, target);
   }
 
   // @@protoc_insertion_point(serialize_to_array_end:zsearch.Lints)
@@ -11092,9 +10844,6 @@ void Lints::MergeFrom(const Lints& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:zsearch.Lints)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
   if (from.has_e_basic_constraints_not_critical()) {
     mutable_e_basic_constraints_not_critical()->::zsearch::LintResult::MergeFrom(from.e_basic_constraints_not_critical());
   }
@@ -11909,7 +11658,7 @@ void Lints::InternalSwap(Lints* other) {
 
 ::google::protobuf::Metadata Lints::GetMetadata() const {
   protobuf_zlint_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_zlint_2eproto::file_level_metadata[kIndexInFileMessages];
+  return protobuf_zlint_2eproto::file_level_metadata[2];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS

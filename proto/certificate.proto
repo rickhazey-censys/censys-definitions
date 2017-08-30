@@ -165,6 +165,8 @@ message Certificate {
     // to the certificate processing daemon.
     repeated bytes presented_chain = 45;
 
+    bytes parent_spki_subject_fp = 50;
+
     CertificateSource source = 28;
     bool seen_in_scan = 29;
 
@@ -216,5 +218,5 @@ message Certificate {
     bool should_post_process = 27 [deprecated=true];
     bool do_not_post_process = 36 [deprecated=true];
 
-    // highest ID in use: 49
+    // highest ID in use: 50
 }
