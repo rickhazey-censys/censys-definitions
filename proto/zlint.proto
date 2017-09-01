@@ -45,7 +45,6 @@ message ZLint {
 // __begin_zlint_proto
 
 message Lints {
-
     LintResult e_basic_constraints_not_critical = 1;
     LintResult e_ian_bare_wildcard = 2;
     LintResult e_ian_wildcard_not_first = 3;
@@ -74,7 +73,6 @@ message Lints {
     LintResult e_cab_ov_requires_org = 26;
     LintResult e_cab_iv_requires_personal_name = 27;
     LintResult e_cert_unique_identifier_version_not_2_or_3 = 28;
-    LintResult e_dh_params_missing = 29;
     LintResult e_distribution_point_incomplete = 30;
     LintResult w_distribution_point_missing_ldap_or_uri = 31;
     LintResult e_dsa_improper_modulus_or_divisor_size = 32;
@@ -127,8 +125,6 @@ message Lints {
     LintResult w_ext_san_critical_with_subject_dn = 79;
     LintResult e_ext_san_directory_name_present = 80;
     LintResult e_ext_san_dns_not_ia5_string = 81;
-    //LintResult e_ext_san_dns_syntax_incorrect = 82;
-    LintResult e_ext_san_dnsname_not_fqdn = 83;
     LintResult e_ext_san_edi_party_name_present = 84;
     LintResult e_ext_san_empty_name = 85;
     LintResult e_ext_san_missing = 86;
@@ -151,7 +147,6 @@ message Lints {
     LintResult e_generalized_time_does_not_include_seconds = 103;
     LintResult e_generalized_time_includes_fraction_seconds = 104;
     LintResult e_generalized_time_not_in_zulu = 105;
-    LintResult w_gtld_under_consideration = 106;
     LintResult e_ian_dns_name_includes_null_char = 107;
     LintResult e_ian_dns_name_starts_with_period = 108;
     LintResult w_ian_iana_pub_suffix_empty = 109;
@@ -195,9 +190,6 @@ message Lints {
     LintResult e_sub_ca_crl_distribution_points_missing = 147;
     LintResult w_sub_ca_eku_critical = 148;
     LintResult w_sub_ca_name_constraints_not_critical = 149;
-    LintResult e_sub_ca_no_dns_name_constraints = 150;
-    LintResult e_sub_ca_no_ip_name_constraints = 151;
-    LintResult e_sub_cert_aia_does_not_contain_issuing_ca_url = 152;
     LintResult e_sub_cert_aia_does_not_contain_ocsp_url = 153;
     LintResult e_sub_cert_aia_missing = 154;
     LintResult e_sub_cert_cert_policy_empty = 155;
@@ -210,7 +202,6 @@ message Lints {
     LintResult e_sub_cert_key_usage_cert_sign_bit_set = 162;
     LintResult e_sub_cert_or_sub_ca_using_sha1 = 163;
     LintResult w_sub_cert_sha1_expiration_too_long = 164;
-    LintResult e_subject_common_name_disallowed = 165;
     LintResult n_subject_common_name_included = 166;
     LintResult e_subject_common_name_not_from_san = 167;
     LintResult e_subject_contains_noninformational_value = 168;
@@ -218,12 +209,10 @@ message Lints {
     LintResult e_subject_country_not_iso = 170;
     LintResult e_subject_empty_without_san = 171;
     LintResult e_subject_info_access_marked_critical = 172;
-    LintResult e_subject_locality_without_org = 173;
     LintResult e_subject_not_dn = 174;
     LintResult e_subject_org_without_country = 175;
     LintResult e_subject_org_without_locality_or_province = 176;
     LintResult e_subject_postal_without_org = 177;
-    LintResult e_subject_province_without_org = 178;
     LintResult e_subject_street_without_org = 179;
     LintResult e_utc_time_does_not_include_seconds = 180;
     LintResult e_utc_time_not_in_zulu = 181;
@@ -243,5 +232,44 @@ message Lints {
     LintResult w_issuer_dn_leading_whitespace = 195;
     LintResult w_subject_dn_trailing_whitespace = 196;
     LintResult w_subject_dn_leading_whitespace = 197;
-    // highest ID in use is currently 197
+    LintResult e_sub_cert_locality_name_must_appear = 198;
+    LintResult e_signature_algorithm_not_supported = 199;
+    LintResult e_dnsname_hyphen_in_sld = 200;
+    LintResult e_dsa_correct_order_in_subgroup = 201;
+    LintResult n_sub_ca_eku_not_technically_constrained = 202;
+    LintResult e_dnsname_empty_label = 203;
+    LintResult e_ca_common_name_missing = 204;
+    LintResult e_dnsname_wildcard_only_in_left_label = 205;
+    LintResult e_sub_cert_valid_time_too_long = 206;
+    LintResult e_dnsname_left_label_wildcard_correct = 207;
+    LintResult w_serial_number_low_entropy = 208;
+    LintResult e_dnsname_label_too_long = 209;
+    LintResult e_root_ca_key_usage_present = 210;
+    LintResult w_dnsname_wildcard_left_of_public_suffix = 211;
+    LintResult e_international_dns_name_not_unicode = 212;
+    LintResult w_dnsname_underscore_in_trd = 213;
+    LintResult w_sub_cert_aia_does_not_contain_issuing_ca_url = 214;
+    LintResult e_sub_cert_locality_name_must_not_appear = 215;
+    LintResult e_sub_cert_country_name_must_appear = 216;
+    LintResult e_dnsname_bad_character_in_label = 217;
+    LintResult e_sub_ca_must_not_contain_any_policy = 218;
+    LintResult e_international_dns_name_not_nfkc = 219;
+    LintResult e_sub_cert_aia_marked_critical = 220;
+    LintResult e_ca_is_ca = 221;
+    LintResult e_sub_cert_street_address_should_not_exist = 222;
+    LintResult e_sub_ca_eku_missing = 223;
+    LintResult e_sub_cert_province_must_not_appear = 224;
+    LintResult e_dnsname_underscore_in_sld = 225;
+    LintResult e_sub_ca_eku_name_constraints = 226;
+    LintResult e_sub_cert_not_is_ca = 227;
+    LintResult e_dsa_unique_correct_representation = 228;
+    LintResult e_sub_cert_province_must_appear = 229;
+    LintResult e_root_ca_key_usage_must_be_critical = 230;
+    LintResult e_ext_san_dns_name_too_long = 231;
+    LintResult e_dsa_params_missing = 232;
+    LintResult e_sub_ca_aia_marked_critical = 233;
+    LintResult e_sub_cert_given_name_surname_contains_correct_policy = 234;
+    LintResult e_sub_cert_postal_code_must_not_appear = 235;
+    LintResult e_dnsname_not_valid_tld = 236;
+    // Highest ID in use is currently 236
 }

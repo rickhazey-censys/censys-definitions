@@ -114,6 +114,7 @@ def generate_zlint_proto(zlint_state_path, zlint_list_path):
         if e.errno != 2:
             raise
     next_id = max(fields.itervalues()) + 1
+    current_lints = set()
     with open(zlint_list_path) as fd:
         for line in fd:
             lint = json.loads(line.strip())
@@ -123,6 +124,7 @@ def generate_zlint_proto(zlint_state_path, zlint_list_path):
                 field_id = next_id
                 next_id += 1
                 fields[lint_name] = field_id
+            current_lints.add(lint_name)
     with open(zlint_proto_file) as fd:
         with tempfile.NamedTemporaryFile(prefix='zlint.proto_', delete=False) as tmpfd:
             for line in fd:
@@ -134,7 +136,9 @@ def generate_zlint_proto(zlint_state_path, zlint_list_path):
             for field_name, field_id in sorted(fields.iteritems(), key=lambda x: x[1]):
                 if field_name.startswith('__'):
                     continue
-                field_def = "    {} = {}\n".format(field_name, field_id)
+                if field_name not in current_lints:
+                    continue
+                field_def = "    LintResult {} = {};\n".format(field_name, field_id)
                 tmpfd.write(field_def)
             id_comment = "    // Highest ID in use is currently {}\n".format(next_id - 1)
             tmpfd.write(id_comment)
