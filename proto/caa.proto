@@ -1,4 +1,5 @@
 syntax="proto3";
+
 package zsearch;
 
 enum CAAStatus {
@@ -20,7 +21,7 @@ enum CAAStatus {
 }
 
 message CAATagValue {
-    // flag is one byte, this is the cheapest way to store it 
+    // flag is one byte, this is the cheapest way to store it
     int32 flag = 1;
     string tag = 2;
     string value = 3;

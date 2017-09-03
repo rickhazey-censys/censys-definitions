@@ -26,6 +26,7 @@ protobuf_prefixes = [
     "certificate",
     "common",
     "ct",
+    "caa",
     "hoststore",
     "protocols",
     "pubkey",
