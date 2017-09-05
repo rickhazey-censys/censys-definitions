@@ -210,10 +210,6 @@ message Lints {
     LintResult e_subject_empty_without_san = 171;
     LintResult e_subject_info_access_marked_critical = 172;
     LintResult e_subject_not_dn = 174;
-    LintResult e_subject_org_without_country = 175;
-    LintResult e_subject_org_without_locality_or_province = 176;
-    LintResult e_subject_postal_without_org = 177;
-    LintResult e_subject_street_without_org = 179;
     LintResult e_utc_time_does_not_include_seconds = 180;
     LintResult e_utc_time_not_in_zulu = 181;
     LintResult e_validity_time_not_positive = 182;
