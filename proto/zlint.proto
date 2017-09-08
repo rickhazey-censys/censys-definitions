@@ -267,5 +267,7 @@ message Lints {
     LintResult e_sub_cert_given_name_surname_contains_correct_policy = 234;
     LintResult e_sub_cert_postal_code_must_not_appear = 235;
     LintResult e_dnsname_not_valid_tld = 236;
-    // Highest ID in use is currently 236
+    LintResult n_contains_redacted_dnsname = 237;
+    LintResult e_dnsname_contains_bare_iana_suffix = 238;
+    // Highest ID in use is currently 238
 }

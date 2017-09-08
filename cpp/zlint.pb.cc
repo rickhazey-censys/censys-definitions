@@ -281,6 +281,8 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, e_sub_cert_given_name_surname_contains_correct_policy_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, e_sub_cert_postal_code_must_not_appear_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, e_dnsname_not_valid_tld_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, n_contains_redacted_dnsname_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Lints, e_dnsname_contains_bare_iana_suffix_),
 };
 
 static const ::google::protobuf::internal::MigrationSchema schemas[] = {
@@ -780,6 +782,10 @@ void TableStruct::InitDefaultsImpl() {
       ::zsearch::LintResult::internal_default_instance());
   _Lints_default_instance_.get_mutable()->e_dnsname_not_valid_tld_ = const_cast< ::zsearch::LintResult*>(
       ::zsearch::LintResult::internal_default_instance());
+  _Lints_default_instance_.get_mutable()->n_contains_redacted_dnsname_ = const_cast< ::zsearch::LintResult*>(
+      ::zsearch::LintResult::internal_default_instance());
+  _Lints_default_instance_.get_mutable()->e_dnsname_contains_bare_iana_suffix_ = const_cast< ::zsearch::LintResult*>(
+      ::zsearch::LintResult::internal_default_instance());
 }
 
 void InitDefaults() {
@@ -797,7 +803,7 @@ void AddDescriptorsImpl() {
       "\001(\010\022\027\n\017notices_present\030\005 \001(\010\022\030\n\020warnings"
       "_present\030\006 \001(\010\022\026\n\016errors_present\030\007 \001(\010\022\026"
       "\n\016fatals_present\030\010 \001(\010\022\035\n\005lints\030\t \001(\0132\016."
-      "zsearch.Lints\"\322m\n\005Lints\022=\n e_basic_const"
+      "zsearch.Lints\"\320n\n\005Lints\022=\n e_basic_const"
       "raints_not_critical\030\001 \001(\0132\023.zsearch.Lint"
       "Result\0220\n\023e_ian_bare_wildcard\030\002 \001(\0132\023.zs"
       "earch.LintResult\0225\n\030e_ian_wildcard_not_f"
@@ -1148,18 +1154,22 @@ void AddDescriptorsImpl() {
       "esult\022D\n&e_sub_cert_postal_code_must_not"
       "_appear\030\353\001 \001(\0132\023.zsearch.LintResult\0225\n\027e"
       "_dnsname_not_valid_tld\030\354\001 \001(\0132\023.zsearch."
-      "LintResult*\365\001\n\020LintResultStatus\022\030\n\024LINT_"
-      "RESULT_RESERVED\020\000\022\022\n\016LINT_RESULT_NA\020\001\022\022\n"
-      "\016LINT_RESULT_NE\020\002\022\024\n\020LINT_RESULT_PASS\020\003\022"
-      "\024\n\020LINT_RESULT_INFO\020\004\022\026\n\022LINT_RESULT_NOT"
-      "ICE\020\005\022\024\n\020LINT_RESULT_WARN\020\006\022\025\n\021LINT_RESU"
-      "LT_ERROR\020\007\022\025\n\021LINT_RESULT_FATAL\020\010\022\027\n\023LIN"
-      "T_RESULT_UNKNOWN\020\t*[\n\013ZLintStatus\022\031\n\025ZLI"
-      "NT_STATUS_RESERVED\020\000\022\030\n\024ZLINT_STATUS_SUC"
-      "CESS\020\001\022\027\n\023ZLINT_STATUS_FAILED\020\002b\006proto3"
+      "LintResult\0229\n\033n_contains_redacted_dnsnam"
+      "e\030\355\001 \001(\0132\023.zsearch.LintResult\022A\n#e_dnsna"
+      "me_contains_bare_iana_suffix\030\356\001 \001(\0132\023.zs"
+      "earch.LintResult*\365\001\n\020LintResultStatus\022\030\n"
+      "\024LINT_RESULT_RESERVED\020\000\022\022\n\016LINT_RESULT_N"
+      "A\020\001\022\022\n\016LINT_RESULT_NE\020\002\022\024\n\020LINT_RESULT_P"
+      "ASS\020\003\022\024\n\020LINT_RESULT_INFO\020\004\022\026\n\022LINT_RESU"
+      "LT_NOTICE\020\005\022\024\n\020LINT_RESULT_WARN\020\006\022\025\n\021LIN"
+      "T_RESULT_ERROR\020\007\022\025\n\021LINT_RESULT_FATAL\020\010\022"
+      "\027\n\023LINT_RESULT_UNKNOWN\020\t*[\n\013ZLintStatus\022"
+      "\031\n\025ZLINT_STATUS_RESERVED\020\000\022\030\n\024ZLINT_STAT"
+      "US_SUCCESS\020\001\022\027\n\023ZLINT_STATUS_FAILED\020\002b\006p"
+      "roto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 14719);
+      descriptor, 14845);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "zlint.proto", &protobuf_RegisterTypes);
   ::google::protobuf::internal::OnShutdown(&TableStruct::Shutdown);
@@ -2427,6 +2437,8 @@ const int Lints::kESubCaAiaMarkedCriticalFieldNumber;
 const int Lints::kESubCertGivenNameSurnameContainsCorrectPolicyFieldNumber;
 const int Lints::kESubCertPostalCodeMustNotAppearFieldNumber;
 const int Lints::kEDnsnameNotValidTldFieldNumber;
+const int Lints::kNContainsRedactedDnsnameFieldNumber;
+const int Lints::kEDnsnameContainsBareIanaSuffixFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Lints::Lints()
@@ -3552,12 +3564,22 @@ Lints::Lints(const Lints& from)
   } else {
     e_dnsname_not_valid_tld_ = NULL;
   }
+  if (from.has_n_contains_redacted_dnsname()) {
+    n_contains_redacted_dnsname_ = new ::zsearch::LintResult(*from.n_contains_redacted_dnsname_);
+  } else {
+    n_contains_redacted_dnsname_ = NULL;
+  }
+  if (from.has_e_dnsname_contains_bare_iana_suffix()) {
+    e_dnsname_contains_bare_iana_suffix_ = new ::zsearch::LintResult(*from.e_dnsname_contains_bare_iana_suffix_);
+  } else {
+    e_dnsname_contains_bare_iana_suffix_ = NULL;
+  }
   // @@protoc_insertion_point(copy_constructor:zsearch.Lints)
 }
 
 void Lints::SharedCtor() {
-  ::memset(&e_basic_constraints_not_critical_, 0, reinterpret_cast<char*>(&e_dnsname_not_valid_tld_) -
-    reinterpret_cast<char*>(&e_basic_constraints_not_critical_) + sizeof(e_dnsname_not_valid_tld_));
+  ::memset(&e_basic_constraints_not_critical_, 0, reinterpret_cast<char*>(&e_dnsname_contains_bare_iana_suffix_) -
+    reinterpret_cast<char*>(&e_basic_constraints_not_critical_) + sizeof(e_dnsname_contains_bare_iana_suffix_));
   _cached_size_ = 0;
 }
 
@@ -4232,6 +4254,12 @@ void Lints::SharedDtor() {
   }
   if (this != internal_default_instance()) {
     delete e_dnsname_not_valid_tld_;
+  }
+  if (this != internal_default_instance()) {
+    delete n_contains_redacted_dnsname_;
+  }
+  if (this != internal_default_instance()) {
+    delete e_dnsname_contains_bare_iana_suffix_;
   }
 }
 
@@ -5148,6 +5176,14 @@ void Lints::Clear() {
     delete e_dnsname_not_valid_tld_;
   }
   e_dnsname_not_valid_tld_ = NULL;
+  if (GetArenaNoVirtual() == NULL && n_contains_redacted_dnsname_ != NULL) {
+    delete n_contains_redacted_dnsname_;
+  }
+  n_contains_redacted_dnsname_ = NULL;
+  if (GetArenaNoVirtual() == NULL && e_dnsname_contains_bare_iana_suffix_ != NULL) {
+    delete e_dnsname_contains_bare_iana_suffix_;
+  }
+  e_dnsname_contains_bare_iana_suffix_ = NULL;
 }
 
 bool Lints::MergePartialFromCodedStream(
@@ -7602,6 +7638,28 @@ bool Lints::MergePartialFromCodedStream(
         break;
       }
 
+      // .zsearch.LintResult n_contains_redacted_dnsname = 237;
+      case 237: {
+        if (tag == 1898u) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_n_contains_redacted_dnsname()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .zsearch.LintResult e_dnsname_contains_bare_iana_suffix = 238;
+      case 238: {
+        if (tag == 1906u) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_e_dnsname_contains_bare_iana_suffix()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
       default: {
       handle_unusual:
         if (tag == 0 ||
@@ -8956,6 +9014,18 @@ void Lints::SerializeWithCachedSizes(
   if (this->has_e_dnsname_not_valid_tld()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       236, *this->e_dnsname_not_valid_tld_, output);
+  }
+
+  // .zsearch.LintResult n_contains_redacted_dnsname = 237;
+  if (this->has_n_contains_redacted_dnsname()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      237, *this->n_contains_redacted_dnsname_, output);
+  }
+
+  // .zsearch.LintResult e_dnsname_contains_bare_iana_suffix = 238;
+  if (this->has_e_dnsname_contains_bare_iana_suffix()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      238, *this->e_dnsname_contains_bare_iana_suffix_, output);
   }
 
   // @@protoc_insertion_point(serialize_end:zsearch.Lints)
@@ -10517,6 +10587,20 @@ void Lints::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
         236, *this->e_dnsname_not_valid_tld_, false, target);
+  }
+
+  // .zsearch.LintResult n_contains_redacted_dnsname = 237;
+  if (this->has_n_contains_redacted_dnsname()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageNoVirtualToArray(
+        237, *this->n_contains_redacted_dnsname_, false, target);
+  }
+
+  // .zsearch.LintResult e_dnsname_contains_bare_iana_suffix = 238;
+  if (this->has_e_dnsname_contains_bare_iana_suffix()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageNoVirtualToArray(
+        238, *this->e_dnsname_contains_bare_iana_suffix_, false, target);
   }
 
   // @@protoc_insertion_point(serialize_to_array_end:zsearch.Lints)
@@ -12081,6 +12165,20 @@ size_t Lints::ByteSizeLong() const {
         *this->e_dnsname_not_valid_tld_);
   }
 
+  // .zsearch.LintResult n_contains_redacted_dnsname = 237;
+  if (this->has_n_contains_redacted_dnsname()) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        *this->n_contains_redacted_dnsname_);
+  }
+
+  // .zsearch.LintResult e_dnsname_contains_bare_iana_suffix = 238;
+  if (this->has_e_dnsname_contains_bare_iana_suffix()) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        *this->e_dnsname_contains_bare_iana_suffix_);
+  }
+
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = cached_size;
@@ -12773,6 +12871,12 @@ void Lints::MergeFrom(const Lints& from) {
   if (from.has_e_dnsname_not_valid_tld()) {
     mutable_e_dnsname_not_valid_tld()->::zsearch::LintResult::MergeFrom(from.e_dnsname_not_valid_tld());
   }
+  if (from.has_n_contains_redacted_dnsname()) {
+    mutable_n_contains_redacted_dnsname()->::zsearch::LintResult::MergeFrom(from.n_contains_redacted_dnsname());
+  }
+  if (from.has_e_dnsname_contains_bare_iana_suffix()) {
+    mutable_e_dnsname_contains_bare_iana_suffix()->::zsearch::LintResult::MergeFrom(from.e_dnsname_contains_bare_iana_suffix());
+  }
 }
 
 void Lints::CopyFrom(const ::google::protobuf::Message& from) {
@@ -13020,6 +13124,8 @@ void Lints::InternalSwap(Lints* other) {
   std::swap(e_sub_cert_given_name_surname_contains_correct_policy_, other->e_sub_cert_given_name_surname_contains_correct_policy_);
   std::swap(e_sub_cert_postal_code_must_not_appear_, other->e_sub_cert_postal_code_must_not_appear_);
   std::swap(e_dnsname_not_valid_tld_, other->e_dnsname_not_valid_tld_);
+  std::swap(n_contains_redacted_dnsname_, other->n_contains_redacted_dnsname_);
+  std::swap(e_dnsname_contains_bare_iana_suffix_, other->e_dnsname_contains_bare_iana_suffix_);
   std::swap(_cached_size_, other->_cached_size_);
 }
 
@@ -21687,6 +21793,84 @@ void Lints::set_allocated_e_dnsname_not_valid_tld(::zsearch::LintResult* e_dnsna
     
   }
   // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_dnsname_not_valid_tld)
+}
+
+// .zsearch.LintResult n_contains_redacted_dnsname = 237;
+bool Lints::has_n_contains_redacted_dnsname() const {
+  return this != internal_default_instance() && n_contains_redacted_dnsname_ != NULL;
+}
+void Lints::clear_n_contains_redacted_dnsname() {
+  if (GetArenaNoVirtual() == NULL && n_contains_redacted_dnsname_ != NULL) delete n_contains_redacted_dnsname_;
+  n_contains_redacted_dnsname_ = NULL;
+}
+const ::zsearch::LintResult& Lints::n_contains_redacted_dnsname() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.n_contains_redacted_dnsname)
+  return n_contains_redacted_dnsname_ != NULL ? *n_contains_redacted_dnsname_
+                         : *::zsearch::LintResult::internal_default_instance();
+}
+::zsearch::LintResult* Lints::mutable_n_contains_redacted_dnsname() {
+  
+  if (n_contains_redacted_dnsname_ == NULL) {
+    n_contains_redacted_dnsname_ = new ::zsearch::LintResult;
+  }
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.n_contains_redacted_dnsname)
+  return n_contains_redacted_dnsname_;
+}
+::zsearch::LintResult* Lints::release_n_contains_redacted_dnsname() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.n_contains_redacted_dnsname)
+  
+  ::zsearch::LintResult* temp = n_contains_redacted_dnsname_;
+  n_contains_redacted_dnsname_ = NULL;
+  return temp;
+}
+void Lints::set_allocated_n_contains_redacted_dnsname(::zsearch::LintResult* n_contains_redacted_dnsname) {
+  delete n_contains_redacted_dnsname_;
+  n_contains_redacted_dnsname_ = n_contains_redacted_dnsname;
+  if (n_contains_redacted_dnsname) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.n_contains_redacted_dnsname)
+}
+
+// .zsearch.LintResult e_dnsname_contains_bare_iana_suffix = 238;
+bool Lints::has_e_dnsname_contains_bare_iana_suffix() const {
+  return this != internal_default_instance() && e_dnsname_contains_bare_iana_suffix_ != NULL;
+}
+void Lints::clear_e_dnsname_contains_bare_iana_suffix() {
+  if (GetArenaNoVirtual() == NULL && e_dnsname_contains_bare_iana_suffix_ != NULL) delete e_dnsname_contains_bare_iana_suffix_;
+  e_dnsname_contains_bare_iana_suffix_ = NULL;
+}
+const ::zsearch::LintResult& Lints::e_dnsname_contains_bare_iana_suffix() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_dnsname_contains_bare_iana_suffix)
+  return e_dnsname_contains_bare_iana_suffix_ != NULL ? *e_dnsname_contains_bare_iana_suffix_
+                         : *::zsearch::LintResult::internal_default_instance();
+}
+::zsearch::LintResult* Lints::mutable_e_dnsname_contains_bare_iana_suffix() {
+  
+  if (e_dnsname_contains_bare_iana_suffix_ == NULL) {
+    e_dnsname_contains_bare_iana_suffix_ = new ::zsearch::LintResult;
+  }
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_dnsname_contains_bare_iana_suffix)
+  return e_dnsname_contains_bare_iana_suffix_;
+}
+::zsearch::LintResult* Lints::release_e_dnsname_contains_bare_iana_suffix() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_dnsname_contains_bare_iana_suffix)
+  
+  ::zsearch::LintResult* temp = e_dnsname_contains_bare_iana_suffix_;
+  e_dnsname_contains_bare_iana_suffix_ = NULL;
+  return temp;
+}
+void Lints::set_allocated_e_dnsname_contains_bare_iana_suffix(::zsearch::LintResult* e_dnsname_contains_bare_iana_suffix) {
+  delete e_dnsname_contains_bare_iana_suffix_;
+  e_dnsname_contains_bare_iana_suffix_ = e_dnsname_contains_bare_iana_suffix;
+  if (e_dnsname_contains_bare_iana_suffix) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_dnsname_contains_bare_iana_suffix)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
