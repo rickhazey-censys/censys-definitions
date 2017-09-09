@@ -300,7 +300,7 @@ void AddDescriptorsImpl() {
       "US_SUCCESS\020\002\022 \n\034CT_PUSH_STATUS_UNKNOWN_E"
       "RROR\020\003\022\037\n\033CT_PUSH_STATUS_INVALID_ROOT\020\004\022"
       "!\n\035CT_PUSH_STATUS_ALREADY_EXISTS\020\005\022 \n\034CT"
-      "_PUSH_STATUS_WILL_NOT_PUSH\020\006*\254\010\n\010CTServe"
+      "_PUSH_STATUS_WILL_NOT_PUSH\020\006*\314\t\n\010CTServe"
       "r\022\026\n\022CT_SERVER_RESERVED\020\000\022\037\n\033CT_SERVER_C"
       "ENSYS_PRODUCTION\020\001\022 \n\034CT_SERVER_CENSYS_D"
       "EVELOPMENT\020\002\022\032\n\026CT_SERVER_GOOGLE_PILOT\020\013"
@@ -309,7 +309,11 @@ void AddDescriptorsImpl() {
       "OOGLE_TESTTUBE\020\016\022\033\n\027CT_SERVER_GOOGLE_ICA"
       "RUS\020\017\022\035\n\031CT_SERVER_GOOGLE_SKYDIVER\020\020\022\035\n\031"
       "CT_SERVER_GOOGLE_DAEDALUS\020\021\022\034\n\030CT_SERVER"
-      "_GOOGLE_AVIATOR\020\n\022\034\n\030CT_SERVER_SYMANTEC_"
+      "_GOOGLE_AVIATOR\020\n\022\036\n\032CT_SERVER_GOOGLE_AR"
+      "GON2017\0202\022\036\n\032CT_SERVER_GOOGLE_ARGON2018\020"
+      "3\022\036\n\032CT_SERVER_GOOGLE_ARGON2019\0204\022\036\n\032CT_"
+      "SERVER_GOOGLE_ARGON2020\0205\022\036\n\032CT_SERVER_G"
+      "OOGLE_ARGON2021\0206\022\034\n\030CT_SERVER_SYMANTEC_"
       "WS_CT\020\027\022\036\n\032CT_SERVER_SYMANTEC_WS_VEGA\020\030\022"
       "\037\n\033CT_SERVER_SYMANTEC_WS_DENEB\020 \022 \n\034CT_S"
       "ERVER_SYMANTEC_WS_SIRIUS\020%\022\031\n\025CT_SERVER_"
@@ -330,7 +334,7 @@ void AddDescriptorsImpl() {
       "ENCRYPT_CT_CLICKY\020,b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 3547);
+      descriptor, 3707);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "ct.proto", &protobuf_RegisterTypes);
   ::google::protobuf::internal::OnShutdown(&TableStruct::Shutdown);
@@ -409,6 +413,11 @@ bool CTServer_IsValid(int value) {
     case 41:
     case 42:
     case 44:
+    case 50:
+    case 51:
+    case 52:
+    case 53:
+    case 54:
       return true;
     default:
       return false;
