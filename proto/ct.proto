@@ -93,7 +93,7 @@ enum CTServer {
     CT_SERVER_GOOGLE_SKYDIVER = 16; // ACTIVE ct.googleapis.com/skydiver
     CT_SERVER_GOOGLE_DAEDALUS = 17; // ACTIVE ct.googleapis.com/daedalus
     CT_SERVER_GOOGLE_AVIATOR = 10; // FROZEN ct.googleapis.com/aviator
-	// Google Argon
+    // Google Argon
     CT_SERVER_GOOGLE_ARGON2017 = 50; // ACTIVE ct.googleapis.com/logs/argon2017
     CT_SERVER_GOOGLE_ARGON2018 = 51; // ACTIVE ct.googleapis.com/logs/argon2018
     CT_SERVER_GOOGLE_ARGON2019 = 52; // ACTIVE ct.googleapis.com/logs/argon2019
