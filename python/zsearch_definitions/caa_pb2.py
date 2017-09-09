@@ -20,100 +20,145 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='caa.proto',
   package='zsearch',
   syntax='proto3',
-  serialized_pb=_b('\n\tcaa.proto\x12\x07zsearch\"D\n\x0b\x43\x41\x41TagValue\x12\x0c\n\x04\x66lag\x18\x01 \x01(\x05\x12\x0b\n\x03tag\x18\x02 \x01(\t\x12\r\n\x05value\x18\x03 \x01(\t\x12\x0b\n\x03ttl\x18\x04 \x01(\r\"e\n\tCAARecord\x12\x0e\n\x06\x64omain\x18\x01 \x01(\t\x12\"\n\x06result\x18\x02 \x01(\x0e\x32\x12.zsearch.CAAStatus\x12$\n\x06values\x18\x03 \x03(\x0b\x32\x14.zsearch.CAATagValue\"C\n\tCAALookup\x12\x11\n\ttimestamp\x18\x01 \x01(\x04\x12#\n\x07records\x18\x02 \x03(\x0b\x32\x12.zsearch.CAARecord*\x99\x04\n\tCAAStatus\x12\x17\n\x13\x43\x41\x41_STATUS_RESERVED\x10\x00\x12!\n\x1d\x43\x41\x41_STATUS_VALIDATION_SUCCESS\x10\x01\x12\x1e\n\x1a\x43\x41\x41_STATUS_VALIDATION_FAIL\x10\x02\x12!\n\x1d\x43\x41\x41_STATUS_VALIDATION_SKIPPED\x10\x03\x12!\n\x1d\x43\x41\x41_STATUS_DNS_ERROR_SERVFAIL\x10\x04\x12!\n\x1d\x43\x41\x41_STATUS_DNS_ERROR_AUTHFAIL\x10\x05\x12\"\n\x1e\x43\x41\x41_STATUS_DNS_ERROR_NO_RECORD\x10\x06\x12\"\n\x1e\x43\x41\x41_STATUS_DNS_ERROR_BLACKLIST\x10\x07\x12\"\n\x1e\x43\x41\x41_STATUS_DNS_ERROR_NO_OUTPUT\x10\x08\x12\"\n\x1e\x43\x41\x41_STATUS_DNS_ERROR_NO_ANSWER\x10\t\x12&\n\"CAA_STATUS_DNS_ERROR_ILLEGAL_INPUT\x10\n\x12 \n\x1c\x43\x41\x41_STATUS_DNS_ERROR_TIMEOUT\x10\x0b\x12%\n!CAA_STATUS_DNS_ERROR_ITER_TIMEOUT\x10\x0c\x12\"\n\x1e\x43\x41\x41_STATUS_DNS_ERROR_TEMPORARY\x10\r\x12\"\n\x1e\x43\x41\x41_STATUS_DNS_ERROR_TRUNCATED\x10\x0e\x62\x06proto3')
+  serialized_pb=_b('\n\tcaa.proto\x12\x07zsearch\"D\n\x0b\x43\x41\x41TagValue\x12\x0c\n\x04\x66lag\x18\x01 \x01(\r\x12\x0b\n\x03tag\x18\x02 \x01(\t\x12\r\n\x05value\x18\x03 \x01(\t\x12\x0b\n\x03ttl\x18\x04 \x01(\r\"k\n\tCAARecord\x12\x0e\n\x06\x64omain\x18\x01 \x01(\t\x12(\n\x06result\x18\x02 \x01(\x0e\x32\x18.zsearch.CAADomainStatus\x12$\n\x06values\x18\x03 \x03(\x0b\x32\x14.zsearch.CAATagValue\"g\n\tCAALookup\x12\x11\n\ttimestamp\x18\x01 \x01(\x03\x12#\n\x07records\x18\x02 \x03(\x0b\x32\x12.zsearch.CAARecord\x12\"\n\x06result\x18\x03 \x01(\x0e\x32\x12.zsearch.CAAResult*\xb2\x01\n\tCAAResult\x12\x17\n\x13\x43\x41\x41_RESULT_RESERVED\x10\x00\x12!\n\x1d\x43\x41\x41_RESULT_VALIDATION_SUCCESS\x10\x01\x12\x1e\n\x1a\x43\x41\x41_RESULT_VALIDATION_FAIL\x10\x02\x12!\n\x1d\x43\x41\x41_RESULT_VALIDATION_SKIPPED\x10\x03\x12&\n\"CAA_RESULT_VALIDATION_NOT_REQUIRED\x10\x04*\xa9\x05\n\x0f\x43\x41\x41\x44omainStatus\x12\x1e\n\x1a\x43\x41\x41_DOMAIN_STATUS_RESERVED\x10\x00\x12(\n$CAA_DOMAIN_STATUS_VALIDATION_SUCCESS\x10\x01\x12%\n!CAA_DOMAIN_STATUS_VALIDATION_FAIL\x10\x02\x12(\n$CAA_DOMAIN_STATUS_VALIDATION_SKIPPED\x10\x03\x12\x1f\n\x1b\x43\x41\x41_DOMAIN_STATUS_DNS_ERROR\x10\x05\x12(\n$CAA_DOMAIN_STATUS_DNS_ERROR_SERVFAIL\x10\x06\x12(\n$CAA_DOMAIN_STATUS_DNS_ERROR_AUTHFAIL\x10\x07\x12)\n%CAA_DOMAIN_STATUS_DNS_ERROR_NO_RECORD\x10\x08\x12)\n%CAA_DOMAIN_STATUS_DNS_ERROR_BLACKLIST\x10\t\x12)\n%CAA_DOMAIN_STATUS_DNS_ERROR_NO_OUTPUT\x10\n\x12)\n%CAA_DOMAIN_STATUS_DNS_ERROR_NO_ANSWER\x10\x0b\x12-\n)CAA_DOMAIN_STATUS_DNS_ERROR_ILLEGAL_INPUT\x10\x0c\x12\'\n#CAA_DOMAIN_STATUS_DNS_ERROR_TIMEOUT\x10\r\x12,\n(CAA_DOMAIN_STATUS_DNS_ERROR_ITER_TIMEOUT\x10\x0e\x12)\n%CAA_DOMAIN_STATUS_DNS_ERROR_TEMPORARY\x10\x0f\x12)\n%CAA_DOMAIN_STATUS_DNS_ERROR_TRUNCATED\x10\x10\x62\x06proto3')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
-_CAASTATUS = _descriptor.EnumDescriptor(
-  name='CAAStatus',
-  full_name='zsearch.CAAStatus',
+_CAARESULT = _descriptor.EnumDescriptor(
+  name='CAAResult',
+  full_name='zsearch.CAAResult',
   filename=None,
   file=DESCRIPTOR,
   values=[
     _descriptor.EnumValueDescriptor(
-      name='CAA_STATUS_RESERVED', index=0, number=0,
+      name='CAA_RESULT_RESERVED', index=0, number=0,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='CAA_STATUS_VALIDATION_SUCCESS', index=1, number=1,
+      name='CAA_RESULT_VALIDATION_SUCCESS', index=1, number=1,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='CAA_STATUS_VALIDATION_FAIL', index=2, number=2,
+      name='CAA_RESULT_VALIDATION_FAIL', index=2, number=2,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='CAA_STATUS_VALIDATION_SKIPPED', index=3, number=3,
+      name='CAA_RESULT_VALIDATION_SKIPPED', index=3, number=3,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='CAA_STATUS_DNS_ERROR_SERVFAIL', index=4, number=4,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='CAA_STATUS_DNS_ERROR_AUTHFAIL', index=5, number=5,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='CAA_STATUS_DNS_ERROR_NO_RECORD', index=6, number=6,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='CAA_STATUS_DNS_ERROR_BLACKLIST', index=7, number=7,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='CAA_STATUS_DNS_ERROR_NO_OUTPUT', index=8, number=8,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='CAA_STATUS_DNS_ERROR_NO_ANSWER', index=9, number=9,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='CAA_STATUS_DNS_ERROR_ILLEGAL_INPUT', index=10, number=10,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='CAA_STATUS_DNS_ERROR_TIMEOUT', index=11, number=11,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='CAA_STATUS_DNS_ERROR_ITER_TIMEOUT', index=12, number=12,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='CAA_STATUS_DNS_ERROR_TEMPORARY', index=13, number=13,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='CAA_STATUS_DNS_ERROR_TRUNCATED', index=14, number=14,
+      name='CAA_RESULT_VALIDATION_NOT_REQUIRED', index=4, number=4,
       options=None,
       type=None),
   ],
   containing_type=None,
   options=None,
-  serialized_start=265,
-  serialized_end=802,
+  serialized_start=307,
+  serialized_end=485,
 )
-_sym_db.RegisterEnumDescriptor(_CAASTATUS)
+_sym_db.RegisterEnumDescriptor(_CAARESULT)
 
-CAAStatus = enum_type_wrapper.EnumTypeWrapper(_CAASTATUS)
-CAA_STATUS_RESERVED = 0
-CAA_STATUS_VALIDATION_SUCCESS = 1
-CAA_STATUS_VALIDATION_FAIL = 2
-CAA_STATUS_VALIDATION_SKIPPED = 3
-CAA_STATUS_DNS_ERROR_SERVFAIL = 4
-CAA_STATUS_DNS_ERROR_AUTHFAIL = 5
-CAA_STATUS_DNS_ERROR_NO_RECORD = 6
-CAA_STATUS_DNS_ERROR_BLACKLIST = 7
-CAA_STATUS_DNS_ERROR_NO_OUTPUT = 8
-CAA_STATUS_DNS_ERROR_NO_ANSWER = 9
-CAA_STATUS_DNS_ERROR_ILLEGAL_INPUT = 10
-CAA_STATUS_DNS_ERROR_TIMEOUT = 11
-CAA_STATUS_DNS_ERROR_ITER_TIMEOUT = 12
-CAA_STATUS_DNS_ERROR_TEMPORARY = 13
-CAA_STATUS_DNS_ERROR_TRUNCATED = 14
+CAAResult = enum_type_wrapper.EnumTypeWrapper(_CAARESULT)
+_CAADOMAINSTATUS = _descriptor.EnumDescriptor(
+  name='CAADomainStatus',
+  full_name='zsearch.CAADomainStatus',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='CAA_DOMAIN_STATUS_RESERVED', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CAA_DOMAIN_STATUS_VALIDATION_SUCCESS', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CAA_DOMAIN_STATUS_VALIDATION_FAIL', index=2, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CAA_DOMAIN_STATUS_VALIDATION_SKIPPED', index=3, number=3,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CAA_DOMAIN_STATUS_DNS_ERROR', index=4, number=5,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CAA_DOMAIN_STATUS_DNS_ERROR_SERVFAIL', index=5, number=6,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CAA_DOMAIN_STATUS_DNS_ERROR_AUTHFAIL', index=6, number=7,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CAA_DOMAIN_STATUS_DNS_ERROR_NO_RECORD', index=7, number=8,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CAA_DOMAIN_STATUS_DNS_ERROR_BLACKLIST', index=8, number=9,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CAA_DOMAIN_STATUS_DNS_ERROR_NO_OUTPUT', index=9, number=10,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CAA_DOMAIN_STATUS_DNS_ERROR_NO_ANSWER', index=10, number=11,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CAA_DOMAIN_STATUS_DNS_ERROR_ILLEGAL_INPUT', index=11, number=12,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CAA_DOMAIN_STATUS_DNS_ERROR_TIMEOUT', index=12, number=13,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CAA_DOMAIN_STATUS_DNS_ERROR_ITER_TIMEOUT', index=13, number=14,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CAA_DOMAIN_STATUS_DNS_ERROR_TEMPORARY', index=14, number=15,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CAA_DOMAIN_STATUS_DNS_ERROR_TRUNCATED', index=15, number=16,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=488,
+  serialized_end=1169,
+)
+_sym_db.RegisterEnumDescriptor(_CAADOMAINSTATUS)
+
+CAADomainStatus = enum_type_wrapper.EnumTypeWrapper(_CAADOMAINSTATUS)
+CAA_RESULT_RESERVED = 0
+CAA_RESULT_VALIDATION_SUCCESS = 1
+CAA_RESULT_VALIDATION_FAIL = 2
+CAA_RESULT_VALIDATION_SKIPPED = 3
+CAA_RESULT_VALIDATION_NOT_REQUIRED = 4
+CAA_DOMAIN_STATUS_RESERVED = 0
+CAA_DOMAIN_STATUS_VALIDATION_SUCCESS = 1
+CAA_DOMAIN_STATUS_VALIDATION_FAIL = 2
+CAA_DOMAIN_STATUS_VALIDATION_SKIPPED = 3
+CAA_DOMAIN_STATUS_DNS_ERROR = 5
+CAA_DOMAIN_STATUS_DNS_ERROR_SERVFAIL = 6
+CAA_DOMAIN_STATUS_DNS_ERROR_AUTHFAIL = 7
+CAA_DOMAIN_STATUS_DNS_ERROR_NO_RECORD = 8
+CAA_DOMAIN_STATUS_DNS_ERROR_BLACKLIST = 9
+CAA_DOMAIN_STATUS_DNS_ERROR_NO_OUTPUT = 10
+CAA_DOMAIN_STATUS_DNS_ERROR_NO_ANSWER = 11
+CAA_DOMAIN_STATUS_DNS_ERROR_ILLEGAL_INPUT = 12
+CAA_DOMAIN_STATUS_DNS_ERROR_TIMEOUT = 13
+CAA_DOMAIN_STATUS_DNS_ERROR_ITER_TIMEOUT = 14
+CAA_DOMAIN_STATUS_DNS_ERROR_TEMPORARY = 15
+CAA_DOMAIN_STATUS_DNS_ERROR_TRUNCATED = 16
 
 
 
@@ -126,7 +171,7 @@ _CAATAGVALUE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='flag', full_name='zsearch.CAATagValue.flag', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -210,7 +255,7 @@ _CAARECORD = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=92,
-  serialized_end=193,
+  serialized_end=199,
 )
 
 
@@ -223,7 +268,7 @@ _CAALOOKUP = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='timestamp', full_name='zsearch.CAALookup.timestamp', index=0,
-      number=1, type=4, cpp_type=4, label=1,
+      number=1, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -232,6 +277,13 @@ _CAALOOKUP = _descriptor.Descriptor(
       name='records', full_name='zsearch.CAALookup.records', index=1,
       number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='result', full_name='zsearch.CAALookup.result', index=2,
+      number=3, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -247,17 +299,19 @@ _CAALOOKUP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=195,
-  serialized_end=262,
+  serialized_start=201,
+  serialized_end=304,
 )
 
-_CAARECORD.fields_by_name['result'].enum_type = _CAASTATUS
+_CAARECORD.fields_by_name['result'].enum_type = _CAADOMAINSTATUS
 _CAARECORD.fields_by_name['values'].message_type = _CAATAGVALUE
 _CAALOOKUP.fields_by_name['records'].message_type = _CAARECORD
+_CAALOOKUP.fields_by_name['result'].enum_type = _CAARESULT
 DESCRIPTOR.message_types_by_name['CAATagValue'] = _CAATAGVALUE
 DESCRIPTOR.message_types_by_name['CAARecord'] = _CAARECORD
 DESCRIPTOR.message_types_by_name['CAALookup'] = _CAALOOKUP
-DESCRIPTOR.enum_types_by_name['CAAStatus'] = _CAASTATUS
+DESCRIPTOR.enum_types_by_name['CAAResult'] = _CAARESULT
+DESCRIPTOR.enum_types_by_name['CAADomainStatus'] = _CAADOMAINSTATUS
 
 CAATagValue = _reflection.GeneratedProtocolMessageType('CAATagValue', (_message.Message,), dict(
   DESCRIPTOR = _CAATAGVALUE,

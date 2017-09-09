@@ -1900,42 +1900,6 @@ class Lints : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
   ::zsearch::LintResult* release_e_subject_not_dn();
   void set_allocated_e_subject_not_dn(::zsearch::LintResult* e_subject_not_dn);
 
-  // .zsearch.LintResult e_subject_org_without_country = 175;
-  bool has_e_subject_org_without_country() const;
-  void clear_e_subject_org_without_country();
-  static const int kESubjectOrgWithoutCountryFieldNumber = 175;
-  const ::zsearch::LintResult& e_subject_org_without_country() const;
-  ::zsearch::LintResult* mutable_e_subject_org_without_country();
-  ::zsearch::LintResult* release_e_subject_org_without_country();
-  void set_allocated_e_subject_org_without_country(::zsearch::LintResult* e_subject_org_without_country);
-
-  // .zsearch.LintResult e_subject_org_without_locality_or_province = 176;
-  bool has_e_subject_org_without_locality_or_province() const;
-  void clear_e_subject_org_without_locality_or_province();
-  static const int kESubjectOrgWithoutLocalityOrProvinceFieldNumber = 176;
-  const ::zsearch::LintResult& e_subject_org_without_locality_or_province() const;
-  ::zsearch::LintResult* mutable_e_subject_org_without_locality_or_province();
-  ::zsearch::LintResult* release_e_subject_org_without_locality_or_province();
-  void set_allocated_e_subject_org_without_locality_or_province(::zsearch::LintResult* e_subject_org_without_locality_or_province);
-
-  // .zsearch.LintResult e_subject_postal_without_org = 177;
-  bool has_e_subject_postal_without_org() const;
-  void clear_e_subject_postal_without_org();
-  static const int kESubjectPostalWithoutOrgFieldNumber = 177;
-  const ::zsearch::LintResult& e_subject_postal_without_org() const;
-  ::zsearch::LintResult* mutable_e_subject_postal_without_org();
-  ::zsearch::LintResult* release_e_subject_postal_without_org();
-  void set_allocated_e_subject_postal_without_org(::zsearch::LintResult* e_subject_postal_without_org);
-
-  // .zsearch.LintResult e_subject_street_without_org = 179;
-  bool has_e_subject_street_without_org() const;
-  void clear_e_subject_street_without_org();
-  static const int kESubjectStreetWithoutOrgFieldNumber = 179;
-  const ::zsearch::LintResult& e_subject_street_without_org() const;
-  ::zsearch::LintResult* mutable_e_subject_street_without_org();
-  ::zsearch::LintResult* release_e_subject_street_without_org();
-  void set_allocated_e_subject_street_without_org(::zsearch::LintResult* e_subject_street_without_org);
-
   // .zsearch.LintResult e_utc_time_does_not_include_seconds = 180;
   bool has_e_utc_time_does_not_include_seconds() const;
   void clear_e_utc_time_does_not_include_seconds();
@@ -2449,6 +2413,24 @@ class Lints : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
   ::zsearch::LintResult* release_e_dnsname_not_valid_tld();
   void set_allocated_e_dnsname_not_valid_tld(::zsearch::LintResult* e_dnsname_not_valid_tld);
 
+  // .zsearch.LintResult n_contains_redacted_dnsname = 237;
+  bool has_n_contains_redacted_dnsname() const;
+  void clear_n_contains_redacted_dnsname();
+  static const int kNContainsRedactedDnsnameFieldNumber = 237;
+  const ::zsearch::LintResult& n_contains_redacted_dnsname() const;
+  ::zsearch::LintResult* mutable_n_contains_redacted_dnsname();
+  ::zsearch::LintResult* release_n_contains_redacted_dnsname();
+  void set_allocated_n_contains_redacted_dnsname(::zsearch::LintResult* n_contains_redacted_dnsname);
+
+  // .zsearch.LintResult e_dnsname_contains_bare_iana_suffix = 238;
+  bool has_e_dnsname_contains_bare_iana_suffix() const;
+  void clear_e_dnsname_contains_bare_iana_suffix();
+  static const int kEDnsnameContainsBareIanaSuffixFieldNumber = 238;
+  const ::zsearch::LintResult& e_dnsname_contains_bare_iana_suffix() const;
+  ::zsearch::LintResult* mutable_e_dnsname_contains_bare_iana_suffix();
+  ::zsearch::LintResult* release_e_dnsname_contains_bare_iana_suffix();
+  void set_allocated_e_dnsname_contains_bare_iana_suffix(::zsearch::LintResult* e_dnsname_contains_bare_iana_suffix);
+
   // @@protoc_insertion_point(class_scope:zsearch.Lints)
  private:
 
@@ -2618,10 +2600,6 @@ class Lints : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
   ::zsearch::LintResult* e_subject_empty_without_san_;
   ::zsearch::LintResult* e_subject_info_access_marked_critical_;
   ::zsearch::LintResult* e_subject_not_dn_;
-  ::zsearch::LintResult* e_subject_org_without_country_;
-  ::zsearch::LintResult* e_subject_org_without_locality_or_province_;
-  ::zsearch::LintResult* e_subject_postal_without_org_;
-  ::zsearch::LintResult* e_subject_street_without_org_;
   ::zsearch::LintResult* e_utc_time_does_not_include_seconds_;
   ::zsearch::LintResult* e_utc_time_not_in_zulu_;
   ::zsearch::LintResult* e_validity_time_not_positive_;
@@ -2679,6 +2657,8 @@ class Lints : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
   ::zsearch::LintResult* e_sub_cert_given_name_surname_contains_correct_policy_;
   ::zsearch::LintResult* e_sub_cert_postal_code_must_not_appear_;
   ::zsearch::LintResult* e_dnsname_not_valid_tld_;
+  ::zsearch::LintResult* n_contains_redacted_dnsname_;
+  ::zsearch::LintResult* e_dnsname_contains_bare_iana_suffix_;
   mutable int _cached_size_;
   friend struct  protobuf_zlint_2eproto::TableStruct;
 };
@@ -9350,162 +9330,6 @@ inline void Lints::set_allocated_e_subject_not_dn(::zsearch::LintResult* e_subje
   // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_subject_not_dn)
 }
 
-// .zsearch.LintResult e_subject_org_without_country = 175;
-inline bool Lints::has_e_subject_org_without_country() const {
-  return this != internal_default_instance() && e_subject_org_without_country_ != NULL;
-}
-inline void Lints::clear_e_subject_org_without_country() {
-  if (GetArenaNoVirtual() == NULL && e_subject_org_without_country_ != NULL) delete e_subject_org_without_country_;
-  e_subject_org_without_country_ = NULL;
-}
-inline const ::zsearch::LintResult& Lints::e_subject_org_without_country() const {
-  // @@protoc_insertion_point(field_get:zsearch.Lints.e_subject_org_without_country)
-  return e_subject_org_without_country_ != NULL ? *e_subject_org_without_country_
-                         : *::zsearch::LintResult::internal_default_instance();
-}
-inline ::zsearch::LintResult* Lints::mutable_e_subject_org_without_country() {
-  
-  if (e_subject_org_without_country_ == NULL) {
-    e_subject_org_without_country_ = new ::zsearch::LintResult;
-  }
-  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_subject_org_without_country)
-  return e_subject_org_without_country_;
-}
-inline ::zsearch::LintResult* Lints::release_e_subject_org_without_country() {
-  // @@protoc_insertion_point(field_release:zsearch.Lints.e_subject_org_without_country)
-  
-  ::zsearch::LintResult* temp = e_subject_org_without_country_;
-  e_subject_org_without_country_ = NULL;
-  return temp;
-}
-inline void Lints::set_allocated_e_subject_org_without_country(::zsearch::LintResult* e_subject_org_without_country) {
-  delete e_subject_org_without_country_;
-  e_subject_org_without_country_ = e_subject_org_without_country;
-  if (e_subject_org_without_country) {
-    
-  } else {
-    
-  }
-  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_subject_org_without_country)
-}
-
-// .zsearch.LintResult e_subject_org_without_locality_or_province = 176;
-inline bool Lints::has_e_subject_org_without_locality_or_province() const {
-  return this != internal_default_instance() && e_subject_org_without_locality_or_province_ != NULL;
-}
-inline void Lints::clear_e_subject_org_without_locality_or_province() {
-  if (GetArenaNoVirtual() == NULL && e_subject_org_without_locality_or_province_ != NULL) delete e_subject_org_without_locality_or_province_;
-  e_subject_org_without_locality_or_province_ = NULL;
-}
-inline const ::zsearch::LintResult& Lints::e_subject_org_without_locality_or_province() const {
-  // @@protoc_insertion_point(field_get:zsearch.Lints.e_subject_org_without_locality_or_province)
-  return e_subject_org_without_locality_or_province_ != NULL ? *e_subject_org_without_locality_or_province_
-                         : *::zsearch::LintResult::internal_default_instance();
-}
-inline ::zsearch::LintResult* Lints::mutable_e_subject_org_without_locality_or_province() {
-  
-  if (e_subject_org_without_locality_or_province_ == NULL) {
-    e_subject_org_without_locality_or_province_ = new ::zsearch::LintResult;
-  }
-  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_subject_org_without_locality_or_province)
-  return e_subject_org_without_locality_or_province_;
-}
-inline ::zsearch::LintResult* Lints::release_e_subject_org_without_locality_or_province() {
-  // @@protoc_insertion_point(field_release:zsearch.Lints.e_subject_org_without_locality_or_province)
-  
-  ::zsearch::LintResult* temp = e_subject_org_without_locality_or_province_;
-  e_subject_org_without_locality_or_province_ = NULL;
-  return temp;
-}
-inline void Lints::set_allocated_e_subject_org_without_locality_or_province(::zsearch::LintResult* e_subject_org_without_locality_or_province) {
-  delete e_subject_org_without_locality_or_province_;
-  e_subject_org_without_locality_or_province_ = e_subject_org_without_locality_or_province;
-  if (e_subject_org_without_locality_or_province) {
-    
-  } else {
-    
-  }
-  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_subject_org_without_locality_or_province)
-}
-
-// .zsearch.LintResult e_subject_postal_without_org = 177;
-inline bool Lints::has_e_subject_postal_without_org() const {
-  return this != internal_default_instance() && e_subject_postal_without_org_ != NULL;
-}
-inline void Lints::clear_e_subject_postal_without_org() {
-  if (GetArenaNoVirtual() == NULL && e_subject_postal_without_org_ != NULL) delete e_subject_postal_without_org_;
-  e_subject_postal_without_org_ = NULL;
-}
-inline const ::zsearch::LintResult& Lints::e_subject_postal_without_org() const {
-  // @@protoc_insertion_point(field_get:zsearch.Lints.e_subject_postal_without_org)
-  return e_subject_postal_without_org_ != NULL ? *e_subject_postal_without_org_
-                         : *::zsearch::LintResult::internal_default_instance();
-}
-inline ::zsearch::LintResult* Lints::mutable_e_subject_postal_without_org() {
-  
-  if (e_subject_postal_without_org_ == NULL) {
-    e_subject_postal_without_org_ = new ::zsearch::LintResult;
-  }
-  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_subject_postal_without_org)
-  return e_subject_postal_without_org_;
-}
-inline ::zsearch::LintResult* Lints::release_e_subject_postal_without_org() {
-  // @@protoc_insertion_point(field_release:zsearch.Lints.e_subject_postal_without_org)
-  
-  ::zsearch::LintResult* temp = e_subject_postal_without_org_;
-  e_subject_postal_without_org_ = NULL;
-  return temp;
-}
-inline void Lints::set_allocated_e_subject_postal_without_org(::zsearch::LintResult* e_subject_postal_without_org) {
-  delete e_subject_postal_without_org_;
-  e_subject_postal_without_org_ = e_subject_postal_without_org;
-  if (e_subject_postal_without_org) {
-    
-  } else {
-    
-  }
-  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_subject_postal_without_org)
-}
-
-// .zsearch.LintResult e_subject_street_without_org = 179;
-inline bool Lints::has_e_subject_street_without_org() const {
-  return this != internal_default_instance() && e_subject_street_without_org_ != NULL;
-}
-inline void Lints::clear_e_subject_street_without_org() {
-  if (GetArenaNoVirtual() == NULL && e_subject_street_without_org_ != NULL) delete e_subject_street_without_org_;
-  e_subject_street_without_org_ = NULL;
-}
-inline const ::zsearch::LintResult& Lints::e_subject_street_without_org() const {
-  // @@protoc_insertion_point(field_get:zsearch.Lints.e_subject_street_without_org)
-  return e_subject_street_without_org_ != NULL ? *e_subject_street_without_org_
-                         : *::zsearch::LintResult::internal_default_instance();
-}
-inline ::zsearch::LintResult* Lints::mutable_e_subject_street_without_org() {
-  
-  if (e_subject_street_without_org_ == NULL) {
-    e_subject_street_without_org_ = new ::zsearch::LintResult;
-  }
-  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_subject_street_without_org)
-  return e_subject_street_without_org_;
-}
-inline ::zsearch::LintResult* Lints::release_e_subject_street_without_org() {
-  // @@protoc_insertion_point(field_release:zsearch.Lints.e_subject_street_without_org)
-  
-  ::zsearch::LintResult* temp = e_subject_street_without_org_;
-  e_subject_street_without_org_ = NULL;
-  return temp;
-}
-inline void Lints::set_allocated_e_subject_street_without_org(::zsearch::LintResult* e_subject_street_without_org) {
-  delete e_subject_street_without_org_;
-  e_subject_street_without_org_ = e_subject_street_without_org;
-  if (e_subject_street_without_org) {
-    
-  } else {
-    
-  }
-  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_subject_street_without_org)
-}
-
 // .zsearch.LintResult e_utc_time_does_not_include_seconds = 180;
 inline bool Lints::has_e_utc_time_does_not_include_seconds() const {
   return this != internal_default_instance() && e_utc_time_does_not_include_seconds_ != NULL;
@@ -11727,6 +11551,84 @@ inline void Lints::set_allocated_e_dnsname_not_valid_tld(::zsearch::LintResult* 
     
   }
   // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_dnsname_not_valid_tld)
+}
+
+// .zsearch.LintResult n_contains_redacted_dnsname = 237;
+inline bool Lints::has_n_contains_redacted_dnsname() const {
+  return this != internal_default_instance() && n_contains_redacted_dnsname_ != NULL;
+}
+inline void Lints::clear_n_contains_redacted_dnsname() {
+  if (GetArenaNoVirtual() == NULL && n_contains_redacted_dnsname_ != NULL) delete n_contains_redacted_dnsname_;
+  n_contains_redacted_dnsname_ = NULL;
+}
+inline const ::zsearch::LintResult& Lints::n_contains_redacted_dnsname() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.n_contains_redacted_dnsname)
+  return n_contains_redacted_dnsname_ != NULL ? *n_contains_redacted_dnsname_
+                         : *::zsearch::LintResult::internal_default_instance();
+}
+inline ::zsearch::LintResult* Lints::mutable_n_contains_redacted_dnsname() {
+  
+  if (n_contains_redacted_dnsname_ == NULL) {
+    n_contains_redacted_dnsname_ = new ::zsearch::LintResult;
+  }
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.n_contains_redacted_dnsname)
+  return n_contains_redacted_dnsname_;
+}
+inline ::zsearch::LintResult* Lints::release_n_contains_redacted_dnsname() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.n_contains_redacted_dnsname)
+  
+  ::zsearch::LintResult* temp = n_contains_redacted_dnsname_;
+  n_contains_redacted_dnsname_ = NULL;
+  return temp;
+}
+inline void Lints::set_allocated_n_contains_redacted_dnsname(::zsearch::LintResult* n_contains_redacted_dnsname) {
+  delete n_contains_redacted_dnsname_;
+  n_contains_redacted_dnsname_ = n_contains_redacted_dnsname;
+  if (n_contains_redacted_dnsname) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.n_contains_redacted_dnsname)
+}
+
+// .zsearch.LintResult e_dnsname_contains_bare_iana_suffix = 238;
+inline bool Lints::has_e_dnsname_contains_bare_iana_suffix() const {
+  return this != internal_default_instance() && e_dnsname_contains_bare_iana_suffix_ != NULL;
+}
+inline void Lints::clear_e_dnsname_contains_bare_iana_suffix() {
+  if (GetArenaNoVirtual() == NULL && e_dnsname_contains_bare_iana_suffix_ != NULL) delete e_dnsname_contains_bare_iana_suffix_;
+  e_dnsname_contains_bare_iana_suffix_ = NULL;
+}
+inline const ::zsearch::LintResult& Lints::e_dnsname_contains_bare_iana_suffix() const {
+  // @@protoc_insertion_point(field_get:zsearch.Lints.e_dnsname_contains_bare_iana_suffix)
+  return e_dnsname_contains_bare_iana_suffix_ != NULL ? *e_dnsname_contains_bare_iana_suffix_
+                         : *::zsearch::LintResult::internal_default_instance();
+}
+inline ::zsearch::LintResult* Lints::mutable_e_dnsname_contains_bare_iana_suffix() {
+  
+  if (e_dnsname_contains_bare_iana_suffix_ == NULL) {
+    e_dnsname_contains_bare_iana_suffix_ = new ::zsearch::LintResult;
+  }
+  // @@protoc_insertion_point(field_mutable:zsearch.Lints.e_dnsname_contains_bare_iana_suffix)
+  return e_dnsname_contains_bare_iana_suffix_;
+}
+inline ::zsearch::LintResult* Lints::release_e_dnsname_contains_bare_iana_suffix() {
+  // @@protoc_insertion_point(field_release:zsearch.Lints.e_dnsname_contains_bare_iana_suffix)
+  
+  ::zsearch::LintResult* temp = e_dnsname_contains_bare_iana_suffix_;
+  e_dnsname_contains_bare_iana_suffix_ = NULL;
+  return temp;
+}
+inline void Lints::set_allocated_e_dnsname_contains_bare_iana_suffix(::zsearch::LintResult* e_dnsname_contains_bare_iana_suffix) {
+  delete e_dnsname_contains_bare_iana_suffix_;
+  e_dnsname_contains_bare_iana_suffix_ = e_dnsname_contains_bare_iana_suffix;
+  if (e_dnsname_contains_bare_iana_suffix) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:zsearch.Lints.e_dnsname_contains_bare_iana_suffix)
 }
 
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS

@@ -31,7 +31,7 @@ namespace protobuf_caa_2eproto {
 namespace {
 
 ::google::protobuf::Metadata file_level_metadata[3];
-const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[1];
+const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[2];
 
 }  // namespace
 
@@ -57,6 +57,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   ~0u,  // no _oneof_case_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CAALookup, timestamp_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CAALookup, records_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CAALookup, result_),
 };
 
 static const ::google::protobuf::internal::MigrationSchema schemas[] = {
@@ -120,29 +121,38 @@ void AddDescriptorsImpl() {
   InitDefaults();
   static const char descriptor[] = {
       "\n\tcaa.proto\022\007zsearch\"D\n\013CAATagValue\022\014\n\004f"
-      "lag\030\001 \001(\005\022\013\n\003tag\030\002 \001(\t\022\r\n\005value\030\003 \001(\t\022\013\n"
-      "\003ttl\030\004 \001(\r\"e\n\tCAARecord\022\016\n\006domain\030\001 \001(\t\022"
-      "\"\n\006result\030\002 \001(\0162\022.zsearch.CAAStatus\022$\n\006v"
-      "alues\030\003 \003(\0132\024.zsearch.CAATagValue\"C\n\tCAA"
-      "Lookup\022\021\n\ttimestamp\030\001 \001(\004\022#\n\007records\030\002 \003"
-      "(\0132\022.zsearch.CAARecord*\231\004\n\tCAAStatus\022\027\n\023"
-      "CAA_STATUS_RESERVED\020\000\022!\n\035CAA_STATUS_VALI"
-      "DATION_SUCCESS\020\001\022\036\n\032CAA_STATUS_VALIDATIO"
-      "N_FAIL\020\002\022!\n\035CAA_STATUS_VALIDATION_SKIPPE"
-      "D\020\003\022!\n\035CAA_STATUS_DNS_ERROR_SERVFAIL\020\004\022!"
-      "\n\035CAA_STATUS_DNS_ERROR_AUTHFAIL\020\005\022\"\n\036CAA"
-      "_STATUS_DNS_ERROR_NO_RECORD\020\006\022\"\n\036CAA_STA"
-      "TUS_DNS_ERROR_BLACKLIST\020\007\022\"\n\036CAA_STATUS_"
-      "DNS_ERROR_NO_OUTPUT\020\010\022\"\n\036CAA_STATUS_DNS_"
-      "ERROR_NO_ANSWER\020\t\022&\n\"CAA_STATUS_DNS_ERRO"
-      "R_ILLEGAL_INPUT\020\n\022 \n\034CAA_STATUS_DNS_ERRO"
-      "R_TIMEOUT\020\013\022%\n!CAA_STATUS_DNS_ERROR_ITER"
-      "_TIMEOUT\020\014\022\"\n\036CAA_STATUS_DNS_ERROR_TEMPO"
-      "RARY\020\r\022\"\n\036CAA_STATUS_DNS_ERROR_TRUNCATED"
-      "\020\016b\006proto3"
+      "lag\030\001 \001(\r\022\013\n\003tag\030\002 \001(\t\022\r\n\005value\030\003 \001(\t\022\013\n"
+      "\003ttl\030\004 \001(\r\"k\n\tCAARecord\022\016\n\006domain\030\001 \001(\t\022"
+      "(\n\006result\030\002 \001(\0162\030.zsearch.CAADomainStatu"
+      "s\022$\n\006values\030\003 \003(\0132\024.zsearch.CAATagValue\""
+      "g\n\tCAALookup\022\021\n\ttimestamp\030\001 \001(\003\022#\n\007recor"
+      "ds\030\002 \003(\0132\022.zsearch.CAARecord\022\"\n\006result\030\003"
+      " \001(\0162\022.zsearch.CAAResult*\262\001\n\tCAAResult\022\027"
+      "\n\023CAA_RESULT_RESERVED\020\000\022!\n\035CAA_RESULT_VA"
+      "LIDATION_SUCCESS\020\001\022\036\n\032CAA_RESULT_VALIDAT"
+      "ION_FAIL\020\002\022!\n\035CAA_RESULT_VALIDATION_SKIP"
+      "PED\020\003\022&\n\"CAA_RESULT_VALIDATION_NOT_REQUI"
+      "RED\020\004*\251\005\n\017CAADomainStatus\022\036\n\032CAA_DOMAIN_"
+      "STATUS_RESERVED\020\000\022(\n$CAA_DOMAIN_STATUS_V"
+      "ALIDATION_SUCCESS\020\001\022%\n!CAA_DOMAIN_STATUS"
+      "_VALIDATION_FAIL\020\002\022(\n$CAA_DOMAIN_STATUS_"
+      "VALIDATION_SKIPPED\020\003\022\037\n\033CAA_DOMAIN_STATU"
+      "S_DNS_ERROR\020\005\022(\n$CAA_DOMAIN_STATUS_DNS_E"
+      "RROR_SERVFAIL\020\006\022(\n$CAA_DOMAIN_STATUS_DNS"
+      "_ERROR_AUTHFAIL\020\007\022)\n%CAA_DOMAIN_STATUS_D"
+      "NS_ERROR_NO_RECORD\020\010\022)\n%CAA_DOMAIN_STATU"
+      "S_DNS_ERROR_BLACKLIST\020\t\022)\n%CAA_DOMAIN_ST"
+      "ATUS_DNS_ERROR_NO_OUTPUT\020\n\022)\n%CAA_DOMAIN"
+      "_STATUS_DNS_ERROR_NO_ANSWER\020\013\022-\n)CAA_DOM"
+      "AIN_STATUS_DNS_ERROR_ILLEGAL_INPUT\020\014\022\'\n#"
+      "CAA_DOMAIN_STATUS_DNS_ERROR_TIMEOUT\020\r\022,\n"
+      "(CAA_DOMAIN_STATUS_DNS_ERROR_ITER_TIMEOU"
+      "T\020\016\022)\n%CAA_DOMAIN_STATUS_DNS_ERROR_TEMPO"
+      "RARY\020\017\022)\n%CAA_DOMAIN_STATUS_DNS_ERROR_TR"
+      "UNCATED\020\020b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 810);
+      descriptor, 1177);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "caa.proto", &protobuf_RegisterTypes);
   ::google::protobuf::internal::OnShutdown(&TableStruct::Shutdown);
@@ -161,17 +171,33 @@ struct StaticDescriptorInitializer {
 
 }  // namespace protobuf_caa_2eproto
 
-const ::google::protobuf::EnumDescriptor* CAAStatus_descriptor() {
+const ::google::protobuf::EnumDescriptor* CAAResult_descriptor() {
   protobuf_caa_2eproto::protobuf_AssignDescriptorsOnce();
   return protobuf_caa_2eproto::file_level_enum_descriptors[0];
 }
-bool CAAStatus_IsValid(int value) {
+bool CAAResult_IsValid(int value) {
   switch (value) {
     case 0:
     case 1:
     case 2:
     case 3:
     case 4:
+      return true;
+    default:
+      return false;
+  }
+}
+
+const ::google::protobuf::EnumDescriptor* CAADomainStatus_descriptor() {
+  protobuf_caa_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_caa_2eproto::file_level_enum_descriptors[1];
+}
+bool CAADomainStatus_IsValid(int value) {
+  switch (value) {
+    case 0:
+    case 1:
+    case 2:
+    case 3:
     case 5:
     case 6:
     case 7:
@@ -182,6 +208,8 @@ bool CAAStatus_IsValid(int value) {
     case 12:
     case 13:
     case 14:
+    case 15:
+    case 16:
       return true;
     default:
       return false;
@@ -284,12 +312,12 @@ bool CAATagValue::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // int32 flag = 1;
+      // uint32 flag = 1;
       case 1: {
         if (tag == 8u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
                  input, &flag_)));
         } else {
           goto handle_unusual;
@@ -364,9 +392,9 @@ failure:
 void CAATagValue::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:zsearch.CAATagValue)
-  // int32 flag = 1;
+  // uint32 flag = 1;
   if (this->flag() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->flag(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->flag(), output);
   }
 
   // string tag = 2;
@@ -401,9 +429,9 @@ void CAATagValue::SerializeWithCachedSizes(
     bool deterministic, ::google::protobuf::uint8* target) const {
   (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:zsearch.CAATagValue)
-  // int32 flag = 1;
+  // uint32 flag = 1;
   if (this->flag() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->flag(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->flag(), target);
   }
 
   // string tag = 2;
@@ -455,10 +483,10 @@ size_t CAATagValue::ByteSizeLong() const {
         this->value());
   }
 
-  // int32 flag = 1;
+  // uint32 flag = 1;
   if (this->flag() != 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int32Size(
+      ::google::protobuf::internal::WireFormatLite::UInt32Size(
         this->flag());
   }
 
@@ -549,15 +577,15 @@ void CAATagValue::InternalSwap(CAATagValue* other) {
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // CAATagValue
 
-// int32 flag = 1;
+// uint32 flag = 1;
 void CAATagValue::clear_flag() {
-  flag_ = 0;
+  flag_ = 0u;
 }
-::google::protobuf::int32 CAATagValue::flag() const {
+::google::protobuf::uint32 CAATagValue::flag() const {
   // @@protoc_insertion_point(field_get:zsearch.CAATagValue.flag)
   return flag_;
 }
-void CAATagValue::set_flag(::google::protobuf::int32 value) {
+void CAATagValue::set_flag(::google::protobuf::uint32 value) {
   
   flag_ = value;
   // @@protoc_insertion_point(field_set:zsearch.CAATagValue.flag)
@@ -783,14 +811,14 @@ bool CAARecord::MergePartialFromCodedStream(
         break;
       }
 
-      // .zsearch.CAAStatus result = 2;
+      // .zsearch.CAADomainStatus result = 2;
       case 2: {
         if (tag == 16u) {
           int value;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
                  input, &value)));
-          set_result(static_cast< ::zsearch::CAAStatus >(value));
+          set_result(static_cast< ::zsearch::CAADomainStatus >(value));
         } else {
           goto handle_unusual;
         }
@@ -844,7 +872,7 @@ void CAARecord::SerializeWithCachedSizes(
       1, this->domain(), output);
   }
 
-  // .zsearch.CAAStatus result = 2;
+  // .zsearch.CAADomainStatus result = 2;
   if (this->result() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteEnum(
       2, this->result(), output);
@@ -874,7 +902,7 @@ void CAARecord::SerializeWithCachedSizes(
         1, this->domain(), target);
   }
 
-  // .zsearch.CAAStatus result = 2;
+  // .zsearch.CAADomainStatus result = 2;
   if (this->result() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
       2, this->result(), target);
@@ -913,7 +941,7 @@ size_t CAARecord::ByteSizeLong() const {
         this->domain());
   }
 
-  // .zsearch.CAAStatus result = 2;
+  // .zsearch.CAADomainStatus result = 2;
   if (this->result() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::EnumSize(this->result());
@@ -1044,15 +1072,15 @@ void CAARecord::set_allocated_domain(::std::string* domain) {
   // @@protoc_insertion_point(field_set_allocated:zsearch.CAARecord.domain)
 }
 
-// .zsearch.CAAStatus result = 2;
+// .zsearch.CAADomainStatus result = 2;
 void CAARecord::clear_result() {
   result_ = 0;
 }
-::zsearch::CAAStatus CAARecord::result() const {
+::zsearch::CAADomainStatus CAARecord::result() const {
   // @@protoc_insertion_point(field_get:zsearch.CAARecord.result)
-  return static_cast< ::zsearch::CAAStatus >(result_);
+  return static_cast< ::zsearch::CAADomainStatus >(result_);
 }
-void CAARecord::set_result(::zsearch::CAAStatus value) {
+void CAARecord::set_result(::zsearch::CAADomainStatus value) {
   
   result_ = value;
   // @@protoc_insertion_point(field_set:zsearch.CAARecord.result)
@@ -1095,6 +1123,7 @@ CAARecord::values() const {
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int CAALookup::kTimestampFieldNumber;
 const int CAALookup::kRecordsFieldNumber;
+const int CAALookup::kResultFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 CAALookup::CAALookup()
@@ -1111,12 +1140,15 @@ CAALookup::CAALookup(const CAALookup& from)
       records_(from.records_),
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  timestamp_ = from.timestamp_;
+  ::memcpy(&timestamp_, &from.timestamp_,
+    reinterpret_cast<char*>(&result_) -
+    reinterpret_cast<char*>(&timestamp_) + sizeof(result_));
   // @@protoc_insertion_point(copy_constructor:zsearch.CAALookup)
 }
 
 void CAALookup::SharedCtor() {
-  timestamp_ = GOOGLE_ULONGLONG(0);
+  ::memset(&timestamp_, 0, reinterpret_cast<char*>(&result_) -
+    reinterpret_cast<char*>(&timestamp_) + sizeof(result_));
   _cached_size_ = 0;
 }
 
@@ -1154,7 +1186,8 @@ CAALookup* CAALookup::New(::google::protobuf::Arena* arena) const {
 void CAALookup::Clear() {
 // @@protoc_insertion_point(message_clear_start:zsearch.CAALookup)
   records_.Clear();
-  timestamp_ = GOOGLE_ULONGLONG(0);
+  ::memset(&timestamp_, 0, reinterpret_cast<char*>(&result_) -
+    reinterpret_cast<char*>(&timestamp_) + sizeof(result_));
 }
 
 bool CAALookup::MergePartialFromCodedStream(
@@ -1167,12 +1200,12 @@ bool CAALookup::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // uint64 timestamp = 1;
+      // int64 timestamp = 1;
       case 1: {
         if (tag == 8u) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>(
+                   ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
                  input, &timestamp_)));
         } else {
           goto handle_unusual;
@@ -1190,6 +1223,20 @@ bool CAALookup::MergePartialFromCodedStream(
           goto handle_unusual;
         }
         input->UnsafeDecrementRecursionDepth();
+        break;
+      }
+
+      // .zsearch.CAAResult result = 3;
+      case 3: {
+        if (tag == 24u) {
+          int value;
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
+                 input, &value)));
+          set_result(static_cast< ::zsearch::CAAResult >(value));
+        } else {
+          goto handle_unusual;
+        }
         break;
       }
 
@@ -1217,15 +1264,21 @@ failure:
 void CAALookup::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:zsearch.CAALookup)
-  // uint64 timestamp = 1;
+  // int64 timestamp = 1;
   if (this->timestamp() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt64(1, this->timestamp(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteInt64(1, this->timestamp(), output);
   }
 
   // repeated .zsearch.CAARecord records = 2;
   for (unsigned int i = 0, n = this->records_size(); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       2, this->records(i), output);
+  }
+
+  // .zsearch.CAAResult result = 3;
+  if (this->result() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteEnum(
+      3, this->result(), output);
   }
 
   // @@protoc_insertion_point(serialize_end:zsearch.CAALookup)
@@ -1235,9 +1288,9 @@ void CAALookup::SerializeWithCachedSizes(
     bool deterministic, ::google::protobuf::uint8* target) const {
   (void)deterministic;  // Unused
   // @@protoc_insertion_point(serialize_to_array_start:zsearch.CAALookup)
-  // uint64 timestamp = 1;
+  // int64 timestamp = 1;
   if (this->timestamp() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(1, this->timestamp(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(1, this->timestamp(), target);
   }
 
   // repeated .zsearch.CAARecord records = 2;
@@ -1245,6 +1298,12 @@ void CAALookup::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
         2, this->records(i), false, target);
+  }
+
+  // .zsearch.CAAResult result = 3;
+  if (this->result() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
+      3, this->result(), target);
   }
 
   // @@protoc_insertion_point(serialize_to_array_end:zsearch.CAALookup)
@@ -1266,11 +1325,17 @@ size_t CAALookup::ByteSizeLong() const {
     }
   }
 
-  // uint64 timestamp = 1;
+  // int64 timestamp = 1;
   if (this->timestamp() != 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::UInt64Size(
+      ::google::protobuf::internal::WireFormatLite::Int64Size(
         this->timestamp());
+  }
+
+  // .zsearch.CAAResult result = 3;
+  if (this->result() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::EnumSize(this->result());
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
@@ -1303,6 +1368,9 @@ void CAALookup::MergeFrom(const CAALookup& from) {
   if (from.timestamp() != 0) {
     set_timestamp(from.timestamp());
   }
+  if (from.result() != 0) {
+    set_result(from.result());
+  }
 }
 
 void CAALookup::CopyFrom(const ::google::protobuf::Message& from) {
@@ -1330,6 +1398,7 @@ void CAALookup::Swap(CAALookup* other) {
 void CAALookup::InternalSwap(CAALookup* other) {
   records_.UnsafeArenaSwap(&other->records_);
   std::swap(timestamp_, other->timestamp_);
+  std::swap(result_, other->result_);
   std::swap(_cached_size_, other->_cached_size_);
 }
 
@@ -1341,15 +1410,15 @@ void CAALookup::InternalSwap(CAALookup* other) {
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // CAALookup
 
-// uint64 timestamp = 1;
+// int64 timestamp = 1;
 void CAALookup::clear_timestamp() {
-  timestamp_ = GOOGLE_ULONGLONG(0);
+  timestamp_ = GOOGLE_LONGLONG(0);
 }
-::google::protobuf::uint64 CAALookup::timestamp() const {
+::google::protobuf::int64 CAALookup::timestamp() const {
   // @@protoc_insertion_point(field_get:zsearch.CAALookup.timestamp)
   return timestamp_;
 }
-void CAALookup::set_timestamp(::google::protobuf::uint64 value) {
+void CAALookup::set_timestamp(::google::protobuf::int64 value) {
   
   timestamp_ = value;
   // @@protoc_insertion_point(field_set:zsearch.CAALookup.timestamp)
@@ -1383,6 +1452,20 @@ const ::google::protobuf::RepeatedPtrField< ::zsearch::CAARecord >&
 CAALookup::records() const {
   // @@protoc_insertion_point(field_list:zsearch.CAALookup.records)
   return records_;
+}
+
+// .zsearch.CAAResult result = 3;
+void CAALookup::clear_result() {
+  result_ = 0;
+}
+::zsearch::CAAResult CAALookup::result() const {
+  // @@protoc_insertion_point(field_get:zsearch.CAALookup.result)
+  return static_cast< ::zsearch::CAAResult >(result_);
+}
+void CAALookup::set_result(::zsearch::CAAResult value) {
+  
+  result_ = value;
+  // @@protoc_insertion_point(field_set:zsearch.CAALookup.result)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS

@@ -55,39 +55,64 @@ void AddDescriptors();
 void InitDefaults();
 }  // namespace protobuf_caa_2eproto
 
-enum CAAStatus {
-  CAA_STATUS_RESERVED = 0,
-  CAA_STATUS_VALIDATION_SUCCESS = 1,
-  CAA_STATUS_VALIDATION_FAIL = 2,
-  CAA_STATUS_VALIDATION_SKIPPED = 3,
-  CAA_STATUS_DNS_ERROR_SERVFAIL = 4,
-  CAA_STATUS_DNS_ERROR_AUTHFAIL = 5,
-  CAA_STATUS_DNS_ERROR_NO_RECORD = 6,
-  CAA_STATUS_DNS_ERROR_BLACKLIST = 7,
-  CAA_STATUS_DNS_ERROR_NO_OUTPUT = 8,
-  CAA_STATUS_DNS_ERROR_NO_ANSWER = 9,
-  CAA_STATUS_DNS_ERROR_ILLEGAL_INPUT = 10,
-  CAA_STATUS_DNS_ERROR_TIMEOUT = 11,
-  CAA_STATUS_DNS_ERROR_ITER_TIMEOUT = 12,
-  CAA_STATUS_DNS_ERROR_TEMPORARY = 13,
-  CAA_STATUS_DNS_ERROR_TRUNCATED = 14,
-  CAAStatus_INT_MIN_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32min,
-  CAAStatus_INT_MAX_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32max
+enum CAAResult {
+  CAA_RESULT_RESERVED = 0,
+  CAA_RESULT_VALIDATION_SUCCESS = 1,
+  CAA_RESULT_VALIDATION_FAIL = 2,
+  CAA_RESULT_VALIDATION_SKIPPED = 3,
+  CAA_RESULT_VALIDATION_NOT_REQUIRED = 4,
+  CAAResult_INT_MIN_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32min,
+  CAAResult_INT_MAX_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32max
 };
-bool CAAStatus_IsValid(int value);
-const CAAStatus CAAStatus_MIN = CAA_STATUS_RESERVED;
-const CAAStatus CAAStatus_MAX = CAA_STATUS_DNS_ERROR_TRUNCATED;
-const int CAAStatus_ARRAYSIZE = CAAStatus_MAX + 1;
+bool CAAResult_IsValid(int value);
+const CAAResult CAAResult_MIN = CAA_RESULT_RESERVED;
+const CAAResult CAAResult_MAX = CAA_RESULT_VALIDATION_NOT_REQUIRED;
+const int CAAResult_ARRAYSIZE = CAAResult_MAX + 1;
 
-const ::google::protobuf::EnumDescriptor* CAAStatus_descriptor();
-inline const ::std::string& CAAStatus_Name(CAAStatus value) {
+const ::google::protobuf::EnumDescriptor* CAAResult_descriptor();
+inline const ::std::string& CAAResult_Name(CAAResult value) {
   return ::google::protobuf::internal::NameOfEnum(
-    CAAStatus_descriptor(), value);
+    CAAResult_descriptor(), value);
 }
-inline bool CAAStatus_Parse(
-    const ::std::string& name, CAAStatus* value) {
-  return ::google::protobuf::internal::ParseNamedEnum<CAAStatus>(
-    CAAStatus_descriptor(), name, value);
+inline bool CAAResult_Parse(
+    const ::std::string& name, CAAResult* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<CAAResult>(
+    CAAResult_descriptor(), name, value);
+}
+enum CAADomainStatus {
+  CAA_DOMAIN_STATUS_RESERVED = 0,
+  CAA_DOMAIN_STATUS_VALIDATION_SUCCESS = 1,
+  CAA_DOMAIN_STATUS_VALIDATION_FAIL = 2,
+  CAA_DOMAIN_STATUS_VALIDATION_SKIPPED = 3,
+  CAA_DOMAIN_STATUS_DNS_ERROR = 5,
+  CAA_DOMAIN_STATUS_DNS_ERROR_SERVFAIL = 6,
+  CAA_DOMAIN_STATUS_DNS_ERROR_AUTHFAIL = 7,
+  CAA_DOMAIN_STATUS_DNS_ERROR_NO_RECORD = 8,
+  CAA_DOMAIN_STATUS_DNS_ERROR_BLACKLIST = 9,
+  CAA_DOMAIN_STATUS_DNS_ERROR_NO_OUTPUT = 10,
+  CAA_DOMAIN_STATUS_DNS_ERROR_NO_ANSWER = 11,
+  CAA_DOMAIN_STATUS_DNS_ERROR_ILLEGAL_INPUT = 12,
+  CAA_DOMAIN_STATUS_DNS_ERROR_TIMEOUT = 13,
+  CAA_DOMAIN_STATUS_DNS_ERROR_ITER_TIMEOUT = 14,
+  CAA_DOMAIN_STATUS_DNS_ERROR_TEMPORARY = 15,
+  CAA_DOMAIN_STATUS_DNS_ERROR_TRUNCATED = 16,
+  CAADomainStatus_INT_MIN_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32min,
+  CAADomainStatus_INT_MAX_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32max
+};
+bool CAADomainStatus_IsValid(int value);
+const CAADomainStatus CAADomainStatus_MIN = CAA_DOMAIN_STATUS_RESERVED;
+const CAADomainStatus CAADomainStatus_MAX = CAA_DOMAIN_STATUS_DNS_ERROR_TRUNCATED;
+const int CAADomainStatus_ARRAYSIZE = CAADomainStatus_MAX + 1;
+
+const ::google::protobuf::EnumDescriptor* CAADomainStatus_descriptor();
+inline const ::std::string& CAADomainStatus_Name(CAADomainStatus value) {
+  return ::google::protobuf::internal::NameOfEnum(
+    CAADomainStatus_descriptor(), value);
+}
+inline bool CAADomainStatus_Parse(
+    const ::std::string& name, CAADomainStatus* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<CAADomainStatus>(
+    CAADomainStatus_descriptor(), name, value);
 }
 // ===================================================================
 
@@ -186,11 +211,11 @@ class CAATagValue : public ::google::protobuf::Message /* @@protoc_insertion_poi
   ::std::string* release_value();
   void set_allocated_value(::std::string* value);
 
-  // int32 flag = 1;
+  // uint32 flag = 1;
   void clear_flag();
   static const int kFlagFieldNumber = 1;
-  ::google::protobuf::int32 flag() const;
-  void set_flag(::google::protobuf::int32 value);
+  ::google::protobuf::uint32 flag() const;
+  void set_flag(::google::protobuf::uint32 value);
 
   // uint32 ttl = 4;
   void clear_ttl();
@@ -204,7 +229,7 @@ class CAATagValue : public ::google::protobuf::Message /* @@protoc_insertion_poi
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::ArenaStringPtr tag_;
   ::google::protobuf::internal::ArenaStringPtr value_;
-  ::google::protobuf::int32 flag_;
+  ::google::protobuf::uint32 flag_;
   ::google::protobuf::uint32 ttl_;
   mutable int _cached_size_;
   friend struct  protobuf_caa_2eproto::TableStruct;
@@ -304,11 +329,11 @@ class CAARecord : public ::google::protobuf::Message /* @@protoc_insertion_point
   ::std::string* release_domain();
   void set_allocated_domain(::std::string* domain);
 
-  // .zsearch.CAAStatus result = 2;
+  // .zsearch.CAADomainStatus result = 2;
   void clear_result();
   static const int kResultFieldNumber = 2;
-  ::zsearch::CAAStatus result() const;
-  void set_result(::zsearch::CAAStatus value);
+  ::zsearch::CAADomainStatus result() const;
+  void set_result(::zsearch::CAADomainStatus value);
 
   // @@protoc_insertion_point(class_scope:zsearch.CAARecord)
  private:
@@ -401,18 +426,25 @@ class CAALookup : public ::google::protobuf::Message /* @@protoc_insertion_point
   const ::google::protobuf::RepeatedPtrField< ::zsearch::CAARecord >&
       records() const;
 
-  // uint64 timestamp = 1;
+  // int64 timestamp = 1;
   void clear_timestamp();
   static const int kTimestampFieldNumber = 1;
-  ::google::protobuf::uint64 timestamp() const;
-  void set_timestamp(::google::protobuf::uint64 value);
+  ::google::protobuf::int64 timestamp() const;
+  void set_timestamp(::google::protobuf::int64 value);
+
+  // .zsearch.CAAResult result = 3;
+  void clear_result();
+  static const int kResultFieldNumber = 3;
+  ::zsearch::CAAResult result() const;
+  void set_result(::zsearch::CAAResult value);
 
   // @@protoc_insertion_point(class_scope:zsearch.CAALookup)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::RepeatedPtrField< ::zsearch::CAARecord > records_;
-  ::google::protobuf::uint64 timestamp_;
+  ::google::protobuf::int64 timestamp_;
+  int result_;
   mutable int _cached_size_;
   friend struct  protobuf_caa_2eproto::TableStruct;
 };
@@ -424,15 +456,15 @@ class CAALookup : public ::google::protobuf::Message /* @@protoc_insertion_point
 #if !PROTOBUF_INLINE_NOT_IN_HEADERS
 // CAATagValue
 
-// int32 flag = 1;
+// uint32 flag = 1;
 inline void CAATagValue::clear_flag() {
-  flag_ = 0;
+  flag_ = 0u;
 }
-inline ::google::protobuf::int32 CAATagValue::flag() const {
+inline ::google::protobuf::uint32 CAATagValue::flag() const {
   // @@protoc_insertion_point(field_get:zsearch.CAATagValue.flag)
   return flag_;
 }
-inline void CAATagValue::set_flag(::google::protobuf::int32 value) {
+inline void CAATagValue::set_flag(::google::protobuf::uint32 value) {
   
   flag_ = value;
   // @@protoc_insertion_point(field_set:zsearch.CAATagValue.flag)
@@ -612,15 +644,15 @@ inline void CAARecord::set_allocated_domain(::std::string* domain) {
   // @@protoc_insertion_point(field_set_allocated:zsearch.CAARecord.domain)
 }
 
-// .zsearch.CAAStatus result = 2;
+// .zsearch.CAADomainStatus result = 2;
 inline void CAARecord::clear_result() {
   result_ = 0;
 }
-inline ::zsearch::CAAStatus CAARecord::result() const {
+inline ::zsearch::CAADomainStatus CAARecord::result() const {
   // @@protoc_insertion_point(field_get:zsearch.CAARecord.result)
-  return static_cast< ::zsearch::CAAStatus >(result_);
+  return static_cast< ::zsearch::CAADomainStatus >(result_);
 }
-inline void CAARecord::set_result(::zsearch::CAAStatus value) {
+inline void CAARecord::set_result(::zsearch::CAADomainStatus value) {
   
   result_ = value;
   // @@protoc_insertion_point(field_set:zsearch.CAARecord.result)
@@ -660,15 +692,15 @@ CAARecord::values() const {
 
 // CAALookup
 
-// uint64 timestamp = 1;
+// int64 timestamp = 1;
 inline void CAALookup::clear_timestamp() {
-  timestamp_ = GOOGLE_ULONGLONG(0);
+  timestamp_ = GOOGLE_LONGLONG(0);
 }
-inline ::google::protobuf::uint64 CAALookup::timestamp() const {
+inline ::google::protobuf::int64 CAALookup::timestamp() const {
   // @@protoc_insertion_point(field_get:zsearch.CAALookup.timestamp)
   return timestamp_;
 }
-inline void CAALookup::set_timestamp(::google::protobuf::uint64 value) {
+inline void CAALookup::set_timestamp(::google::protobuf::int64 value) {
   
   timestamp_ = value;
   // @@protoc_insertion_point(field_set:zsearch.CAALookup.timestamp)
@@ -704,6 +736,20 @@ CAALookup::records() const {
   return records_;
 }
 
+// .zsearch.CAAResult result = 3;
+inline void CAALookup::clear_result() {
+  result_ = 0;
+}
+inline ::zsearch::CAAResult CAALookup::result() const {
+  // @@protoc_insertion_point(field_get:zsearch.CAALookup.result)
+  return static_cast< ::zsearch::CAAResult >(result_);
+}
+inline void CAALookup::set_result(::zsearch::CAAResult value) {
+  
+  result_ = value;
+  // @@protoc_insertion_point(field_set:zsearch.CAALookup.result)
+}
+
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS
 // -------------------------------------------------------------------
 
@@ -719,10 +765,15 @@ CAALookup::records() const {
 namespace google {
 namespace protobuf {
 
-template <> struct is_proto_enum< ::zsearch::CAAStatus> : ::google::protobuf::internal::true_type {};
+template <> struct is_proto_enum< ::zsearch::CAAResult> : ::google::protobuf::internal::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::zsearch::CAAStatus>() {
-  return ::zsearch::CAAStatus_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::zsearch::CAAResult>() {
+  return ::zsearch::CAAResult_descriptor();
+}
+template <> struct is_proto_enum< ::zsearch::CAADomainStatus> : ::google::protobuf::internal::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::zsearch::CAADomainStatus>() {
+  return ::zsearch::CAADomainStatus_descriptor();
 }
 
 }  // namespace protobuf
