@@ -72,11 +72,11 @@ message CTStatus {
 
     CTServerStatus letsencrypt_ct_clicky = 43; // clicky.ct.letsencrypt.org
 
-	CTServerStatus google_argon2017 = 50; // ct.googleapis.com/logs/argon2017
-	CTServerStatus google_argon2018 = 51;
-	CTServerStatus google_argon2019 = 52;
-	CTServerStatus google_argon2020 = 53;
-	CTServerStatus google_argon2021 = 54;
+    CTServerStatus google_argon2017 = 50; // ct.googleapis.com/logs/argon2017
+    CTServerStatus google_argon2018 = 51;
+    CTServerStatus google_argon2019 = 52;
+    CTServerStatus google_argon2020 = 53;
+    CTServerStatus google_argon2021 = 54;
 }
 
 enum CTServer {
