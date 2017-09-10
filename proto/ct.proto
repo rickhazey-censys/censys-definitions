@@ -71,6 +71,12 @@ message CTStatus {
     CTServerStatus certificatetransparency_cn_ct = 38;
 
     CTServerStatus letsencrypt_ct_clicky = 43; // clicky.ct.letsencrypt.org
+
+    CTServerStatus google_argon2017 = 50; // ct.googleapis.com/logs/argon2017
+    CTServerStatus google_argon2018 = 51;
+    CTServerStatus google_argon2019 = 52;
+    CTServerStatus google_argon2020 = 53;
+    CTServerStatus google_argon2021 = 54;
 }
 
 enum CTServer {
@@ -87,6 +93,12 @@ enum CTServer {
     CT_SERVER_GOOGLE_SKYDIVER = 16; // ACTIVE ct.googleapis.com/skydiver
     CT_SERVER_GOOGLE_DAEDALUS = 17; // ACTIVE ct.googleapis.com/daedalus
     CT_SERVER_GOOGLE_AVIATOR = 10; // FROZEN ct.googleapis.com/aviator
+    // Google Argon
+    CT_SERVER_GOOGLE_ARGON2017 = 50; // ACTIVE ct.googleapis.com/logs/argon2017
+    CT_SERVER_GOOGLE_ARGON2018 = 51; // ACTIVE ct.googleapis.com/logs/argon2018
+    CT_SERVER_GOOGLE_ARGON2019 = 52; // ACTIVE ct.googleapis.com/logs/argon2019
+    CT_SERVER_GOOGLE_ARGON2020 = 53; // ACTIVE ct.googleapis.com/logs/argon2020
+    CT_SERVER_GOOGLE_ARGON2021 = 54; // ACTIVE ct.googleapis.com/logs/argon2021
     // Symantec
     CT_SERVER_SYMANTEC_WS_CT = 23; // ACTIVE ct.ws.symantec.com
     CT_SERVER_SYMANTEC_WS_VEGA = 24; // ACTIVE vega.ws.symantec.com
