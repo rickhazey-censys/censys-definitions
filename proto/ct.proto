@@ -36,7 +36,7 @@ message CTStatus {
     CTServerStatus google_testtube = 14;
     CTServerStatus google_icarus = 15;
     CTServerStatus google_skydiver = 16;
-    CTServerStatus google_daedalus = 17;
+    CTServerStatus google_daedalus = 17; // expired only
 
     CTServerStatus digicert_ct1 = 20;
     CTServerStatus digicert_ct2 = 40;
@@ -58,6 +58,8 @@ message CTStatus {
 
     CTServerStatus gdca_ct = 28;
     CTServerStatus gdca_ctlog = 36;
+    CTServerStatus gdca_log = 45;
+    CTServerStatus gdca_log2 = 46;
 
     CTServerStatus venafi_api_ctlog = 31;
     CTServerStatus venafi_api_ctlog_gen2 = 39;
@@ -68,15 +70,25 @@ message CTStatus {
     CTServerStatus certly_log = 30; // deprecated
     CTServerStatus sheca_ct = 42;
 
+    CTServerStatus letsencrypt_ct_clicky = 43; // clicky.ct.letsencrypt.org
+    CTServerStatus behind_the_sofa = 44;
+    CTServerStatus wotrus_ctlog = 47;
+    CTServerStatus wotrus_ctlog3 = 48;
+
+
     CTServerStatus certificatetransparency_cn_ct = 38;
 
-    CTServerStatus letsencrypt_ct_clicky = 43; // clicky.ct.letsencrypt.org
+    CTServerStatus google_argon_2017 = 50; // ct.googleapis.com/logs/argon2017
+    CTServerStatus google_argon_2018 = 51;
+    CTServerStatus google_argon_2019 = 52;
+    CTServerStatus google_argon_2020 = 53;
+    CTServerStatus google_argon_2021 = 54;
 
-    CTServerStatus google_argon2017 = 50; // ct.googleapis.com/logs/argon2017
-    CTServerStatus google_argon2018 = 51;
-    CTServerStatus google_argon2019 = 52;
-    CTServerStatus google_argon2020 = 53;
-    CTServerStatus google_argon2021 = 54;
+    CTServerStatus cloudfare_nimbus_2017 = 60;
+    CTServerStatus cloudfare_nimbus_2018 = 61;
+    CTServerStatus cloudfare_nimbus_2019 = 62;
+    CTServerStatus cloudfare_nimbus_2020 = 63;
+    CTServerStatus cloudfare_nimbus_2021 = 64;
 }
 
 enum CTServer {
@@ -94,11 +106,18 @@ enum CTServer {
     CT_SERVER_GOOGLE_DAEDALUS = 17; // ACTIVE ct.googleapis.com/daedalus
     CT_SERVER_GOOGLE_AVIATOR = 10; // FROZEN ct.googleapis.com/aviator
     // Google Argon
-    CT_SERVER_GOOGLE_ARGON2017 = 50; // ACTIVE ct.googleapis.com/logs/argon2017
-    CT_SERVER_GOOGLE_ARGON2018 = 51; // ACTIVE ct.googleapis.com/logs/argon2018
-    CT_SERVER_GOOGLE_ARGON2019 = 52; // ACTIVE ct.googleapis.com/logs/argon2019
-    CT_SERVER_GOOGLE_ARGON2020 = 53; // ACTIVE ct.googleapis.com/logs/argon2020
-    CT_SERVER_GOOGLE_ARGON2021 = 54; // ACTIVE ct.googleapis.com/logs/argon2021
+    CT_SERVER_GOOGLE_ARGON_2017 = 50; // ACTIVE ct.googleapis.com/logs/argon2017
+    CT_SERVER_GOOGLE_ARGON_2018 = 51; // ACTIVE ct.googleapis.com/logs/argon2018
+    CT_SERVER_GOOGLE_ARGON_2019 = 52; // ACTIVE ct.googleapis.com/logs/argon2019
+    CT_SERVER_GOOGLE_ARGON_2020 = 53; // ACTIVE ct.googleapis.com/logs/argon2020
+    CT_SERVER_GOOGLE_ARGON_2021 = 54; // ACTIVE ct.googleapis.com/logs/argon2021
+    // Cloudflare Nimbus
+    CT_SERVER_CLOUDFLARE_NIMBUS_2017 = 60; // ACTIVE ct.cloudflare.com/logs/nimbus2017
+    CT_SERVER_CLOUDFLARE_NIMBUS_2018 = 61; // ACTIVE ct.cloudflare.com/logs/nimbus2018
+    CT_SERVER_CLOUDFLARE_NIMBUS_2019 = 62; // ACTIVE ct.cloudflare.com/logs/nimbus2019
+    CT_SERVER_CLOUDFLARE_NIMBUS_2020 = 63; // ACTIVE ct.cloudflare.com/logs/nimbus2020
+    CT_SERVER_CLOUDFLARE_NIMBUS_2021 = 64; // ACTIVE ct.cloudflare.com/logs/nimbus2021
+
     // Symantec
     CT_SERVER_SYMANTEC_WS_CT = 23; // ACTIVE ct.ws.symantec.com
     CT_SERVER_SYMANTEC_WS_VEGA = 24; // ACTIVE vega.ws.symantec.com
@@ -117,6 +136,8 @@ enum CTServer {
     // GDCA
     CT_SERVER_GDCA_CT = 28; // ACTIVE ct.gdca.com.cn
     CT_SERVER_GDCA_CTLOG = 34; // ACTIVE ctlog.gdca.com.cn
+    CT_SERVER_GDCA_LOG = 45; // ACTIVE log.gdca.com.cn
+    CT_SERVER_GDCA_LOG3 = 46; // ACTIVE log2.gdca.com.cn
     // Izenpe
     CT_SERVER_IZENPE_COM_CT = 21; // DEPRECATED ct.izenpe.com
     CT_SERVER_IZENPE_EUS_CT = 22; // ACTIVE ct.izenpe.eus
@@ -131,7 +152,10 @@ enum CTServer {
     CT_SERVER_CERTIFICATETRANSPARENCY_CN_CT = 38; // ACTIVE www.certificatetransparency.cn/ct
     CT_SERVER_SHECA_CT = 42; // ACTIVE     https://ct.sheca.com
 
-    CT_SERVER_LETSENCRYPT_CT_CLICKY = 44; // clicky.ct.letsencrypt.org
+    CT_SERVER_LETSENCRYPT_CT_CLICKY = 43; // clicky.ct.letsencrypt.org
+    CT_SERVER_BEHIND_THE_SOFA = 44; // ct.filippo.io/behindthesofa
+    CT_SERVER_WOTRUS_CTLOG = 47; // ct.filippo.io/behindthesofa
+    CT_SERVER_WOTRUS_CTLOG3 = 48; // ct.filippo.io/behindthesofa
 }
 
 message SCT {
