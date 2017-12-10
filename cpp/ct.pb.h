@@ -495,50 +495,50 @@ class CTStatus : public ::google::protobuf::Message /* @@protoc_insertion_point(
   ::zsearch::CTServerStatus* release_google_argon_2021();
   void set_allocated_google_argon_2021(::zsearch::CTServerStatus* google_argon_2021);
 
-  // .zsearch.CTServerStatus cloudfare_nimbus_2017 = 60;
-  bool has_cloudfare_nimbus_2017() const;
-  void clear_cloudfare_nimbus_2017();
-  static const int kCloudfareNimbus2017FieldNumber = 60;
-  const ::zsearch::CTServerStatus& cloudfare_nimbus_2017() const;
-  ::zsearch::CTServerStatus* mutable_cloudfare_nimbus_2017();
-  ::zsearch::CTServerStatus* release_cloudfare_nimbus_2017();
-  void set_allocated_cloudfare_nimbus_2017(::zsearch::CTServerStatus* cloudfare_nimbus_2017);
+  // .zsearch.CTServerStatus cloudflare_nimbus_2017 = 60;
+  bool has_cloudflare_nimbus_2017() const;
+  void clear_cloudflare_nimbus_2017();
+  static const int kCloudflareNimbus2017FieldNumber = 60;
+  const ::zsearch::CTServerStatus& cloudflare_nimbus_2017() const;
+  ::zsearch::CTServerStatus* mutable_cloudflare_nimbus_2017();
+  ::zsearch::CTServerStatus* release_cloudflare_nimbus_2017();
+  void set_allocated_cloudflare_nimbus_2017(::zsearch::CTServerStatus* cloudflare_nimbus_2017);
 
-  // .zsearch.CTServerStatus cloudfare_nimbus_2018 = 61;
-  bool has_cloudfare_nimbus_2018() const;
-  void clear_cloudfare_nimbus_2018();
-  static const int kCloudfareNimbus2018FieldNumber = 61;
-  const ::zsearch::CTServerStatus& cloudfare_nimbus_2018() const;
-  ::zsearch::CTServerStatus* mutable_cloudfare_nimbus_2018();
-  ::zsearch::CTServerStatus* release_cloudfare_nimbus_2018();
-  void set_allocated_cloudfare_nimbus_2018(::zsearch::CTServerStatus* cloudfare_nimbus_2018);
+  // .zsearch.CTServerStatus cloudflare_nimbus_2018 = 61;
+  bool has_cloudflare_nimbus_2018() const;
+  void clear_cloudflare_nimbus_2018();
+  static const int kCloudflareNimbus2018FieldNumber = 61;
+  const ::zsearch::CTServerStatus& cloudflare_nimbus_2018() const;
+  ::zsearch::CTServerStatus* mutable_cloudflare_nimbus_2018();
+  ::zsearch::CTServerStatus* release_cloudflare_nimbus_2018();
+  void set_allocated_cloudflare_nimbus_2018(::zsearch::CTServerStatus* cloudflare_nimbus_2018);
 
-  // .zsearch.CTServerStatus cloudfare_nimbus_2019 = 62;
-  bool has_cloudfare_nimbus_2019() const;
-  void clear_cloudfare_nimbus_2019();
-  static const int kCloudfareNimbus2019FieldNumber = 62;
-  const ::zsearch::CTServerStatus& cloudfare_nimbus_2019() const;
-  ::zsearch::CTServerStatus* mutable_cloudfare_nimbus_2019();
-  ::zsearch::CTServerStatus* release_cloudfare_nimbus_2019();
-  void set_allocated_cloudfare_nimbus_2019(::zsearch::CTServerStatus* cloudfare_nimbus_2019);
+  // .zsearch.CTServerStatus cloudflare_nimbus_2019 = 62;
+  bool has_cloudflare_nimbus_2019() const;
+  void clear_cloudflare_nimbus_2019();
+  static const int kCloudflareNimbus2019FieldNumber = 62;
+  const ::zsearch::CTServerStatus& cloudflare_nimbus_2019() const;
+  ::zsearch::CTServerStatus* mutable_cloudflare_nimbus_2019();
+  ::zsearch::CTServerStatus* release_cloudflare_nimbus_2019();
+  void set_allocated_cloudflare_nimbus_2019(::zsearch::CTServerStatus* cloudflare_nimbus_2019);
 
-  // .zsearch.CTServerStatus cloudfare_nimbus_2020 = 63;
-  bool has_cloudfare_nimbus_2020() const;
-  void clear_cloudfare_nimbus_2020();
-  static const int kCloudfareNimbus2020FieldNumber = 63;
-  const ::zsearch::CTServerStatus& cloudfare_nimbus_2020() const;
-  ::zsearch::CTServerStatus* mutable_cloudfare_nimbus_2020();
-  ::zsearch::CTServerStatus* release_cloudfare_nimbus_2020();
-  void set_allocated_cloudfare_nimbus_2020(::zsearch::CTServerStatus* cloudfare_nimbus_2020);
+  // .zsearch.CTServerStatus cloudflare_nimbus_2020 = 63;
+  bool has_cloudflare_nimbus_2020() const;
+  void clear_cloudflare_nimbus_2020();
+  static const int kCloudflareNimbus2020FieldNumber = 63;
+  const ::zsearch::CTServerStatus& cloudflare_nimbus_2020() const;
+  ::zsearch::CTServerStatus* mutable_cloudflare_nimbus_2020();
+  ::zsearch::CTServerStatus* release_cloudflare_nimbus_2020();
+  void set_allocated_cloudflare_nimbus_2020(::zsearch::CTServerStatus* cloudflare_nimbus_2020);
 
-  // .zsearch.CTServerStatus cloudfare_nimbus_2021 = 64;
-  bool has_cloudfare_nimbus_2021() const;
-  void clear_cloudfare_nimbus_2021();
-  static const int kCloudfareNimbus2021FieldNumber = 64;
-  const ::zsearch::CTServerStatus& cloudfare_nimbus_2021() const;
-  ::zsearch::CTServerStatus* mutable_cloudfare_nimbus_2021();
-  ::zsearch::CTServerStatus* release_cloudfare_nimbus_2021();
-  void set_allocated_cloudfare_nimbus_2021(::zsearch::CTServerStatus* cloudfare_nimbus_2021);
+  // .zsearch.CTServerStatus cloudflare_nimbus_2021 = 64;
+  bool has_cloudflare_nimbus_2021() const;
+  void clear_cloudflare_nimbus_2021();
+  static const int kCloudflareNimbus2021FieldNumber = 64;
+  const ::zsearch::CTServerStatus& cloudflare_nimbus_2021() const;
+  ::zsearch::CTServerStatus* mutable_cloudflare_nimbus_2021();
+  ::zsearch::CTServerStatus* release_cloudflare_nimbus_2021();
+  void set_allocated_cloudflare_nimbus_2021(::zsearch::CTServerStatus* cloudflare_nimbus_2021);
 
   // .zsearch.CTServerStatus digicert_ct1 = 20;
   bool has_digicert_ct1() const;
@@ -657,6 +657,24 @@ class CTStatus : public ::google::protobuf::Message /* @@protoc_insertion_point(
   ::zsearch::CTServerStatus* release_wosign_ct();
   void set_allocated_wosign_ct(::zsearch::CTServerStatus* wosign_ct);
 
+  // .zsearch.CTServerStatus wotrus_ctlog = 47;
+  bool has_wotrus_ctlog() const;
+  void clear_wotrus_ctlog();
+  static const int kWotrusCtlogFieldNumber = 47;
+  const ::zsearch::CTServerStatus& wotrus_ctlog() const;
+  ::zsearch::CTServerStatus* mutable_wotrus_ctlog();
+  ::zsearch::CTServerStatus* release_wotrus_ctlog();
+  void set_allocated_wotrus_ctlog(::zsearch::CTServerStatus* wotrus_ctlog);
+
+  // .zsearch.CTServerStatus wotrus_ctlog3 = 48;
+  bool has_wotrus_ctlog3() const;
+  void clear_wotrus_ctlog3();
+  static const int kWotrusCtlog3FieldNumber = 48;
+  const ::zsearch::CTServerStatus& wotrus_ctlog3() const;
+  ::zsearch::CTServerStatus* mutable_wotrus_ctlog3();
+  ::zsearch::CTServerStatus* release_wotrus_ctlog3();
+  void set_allocated_wotrus_ctlog3(::zsearch::CTServerStatus* wotrus_ctlog3);
+
   // .zsearch.CTServerStatus gdca_ct = 28;
   bool has_gdca_ct() const;
   void clear_gdca_ct();
@@ -774,24 +792,6 @@ class CTStatus : public ::google::protobuf::Message /* @@protoc_insertion_point(
   ::zsearch::CTServerStatus* release_behind_the_sofa();
   void set_allocated_behind_the_sofa(::zsearch::CTServerStatus* behind_the_sofa);
 
-  // .zsearch.CTServerStatus wotrus_ctlog = 47;
-  bool has_wotrus_ctlog() const;
-  void clear_wotrus_ctlog();
-  static const int kWotrusCtlogFieldNumber = 47;
-  const ::zsearch::CTServerStatus& wotrus_ctlog() const;
-  ::zsearch::CTServerStatus* mutable_wotrus_ctlog();
-  ::zsearch::CTServerStatus* release_wotrus_ctlog();
-  void set_allocated_wotrus_ctlog(::zsearch::CTServerStatus* wotrus_ctlog);
-
-  // .zsearch.CTServerStatus wotrus_ctlog3 = 48;
-  bool has_wotrus_ctlog3() const;
-  void clear_wotrus_ctlog3();
-  static const int kWotrusCtlog3FieldNumber = 48;
-  const ::zsearch::CTServerStatus& wotrus_ctlog3() const;
-  ::zsearch::CTServerStatus* mutable_wotrus_ctlog3();
-  ::zsearch::CTServerStatus* release_wotrus_ctlog3();
-  void set_allocated_wotrus_ctlog3(::zsearch::CTServerStatus* wotrus_ctlog3);
-
   // .zsearch.CTServerStatus certificatetransparency_cn_ct = 38;
   bool has_certificatetransparency_cn_ct() const;
   void clear_certificatetransparency_cn_ct();
@@ -820,11 +820,11 @@ class CTStatus : public ::google::protobuf::Message /* @@protoc_insertion_point(
   ::zsearch::CTServerStatus* google_argon_2019_;
   ::zsearch::CTServerStatus* google_argon_2020_;
   ::zsearch::CTServerStatus* google_argon_2021_;
-  ::zsearch::CTServerStatus* cloudfare_nimbus_2017_;
-  ::zsearch::CTServerStatus* cloudfare_nimbus_2018_;
-  ::zsearch::CTServerStatus* cloudfare_nimbus_2019_;
-  ::zsearch::CTServerStatus* cloudfare_nimbus_2020_;
-  ::zsearch::CTServerStatus* cloudfare_nimbus_2021_;
+  ::zsearch::CTServerStatus* cloudflare_nimbus_2017_;
+  ::zsearch::CTServerStatus* cloudflare_nimbus_2018_;
+  ::zsearch::CTServerStatus* cloudflare_nimbus_2019_;
+  ::zsearch::CTServerStatus* cloudflare_nimbus_2020_;
+  ::zsearch::CTServerStatus* cloudflare_nimbus_2021_;
   ::zsearch::CTServerStatus* digicert_ct1_;
   ::zsearch::CTServerStatus* digicert_ct2_;
   ::zsearch::CTServerStatus* izenpe_com_ct_;
@@ -838,6 +838,8 @@ class CTStatus : public ::google::protobuf::Message /* @@protoc_insertion_point(
   ::zsearch::CTServerStatus* comodo_sabre_;
   ::zsearch::CTServerStatus* wosign_ctlog_;
   ::zsearch::CTServerStatus* wosign_ct_;
+  ::zsearch::CTServerStatus* wotrus_ctlog_;
+  ::zsearch::CTServerStatus* wotrus_ctlog3_;
   ::zsearch::CTServerStatus* gdca_ct_;
   ::zsearch::CTServerStatus* gdca_ctlog_;
   ::zsearch::CTServerStatus* gdca_log_;
@@ -851,8 +853,6 @@ class CTStatus : public ::google::protobuf::Message /* @@protoc_insertion_point(
   ::zsearch::CTServerStatus* sheca_ct_;
   ::zsearch::CTServerStatus* letsencrypt_ct_clicky_;
   ::zsearch::CTServerStatus* behind_the_sofa_;
-  ::zsearch::CTServerStatus* wotrus_ctlog_;
-  ::zsearch::CTServerStatus* wotrus_ctlog3_;
   ::zsearch::CTServerStatus* certificatetransparency_cn_ct_;
   mutable int _cached_size_;
   friend struct  protobuf_ct_2eproto::TableStruct;
@@ -1736,199 +1736,199 @@ inline void CTStatus::set_allocated_google_argon_2021(::zsearch::CTServerStatus*
   // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.google_argon_2021)
 }
 
-// .zsearch.CTServerStatus cloudfare_nimbus_2017 = 60;
-inline bool CTStatus::has_cloudfare_nimbus_2017() const {
-  return this != internal_default_instance() && cloudfare_nimbus_2017_ != NULL;
+// .zsearch.CTServerStatus cloudflare_nimbus_2017 = 60;
+inline bool CTStatus::has_cloudflare_nimbus_2017() const {
+  return this != internal_default_instance() && cloudflare_nimbus_2017_ != NULL;
 }
-inline void CTStatus::clear_cloudfare_nimbus_2017() {
-  if (GetArenaNoVirtual() == NULL && cloudfare_nimbus_2017_ != NULL) delete cloudfare_nimbus_2017_;
-  cloudfare_nimbus_2017_ = NULL;
+inline void CTStatus::clear_cloudflare_nimbus_2017() {
+  if (GetArenaNoVirtual() == NULL && cloudflare_nimbus_2017_ != NULL) delete cloudflare_nimbus_2017_;
+  cloudflare_nimbus_2017_ = NULL;
 }
-inline const ::zsearch::CTServerStatus& CTStatus::cloudfare_nimbus_2017() const {
-  // @@protoc_insertion_point(field_get:zsearch.CTStatus.cloudfare_nimbus_2017)
-  return cloudfare_nimbus_2017_ != NULL ? *cloudfare_nimbus_2017_
+inline const ::zsearch::CTServerStatus& CTStatus::cloudflare_nimbus_2017() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.cloudflare_nimbus_2017)
+  return cloudflare_nimbus_2017_ != NULL ? *cloudflare_nimbus_2017_
                          : *::zsearch::CTServerStatus::internal_default_instance();
 }
-inline ::zsearch::CTServerStatus* CTStatus::mutable_cloudfare_nimbus_2017() {
+inline ::zsearch::CTServerStatus* CTStatus::mutable_cloudflare_nimbus_2017() {
   
-  if (cloudfare_nimbus_2017_ == NULL) {
-    cloudfare_nimbus_2017_ = new ::zsearch::CTServerStatus;
+  if (cloudflare_nimbus_2017_ == NULL) {
+    cloudflare_nimbus_2017_ = new ::zsearch::CTServerStatus;
   }
-  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.cloudfare_nimbus_2017)
-  return cloudfare_nimbus_2017_;
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.cloudflare_nimbus_2017)
+  return cloudflare_nimbus_2017_;
 }
-inline ::zsearch::CTServerStatus* CTStatus::release_cloudfare_nimbus_2017() {
-  // @@protoc_insertion_point(field_release:zsearch.CTStatus.cloudfare_nimbus_2017)
+inline ::zsearch::CTServerStatus* CTStatus::release_cloudflare_nimbus_2017() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.cloudflare_nimbus_2017)
   
-  ::zsearch::CTServerStatus* temp = cloudfare_nimbus_2017_;
-  cloudfare_nimbus_2017_ = NULL;
+  ::zsearch::CTServerStatus* temp = cloudflare_nimbus_2017_;
+  cloudflare_nimbus_2017_ = NULL;
   return temp;
 }
-inline void CTStatus::set_allocated_cloudfare_nimbus_2017(::zsearch::CTServerStatus* cloudfare_nimbus_2017) {
-  delete cloudfare_nimbus_2017_;
-  cloudfare_nimbus_2017_ = cloudfare_nimbus_2017;
-  if (cloudfare_nimbus_2017) {
+inline void CTStatus::set_allocated_cloudflare_nimbus_2017(::zsearch::CTServerStatus* cloudflare_nimbus_2017) {
+  delete cloudflare_nimbus_2017_;
+  cloudflare_nimbus_2017_ = cloudflare_nimbus_2017;
+  if (cloudflare_nimbus_2017) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.cloudfare_nimbus_2017)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.cloudflare_nimbus_2017)
 }
 
-// .zsearch.CTServerStatus cloudfare_nimbus_2018 = 61;
-inline bool CTStatus::has_cloudfare_nimbus_2018() const {
-  return this != internal_default_instance() && cloudfare_nimbus_2018_ != NULL;
+// .zsearch.CTServerStatus cloudflare_nimbus_2018 = 61;
+inline bool CTStatus::has_cloudflare_nimbus_2018() const {
+  return this != internal_default_instance() && cloudflare_nimbus_2018_ != NULL;
 }
-inline void CTStatus::clear_cloudfare_nimbus_2018() {
-  if (GetArenaNoVirtual() == NULL && cloudfare_nimbus_2018_ != NULL) delete cloudfare_nimbus_2018_;
-  cloudfare_nimbus_2018_ = NULL;
+inline void CTStatus::clear_cloudflare_nimbus_2018() {
+  if (GetArenaNoVirtual() == NULL && cloudflare_nimbus_2018_ != NULL) delete cloudflare_nimbus_2018_;
+  cloudflare_nimbus_2018_ = NULL;
 }
-inline const ::zsearch::CTServerStatus& CTStatus::cloudfare_nimbus_2018() const {
-  // @@protoc_insertion_point(field_get:zsearch.CTStatus.cloudfare_nimbus_2018)
-  return cloudfare_nimbus_2018_ != NULL ? *cloudfare_nimbus_2018_
+inline const ::zsearch::CTServerStatus& CTStatus::cloudflare_nimbus_2018() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.cloudflare_nimbus_2018)
+  return cloudflare_nimbus_2018_ != NULL ? *cloudflare_nimbus_2018_
                          : *::zsearch::CTServerStatus::internal_default_instance();
 }
-inline ::zsearch::CTServerStatus* CTStatus::mutable_cloudfare_nimbus_2018() {
+inline ::zsearch::CTServerStatus* CTStatus::mutable_cloudflare_nimbus_2018() {
   
-  if (cloudfare_nimbus_2018_ == NULL) {
-    cloudfare_nimbus_2018_ = new ::zsearch::CTServerStatus;
+  if (cloudflare_nimbus_2018_ == NULL) {
+    cloudflare_nimbus_2018_ = new ::zsearch::CTServerStatus;
   }
-  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.cloudfare_nimbus_2018)
-  return cloudfare_nimbus_2018_;
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.cloudflare_nimbus_2018)
+  return cloudflare_nimbus_2018_;
 }
-inline ::zsearch::CTServerStatus* CTStatus::release_cloudfare_nimbus_2018() {
-  // @@protoc_insertion_point(field_release:zsearch.CTStatus.cloudfare_nimbus_2018)
+inline ::zsearch::CTServerStatus* CTStatus::release_cloudflare_nimbus_2018() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.cloudflare_nimbus_2018)
   
-  ::zsearch::CTServerStatus* temp = cloudfare_nimbus_2018_;
-  cloudfare_nimbus_2018_ = NULL;
+  ::zsearch::CTServerStatus* temp = cloudflare_nimbus_2018_;
+  cloudflare_nimbus_2018_ = NULL;
   return temp;
 }
-inline void CTStatus::set_allocated_cloudfare_nimbus_2018(::zsearch::CTServerStatus* cloudfare_nimbus_2018) {
-  delete cloudfare_nimbus_2018_;
-  cloudfare_nimbus_2018_ = cloudfare_nimbus_2018;
-  if (cloudfare_nimbus_2018) {
+inline void CTStatus::set_allocated_cloudflare_nimbus_2018(::zsearch::CTServerStatus* cloudflare_nimbus_2018) {
+  delete cloudflare_nimbus_2018_;
+  cloudflare_nimbus_2018_ = cloudflare_nimbus_2018;
+  if (cloudflare_nimbus_2018) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.cloudfare_nimbus_2018)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.cloudflare_nimbus_2018)
 }
 
-// .zsearch.CTServerStatus cloudfare_nimbus_2019 = 62;
-inline bool CTStatus::has_cloudfare_nimbus_2019() const {
-  return this != internal_default_instance() && cloudfare_nimbus_2019_ != NULL;
+// .zsearch.CTServerStatus cloudflare_nimbus_2019 = 62;
+inline bool CTStatus::has_cloudflare_nimbus_2019() const {
+  return this != internal_default_instance() && cloudflare_nimbus_2019_ != NULL;
 }
-inline void CTStatus::clear_cloudfare_nimbus_2019() {
-  if (GetArenaNoVirtual() == NULL && cloudfare_nimbus_2019_ != NULL) delete cloudfare_nimbus_2019_;
-  cloudfare_nimbus_2019_ = NULL;
+inline void CTStatus::clear_cloudflare_nimbus_2019() {
+  if (GetArenaNoVirtual() == NULL && cloudflare_nimbus_2019_ != NULL) delete cloudflare_nimbus_2019_;
+  cloudflare_nimbus_2019_ = NULL;
 }
-inline const ::zsearch::CTServerStatus& CTStatus::cloudfare_nimbus_2019() const {
-  // @@protoc_insertion_point(field_get:zsearch.CTStatus.cloudfare_nimbus_2019)
-  return cloudfare_nimbus_2019_ != NULL ? *cloudfare_nimbus_2019_
+inline const ::zsearch::CTServerStatus& CTStatus::cloudflare_nimbus_2019() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.cloudflare_nimbus_2019)
+  return cloudflare_nimbus_2019_ != NULL ? *cloudflare_nimbus_2019_
                          : *::zsearch::CTServerStatus::internal_default_instance();
 }
-inline ::zsearch::CTServerStatus* CTStatus::mutable_cloudfare_nimbus_2019() {
+inline ::zsearch::CTServerStatus* CTStatus::mutable_cloudflare_nimbus_2019() {
   
-  if (cloudfare_nimbus_2019_ == NULL) {
-    cloudfare_nimbus_2019_ = new ::zsearch::CTServerStatus;
+  if (cloudflare_nimbus_2019_ == NULL) {
+    cloudflare_nimbus_2019_ = new ::zsearch::CTServerStatus;
   }
-  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.cloudfare_nimbus_2019)
-  return cloudfare_nimbus_2019_;
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.cloudflare_nimbus_2019)
+  return cloudflare_nimbus_2019_;
 }
-inline ::zsearch::CTServerStatus* CTStatus::release_cloudfare_nimbus_2019() {
-  // @@protoc_insertion_point(field_release:zsearch.CTStatus.cloudfare_nimbus_2019)
+inline ::zsearch::CTServerStatus* CTStatus::release_cloudflare_nimbus_2019() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.cloudflare_nimbus_2019)
   
-  ::zsearch::CTServerStatus* temp = cloudfare_nimbus_2019_;
-  cloudfare_nimbus_2019_ = NULL;
+  ::zsearch::CTServerStatus* temp = cloudflare_nimbus_2019_;
+  cloudflare_nimbus_2019_ = NULL;
   return temp;
 }
-inline void CTStatus::set_allocated_cloudfare_nimbus_2019(::zsearch::CTServerStatus* cloudfare_nimbus_2019) {
-  delete cloudfare_nimbus_2019_;
-  cloudfare_nimbus_2019_ = cloudfare_nimbus_2019;
-  if (cloudfare_nimbus_2019) {
+inline void CTStatus::set_allocated_cloudflare_nimbus_2019(::zsearch::CTServerStatus* cloudflare_nimbus_2019) {
+  delete cloudflare_nimbus_2019_;
+  cloudflare_nimbus_2019_ = cloudflare_nimbus_2019;
+  if (cloudflare_nimbus_2019) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.cloudfare_nimbus_2019)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.cloudflare_nimbus_2019)
 }
 
-// .zsearch.CTServerStatus cloudfare_nimbus_2020 = 63;
-inline bool CTStatus::has_cloudfare_nimbus_2020() const {
-  return this != internal_default_instance() && cloudfare_nimbus_2020_ != NULL;
+// .zsearch.CTServerStatus cloudflare_nimbus_2020 = 63;
+inline bool CTStatus::has_cloudflare_nimbus_2020() const {
+  return this != internal_default_instance() && cloudflare_nimbus_2020_ != NULL;
 }
-inline void CTStatus::clear_cloudfare_nimbus_2020() {
-  if (GetArenaNoVirtual() == NULL && cloudfare_nimbus_2020_ != NULL) delete cloudfare_nimbus_2020_;
-  cloudfare_nimbus_2020_ = NULL;
+inline void CTStatus::clear_cloudflare_nimbus_2020() {
+  if (GetArenaNoVirtual() == NULL && cloudflare_nimbus_2020_ != NULL) delete cloudflare_nimbus_2020_;
+  cloudflare_nimbus_2020_ = NULL;
 }
-inline const ::zsearch::CTServerStatus& CTStatus::cloudfare_nimbus_2020() const {
-  // @@protoc_insertion_point(field_get:zsearch.CTStatus.cloudfare_nimbus_2020)
-  return cloudfare_nimbus_2020_ != NULL ? *cloudfare_nimbus_2020_
+inline const ::zsearch::CTServerStatus& CTStatus::cloudflare_nimbus_2020() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.cloudflare_nimbus_2020)
+  return cloudflare_nimbus_2020_ != NULL ? *cloudflare_nimbus_2020_
                          : *::zsearch::CTServerStatus::internal_default_instance();
 }
-inline ::zsearch::CTServerStatus* CTStatus::mutable_cloudfare_nimbus_2020() {
+inline ::zsearch::CTServerStatus* CTStatus::mutable_cloudflare_nimbus_2020() {
   
-  if (cloudfare_nimbus_2020_ == NULL) {
-    cloudfare_nimbus_2020_ = new ::zsearch::CTServerStatus;
+  if (cloudflare_nimbus_2020_ == NULL) {
+    cloudflare_nimbus_2020_ = new ::zsearch::CTServerStatus;
   }
-  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.cloudfare_nimbus_2020)
-  return cloudfare_nimbus_2020_;
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.cloudflare_nimbus_2020)
+  return cloudflare_nimbus_2020_;
 }
-inline ::zsearch::CTServerStatus* CTStatus::release_cloudfare_nimbus_2020() {
-  // @@protoc_insertion_point(field_release:zsearch.CTStatus.cloudfare_nimbus_2020)
+inline ::zsearch::CTServerStatus* CTStatus::release_cloudflare_nimbus_2020() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.cloudflare_nimbus_2020)
   
-  ::zsearch::CTServerStatus* temp = cloudfare_nimbus_2020_;
-  cloudfare_nimbus_2020_ = NULL;
+  ::zsearch::CTServerStatus* temp = cloudflare_nimbus_2020_;
+  cloudflare_nimbus_2020_ = NULL;
   return temp;
 }
-inline void CTStatus::set_allocated_cloudfare_nimbus_2020(::zsearch::CTServerStatus* cloudfare_nimbus_2020) {
-  delete cloudfare_nimbus_2020_;
-  cloudfare_nimbus_2020_ = cloudfare_nimbus_2020;
-  if (cloudfare_nimbus_2020) {
+inline void CTStatus::set_allocated_cloudflare_nimbus_2020(::zsearch::CTServerStatus* cloudflare_nimbus_2020) {
+  delete cloudflare_nimbus_2020_;
+  cloudflare_nimbus_2020_ = cloudflare_nimbus_2020;
+  if (cloudflare_nimbus_2020) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.cloudfare_nimbus_2020)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.cloudflare_nimbus_2020)
 }
 
-// .zsearch.CTServerStatus cloudfare_nimbus_2021 = 64;
-inline bool CTStatus::has_cloudfare_nimbus_2021() const {
-  return this != internal_default_instance() && cloudfare_nimbus_2021_ != NULL;
+// .zsearch.CTServerStatus cloudflare_nimbus_2021 = 64;
+inline bool CTStatus::has_cloudflare_nimbus_2021() const {
+  return this != internal_default_instance() && cloudflare_nimbus_2021_ != NULL;
 }
-inline void CTStatus::clear_cloudfare_nimbus_2021() {
-  if (GetArenaNoVirtual() == NULL && cloudfare_nimbus_2021_ != NULL) delete cloudfare_nimbus_2021_;
-  cloudfare_nimbus_2021_ = NULL;
+inline void CTStatus::clear_cloudflare_nimbus_2021() {
+  if (GetArenaNoVirtual() == NULL && cloudflare_nimbus_2021_ != NULL) delete cloudflare_nimbus_2021_;
+  cloudflare_nimbus_2021_ = NULL;
 }
-inline const ::zsearch::CTServerStatus& CTStatus::cloudfare_nimbus_2021() const {
-  // @@protoc_insertion_point(field_get:zsearch.CTStatus.cloudfare_nimbus_2021)
-  return cloudfare_nimbus_2021_ != NULL ? *cloudfare_nimbus_2021_
+inline const ::zsearch::CTServerStatus& CTStatus::cloudflare_nimbus_2021() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.cloudflare_nimbus_2021)
+  return cloudflare_nimbus_2021_ != NULL ? *cloudflare_nimbus_2021_
                          : *::zsearch::CTServerStatus::internal_default_instance();
 }
-inline ::zsearch::CTServerStatus* CTStatus::mutable_cloudfare_nimbus_2021() {
+inline ::zsearch::CTServerStatus* CTStatus::mutable_cloudflare_nimbus_2021() {
   
-  if (cloudfare_nimbus_2021_ == NULL) {
-    cloudfare_nimbus_2021_ = new ::zsearch::CTServerStatus;
+  if (cloudflare_nimbus_2021_ == NULL) {
+    cloudflare_nimbus_2021_ = new ::zsearch::CTServerStatus;
   }
-  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.cloudfare_nimbus_2021)
-  return cloudfare_nimbus_2021_;
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.cloudflare_nimbus_2021)
+  return cloudflare_nimbus_2021_;
 }
-inline ::zsearch::CTServerStatus* CTStatus::release_cloudfare_nimbus_2021() {
-  // @@protoc_insertion_point(field_release:zsearch.CTStatus.cloudfare_nimbus_2021)
+inline ::zsearch::CTServerStatus* CTStatus::release_cloudflare_nimbus_2021() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.cloudflare_nimbus_2021)
   
-  ::zsearch::CTServerStatus* temp = cloudfare_nimbus_2021_;
-  cloudfare_nimbus_2021_ = NULL;
+  ::zsearch::CTServerStatus* temp = cloudflare_nimbus_2021_;
+  cloudflare_nimbus_2021_ = NULL;
   return temp;
 }
-inline void CTStatus::set_allocated_cloudfare_nimbus_2021(::zsearch::CTServerStatus* cloudfare_nimbus_2021) {
-  delete cloudfare_nimbus_2021_;
-  cloudfare_nimbus_2021_ = cloudfare_nimbus_2021;
-  if (cloudfare_nimbus_2021) {
+inline void CTStatus::set_allocated_cloudflare_nimbus_2021(::zsearch::CTServerStatus* cloudflare_nimbus_2021) {
+  delete cloudflare_nimbus_2021_;
+  cloudflare_nimbus_2021_ = cloudflare_nimbus_2021;
+  if (cloudflare_nimbus_2021) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.cloudfare_nimbus_2021)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.cloudflare_nimbus_2021)
 }
 
 // .zsearch.CTServerStatus digicert_ct1 = 20;
@@ -2438,6 +2438,84 @@ inline void CTStatus::set_allocated_wosign_ct(::zsearch::CTServerStatus* wosign_
   // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.wosign_ct)
 }
 
+// .zsearch.CTServerStatus wotrus_ctlog = 47;
+inline bool CTStatus::has_wotrus_ctlog() const {
+  return this != internal_default_instance() && wotrus_ctlog_ != NULL;
+}
+inline void CTStatus::clear_wotrus_ctlog() {
+  if (GetArenaNoVirtual() == NULL && wotrus_ctlog_ != NULL) delete wotrus_ctlog_;
+  wotrus_ctlog_ = NULL;
+}
+inline const ::zsearch::CTServerStatus& CTStatus::wotrus_ctlog() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.wotrus_ctlog)
+  return wotrus_ctlog_ != NULL ? *wotrus_ctlog_
+                         : *::zsearch::CTServerStatus::internal_default_instance();
+}
+inline ::zsearch::CTServerStatus* CTStatus::mutable_wotrus_ctlog() {
+  
+  if (wotrus_ctlog_ == NULL) {
+    wotrus_ctlog_ = new ::zsearch::CTServerStatus;
+  }
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.wotrus_ctlog)
+  return wotrus_ctlog_;
+}
+inline ::zsearch::CTServerStatus* CTStatus::release_wotrus_ctlog() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.wotrus_ctlog)
+  
+  ::zsearch::CTServerStatus* temp = wotrus_ctlog_;
+  wotrus_ctlog_ = NULL;
+  return temp;
+}
+inline void CTStatus::set_allocated_wotrus_ctlog(::zsearch::CTServerStatus* wotrus_ctlog) {
+  delete wotrus_ctlog_;
+  wotrus_ctlog_ = wotrus_ctlog;
+  if (wotrus_ctlog) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.wotrus_ctlog)
+}
+
+// .zsearch.CTServerStatus wotrus_ctlog3 = 48;
+inline bool CTStatus::has_wotrus_ctlog3() const {
+  return this != internal_default_instance() && wotrus_ctlog3_ != NULL;
+}
+inline void CTStatus::clear_wotrus_ctlog3() {
+  if (GetArenaNoVirtual() == NULL && wotrus_ctlog3_ != NULL) delete wotrus_ctlog3_;
+  wotrus_ctlog3_ = NULL;
+}
+inline const ::zsearch::CTServerStatus& CTStatus::wotrus_ctlog3() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.wotrus_ctlog3)
+  return wotrus_ctlog3_ != NULL ? *wotrus_ctlog3_
+                         : *::zsearch::CTServerStatus::internal_default_instance();
+}
+inline ::zsearch::CTServerStatus* CTStatus::mutable_wotrus_ctlog3() {
+  
+  if (wotrus_ctlog3_ == NULL) {
+    wotrus_ctlog3_ = new ::zsearch::CTServerStatus;
+  }
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.wotrus_ctlog3)
+  return wotrus_ctlog3_;
+}
+inline ::zsearch::CTServerStatus* CTStatus::release_wotrus_ctlog3() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.wotrus_ctlog3)
+  
+  ::zsearch::CTServerStatus* temp = wotrus_ctlog3_;
+  wotrus_ctlog3_ = NULL;
+  return temp;
+}
+inline void CTStatus::set_allocated_wotrus_ctlog3(::zsearch::CTServerStatus* wotrus_ctlog3) {
+  delete wotrus_ctlog3_;
+  wotrus_ctlog3_ = wotrus_ctlog3;
+  if (wotrus_ctlog3) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.wotrus_ctlog3)
+}
+
 // .zsearch.CTServerStatus gdca_ct = 28;
 inline bool CTStatus::has_gdca_ct() const {
   return this != internal_default_instance() && gdca_ct_ != NULL;
@@ -2943,84 +3021,6 @@ inline void CTStatus::set_allocated_behind_the_sofa(::zsearch::CTServerStatus* b
     
   }
   // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.behind_the_sofa)
-}
-
-// .zsearch.CTServerStatus wotrus_ctlog = 47;
-inline bool CTStatus::has_wotrus_ctlog() const {
-  return this != internal_default_instance() && wotrus_ctlog_ != NULL;
-}
-inline void CTStatus::clear_wotrus_ctlog() {
-  if (GetArenaNoVirtual() == NULL && wotrus_ctlog_ != NULL) delete wotrus_ctlog_;
-  wotrus_ctlog_ = NULL;
-}
-inline const ::zsearch::CTServerStatus& CTStatus::wotrus_ctlog() const {
-  // @@protoc_insertion_point(field_get:zsearch.CTStatus.wotrus_ctlog)
-  return wotrus_ctlog_ != NULL ? *wotrus_ctlog_
-                         : *::zsearch::CTServerStatus::internal_default_instance();
-}
-inline ::zsearch::CTServerStatus* CTStatus::mutable_wotrus_ctlog() {
-  
-  if (wotrus_ctlog_ == NULL) {
-    wotrus_ctlog_ = new ::zsearch::CTServerStatus;
-  }
-  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.wotrus_ctlog)
-  return wotrus_ctlog_;
-}
-inline ::zsearch::CTServerStatus* CTStatus::release_wotrus_ctlog() {
-  // @@protoc_insertion_point(field_release:zsearch.CTStatus.wotrus_ctlog)
-  
-  ::zsearch::CTServerStatus* temp = wotrus_ctlog_;
-  wotrus_ctlog_ = NULL;
-  return temp;
-}
-inline void CTStatus::set_allocated_wotrus_ctlog(::zsearch::CTServerStatus* wotrus_ctlog) {
-  delete wotrus_ctlog_;
-  wotrus_ctlog_ = wotrus_ctlog;
-  if (wotrus_ctlog) {
-    
-  } else {
-    
-  }
-  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.wotrus_ctlog)
-}
-
-// .zsearch.CTServerStatus wotrus_ctlog3 = 48;
-inline bool CTStatus::has_wotrus_ctlog3() const {
-  return this != internal_default_instance() && wotrus_ctlog3_ != NULL;
-}
-inline void CTStatus::clear_wotrus_ctlog3() {
-  if (GetArenaNoVirtual() == NULL && wotrus_ctlog3_ != NULL) delete wotrus_ctlog3_;
-  wotrus_ctlog3_ = NULL;
-}
-inline const ::zsearch::CTServerStatus& CTStatus::wotrus_ctlog3() const {
-  // @@protoc_insertion_point(field_get:zsearch.CTStatus.wotrus_ctlog3)
-  return wotrus_ctlog3_ != NULL ? *wotrus_ctlog3_
-                         : *::zsearch::CTServerStatus::internal_default_instance();
-}
-inline ::zsearch::CTServerStatus* CTStatus::mutable_wotrus_ctlog3() {
-  
-  if (wotrus_ctlog3_ == NULL) {
-    wotrus_ctlog3_ = new ::zsearch::CTServerStatus;
-  }
-  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.wotrus_ctlog3)
-  return wotrus_ctlog3_;
-}
-inline ::zsearch::CTServerStatus* CTStatus::release_wotrus_ctlog3() {
-  // @@protoc_insertion_point(field_release:zsearch.CTStatus.wotrus_ctlog3)
-  
-  ::zsearch::CTServerStatus* temp = wotrus_ctlog3_;
-  wotrus_ctlog3_ = NULL;
-  return temp;
-}
-inline void CTStatus::set_allocated_wotrus_ctlog3(::zsearch::CTServerStatus* wotrus_ctlog3) {
-  delete wotrus_ctlog3_;
-  wotrus_ctlog3_ = wotrus_ctlog3;
-  if (wotrus_ctlog3) {
-    
-  } else {
-    
-  }
-  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.wotrus_ctlog3)
 }
 
 // .zsearch.CTServerStatus certificatetransparency_cn_ct = 38;

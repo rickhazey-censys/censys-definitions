@@ -45,11 +45,11 @@ message CTStatus {
     CTServerStatus google_argon_2020 = 53;
     CTServerStatus google_argon_2021 = 54;
 
-    CTServerStatus cloudfare_nimbus_2017 = 60;
-    CTServerStatus cloudfare_nimbus_2018 = 61;
-    CTServerStatus cloudfare_nimbus_2019 = 62;
-    CTServerStatus cloudfare_nimbus_2020 = 63;
-    CTServerStatus cloudfare_nimbus_2021 = 64;
+    CTServerStatus cloudflare_nimbus_2017 = 60;
+    CTServerStatus cloudflare_nimbus_2018 = 61;
+    CTServerStatus cloudflare_nimbus_2019 = 62;
+    CTServerStatus cloudflare_nimbus_2020 = 63;
+    CTServerStatus cloudflare_nimbus_2021 = 64;
 
     CTServerStatus digicert_ct1 = 20;
     CTServerStatus digicert_ct2 = 40;

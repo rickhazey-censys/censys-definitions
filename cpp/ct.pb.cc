@@ -66,11 +66,11 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, google_argon_2019_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, google_argon_2020_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, google_argon_2021_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, cloudfare_nimbus_2017_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, cloudfare_nimbus_2018_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, cloudfare_nimbus_2019_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, cloudfare_nimbus_2020_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, cloudfare_nimbus_2021_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, cloudflare_nimbus_2017_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, cloudflare_nimbus_2018_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, cloudflare_nimbus_2019_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, cloudflare_nimbus_2020_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, cloudflare_nimbus_2021_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, digicert_ct1_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, digicert_ct2_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, izenpe_com_ct_),
@@ -84,6 +84,8 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, comodo_sabre_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, wosign_ctlog_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, wosign_ct_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, wotrus_ctlog_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, wotrus_ctlog3_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, gdca_ct_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, gdca_ctlog_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, gdca_log_),
@@ -97,8 +99,6 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, sheca_ct_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, letsencrypt_ct_clicky_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, behind_the_sofa_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, wotrus_ctlog_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, wotrus_ctlog3_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, certificatetransparency_cn_ct_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SCT, _internal_metadata_),
@@ -190,15 +190,15 @@ void TableStruct::InitDefaultsImpl() {
       ::zsearch::CTServerStatus::internal_default_instance());
   _CTStatus_default_instance_.get_mutable()->google_argon_2021_ = const_cast< ::zsearch::CTServerStatus*>(
       ::zsearch::CTServerStatus::internal_default_instance());
-  _CTStatus_default_instance_.get_mutable()->cloudfare_nimbus_2017_ = const_cast< ::zsearch::CTServerStatus*>(
+  _CTStatus_default_instance_.get_mutable()->cloudflare_nimbus_2017_ = const_cast< ::zsearch::CTServerStatus*>(
       ::zsearch::CTServerStatus::internal_default_instance());
-  _CTStatus_default_instance_.get_mutable()->cloudfare_nimbus_2018_ = const_cast< ::zsearch::CTServerStatus*>(
+  _CTStatus_default_instance_.get_mutable()->cloudflare_nimbus_2018_ = const_cast< ::zsearch::CTServerStatus*>(
       ::zsearch::CTServerStatus::internal_default_instance());
-  _CTStatus_default_instance_.get_mutable()->cloudfare_nimbus_2019_ = const_cast< ::zsearch::CTServerStatus*>(
+  _CTStatus_default_instance_.get_mutable()->cloudflare_nimbus_2019_ = const_cast< ::zsearch::CTServerStatus*>(
       ::zsearch::CTServerStatus::internal_default_instance());
-  _CTStatus_default_instance_.get_mutable()->cloudfare_nimbus_2020_ = const_cast< ::zsearch::CTServerStatus*>(
+  _CTStatus_default_instance_.get_mutable()->cloudflare_nimbus_2020_ = const_cast< ::zsearch::CTServerStatus*>(
       ::zsearch::CTServerStatus::internal_default_instance());
-  _CTStatus_default_instance_.get_mutable()->cloudfare_nimbus_2021_ = const_cast< ::zsearch::CTServerStatus*>(
+  _CTStatus_default_instance_.get_mutable()->cloudflare_nimbus_2021_ = const_cast< ::zsearch::CTServerStatus*>(
       ::zsearch::CTServerStatus::internal_default_instance());
   _CTStatus_default_instance_.get_mutable()->digicert_ct1_ = const_cast< ::zsearch::CTServerStatus*>(
       ::zsearch::CTServerStatus::internal_default_instance());
@@ -226,6 +226,10 @@ void TableStruct::InitDefaultsImpl() {
       ::zsearch::CTServerStatus::internal_default_instance());
   _CTStatus_default_instance_.get_mutable()->wosign_ct_ = const_cast< ::zsearch::CTServerStatus*>(
       ::zsearch::CTServerStatus::internal_default_instance());
+  _CTStatus_default_instance_.get_mutable()->wotrus_ctlog_ = const_cast< ::zsearch::CTServerStatus*>(
+      ::zsearch::CTServerStatus::internal_default_instance());
+  _CTStatus_default_instance_.get_mutable()->wotrus_ctlog3_ = const_cast< ::zsearch::CTServerStatus*>(
+      ::zsearch::CTServerStatus::internal_default_instance());
   _CTStatus_default_instance_.get_mutable()->gdca_ct_ = const_cast< ::zsearch::CTServerStatus*>(
       ::zsearch::CTServerStatus::internal_default_instance());
   _CTStatus_default_instance_.get_mutable()->gdca_ctlog_ = const_cast< ::zsearch::CTServerStatus*>(
@@ -252,10 +256,6 @@ void TableStruct::InitDefaultsImpl() {
       ::zsearch::CTServerStatus::internal_default_instance());
   _CTStatus_default_instance_.get_mutable()->behind_the_sofa_ = const_cast< ::zsearch::CTServerStatus*>(
       ::zsearch::CTServerStatus::internal_default_instance());
-  _CTStatus_default_instance_.get_mutable()->wotrus_ctlog_ = const_cast< ::zsearch::CTServerStatus*>(
-      ::zsearch::CTServerStatus::internal_default_instance());
-  _CTStatus_default_instance_.get_mutable()->wotrus_ctlog3_ = const_cast< ::zsearch::CTServerStatus*>(
-      ::zsearch::CTServerStatus::internal_default_instance());
   _CTStatus_default_instance_.get_mutable()->certificatetransparency_cn_ct_ = const_cast< ::zsearch::CTServerStatus*>(
       ::zsearch::CTServerStatus::internal_default_instance());
   _SCT_default_instance_.get_mutable()->status_ = const_cast< ::zsearch::CTServerStatus*>(
@@ -274,7 +274,7 @@ void AddDescriptorsImpl() {
       "ull_timestamp\030\003 \001(\003\022\026\n\016push_timestamp\030\004 "
       "\001(\003\022*\n\013push_status\030\005 \001(\0162\025.zsearch.CTPus"
       "hStatus\022\013\n\003sct\030\006 \001(\014\022\022\n\npush_error\030\007 \001(\t"
-      "\"\213\023\n\010CTStatus\022+\n\ncensys_dev\030\001 \001(\0132\027.zsea"
+      "\"\220\023\n\010CTStatus\022+\n\ncensys_dev\030\001 \001(\0132\027.zsea"
       "rch.CTServerStatus\022\'\n\006censys\030\002 \001(\0132\027.zse"
       "arch.CTServerStatus\022/\n\016google_aviator\030\n "
       "\001(\0132\027.zsearch.CTServerStatus\022-\n\014google_p"
@@ -292,100 +292,101 @@ void AddDescriptorsImpl() {
       "\0222\n\021google_argon_2019\0304 \001(\0132\027.zsearch.CT"
       "ServerStatus\0222\n\021google_argon_2020\0305 \001(\0132"
       "\027.zsearch.CTServerStatus\0222\n\021google_argon"
-      "_2021\0306 \001(\0132\027.zsearch.CTServerStatus\0226\n\025"
-      "cloudfare_nimbus_2017\030< \001(\0132\027.zsearch.CT"
-      "ServerStatus\0226\n\025cloudfare_nimbus_2018\030= "
-      "\001(\0132\027.zsearch.CTServerStatus\0226\n\025cloudfar"
-      "e_nimbus_2019\030> \001(\0132\027.zsearch.CTServerSt"
-      "atus\0226\n\025cloudfare_nimbus_2020\030\? \001(\0132\027.zs"
-      "earch.CTServerStatus\0226\n\025cloudfare_nimbus"
-      "_2021\030@ \001(\0132\027.zsearch.CTServerStatus\022-\n\014"
-      "digicert_ct1\030\024 \001(\0132\027.zsearch.CTServerSta"
-      "tus\022-\n\014digicert_ct2\030( \001(\0132\027.zsearch.CTSe"
-      "rverStatus\022.\n\rizenpe_com_ct\030\025 \001(\0132\027.zsea"
-      "rch.CTServerStatus\022.\n\rizenpe_eus_ct\030\026 \001("
-      "\0132\027.zsearch.CTServerStatus\022/\n\016symantec_w"
-      "s_ct\030\027 \001(\0132\027.zsearch.CTServerStatus\0221\n\020s"
-      "ymantec_ws_vega\030\030 \001(\0132\027.zsearch.CTServer"
-      "Status\0223\n\022symantec_ws_sirius\030% \001(\0132\027.zse"
-      "arch.CTServerStatus\0222\n\021symantec_ws_deneb"
-      "\030  \001(\0132\027.zsearch.CTServerStatus\022,\n\013comod"
-      "o_dodo\030\" \001(\0132\027.zsearch.CTServerStatus\022/\n"
-      "\016comodo_mammoth\030# \001(\0132\027.zsearch.CTServer"
-      "Status\022-\n\014comodo_sabre\030) \001(\0132\027.zsearch.C"
-      "TServerStatus\022-\n\014wosign_ctlog\030\031 \001(\0132\027.zs"
-      "earch.CTServerStatus\022*\n\twosign_ct\030\032 \001(\0132"
-      "\027.zsearch.CTServerStatus\022(\n\007gdca_ct\030\034 \001("
-      "\0132\027.zsearch.CTServerStatus\022+\n\ngdca_ctlog"
-      "\030$ \001(\0132\027.zsearch.CTServerStatus\022)\n\010gdca_"
-      "log\030- \001(\0132\027.zsearch.CTServerStatus\022*\n\tgd"
-      "ca_log2\030. \001(\0132\027.zsearch.CTServerStatus\0221"
-      "\n\020venafi_api_ctlog\030\037 \001(\0132\027.zsearch.CTSer"
-      "verStatus\0226\n\025venafi_api_ctlog_gen2\030\' \001(\013"
-      "2\027.zsearch.CTServerStatus\0223\n\022nordu_ct_pl"
-      "ausible\030! \001(\0132\027.zsearch.CTServerStatus\022/"
-      "\n\016cnnic_ctserver\030\033 \001(\0132\027.zsearch.CTServe"
-      "rStatus\022,\n\013startssl_ct\030\035 \001(\0132\027.zsearch.C"
-      "TServerStatus\022+\n\ncertly_log\030\036 \001(\0132\027.zsea"
-      "rch.CTServerStatus\022)\n\010sheca_ct\030* \001(\0132\027.z"
-      "search.CTServerStatus\0226\n\025letsencrypt_ct_"
-      "clicky\030+ \001(\0132\027.zsearch.CTServerStatus\0220\n"
-      "\017behind_the_sofa\030, \001(\0132\027.zsearch.CTServe"
-      "rStatus\022-\n\014wotrus_ctlog\030/ \001(\0132\027.zsearch."
-      "CTServerStatus\022.\n\rwotrus_ctlog3\0300 \001(\0132\027."
-      "zsearch.CTServerStatus\022>\n\035certificatetra"
-      "nsparency_cn_ct\030& \001(\0132\027.zsearch.CTServer"
-      "Status\"c\n\003SCT\022\020\n\010sha256fp\030\001 \001(\014\022!\n\006serve"
-      "r\030\002 \001(\0162\021.zsearch.CTServer\022\'\n\006status\030\003 \001"
-      "(\0132\027.zsearch.CTServerStatus*\353\001\n\014CTPushSt"
-      "atus\022\033\n\027CT_PUSH_STATUS_RESERVED\020\000\022\032\n\026CT_"
-      "PUSH_STATUS_UNKNOWN\020\001\022\032\n\026CT_PUSH_STATUS_"
-      "SUCCESS\020\002\022 \n\034CT_PUSH_STATUS_UNKNOWN_ERRO"
-      "R\020\003\022\037\n\033CT_PUSH_STATUS_INVALID_ROOT\020\004\022!\n\035"
-      "CT_PUSH_STATUS_ALREADY_EXISTS\020\005\022 \n\034CT_PU"
-      "SH_STATUS_WILL_NOT_PUSH\020\006*\230\014\n\010CTServer\022\026"
-      "\n\022CT_SERVER_RESERVED\020\000\022\037\n\033CT_SERVER_CENS"
-      "YS_PRODUCTION\020\001\022 \n\034CT_SERVER_CENSYS_DEVE"
-      "LOPMENT\020\002\022\032\n\026CT_SERVER_GOOGLE_PILOT\020\013\022\036\n"
-      "\032CT_SERVER_GOOGLE_ROCKETEER\020\014\022\037\n\033CT_SERV"
-      "ER_GOOGLE_SUBMARINER\020\r\022\035\n\031CT_SERVER_GOOG"
-      "LE_TESTTUBE\020\016\022\033\n\027CT_SERVER_GOOGLE_ICARUS"
-      "\020\017\022\035\n\031CT_SERVER_GOOGLE_SKYDIVER\020\020\022\035\n\031CT_"
-      "SERVER_GOOGLE_DAEDALUS\020\021\022\034\n\030CT_SERVER_GO"
-      "OGLE_AVIATOR\020\n\022\037\n\033CT_SERVER_GOOGLE_ARGON"
-      "_2017\0202\022\037\n\033CT_SERVER_GOOGLE_ARGON_2018\0203"
-      "\022\037\n\033CT_SERVER_GOOGLE_ARGON_2019\0204\022\037\n\033CT_"
-      "SERVER_GOOGLE_ARGON_2020\0205\022\037\n\033CT_SERVER_"
-      "GOOGLE_ARGON_2021\0206\022$\n CT_SERVER_CLOUDFL"
-      "ARE_NIMBUS_2017\020<\022$\n CT_SERVER_CLOUDFLAR"
-      "E_NIMBUS_2018\020=\022$\n CT_SERVER_CLOUDFLARE_"
-      "NIMBUS_2019\020>\022$\n CT_SERVER_CLOUDFLARE_NI"
-      "MBUS_2020\020\?\022$\n CT_SERVER_CLOUDFLARE_NIMB"
-      "US_2021\020@\022\034\n\030CT_SERVER_SYMANTEC_WS_CT\020\027\022"
-      "\036\n\032CT_SERVER_SYMANTEC_WS_VEGA\020\030\022\037\n\033CT_SE"
-      "RVER_SYMANTEC_WS_DENEB\020 \022 \n\034CT_SERVER_SY"
-      "MANTEC_WS_SIRIUS\020%\022\031\n\025CT_SERVER_COMODO_D"
-      "ODO\020#\022\034\n\030CT_SERVER_COMODO_MAMMOTH\020$\022\032\n\026C"
-      "T_SERVER_COMODO_SABRE\020)\022\032\n\026CT_SERVER_WOS"
-      "IGN_CTLOG\020\031\022\027\n\023CT_SERVER_WOSIGN_CT\020\032\022\036\n\032"
-      "CT_SERVER_VENAFI_API_CTLOG\020\037\022#\n\037CT_SERVE"
-      "R_VENAFI_API_CTLOG_GEN2\020\'\022\025\n\021CT_SERVER_G"
-      "DCA_CT\020\034\022\030\n\024CT_SERVER_GDCA_CTLOG\020\"\022\026\n\022CT"
-      "_SERVER_GDCA_LOG\020-\022\027\n\023CT_SERVER_GDCA_LOG"
-      "3\020.\022\033\n\027CT_SERVER_IZENPE_COM_CT\020\025\022\033\n\027CT_S"
-      "ERVER_IZENPE_EUS_CT\020\026\022\032\n\026CT_SERVER_DIGIC"
-      "ERT_CT1\020\024\022\032\n\026CT_SERVER_DIGICERT_CT2\020(\022\034\n"
-      "\030CT_SERVER_CNNIC_CTSERVER\020\033\022\031\n\025CT_SERVER"
-      "_STARTSSL_CT\020\035\022\030\n\024CT_SERVER_CERTLY_LOG\020\036"
-      "\022 \n\034CT_SERVER_NORDU_CT_PLAUSIBLE\020!\022+\n\'CT"
-      "_SERVER_CERTIFICATETRANSPARENCY_CN_CT\020&\022"
-      "\026\n\022CT_SERVER_SHECA_CT\020*\022#\n\037CT_SERVER_LET"
-      "SENCRYPT_CT_CLICKY\020+\022\035\n\031CT_SERVER_BEHIND"
-      "_THE_SOFA\020,\022\032\n\026CT_SERVER_WOTRUS_CTLOG\020/\022"
-      "\033\n\027CT_SERVER_WOTRUS_CTLOG3\0200b\006proto3"
+      "_2021\0306 \001(\0132\027.zsearch.CTServerStatus\0227\n\026"
+      "cloudflare_nimbus_2017\030< \001(\0132\027.zsearch.C"
+      "TServerStatus\0227\n\026cloudflare_nimbus_2018\030"
+      "= \001(\0132\027.zsearch.CTServerStatus\0227\n\026cloudf"
+      "lare_nimbus_2019\030> \001(\0132\027.zsearch.CTServe"
+      "rStatus\0227\n\026cloudflare_nimbus_2020\030\? \001(\0132"
+      "\027.zsearch.CTServerStatus\0227\n\026cloudflare_n"
+      "imbus_2021\030@ \001(\0132\027.zsearch.CTServerStatu"
+      "s\022-\n\014digicert_ct1\030\024 \001(\0132\027.zsearch.CTServ"
+      "erStatus\022-\n\014digicert_ct2\030( \001(\0132\027.zsearch"
+      ".CTServerStatus\022.\n\rizenpe_com_ct\030\025 \001(\0132\027"
+      ".zsearch.CTServerStatus\022.\n\rizenpe_eus_ct"
+      "\030\026 \001(\0132\027.zsearch.CTServerStatus\022/\n\016syman"
+      "tec_ws_ct\030\027 \001(\0132\027.zsearch.CTServerStatus"
+      "\0221\n\020symantec_ws_vega\030\030 \001(\0132\027.zsearch.CTS"
+      "erverStatus\0223\n\022symantec_ws_sirius\030% \001(\0132"
+      "\027.zsearch.CTServerStatus\0222\n\021symantec_ws_"
+      "deneb\030  \001(\0132\027.zsearch.CTServerStatus\022,\n\013"
+      "comodo_dodo\030\" \001(\0132\027.zsearch.CTServerStat"
+      "us\022/\n\016comodo_mammoth\030# \001(\0132\027.zsearch.CTS"
+      "erverStatus\022-\n\014comodo_sabre\030) \001(\0132\027.zsea"
+      "rch.CTServerStatus\022-\n\014wosign_ctlog\030\031 \001(\013"
+      "2\027.zsearch.CTServerStatus\022*\n\twosign_ct\030\032"
+      " \001(\0132\027.zsearch.CTServerStatus\022-\n\014wotrus_"
+      "ctlog\030/ \001(\0132\027.zsearch.CTServerStatus\022.\n\r"
+      "wotrus_ctlog3\0300 \001(\0132\027.zsearch.CTServerSt"
+      "atus\022(\n\007gdca_ct\030\034 \001(\0132\027.zsearch.CTServer"
+      "Status\022+\n\ngdca_ctlog\030$ \001(\0132\027.zsearch.CTS"
+      "erverStatus\022)\n\010gdca_log\030- \001(\0132\027.zsearch."
+      "CTServerStatus\022*\n\tgdca_log2\030. \001(\0132\027.zsea"
+      "rch.CTServerStatus\0221\n\020venafi_api_ctlog\030\037"
+      " \001(\0132\027.zsearch.CTServerStatus\0226\n\025venafi_"
+      "api_ctlog_gen2\030\' \001(\0132\027.zsearch.CTServerS"
+      "tatus\0223\n\022nordu_ct_plausible\030! \001(\0132\027.zsea"
+      "rch.CTServerStatus\022/\n\016cnnic_ctserver\030\033 \001"
+      "(\0132\027.zsearch.CTServerStatus\022,\n\013startssl_"
+      "ct\030\035 \001(\0132\027.zsearch.CTServerStatus\022+\n\ncer"
+      "tly_log\030\036 \001(\0132\027.zsearch.CTServerStatus\022)"
+      "\n\010sheca_ct\030* \001(\0132\027.zsearch.CTServerStatu"
+      "s\0226\n\025letsencrypt_ct_clicky\030+ \001(\0132\027.zsear"
+      "ch.CTServerStatus\0220\n\017behind_the_sofa\030, \001"
+      "(\0132\027.zsearch.CTServerStatus\022>\n\035certifica"
+      "tetransparency_cn_ct\030& \001(\0132\027.zsearch.CTS"
+      "erverStatus\"c\n\003SCT\022\020\n\010sha256fp\030\001 \001(\014\022!\n\006"
+      "server\030\002 \001(\0162\021.zsearch.CTServer\022\'\n\006statu"
+      "s\030\003 \001(\0132\027.zsearch.CTServerStatus*\353\001\n\014CTP"
+      "ushStatus\022\033\n\027CT_PUSH_STATUS_RESERVED\020\000\022\032"
+      "\n\026CT_PUSH_STATUS_UNKNOWN\020\001\022\032\n\026CT_PUSH_ST"
+      "ATUS_SUCCESS\020\002\022 \n\034CT_PUSH_STATUS_UNKNOWN"
+      "_ERROR\020\003\022\037\n\033CT_PUSH_STATUS_INVALID_ROOT\020"
+      "\004\022!\n\035CT_PUSH_STATUS_ALREADY_EXISTS\020\005\022 \n\034"
+      "CT_PUSH_STATUS_WILL_NOT_PUSH\020\006*\230\014\n\010CTSer"
+      "ver\022\026\n\022CT_SERVER_RESERVED\020\000\022\037\n\033CT_SERVER"
+      "_CENSYS_PRODUCTION\020\001\022 \n\034CT_SERVER_CENSYS"
+      "_DEVELOPMENT\020\002\022\032\n\026CT_SERVER_GOOGLE_PILOT"
+      "\020\013\022\036\n\032CT_SERVER_GOOGLE_ROCKETEER\020\014\022\037\n\033CT"
+      "_SERVER_GOOGLE_SUBMARINER\020\r\022\035\n\031CT_SERVER"
+      "_GOOGLE_TESTTUBE\020\016\022\033\n\027CT_SERVER_GOOGLE_I"
+      "CARUS\020\017\022\035\n\031CT_SERVER_GOOGLE_SKYDIVER\020\020\022\035"
+      "\n\031CT_SERVER_GOOGLE_DAEDALUS\020\021\022\034\n\030CT_SERV"
+      "ER_GOOGLE_AVIATOR\020\n\022\037\n\033CT_SERVER_GOOGLE_"
+      "ARGON_2017\0202\022\037\n\033CT_SERVER_GOOGLE_ARGON_2"
+      "018\0203\022\037\n\033CT_SERVER_GOOGLE_ARGON_2019\0204\022\037"
+      "\n\033CT_SERVER_GOOGLE_ARGON_2020\0205\022\037\n\033CT_SE"
+      "RVER_GOOGLE_ARGON_2021\0206\022$\n CT_SERVER_CL"
+      "OUDFLARE_NIMBUS_2017\020<\022$\n CT_SERVER_CLOU"
+      "DFLARE_NIMBUS_2018\020=\022$\n CT_SERVER_CLOUDF"
+      "LARE_NIMBUS_2019\020>\022$\n CT_SERVER_CLOUDFLA"
+      "RE_NIMBUS_2020\020\?\022$\n CT_SERVER_CLOUDFLARE"
+      "_NIMBUS_2021\020@\022\034\n\030CT_SERVER_SYMANTEC_WS_"
+      "CT\020\027\022\036\n\032CT_SERVER_SYMANTEC_WS_VEGA\020\030\022\037\n\033"
+      "CT_SERVER_SYMANTEC_WS_DENEB\020 \022 \n\034CT_SERV"
+      "ER_SYMANTEC_WS_SIRIUS\020%\022\031\n\025CT_SERVER_COM"
+      "ODO_DODO\020#\022\034\n\030CT_SERVER_COMODO_MAMMOTH\020$"
+      "\022\032\n\026CT_SERVER_COMODO_SABRE\020)\022\032\n\026CT_SERVE"
+      "R_WOSIGN_CTLOG\020\031\022\027\n\023CT_SERVER_WOSIGN_CT\020"
+      "\032\022\036\n\032CT_SERVER_VENAFI_API_CTLOG\020\037\022#\n\037CT_"
+      "SERVER_VENAFI_API_CTLOG_GEN2\020\'\022\025\n\021CT_SER"
+      "VER_GDCA_CT\020\034\022\030\n\024CT_SERVER_GDCA_CTLOG\020\"\022"
+      "\026\n\022CT_SERVER_GDCA_LOG\020-\022\027\n\023CT_SERVER_GDC"
+      "A_LOG3\020.\022\033\n\027CT_SERVER_IZENPE_COM_CT\020\025\022\033\n"
+      "\027CT_SERVER_IZENPE_EUS_CT\020\026\022\032\n\026CT_SERVER_"
+      "DIGICERT_CT1\020\024\022\032\n\026CT_SERVER_DIGICERT_CT2"
+      "\020(\022\034\n\030CT_SERVER_CNNIC_CTSERVER\020\033\022\031\n\025CT_S"
+      "ERVER_STARTSSL_CT\020\035\022\030\n\024CT_SERVER_CERTLY_"
+      "LOG\020\036\022 \n\034CT_SERVER_NORDU_CT_PLAUSIBLE\020!\022"
+      "+\n\'CT_SERVER_CERTIFICATETRANSPARENCY_CN_"
+      "CT\020&\022\026\n\022CT_SERVER_SHECA_CT\020*\022#\n\037CT_SERVE"
+      "R_LETSENCRYPT_CT_CLICKY\020+\022\035\n\031CT_SERVER_B"
+      "EHIND_THE_SOFA\020,\022\032\n\026CT_SERVER_WOTRUS_CTL"
+      "OG\020/\022\033\n\027CT_SERVER_WOTRUS_CTLOG3\0200b\006proto"
+      "3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 4556);
+      descriptor, 4561);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "ct.proto", &protobuf_RegisterTypes);
   ::google::protobuf::internal::OnShutdown(&TableStruct::Shutdown);
@@ -1135,11 +1136,11 @@ const int CTStatus::kGoogleArgon2018FieldNumber;
 const int CTStatus::kGoogleArgon2019FieldNumber;
 const int CTStatus::kGoogleArgon2020FieldNumber;
 const int CTStatus::kGoogleArgon2021FieldNumber;
-const int CTStatus::kCloudfareNimbus2017FieldNumber;
-const int CTStatus::kCloudfareNimbus2018FieldNumber;
-const int CTStatus::kCloudfareNimbus2019FieldNumber;
-const int CTStatus::kCloudfareNimbus2020FieldNumber;
-const int CTStatus::kCloudfareNimbus2021FieldNumber;
+const int CTStatus::kCloudflareNimbus2017FieldNumber;
+const int CTStatus::kCloudflareNimbus2018FieldNumber;
+const int CTStatus::kCloudflareNimbus2019FieldNumber;
+const int CTStatus::kCloudflareNimbus2020FieldNumber;
+const int CTStatus::kCloudflareNimbus2021FieldNumber;
 const int CTStatus::kDigicertCt1FieldNumber;
 const int CTStatus::kDigicertCt2FieldNumber;
 const int CTStatus::kIzenpeComCtFieldNumber;
@@ -1153,6 +1154,8 @@ const int CTStatus::kComodoMammothFieldNumber;
 const int CTStatus::kComodoSabreFieldNumber;
 const int CTStatus::kWosignCtlogFieldNumber;
 const int CTStatus::kWosignCtFieldNumber;
+const int CTStatus::kWotrusCtlogFieldNumber;
+const int CTStatus::kWotrusCtlog3FieldNumber;
 const int CTStatus::kGdcaCtFieldNumber;
 const int CTStatus::kGdcaCtlogFieldNumber;
 const int CTStatus::kGdcaLogFieldNumber;
@@ -1166,8 +1169,6 @@ const int CTStatus::kCertlyLogFieldNumber;
 const int CTStatus::kShecaCtFieldNumber;
 const int CTStatus::kLetsencryptCtClickyFieldNumber;
 const int CTStatus::kBehindTheSofaFieldNumber;
-const int CTStatus::kWotrusCtlogFieldNumber;
-const int CTStatus::kWotrusCtlog3FieldNumber;
 const int CTStatus::kCertificatetransparencyCnCtFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
@@ -1259,30 +1260,30 @@ CTStatus::CTStatus(const CTStatus& from)
   } else {
     google_argon_2021_ = NULL;
   }
-  if (from.has_cloudfare_nimbus_2017()) {
-    cloudfare_nimbus_2017_ = new ::zsearch::CTServerStatus(*from.cloudfare_nimbus_2017_);
+  if (from.has_cloudflare_nimbus_2017()) {
+    cloudflare_nimbus_2017_ = new ::zsearch::CTServerStatus(*from.cloudflare_nimbus_2017_);
   } else {
-    cloudfare_nimbus_2017_ = NULL;
+    cloudflare_nimbus_2017_ = NULL;
   }
-  if (from.has_cloudfare_nimbus_2018()) {
-    cloudfare_nimbus_2018_ = new ::zsearch::CTServerStatus(*from.cloudfare_nimbus_2018_);
+  if (from.has_cloudflare_nimbus_2018()) {
+    cloudflare_nimbus_2018_ = new ::zsearch::CTServerStatus(*from.cloudflare_nimbus_2018_);
   } else {
-    cloudfare_nimbus_2018_ = NULL;
+    cloudflare_nimbus_2018_ = NULL;
   }
-  if (from.has_cloudfare_nimbus_2019()) {
-    cloudfare_nimbus_2019_ = new ::zsearch::CTServerStatus(*from.cloudfare_nimbus_2019_);
+  if (from.has_cloudflare_nimbus_2019()) {
+    cloudflare_nimbus_2019_ = new ::zsearch::CTServerStatus(*from.cloudflare_nimbus_2019_);
   } else {
-    cloudfare_nimbus_2019_ = NULL;
+    cloudflare_nimbus_2019_ = NULL;
   }
-  if (from.has_cloudfare_nimbus_2020()) {
-    cloudfare_nimbus_2020_ = new ::zsearch::CTServerStatus(*from.cloudfare_nimbus_2020_);
+  if (from.has_cloudflare_nimbus_2020()) {
+    cloudflare_nimbus_2020_ = new ::zsearch::CTServerStatus(*from.cloudflare_nimbus_2020_);
   } else {
-    cloudfare_nimbus_2020_ = NULL;
+    cloudflare_nimbus_2020_ = NULL;
   }
-  if (from.has_cloudfare_nimbus_2021()) {
-    cloudfare_nimbus_2021_ = new ::zsearch::CTServerStatus(*from.cloudfare_nimbus_2021_);
+  if (from.has_cloudflare_nimbus_2021()) {
+    cloudflare_nimbus_2021_ = new ::zsearch::CTServerStatus(*from.cloudflare_nimbus_2021_);
   } else {
-    cloudfare_nimbus_2021_ = NULL;
+    cloudflare_nimbus_2021_ = NULL;
   }
   if (from.has_digicert_ct1()) {
     digicert_ct1_ = new ::zsearch::CTServerStatus(*from.digicert_ct1_);
@@ -1349,6 +1350,16 @@ CTStatus::CTStatus(const CTStatus& from)
   } else {
     wosign_ct_ = NULL;
   }
+  if (from.has_wotrus_ctlog()) {
+    wotrus_ctlog_ = new ::zsearch::CTServerStatus(*from.wotrus_ctlog_);
+  } else {
+    wotrus_ctlog_ = NULL;
+  }
+  if (from.has_wotrus_ctlog3()) {
+    wotrus_ctlog3_ = new ::zsearch::CTServerStatus(*from.wotrus_ctlog3_);
+  } else {
+    wotrus_ctlog3_ = NULL;
+  }
   if (from.has_gdca_ct()) {
     gdca_ct_ = new ::zsearch::CTServerStatus(*from.gdca_ct_);
   } else {
@@ -1413,16 +1424,6 @@ CTStatus::CTStatus(const CTStatus& from)
     behind_the_sofa_ = new ::zsearch::CTServerStatus(*from.behind_the_sofa_);
   } else {
     behind_the_sofa_ = NULL;
-  }
-  if (from.has_wotrus_ctlog()) {
-    wotrus_ctlog_ = new ::zsearch::CTServerStatus(*from.wotrus_ctlog_);
-  } else {
-    wotrus_ctlog_ = NULL;
-  }
-  if (from.has_wotrus_ctlog3()) {
-    wotrus_ctlog3_ = new ::zsearch::CTServerStatus(*from.wotrus_ctlog3_);
-  } else {
-    wotrus_ctlog3_ = NULL;
   }
   if (from.has_certificatetransparency_cn_ct()) {
     certificatetransparency_cn_ct_ = new ::zsearch::CTServerStatus(*from.certificatetransparency_cn_ct_);
@@ -1490,19 +1491,19 @@ void CTStatus::SharedDtor() {
     delete google_argon_2021_;
   }
   if (this != internal_default_instance()) {
-    delete cloudfare_nimbus_2017_;
+    delete cloudflare_nimbus_2017_;
   }
   if (this != internal_default_instance()) {
-    delete cloudfare_nimbus_2018_;
+    delete cloudflare_nimbus_2018_;
   }
   if (this != internal_default_instance()) {
-    delete cloudfare_nimbus_2019_;
+    delete cloudflare_nimbus_2019_;
   }
   if (this != internal_default_instance()) {
-    delete cloudfare_nimbus_2020_;
+    delete cloudflare_nimbus_2020_;
   }
   if (this != internal_default_instance()) {
-    delete cloudfare_nimbus_2021_;
+    delete cloudflare_nimbus_2021_;
   }
   if (this != internal_default_instance()) {
     delete digicert_ct1_;
@@ -1544,6 +1545,12 @@ void CTStatus::SharedDtor() {
     delete wosign_ct_;
   }
   if (this != internal_default_instance()) {
+    delete wotrus_ctlog_;
+  }
+  if (this != internal_default_instance()) {
+    delete wotrus_ctlog3_;
+  }
+  if (this != internal_default_instance()) {
     delete gdca_ct_;
   }
   if (this != internal_default_instance()) {
@@ -1581,12 +1588,6 @@ void CTStatus::SharedDtor() {
   }
   if (this != internal_default_instance()) {
     delete behind_the_sofa_;
-  }
-  if (this != internal_default_instance()) {
-    delete wotrus_ctlog_;
-  }
-  if (this != internal_default_instance()) {
-    delete wotrus_ctlog3_;
   }
   if (this != internal_default_instance()) {
     delete certificatetransparency_cn_ct_;
@@ -1678,26 +1679,26 @@ void CTStatus::Clear() {
     delete google_argon_2021_;
   }
   google_argon_2021_ = NULL;
-  if (GetArenaNoVirtual() == NULL && cloudfare_nimbus_2017_ != NULL) {
-    delete cloudfare_nimbus_2017_;
+  if (GetArenaNoVirtual() == NULL && cloudflare_nimbus_2017_ != NULL) {
+    delete cloudflare_nimbus_2017_;
   }
-  cloudfare_nimbus_2017_ = NULL;
-  if (GetArenaNoVirtual() == NULL && cloudfare_nimbus_2018_ != NULL) {
-    delete cloudfare_nimbus_2018_;
+  cloudflare_nimbus_2017_ = NULL;
+  if (GetArenaNoVirtual() == NULL && cloudflare_nimbus_2018_ != NULL) {
+    delete cloudflare_nimbus_2018_;
   }
-  cloudfare_nimbus_2018_ = NULL;
-  if (GetArenaNoVirtual() == NULL && cloudfare_nimbus_2019_ != NULL) {
-    delete cloudfare_nimbus_2019_;
+  cloudflare_nimbus_2018_ = NULL;
+  if (GetArenaNoVirtual() == NULL && cloudflare_nimbus_2019_ != NULL) {
+    delete cloudflare_nimbus_2019_;
   }
-  cloudfare_nimbus_2019_ = NULL;
-  if (GetArenaNoVirtual() == NULL && cloudfare_nimbus_2020_ != NULL) {
-    delete cloudfare_nimbus_2020_;
+  cloudflare_nimbus_2019_ = NULL;
+  if (GetArenaNoVirtual() == NULL && cloudflare_nimbus_2020_ != NULL) {
+    delete cloudflare_nimbus_2020_;
   }
-  cloudfare_nimbus_2020_ = NULL;
-  if (GetArenaNoVirtual() == NULL && cloudfare_nimbus_2021_ != NULL) {
-    delete cloudfare_nimbus_2021_;
+  cloudflare_nimbus_2020_ = NULL;
+  if (GetArenaNoVirtual() == NULL && cloudflare_nimbus_2021_ != NULL) {
+    delete cloudflare_nimbus_2021_;
   }
-  cloudfare_nimbus_2021_ = NULL;
+  cloudflare_nimbus_2021_ = NULL;
   if (GetArenaNoVirtual() == NULL && digicert_ct1_ != NULL) {
     delete digicert_ct1_;
   }
@@ -1750,6 +1751,14 @@ void CTStatus::Clear() {
     delete wosign_ct_;
   }
   wosign_ct_ = NULL;
+  if (GetArenaNoVirtual() == NULL && wotrus_ctlog_ != NULL) {
+    delete wotrus_ctlog_;
+  }
+  wotrus_ctlog_ = NULL;
+  if (GetArenaNoVirtual() == NULL && wotrus_ctlog3_ != NULL) {
+    delete wotrus_ctlog3_;
+  }
+  wotrus_ctlog3_ = NULL;
   if (GetArenaNoVirtual() == NULL && gdca_ct_ != NULL) {
     delete gdca_ct_;
   }
@@ -1802,14 +1811,6 @@ void CTStatus::Clear() {
     delete behind_the_sofa_;
   }
   behind_the_sofa_ = NULL;
-  if (GetArenaNoVirtual() == NULL && wotrus_ctlog_ != NULL) {
-    delete wotrus_ctlog_;
-  }
-  wotrus_ctlog_ = NULL;
-  if (GetArenaNoVirtual() == NULL && wotrus_ctlog3_ != NULL) {
-    delete wotrus_ctlog3_;
-  }
-  wotrus_ctlog3_ = NULL;
   if (GetArenaNoVirtual() == NULL && certificatetransparency_cn_ct_ != NULL) {
     delete certificatetransparency_cn_ct_;
   }
@@ -2310,55 +2311,55 @@ bool CTStatus::MergePartialFromCodedStream(
         break;
       }
 
-      // .zsearch.CTServerStatus cloudfare_nimbus_2017 = 60;
+      // .zsearch.CTServerStatus cloudflare_nimbus_2017 = 60;
       case 60: {
         if (tag == 482u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
-               input, mutable_cloudfare_nimbus_2017()));
+               input, mutable_cloudflare_nimbus_2017()));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // .zsearch.CTServerStatus cloudfare_nimbus_2018 = 61;
+      // .zsearch.CTServerStatus cloudflare_nimbus_2018 = 61;
       case 61: {
         if (tag == 490u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
-               input, mutable_cloudfare_nimbus_2018()));
+               input, mutable_cloudflare_nimbus_2018()));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // .zsearch.CTServerStatus cloudfare_nimbus_2019 = 62;
+      // .zsearch.CTServerStatus cloudflare_nimbus_2019 = 62;
       case 62: {
         if (tag == 498u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
-               input, mutable_cloudfare_nimbus_2019()));
+               input, mutable_cloudflare_nimbus_2019()));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // .zsearch.CTServerStatus cloudfare_nimbus_2020 = 63;
+      // .zsearch.CTServerStatus cloudflare_nimbus_2020 = 63;
       case 63: {
         if (tag == 506u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
-               input, mutable_cloudfare_nimbus_2020()));
+               input, mutable_cloudflare_nimbus_2020()));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // .zsearch.CTServerStatus cloudfare_nimbus_2021 = 64;
+      // .zsearch.CTServerStatus cloudflare_nimbus_2021 = 64;
       case 64: {
         if (tag == 514u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
-               input, mutable_cloudfare_nimbus_2021()));
+               input, mutable_cloudflare_nimbus_2021()));
         } else {
           goto handle_unusual;
         }
@@ -2653,34 +2654,34 @@ void CTStatus::SerializeWithCachedSizes(
       54, *this->google_argon_2021_, output);
   }
 
-  // .zsearch.CTServerStatus cloudfare_nimbus_2017 = 60;
-  if (this->has_cloudfare_nimbus_2017()) {
+  // .zsearch.CTServerStatus cloudflare_nimbus_2017 = 60;
+  if (this->has_cloudflare_nimbus_2017()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      60, *this->cloudfare_nimbus_2017_, output);
+      60, *this->cloudflare_nimbus_2017_, output);
   }
 
-  // .zsearch.CTServerStatus cloudfare_nimbus_2018 = 61;
-  if (this->has_cloudfare_nimbus_2018()) {
+  // .zsearch.CTServerStatus cloudflare_nimbus_2018 = 61;
+  if (this->has_cloudflare_nimbus_2018()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      61, *this->cloudfare_nimbus_2018_, output);
+      61, *this->cloudflare_nimbus_2018_, output);
   }
 
-  // .zsearch.CTServerStatus cloudfare_nimbus_2019 = 62;
-  if (this->has_cloudfare_nimbus_2019()) {
+  // .zsearch.CTServerStatus cloudflare_nimbus_2019 = 62;
+  if (this->has_cloudflare_nimbus_2019()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      62, *this->cloudfare_nimbus_2019_, output);
+      62, *this->cloudflare_nimbus_2019_, output);
   }
 
-  // .zsearch.CTServerStatus cloudfare_nimbus_2020 = 63;
-  if (this->has_cloudfare_nimbus_2020()) {
+  // .zsearch.CTServerStatus cloudflare_nimbus_2020 = 63;
+  if (this->has_cloudflare_nimbus_2020()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      63, *this->cloudfare_nimbus_2020_, output);
+      63, *this->cloudflare_nimbus_2020_, output);
   }
 
-  // .zsearch.CTServerStatus cloudfare_nimbus_2021 = 64;
-  if (this->has_cloudfare_nimbus_2021()) {
+  // .zsearch.CTServerStatus cloudflare_nimbus_2021 = 64;
+  if (this->has_cloudflare_nimbus_2021()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      64, *this->cloudfare_nimbus_2021_, output);
+      64, *this->cloudflare_nimbus_2021_, output);
   }
 
   // @@protoc_insertion_point(serialize_end:zsearch.CTStatus)
@@ -2998,39 +2999,39 @@ void CTStatus::SerializeWithCachedSizes(
         54, *this->google_argon_2021_, false, target);
   }
 
-  // .zsearch.CTServerStatus cloudfare_nimbus_2017 = 60;
-  if (this->has_cloudfare_nimbus_2017()) {
+  // .zsearch.CTServerStatus cloudflare_nimbus_2017 = 60;
+  if (this->has_cloudflare_nimbus_2017()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        60, *this->cloudfare_nimbus_2017_, false, target);
+        60, *this->cloudflare_nimbus_2017_, false, target);
   }
 
-  // .zsearch.CTServerStatus cloudfare_nimbus_2018 = 61;
-  if (this->has_cloudfare_nimbus_2018()) {
+  // .zsearch.CTServerStatus cloudflare_nimbus_2018 = 61;
+  if (this->has_cloudflare_nimbus_2018()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        61, *this->cloudfare_nimbus_2018_, false, target);
+        61, *this->cloudflare_nimbus_2018_, false, target);
   }
 
-  // .zsearch.CTServerStatus cloudfare_nimbus_2019 = 62;
-  if (this->has_cloudfare_nimbus_2019()) {
+  // .zsearch.CTServerStatus cloudflare_nimbus_2019 = 62;
+  if (this->has_cloudflare_nimbus_2019()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        62, *this->cloudfare_nimbus_2019_, false, target);
+        62, *this->cloudflare_nimbus_2019_, false, target);
   }
 
-  // .zsearch.CTServerStatus cloudfare_nimbus_2020 = 63;
-  if (this->has_cloudfare_nimbus_2020()) {
+  // .zsearch.CTServerStatus cloudflare_nimbus_2020 = 63;
+  if (this->has_cloudflare_nimbus_2020()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        63, *this->cloudfare_nimbus_2020_, false, target);
+        63, *this->cloudflare_nimbus_2020_, false, target);
   }
 
-  // .zsearch.CTServerStatus cloudfare_nimbus_2021 = 64;
-  if (this->has_cloudfare_nimbus_2021()) {
+  // .zsearch.CTServerStatus cloudflare_nimbus_2021 = 64;
+  if (this->has_cloudflare_nimbus_2021()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        64, *this->cloudfare_nimbus_2021_, false, target);
+        64, *this->cloudflare_nimbus_2021_, false, target);
   }
 
   // @@protoc_insertion_point(serialize_to_array_end:zsearch.CTStatus)
@@ -3146,39 +3147,39 @@ size_t CTStatus::ByteSizeLong() const {
         *this->google_argon_2021_);
   }
 
-  // .zsearch.CTServerStatus cloudfare_nimbus_2017 = 60;
-  if (this->has_cloudfare_nimbus_2017()) {
+  // .zsearch.CTServerStatus cloudflare_nimbus_2017 = 60;
+  if (this->has_cloudflare_nimbus_2017()) {
     total_size += 2 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-        *this->cloudfare_nimbus_2017_);
+        *this->cloudflare_nimbus_2017_);
   }
 
-  // .zsearch.CTServerStatus cloudfare_nimbus_2018 = 61;
-  if (this->has_cloudfare_nimbus_2018()) {
+  // .zsearch.CTServerStatus cloudflare_nimbus_2018 = 61;
+  if (this->has_cloudflare_nimbus_2018()) {
     total_size += 2 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-        *this->cloudfare_nimbus_2018_);
+        *this->cloudflare_nimbus_2018_);
   }
 
-  // .zsearch.CTServerStatus cloudfare_nimbus_2019 = 62;
-  if (this->has_cloudfare_nimbus_2019()) {
+  // .zsearch.CTServerStatus cloudflare_nimbus_2019 = 62;
+  if (this->has_cloudflare_nimbus_2019()) {
     total_size += 2 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-        *this->cloudfare_nimbus_2019_);
+        *this->cloudflare_nimbus_2019_);
   }
 
-  // .zsearch.CTServerStatus cloudfare_nimbus_2020 = 63;
-  if (this->has_cloudfare_nimbus_2020()) {
+  // .zsearch.CTServerStatus cloudflare_nimbus_2020 = 63;
+  if (this->has_cloudflare_nimbus_2020()) {
     total_size += 2 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-        *this->cloudfare_nimbus_2020_);
+        *this->cloudflare_nimbus_2020_);
   }
 
-  // .zsearch.CTServerStatus cloudfare_nimbus_2021 = 64;
-  if (this->has_cloudfare_nimbus_2021()) {
+  // .zsearch.CTServerStatus cloudflare_nimbus_2021 = 64;
+  if (this->has_cloudflare_nimbus_2021()) {
     total_size += 2 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-        *this->cloudfare_nimbus_2021_);
+        *this->cloudflare_nimbus_2021_);
   }
 
   // .zsearch.CTServerStatus digicert_ct1 = 20;
@@ -3272,6 +3273,20 @@ size_t CTStatus::ByteSizeLong() const {
         *this->wosign_ct_);
   }
 
+  // .zsearch.CTServerStatus wotrus_ctlog = 47;
+  if (this->has_wotrus_ctlog()) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        *this->wotrus_ctlog_);
+  }
+
+  // .zsearch.CTServerStatus wotrus_ctlog3 = 48;
+  if (this->has_wotrus_ctlog3()) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        *this->wotrus_ctlog3_);
+  }
+
   // .zsearch.CTServerStatus gdca_ct = 28;
   if (this->has_gdca_ct()) {
     total_size += 2 +
@@ -3363,20 +3378,6 @@ size_t CTStatus::ByteSizeLong() const {
         *this->behind_the_sofa_);
   }
 
-  // .zsearch.CTServerStatus wotrus_ctlog = 47;
-  if (this->has_wotrus_ctlog()) {
-    total_size += 2 +
-      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-        *this->wotrus_ctlog_);
-  }
-
-  // .zsearch.CTServerStatus wotrus_ctlog3 = 48;
-  if (this->has_wotrus_ctlog3()) {
-    total_size += 2 +
-      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-        *this->wotrus_ctlog3_);
-  }
-
   // .zsearch.CTServerStatus certificatetransparency_cn_ct = 38;
   if (this->has_certificatetransparency_cn_ct()) {
     total_size += 2 +
@@ -3455,20 +3456,20 @@ void CTStatus::MergeFrom(const CTStatus& from) {
   if (from.has_google_argon_2021()) {
     mutable_google_argon_2021()->::zsearch::CTServerStatus::MergeFrom(from.google_argon_2021());
   }
-  if (from.has_cloudfare_nimbus_2017()) {
-    mutable_cloudfare_nimbus_2017()->::zsearch::CTServerStatus::MergeFrom(from.cloudfare_nimbus_2017());
+  if (from.has_cloudflare_nimbus_2017()) {
+    mutable_cloudflare_nimbus_2017()->::zsearch::CTServerStatus::MergeFrom(from.cloudflare_nimbus_2017());
   }
-  if (from.has_cloudfare_nimbus_2018()) {
-    mutable_cloudfare_nimbus_2018()->::zsearch::CTServerStatus::MergeFrom(from.cloudfare_nimbus_2018());
+  if (from.has_cloudflare_nimbus_2018()) {
+    mutable_cloudflare_nimbus_2018()->::zsearch::CTServerStatus::MergeFrom(from.cloudflare_nimbus_2018());
   }
-  if (from.has_cloudfare_nimbus_2019()) {
-    mutable_cloudfare_nimbus_2019()->::zsearch::CTServerStatus::MergeFrom(from.cloudfare_nimbus_2019());
+  if (from.has_cloudflare_nimbus_2019()) {
+    mutable_cloudflare_nimbus_2019()->::zsearch::CTServerStatus::MergeFrom(from.cloudflare_nimbus_2019());
   }
-  if (from.has_cloudfare_nimbus_2020()) {
-    mutable_cloudfare_nimbus_2020()->::zsearch::CTServerStatus::MergeFrom(from.cloudfare_nimbus_2020());
+  if (from.has_cloudflare_nimbus_2020()) {
+    mutable_cloudflare_nimbus_2020()->::zsearch::CTServerStatus::MergeFrom(from.cloudflare_nimbus_2020());
   }
-  if (from.has_cloudfare_nimbus_2021()) {
-    mutable_cloudfare_nimbus_2021()->::zsearch::CTServerStatus::MergeFrom(from.cloudfare_nimbus_2021());
+  if (from.has_cloudflare_nimbus_2021()) {
+    mutable_cloudflare_nimbus_2021()->::zsearch::CTServerStatus::MergeFrom(from.cloudflare_nimbus_2021());
   }
   if (from.has_digicert_ct1()) {
     mutable_digicert_ct1()->::zsearch::CTServerStatus::MergeFrom(from.digicert_ct1());
@@ -3509,6 +3510,12 @@ void CTStatus::MergeFrom(const CTStatus& from) {
   if (from.has_wosign_ct()) {
     mutable_wosign_ct()->::zsearch::CTServerStatus::MergeFrom(from.wosign_ct());
   }
+  if (from.has_wotrus_ctlog()) {
+    mutable_wotrus_ctlog()->::zsearch::CTServerStatus::MergeFrom(from.wotrus_ctlog());
+  }
+  if (from.has_wotrus_ctlog3()) {
+    mutable_wotrus_ctlog3()->::zsearch::CTServerStatus::MergeFrom(from.wotrus_ctlog3());
+  }
   if (from.has_gdca_ct()) {
     mutable_gdca_ct()->::zsearch::CTServerStatus::MergeFrom(from.gdca_ct());
   }
@@ -3547,12 +3554,6 @@ void CTStatus::MergeFrom(const CTStatus& from) {
   }
   if (from.has_behind_the_sofa()) {
     mutable_behind_the_sofa()->::zsearch::CTServerStatus::MergeFrom(from.behind_the_sofa());
-  }
-  if (from.has_wotrus_ctlog()) {
-    mutable_wotrus_ctlog()->::zsearch::CTServerStatus::MergeFrom(from.wotrus_ctlog());
-  }
-  if (from.has_wotrus_ctlog3()) {
-    mutable_wotrus_ctlog3()->::zsearch::CTServerStatus::MergeFrom(from.wotrus_ctlog3());
   }
   if (from.has_certificatetransparency_cn_ct()) {
     mutable_certificatetransparency_cn_ct()->::zsearch::CTServerStatus::MergeFrom(from.certificatetransparency_cn_ct());
@@ -3597,11 +3598,11 @@ void CTStatus::InternalSwap(CTStatus* other) {
   std::swap(google_argon_2019_, other->google_argon_2019_);
   std::swap(google_argon_2020_, other->google_argon_2020_);
   std::swap(google_argon_2021_, other->google_argon_2021_);
-  std::swap(cloudfare_nimbus_2017_, other->cloudfare_nimbus_2017_);
-  std::swap(cloudfare_nimbus_2018_, other->cloudfare_nimbus_2018_);
-  std::swap(cloudfare_nimbus_2019_, other->cloudfare_nimbus_2019_);
-  std::swap(cloudfare_nimbus_2020_, other->cloudfare_nimbus_2020_);
-  std::swap(cloudfare_nimbus_2021_, other->cloudfare_nimbus_2021_);
+  std::swap(cloudflare_nimbus_2017_, other->cloudflare_nimbus_2017_);
+  std::swap(cloudflare_nimbus_2018_, other->cloudflare_nimbus_2018_);
+  std::swap(cloudflare_nimbus_2019_, other->cloudflare_nimbus_2019_);
+  std::swap(cloudflare_nimbus_2020_, other->cloudflare_nimbus_2020_);
+  std::swap(cloudflare_nimbus_2021_, other->cloudflare_nimbus_2021_);
   std::swap(digicert_ct1_, other->digicert_ct1_);
   std::swap(digicert_ct2_, other->digicert_ct2_);
   std::swap(izenpe_com_ct_, other->izenpe_com_ct_);
@@ -3615,6 +3616,8 @@ void CTStatus::InternalSwap(CTStatus* other) {
   std::swap(comodo_sabre_, other->comodo_sabre_);
   std::swap(wosign_ctlog_, other->wosign_ctlog_);
   std::swap(wosign_ct_, other->wosign_ct_);
+  std::swap(wotrus_ctlog_, other->wotrus_ctlog_);
+  std::swap(wotrus_ctlog3_, other->wotrus_ctlog3_);
   std::swap(gdca_ct_, other->gdca_ct_);
   std::swap(gdca_ctlog_, other->gdca_ctlog_);
   std::swap(gdca_log_, other->gdca_log_);
@@ -3628,8 +3631,6 @@ void CTStatus::InternalSwap(CTStatus* other) {
   std::swap(sheca_ct_, other->sheca_ct_);
   std::swap(letsencrypt_ct_clicky_, other->letsencrypt_ct_clicky_);
   std::swap(behind_the_sofa_, other->behind_the_sofa_);
-  std::swap(wotrus_ctlog_, other->wotrus_ctlog_);
-  std::swap(wotrus_ctlog3_, other->wotrus_ctlog3_);
   std::swap(certificatetransparency_cn_ct_, other->certificatetransparency_cn_ct_);
   std::swap(_cached_size_, other->_cached_size_);
 }
@@ -4227,199 +4228,199 @@ void CTStatus::set_allocated_google_argon_2021(::zsearch::CTServerStatus* google
   // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.google_argon_2021)
 }
 
-// .zsearch.CTServerStatus cloudfare_nimbus_2017 = 60;
-bool CTStatus::has_cloudfare_nimbus_2017() const {
-  return this != internal_default_instance() && cloudfare_nimbus_2017_ != NULL;
+// .zsearch.CTServerStatus cloudflare_nimbus_2017 = 60;
+bool CTStatus::has_cloudflare_nimbus_2017() const {
+  return this != internal_default_instance() && cloudflare_nimbus_2017_ != NULL;
 }
-void CTStatus::clear_cloudfare_nimbus_2017() {
-  if (GetArenaNoVirtual() == NULL && cloudfare_nimbus_2017_ != NULL) delete cloudfare_nimbus_2017_;
-  cloudfare_nimbus_2017_ = NULL;
+void CTStatus::clear_cloudflare_nimbus_2017() {
+  if (GetArenaNoVirtual() == NULL && cloudflare_nimbus_2017_ != NULL) delete cloudflare_nimbus_2017_;
+  cloudflare_nimbus_2017_ = NULL;
 }
-const ::zsearch::CTServerStatus& CTStatus::cloudfare_nimbus_2017() const {
-  // @@protoc_insertion_point(field_get:zsearch.CTStatus.cloudfare_nimbus_2017)
-  return cloudfare_nimbus_2017_ != NULL ? *cloudfare_nimbus_2017_
+const ::zsearch::CTServerStatus& CTStatus::cloudflare_nimbus_2017() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.cloudflare_nimbus_2017)
+  return cloudflare_nimbus_2017_ != NULL ? *cloudflare_nimbus_2017_
                          : *::zsearch::CTServerStatus::internal_default_instance();
 }
-::zsearch::CTServerStatus* CTStatus::mutable_cloudfare_nimbus_2017() {
+::zsearch::CTServerStatus* CTStatus::mutable_cloudflare_nimbus_2017() {
   
-  if (cloudfare_nimbus_2017_ == NULL) {
-    cloudfare_nimbus_2017_ = new ::zsearch::CTServerStatus;
+  if (cloudflare_nimbus_2017_ == NULL) {
+    cloudflare_nimbus_2017_ = new ::zsearch::CTServerStatus;
   }
-  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.cloudfare_nimbus_2017)
-  return cloudfare_nimbus_2017_;
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.cloudflare_nimbus_2017)
+  return cloudflare_nimbus_2017_;
 }
-::zsearch::CTServerStatus* CTStatus::release_cloudfare_nimbus_2017() {
-  // @@protoc_insertion_point(field_release:zsearch.CTStatus.cloudfare_nimbus_2017)
+::zsearch::CTServerStatus* CTStatus::release_cloudflare_nimbus_2017() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.cloudflare_nimbus_2017)
   
-  ::zsearch::CTServerStatus* temp = cloudfare_nimbus_2017_;
-  cloudfare_nimbus_2017_ = NULL;
+  ::zsearch::CTServerStatus* temp = cloudflare_nimbus_2017_;
+  cloudflare_nimbus_2017_ = NULL;
   return temp;
 }
-void CTStatus::set_allocated_cloudfare_nimbus_2017(::zsearch::CTServerStatus* cloudfare_nimbus_2017) {
-  delete cloudfare_nimbus_2017_;
-  cloudfare_nimbus_2017_ = cloudfare_nimbus_2017;
-  if (cloudfare_nimbus_2017) {
+void CTStatus::set_allocated_cloudflare_nimbus_2017(::zsearch::CTServerStatus* cloudflare_nimbus_2017) {
+  delete cloudflare_nimbus_2017_;
+  cloudflare_nimbus_2017_ = cloudflare_nimbus_2017;
+  if (cloudflare_nimbus_2017) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.cloudfare_nimbus_2017)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.cloudflare_nimbus_2017)
 }
 
-// .zsearch.CTServerStatus cloudfare_nimbus_2018 = 61;
-bool CTStatus::has_cloudfare_nimbus_2018() const {
-  return this != internal_default_instance() && cloudfare_nimbus_2018_ != NULL;
+// .zsearch.CTServerStatus cloudflare_nimbus_2018 = 61;
+bool CTStatus::has_cloudflare_nimbus_2018() const {
+  return this != internal_default_instance() && cloudflare_nimbus_2018_ != NULL;
 }
-void CTStatus::clear_cloudfare_nimbus_2018() {
-  if (GetArenaNoVirtual() == NULL && cloudfare_nimbus_2018_ != NULL) delete cloudfare_nimbus_2018_;
-  cloudfare_nimbus_2018_ = NULL;
+void CTStatus::clear_cloudflare_nimbus_2018() {
+  if (GetArenaNoVirtual() == NULL && cloudflare_nimbus_2018_ != NULL) delete cloudflare_nimbus_2018_;
+  cloudflare_nimbus_2018_ = NULL;
 }
-const ::zsearch::CTServerStatus& CTStatus::cloudfare_nimbus_2018() const {
-  // @@protoc_insertion_point(field_get:zsearch.CTStatus.cloudfare_nimbus_2018)
-  return cloudfare_nimbus_2018_ != NULL ? *cloudfare_nimbus_2018_
+const ::zsearch::CTServerStatus& CTStatus::cloudflare_nimbus_2018() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.cloudflare_nimbus_2018)
+  return cloudflare_nimbus_2018_ != NULL ? *cloudflare_nimbus_2018_
                          : *::zsearch::CTServerStatus::internal_default_instance();
 }
-::zsearch::CTServerStatus* CTStatus::mutable_cloudfare_nimbus_2018() {
+::zsearch::CTServerStatus* CTStatus::mutable_cloudflare_nimbus_2018() {
   
-  if (cloudfare_nimbus_2018_ == NULL) {
-    cloudfare_nimbus_2018_ = new ::zsearch::CTServerStatus;
+  if (cloudflare_nimbus_2018_ == NULL) {
+    cloudflare_nimbus_2018_ = new ::zsearch::CTServerStatus;
   }
-  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.cloudfare_nimbus_2018)
-  return cloudfare_nimbus_2018_;
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.cloudflare_nimbus_2018)
+  return cloudflare_nimbus_2018_;
 }
-::zsearch::CTServerStatus* CTStatus::release_cloudfare_nimbus_2018() {
-  // @@protoc_insertion_point(field_release:zsearch.CTStatus.cloudfare_nimbus_2018)
+::zsearch::CTServerStatus* CTStatus::release_cloudflare_nimbus_2018() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.cloudflare_nimbus_2018)
   
-  ::zsearch::CTServerStatus* temp = cloudfare_nimbus_2018_;
-  cloudfare_nimbus_2018_ = NULL;
+  ::zsearch::CTServerStatus* temp = cloudflare_nimbus_2018_;
+  cloudflare_nimbus_2018_ = NULL;
   return temp;
 }
-void CTStatus::set_allocated_cloudfare_nimbus_2018(::zsearch::CTServerStatus* cloudfare_nimbus_2018) {
-  delete cloudfare_nimbus_2018_;
-  cloudfare_nimbus_2018_ = cloudfare_nimbus_2018;
-  if (cloudfare_nimbus_2018) {
+void CTStatus::set_allocated_cloudflare_nimbus_2018(::zsearch::CTServerStatus* cloudflare_nimbus_2018) {
+  delete cloudflare_nimbus_2018_;
+  cloudflare_nimbus_2018_ = cloudflare_nimbus_2018;
+  if (cloudflare_nimbus_2018) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.cloudfare_nimbus_2018)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.cloudflare_nimbus_2018)
 }
 
-// .zsearch.CTServerStatus cloudfare_nimbus_2019 = 62;
-bool CTStatus::has_cloudfare_nimbus_2019() const {
-  return this != internal_default_instance() && cloudfare_nimbus_2019_ != NULL;
+// .zsearch.CTServerStatus cloudflare_nimbus_2019 = 62;
+bool CTStatus::has_cloudflare_nimbus_2019() const {
+  return this != internal_default_instance() && cloudflare_nimbus_2019_ != NULL;
 }
-void CTStatus::clear_cloudfare_nimbus_2019() {
-  if (GetArenaNoVirtual() == NULL && cloudfare_nimbus_2019_ != NULL) delete cloudfare_nimbus_2019_;
-  cloudfare_nimbus_2019_ = NULL;
+void CTStatus::clear_cloudflare_nimbus_2019() {
+  if (GetArenaNoVirtual() == NULL && cloudflare_nimbus_2019_ != NULL) delete cloudflare_nimbus_2019_;
+  cloudflare_nimbus_2019_ = NULL;
 }
-const ::zsearch::CTServerStatus& CTStatus::cloudfare_nimbus_2019() const {
-  // @@protoc_insertion_point(field_get:zsearch.CTStatus.cloudfare_nimbus_2019)
-  return cloudfare_nimbus_2019_ != NULL ? *cloudfare_nimbus_2019_
+const ::zsearch::CTServerStatus& CTStatus::cloudflare_nimbus_2019() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.cloudflare_nimbus_2019)
+  return cloudflare_nimbus_2019_ != NULL ? *cloudflare_nimbus_2019_
                          : *::zsearch::CTServerStatus::internal_default_instance();
 }
-::zsearch::CTServerStatus* CTStatus::mutable_cloudfare_nimbus_2019() {
+::zsearch::CTServerStatus* CTStatus::mutable_cloudflare_nimbus_2019() {
   
-  if (cloudfare_nimbus_2019_ == NULL) {
-    cloudfare_nimbus_2019_ = new ::zsearch::CTServerStatus;
+  if (cloudflare_nimbus_2019_ == NULL) {
+    cloudflare_nimbus_2019_ = new ::zsearch::CTServerStatus;
   }
-  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.cloudfare_nimbus_2019)
-  return cloudfare_nimbus_2019_;
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.cloudflare_nimbus_2019)
+  return cloudflare_nimbus_2019_;
 }
-::zsearch::CTServerStatus* CTStatus::release_cloudfare_nimbus_2019() {
-  // @@protoc_insertion_point(field_release:zsearch.CTStatus.cloudfare_nimbus_2019)
+::zsearch::CTServerStatus* CTStatus::release_cloudflare_nimbus_2019() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.cloudflare_nimbus_2019)
   
-  ::zsearch::CTServerStatus* temp = cloudfare_nimbus_2019_;
-  cloudfare_nimbus_2019_ = NULL;
+  ::zsearch::CTServerStatus* temp = cloudflare_nimbus_2019_;
+  cloudflare_nimbus_2019_ = NULL;
   return temp;
 }
-void CTStatus::set_allocated_cloudfare_nimbus_2019(::zsearch::CTServerStatus* cloudfare_nimbus_2019) {
-  delete cloudfare_nimbus_2019_;
-  cloudfare_nimbus_2019_ = cloudfare_nimbus_2019;
-  if (cloudfare_nimbus_2019) {
+void CTStatus::set_allocated_cloudflare_nimbus_2019(::zsearch::CTServerStatus* cloudflare_nimbus_2019) {
+  delete cloudflare_nimbus_2019_;
+  cloudflare_nimbus_2019_ = cloudflare_nimbus_2019;
+  if (cloudflare_nimbus_2019) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.cloudfare_nimbus_2019)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.cloudflare_nimbus_2019)
 }
 
-// .zsearch.CTServerStatus cloudfare_nimbus_2020 = 63;
-bool CTStatus::has_cloudfare_nimbus_2020() const {
-  return this != internal_default_instance() && cloudfare_nimbus_2020_ != NULL;
+// .zsearch.CTServerStatus cloudflare_nimbus_2020 = 63;
+bool CTStatus::has_cloudflare_nimbus_2020() const {
+  return this != internal_default_instance() && cloudflare_nimbus_2020_ != NULL;
 }
-void CTStatus::clear_cloudfare_nimbus_2020() {
-  if (GetArenaNoVirtual() == NULL && cloudfare_nimbus_2020_ != NULL) delete cloudfare_nimbus_2020_;
-  cloudfare_nimbus_2020_ = NULL;
+void CTStatus::clear_cloudflare_nimbus_2020() {
+  if (GetArenaNoVirtual() == NULL && cloudflare_nimbus_2020_ != NULL) delete cloudflare_nimbus_2020_;
+  cloudflare_nimbus_2020_ = NULL;
 }
-const ::zsearch::CTServerStatus& CTStatus::cloudfare_nimbus_2020() const {
-  // @@protoc_insertion_point(field_get:zsearch.CTStatus.cloudfare_nimbus_2020)
-  return cloudfare_nimbus_2020_ != NULL ? *cloudfare_nimbus_2020_
+const ::zsearch::CTServerStatus& CTStatus::cloudflare_nimbus_2020() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.cloudflare_nimbus_2020)
+  return cloudflare_nimbus_2020_ != NULL ? *cloudflare_nimbus_2020_
                          : *::zsearch::CTServerStatus::internal_default_instance();
 }
-::zsearch::CTServerStatus* CTStatus::mutable_cloudfare_nimbus_2020() {
+::zsearch::CTServerStatus* CTStatus::mutable_cloudflare_nimbus_2020() {
   
-  if (cloudfare_nimbus_2020_ == NULL) {
-    cloudfare_nimbus_2020_ = new ::zsearch::CTServerStatus;
+  if (cloudflare_nimbus_2020_ == NULL) {
+    cloudflare_nimbus_2020_ = new ::zsearch::CTServerStatus;
   }
-  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.cloudfare_nimbus_2020)
-  return cloudfare_nimbus_2020_;
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.cloudflare_nimbus_2020)
+  return cloudflare_nimbus_2020_;
 }
-::zsearch::CTServerStatus* CTStatus::release_cloudfare_nimbus_2020() {
-  // @@protoc_insertion_point(field_release:zsearch.CTStatus.cloudfare_nimbus_2020)
+::zsearch::CTServerStatus* CTStatus::release_cloudflare_nimbus_2020() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.cloudflare_nimbus_2020)
   
-  ::zsearch::CTServerStatus* temp = cloudfare_nimbus_2020_;
-  cloudfare_nimbus_2020_ = NULL;
+  ::zsearch::CTServerStatus* temp = cloudflare_nimbus_2020_;
+  cloudflare_nimbus_2020_ = NULL;
   return temp;
 }
-void CTStatus::set_allocated_cloudfare_nimbus_2020(::zsearch::CTServerStatus* cloudfare_nimbus_2020) {
-  delete cloudfare_nimbus_2020_;
-  cloudfare_nimbus_2020_ = cloudfare_nimbus_2020;
-  if (cloudfare_nimbus_2020) {
+void CTStatus::set_allocated_cloudflare_nimbus_2020(::zsearch::CTServerStatus* cloudflare_nimbus_2020) {
+  delete cloudflare_nimbus_2020_;
+  cloudflare_nimbus_2020_ = cloudflare_nimbus_2020;
+  if (cloudflare_nimbus_2020) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.cloudfare_nimbus_2020)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.cloudflare_nimbus_2020)
 }
 
-// .zsearch.CTServerStatus cloudfare_nimbus_2021 = 64;
-bool CTStatus::has_cloudfare_nimbus_2021() const {
-  return this != internal_default_instance() && cloudfare_nimbus_2021_ != NULL;
+// .zsearch.CTServerStatus cloudflare_nimbus_2021 = 64;
+bool CTStatus::has_cloudflare_nimbus_2021() const {
+  return this != internal_default_instance() && cloudflare_nimbus_2021_ != NULL;
 }
-void CTStatus::clear_cloudfare_nimbus_2021() {
-  if (GetArenaNoVirtual() == NULL && cloudfare_nimbus_2021_ != NULL) delete cloudfare_nimbus_2021_;
-  cloudfare_nimbus_2021_ = NULL;
+void CTStatus::clear_cloudflare_nimbus_2021() {
+  if (GetArenaNoVirtual() == NULL && cloudflare_nimbus_2021_ != NULL) delete cloudflare_nimbus_2021_;
+  cloudflare_nimbus_2021_ = NULL;
 }
-const ::zsearch::CTServerStatus& CTStatus::cloudfare_nimbus_2021() const {
-  // @@protoc_insertion_point(field_get:zsearch.CTStatus.cloudfare_nimbus_2021)
-  return cloudfare_nimbus_2021_ != NULL ? *cloudfare_nimbus_2021_
+const ::zsearch::CTServerStatus& CTStatus::cloudflare_nimbus_2021() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.cloudflare_nimbus_2021)
+  return cloudflare_nimbus_2021_ != NULL ? *cloudflare_nimbus_2021_
                          : *::zsearch::CTServerStatus::internal_default_instance();
 }
-::zsearch::CTServerStatus* CTStatus::mutable_cloudfare_nimbus_2021() {
+::zsearch::CTServerStatus* CTStatus::mutable_cloudflare_nimbus_2021() {
   
-  if (cloudfare_nimbus_2021_ == NULL) {
-    cloudfare_nimbus_2021_ = new ::zsearch::CTServerStatus;
+  if (cloudflare_nimbus_2021_ == NULL) {
+    cloudflare_nimbus_2021_ = new ::zsearch::CTServerStatus;
   }
-  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.cloudfare_nimbus_2021)
-  return cloudfare_nimbus_2021_;
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.cloudflare_nimbus_2021)
+  return cloudflare_nimbus_2021_;
 }
-::zsearch::CTServerStatus* CTStatus::release_cloudfare_nimbus_2021() {
-  // @@protoc_insertion_point(field_release:zsearch.CTStatus.cloudfare_nimbus_2021)
+::zsearch::CTServerStatus* CTStatus::release_cloudflare_nimbus_2021() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.cloudflare_nimbus_2021)
   
-  ::zsearch::CTServerStatus* temp = cloudfare_nimbus_2021_;
-  cloudfare_nimbus_2021_ = NULL;
+  ::zsearch::CTServerStatus* temp = cloudflare_nimbus_2021_;
+  cloudflare_nimbus_2021_ = NULL;
   return temp;
 }
-void CTStatus::set_allocated_cloudfare_nimbus_2021(::zsearch::CTServerStatus* cloudfare_nimbus_2021) {
-  delete cloudfare_nimbus_2021_;
-  cloudfare_nimbus_2021_ = cloudfare_nimbus_2021;
-  if (cloudfare_nimbus_2021) {
+void CTStatus::set_allocated_cloudflare_nimbus_2021(::zsearch::CTServerStatus* cloudflare_nimbus_2021) {
+  delete cloudflare_nimbus_2021_;
+  cloudflare_nimbus_2021_ = cloudflare_nimbus_2021;
+  if (cloudflare_nimbus_2021) {
     
   } else {
     
   }
-  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.cloudfare_nimbus_2021)
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.cloudflare_nimbus_2021)
 }
 
 // .zsearch.CTServerStatus digicert_ct1 = 20;
@@ -4929,6 +4930,84 @@ void CTStatus::set_allocated_wosign_ct(::zsearch::CTServerStatus* wosign_ct) {
   // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.wosign_ct)
 }
 
+// .zsearch.CTServerStatus wotrus_ctlog = 47;
+bool CTStatus::has_wotrus_ctlog() const {
+  return this != internal_default_instance() && wotrus_ctlog_ != NULL;
+}
+void CTStatus::clear_wotrus_ctlog() {
+  if (GetArenaNoVirtual() == NULL && wotrus_ctlog_ != NULL) delete wotrus_ctlog_;
+  wotrus_ctlog_ = NULL;
+}
+const ::zsearch::CTServerStatus& CTStatus::wotrus_ctlog() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.wotrus_ctlog)
+  return wotrus_ctlog_ != NULL ? *wotrus_ctlog_
+                         : *::zsearch::CTServerStatus::internal_default_instance();
+}
+::zsearch::CTServerStatus* CTStatus::mutable_wotrus_ctlog() {
+  
+  if (wotrus_ctlog_ == NULL) {
+    wotrus_ctlog_ = new ::zsearch::CTServerStatus;
+  }
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.wotrus_ctlog)
+  return wotrus_ctlog_;
+}
+::zsearch::CTServerStatus* CTStatus::release_wotrus_ctlog() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.wotrus_ctlog)
+  
+  ::zsearch::CTServerStatus* temp = wotrus_ctlog_;
+  wotrus_ctlog_ = NULL;
+  return temp;
+}
+void CTStatus::set_allocated_wotrus_ctlog(::zsearch::CTServerStatus* wotrus_ctlog) {
+  delete wotrus_ctlog_;
+  wotrus_ctlog_ = wotrus_ctlog;
+  if (wotrus_ctlog) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.wotrus_ctlog)
+}
+
+// .zsearch.CTServerStatus wotrus_ctlog3 = 48;
+bool CTStatus::has_wotrus_ctlog3() const {
+  return this != internal_default_instance() && wotrus_ctlog3_ != NULL;
+}
+void CTStatus::clear_wotrus_ctlog3() {
+  if (GetArenaNoVirtual() == NULL && wotrus_ctlog3_ != NULL) delete wotrus_ctlog3_;
+  wotrus_ctlog3_ = NULL;
+}
+const ::zsearch::CTServerStatus& CTStatus::wotrus_ctlog3() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.wotrus_ctlog3)
+  return wotrus_ctlog3_ != NULL ? *wotrus_ctlog3_
+                         : *::zsearch::CTServerStatus::internal_default_instance();
+}
+::zsearch::CTServerStatus* CTStatus::mutable_wotrus_ctlog3() {
+  
+  if (wotrus_ctlog3_ == NULL) {
+    wotrus_ctlog3_ = new ::zsearch::CTServerStatus;
+  }
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.wotrus_ctlog3)
+  return wotrus_ctlog3_;
+}
+::zsearch::CTServerStatus* CTStatus::release_wotrus_ctlog3() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.wotrus_ctlog3)
+  
+  ::zsearch::CTServerStatus* temp = wotrus_ctlog3_;
+  wotrus_ctlog3_ = NULL;
+  return temp;
+}
+void CTStatus::set_allocated_wotrus_ctlog3(::zsearch::CTServerStatus* wotrus_ctlog3) {
+  delete wotrus_ctlog3_;
+  wotrus_ctlog3_ = wotrus_ctlog3;
+  if (wotrus_ctlog3) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.wotrus_ctlog3)
+}
+
 // .zsearch.CTServerStatus gdca_ct = 28;
 bool CTStatus::has_gdca_ct() const {
   return this != internal_default_instance() && gdca_ct_ != NULL;
@@ -5434,84 +5513,6 @@ void CTStatus::set_allocated_behind_the_sofa(::zsearch::CTServerStatus* behind_t
     
   }
   // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.behind_the_sofa)
-}
-
-// .zsearch.CTServerStatus wotrus_ctlog = 47;
-bool CTStatus::has_wotrus_ctlog() const {
-  return this != internal_default_instance() && wotrus_ctlog_ != NULL;
-}
-void CTStatus::clear_wotrus_ctlog() {
-  if (GetArenaNoVirtual() == NULL && wotrus_ctlog_ != NULL) delete wotrus_ctlog_;
-  wotrus_ctlog_ = NULL;
-}
-const ::zsearch::CTServerStatus& CTStatus::wotrus_ctlog() const {
-  // @@protoc_insertion_point(field_get:zsearch.CTStatus.wotrus_ctlog)
-  return wotrus_ctlog_ != NULL ? *wotrus_ctlog_
-                         : *::zsearch::CTServerStatus::internal_default_instance();
-}
-::zsearch::CTServerStatus* CTStatus::mutable_wotrus_ctlog() {
-  
-  if (wotrus_ctlog_ == NULL) {
-    wotrus_ctlog_ = new ::zsearch::CTServerStatus;
-  }
-  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.wotrus_ctlog)
-  return wotrus_ctlog_;
-}
-::zsearch::CTServerStatus* CTStatus::release_wotrus_ctlog() {
-  // @@protoc_insertion_point(field_release:zsearch.CTStatus.wotrus_ctlog)
-  
-  ::zsearch::CTServerStatus* temp = wotrus_ctlog_;
-  wotrus_ctlog_ = NULL;
-  return temp;
-}
-void CTStatus::set_allocated_wotrus_ctlog(::zsearch::CTServerStatus* wotrus_ctlog) {
-  delete wotrus_ctlog_;
-  wotrus_ctlog_ = wotrus_ctlog;
-  if (wotrus_ctlog) {
-    
-  } else {
-    
-  }
-  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.wotrus_ctlog)
-}
-
-// .zsearch.CTServerStatus wotrus_ctlog3 = 48;
-bool CTStatus::has_wotrus_ctlog3() const {
-  return this != internal_default_instance() && wotrus_ctlog3_ != NULL;
-}
-void CTStatus::clear_wotrus_ctlog3() {
-  if (GetArenaNoVirtual() == NULL && wotrus_ctlog3_ != NULL) delete wotrus_ctlog3_;
-  wotrus_ctlog3_ = NULL;
-}
-const ::zsearch::CTServerStatus& CTStatus::wotrus_ctlog3() const {
-  // @@protoc_insertion_point(field_get:zsearch.CTStatus.wotrus_ctlog3)
-  return wotrus_ctlog3_ != NULL ? *wotrus_ctlog3_
-                         : *::zsearch::CTServerStatus::internal_default_instance();
-}
-::zsearch::CTServerStatus* CTStatus::mutable_wotrus_ctlog3() {
-  
-  if (wotrus_ctlog3_ == NULL) {
-    wotrus_ctlog3_ = new ::zsearch::CTServerStatus;
-  }
-  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.wotrus_ctlog3)
-  return wotrus_ctlog3_;
-}
-::zsearch::CTServerStatus* CTStatus::release_wotrus_ctlog3() {
-  // @@protoc_insertion_point(field_release:zsearch.CTStatus.wotrus_ctlog3)
-  
-  ::zsearch::CTServerStatus* temp = wotrus_ctlog3_;
-  wotrus_ctlog3_ = NULL;
-  return temp;
-}
-void CTStatus::set_allocated_wotrus_ctlog3(::zsearch::CTServerStatus* wotrus_ctlog3) {
-  delete wotrus_ctlog3_;
-  wotrus_ctlog3_ = wotrus_ctlog3;
-  if (wotrus_ctlog3) {
-    
-  } else {
-    
-  }
-  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.wotrus_ctlog3)
 }
 
 // .zsearch.CTServerStatus certificatetransparency_cn_ct = 38;
