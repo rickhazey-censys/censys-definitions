@@ -61,6 +61,16 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, google_icarus_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, google_skydiver_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, google_daedalus_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, google_argon_2017_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, google_argon_2018_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, google_argon_2019_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, google_argon_2020_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, google_argon_2021_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, cloudflare_nimbus_2017_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, cloudflare_nimbus_2018_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, cloudflare_nimbus_2019_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, cloudflare_nimbus_2020_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, cloudflare_nimbus_2021_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, digicert_ct1_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, digicert_ct2_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, izenpe_com_ct_),
@@ -74,22 +84,22 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, comodo_sabre_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, wosign_ctlog_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, wosign_ct_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, wotrus_ctlog_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, wotrus_ctlog3_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, gdca_ct_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, gdca_ctlog_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, gdca_log_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, gdca_log2_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, venafi_api_ctlog_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, venafi_api_ctlog_gen2_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, nordu_ct_plausible_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, letsencrypt_ct_clicky_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, cnnic_ctserver_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, startssl_ct_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, certly_log_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, sheca_ct_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, behind_the_sofa_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, certificatetransparency_cn_ct_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, letsencrypt_ct_clicky_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, google_argon2017_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, google_argon2018_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, google_argon2019_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, google_argon2020_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, google_argon2021_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SCT, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -102,7 +112,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
 static const ::google::protobuf::internal::MigrationSchema schemas[] = {
   { 0, -1, sizeof(CTServerStatus)},
   { 11, -1, sizeof(CTStatus)},
-  { 54, -1, sizeof(SCT)},
+  { 64, -1, sizeof(SCT)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -170,6 +180,26 @@ void TableStruct::InitDefaultsImpl() {
       ::zsearch::CTServerStatus::internal_default_instance());
   _CTStatus_default_instance_.get_mutable()->google_daedalus_ = const_cast< ::zsearch::CTServerStatus*>(
       ::zsearch::CTServerStatus::internal_default_instance());
+  _CTStatus_default_instance_.get_mutable()->google_argon_2017_ = const_cast< ::zsearch::CTServerStatus*>(
+      ::zsearch::CTServerStatus::internal_default_instance());
+  _CTStatus_default_instance_.get_mutable()->google_argon_2018_ = const_cast< ::zsearch::CTServerStatus*>(
+      ::zsearch::CTServerStatus::internal_default_instance());
+  _CTStatus_default_instance_.get_mutable()->google_argon_2019_ = const_cast< ::zsearch::CTServerStatus*>(
+      ::zsearch::CTServerStatus::internal_default_instance());
+  _CTStatus_default_instance_.get_mutable()->google_argon_2020_ = const_cast< ::zsearch::CTServerStatus*>(
+      ::zsearch::CTServerStatus::internal_default_instance());
+  _CTStatus_default_instance_.get_mutable()->google_argon_2021_ = const_cast< ::zsearch::CTServerStatus*>(
+      ::zsearch::CTServerStatus::internal_default_instance());
+  _CTStatus_default_instance_.get_mutable()->cloudflare_nimbus_2017_ = const_cast< ::zsearch::CTServerStatus*>(
+      ::zsearch::CTServerStatus::internal_default_instance());
+  _CTStatus_default_instance_.get_mutable()->cloudflare_nimbus_2018_ = const_cast< ::zsearch::CTServerStatus*>(
+      ::zsearch::CTServerStatus::internal_default_instance());
+  _CTStatus_default_instance_.get_mutable()->cloudflare_nimbus_2019_ = const_cast< ::zsearch::CTServerStatus*>(
+      ::zsearch::CTServerStatus::internal_default_instance());
+  _CTStatus_default_instance_.get_mutable()->cloudflare_nimbus_2020_ = const_cast< ::zsearch::CTServerStatus*>(
+      ::zsearch::CTServerStatus::internal_default_instance());
+  _CTStatus_default_instance_.get_mutable()->cloudflare_nimbus_2021_ = const_cast< ::zsearch::CTServerStatus*>(
+      ::zsearch::CTServerStatus::internal_default_instance());
   _CTStatus_default_instance_.get_mutable()->digicert_ct1_ = const_cast< ::zsearch::CTServerStatus*>(
       ::zsearch::CTServerStatus::internal_default_instance());
   _CTStatus_default_instance_.get_mutable()->digicert_ct2_ = const_cast< ::zsearch::CTServerStatus*>(
@@ -196,15 +226,25 @@ void TableStruct::InitDefaultsImpl() {
       ::zsearch::CTServerStatus::internal_default_instance());
   _CTStatus_default_instance_.get_mutable()->wosign_ct_ = const_cast< ::zsearch::CTServerStatus*>(
       ::zsearch::CTServerStatus::internal_default_instance());
+  _CTStatus_default_instance_.get_mutable()->wotrus_ctlog_ = const_cast< ::zsearch::CTServerStatus*>(
+      ::zsearch::CTServerStatus::internal_default_instance());
+  _CTStatus_default_instance_.get_mutable()->wotrus_ctlog3_ = const_cast< ::zsearch::CTServerStatus*>(
+      ::zsearch::CTServerStatus::internal_default_instance());
   _CTStatus_default_instance_.get_mutable()->gdca_ct_ = const_cast< ::zsearch::CTServerStatus*>(
       ::zsearch::CTServerStatus::internal_default_instance());
   _CTStatus_default_instance_.get_mutable()->gdca_ctlog_ = const_cast< ::zsearch::CTServerStatus*>(
+      ::zsearch::CTServerStatus::internal_default_instance());
+  _CTStatus_default_instance_.get_mutable()->gdca_log_ = const_cast< ::zsearch::CTServerStatus*>(
+      ::zsearch::CTServerStatus::internal_default_instance());
+  _CTStatus_default_instance_.get_mutable()->gdca_log2_ = const_cast< ::zsearch::CTServerStatus*>(
       ::zsearch::CTServerStatus::internal_default_instance());
   _CTStatus_default_instance_.get_mutable()->venafi_api_ctlog_ = const_cast< ::zsearch::CTServerStatus*>(
       ::zsearch::CTServerStatus::internal_default_instance());
   _CTStatus_default_instance_.get_mutable()->venafi_api_ctlog_gen2_ = const_cast< ::zsearch::CTServerStatus*>(
       ::zsearch::CTServerStatus::internal_default_instance());
   _CTStatus_default_instance_.get_mutable()->nordu_ct_plausible_ = const_cast< ::zsearch::CTServerStatus*>(
+      ::zsearch::CTServerStatus::internal_default_instance());
+  _CTStatus_default_instance_.get_mutable()->letsencrypt_ct_clicky_ = const_cast< ::zsearch::CTServerStatus*>(
       ::zsearch::CTServerStatus::internal_default_instance());
   _CTStatus_default_instance_.get_mutable()->cnnic_ctserver_ = const_cast< ::zsearch::CTServerStatus*>(
       ::zsearch::CTServerStatus::internal_default_instance());
@@ -214,19 +254,9 @@ void TableStruct::InitDefaultsImpl() {
       ::zsearch::CTServerStatus::internal_default_instance());
   _CTStatus_default_instance_.get_mutable()->sheca_ct_ = const_cast< ::zsearch::CTServerStatus*>(
       ::zsearch::CTServerStatus::internal_default_instance());
+  _CTStatus_default_instance_.get_mutable()->behind_the_sofa_ = const_cast< ::zsearch::CTServerStatus*>(
+      ::zsearch::CTServerStatus::internal_default_instance());
   _CTStatus_default_instance_.get_mutable()->certificatetransparency_cn_ct_ = const_cast< ::zsearch::CTServerStatus*>(
-      ::zsearch::CTServerStatus::internal_default_instance());
-  _CTStatus_default_instance_.get_mutable()->letsencrypt_ct_clicky_ = const_cast< ::zsearch::CTServerStatus*>(
-      ::zsearch::CTServerStatus::internal_default_instance());
-  _CTStatus_default_instance_.get_mutable()->google_argon2017_ = const_cast< ::zsearch::CTServerStatus*>(
-      ::zsearch::CTServerStatus::internal_default_instance());
-  _CTStatus_default_instance_.get_mutable()->google_argon2018_ = const_cast< ::zsearch::CTServerStatus*>(
-      ::zsearch::CTServerStatus::internal_default_instance());
-  _CTStatus_default_instance_.get_mutable()->google_argon2019_ = const_cast< ::zsearch::CTServerStatus*>(
-      ::zsearch::CTServerStatus::internal_default_instance());
-  _CTStatus_default_instance_.get_mutable()->google_argon2020_ = const_cast< ::zsearch::CTServerStatus*>(
-      ::zsearch::CTServerStatus::internal_default_instance());
-  _CTStatus_default_instance_.get_mutable()->google_argon2021_ = const_cast< ::zsearch::CTServerStatus*>(
       ::zsearch::CTServerStatus::internal_default_instance());
   _SCT_default_instance_.get_mutable()->status_ = const_cast< ::zsearch::CTServerStatus*>(
       ::zsearch::CTServerStatus::internal_default_instance());
@@ -244,7 +274,7 @@ void AddDescriptorsImpl() {
       "ull_timestamp\030\003 \001(\003\022\026\n\016push_timestamp\030\004 "
       "\001(\003\022*\n\013push_status\030\005 \001(\0162\025.zsearch.CTPus"
       "hStatus\022\013\n\003sct\030\006 \001(\014\022\022\n\npush_error\030\007 \001(\t"
-      "\"\206\017\n\010CTStatus\022+\n\ncensys_dev\030\001 \001(\0132\027.zsea"
+      "\"\220\023\n\010CTStatus\022+\n\ncensys_dev\030\001 \001(\0132\027.zsea"
       "rch.CTServerStatus\022\'\n\006censys\030\002 \001(\0132\027.zse"
       "arch.CTServerStatus\022/\n\016google_aviator\030\n "
       "\001(\0132\027.zsearch.CTServerStatus\022-\n\014google_p"
@@ -256,85 +286,107 @@ void AddDescriptorsImpl() {
       "carus\030\017 \001(\0132\027.zsearch.CTServerStatus\0220\n\017"
       "google_skydiver\030\020 \001(\0132\027.zsearch.CTServer"
       "Status\0220\n\017google_daedalus\030\021 \001(\0132\027.zsearc"
-      "h.CTServerStatus\022-\n\014digicert_ct1\030\024 \001(\0132\027"
-      ".zsearch.CTServerStatus\022-\n\014digicert_ct2\030"
-      "( \001(\0132\027.zsearch.CTServerStatus\022.\n\rizenpe"
-      "_com_ct\030\025 \001(\0132\027.zsearch.CTServerStatus\022."
-      "\n\rizenpe_eus_ct\030\026 \001(\0132\027.zsearch.CTServer"
-      "Status\022/\n\016symantec_ws_ct\030\027 \001(\0132\027.zsearch"
-      ".CTServerStatus\0221\n\020symantec_ws_vega\030\030 \001("
-      "\0132\027.zsearch.CTServerStatus\0223\n\022symantec_w"
-      "s_sirius\030% \001(\0132\027.zsearch.CTServerStatus\022"
-      "2\n\021symantec_ws_deneb\030  \001(\0132\027.zsearch.CTS"
-      "erverStatus\022,\n\013comodo_dodo\030\" \001(\0132\027.zsear"
-      "ch.CTServerStatus\022/\n\016comodo_mammoth\030# \001("
-      "\0132\027.zsearch.CTServerStatus\022-\n\014comodo_sab"
-      "re\030) \001(\0132\027.zsearch.CTServerStatus\022-\n\014wos"
-      "ign_ctlog\030\031 \001(\0132\027.zsearch.CTServerStatus"
-      "\022*\n\twosign_ct\030\032 \001(\0132\027.zsearch.CTServerSt"
+      "h.CTServerStatus\0222\n\021google_argon_2017\0302 "
+      "\001(\0132\027.zsearch.CTServerStatus\0222\n\021google_a"
+      "rgon_2018\0303 \001(\0132\027.zsearch.CTServerStatus"
+      "\0222\n\021google_argon_2019\0304 \001(\0132\027.zsearch.CT"
+      "ServerStatus\0222\n\021google_argon_2020\0305 \001(\0132"
+      "\027.zsearch.CTServerStatus\0222\n\021google_argon"
+      "_2021\0306 \001(\0132\027.zsearch.CTServerStatus\0227\n\026"
+      "cloudflare_nimbus_2017\030< \001(\0132\027.zsearch.C"
+      "TServerStatus\0227\n\026cloudflare_nimbus_2018\030"
+      "= \001(\0132\027.zsearch.CTServerStatus\0227\n\026cloudf"
+      "lare_nimbus_2019\030> \001(\0132\027.zsearch.CTServe"
+      "rStatus\0227\n\026cloudflare_nimbus_2020\030\? \001(\0132"
+      "\027.zsearch.CTServerStatus\0227\n\026cloudflare_n"
+      "imbus_2021\030@ \001(\0132\027.zsearch.CTServerStatu"
+      "s\022-\n\014digicert_ct1\030\024 \001(\0132\027.zsearch.CTServ"
+      "erStatus\022-\n\014digicert_ct2\030( \001(\0132\027.zsearch"
+      ".CTServerStatus\022.\n\rizenpe_com_ct\030\025 \001(\0132\027"
+      ".zsearch.CTServerStatus\022.\n\rizenpe_eus_ct"
+      "\030\026 \001(\0132\027.zsearch.CTServerStatus\022/\n\016syman"
+      "tec_ws_ct\030\027 \001(\0132\027.zsearch.CTServerStatus"
+      "\0221\n\020symantec_ws_vega\030\030 \001(\0132\027.zsearch.CTS"
+      "erverStatus\0223\n\022symantec_ws_sirius\030% \001(\0132"
+      "\027.zsearch.CTServerStatus\0222\n\021symantec_ws_"
+      "deneb\030  \001(\0132\027.zsearch.CTServerStatus\022,\n\013"
+      "comodo_dodo\030\" \001(\0132\027.zsearch.CTServerStat"
+      "us\022/\n\016comodo_mammoth\030# \001(\0132\027.zsearch.CTS"
+      "erverStatus\022-\n\014comodo_sabre\030) \001(\0132\027.zsea"
+      "rch.CTServerStatus\022-\n\014wosign_ctlog\030\031 \001(\013"
+      "2\027.zsearch.CTServerStatus\022*\n\twosign_ct\030\032"
+      " \001(\0132\027.zsearch.CTServerStatus\022-\n\014wotrus_"
+      "ctlog\030/ \001(\0132\027.zsearch.CTServerStatus\022.\n\r"
+      "wotrus_ctlog3\0300 \001(\0132\027.zsearch.CTServerSt"
       "atus\022(\n\007gdca_ct\030\034 \001(\0132\027.zsearch.CTServer"
       "Status\022+\n\ngdca_ctlog\030$ \001(\0132\027.zsearch.CTS"
-      "erverStatus\0221\n\020venafi_api_ctlog\030\037 \001(\0132\027."
-      "zsearch.CTServerStatus\0226\n\025venafi_api_ctl"
-      "og_gen2\030\' \001(\0132\027.zsearch.CTServerStatus\0223"
-      "\n\022nordu_ct_plausible\030! \001(\0132\027.zsearch.CTS"
-      "erverStatus\022/\n\016cnnic_ctserver\030\033 \001(\0132\027.zs"
-      "earch.CTServerStatus\022,\n\013startssl_ct\030\035 \001("
-      "\0132\027.zsearch.CTServerStatus\022+\n\ncertly_log"
-      "\030\036 \001(\0132\027.zsearch.CTServerStatus\022)\n\010sheca"
-      "_ct\030* \001(\0132\027.zsearch.CTServerStatus\022>\n\035ce"
-      "rtificatetransparency_cn_ct\030& \001(\0132\027.zsea"
+      "erverStatus\022)\n\010gdca_log\030- \001(\0132\027.zsearch."
+      "CTServerStatus\022*\n\tgdca_log2\030. \001(\0132\027.zsea"
+      "rch.CTServerStatus\0221\n\020venafi_api_ctlog\030\037"
+      " \001(\0132\027.zsearch.CTServerStatus\0226\n\025venafi_"
+      "api_ctlog_gen2\030\' \001(\0132\027.zsearch.CTServerS"
+      "tatus\0223\n\022nordu_ct_plausible\030! \001(\0132\027.zsea"
       "rch.CTServerStatus\0226\n\025letsencrypt_ct_cli"
-      "cky\030+ \001(\0132\027.zsearch.CTServerStatus\0221\n\020go"
-      "ogle_argon2017\0302 \001(\0132\027.zsearch.CTServerS"
-      "tatus\0221\n\020google_argon2018\0303 \001(\0132\027.zsearc"
-      "h.CTServerStatus\0221\n\020google_argon2019\0304 \001"
-      "(\0132\027.zsearch.CTServerStatus\0221\n\020google_ar"
-      "gon2020\0305 \001(\0132\027.zsearch.CTServerStatus\0221"
-      "\n\020google_argon2021\0306 \001(\0132\027.zsearch.CTSer"
-      "verStatus\"c\n\003SCT\022\020\n\010sha256fp\030\001 \001(\014\022!\n\006se"
-      "rver\030\002 \001(\0162\021.zsearch.CTServer\022\'\n\006status\030"
-      "\003 \001(\0132\027.zsearch.CTServerStatus*\353\001\n\014CTPus"
-      "hStatus\022\033\n\027CT_PUSH_STATUS_RESERVED\020\000\022\032\n\026"
-      "CT_PUSH_STATUS_UNKNOWN\020\001\022\032\n\026CT_PUSH_STAT"
-      "US_SUCCESS\020\002\022 \n\034CT_PUSH_STATUS_UNKNOWN_E"
-      "RROR\020\003\022\037\n\033CT_PUSH_STATUS_INVALID_ROOT\020\004\022"
-      "!\n\035CT_PUSH_STATUS_ALREADY_EXISTS\020\005\022 \n\034CT"
-      "_PUSH_STATUS_WILL_NOT_PUSH\020\006*\314\t\n\010CTServe"
-      "r\022\026\n\022CT_SERVER_RESERVED\020\000\022\037\n\033CT_SERVER_C"
-      "ENSYS_PRODUCTION\020\001\022 \n\034CT_SERVER_CENSYS_D"
-      "EVELOPMENT\020\002\022\032\n\026CT_SERVER_GOOGLE_PILOT\020\013"
-      "\022\036\n\032CT_SERVER_GOOGLE_ROCKETEER\020\014\022\037\n\033CT_S"
-      "ERVER_GOOGLE_SUBMARINER\020\r\022\035\n\031CT_SERVER_G"
-      "OOGLE_TESTTUBE\020\016\022\033\n\027CT_SERVER_GOOGLE_ICA"
-      "RUS\020\017\022\035\n\031CT_SERVER_GOOGLE_SKYDIVER\020\020\022\035\n\031"
-      "CT_SERVER_GOOGLE_DAEDALUS\020\021\022\034\n\030CT_SERVER"
-      "_GOOGLE_AVIATOR\020\n\022\036\n\032CT_SERVER_GOOGLE_AR"
-      "GON2017\0202\022\036\n\032CT_SERVER_GOOGLE_ARGON2018\020"
-      "3\022\036\n\032CT_SERVER_GOOGLE_ARGON2019\0204\022\036\n\032CT_"
-      "SERVER_GOOGLE_ARGON2020\0205\022\036\n\032CT_SERVER_G"
-      "OOGLE_ARGON2021\0206\022\034\n\030CT_SERVER_SYMANTEC_"
-      "WS_CT\020\027\022\036\n\032CT_SERVER_SYMANTEC_WS_VEGA\020\030\022"
-      "\037\n\033CT_SERVER_SYMANTEC_WS_DENEB\020 \022 \n\034CT_S"
-      "ERVER_SYMANTEC_WS_SIRIUS\020%\022\031\n\025CT_SERVER_"
-      "COMODO_DODO\020#\022\034\n\030CT_SERVER_COMODO_MAMMOT"
-      "H\020$\022\032\n\026CT_SERVER_COMODO_SABRE\020)\022\032\n\026CT_SE"
-      "RVER_WOSIGN_CTLOG\020\031\022\027\n\023CT_SERVER_WOSIGN_"
-      "CT\020\032\022\036\n\032CT_SERVER_VENAFI_API_CTLOG\020\037\022#\n\037"
-      "CT_SERVER_VENAFI_API_CTLOG_GEN2\020\'\022\025\n\021CT_"
-      "SERVER_GDCA_CT\020\034\022\030\n\024CT_SERVER_GDCA_CTLOG"
-      "\020\"\022\033\n\027CT_SERVER_IZENPE_COM_CT\020\025\022\033\n\027CT_SE"
-      "RVER_IZENPE_EUS_CT\020\026\022\032\n\026CT_SERVER_DIGICE"
-      "RT_CT1\020\024\022\032\n\026CT_SERVER_DIGICERT_CT2\020(\022\034\n\030"
-      "CT_SERVER_CNNIC_CTSERVER\020\033\022\031\n\025CT_SERVER_"
-      "STARTSSL_CT\020\035\022\030\n\024CT_SERVER_CERTLY_LOG\020\036\022"
-      " \n\034CT_SERVER_NORDU_CT_PLAUSIBLE\020!\022+\n\'CT_"
-      "SERVER_CERTIFICATETRANSPARENCY_CN_CT\020&\022\026"
-      "\n\022CT_SERVER_SHECA_CT\020*\022#\n\037CT_SERVER_LETS"
-      "ENCRYPT_CT_CLICKY\020,b\006proto3"
+      "cky\030+ \001(\0132\027.zsearch.CTServerStatus\022/\n\016cn"
+      "nic_ctserver\030\033 \001(\0132\027.zsearch.CTServerSta"
+      "tus\022,\n\013startssl_ct\030\035 \001(\0132\027.zsearch.CTSer"
+      "verStatus\022+\n\ncertly_log\030\036 \001(\0132\027.zsearch."
+      "CTServerStatus\022)\n\010sheca_ct\030* \001(\0132\027.zsear"
+      "ch.CTServerStatus\0220\n\017behind_the_sofa\030, \001"
+      "(\0132\027.zsearch.CTServerStatus\022>\n\035certifica"
+      "tetransparency_cn_ct\030& \001(\0132\027.zsearch.CTS"
+      "erverStatus\"c\n\003SCT\022\020\n\010sha256fp\030\001 \001(\014\022!\n\006"
+      "server\030\002 \001(\0162\021.zsearch.CTServer\022\'\n\006statu"
+      "s\030\003 \001(\0132\027.zsearch.CTServerStatus*\353\001\n\014CTP"
+      "ushStatus\022\033\n\027CT_PUSH_STATUS_RESERVED\020\000\022\032"
+      "\n\026CT_PUSH_STATUS_UNKNOWN\020\001\022\032\n\026CT_PUSH_ST"
+      "ATUS_SUCCESS\020\002\022 \n\034CT_PUSH_STATUS_UNKNOWN"
+      "_ERROR\020\003\022\037\n\033CT_PUSH_STATUS_INVALID_ROOT\020"
+      "\004\022!\n\035CT_PUSH_STATUS_ALREADY_EXISTS\020\005\022 \n\034"
+      "CT_PUSH_STATUS_WILL_NOT_PUSH\020\006*\230\014\n\010CTSer"
+      "ver\022\026\n\022CT_SERVER_RESERVED\020\000\022 \n\034CT_SERVER"
+      "_CENSYS_DEVELOPMENT\020\001\022\037\n\033CT_SERVER_CENSY"
+      "S_PRODUCTION\020\002\022\034\n\030CT_SERVER_GOOGLE_AVIAT"
+      "OR\020\n\022\032\n\026CT_SERVER_GOOGLE_PILOT\020\013\022\036\n\032CT_S"
+      "ERVER_GOOGLE_ROCKETEER\020\014\022\037\n\033CT_SERVER_GO"
+      "OGLE_SUBMARINER\020\r\022\035\n\031CT_SERVER_GOOGLE_TE"
+      "STTUBE\020\016\022\033\n\027CT_SERVER_GOOGLE_ICARUS\020\017\022\035\n"
+      "\031CT_SERVER_GOOGLE_SKYDIVER\020\020\022\035\n\031CT_SERVE"
+      "R_GOOGLE_DAEDALUS\020\021\022\037\n\033CT_SERVER_GOOGLE_"
+      "ARGON_2017\0202\022\037\n\033CT_SERVER_GOOGLE_ARGON_2"
+      "018\0203\022\037\n\033CT_SERVER_GOOGLE_ARGON_2019\0204\022\037"
+      "\n\033CT_SERVER_GOOGLE_ARGON_2020\0205\022\037\n\033CT_SE"
+      "RVER_GOOGLE_ARGON_2021\0206\022$\n CT_SERVER_CL"
+      "OUDFLARE_NIMBUS_2017\020<\022$\n CT_SERVER_CLOU"
+      "DFLARE_NIMBUS_2018\020=\022$\n CT_SERVER_CLOUDF"
+      "LARE_NIMBUS_2019\020>\022$\n CT_SERVER_CLOUDFLA"
+      "RE_NIMBUS_2020\020\?\022$\n CT_SERVER_CLOUDFLARE"
+      "_NIMBUS_2021\020@\022\032\n\026CT_SERVER_DIGICERT_CT1"
+      "\020\024\022\032\n\026CT_SERVER_DIGICERT_CT2\020(\022\033\n\027CT_SER"
+      "VER_IZENPE_COM_CT\020\025\022\033\n\027CT_SERVER_IZENPE_"
+      "EUS_CT\020\026\022\034\n\030CT_SERVER_SYMANTEC_WS_CT\020\027\022\036"
+      "\n\032CT_SERVER_SYMANTEC_WS_VEGA\020\030\022 \n\034CT_SER"
+      "VER_SYMANTEC_WS_SIRIUS\020%\022\037\n\033CT_SERVER_SY"
+      "MANTEC_WS_DENEB\020 \022\031\n\025CT_SERVER_COMODO_DO"
+      "DO\020#\022\034\n\030CT_SERVER_COMODO_MAMMOTH\020$\022\032\n\026CT"
+      "_SERVER_COMODO_SABRE\020)\022\032\n\026CT_SERVER_WOSI"
+      "GN_CTLOG\020\031\022\027\n\023CT_SERVER_WOSIGN_CT\020\032\022\032\n\026C"
+      "T_SERVER_WOTRUS_CTLOG\020/\022\033\n\027CT_SERVER_WOT"
+      "RUS_CTLOG3\0200\022\031\n\025CT_SERVER_STARTSSL_CT\020\035\022"
+      "\025\n\021CT_SERVER_GDCA_CT\020\034\022\030\n\024CT_SERVER_GDCA"
+      "_CTLOG\020\"\022\026\n\022CT_SERVER_GDCA_LOG\020-\022\027\n\023CT_S"
+      "ERVER_GDCA_LOG2\020.\022\036\n\032CT_SERVER_VENAFI_AP"
+      "I_CTLOG\020\037\022#\n\037CT_SERVER_VENAFI_API_CTLOG_"
+      "GEN2\020\'\022 \n\034CT_SERVER_NORDU_CT_PLAUSIBLE\020!"
+      "\022#\n\037CT_SERVER_LETSENCRYPT_CT_CLICKY\020+\022\030\n"
+      "\024CT_SERVER_CERTLY_LOG\020\036\022\034\n\030CT_SERVER_CNN"
+      "IC_CTSERVER\020\033\022+\n\'CT_SERVER_CERTIFICATETR"
+      "ANSPARENCY_CN_CT\020&\022\026\n\022CT_SERVER_SHECA_CT"
+      "\020*\022\035\n\031CT_SERVER_BEHIND_THE_SOFA\020,b\006proto"
+      "3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 3707);
+      descriptor, 4561);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "ct.proto", &protobuf_RegisterTypes);
   ::google::protobuf::internal::OnShutdown(&TableStruct::Shutdown);
@@ -412,12 +464,22 @@ bool CTServer_IsValid(int value) {
     case 40:
     case 41:
     case 42:
+    case 43:
     case 44:
+    case 45:
+    case 46:
+    case 47:
+    case 48:
     case 50:
     case 51:
     case 52:
     case 53:
     case 54:
+    case 60:
+    case 61:
+    case 62:
+    case 63:
+    case 64:
       return true;
     default:
       return false;
@@ -1069,6 +1131,16 @@ const int CTStatus::kGoogleTesttubeFieldNumber;
 const int CTStatus::kGoogleIcarusFieldNumber;
 const int CTStatus::kGoogleSkydiverFieldNumber;
 const int CTStatus::kGoogleDaedalusFieldNumber;
+const int CTStatus::kGoogleArgon2017FieldNumber;
+const int CTStatus::kGoogleArgon2018FieldNumber;
+const int CTStatus::kGoogleArgon2019FieldNumber;
+const int CTStatus::kGoogleArgon2020FieldNumber;
+const int CTStatus::kGoogleArgon2021FieldNumber;
+const int CTStatus::kCloudflareNimbus2017FieldNumber;
+const int CTStatus::kCloudflareNimbus2018FieldNumber;
+const int CTStatus::kCloudflareNimbus2019FieldNumber;
+const int CTStatus::kCloudflareNimbus2020FieldNumber;
+const int CTStatus::kCloudflareNimbus2021FieldNumber;
 const int CTStatus::kDigicertCt1FieldNumber;
 const int CTStatus::kDigicertCt2FieldNumber;
 const int CTStatus::kIzenpeComCtFieldNumber;
@@ -1082,22 +1154,22 @@ const int CTStatus::kComodoMammothFieldNumber;
 const int CTStatus::kComodoSabreFieldNumber;
 const int CTStatus::kWosignCtlogFieldNumber;
 const int CTStatus::kWosignCtFieldNumber;
+const int CTStatus::kWotrusCtlogFieldNumber;
+const int CTStatus::kWotrusCtlog3FieldNumber;
 const int CTStatus::kGdcaCtFieldNumber;
 const int CTStatus::kGdcaCtlogFieldNumber;
+const int CTStatus::kGdcaLogFieldNumber;
+const int CTStatus::kGdcaLog2FieldNumber;
 const int CTStatus::kVenafiApiCtlogFieldNumber;
 const int CTStatus::kVenafiApiCtlogGen2FieldNumber;
 const int CTStatus::kNorduCtPlausibleFieldNumber;
+const int CTStatus::kLetsencryptCtClickyFieldNumber;
 const int CTStatus::kCnnicCtserverFieldNumber;
 const int CTStatus::kStartsslCtFieldNumber;
 const int CTStatus::kCertlyLogFieldNumber;
 const int CTStatus::kShecaCtFieldNumber;
+const int CTStatus::kBehindTheSofaFieldNumber;
 const int CTStatus::kCertificatetransparencyCnCtFieldNumber;
-const int CTStatus::kLetsencryptCtClickyFieldNumber;
-const int CTStatus::kGoogleArgon2017FieldNumber;
-const int CTStatus::kGoogleArgon2018FieldNumber;
-const int CTStatus::kGoogleArgon2019FieldNumber;
-const int CTStatus::kGoogleArgon2020FieldNumber;
-const int CTStatus::kGoogleArgon2021FieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 CTStatus::CTStatus()
@@ -1162,6 +1234,56 @@ CTStatus::CTStatus(const CTStatus& from)
     google_daedalus_ = new ::zsearch::CTServerStatus(*from.google_daedalus_);
   } else {
     google_daedalus_ = NULL;
+  }
+  if (from.has_google_argon_2017()) {
+    google_argon_2017_ = new ::zsearch::CTServerStatus(*from.google_argon_2017_);
+  } else {
+    google_argon_2017_ = NULL;
+  }
+  if (from.has_google_argon_2018()) {
+    google_argon_2018_ = new ::zsearch::CTServerStatus(*from.google_argon_2018_);
+  } else {
+    google_argon_2018_ = NULL;
+  }
+  if (from.has_google_argon_2019()) {
+    google_argon_2019_ = new ::zsearch::CTServerStatus(*from.google_argon_2019_);
+  } else {
+    google_argon_2019_ = NULL;
+  }
+  if (from.has_google_argon_2020()) {
+    google_argon_2020_ = new ::zsearch::CTServerStatus(*from.google_argon_2020_);
+  } else {
+    google_argon_2020_ = NULL;
+  }
+  if (from.has_google_argon_2021()) {
+    google_argon_2021_ = new ::zsearch::CTServerStatus(*from.google_argon_2021_);
+  } else {
+    google_argon_2021_ = NULL;
+  }
+  if (from.has_cloudflare_nimbus_2017()) {
+    cloudflare_nimbus_2017_ = new ::zsearch::CTServerStatus(*from.cloudflare_nimbus_2017_);
+  } else {
+    cloudflare_nimbus_2017_ = NULL;
+  }
+  if (from.has_cloudflare_nimbus_2018()) {
+    cloudflare_nimbus_2018_ = new ::zsearch::CTServerStatus(*from.cloudflare_nimbus_2018_);
+  } else {
+    cloudflare_nimbus_2018_ = NULL;
+  }
+  if (from.has_cloudflare_nimbus_2019()) {
+    cloudflare_nimbus_2019_ = new ::zsearch::CTServerStatus(*from.cloudflare_nimbus_2019_);
+  } else {
+    cloudflare_nimbus_2019_ = NULL;
+  }
+  if (from.has_cloudflare_nimbus_2020()) {
+    cloudflare_nimbus_2020_ = new ::zsearch::CTServerStatus(*from.cloudflare_nimbus_2020_);
+  } else {
+    cloudflare_nimbus_2020_ = NULL;
+  }
+  if (from.has_cloudflare_nimbus_2021()) {
+    cloudflare_nimbus_2021_ = new ::zsearch::CTServerStatus(*from.cloudflare_nimbus_2021_);
+  } else {
+    cloudflare_nimbus_2021_ = NULL;
   }
   if (from.has_digicert_ct1()) {
     digicert_ct1_ = new ::zsearch::CTServerStatus(*from.digicert_ct1_);
@@ -1228,6 +1350,16 @@ CTStatus::CTStatus(const CTStatus& from)
   } else {
     wosign_ct_ = NULL;
   }
+  if (from.has_wotrus_ctlog()) {
+    wotrus_ctlog_ = new ::zsearch::CTServerStatus(*from.wotrus_ctlog_);
+  } else {
+    wotrus_ctlog_ = NULL;
+  }
+  if (from.has_wotrus_ctlog3()) {
+    wotrus_ctlog3_ = new ::zsearch::CTServerStatus(*from.wotrus_ctlog3_);
+  } else {
+    wotrus_ctlog3_ = NULL;
+  }
   if (from.has_gdca_ct()) {
     gdca_ct_ = new ::zsearch::CTServerStatus(*from.gdca_ct_);
   } else {
@@ -1237,6 +1369,16 @@ CTStatus::CTStatus(const CTStatus& from)
     gdca_ctlog_ = new ::zsearch::CTServerStatus(*from.gdca_ctlog_);
   } else {
     gdca_ctlog_ = NULL;
+  }
+  if (from.has_gdca_log()) {
+    gdca_log_ = new ::zsearch::CTServerStatus(*from.gdca_log_);
+  } else {
+    gdca_log_ = NULL;
+  }
+  if (from.has_gdca_log2()) {
+    gdca_log2_ = new ::zsearch::CTServerStatus(*from.gdca_log2_);
+  } else {
+    gdca_log2_ = NULL;
   }
   if (from.has_venafi_api_ctlog()) {
     venafi_api_ctlog_ = new ::zsearch::CTServerStatus(*from.venafi_api_ctlog_);
@@ -1252,6 +1394,11 @@ CTStatus::CTStatus(const CTStatus& from)
     nordu_ct_plausible_ = new ::zsearch::CTServerStatus(*from.nordu_ct_plausible_);
   } else {
     nordu_ct_plausible_ = NULL;
+  }
+  if (from.has_letsencrypt_ct_clicky()) {
+    letsencrypt_ct_clicky_ = new ::zsearch::CTServerStatus(*from.letsencrypt_ct_clicky_);
+  } else {
+    letsencrypt_ct_clicky_ = NULL;
   }
   if (from.has_cnnic_ctserver()) {
     cnnic_ctserver_ = new ::zsearch::CTServerStatus(*from.cnnic_ctserver_);
@@ -1273,47 +1420,22 @@ CTStatus::CTStatus(const CTStatus& from)
   } else {
     sheca_ct_ = NULL;
   }
+  if (from.has_behind_the_sofa()) {
+    behind_the_sofa_ = new ::zsearch::CTServerStatus(*from.behind_the_sofa_);
+  } else {
+    behind_the_sofa_ = NULL;
+  }
   if (from.has_certificatetransparency_cn_ct()) {
     certificatetransparency_cn_ct_ = new ::zsearch::CTServerStatus(*from.certificatetransparency_cn_ct_);
   } else {
     certificatetransparency_cn_ct_ = NULL;
   }
-  if (from.has_letsencrypt_ct_clicky()) {
-    letsencrypt_ct_clicky_ = new ::zsearch::CTServerStatus(*from.letsencrypt_ct_clicky_);
-  } else {
-    letsencrypt_ct_clicky_ = NULL;
-  }
-  if (from.has_google_argon2017()) {
-    google_argon2017_ = new ::zsearch::CTServerStatus(*from.google_argon2017_);
-  } else {
-    google_argon2017_ = NULL;
-  }
-  if (from.has_google_argon2018()) {
-    google_argon2018_ = new ::zsearch::CTServerStatus(*from.google_argon2018_);
-  } else {
-    google_argon2018_ = NULL;
-  }
-  if (from.has_google_argon2019()) {
-    google_argon2019_ = new ::zsearch::CTServerStatus(*from.google_argon2019_);
-  } else {
-    google_argon2019_ = NULL;
-  }
-  if (from.has_google_argon2020()) {
-    google_argon2020_ = new ::zsearch::CTServerStatus(*from.google_argon2020_);
-  } else {
-    google_argon2020_ = NULL;
-  }
-  if (from.has_google_argon2021()) {
-    google_argon2021_ = new ::zsearch::CTServerStatus(*from.google_argon2021_);
-  } else {
-    google_argon2021_ = NULL;
-  }
   // @@protoc_insertion_point(copy_constructor:zsearch.CTStatus)
 }
 
 void CTStatus::SharedCtor() {
-  ::memset(&censys_dev_, 0, reinterpret_cast<char*>(&google_argon2021_) -
-    reinterpret_cast<char*>(&censys_dev_) + sizeof(google_argon2021_));
+  ::memset(&censys_dev_, 0, reinterpret_cast<char*>(&certificatetransparency_cn_ct_) -
+    reinterpret_cast<char*>(&censys_dev_) + sizeof(certificatetransparency_cn_ct_));
   _cached_size_ = 0;
 }
 
@@ -1352,6 +1474,36 @@ void CTStatus::SharedDtor() {
   }
   if (this != internal_default_instance()) {
     delete google_daedalus_;
+  }
+  if (this != internal_default_instance()) {
+    delete google_argon_2017_;
+  }
+  if (this != internal_default_instance()) {
+    delete google_argon_2018_;
+  }
+  if (this != internal_default_instance()) {
+    delete google_argon_2019_;
+  }
+  if (this != internal_default_instance()) {
+    delete google_argon_2020_;
+  }
+  if (this != internal_default_instance()) {
+    delete google_argon_2021_;
+  }
+  if (this != internal_default_instance()) {
+    delete cloudflare_nimbus_2017_;
+  }
+  if (this != internal_default_instance()) {
+    delete cloudflare_nimbus_2018_;
+  }
+  if (this != internal_default_instance()) {
+    delete cloudflare_nimbus_2019_;
+  }
+  if (this != internal_default_instance()) {
+    delete cloudflare_nimbus_2020_;
+  }
+  if (this != internal_default_instance()) {
+    delete cloudflare_nimbus_2021_;
   }
   if (this != internal_default_instance()) {
     delete digicert_ct1_;
@@ -1393,10 +1545,22 @@ void CTStatus::SharedDtor() {
     delete wosign_ct_;
   }
   if (this != internal_default_instance()) {
+    delete wotrus_ctlog_;
+  }
+  if (this != internal_default_instance()) {
+    delete wotrus_ctlog3_;
+  }
+  if (this != internal_default_instance()) {
     delete gdca_ct_;
   }
   if (this != internal_default_instance()) {
     delete gdca_ctlog_;
+  }
+  if (this != internal_default_instance()) {
+    delete gdca_log_;
+  }
+  if (this != internal_default_instance()) {
+    delete gdca_log2_;
   }
   if (this != internal_default_instance()) {
     delete venafi_api_ctlog_;
@@ -1406,6 +1570,9 @@ void CTStatus::SharedDtor() {
   }
   if (this != internal_default_instance()) {
     delete nordu_ct_plausible_;
+  }
+  if (this != internal_default_instance()) {
+    delete letsencrypt_ct_clicky_;
   }
   if (this != internal_default_instance()) {
     delete cnnic_ctserver_;
@@ -1420,25 +1587,10 @@ void CTStatus::SharedDtor() {
     delete sheca_ct_;
   }
   if (this != internal_default_instance()) {
+    delete behind_the_sofa_;
+  }
+  if (this != internal_default_instance()) {
     delete certificatetransparency_cn_ct_;
-  }
-  if (this != internal_default_instance()) {
-    delete letsencrypt_ct_clicky_;
-  }
-  if (this != internal_default_instance()) {
-    delete google_argon2017_;
-  }
-  if (this != internal_default_instance()) {
-    delete google_argon2018_;
-  }
-  if (this != internal_default_instance()) {
-    delete google_argon2019_;
-  }
-  if (this != internal_default_instance()) {
-    delete google_argon2020_;
-  }
-  if (this != internal_default_instance()) {
-    delete google_argon2021_;
   }
 }
 
@@ -1507,6 +1659,46 @@ void CTStatus::Clear() {
     delete google_daedalus_;
   }
   google_daedalus_ = NULL;
+  if (GetArenaNoVirtual() == NULL && google_argon_2017_ != NULL) {
+    delete google_argon_2017_;
+  }
+  google_argon_2017_ = NULL;
+  if (GetArenaNoVirtual() == NULL && google_argon_2018_ != NULL) {
+    delete google_argon_2018_;
+  }
+  google_argon_2018_ = NULL;
+  if (GetArenaNoVirtual() == NULL && google_argon_2019_ != NULL) {
+    delete google_argon_2019_;
+  }
+  google_argon_2019_ = NULL;
+  if (GetArenaNoVirtual() == NULL && google_argon_2020_ != NULL) {
+    delete google_argon_2020_;
+  }
+  google_argon_2020_ = NULL;
+  if (GetArenaNoVirtual() == NULL && google_argon_2021_ != NULL) {
+    delete google_argon_2021_;
+  }
+  google_argon_2021_ = NULL;
+  if (GetArenaNoVirtual() == NULL && cloudflare_nimbus_2017_ != NULL) {
+    delete cloudflare_nimbus_2017_;
+  }
+  cloudflare_nimbus_2017_ = NULL;
+  if (GetArenaNoVirtual() == NULL && cloudflare_nimbus_2018_ != NULL) {
+    delete cloudflare_nimbus_2018_;
+  }
+  cloudflare_nimbus_2018_ = NULL;
+  if (GetArenaNoVirtual() == NULL && cloudflare_nimbus_2019_ != NULL) {
+    delete cloudflare_nimbus_2019_;
+  }
+  cloudflare_nimbus_2019_ = NULL;
+  if (GetArenaNoVirtual() == NULL && cloudflare_nimbus_2020_ != NULL) {
+    delete cloudflare_nimbus_2020_;
+  }
+  cloudflare_nimbus_2020_ = NULL;
+  if (GetArenaNoVirtual() == NULL && cloudflare_nimbus_2021_ != NULL) {
+    delete cloudflare_nimbus_2021_;
+  }
+  cloudflare_nimbus_2021_ = NULL;
   if (GetArenaNoVirtual() == NULL && digicert_ct1_ != NULL) {
     delete digicert_ct1_;
   }
@@ -1559,6 +1751,14 @@ void CTStatus::Clear() {
     delete wosign_ct_;
   }
   wosign_ct_ = NULL;
+  if (GetArenaNoVirtual() == NULL && wotrus_ctlog_ != NULL) {
+    delete wotrus_ctlog_;
+  }
+  wotrus_ctlog_ = NULL;
+  if (GetArenaNoVirtual() == NULL && wotrus_ctlog3_ != NULL) {
+    delete wotrus_ctlog3_;
+  }
+  wotrus_ctlog3_ = NULL;
   if (GetArenaNoVirtual() == NULL && gdca_ct_ != NULL) {
     delete gdca_ct_;
   }
@@ -1567,6 +1767,14 @@ void CTStatus::Clear() {
     delete gdca_ctlog_;
   }
   gdca_ctlog_ = NULL;
+  if (GetArenaNoVirtual() == NULL && gdca_log_ != NULL) {
+    delete gdca_log_;
+  }
+  gdca_log_ = NULL;
+  if (GetArenaNoVirtual() == NULL && gdca_log2_ != NULL) {
+    delete gdca_log2_;
+  }
+  gdca_log2_ = NULL;
   if (GetArenaNoVirtual() == NULL && venafi_api_ctlog_ != NULL) {
     delete venafi_api_ctlog_;
   }
@@ -1579,6 +1787,10 @@ void CTStatus::Clear() {
     delete nordu_ct_plausible_;
   }
   nordu_ct_plausible_ = NULL;
+  if (GetArenaNoVirtual() == NULL && letsencrypt_ct_clicky_ != NULL) {
+    delete letsencrypt_ct_clicky_;
+  }
+  letsencrypt_ct_clicky_ = NULL;
   if (GetArenaNoVirtual() == NULL && cnnic_ctserver_ != NULL) {
     delete cnnic_ctserver_;
   }
@@ -1595,34 +1807,14 @@ void CTStatus::Clear() {
     delete sheca_ct_;
   }
   sheca_ct_ = NULL;
+  if (GetArenaNoVirtual() == NULL && behind_the_sofa_ != NULL) {
+    delete behind_the_sofa_;
+  }
+  behind_the_sofa_ = NULL;
   if (GetArenaNoVirtual() == NULL && certificatetransparency_cn_ct_ != NULL) {
     delete certificatetransparency_cn_ct_;
   }
   certificatetransparency_cn_ct_ = NULL;
-  if (GetArenaNoVirtual() == NULL && letsencrypt_ct_clicky_ != NULL) {
-    delete letsencrypt_ct_clicky_;
-  }
-  letsencrypt_ct_clicky_ = NULL;
-  if (GetArenaNoVirtual() == NULL && google_argon2017_ != NULL) {
-    delete google_argon2017_;
-  }
-  google_argon2017_ = NULL;
-  if (GetArenaNoVirtual() == NULL && google_argon2018_ != NULL) {
-    delete google_argon2018_;
-  }
-  google_argon2018_ = NULL;
-  if (GetArenaNoVirtual() == NULL && google_argon2019_ != NULL) {
-    delete google_argon2019_;
-  }
-  google_argon2019_ = NULL;
-  if (GetArenaNoVirtual() == NULL && google_argon2020_ != NULL) {
-    delete google_argon2020_;
-  }
-  google_argon2020_ = NULL;
-  if (GetArenaNoVirtual() == NULL && google_argon2021_ != NULL) {
-    delete google_argon2021_;
-  }
-  google_argon2021_ = NULL;
 }
 
 bool CTStatus::MergePartialFromCodedStream(
@@ -2009,55 +2201,165 @@ bool CTStatus::MergePartialFromCodedStream(
         break;
       }
 
-      // .zsearch.CTServerStatus google_argon2017 = 50;
+      // .zsearch.CTServerStatus behind_the_sofa = 44;
+      case 44: {
+        if (tag == 354u) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_behind_the_sofa()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .zsearch.CTServerStatus gdca_log = 45;
+      case 45: {
+        if (tag == 362u) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_gdca_log()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .zsearch.CTServerStatus gdca_log2 = 46;
+      case 46: {
+        if (tag == 370u) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_gdca_log2()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .zsearch.CTServerStatus wotrus_ctlog = 47;
+      case 47: {
+        if (tag == 378u) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_wotrus_ctlog()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .zsearch.CTServerStatus wotrus_ctlog3 = 48;
+      case 48: {
+        if (tag == 386u) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_wotrus_ctlog3()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .zsearch.CTServerStatus google_argon_2017 = 50;
       case 50: {
         if (tag == 402u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
-               input, mutable_google_argon2017()));
+               input, mutable_google_argon_2017()));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // .zsearch.CTServerStatus google_argon2018 = 51;
+      // .zsearch.CTServerStatus google_argon_2018 = 51;
       case 51: {
         if (tag == 410u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
-               input, mutable_google_argon2018()));
+               input, mutable_google_argon_2018()));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // .zsearch.CTServerStatus google_argon2019 = 52;
+      // .zsearch.CTServerStatus google_argon_2019 = 52;
       case 52: {
         if (tag == 418u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
-               input, mutable_google_argon2019()));
+               input, mutable_google_argon_2019()));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // .zsearch.CTServerStatus google_argon2020 = 53;
+      // .zsearch.CTServerStatus google_argon_2020 = 53;
       case 53: {
         if (tag == 426u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
-               input, mutable_google_argon2020()));
+               input, mutable_google_argon_2020()));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // .zsearch.CTServerStatus google_argon2021 = 54;
+      // .zsearch.CTServerStatus google_argon_2021 = 54;
       case 54: {
         if (tag == 434u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
-               input, mutable_google_argon2021()));
+               input, mutable_google_argon_2021()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .zsearch.CTServerStatus cloudflare_nimbus_2017 = 60;
+      case 60: {
+        if (tag == 482u) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_cloudflare_nimbus_2017()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .zsearch.CTServerStatus cloudflare_nimbus_2018 = 61;
+      case 61: {
+        if (tag == 490u) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_cloudflare_nimbus_2018()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .zsearch.CTServerStatus cloudflare_nimbus_2019 = 62;
+      case 62: {
+        if (tag == 498u) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_cloudflare_nimbus_2019()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .zsearch.CTServerStatus cloudflare_nimbus_2020 = 63;
+      case 63: {
+        if (tag == 506u) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_cloudflare_nimbus_2020()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .zsearch.CTServerStatus cloudflare_nimbus_2021 = 64;
+      case 64: {
+        if (tag == 514u) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_cloudflare_nimbus_2021()));
         } else {
           goto handle_unusual;
         }
@@ -2292,34 +2594,94 @@ void CTStatus::SerializeWithCachedSizes(
       43, *this->letsencrypt_ct_clicky_, output);
   }
 
-  // .zsearch.CTServerStatus google_argon2017 = 50;
-  if (this->has_google_argon2017()) {
+  // .zsearch.CTServerStatus behind_the_sofa = 44;
+  if (this->has_behind_the_sofa()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      50, *this->google_argon2017_, output);
+      44, *this->behind_the_sofa_, output);
   }
 
-  // .zsearch.CTServerStatus google_argon2018 = 51;
-  if (this->has_google_argon2018()) {
+  // .zsearch.CTServerStatus gdca_log = 45;
+  if (this->has_gdca_log()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      51, *this->google_argon2018_, output);
+      45, *this->gdca_log_, output);
   }
 
-  // .zsearch.CTServerStatus google_argon2019 = 52;
-  if (this->has_google_argon2019()) {
+  // .zsearch.CTServerStatus gdca_log2 = 46;
+  if (this->has_gdca_log2()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      52, *this->google_argon2019_, output);
+      46, *this->gdca_log2_, output);
   }
 
-  // .zsearch.CTServerStatus google_argon2020 = 53;
-  if (this->has_google_argon2020()) {
+  // .zsearch.CTServerStatus wotrus_ctlog = 47;
+  if (this->has_wotrus_ctlog()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      53, *this->google_argon2020_, output);
+      47, *this->wotrus_ctlog_, output);
   }
 
-  // .zsearch.CTServerStatus google_argon2021 = 54;
-  if (this->has_google_argon2021()) {
+  // .zsearch.CTServerStatus wotrus_ctlog3 = 48;
+  if (this->has_wotrus_ctlog3()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      54, *this->google_argon2021_, output);
+      48, *this->wotrus_ctlog3_, output);
+  }
+
+  // .zsearch.CTServerStatus google_argon_2017 = 50;
+  if (this->has_google_argon_2017()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      50, *this->google_argon_2017_, output);
+  }
+
+  // .zsearch.CTServerStatus google_argon_2018 = 51;
+  if (this->has_google_argon_2018()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      51, *this->google_argon_2018_, output);
+  }
+
+  // .zsearch.CTServerStatus google_argon_2019 = 52;
+  if (this->has_google_argon_2019()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      52, *this->google_argon_2019_, output);
+  }
+
+  // .zsearch.CTServerStatus google_argon_2020 = 53;
+  if (this->has_google_argon_2020()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      53, *this->google_argon_2020_, output);
+  }
+
+  // .zsearch.CTServerStatus google_argon_2021 = 54;
+  if (this->has_google_argon_2021()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      54, *this->google_argon_2021_, output);
+  }
+
+  // .zsearch.CTServerStatus cloudflare_nimbus_2017 = 60;
+  if (this->has_cloudflare_nimbus_2017()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      60, *this->cloudflare_nimbus_2017_, output);
+  }
+
+  // .zsearch.CTServerStatus cloudflare_nimbus_2018 = 61;
+  if (this->has_cloudflare_nimbus_2018()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      61, *this->cloudflare_nimbus_2018_, output);
+  }
+
+  // .zsearch.CTServerStatus cloudflare_nimbus_2019 = 62;
+  if (this->has_cloudflare_nimbus_2019()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      62, *this->cloudflare_nimbus_2019_, output);
+  }
+
+  // .zsearch.CTServerStatus cloudflare_nimbus_2020 = 63;
+  if (this->has_cloudflare_nimbus_2020()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      63, *this->cloudflare_nimbus_2020_, output);
+  }
+
+  // .zsearch.CTServerStatus cloudflare_nimbus_2021 = 64;
+  if (this->has_cloudflare_nimbus_2021()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      64, *this->cloudflare_nimbus_2021_, output);
   }
 
   // @@protoc_insertion_point(serialize_end:zsearch.CTStatus)
@@ -2567,39 +2929,109 @@ void CTStatus::SerializeWithCachedSizes(
         43, *this->letsencrypt_ct_clicky_, false, target);
   }
 
-  // .zsearch.CTServerStatus google_argon2017 = 50;
-  if (this->has_google_argon2017()) {
+  // .zsearch.CTServerStatus behind_the_sofa = 44;
+  if (this->has_behind_the_sofa()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        50, *this->google_argon2017_, false, target);
+        44, *this->behind_the_sofa_, false, target);
   }
 
-  // .zsearch.CTServerStatus google_argon2018 = 51;
-  if (this->has_google_argon2018()) {
+  // .zsearch.CTServerStatus gdca_log = 45;
+  if (this->has_gdca_log()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        51, *this->google_argon2018_, false, target);
+        45, *this->gdca_log_, false, target);
   }
 
-  // .zsearch.CTServerStatus google_argon2019 = 52;
-  if (this->has_google_argon2019()) {
+  // .zsearch.CTServerStatus gdca_log2 = 46;
+  if (this->has_gdca_log2()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        52, *this->google_argon2019_, false, target);
+        46, *this->gdca_log2_, false, target);
   }
 
-  // .zsearch.CTServerStatus google_argon2020 = 53;
-  if (this->has_google_argon2020()) {
+  // .zsearch.CTServerStatus wotrus_ctlog = 47;
+  if (this->has_wotrus_ctlog()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        53, *this->google_argon2020_, false, target);
+        47, *this->wotrus_ctlog_, false, target);
   }
 
-  // .zsearch.CTServerStatus google_argon2021 = 54;
-  if (this->has_google_argon2021()) {
+  // .zsearch.CTServerStatus wotrus_ctlog3 = 48;
+  if (this->has_wotrus_ctlog3()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        54, *this->google_argon2021_, false, target);
+        48, *this->wotrus_ctlog3_, false, target);
+  }
+
+  // .zsearch.CTServerStatus google_argon_2017 = 50;
+  if (this->has_google_argon_2017()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageNoVirtualToArray(
+        50, *this->google_argon_2017_, false, target);
+  }
+
+  // .zsearch.CTServerStatus google_argon_2018 = 51;
+  if (this->has_google_argon_2018()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageNoVirtualToArray(
+        51, *this->google_argon_2018_, false, target);
+  }
+
+  // .zsearch.CTServerStatus google_argon_2019 = 52;
+  if (this->has_google_argon_2019()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageNoVirtualToArray(
+        52, *this->google_argon_2019_, false, target);
+  }
+
+  // .zsearch.CTServerStatus google_argon_2020 = 53;
+  if (this->has_google_argon_2020()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageNoVirtualToArray(
+        53, *this->google_argon_2020_, false, target);
+  }
+
+  // .zsearch.CTServerStatus google_argon_2021 = 54;
+  if (this->has_google_argon_2021()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageNoVirtualToArray(
+        54, *this->google_argon_2021_, false, target);
+  }
+
+  // .zsearch.CTServerStatus cloudflare_nimbus_2017 = 60;
+  if (this->has_cloudflare_nimbus_2017()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageNoVirtualToArray(
+        60, *this->cloudflare_nimbus_2017_, false, target);
+  }
+
+  // .zsearch.CTServerStatus cloudflare_nimbus_2018 = 61;
+  if (this->has_cloudflare_nimbus_2018()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageNoVirtualToArray(
+        61, *this->cloudflare_nimbus_2018_, false, target);
+  }
+
+  // .zsearch.CTServerStatus cloudflare_nimbus_2019 = 62;
+  if (this->has_cloudflare_nimbus_2019()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageNoVirtualToArray(
+        62, *this->cloudflare_nimbus_2019_, false, target);
+  }
+
+  // .zsearch.CTServerStatus cloudflare_nimbus_2020 = 63;
+  if (this->has_cloudflare_nimbus_2020()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageNoVirtualToArray(
+        63, *this->cloudflare_nimbus_2020_, false, target);
+  }
+
+  // .zsearch.CTServerStatus cloudflare_nimbus_2021 = 64;
+  if (this->has_cloudflare_nimbus_2021()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageNoVirtualToArray(
+        64, *this->cloudflare_nimbus_2021_, false, target);
   }
 
   // @@protoc_insertion_point(serialize_to_array_end:zsearch.CTStatus)
@@ -2678,6 +3110,76 @@ size_t CTStatus::ByteSizeLong() const {
     total_size += 2 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->google_daedalus_);
+  }
+
+  // .zsearch.CTServerStatus google_argon_2017 = 50;
+  if (this->has_google_argon_2017()) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        *this->google_argon_2017_);
+  }
+
+  // .zsearch.CTServerStatus google_argon_2018 = 51;
+  if (this->has_google_argon_2018()) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        *this->google_argon_2018_);
+  }
+
+  // .zsearch.CTServerStatus google_argon_2019 = 52;
+  if (this->has_google_argon_2019()) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        *this->google_argon_2019_);
+  }
+
+  // .zsearch.CTServerStatus google_argon_2020 = 53;
+  if (this->has_google_argon_2020()) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        *this->google_argon_2020_);
+  }
+
+  // .zsearch.CTServerStatus google_argon_2021 = 54;
+  if (this->has_google_argon_2021()) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        *this->google_argon_2021_);
+  }
+
+  // .zsearch.CTServerStatus cloudflare_nimbus_2017 = 60;
+  if (this->has_cloudflare_nimbus_2017()) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        *this->cloudflare_nimbus_2017_);
+  }
+
+  // .zsearch.CTServerStatus cloudflare_nimbus_2018 = 61;
+  if (this->has_cloudflare_nimbus_2018()) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        *this->cloudflare_nimbus_2018_);
+  }
+
+  // .zsearch.CTServerStatus cloudflare_nimbus_2019 = 62;
+  if (this->has_cloudflare_nimbus_2019()) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        *this->cloudflare_nimbus_2019_);
+  }
+
+  // .zsearch.CTServerStatus cloudflare_nimbus_2020 = 63;
+  if (this->has_cloudflare_nimbus_2020()) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        *this->cloudflare_nimbus_2020_);
+  }
+
+  // .zsearch.CTServerStatus cloudflare_nimbus_2021 = 64;
+  if (this->has_cloudflare_nimbus_2021()) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        *this->cloudflare_nimbus_2021_);
   }
 
   // .zsearch.CTServerStatus digicert_ct1 = 20;
@@ -2771,6 +3273,20 @@ size_t CTStatus::ByteSizeLong() const {
         *this->wosign_ct_);
   }
 
+  // .zsearch.CTServerStatus wotrus_ctlog = 47;
+  if (this->has_wotrus_ctlog()) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        *this->wotrus_ctlog_);
+  }
+
+  // .zsearch.CTServerStatus wotrus_ctlog3 = 48;
+  if (this->has_wotrus_ctlog3()) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        *this->wotrus_ctlog3_);
+  }
+
   // .zsearch.CTServerStatus gdca_ct = 28;
   if (this->has_gdca_ct()) {
     total_size += 2 +
@@ -2783,6 +3299,20 @@ size_t CTStatus::ByteSizeLong() const {
     total_size += 2 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->gdca_ctlog_);
+  }
+
+  // .zsearch.CTServerStatus gdca_log = 45;
+  if (this->has_gdca_log()) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        *this->gdca_log_);
+  }
+
+  // .zsearch.CTServerStatus gdca_log2 = 46;
+  if (this->has_gdca_log2()) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        *this->gdca_log2_);
   }
 
   // .zsearch.CTServerStatus venafi_api_ctlog = 31;
@@ -2804,6 +3334,13 @@ size_t CTStatus::ByteSizeLong() const {
     total_size += 2 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->nordu_ct_plausible_);
+  }
+
+  // .zsearch.CTServerStatus letsencrypt_ct_clicky = 43;
+  if (this->has_letsencrypt_ct_clicky()) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        *this->letsencrypt_ct_clicky_);
   }
 
   // .zsearch.CTServerStatus cnnic_ctserver = 27;
@@ -2834,53 +3371,18 @@ size_t CTStatus::ByteSizeLong() const {
         *this->sheca_ct_);
   }
 
+  // .zsearch.CTServerStatus behind_the_sofa = 44;
+  if (this->has_behind_the_sofa()) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        *this->behind_the_sofa_);
+  }
+
   // .zsearch.CTServerStatus certificatetransparency_cn_ct = 38;
   if (this->has_certificatetransparency_cn_ct()) {
     total_size += 2 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->certificatetransparency_cn_ct_);
-  }
-
-  // .zsearch.CTServerStatus letsencrypt_ct_clicky = 43;
-  if (this->has_letsencrypt_ct_clicky()) {
-    total_size += 2 +
-      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-        *this->letsencrypt_ct_clicky_);
-  }
-
-  // .zsearch.CTServerStatus google_argon2017 = 50;
-  if (this->has_google_argon2017()) {
-    total_size += 2 +
-      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-        *this->google_argon2017_);
-  }
-
-  // .zsearch.CTServerStatus google_argon2018 = 51;
-  if (this->has_google_argon2018()) {
-    total_size += 2 +
-      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-        *this->google_argon2018_);
-  }
-
-  // .zsearch.CTServerStatus google_argon2019 = 52;
-  if (this->has_google_argon2019()) {
-    total_size += 2 +
-      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-        *this->google_argon2019_);
-  }
-
-  // .zsearch.CTServerStatus google_argon2020 = 53;
-  if (this->has_google_argon2020()) {
-    total_size += 2 +
-      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-        *this->google_argon2020_);
-  }
-
-  // .zsearch.CTServerStatus google_argon2021 = 54;
-  if (this->has_google_argon2021()) {
-    total_size += 2 +
-      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-        *this->google_argon2021_);
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
@@ -2939,6 +3441,36 @@ void CTStatus::MergeFrom(const CTStatus& from) {
   if (from.has_google_daedalus()) {
     mutable_google_daedalus()->::zsearch::CTServerStatus::MergeFrom(from.google_daedalus());
   }
+  if (from.has_google_argon_2017()) {
+    mutable_google_argon_2017()->::zsearch::CTServerStatus::MergeFrom(from.google_argon_2017());
+  }
+  if (from.has_google_argon_2018()) {
+    mutable_google_argon_2018()->::zsearch::CTServerStatus::MergeFrom(from.google_argon_2018());
+  }
+  if (from.has_google_argon_2019()) {
+    mutable_google_argon_2019()->::zsearch::CTServerStatus::MergeFrom(from.google_argon_2019());
+  }
+  if (from.has_google_argon_2020()) {
+    mutable_google_argon_2020()->::zsearch::CTServerStatus::MergeFrom(from.google_argon_2020());
+  }
+  if (from.has_google_argon_2021()) {
+    mutable_google_argon_2021()->::zsearch::CTServerStatus::MergeFrom(from.google_argon_2021());
+  }
+  if (from.has_cloudflare_nimbus_2017()) {
+    mutable_cloudflare_nimbus_2017()->::zsearch::CTServerStatus::MergeFrom(from.cloudflare_nimbus_2017());
+  }
+  if (from.has_cloudflare_nimbus_2018()) {
+    mutable_cloudflare_nimbus_2018()->::zsearch::CTServerStatus::MergeFrom(from.cloudflare_nimbus_2018());
+  }
+  if (from.has_cloudflare_nimbus_2019()) {
+    mutable_cloudflare_nimbus_2019()->::zsearch::CTServerStatus::MergeFrom(from.cloudflare_nimbus_2019());
+  }
+  if (from.has_cloudflare_nimbus_2020()) {
+    mutable_cloudflare_nimbus_2020()->::zsearch::CTServerStatus::MergeFrom(from.cloudflare_nimbus_2020());
+  }
+  if (from.has_cloudflare_nimbus_2021()) {
+    mutable_cloudflare_nimbus_2021()->::zsearch::CTServerStatus::MergeFrom(from.cloudflare_nimbus_2021());
+  }
   if (from.has_digicert_ct1()) {
     mutable_digicert_ct1()->::zsearch::CTServerStatus::MergeFrom(from.digicert_ct1());
   }
@@ -2978,11 +3510,23 @@ void CTStatus::MergeFrom(const CTStatus& from) {
   if (from.has_wosign_ct()) {
     mutable_wosign_ct()->::zsearch::CTServerStatus::MergeFrom(from.wosign_ct());
   }
+  if (from.has_wotrus_ctlog()) {
+    mutable_wotrus_ctlog()->::zsearch::CTServerStatus::MergeFrom(from.wotrus_ctlog());
+  }
+  if (from.has_wotrus_ctlog3()) {
+    mutable_wotrus_ctlog3()->::zsearch::CTServerStatus::MergeFrom(from.wotrus_ctlog3());
+  }
   if (from.has_gdca_ct()) {
     mutable_gdca_ct()->::zsearch::CTServerStatus::MergeFrom(from.gdca_ct());
   }
   if (from.has_gdca_ctlog()) {
     mutable_gdca_ctlog()->::zsearch::CTServerStatus::MergeFrom(from.gdca_ctlog());
+  }
+  if (from.has_gdca_log()) {
+    mutable_gdca_log()->::zsearch::CTServerStatus::MergeFrom(from.gdca_log());
+  }
+  if (from.has_gdca_log2()) {
+    mutable_gdca_log2()->::zsearch::CTServerStatus::MergeFrom(from.gdca_log2());
   }
   if (from.has_venafi_api_ctlog()) {
     mutable_venafi_api_ctlog()->::zsearch::CTServerStatus::MergeFrom(from.venafi_api_ctlog());
@@ -2992,6 +3536,9 @@ void CTStatus::MergeFrom(const CTStatus& from) {
   }
   if (from.has_nordu_ct_plausible()) {
     mutable_nordu_ct_plausible()->::zsearch::CTServerStatus::MergeFrom(from.nordu_ct_plausible());
+  }
+  if (from.has_letsencrypt_ct_clicky()) {
+    mutable_letsencrypt_ct_clicky()->::zsearch::CTServerStatus::MergeFrom(from.letsencrypt_ct_clicky());
   }
   if (from.has_cnnic_ctserver()) {
     mutable_cnnic_ctserver()->::zsearch::CTServerStatus::MergeFrom(from.cnnic_ctserver());
@@ -3005,26 +3552,11 @@ void CTStatus::MergeFrom(const CTStatus& from) {
   if (from.has_sheca_ct()) {
     mutable_sheca_ct()->::zsearch::CTServerStatus::MergeFrom(from.sheca_ct());
   }
+  if (from.has_behind_the_sofa()) {
+    mutable_behind_the_sofa()->::zsearch::CTServerStatus::MergeFrom(from.behind_the_sofa());
+  }
   if (from.has_certificatetransparency_cn_ct()) {
     mutable_certificatetransparency_cn_ct()->::zsearch::CTServerStatus::MergeFrom(from.certificatetransparency_cn_ct());
-  }
-  if (from.has_letsencrypt_ct_clicky()) {
-    mutable_letsencrypt_ct_clicky()->::zsearch::CTServerStatus::MergeFrom(from.letsencrypt_ct_clicky());
-  }
-  if (from.has_google_argon2017()) {
-    mutable_google_argon2017()->::zsearch::CTServerStatus::MergeFrom(from.google_argon2017());
-  }
-  if (from.has_google_argon2018()) {
-    mutable_google_argon2018()->::zsearch::CTServerStatus::MergeFrom(from.google_argon2018());
-  }
-  if (from.has_google_argon2019()) {
-    mutable_google_argon2019()->::zsearch::CTServerStatus::MergeFrom(from.google_argon2019());
-  }
-  if (from.has_google_argon2020()) {
-    mutable_google_argon2020()->::zsearch::CTServerStatus::MergeFrom(from.google_argon2020());
-  }
-  if (from.has_google_argon2021()) {
-    mutable_google_argon2021()->::zsearch::CTServerStatus::MergeFrom(from.google_argon2021());
   }
 }
 
@@ -3061,6 +3593,16 @@ void CTStatus::InternalSwap(CTStatus* other) {
   std::swap(google_icarus_, other->google_icarus_);
   std::swap(google_skydiver_, other->google_skydiver_);
   std::swap(google_daedalus_, other->google_daedalus_);
+  std::swap(google_argon_2017_, other->google_argon_2017_);
+  std::swap(google_argon_2018_, other->google_argon_2018_);
+  std::swap(google_argon_2019_, other->google_argon_2019_);
+  std::swap(google_argon_2020_, other->google_argon_2020_);
+  std::swap(google_argon_2021_, other->google_argon_2021_);
+  std::swap(cloudflare_nimbus_2017_, other->cloudflare_nimbus_2017_);
+  std::swap(cloudflare_nimbus_2018_, other->cloudflare_nimbus_2018_);
+  std::swap(cloudflare_nimbus_2019_, other->cloudflare_nimbus_2019_);
+  std::swap(cloudflare_nimbus_2020_, other->cloudflare_nimbus_2020_);
+  std::swap(cloudflare_nimbus_2021_, other->cloudflare_nimbus_2021_);
   std::swap(digicert_ct1_, other->digicert_ct1_);
   std::swap(digicert_ct2_, other->digicert_ct2_);
   std::swap(izenpe_com_ct_, other->izenpe_com_ct_);
@@ -3074,22 +3616,22 @@ void CTStatus::InternalSwap(CTStatus* other) {
   std::swap(comodo_sabre_, other->comodo_sabre_);
   std::swap(wosign_ctlog_, other->wosign_ctlog_);
   std::swap(wosign_ct_, other->wosign_ct_);
+  std::swap(wotrus_ctlog_, other->wotrus_ctlog_);
+  std::swap(wotrus_ctlog3_, other->wotrus_ctlog3_);
   std::swap(gdca_ct_, other->gdca_ct_);
   std::swap(gdca_ctlog_, other->gdca_ctlog_);
+  std::swap(gdca_log_, other->gdca_log_);
+  std::swap(gdca_log2_, other->gdca_log2_);
   std::swap(venafi_api_ctlog_, other->venafi_api_ctlog_);
   std::swap(venafi_api_ctlog_gen2_, other->venafi_api_ctlog_gen2_);
   std::swap(nordu_ct_plausible_, other->nordu_ct_plausible_);
+  std::swap(letsencrypt_ct_clicky_, other->letsencrypt_ct_clicky_);
   std::swap(cnnic_ctserver_, other->cnnic_ctserver_);
   std::swap(startssl_ct_, other->startssl_ct_);
   std::swap(certly_log_, other->certly_log_);
   std::swap(sheca_ct_, other->sheca_ct_);
+  std::swap(behind_the_sofa_, other->behind_the_sofa_);
   std::swap(certificatetransparency_cn_ct_, other->certificatetransparency_cn_ct_);
-  std::swap(letsencrypt_ct_clicky_, other->letsencrypt_ct_clicky_);
-  std::swap(google_argon2017_, other->google_argon2017_);
-  std::swap(google_argon2018_, other->google_argon2018_);
-  std::swap(google_argon2019_, other->google_argon2019_);
-  std::swap(google_argon2020_, other->google_argon2020_);
-  std::swap(google_argon2021_, other->google_argon2021_);
   std::swap(_cached_size_, other->_cached_size_);
 }
 
@@ -3489,6 +4031,396 @@ void CTStatus::set_allocated_google_daedalus(::zsearch::CTServerStatus* google_d
     
   }
   // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.google_daedalus)
+}
+
+// .zsearch.CTServerStatus google_argon_2017 = 50;
+bool CTStatus::has_google_argon_2017() const {
+  return this != internal_default_instance() && google_argon_2017_ != NULL;
+}
+void CTStatus::clear_google_argon_2017() {
+  if (GetArenaNoVirtual() == NULL && google_argon_2017_ != NULL) delete google_argon_2017_;
+  google_argon_2017_ = NULL;
+}
+const ::zsearch::CTServerStatus& CTStatus::google_argon_2017() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.google_argon_2017)
+  return google_argon_2017_ != NULL ? *google_argon_2017_
+                         : *::zsearch::CTServerStatus::internal_default_instance();
+}
+::zsearch::CTServerStatus* CTStatus::mutable_google_argon_2017() {
+  
+  if (google_argon_2017_ == NULL) {
+    google_argon_2017_ = new ::zsearch::CTServerStatus;
+  }
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.google_argon_2017)
+  return google_argon_2017_;
+}
+::zsearch::CTServerStatus* CTStatus::release_google_argon_2017() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.google_argon_2017)
+  
+  ::zsearch::CTServerStatus* temp = google_argon_2017_;
+  google_argon_2017_ = NULL;
+  return temp;
+}
+void CTStatus::set_allocated_google_argon_2017(::zsearch::CTServerStatus* google_argon_2017) {
+  delete google_argon_2017_;
+  google_argon_2017_ = google_argon_2017;
+  if (google_argon_2017) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.google_argon_2017)
+}
+
+// .zsearch.CTServerStatus google_argon_2018 = 51;
+bool CTStatus::has_google_argon_2018() const {
+  return this != internal_default_instance() && google_argon_2018_ != NULL;
+}
+void CTStatus::clear_google_argon_2018() {
+  if (GetArenaNoVirtual() == NULL && google_argon_2018_ != NULL) delete google_argon_2018_;
+  google_argon_2018_ = NULL;
+}
+const ::zsearch::CTServerStatus& CTStatus::google_argon_2018() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.google_argon_2018)
+  return google_argon_2018_ != NULL ? *google_argon_2018_
+                         : *::zsearch::CTServerStatus::internal_default_instance();
+}
+::zsearch::CTServerStatus* CTStatus::mutable_google_argon_2018() {
+  
+  if (google_argon_2018_ == NULL) {
+    google_argon_2018_ = new ::zsearch::CTServerStatus;
+  }
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.google_argon_2018)
+  return google_argon_2018_;
+}
+::zsearch::CTServerStatus* CTStatus::release_google_argon_2018() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.google_argon_2018)
+  
+  ::zsearch::CTServerStatus* temp = google_argon_2018_;
+  google_argon_2018_ = NULL;
+  return temp;
+}
+void CTStatus::set_allocated_google_argon_2018(::zsearch::CTServerStatus* google_argon_2018) {
+  delete google_argon_2018_;
+  google_argon_2018_ = google_argon_2018;
+  if (google_argon_2018) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.google_argon_2018)
+}
+
+// .zsearch.CTServerStatus google_argon_2019 = 52;
+bool CTStatus::has_google_argon_2019() const {
+  return this != internal_default_instance() && google_argon_2019_ != NULL;
+}
+void CTStatus::clear_google_argon_2019() {
+  if (GetArenaNoVirtual() == NULL && google_argon_2019_ != NULL) delete google_argon_2019_;
+  google_argon_2019_ = NULL;
+}
+const ::zsearch::CTServerStatus& CTStatus::google_argon_2019() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.google_argon_2019)
+  return google_argon_2019_ != NULL ? *google_argon_2019_
+                         : *::zsearch::CTServerStatus::internal_default_instance();
+}
+::zsearch::CTServerStatus* CTStatus::mutable_google_argon_2019() {
+  
+  if (google_argon_2019_ == NULL) {
+    google_argon_2019_ = new ::zsearch::CTServerStatus;
+  }
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.google_argon_2019)
+  return google_argon_2019_;
+}
+::zsearch::CTServerStatus* CTStatus::release_google_argon_2019() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.google_argon_2019)
+  
+  ::zsearch::CTServerStatus* temp = google_argon_2019_;
+  google_argon_2019_ = NULL;
+  return temp;
+}
+void CTStatus::set_allocated_google_argon_2019(::zsearch::CTServerStatus* google_argon_2019) {
+  delete google_argon_2019_;
+  google_argon_2019_ = google_argon_2019;
+  if (google_argon_2019) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.google_argon_2019)
+}
+
+// .zsearch.CTServerStatus google_argon_2020 = 53;
+bool CTStatus::has_google_argon_2020() const {
+  return this != internal_default_instance() && google_argon_2020_ != NULL;
+}
+void CTStatus::clear_google_argon_2020() {
+  if (GetArenaNoVirtual() == NULL && google_argon_2020_ != NULL) delete google_argon_2020_;
+  google_argon_2020_ = NULL;
+}
+const ::zsearch::CTServerStatus& CTStatus::google_argon_2020() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.google_argon_2020)
+  return google_argon_2020_ != NULL ? *google_argon_2020_
+                         : *::zsearch::CTServerStatus::internal_default_instance();
+}
+::zsearch::CTServerStatus* CTStatus::mutable_google_argon_2020() {
+  
+  if (google_argon_2020_ == NULL) {
+    google_argon_2020_ = new ::zsearch::CTServerStatus;
+  }
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.google_argon_2020)
+  return google_argon_2020_;
+}
+::zsearch::CTServerStatus* CTStatus::release_google_argon_2020() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.google_argon_2020)
+  
+  ::zsearch::CTServerStatus* temp = google_argon_2020_;
+  google_argon_2020_ = NULL;
+  return temp;
+}
+void CTStatus::set_allocated_google_argon_2020(::zsearch::CTServerStatus* google_argon_2020) {
+  delete google_argon_2020_;
+  google_argon_2020_ = google_argon_2020;
+  if (google_argon_2020) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.google_argon_2020)
+}
+
+// .zsearch.CTServerStatus google_argon_2021 = 54;
+bool CTStatus::has_google_argon_2021() const {
+  return this != internal_default_instance() && google_argon_2021_ != NULL;
+}
+void CTStatus::clear_google_argon_2021() {
+  if (GetArenaNoVirtual() == NULL && google_argon_2021_ != NULL) delete google_argon_2021_;
+  google_argon_2021_ = NULL;
+}
+const ::zsearch::CTServerStatus& CTStatus::google_argon_2021() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.google_argon_2021)
+  return google_argon_2021_ != NULL ? *google_argon_2021_
+                         : *::zsearch::CTServerStatus::internal_default_instance();
+}
+::zsearch::CTServerStatus* CTStatus::mutable_google_argon_2021() {
+  
+  if (google_argon_2021_ == NULL) {
+    google_argon_2021_ = new ::zsearch::CTServerStatus;
+  }
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.google_argon_2021)
+  return google_argon_2021_;
+}
+::zsearch::CTServerStatus* CTStatus::release_google_argon_2021() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.google_argon_2021)
+  
+  ::zsearch::CTServerStatus* temp = google_argon_2021_;
+  google_argon_2021_ = NULL;
+  return temp;
+}
+void CTStatus::set_allocated_google_argon_2021(::zsearch::CTServerStatus* google_argon_2021) {
+  delete google_argon_2021_;
+  google_argon_2021_ = google_argon_2021;
+  if (google_argon_2021) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.google_argon_2021)
+}
+
+// .zsearch.CTServerStatus cloudflare_nimbus_2017 = 60;
+bool CTStatus::has_cloudflare_nimbus_2017() const {
+  return this != internal_default_instance() && cloudflare_nimbus_2017_ != NULL;
+}
+void CTStatus::clear_cloudflare_nimbus_2017() {
+  if (GetArenaNoVirtual() == NULL && cloudflare_nimbus_2017_ != NULL) delete cloudflare_nimbus_2017_;
+  cloudflare_nimbus_2017_ = NULL;
+}
+const ::zsearch::CTServerStatus& CTStatus::cloudflare_nimbus_2017() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.cloudflare_nimbus_2017)
+  return cloudflare_nimbus_2017_ != NULL ? *cloudflare_nimbus_2017_
+                         : *::zsearch::CTServerStatus::internal_default_instance();
+}
+::zsearch::CTServerStatus* CTStatus::mutable_cloudflare_nimbus_2017() {
+  
+  if (cloudflare_nimbus_2017_ == NULL) {
+    cloudflare_nimbus_2017_ = new ::zsearch::CTServerStatus;
+  }
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.cloudflare_nimbus_2017)
+  return cloudflare_nimbus_2017_;
+}
+::zsearch::CTServerStatus* CTStatus::release_cloudflare_nimbus_2017() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.cloudflare_nimbus_2017)
+  
+  ::zsearch::CTServerStatus* temp = cloudflare_nimbus_2017_;
+  cloudflare_nimbus_2017_ = NULL;
+  return temp;
+}
+void CTStatus::set_allocated_cloudflare_nimbus_2017(::zsearch::CTServerStatus* cloudflare_nimbus_2017) {
+  delete cloudflare_nimbus_2017_;
+  cloudflare_nimbus_2017_ = cloudflare_nimbus_2017;
+  if (cloudflare_nimbus_2017) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.cloudflare_nimbus_2017)
+}
+
+// .zsearch.CTServerStatus cloudflare_nimbus_2018 = 61;
+bool CTStatus::has_cloudflare_nimbus_2018() const {
+  return this != internal_default_instance() && cloudflare_nimbus_2018_ != NULL;
+}
+void CTStatus::clear_cloudflare_nimbus_2018() {
+  if (GetArenaNoVirtual() == NULL && cloudflare_nimbus_2018_ != NULL) delete cloudflare_nimbus_2018_;
+  cloudflare_nimbus_2018_ = NULL;
+}
+const ::zsearch::CTServerStatus& CTStatus::cloudflare_nimbus_2018() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.cloudflare_nimbus_2018)
+  return cloudflare_nimbus_2018_ != NULL ? *cloudflare_nimbus_2018_
+                         : *::zsearch::CTServerStatus::internal_default_instance();
+}
+::zsearch::CTServerStatus* CTStatus::mutable_cloudflare_nimbus_2018() {
+  
+  if (cloudflare_nimbus_2018_ == NULL) {
+    cloudflare_nimbus_2018_ = new ::zsearch::CTServerStatus;
+  }
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.cloudflare_nimbus_2018)
+  return cloudflare_nimbus_2018_;
+}
+::zsearch::CTServerStatus* CTStatus::release_cloudflare_nimbus_2018() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.cloudflare_nimbus_2018)
+  
+  ::zsearch::CTServerStatus* temp = cloudflare_nimbus_2018_;
+  cloudflare_nimbus_2018_ = NULL;
+  return temp;
+}
+void CTStatus::set_allocated_cloudflare_nimbus_2018(::zsearch::CTServerStatus* cloudflare_nimbus_2018) {
+  delete cloudflare_nimbus_2018_;
+  cloudflare_nimbus_2018_ = cloudflare_nimbus_2018;
+  if (cloudflare_nimbus_2018) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.cloudflare_nimbus_2018)
+}
+
+// .zsearch.CTServerStatus cloudflare_nimbus_2019 = 62;
+bool CTStatus::has_cloudflare_nimbus_2019() const {
+  return this != internal_default_instance() && cloudflare_nimbus_2019_ != NULL;
+}
+void CTStatus::clear_cloudflare_nimbus_2019() {
+  if (GetArenaNoVirtual() == NULL && cloudflare_nimbus_2019_ != NULL) delete cloudflare_nimbus_2019_;
+  cloudflare_nimbus_2019_ = NULL;
+}
+const ::zsearch::CTServerStatus& CTStatus::cloudflare_nimbus_2019() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.cloudflare_nimbus_2019)
+  return cloudflare_nimbus_2019_ != NULL ? *cloudflare_nimbus_2019_
+                         : *::zsearch::CTServerStatus::internal_default_instance();
+}
+::zsearch::CTServerStatus* CTStatus::mutable_cloudflare_nimbus_2019() {
+  
+  if (cloudflare_nimbus_2019_ == NULL) {
+    cloudflare_nimbus_2019_ = new ::zsearch::CTServerStatus;
+  }
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.cloudflare_nimbus_2019)
+  return cloudflare_nimbus_2019_;
+}
+::zsearch::CTServerStatus* CTStatus::release_cloudflare_nimbus_2019() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.cloudflare_nimbus_2019)
+  
+  ::zsearch::CTServerStatus* temp = cloudflare_nimbus_2019_;
+  cloudflare_nimbus_2019_ = NULL;
+  return temp;
+}
+void CTStatus::set_allocated_cloudflare_nimbus_2019(::zsearch::CTServerStatus* cloudflare_nimbus_2019) {
+  delete cloudflare_nimbus_2019_;
+  cloudflare_nimbus_2019_ = cloudflare_nimbus_2019;
+  if (cloudflare_nimbus_2019) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.cloudflare_nimbus_2019)
+}
+
+// .zsearch.CTServerStatus cloudflare_nimbus_2020 = 63;
+bool CTStatus::has_cloudflare_nimbus_2020() const {
+  return this != internal_default_instance() && cloudflare_nimbus_2020_ != NULL;
+}
+void CTStatus::clear_cloudflare_nimbus_2020() {
+  if (GetArenaNoVirtual() == NULL && cloudflare_nimbus_2020_ != NULL) delete cloudflare_nimbus_2020_;
+  cloudflare_nimbus_2020_ = NULL;
+}
+const ::zsearch::CTServerStatus& CTStatus::cloudflare_nimbus_2020() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.cloudflare_nimbus_2020)
+  return cloudflare_nimbus_2020_ != NULL ? *cloudflare_nimbus_2020_
+                         : *::zsearch::CTServerStatus::internal_default_instance();
+}
+::zsearch::CTServerStatus* CTStatus::mutable_cloudflare_nimbus_2020() {
+  
+  if (cloudflare_nimbus_2020_ == NULL) {
+    cloudflare_nimbus_2020_ = new ::zsearch::CTServerStatus;
+  }
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.cloudflare_nimbus_2020)
+  return cloudflare_nimbus_2020_;
+}
+::zsearch::CTServerStatus* CTStatus::release_cloudflare_nimbus_2020() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.cloudflare_nimbus_2020)
+  
+  ::zsearch::CTServerStatus* temp = cloudflare_nimbus_2020_;
+  cloudflare_nimbus_2020_ = NULL;
+  return temp;
+}
+void CTStatus::set_allocated_cloudflare_nimbus_2020(::zsearch::CTServerStatus* cloudflare_nimbus_2020) {
+  delete cloudflare_nimbus_2020_;
+  cloudflare_nimbus_2020_ = cloudflare_nimbus_2020;
+  if (cloudflare_nimbus_2020) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.cloudflare_nimbus_2020)
+}
+
+// .zsearch.CTServerStatus cloudflare_nimbus_2021 = 64;
+bool CTStatus::has_cloudflare_nimbus_2021() const {
+  return this != internal_default_instance() && cloudflare_nimbus_2021_ != NULL;
+}
+void CTStatus::clear_cloudflare_nimbus_2021() {
+  if (GetArenaNoVirtual() == NULL && cloudflare_nimbus_2021_ != NULL) delete cloudflare_nimbus_2021_;
+  cloudflare_nimbus_2021_ = NULL;
+}
+const ::zsearch::CTServerStatus& CTStatus::cloudflare_nimbus_2021() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.cloudflare_nimbus_2021)
+  return cloudflare_nimbus_2021_ != NULL ? *cloudflare_nimbus_2021_
+                         : *::zsearch::CTServerStatus::internal_default_instance();
+}
+::zsearch::CTServerStatus* CTStatus::mutable_cloudflare_nimbus_2021() {
+  
+  if (cloudflare_nimbus_2021_ == NULL) {
+    cloudflare_nimbus_2021_ = new ::zsearch::CTServerStatus;
+  }
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.cloudflare_nimbus_2021)
+  return cloudflare_nimbus_2021_;
+}
+::zsearch::CTServerStatus* CTStatus::release_cloudflare_nimbus_2021() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.cloudflare_nimbus_2021)
+  
+  ::zsearch::CTServerStatus* temp = cloudflare_nimbus_2021_;
+  cloudflare_nimbus_2021_ = NULL;
+  return temp;
+}
+void CTStatus::set_allocated_cloudflare_nimbus_2021(::zsearch::CTServerStatus* cloudflare_nimbus_2021) {
+  delete cloudflare_nimbus_2021_;
+  cloudflare_nimbus_2021_ = cloudflare_nimbus_2021;
+  if (cloudflare_nimbus_2021) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.cloudflare_nimbus_2021)
 }
 
 // .zsearch.CTServerStatus digicert_ct1 = 20;
@@ -3998,6 +4930,84 @@ void CTStatus::set_allocated_wosign_ct(::zsearch::CTServerStatus* wosign_ct) {
   // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.wosign_ct)
 }
 
+// .zsearch.CTServerStatus wotrus_ctlog = 47;
+bool CTStatus::has_wotrus_ctlog() const {
+  return this != internal_default_instance() && wotrus_ctlog_ != NULL;
+}
+void CTStatus::clear_wotrus_ctlog() {
+  if (GetArenaNoVirtual() == NULL && wotrus_ctlog_ != NULL) delete wotrus_ctlog_;
+  wotrus_ctlog_ = NULL;
+}
+const ::zsearch::CTServerStatus& CTStatus::wotrus_ctlog() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.wotrus_ctlog)
+  return wotrus_ctlog_ != NULL ? *wotrus_ctlog_
+                         : *::zsearch::CTServerStatus::internal_default_instance();
+}
+::zsearch::CTServerStatus* CTStatus::mutable_wotrus_ctlog() {
+  
+  if (wotrus_ctlog_ == NULL) {
+    wotrus_ctlog_ = new ::zsearch::CTServerStatus;
+  }
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.wotrus_ctlog)
+  return wotrus_ctlog_;
+}
+::zsearch::CTServerStatus* CTStatus::release_wotrus_ctlog() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.wotrus_ctlog)
+  
+  ::zsearch::CTServerStatus* temp = wotrus_ctlog_;
+  wotrus_ctlog_ = NULL;
+  return temp;
+}
+void CTStatus::set_allocated_wotrus_ctlog(::zsearch::CTServerStatus* wotrus_ctlog) {
+  delete wotrus_ctlog_;
+  wotrus_ctlog_ = wotrus_ctlog;
+  if (wotrus_ctlog) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.wotrus_ctlog)
+}
+
+// .zsearch.CTServerStatus wotrus_ctlog3 = 48;
+bool CTStatus::has_wotrus_ctlog3() const {
+  return this != internal_default_instance() && wotrus_ctlog3_ != NULL;
+}
+void CTStatus::clear_wotrus_ctlog3() {
+  if (GetArenaNoVirtual() == NULL && wotrus_ctlog3_ != NULL) delete wotrus_ctlog3_;
+  wotrus_ctlog3_ = NULL;
+}
+const ::zsearch::CTServerStatus& CTStatus::wotrus_ctlog3() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.wotrus_ctlog3)
+  return wotrus_ctlog3_ != NULL ? *wotrus_ctlog3_
+                         : *::zsearch::CTServerStatus::internal_default_instance();
+}
+::zsearch::CTServerStatus* CTStatus::mutable_wotrus_ctlog3() {
+  
+  if (wotrus_ctlog3_ == NULL) {
+    wotrus_ctlog3_ = new ::zsearch::CTServerStatus;
+  }
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.wotrus_ctlog3)
+  return wotrus_ctlog3_;
+}
+::zsearch::CTServerStatus* CTStatus::release_wotrus_ctlog3() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.wotrus_ctlog3)
+  
+  ::zsearch::CTServerStatus* temp = wotrus_ctlog3_;
+  wotrus_ctlog3_ = NULL;
+  return temp;
+}
+void CTStatus::set_allocated_wotrus_ctlog3(::zsearch::CTServerStatus* wotrus_ctlog3) {
+  delete wotrus_ctlog3_;
+  wotrus_ctlog3_ = wotrus_ctlog3;
+  if (wotrus_ctlog3) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.wotrus_ctlog3)
+}
+
 // .zsearch.CTServerStatus gdca_ct = 28;
 bool CTStatus::has_gdca_ct() const {
   return this != internal_default_instance() && gdca_ct_ != NULL;
@@ -4074,6 +5084,84 @@ void CTStatus::set_allocated_gdca_ctlog(::zsearch::CTServerStatus* gdca_ctlog) {
     
   }
   // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.gdca_ctlog)
+}
+
+// .zsearch.CTServerStatus gdca_log = 45;
+bool CTStatus::has_gdca_log() const {
+  return this != internal_default_instance() && gdca_log_ != NULL;
+}
+void CTStatus::clear_gdca_log() {
+  if (GetArenaNoVirtual() == NULL && gdca_log_ != NULL) delete gdca_log_;
+  gdca_log_ = NULL;
+}
+const ::zsearch::CTServerStatus& CTStatus::gdca_log() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.gdca_log)
+  return gdca_log_ != NULL ? *gdca_log_
+                         : *::zsearch::CTServerStatus::internal_default_instance();
+}
+::zsearch::CTServerStatus* CTStatus::mutable_gdca_log() {
+  
+  if (gdca_log_ == NULL) {
+    gdca_log_ = new ::zsearch::CTServerStatus;
+  }
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.gdca_log)
+  return gdca_log_;
+}
+::zsearch::CTServerStatus* CTStatus::release_gdca_log() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.gdca_log)
+  
+  ::zsearch::CTServerStatus* temp = gdca_log_;
+  gdca_log_ = NULL;
+  return temp;
+}
+void CTStatus::set_allocated_gdca_log(::zsearch::CTServerStatus* gdca_log) {
+  delete gdca_log_;
+  gdca_log_ = gdca_log;
+  if (gdca_log) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.gdca_log)
+}
+
+// .zsearch.CTServerStatus gdca_log2 = 46;
+bool CTStatus::has_gdca_log2() const {
+  return this != internal_default_instance() && gdca_log2_ != NULL;
+}
+void CTStatus::clear_gdca_log2() {
+  if (GetArenaNoVirtual() == NULL && gdca_log2_ != NULL) delete gdca_log2_;
+  gdca_log2_ = NULL;
+}
+const ::zsearch::CTServerStatus& CTStatus::gdca_log2() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.gdca_log2)
+  return gdca_log2_ != NULL ? *gdca_log2_
+                         : *::zsearch::CTServerStatus::internal_default_instance();
+}
+::zsearch::CTServerStatus* CTStatus::mutable_gdca_log2() {
+  
+  if (gdca_log2_ == NULL) {
+    gdca_log2_ = new ::zsearch::CTServerStatus;
+  }
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.gdca_log2)
+  return gdca_log2_;
+}
+::zsearch::CTServerStatus* CTStatus::release_gdca_log2() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.gdca_log2)
+  
+  ::zsearch::CTServerStatus* temp = gdca_log2_;
+  gdca_log2_ = NULL;
+  return temp;
+}
+void CTStatus::set_allocated_gdca_log2(::zsearch::CTServerStatus* gdca_log2) {
+  delete gdca_log2_;
+  gdca_log2_ = gdca_log2;
+  if (gdca_log2) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.gdca_log2)
 }
 
 // .zsearch.CTServerStatus venafi_api_ctlog = 31;
@@ -4191,6 +5279,45 @@ void CTStatus::set_allocated_nordu_ct_plausible(::zsearch::CTServerStatus* nordu
     
   }
   // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.nordu_ct_plausible)
+}
+
+// .zsearch.CTServerStatus letsencrypt_ct_clicky = 43;
+bool CTStatus::has_letsencrypt_ct_clicky() const {
+  return this != internal_default_instance() && letsencrypt_ct_clicky_ != NULL;
+}
+void CTStatus::clear_letsencrypt_ct_clicky() {
+  if (GetArenaNoVirtual() == NULL && letsencrypt_ct_clicky_ != NULL) delete letsencrypt_ct_clicky_;
+  letsencrypt_ct_clicky_ = NULL;
+}
+const ::zsearch::CTServerStatus& CTStatus::letsencrypt_ct_clicky() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.letsencrypt_ct_clicky)
+  return letsencrypt_ct_clicky_ != NULL ? *letsencrypt_ct_clicky_
+                         : *::zsearch::CTServerStatus::internal_default_instance();
+}
+::zsearch::CTServerStatus* CTStatus::mutable_letsencrypt_ct_clicky() {
+  
+  if (letsencrypt_ct_clicky_ == NULL) {
+    letsencrypt_ct_clicky_ = new ::zsearch::CTServerStatus;
+  }
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.letsencrypt_ct_clicky)
+  return letsencrypt_ct_clicky_;
+}
+::zsearch::CTServerStatus* CTStatus::release_letsencrypt_ct_clicky() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.letsencrypt_ct_clicky)
+  
+  ::zsearch::CTServerStatus* temp = letsencrypt_ct_clicky_;
+  letsencrypt_ct_clicky_ = NULL;
+  return temp;
+}
+void CTStatus::set_allocated_letsencrypt_ct_clicky(::zsearch::CTServerStatus* letsencrypt_ct_clicky) {
+  delete letsencrypt_ct_clicky_;
+  letsencrypt_ct_clicky_ = letsencrypt_ct_clicky;
+  if (letsencrypt_ct_clicky) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.letsencrypt_ct_clicky)
 }
 
 // .zsearch.CTServerStatus cnnic_ctserver = 27;
@@ -4349,6 +5476,45 @@ void CTStatus::set_allocated_sheca_ct(::zsearch::CTServerStatus* sheca_ct) {
   // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.sheca_ct)
 }
 
+// .zsearch.CTServerStatus behind_the_sofa = 44;
+bool CTStatus::has_behind_the_sofa() const {
+  return this != internal_default_instance() && behind_the_sofa_ != NULL;
+}
+void CTStatus::clear_behind_the_sofa() {
+  if (GetArenaNoVirtual() == NULL && behind_the_sofa_ != NULL) delete behind_the_sofa_;
+  behind_the_sofa_ = NULL;
+}
+const ::zsearch::CTServerStatus& CTStatus::behind_the_sofa() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.behind_the_sofa)
+  return behind_the_sofa_ != NULL ? *behind_the_sofa_
+                         : *::zsearch::CTServerStatus::internal_default_instance();
+}
+::zsearch::CTServerStatus* CTStatus::mutable_behind_the_sofa() {
+  
+  if (behind_the_sofa_ == NULL) {
+    behind_the_sofa_ = new ::zsearch::CTServerStatus;
+  }
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.behind_the_sofa)
+  return behind_the_sofa_;
+}
+::zsearch::CTServerStatus* CTStatus::release_behind_the_sofa() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.behind_the_sofa)
+  
+  ::zsearch::CTServerStatus* temp = behind_the_sofa_;
+  behind_the_sofa_ = NULL;
+  return temp;
+}
+void CTStatus::set_allocated_behind_the_sofa(::zsearch::CTServerStatus* behind_the_sofa) {
+  delete behind_the_sofa_;
+  behind_the_sofa_ = behind_the_sofa;
+  if (behind_the_sofa) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.behind_the_sofa)
+}
+
 // .zsearch.CTServerStatus certificatetransparency_cn_ct = 38;
 bool CTStatus::has_certificatetransparency_cn_ct() const {
   return this != internal_default_instance() && certificatetransparency_cn_ct_ != NULL;
@@ -4386,240 +5552,6 @@ void CTStatus::set_allocated_certificatetransparency_cn_ct(::zsearch::CTServerSt
     
   }
   // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.certificatetransparency_cn_ct)
-}
-
-// .zsearch.CTServerStatus letsencrypt_ct_clicky = 43;
-bool CTStatus::has_letsencrypt_ct_clicky() const {
-  return this != internal_default_instance() && letsencrypt_ct_clicky_ != NULL;
-}
-void CTStatus::clear_letsencrypt_ct_clicky() {
-  if (GetArenaNoVirtual() == NULL && letsencrypt_ct_clicky_ != NULL) delete letsencrypt_ct_clicky_;
-  letsencrypt_ct_clicky_ = NULL;
-}
-const ::zsearch::CTServerStatus& CTStatus::letsencrypt_ct_clicky() const {
-  // @@protoc_insertion_point(field_get:zsearch.CTStatus.letsencrypt_ct_clicky)
-  return letsencrypt_ct_clicky_ != NULL ? *letsencrypt_ct_clicky_
-                         : *::zsearch::CTServerStatus::internal_default_instance();
-}
-::zsearch::CTServerStatus* CTStatus::mutable_letsencrypt_ct_clicky() {
-  
-  if (letsencrypt_ct_clicky_ == NULL) {
-    letsencrypt_ct_clicky_ = new ::zsearch::CTServerStatus;
-  }
-  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.letsencrypt_ct_clicky)
-  return letsencrypt_ct_clicky_;
-}
-::zsearch::CTServerStatus* CTStatus::release_letsencrypt_ct_clicky() {
-  // @@protoc_insertion_point(field_release:zsearch.CTStatus.letsencrypt_ct_clicky)
-  
-  ::zsearch::CTServerStatus* temp = letsencrypt_ct_clicky_;
-  letsencrypt_ct_clicky_ = NULL;
-  return temp;
-}
-void CTStatus::set_allocated_letsencrypt_ct_clicky(::zsearch::CTServerStatus* letsencrypt_ct_clicky) {
-  delete letsencrypt_ct_clicky_;
-  letsencrypt_ct_clicky_ = letsencrypt_ct_clicky;
-  if (letsencrypt_ct_clicky) {
-    
-  } else {
-    
-  }
-  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.letsencrypt_ct_clicky)
-}
-
-// .zsearch.CTServerStatus google_argon2017 = 50;
-bool CTStatus::has_google_argon2017() const {
-  return this != internal_default_instance() && google_argon2017_ != NULL;
-}
-void CTStatus::clear_google_argon2017() {
-  if (GetArenaNoVirtual() == NULL && google_argon2017_ != NULL) delete google_argon2017_;
-  google_argon2017_ = NULL;
-}
-const ::zsearch::CTServerStatus& CTStatus::google_argon2017() const {
-  // @@protoc_insertion_point(field_get:zsearch.CTStatus.google_argon2017)
-  return google_argon2017_ != NULL ? *google_argon2017_
-                         : *::zsearch::CTServerStatus::internal_default_instance();
-}
-::zsearch::CTServerStatus* CTStatus::mutable_google_argon2017() {
-  
-  if (google_argon2017_ == NULL) {
-    google_argon2017_ = new ::zsearch::CTServerStatus;
-  }
-  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.google_argon2017)
-  return google_argon2017_;
-}
-::zsearch::CTServerStatus* CTStatus::release_google_argon2017() {
-  // @@protoc_insertion_point(field_release:zsearch.CTStatus.google_argon2017)
-  
-  ::zsearch::CTServerStatus* temp = google_argon2017_;
-  google_argon2017_ = NULL;
-  return temp;
-}
-void CTStatus::set_allocated_google_argon2017(::zsearch::CTServerStatus* google_argon2017) {
-  delete google_argon2017_;
-  google_argon2017_ = google_argon2017;
-  if (google_argon2017) {
-    
-  } else {
-    
-  }
-  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.google_argon2017)
-}
-
-// .zsearch.CTServerStatus google_argon2018 = 51;
-bool CTStatus::has_google_argon2018() const {
-  return this != internal_default_instance() && google_argon2018_ != NULL;
-}
-void CTStatus::clear_google_argon2018() {
-  if (GetArenaNoVirtual() == NULL && google_argon2018_ != NULL) delete google_argon2018_;
-  google_argon2018_ = NULL;
-}
-const ::zsearch::CTServerStatus& CTStatus::google_argon2018() const {
-  // @@protoc_insertion_point(field_get:zsearch.CTStatus.google_argon2018)
-  return google_argon2018_ != NULL ? *google_argon2018_
-                         : *::zsearch::CTServerStatus::internal_default_instance();
-}
-::zsearch::CTServerStatus* CTStatus::mutable_google_argon2018() {
-  
-  if (google_argon2018_ == NULL) {
-    google_argon2018_ = new ::zsearch::CTServerStatus;
-  }
-  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.google_argon2018)
-  return google_argon2018_;
-}
-::zsearch::CTServerStatus* CTStatus::release_google_argon2018() {
-  // @@protoc_insertion_point(field_release:zsearch.CTStatus.google_argon2018)
-  
-  ::zsearch::CTServerStatus* temp = google_argon2018_;
-  google_argon2018_ = NULL;
-  return temp;
-}
-void CTStatus::set_allocated_google_argon2018(::zsearch::CTServerStatus* google_argon2018) {
-  delete google_argon2018_;
-  google_argon2018_ = google_argon2018;
-  if (google_argon2018) {
-    
-  } else {
-    
-  }
-  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.google_argon2018)
-}
-
-// .zsearch.CTServerStatus google_argon2019 = 52;
-bool CTStatus::has_google_argon2019() const {
-  return this != internal_default_instance() && google_argon2019_ != NULL;
-}
-void CTStatus::clear_google_argon2019() {
-  if (GetArenaNoVirtual() == NULL && google_argon2019_ != NULL) delete google_argon2019_;
-  google_argon2019_ = NULL;
-}
-const ::zsearch::CTServerStatus& CTStatus::google_argon2019() const {
-  // @@protoc_insertion_point(field_get:zsearch.CTStatus.google_argon2019)
-  return google_argon2019_ != NULL ? *google_argon2019_
-                         : *::zsearch::CTServerStatus::internal_default_instance();
-}
-::zsearch::CTServerStatus* CTStatus::mutable_google_argon2019() {
-  
-  if (google_argon2019_ == NULL) {
-    google_argon2019_ = new ::zsearch::CTServerStatus;
-  }
-  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.google_argon2019)
-  return google_argon2019_;
-}
-::zsearch::CTServerStatus* CTStatus::release_google_argon2019() {
-  // @@protoc_insertion_point(field_release:zsearch.CTStatus.google_argon2019)
-  
-  ::zsearch::CTServerStatus* temp = google_argon2019_;
-  google_argon2019_ = NULL;
-  return temp;
-}
-void CTStatus::set_allocated_google_argon2019(::zsearch::CTServerStatus* google_argon2019) {
-  delete google_argon2019_;
-  google_argon2019_ = google_argon2019;
-  if (google_argon2019) {
-    
-  } else {
-    
-  }
-  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.google_argon2019)
-}
-
-// .zsearch.CTServerStatus google_argon2020 = 53;
-bool CTStatus::has_google_argon2020() const {
-  return this != internal_default_instance() && google_argon2020_ != NULL;
-}
-void CTStatus::clear_google_argon2020() {
-  if (GetArenaNoVirtual() == NULL && google_argon2020_ != NULL) delete google_argon2020_;
-  google_argon2020_ = NULL;
-}
-const ::zsearch::CTServerStatus& CTStatus::google_argon2020() const {
-  // @@protoc_insertion_point(field_get:zsearch.CTStatus.google_argon2020)
-  return google_argon2020_ != NULL ? *google_argon2020_
-                         : *::zsearch::CTServerStatus::internal_default_instance();
-}
-::zsearch::CTServerStatus* CTStatus::mutable_google_argon2020() {
-  
-  if (google_argon2020_ == NULL) {
-    google_argon2020_ = new ::zsearch::CTServerStatus;
-  }
-  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.google_argon2020)
-  return google_argon2020_;
-}
-::zsearch::CTServerStatus* CTStatus::release_google_argon2020() {
-  // @@protoc_insertion_point(field_release:zsearch.CTStatus.google_argon2020)
-  
-  ::zsearch::CTServerStatus* temp = google_argon2020_;
-  google_argon2020_ = NULL;
-  return temp;
-}
-void CTStatus::set_allocated_google_argon2020(::zsearch::CTServerStatus* google_argon2020) {
-  delete google_argon2020_;
-  google_argon2020_ = google_argon2020;
-  if (google_argon2020) {
-    
-  } else {
-    
-  }
-  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.google_argon2020)
-}
-
-// .zsearch.CTServerStatus google_argon2021 = 54;
-bool CTStatus::has_google_argon2021() const {
-  return this != internal_default_instance() && google_argon2021_ != NULL;
-}
-void CTStatus::clear_google_argon2021() {
-  if (GetArenaNoVirtual() == NULL && google_argon2021_ != NULL) delete google_argon2021_;
-  google_argon2021_ = NULL;
-}
-const ::zsearch::CTServerStatus& CTStatus::google_argon2021() const {
-  // @@protoc_insertion_point(field_get:zsearch.CTStatus.google_argon2021)
-  return google_argon2021_ != NULL ? *google_argon2021_
-                         : *::zsearch::CTServerStatus::internal_default_instance();
-}
-::zsearch::CTServerStatus* CTStatus::mutable_google_argon2021() {
-  
-  if (google_argon2021_ == NULL) {
-    google_argon2021_ = new ::zsearch::CTServerStatus;
-  }
-  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.google_argon2021)
-  return google_argon2021_;
-}
-::zsearch::CTServerStatus* CTStatus::release_google_argon2021() {
-  // @@protoc_insertion_point(field_release:zsearch.CTStatus.google_argon2021)
-  
-  ::zsearch::CTServerStatus* temp = google_argon2021_;
-  google_argon2021_ = NULL;
-  return temp;
-}
-void CTStatus::set_allocated_google_argon2021(::zsearch::CTServerStatus* google_argon2021) {
-  delete google_argon2021_;
-  google_argon2021_ = google_argon2021;
-  if (google_argon2021) {
-    
-  } else {
-    
-  }
-  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.google_argon2021)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS

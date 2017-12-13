@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='ct.proto',
   package='zsearch',
   syntax='proto3',
-  serialized_pb=_b('\n\x08\x63t.proto\x12\x07zsearch\"\xb2\x01\n\x0e\x43TServerStatus\x12\r\n\x05index\x18\x01 \x01(\x03\x12\x14\n\x0c\x63t_timestamp\x18\x02 \x01(\x03\x12\x16\n\x0epull_timestamp\x18\x03 \x01(\x03\x12\x16\n\x0epush_timestamp\x18\x04 \x01(\x03\x12*\n\x0bpush_status\x18\x05 \x01(\x0e\x32\x15.zsearch.CTPushStatus\x12\x0b\n\x03sct\x18\x06 \x01(\x0c\x12\x12\n\npush_error\x18\x07 \x01(\t\"\x86\x0f\n\x08\x43TStatus\x12+\n\ncensys_dev\x18\x01 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\'\n\x06\x63\x65nsys\x18\x02 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12/\n\x0egoogle_aviator\x18\n \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12-\n\x0cgoogle_pilot\x18\x0b \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x31\n\x10google_rocketeer\x18\x0c \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x32\n\x11google_submariner\x18\r \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x30\n\x0fgoogle_testtube\x18\x0e \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12.\n\rgoogle_icarus\x18\x0f \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x30\n\x0fgoogle_skydiver\x18\x10 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x30\n\x0fgoogle_daedalus\x18\x11 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12-\n\x0c\x64igicert_ct1\x18\x14 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12-\n\x0c\x64igicert_ct2\x18( \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12.\n\rizenpe_com_ct\x18\x15 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12.\n\rizenpe_eus_ct\x18\x16 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12/\n\x0esymantec_ws_ct\x18\x17 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x31\n\x10symantec_ws_vega\x18\x18 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x33\n\x12symantec_ws_sirius\x18% \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x32\n\x11symantec_ws_deneb\x18  \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12,\n\x0b\x63omodo_dodo\x18\" \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12/\n\x0e\x63omodo_mammoth\x18# \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12-\n\x0c\x63omodo_sabre\x18) \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12-\n\x0cwosign_ctlog\x18\x19 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12*\n\twosign_ct\x18\x1a \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12(\n\x07gdca_ct\x18\x1c \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12+\n\ngdca_ctlog\x18$ \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x31\n\x10venafi_api_ctlog\x18\x1f \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x36\n\x15venafi_api_ctlog_gen2\x18\' \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x33\n\x12nordu_ct_plausible\x18! \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12/\n\x0e\x63nnic_ctserver\x18\x1b \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12,\n\x0bstartssl_ct\x18\x1d \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12+\n\ncertly_log\x18\x1e \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12)\n\x08sheca_ct\x18* \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12>\n\x1d\x63\x65rtificatetransparency_cn_ct\x18& \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x36\n\x15letsencrypt_ct_clicky\x18+ \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x31\n\x10google_argon2017\x18\x32 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x31\n\x10google_argon2018\x18\x33 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x31\n\x10google_argon2019\x18\x34 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x31\n\x10google_argon2020\x18\x35 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x31\n\x10google_argon2021\x18\x36 \x01(\x0b\x32\x17.zsearch.CTServerStatus\"c\n\x03SCT\x12\x10\n\x08sha256fp\x18\x01 \x01(\x0c\x12!\n\x06server\x18\x02 \x01(\x0e\x32\x11.zsearch.CTServer\x12\'\n\x06status\x18\x03 \x01(\x0b\x32\x17.zsearch.CTServerStatus*\xeb\x01\n\x0c\x43TPushStatus\x12\x1b\n\x17\x43T_PUSH_STATUS_RESERVED\x10\x00\x12\x1a\n\x16\x43T_PUSH_STATUS_UNKNOWN\x10\x01\x12\x1a\n\x16\x43T_PUSH_STATUS_SUCCESS\x10\x02\x12 \n\x1c\x43T_PUSH_STATUS_UNKNOWN_ERROR\x10\x03\x12\x1f\n\x1b\x43T_PUSH_STATUS_INVALID_ROOT\x10\x04\x12!\n\x1d\x43T_PUSH_STATUS_ALREADY_EXISTS\x10\x05\x12 \n\x1c\x43T_PUSH_STATUS_WILL_NOT_PUSH\x10\x06*\xcc\t\n\x08\x43TServer\x12\x16\n\x12\x43T_SERVER_RESERVED\x10\x00\x12\x1f\n\x1b\x43T_SERVER_CENSYS_PRODUCTION\x10\x01\x12 \n\x1c\x43T_SERVER_CENSYS_DEVELOPMENT\x10\x02\x12\x1a\n\x16\x43T_SERVER_GOOGLE_PILOT\x10\x0b\x12\x1e\n\x1a\x43T_SERVER_GOOGLE_ROCKETEER\x10\x0c\x12\x1f\n\x1b\x43T_SERVER_GOOGLE_SUBMARINER\x10\r\x12\x1d\n\x19\x43T_SERVER_GOOGLE_TESTTUBE\x10\x0e\x12\x1b\n\x17\x43T_SERVER_GOOGLE_ICARUS\x10\x0f\x12\x1d\n\x19\x43T_SERVER_GOOGLE_SKYDIVER\x10\x10\x12\x1d\n\x19\x43T_SERVER_GOOGLE_DAEDALUS\x10\x11\x12\x1c\n\x18\x43T_SERVER_GOOGLE_AVIATOR\x10\n\x12\x1e\n\x1a\x43T_SERVER_GOOGLE_ARGON2017\x10\x32\x12\x1e\n\x1a\x43T_SERVER_GOOGLE_ARGON2018\x10\x33\x12\x1e\n\x1a\x43T_SERVER_GOOGLE_ARGON2019\x10\x34\x12\x1e\n\x1a\x43T_SERVER_GOOGLE_ARGON2020\x10\x35\x12\x1e\n\x1a\x43T_SERVER_GOOGLE_ARGON2021\x10\x36\x12\x1c\n\x18\x43T_SERVER_SYMANTEC_WS_CT\x10\x17\x12\x1e\n\x1a\x43T_SERVER_SYMANTEC_WS_VEGA\x10\x18\x12\x1f\n\x1b\x43T_SERVER_SYMANTEC_WS_DENEB\x10 \x12 \n\x1c\x43T_SERVER_SYMANTEC_WS_SIRIUS\x10%\x12\x19\n\x15\x43T_SERVER_COMODO_DODO\x10#\x12\x1c\n\x18\x43T_SERVER_COMODO_MAMMOTH\x10$\x12\x1a\n\x16\x43T_SERVER_COMODO_SABRE\x10)\x12\x1a\n\x16\x43T_SERVER_WOSIGN_CTLOG\x10\x19\x12\x17\n\x13\x43T_SERVER_WOSIGN_CT\x10\x1a\x12\x1e\n\x1a\x43T_SERVER_VENAFI_API_CTLOG\x10\x1f\x12#\n\x1f\x43T_SERVER_VENAFI_API_CTLOG_GEN2\x10\'\x12\x15\n\x11\x43T_SERVER_GDCA_CT\x10\x1c\x12\x18\n\x14\x43T_SERVER_GDCA_CTLOG\x10\"\x12\x1b\n\x17\x43T_SERVER_IZENPE_COM_CT\x10\x15\x12\x1b\n\x17\x43T_SERVER_IZENPE_EUS_CT\x10\x16\x12\x1a\n\x16\x43T_SERVER_DIGICERT_CT1\x10\x14\x12\x1a\n\x16\x43T_SERVER_DIGICERT_CT2\x10(\x12\x1c\n\x18\x43T_SERVER_CNNIC_CTSERVER\x10\x1b\x12\x19\n\x15\x43T_SERVER_STARTSSL_CT\x10\x1d\x12\x18\n\x14\x43T_SERVER_CERTLY_LOG\x10\x1e\x12 \n\x1c\x43T_SERVER_NORDU_CT_PLAUSIBLE\x10!\x12+\n\'CT_SERVER_CERTIFICATETRANSPARENCY_CN_CT\x10&\x12\x16\n\x12\x43T_SERVER_SHECA_CT\x10*\x12#\n\x1f\x43T_SERVER_LETSENCRYPT_CT_CLICKY\x10,b\x06proto3')
+  serialized_pb=_b('\n\x08\x63t.proto\x12\x07zsearch\"\xb2\x01\n\x0e\x43TServerStatus\x12\r\n\x05index\x18\x01 \x01(\x03\x12\x14\n\x0c\x63t_timestamp\x18\x02 \x01(\x03\x12\x16\n\x0epull_timestamp\x18\x03 \x01(\x03\x12\x16\n\x0epush_timestamp\x18\x04 \x01(\x03\x12*\n\x0bpush_status\x18\x05 \x01(\x0e\x32\x15.zsearch.CTPushStatus\x12\x0b\n\x03sct\x18\x06 \x01(\x0c\x12\x12\n\npush_error\x18\x07 \x01(\t\"\x90\x13\n\x08\x43TStatus\x12+\n\ncensys_dev\x18\x01 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\'\n\x06\x63\x65nsys\x18\x02 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12/\n\x0egoogle_aviator\x18\n \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12-\n\x0cgoogle_pilot\x18\x0b \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x31\n\x10google_rocketeer\x18\x0c \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x32\n\x11google_submariner\x18\r \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x30\n\x0fgoogle_testtube\x18\x0e \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12.\n\rgoogle_icarus\x18\x0f \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x30\n\x0fgoogle_skydiver\x18\x10 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x30\n\x0fgoogle_daedalus\x18\x11 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x32\n\x11google_argon_2017\x18\x32 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x32\n\x11google_argon_2018\x18\x33 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x32\n\x11google_argon_2019\x18\x34 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x32\n\x11google_argon_2020\x18\x35 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x32\n\x11google_argon_2021\x18\x36 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x37\n\x16\x63loudflare_nimbus_2017\x18< \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x37\n\x16\x63loudflare_nimbus_2018\x18= \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x37\n\x16\x63loudflare_nimbus_2019\x18> \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x37\n\x16\x63loudflare_nimbus_2020\x18? \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x37\n\x16\x63loudflare_nimbus_2021\x18@ \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12-\n\x0c\x64igicert_ct1\x18\x14 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12-\n\x0c\x64igicert_ct2\x18( \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12.\n\rizenpe_com_ct\x18\x15 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12.\n\rizenpe_eus_ct\x18\x16 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12/\n\x0esymantec_ws_ct\x18\x17 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x31\n\x10symantec_ws_vega\x18\x18 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x33\n\x12symantec_ws_sirius\x18% \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x32\n\x11symantec_ws_deneb\x18  \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12,\n\x0b\x63omodo_dodo\x18\" \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12/\n\x0e\x63omodo_mammoth\x18# \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12-\n\x0c\x63omodo_sabre\x18) \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12-\n\x0cwosign_ctlog\x18\x19 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12*\n\twosign_ct\x18\x1a \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12-\n\x0cwotrus_ctlog\x18/ \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12.\n\rwotrus_ctlog3\x18\x30 \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12(\n\x07gdca_ct\x18\x1c \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12+\n\ngdca_ctlog\x18$ \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12)\n\x08gdca_log\x18- \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12*\n\tgdca_log2\x18. \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x31\n\x10venafi_api_ctlog\x18\x1f \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x36\n\x15venafi_api_ctlog_gen2\x18\' \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x33\n\x12nordu_ct_plausible\x18! \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x36\n\x15letsencrypt_ct_clicky\x18+ \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12/\n\x0e\x63nnic_ctserver\x18\x1b \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12,\n\x0bstartssl_ct\x18\x1d \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12+\n\ncertly_log\x18\x1e \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12)\n\x08sheca_ct\x18* \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12\x30\n\x0f\x62\x65hind_the_sofa\x18, \x01(\x0b\x32\x17.zsearch.CTServerStatus\x12>\n\x1d\x63\x65rtificatetransparency_cn_ct\x18& \x01(\x0b\x32\x17.zsearch.CTServerStatus\"c\n\x03SCT\x12\x10\n\x08sha256fp\x18\x01 \x01(\x0c\x12!\n\x06server\x18\x02 \x01(\x0e\x32\x11.zsearch.CTServer\x12\'\n\x06status\x18\x03 \x01(\x0b\x32\x17.zsearch.CTServerStatus*\xeb\x01\n\x0c\x43TPushStatus\x12\x1b\n\x17\x43T_PUSH_STATUS_RESERVED\x10\x00\x12\x1a\n\x16\x43T_PUSH_STATUS_UNKNOWN\x10\x01\x12\x1a\n\x16\x43T_PUSH_STATUS_SUCCESS\x10\x02\x12 \n\x1c\x43T_PUSH_STATUS_UNKNOWN_ERROR\x10\x03\x12\x1f\n\x1b\x43T_PUSH_STATUS_INVALID_ROOT\x10\x04\x12!\n\x1d\x43T_PUSH_STATUS_ALREADY_EXISTS\x10\x05\x12 \n\x1c\x43T_PUSH_STATUS_WILL_NOT_PUSH\x10\x06*\x98\x0c\n\x08\x43TServer\x12\x16\n\x12\x43T_SERVER_RESERVED\x10\x00\x12 \n\x1c\x43T_SERVER_CENSYS_DEVELOPMENT\x10\x01\x12\x1f\n\x1b\x43T_SERVER_CENSYS_PRODUCTION\x10\x02\x12\x1c\n\x18\x43T_SERVER_GOOGLE_AVIATOR\x10\n\x12\x1a\n\x16\x43T_SERVER_GOOGLE_PILOT\x10\x0b\x12\x1e\n\x1a\x43T_SERVER_GOOGLE_ROCKETEER\x10\x0c\x12\x1f\n\x1b\x43T_SERVER_GOOGLE_SUBMARINER\x10\r\x12\x1d\n\x19\x43T_SERVER_GOOGLE_TESTTUBE\x10\x0e\x12\x1b\n\x17\x43T_SERVER_GOOGLE_ICARUS\x10\x0f\x12\x1d\n\x19\x43T_SERVER_GOOGLE_SKYDIVER\x10\x10\x12\x1d\n\x19\x43T_SERVER_GOOGLE_DAEDALUS\x10\x11\x12\x1f\n\x1b\x43T_SERVER_GOOGLE_ARGON_2017\x10\x32\x12\x1f\n\x1b\x43T_SERVER_GOOGLE_ARGON_2018\x10\x33\x12\x1f\n\x1b\x43T_SERVER_GOOGLE_ARGON_2019\x10\x34\x12\x1f\n\x1b\x43T_SERVER_GOOGLE_ARGON_2020\x10\x35\x12\x1f\n\x1b\x43T_SERVER_GOOGLE_ARGON_2021\x10\x36\x12$\n CT_SERVER_CLOUDFLARE_NIMBUS_2017\x10<\x12$\n CT_SERVER_CLOUDFLARE_NIMBUS_2018\x10=\x12$\n CT_SERVER_CLOUDFLARE_NIMBUS_2019\x10>\x12$\n CT_SERVER_CLOUDFLARE_NIMBUS_2020\x10?\x12$\n CT_SERVER_CLOUDFLARE_NIMBUS_2021\x10@\x12\x1a\n\x16\x43T_SERVER_DIGICERT_CT1\x10\x14\x12\x1a\n\x16\x43T_SERVER_DIGICERT_CT2\x10(\x12\x1b\n\x17\x43T_SERVER_IZENPE_COM_CT\x10\x15\x12\x1b\n\x17\x43T_SERVER_IZENPE_EUS_CT\x10\x16\x12\x1c\n\x18\x43T_SERVER_SYMANTEC_WS_CT\x10\x17\x12\x1e\n\x1a\x43T_SERVER_SYMANTEC_WS_VEGA\x10\x18\x12 \n\x1c\x43T_SERVER_SYMANTEC_WS_SIRIUS\x10%\x12\x1f\n\x1b\x43T_SERVER_SYMANTEC_WS_DENEB\x10 \x12\x19\n\x15\x43T_SERVER_COMODO_DODO\x10#\x12\x1c\n\x18\x43T_SERVER_COMODO_MAMMOTH\x10$\x12\x1a\n\x16\x43T_SERVER_COMODO_SABRE\x10)\x12\x1a\n\x16\x43T_SERVER_WOSIGN_CTLOG\x10\x19\x12\x17\n\x13\x43T_SERVER_WOSIGN_CT\x10\x1a\x12\x1a\n\x16\x43T_SERVER_WOTRUS_CTLOG\x10/\x12\x1b\n\x17\x43T_SERVER_WOTRUS_CTLOG3\x10\x30\x12\x19\n\x15\x43T_SERVER_STARTSSL_CT\x10\x1d\x12\x15\n\x11\x43T_SERVER_GDCA_CT\x10\x1c\x12\x18\n\x14\x43T_SERVER_GDCA_CTLOG\x10\"\x12\x16\n\x12\x43T_SERVER_GDCA_LOG\x10-\x12\x17\n\x13\x43T_SERVER_GDCA_LOG2\x10.\x12\x1e\n\x1a\x43T_SERVER_VENAFI_API_CTLOG\x10\x1f\x12#\n\x1f\x43T_SERVER_VENAFI_API_CTLOG_GEN2\x10\'\x12 \n\x1c\x43T_SERVER_NORDU_CT_PLAUSIBLE\x10!\x12#\n\x1f\x43T_SERVER_LETSENCRYPT_CT_CLICKY\x10+\x12\x18\n\x14\x43T_SERVER_CERTLY_LOG\x10\x1e\x12\x1c\n\x18\x43T_SERVER_CNNIC_CTSERVER\x10\x1b\x12+\n\'CT_SERVER_CERTIFICATETRANSPARENCY_CN_CT\x10&\x12\x16\n\x12\x43T_SERVER_SHECA_CT\x10*\x12\x1d\n\x19\x43T_SERVER_BEHIND_THE_SOFA\x10,b\x06proto3')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -61,8 +61,8 @@ _CTPUSHSTATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2233,
-  serialized_end=2468,
+  serialized_start=2755,
+  serialized_end=2990,
 )
 _sym_db.RegisterEnumDescriptor(_CTPUSHSTATUS)
 
@@ -78,166 +78,206 @@ _CTSERVER = _descriptor.EnumDescriptor(
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='CT_SERVER_CENSYS_PRODUCTION', index=1, number=1,
+      name='CT_SERVER_CENSYS_DEVELOPMENT', index=1, number=1,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='CT_SERVER_CENSYS_DEVELOPMENT', index=2, number=2,
+      name='CT_SERVER_CENSYS_PRODUCTION', index=2, number=2,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='CT_SERVER_GOOGLE_PILOT', index=3, number=11,
+      name='CT_SERVER_GOOGLE_AVIATOR', index=3, number=10,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='CT_SERVER_GOOGLE_ROCKETEER', index=4, number=12,
+      name='CT_SERVER_GOOGLE_PILOT', index=4, number=11,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='CT_SERVER_GOOGLE_SUBMARINER', index=5, number=13,
+      name='CT_SERVER_GOOGLE_ROCKETEER', index=5, number=12,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='CT_SERVER_GOOGLE_TESTTUBE', index=6, number=14,
+      name='CT_SERVER_GOOGLE_SUBMARINER', index=6, number=13,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='CT_SERVER_GOOGLE_ICARUS', index=7, number=15,
+      name='CT_SERVER_GOOGLE_TESTTUBE', index=7, number=14,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='CT_SERVER_GOOGLE_SKYDIVER', index=8, number=16,
+      name='CT_SERVER_GOOGLE_ICARUS', index=8, number=15,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='CT_SERVER_GOOGLE_DAEDALUS', index=9, number=17,
+      name='CT_SERVER_GOOGLE_SKYDIVER', index=9, number=16,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='CT_SERVER_GOOGLE_AVIATOR', index=10, number=10,
+      name='CT_SERVER_GOOGLE_DAEDALUS', index=10, number=17,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='CT_SERVER_GOOGLE_ARGON2017', index=11, number=50,
+      name='CT_SERVER_GOOGLE_ARGON_2017', index=11, number=50,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='CT_SERVER_GOOGLE_ARGON2018', index=12, number=51,
+      name='CT_SERVER_GOOGLE_ARGON_2018', index=12, number=51,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='CT_SERVER_GOOGLE_ARGON2019', index=13, number=52,
+      name='CT_SERVER_GOOGLE_ARGON_2019', index=13, number=52,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='CT_SERVER_GOOGLE_ARGON2020', index=14, number=53,
+      name='CT_SERVER_GOOGLE_ARGON_2020', index=14, number=53,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='CT_SERVER_GOOGLE_ARGON2021', index=15, number=54,
+      name='CT_SERVER_GOOGLE_ARGON_2021', index=15, number=54,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='CT_SERVER_SYMANTEC_WS_CT', index=16, number=23,
+      name='CT_SERVER_CLOUDFLARE_NIMBUS_2017', index=16, number=60,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='CT_SERVER_SYMANTEC_WS_VEGA', index=17, number=24,
+      name='CT_SERVER_CLOUDFLARE_NIMBUS_2018', index=17, number=61,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='CT_SERVER_SYMANTEC_WS_DENEB', index=18, number=32,
+      name='CT_SERVER_CLOUDFLARE_NIMBUS_2019', index=18, number=62,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='CT_SERVER_SYMANTEC_WS_SIRIUS', index=19, number=37,
+      name='CT_SERVER_CLOUDFLARE_NIMBUS_2020', index=19, number=63,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='CT_SERVER_COMODO_DODO', index=20, number=35,
+      name='CT_SERVER_CLOUDFLARE_NIMBUS_2021', index=20, number=64,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='CT_SERVER_COMODO_MAMMOTH', index=21, number=36,
+      name='CT_SERVER_DIGICERT_CT1', index=21, number=20,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='CT_SERVER_COMODO_SABRE', index=22, number=41,
+      name='CT_SERVER_DIGICERT_CT2', index=22, number=40,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='CT_SERVER_WOSIGN_CTLOG', index=23, number=25,
+      name='CT_SERVER_IZENPE_COM_CT', index=23, number=21,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='CT_SERVER_WOSIGN_CT', index=24, number=26,
+      name='CT_SERVER_IZENPE_EUS_CT', index=24, number=22,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='CT_SERVER_VENAFI_API_CTLOG', index=25, number=31,
+      name='CT_SERVER_SYMANTEC_WS_CT', index=25, number=23,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='CT_SERVER_VENAFI_API_CTLOG_GEN2', index=26, number=39,
+      name='CT_SERVER_SYMANTEC_WS_VEGA', index=26, number=24,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='CT_SERVER_GDCA_CT', index=27, number=28,
+      name='CT_SERVER_SYMANTEC_WS_SIRIUS', index=27, number=37,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='CT_SERVER_GDCA_CTLOG', index=28, number=34,
+      name='CT_SERVER_SYMANTEC_WS_DENEB', index=28, number=32,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='CT_SERVER_IZENPE_COM_CT', index=29, number=21,
+      name='CT_SERVER_COMODO_DODO', index=29, number=35,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='CT_SERVER_IZENPE_EUS_CT', index=30, number=22,
+      name='CT_SERVER_COMODO_MAMMOTH', index=30, number=36,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='CT_SERVER_DIGICERT_CT1', index=31, number=20,
+      name='CT_SERVER_COMODO_SABRE', index=31, number=41,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='CT_SERVER_DIGICERT_CT2', index=32, number=40,
+      name='CT_SERVER_WOSIGN_CTLOG', index=32, number=25,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='CT_SERVER_CNNIC_CTSERVER', index=33, number=27,
+      name='CT_SERVER_WOSIGN_CT', index=33, number=26,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='CT_SERVER_STARTSSL_CT', index=34, number=29,
+      name='CT_SERVER_WOTRUS_CTLOG', index=34, number=47,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='CT_SERVER_CERTLY_LOG', index=35, number=30,
+      name='CT_SERVER_WOTRUS_CTLOG3', index=35, number=48,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='CT_SERVER_NORDU_CT_PLAUSIBLE', index=36, number=33,
+      name='CT_SERVER_STARTSSL_CT', index=36, number=29,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='CT_SERVER_CERTIFICATETRANSPARENCY_CN_CT', index=37, number=38,
+      name='CT_SERVER_GDCA_CT', index=37, number=28,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='CT_SERVER_SHECA_CT', index=38, number=42,
+      name='CT_SERVER_GDCA_CTLOG', index=38, number=34,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='CT_SERVER_LETSENCRYPT_CT_CLICKY', index=39, number=44,
+      name='CT_SERVER_GDCA_LOG', index=39, number=45,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CT_SERVER_GDCA_LOG2', index=40, number=46,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CT_SERVER_VENAFI_API_CTLOG', index=41, number=31,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CT_SERVER_VENAFI_API_CTLOG_GEN2', index=42, number=39,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CT_SERVER_NORDU_CT_PLAUSIBLE', index=43, number=33,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CT_SERVER_LETSENCRYPT_CT_CLICKY', index=44, number=43,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CT_SERVER_CERTLY_LOG', index=45, number=30,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CT_SERVER_CNNIC_CTSERVER', index=46, number=27,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CT_SERVER_CERTIFICATETRANSPARENCY_CN_CT', index=47, number=38,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CT_SERVER_SHECA_CT', index=48, number=42,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CT_SERVER_BEHIND_THE_SOFA', index=49, number=44,
       options=None,
       type=None),
   ],
   containing_type=None,
   options=None,
-  serialized_start=2471,
-  serialized_end=3699,
+  serialized_start=2993,
+  serialized_end=4553,
 )
 _sym_db.RegisterEnumDescriptor(_CTSERVER)
 
@@ -250,8 +290,9 @@ CT_PUSH_STATUS_INVALID_ROOT = 4
 CT_PUSH_STATUS_ALREADY_EXISTS = 5
 CT_PUSH_STATUS_WILL_NOT_PUSH = 6
 CT_SERVER_RESERVED = 0
-CT_SERVER_CENSYS_PRODUCTION = 1
-CT_SERVER_CENSYS_DEVELOPMENT = 2
+CT_SERVER_CENSYS_DEVELOPMENT = 1
+CT_SERVER_CENSYS_PRODUCTION = 2
+CT_SERVER_GOOGLE_AVIATOR = 10
 CT_SERVER_GOOGLE_PILOT = 11
 CT_SERVER_GOOGLE_ROCKETEER = 12
 CT_SERVER_GOOGLE_SUBMARINER = 13
@@ -259,36 +300,45 @@ CT_SERVER_GOOGLE_TESTTUBE = 14
 CT_SERVER_GOOGLE_ICARUS = 15
 CT_SERVER_GOOGLE_SKYDIVER = 16
 CT_SERVER_GOOGLE_DAEDALUS = 17
-CT_SERVER_GOOGLE_AVIATOR = 10
-CT_SERVER_GOOGLE_ARGON2017 = 50
-CT_SERVER_GOOGLE_ARGON2018 = 51
-CT_SERVER_GOOGLE_ARGON2019 = 52
-CT_SERVER_GOOGLE_ARGON2020 = 53
-CT_SERVER_GOOGLE_ARGON2021 = 54
+CT_SERVER_GOOGLE_ARGON_2017 = 50
+CT_SERVER_GOOGLE_ARGON_2018 = 51
+CT_SERVER_GOOGLE_ARGON_2019 = 52
+CT_SERVER_GOOGLE_ARGON_2020 = 53
+CT_SERVER_GOOGLE_ARGON_2021 = 54
+CT_SERVER_CLOUDFLARE_NIMBUS_2017 = 60
+CT_SERVER_CLOUDFLARE_NIMBUS_2018 = 61
+CT_SERVER_CLOUDFLARE_NIMBUS_2019 = 62
+CT_SERVER_CLOUDFLARE_NIMBUS_2020 = 63
+CT_SERVER_CLOUDFLARE_NIMBUS_2021 = 64
+CT_SERVER_DIGICERT_CT1 = 20
+CT_SERVER_DIGICERT_CT2 = 40
+CT_SERVER_IZENPE_COM_CT = 21
+CT_SERVER_IZENPE_EUS_CT = 22
 CT_SERVER_SYMANTEC_WS_CT = 23
 CT_SERVER_SYMANTEC_WS_VEGA = 24
-CT_SERVER_SYMANTEC_WS_DENEB = 32
 CT_SERVER_SYMANTEC_WS_SIRIUS = 37
+CT_SERVER_SYMANTEC_WS_DENEB = 32
 CT_SERVER_COMODO_DODO = 35
 CT_SERVER_COMODO_MAMMOTH = 36
 CT_SERVER_COMODO_SABRE = 41
 CT_SERVER_WOSIGN_CTLOG = 25
 CT_SERVER_WOSIGN_CT = 26
-CT_SERVER_VENAFI_API_CTLOG = 31
-CT_SERVER_VENAFI_API_CTLOG_GEN2 = 39
+CT_SERVER_WOTRUS_CTLOG = 47
+CT_SERVER_WOTRUS_CTLOG3 = 48
+CT_SERVER_STARTSSL_CT = 29
 CT_SERVER_GDCA_CT = 28
 CT_SERVER_GDCA_CTLOG = 34
-CT_SERVER_IZENPE_COM_CT = 21
-CT_SERVER_IZENPE_EUS_CT = 22
-CT_SERVER_DIGICERT_CT1 = 20
-CT_SERVER_DIGICERT_CT2 = 40
-CT_SERVER_CNNIC_CTSERVER = 27
-CT_SERVER_STARTSSL_CT = 29
-CT_SERVER_CERTLY_LOG = 30
+CT_SERVER_GDCA_LOG = 45
+CT_SERVER_GDCA_LOG2 = 46
+CT_SERVER_VENAFI_API_CTLOG = 31
+CT_SERVER_VENAFI_API_CTLOG_GEN2 = 39
 CT_SERVER_NORDU_CT_PLAUSIBLE = 33
+CT_SERVER_LETSENCRYPT_CT_CLICKY = 43
+CT_SERVER_CERTLY_LOG = 30
+CT_SERVER_CNNIC_CTSERVER = 27
 CT_SERVER_CERTIFICATETRANSPARENCY_CN_CT = 38
 CT_SERVER_SHECA_CT = 42
-CT_SERVER_LETSENCRYPT_CT_CLICKY = 44
+CT_SERVER_BEHIND_THE_SOFA = 44
 
 
 
@@ -443,204 +493,274 @@ _CTSTATUS = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='digicert_ct1', full_name='zsearch.CTStatus.digicert_ct1', index=10,
-      number=20, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='digicert_ct2', full_name='zsearch.CTStatus.digicert_ct2', index=11,
-      number=40, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='izenpe_com_ct', full_name='zsearch.CTStatus.izenpe_com_ct', index=12,
-      number=21, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='izenpe_eus_ct', full_name='zsearch.CTStatus.izenpe_eus_ct', index=13,
-      number=22, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='symantec_ws_ct', full_name='zsearch.CTStatus.symantec_ws_ct', index=14,
-      number=23, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='symantec_ws_vega', full_name='zsearch.CTStatus.symantec_ws_vega', index=15,
-      number=24, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='symantec_ws_sirius', full_name='zsearch.CTStatus.symantec_ws_sirius', index=16,
-      number=37, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='symantec_ws_deneb', full_name='zsearch.CTStatus.symantec_ws_deneb', index=17,
-      number=32, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='comodo_dodo', full_name='zsearch.CTStatus.comodo_dodo', index=18,
-      number=34, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='comodo_mammoth', full_name='zsearch.CTStatus.comodo_mammoth', index=19,
-      number=35, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='comodo_sabre', full_name='zsearch.CTStatus.comodo_sabre', index=20,
-      number=41, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='wosign_ctlog', full_name='zsearch.CTStatus.wosign_ctlog', index=21,
-      number=25, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='wosign_ct', full_name='zsearch.CTStatus.wosign_ct', index=22,
-      number=26, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='gdca_ct', full_name='zsearch.CTStatus.gdca_ct', index=23,
-      number=28, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='gdca_ctlog', full_name='zsearch.CTStatus.gdca_ctlog', index=24,
-      number=36, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='venafi_api_ctlog', full_name='zsearch.CTStatus.venafi_api_ctlog', index=25,
-      number=31, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='venafi_api_ctlog_gen2', full_name='zsearch.CTStatus.venafi_api_ctlog_gen2', index=26,
-      number=39, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='nordu_ct_plausible', full_name='zsearch.CTStatus.nordu_ct_plausible', index=27,
-      number=33, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='cnnic_ctserver', full_name='zsearch.CTStatus.cnnic_ctserver', index=28,
-      number=27, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='startssl_ct', full_name='zsearch.CTStatus.startssl_ct', index=29,
-      number=29, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='certly_log', full_name='zsearch.CTStatus.certly_log', index=30,
-      number=30, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='sheca_ct', full_name='zsearch.CTStatus.sheca_ct', index=31,
-      number=42, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='certificatetransparency_cn_ct', full_name='zsearch.CTStatus.certificatetransparency_cn_ct', index=32,
-      number=38, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='letsencrypt_ct_clicky', full_name='zsearch.CTStatus.letsencrypt_ct_clicky', index=33,
-      number=43, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='google_argon2017', full_name='zsearch.CTStatus.google_argon2017', index=34,
+      name='google_argon_2017', full_name='zsearch.CTStatus.google_argon_2017', index=10,
       number=50, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='google_argon2018', full_name='zsearch.CTStatus.google_argon2018', index=35,
+      name='google_argon_2018', full_name='zsearch.CTStatus.google_argon_2018', index=11,
       number=51, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='google_argon2019', full_name='zsearch.CTStatus.google_argon2019', index=36,
+      name='google_argon_2019', full_name='zsearch.CTStatus.google_argon_2019', index=12,
       number=52, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='google_argon2020', full_name='zsearch.CTStatus.google_argon2020', index=37,
+      name='google_argon_2020', full_name='zsearch.CTStatus.google_argon_2020', index=13,
       number=53, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='google_argon2021', full_name='zsearch.CTStatus.google_argon2021', index=38,
+      name='google_argon_2021', full_name='zsearch.CTStatus.google_argon_2021', index=14,
       number=54, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='cloudflare_nimbus_2017', full_name='zsearch.CTStatus.cloudflare_nimbus_2017', index=15,
+      number=60, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='cloudflare_nimbus_2018', full_name='zsearch.CTStatus.cloudflare_nimbus_2018', index=16,
+      number=61, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='cloudflare_nimbus_2019', full_name='zsearch.CTStatus.cloudflare_nimbus_2019', index=17,
+      number=62, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='cloudflare_nimbus_2020', full_name='zsearch.CTStatus.cloudflare_nimbus_2020', index=18,
+      number=63, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='cloudflare_nimbus_2021', full_name='zsearch.CTStatus.cloudflare_nimbus_2021', index=19,
+      number=64, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='digicert_ct1', full_name='zsearch.CTStatus.digicert_ct1', index=20,
+      number=20, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='digicert_ct2', full_name='zsearch.CTStatus.digicert_ct2', index=21,
+      number=40, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='izenpe_com_ct', full_name='zsearch.CTStatus.izenpe_com_ct', index=22,
+      number=21, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='izenpe_eus_ct', full_name='zsearch.CTStatus.izenpe_eus_ct', index=23,
+      number=22, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='symantec_ws_ct', full_name='zsearch.CTStatus.symantec_ws_ct', index=24,
+      number=23, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='symantec_ws_vega', full_name='zsearch.CTStatus.symantec_ws_vega', index=25,
+      number=24, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='symantec_ws_sirius', full_name='zsearch.CTStatus.symantec_ws_sirius', index=26,
+      number=37, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='symantec_ws_deneb', full_name='zsearch.CTStatus.symantec_ws_deneb', index=27,
+      number=32, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='comodo_dodo', full_name='zsearch.CTStatus.comodo_dodo', index=28,
+      number=34, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='comodo_mammoth', full_name='zsearch.CTStatus.comodo_mammoth', index=29,
+      number=35, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='comodo_sabre', full_name='zsearch.CTStatus.comodo_sabre', index=30,
+      number=41, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='wosign_ctlog', full_name='zsearch.CTStatus.wosign_ctlog', index=31,
+      number=25, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='wosign_ct', full_name='zsearch.CTStatus.wosign_ct', index=32,
+      number=26, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='wotrus_ctlog', full_name='zsearch.CTStatus.wotrus_ctlog', index=33,
+      number=47, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='wotrus_ctlog3', full_name='zsearch.CTStatus.wotrus_ctlog3', index=34,
+      number=48, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='gdca_ct', full_name='zsearch.CTStatus.gdca_ct', index=35,
+      number=28, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='gdca_ctlog', full_name='zsearch.CTStatus.gdca_ctlog', index=36,
+      number=36, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='gdca_log', full_name='zsearch.CTStatus.gdca_log', index=37,
+      number=45, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='gdca_log2', full_name='zsearch.CTStatus.gdca_log2', index=38,
+      number=46, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='venafi_api_ctlog', full_name='zsearch.CTStatus.venafi_api_ctlog', index=39,
+      number=31, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='venafi_api_ctlog_gen2', full_name='zsearch.CTStatus.venafi_api_ctlog_gen2', index=40,
+      number=39, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='nordu_ct_plausible', full_name='zsearch.CTStatus.nordu_ct_plausible', index=41,
+      number=33, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='letsencrypt_ct_clicky', full_name='zsearch.CTStatus.letsencrypt_ct_clicky', index=42,
+      number=43, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='cnnic_ctserver', full_name='zsearch.CTStatus.cnnic_ctserver', index=43,
+      number=27, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='startssl_ct', full_name='zsearch.CTStatus.startssl_ct', index=44,
+      number=29, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='certly_log', full_name='zsearch.CTStatus.certly_log', index=45,
+      number=30, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='sheca_ct', full_name='zsearch.CTStatus.sheca_ct', index=46,
+      number=42, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='behind_the_sofa', full_name='zsearch.CTStatus.behind_the_sofa', index=47,
+      number=44, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='certificatetransparency_cn_ct', full_name='zsearch.CTStatus.certificatetransparency_cn_ct', index=48,
+      number=38, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -658,7 +778,7 @@ _CTSTATUS = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=203,
-  serialized_end=2129,
+  serialized_end=2651,
 )
 
 
@@ -702,8 +822,8 @@ _SCT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2131,
-  serialized_end=2230,
+  serialized_start=2653,
+  serialized_end=2752,
 )
 
 _CTSERVERSTATUS.fields_by_name['push_status'].enum_type = _CTPUSHSTATUS
@@ -717,6 +837,16 @@ _CTSTATUS.fields_by_name['google_testtube'].message_type = _CTSERVERSTATUS
 _CTSTATUS.fields_by_name['google_icarus'].message_type = _CTSERVERSTATUS
 _CTSTATUS.fields_by_name['google_skydiver'].message_type = _CTSERVERSTATUS
 _CTSTATUS.fields_by_name['google_daedalus'].message_type = _CTSERVERSTATUS
+_CTSTATUS.fields_by_name['google_argon_2017'].message_type = _CTSERVERSTATUS
+_CTSTATUS.fields_by_name['google_argon_2018'].message_type = _CTSERVERSTATUS
+_CTSTATUS.fields_by_name['google_argon_2019'].message_type = _CTSERVERSTATUS
+_CTSTATUS.fields_by_name['google_argon_2020'].message_type = _CTSERVERSTATUS
+_CTSTATUS.fields_by_name['google_argon_2021'].message_type = _CTSERVERSTATUS
+_CTSTATUS.fields_by_name['cloudflare_nimbus_2017'].message_type = _CTSERVERSTATUS
+_CTSTATUS.fields_by_name['cloudflare_nimbus_2018'].message_type = _CTSERVERSTATUS
+_CTSTATUS.fields_by_name['cloudflare_nimbus_2019'].message_type = _CTSERVERSTATUS
+_CTSTATUS.fields_by_name['cloudflare_nimbus_2020'].message_type = _CTSERVERSTATUS
+_CTSTATUS.fields_by_name['cloudflare_nimbus_2021'].message_type = _CTSERVERSTATUS
 _CTSTATUS.fields_by_name['digicert_ct1'].message_type = _CTSERVERSTATUS
 _CTSTATUS.fields_by_name['digicert_ct2'].message_type = _CTSERVERSTATUS
 _CTSTATUS.fields_by_name['izenpe_com_ct'].message_type = _CTSERVERSTATUS
@@ -730,22 +860,22 @@ _CTSTATUS.fields_by_name['comodo_mammoth'].message_type = _CTSERVERSTATUS
 _CTSTATUS.fields_by_name['comodo_sabre'].message_type = _CTSERVERSTATUS
 _CTSTATUS.fields_by_name['wosign_ctlog'].message_type = _CTSERVERSTATUS
 _CTSTATUS.fields_by_name['wosign_ct'].message_type = _CTSERVERSTATUS
+_CTSTATUS.fields_by_name['wotrus_ctlog'].message_type = _CTSERVERSTATUS
+_CTSTATUS.fields_by_name['wotrus_ctlog3'].message_type = _CTSERVERSTATUS
 _CTSTATUS.fields_by_name['gdca_ct'].message_type = _CTSERVERSTATUS
 _CTSTATUS.fields_by_name['gdca_ctlog'].message_type = _CTSERVERSTATUS
+_CTSTATUS.fields_by_name['gdca_log'].message_type = _CTSERVERSTATUS
+_CTSTATUS.fields_by_name['gdca_log2'].message_type = _CTSERVERSTATUS
 _CTSTATUS.fields_by_name['venafi_api_ctlog'].message_type = _CTSERVERSTATUS
 _CTSTATUS.fields_by_name['venafi_api_ctlog_gen2'].message_type = _CTSERVERSTATUS
 _CTSTATUS.fields_by_name['nordu_ct_plausible'].message_type = _CTSERVERSTATUS
+_CTSTATUS.fields_by_name['letsencrypt_ct_clicky'].message_type = _CTSERVERSTATUS
 _CTSTATUS.fields_by_name['cnnic_ctserver'].message_type = _CTSERVERSTATUS
 _CTSTATUS.fields_by_name['startssl_ct'].message_type = _CTSERVERSTATUS
 _CTSTATUS.fields_by_name['certly_log'].message_type = _CTSERVERSTATUS
 _CTSTATUS.fields_by_name['sheca_ct'].message_type = _CTSERVERSTATUS
+_CTSTATUS.fields_by_name['behind_the_sofa'].message_type = _CTSERVERSTATUS
 _CTSTATUS.fields_by_name['certificatetransparency_cn_ct'].message_type = _CTSERVERSTATUS
-_CTSTATUS.fields_by_name['letsencrypt_ct_clicky'].message_type = _CTSERVERSTATUS
-_CTSTATUS.fields_by_name['google_argon2017'].message_type = _CTSERVERSTATUS
-_CTSTATUS.fields_by_name['google_argon2018'].message_type = _CTSERVERSTATUS
-_CTSTATUS.fields_by_name['google_argon2019'].message_type = _CTSERVERSTATUS
-_CTSTATUS.fields_by_name['google_argon2020'].message_type = _CTSERVERSTATUS
-_CTSTATUS.fields_by_name['google_argon2021'].message_type = _CTSERVERSTATUS
 _SCT.fields_by_name['server'].enum_type = _CTSERVER
 _SCT.fields_by_name['status'].message_type = _CTSERVERSTATUS
 DESCRIPTOR.message_types_by_name['CTServerStatus'] = _CTSERVERSTATUS
