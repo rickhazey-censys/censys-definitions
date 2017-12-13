@@ -657,6 +657,15 @@ class CTStatus : public ::google::protobuf::Message /* @@protoc_insertion_point(
   ::zsearch::CTServerStatus* release_wosign_ct();
   void set_allocated_wosign_ct(::zsearch::CTServerStatus* wosign_ct);
 
+  // .zsearch.CTServerStatus startssl_ct = 29;
+  bool has_startssl_ct() const;
+  void clear_startssl_ct();
+  static const int kStartsslCtFieldNumber = 29;
+  const ::zsearch::CTServerStatus& startssl_ct() const;
+  ::zsearch::CTServerStatus* mutable_startssl_ct();
+  ::zsearch::CTServerStatus* release_startssl_ct();
+  void set_allocated_startssl_ct(::zsearch::CTServerStatus* startssl_ct);
+
   // .zsearch.CTServerStatus wotrus_ctlog = 47;
   bool has_wotrus_ctlog() const;
   void clear_wotrus_ctlog();
@@ -756,15 +765,6 @@ class CTStatus : public ::google::protobuf::Message /* @@protoc_insertion_point(
   ::zsearch::CTServerStatus* release_cnnic_ctserver();
   void set_allocated_cnnic_ctserver(::zsearch::CTServerStatus* cnnic_ctserver);
 
-  // .zsearch.CTServerStatus startssl_ct = 29;
-  bool has_startssl_ct() const;
-  void clear_startssl_ct();
-  static const int kStartsslCtFieldNumber = 29;
-  const ::zsearch::CTServerStatus& startssl_ct() const;
-  ::zsearch::CTServerStatus* mutable_startssl_ct();
-  ::zsearch::CTServerStatus* release_startssl_ct();
-  void set_allocated_startssl_ct(::zsearch::CTServerStatus* startssl_ct);
-
   // .zsearch.CTServerStatus certly_log = 30;
   bool has_certly_log() const;
   void clear_certly_log();
@@ -838,6 +838,7 @@ class CTStatus : public ::google::protobuf::Message /* @@protoc_insertion_point(
   ::zsearch::CTServerStatus* comodo_sabre_;
   ::zsearch::CTServerStatus* wosign_ctlog_;
   ::zsearch::CTServerStatus* wosign_ct_;
+  ::zsearch::CTServerStatus* startssl_ct_;
   ::zsearch::CTServerStatus* wotrus_ctlog_;
   ::zsearch::CTServerStatus* wotrus_ctlog3_;
   ::zsearch::CTServerStatus* gdca_ct_;
@@ -849,7 +850,6 @@ class CTStatus : public ::google::protobuf::Message /* @@protoc_insertion_point(
   ::zsearch::CTServerStatus* nordu_ct_plausible_;
   ::zsearch::CTServerStatus* letsencrypt_ct_clicky_;
   ::zsearch::CTServerStatus* cnnic_ctserver_;
-  ::zsearch::CTServerStatus* startssl_ct_;
   ::zsearch::CTServerStatus* certly_log_;
   ::zsearch::CTServerStatus* sheca_ct_;
   ::zsearch::CTServerStatus* behind_the_sofa_;
@@ -2438,6 +2438,45 @@ inline void CTStatus::set_allocated_wosign_ct(::zsearch::CTServerStatus* wosign_
   // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.wosign_ct)
 }
 
+// .zsearch.CTServerStatus startssl_ct = 29;
+inline bool CTStatus::has_startssl_ct() const {
+  return this != internal_default_instance() && startssl_ct_ != NULL;
+}
+inline void CTStatus::clear_startssl_ct() {
+  if (GetArenaNoVirtual() == NULL && startssl_ct_ != NULL) delete startssl_ct_;
+  startssl_ct_ = NULL;
+}
+inline const ::zsearch::CTServerStatus& CTStatus::startssl_ct() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.startssl_ct)
+  return startssl_ct_ != NULL ? *startssl_ct_
+                         : *::zsearch::CTServerStatus::internal_default_instance();
+}
+inline ::zsearch::CTServerStatus* CTStatus::mutable_startssl_ct() {
+  
+  if (startssl_ct_ == NULL) {
+    startssl_ct_ = new ::zsearch::CTServerStatus;
+  }
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.startssl_ct)
+  return startssl_ct_;
+}
+inline ::zsearch::CTServerStatus* CTStatus::release_startssl_ct() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.startssl_ct)
+  
+  ::zsearch::CTServerStatus* temp = startssl_ct_;
+  startssl_ct_ = NULL;
+  return temp;
+}
+inline void CTStatus::set_allocated_startssl_ct(::zsearch::CTServerStatus* startssl_ct) {
+  delete startssl_ct_;
+  startssl_ct_ = startssl_ct;
+  if (startssl_ct) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.startssl_ct)
+}
+
 // .zsearch.CTServerStatus wotrus_ctlog = 47;
 inline bool CTStatus::has_wotrus_ctlog() const {
   return this != internal_default_instance() && wotrus_ctlog_ != NULL;
@@ -2865,45 +2904,6 @@ inline void CTStatus::set_allocated_cnnic_ctserver(::zsearch::CTServerStatus* cn
     
   }
   // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.cnnic_ctserver)
-}
-
-// .zsearch.CTServerStatus startssl_ct = 29;
-inline bool CTStatus::has_startssl_ct() const {
-  return this != internal_default_instance() && startssl_ct_ != NULL;
-}
-inline void CTStatus::clear_startssl_ct() {
-  if (GetArenaNoVirtual() == NULL && startssl_ct_ != NULL) delete startssl_ct_;
-  startssl_ct_ = NULL;
-}
-inline const ::zsearch::CTServerStatus& CTStatus::startssl_ct() const {
-  // @@protoc_insertion_point(field_get:zsearch.CTStatus.startssl_ct)
-  return startssl_ct_ != NULL ? *startssl_ct_
-                         : *::zsearch::CTServerStatus::internal_default_instance();
-}
-inline ::zsearch::CTServerStatus* CTStatus::mutable_startssl_ct() {
-  
-  if (startssl_ct_ == NULL) {
-    startssl_ct_ = new ::zsearch::CTServerStatus;
-  }
-  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.startssl_ct)
-  return startssl_ct_;
-}
-inline ::zsearch::CTServerStatus* CTStatus::release_startssl_ct() {
-  // @@protoc_insertion_point(field_release:zsearch.CTStatus.startssl_ct)
-  
-  ::zsearch::CTServerStatus* temp = startssl_ct_;
-  startssl_ct_ = NULL;
-  return temp;
-}
-inline void CTStatus::set_allocated_startssl_ct(::zsearch::CTServerStatus* startssl_ct) {
-  delete startssl_ct_;
-  startssl_ct_ = startssl_ct;
-  if (startssl_ct) {
-    
-  } else {
-    
-  }
-  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.startssl_ct)
 }
 
 // .zsearch.CTServerStatus certly_log = 30;
