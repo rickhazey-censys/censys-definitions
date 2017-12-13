@@ -68,6 +68,7 @@ message CTStatus {
     // Wosign, StartCom, Wotrus
     CTServerStatus wosign_ctlog = 25; // deprecated
     CTServerStatus wosign_ct = 26; // deprecated
+    CTServerStatus startssl_ct = 29;
     CTServerStatus wotrus_ctlog = 47;
     CTServerStatus wotrus_ctlog3 = 48;
     // GDCA
@@ -84,7 +85,6 @@ message CTStatus {
     CTServerStatus letsencrypt_ct_clicky = 43; // clicky.ct.letsencrypt.org
     // Other
     CTServerStatus cnnic_ctserver = 27;
-    CTServerStatus startssl_ct = 29;
     CTServerStatus certly_log = 30; // deprecated
     CTServerStatus sheca_ct = 42;
     CTServerStatus behind_the_sofa = 44;
