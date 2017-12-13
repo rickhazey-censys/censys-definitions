@@ -130,12 +130,12 @@ enum CTServer {
     CT_SERVER_WOSIGN_CT = 26; // DEPRECATED
     // Venafi
     CT_SERVER_VENAFI_API_CTLOG = 31; // ACTIVE ctlog.api.venafi.com
-    CT_SERVER_VENAFI_API_CTLOG_GEN2 = 39; // TODO ACTIVE ctlog.api.venafi.com
+    CT_SERVER_VENAFI_API_CTLOG_GEN2 = 39; // TODO ACTIVE ctlog-gen2.api.venafi.com
     // GDCA
-    CT_SERVER_GDCA_CT = 28; // ACTIVE ct.gdca.com.cn
-    CT_SERVER_GDCA_CTLOG = 34; // ACTIVE ctlog.gdca.com.cn
+    CT_SERVER_GDCA_CT = 28; // DEPCREATED ct.gdca.com.cn
+    CT_SERVER_GDCA_CTLOG = 34; // DEPRECATED ctlog.gdca.com.cn
     CT_SERVER_GDCA_LOG = 45; // ACTIVE log.gdca.com.cn
-    CT_SERVER_GDCA_LOG3 = 46; // ACTIVE log2.gdca.com.cn
+    CT_SERVER_GDCA_LOG2 = 46; // ACTIVE log2.gdca.com.cn
     // Izenpe
     CT_SERVER_IZENPE_COM_CT = 21; // DEPRECATED ct.izenpe.com
     CT_SERVER_IZENPE_EUS_CT = 22; // ACTIVE ct.izenpe.eus
@@ -152,8 +152,9 @@ enum CTServer {
 
     CT_SERVER_LETSENCRYPT_CT_CLICKY = 43; // clicky.ct.letsencrypt.org
     CT_SERVER_BEHIND_THE_SOFA = 44; // ct.filippo.io/behindthesofa
-    CT_SERVER_WOTRUS_CTLOG = 47; // ct.filippo.io/behindthesofa
-    CT_SERVER_WOTRUS_CTLOG3 = 48; // ct.filippo.io/behindthesofa
+    CT_SERVER_WOTRUS_CTLOG = 47; // ctlog.wotrus.com
+    CT_SERVER_WOTRUS_CTLOG3 = 48; // ctlog3.wotrus.com
+
 }
 
 message SCT {
