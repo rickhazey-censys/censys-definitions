@@ -19,7 +19,7 @@ type WHOISAtom struct {
 func (m *WHOISAtom) Reset()                    { *m = WHOISAtom{} }
 func (m *WHOISAtom) String() string            { return proto.CompactTextString(m) }
 func (*WHOISAtom) ProtoMessage()               {}
-func (*WHOISAtom) Descriptor() ([]byte, []int) { return fileDescriptor5, []int{0} }
+func (*WHOISAtom) Descriptor() ([]byte, []int) { return fileDescriptor3, []int{0} }
 
 type LocationAtom struct {
 	Continent             string  `protobuf:"bytes,1,opt,name=continent" json:"continent,omitempty"`
@@ -38,7 +38,7 @@ type LocationAtom struct {
 func (m *LocationAtom) Reset()                    { *m = LocationAtom{} }
 func (m *LocationAtom) String() string            { return proto.CompactTextString(m) }
 func (*LocationAtom) ProtoMessage()               {}
-func (*LocationAtom) Descriptor() ([]byte, []int) { return fileDescriptor5, []int{1} }
+func (*LocationAtom) Descriptor() ([]byte, []int) { return fileDescriptor3, []int{1} }
 
 func (m *LocationAtom) GetContinent() string {
 	if m != nil {
@@ -126,7 +126,7 @@ type ProtocolAtom struct {
 func (m *ProtocolAtom) Reset()                    { *m = ProtocolAtom{} }
 func (m *ProtocolAtom) String() string            { return proto.CompactTextString(m) }
 func (*ProtocolAtom) ProtoMessage()               {}
-func (*ProtocolAtom) Descriptor() ([]byte, []int) { return fileDescriptor5, []int{2} }
+func (*ProtocolAtom) Descriptor() ([]byte, []int) { return fileDescriptor3, []int{2} }
 
 func (m *ProtocolAtom) GetMetadata() []*Metadatum {
 	if m != nil {
@@ -158,7 +158,7 @@ type AnonymousKey struct {
 func (m *AnonymousKey) Reset()                    { *m = AnonymousKey{} }
 func (m *AnonymousKey) String() string            { return proto.CompactTextString(m) }
 func (*AnonymousKey) ProtoMessage()               {}
-func (*AnonymousKey) Descriptor() ([]byte, []int) { return fileDescriptor5, []int{3} }
+func (*AnonymousKey) Descriptor() ([]byte, []int) { return fileDescriptor3, []int{3} }
 
 func (m *AnonymousKey) GetPort() uint32 {
 	if m != nil {
@@ -209,7 +209,7 @@ type Record struct {
 func (m *Record) Reset()                    { *m = Record{} }
 func (m *Record) String() string            { return proto.CompactTextString(m) }
 func (*Record) ProtoMessage()               {}
-func (*Record) Descriptor() ([]byte, []int) { return fileDescriptor5, []int{4} }
+func (*Record) Descriptor() ([]byte, []int) { return fileDescriptor3, []int{4} }
 
 type isRecord_DataOneof interface {
 	isRecord_DataOneof()
@@ -603,7 +603,7 @@ type Delta struct {
 func (m *Delta) Reset()                    { *m = Delta{} }
 func (m *Delta) String() string            { return proto.CompactTextString(m) }
 func (*Delta) ProtoMessage()               {}
-func (*Delta) Descriptor() ([]byte, []int) { return fileDescriptor5, []int{5} }
+func (*Delta) Descriptor() ([]byte, []int) { return fileDescriptor3, []int{5} }
 
 func (m *Delta) GetDeltaType() DeltaType {
 	if m != nil {
@@ -649,9 +649,9 @@ func init() {
 	proto.RegisterType((*Delta)(nil), "zsearch.Delta")
 }
 
-func init() { proto.RegisterFile("hoststore.proto", fileDescriptor5) }
+func init() { proto.RegisterFile("hoststore.proto", fileDescriptor3) }
 
-var fileDescriptor5 = []byte{
+var fileDescriptor3 = []byte{
 	// 777 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x7c, 0x54, 0xdf, 0x93, 0xdb, 0x34,
 	0x10, 0xbe, 0xfc, 0xb8, 0xf8, 0xb2, 0x71, 0x92, 0x3b, 0xb5, 0x07, 0x9e, 0x0e, 0x33, 0x0d, 0x79,

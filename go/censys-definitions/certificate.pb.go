@@ -41,7 +41,7 @@ var CertificateType_value = map[string]int32{
 func (x CertificateType) String() string {
 	return proto.EnumName(CertificateType_name, int32(x))
 }
-func (CertificateType) EnumDescriptor() ([]byte, []int) { return fileDescriptor2, []int{0} }
+func (CertificateType) EnumDescriptor() ([]byte, []int) { return fileDescriptor8, []int{0} }
 
 type CertificateSource int32
 
@@ -83,7 +83,7 @@ var CertificateSource_value = map[string]int32{
 func (x CertificateSource) String() string {
 	return proto.EnumName(CertificateSource_name, int32(x))
 }
-func (CertificateSource) EnumDescriptor() ([]byte, []int) { return fileDescriptor2, []int{1} }
+func (CertificateSource) EnumDescriptor() ([]byte, []int) { return fileDescriptor8, []int{1} }
 
 type CertificateParseStatus int32
 
@@ -113,7 +113,7 @@ var CertificateParseStatus_value = map[string]int32{
 func (x CertificateParseStatus) String() string {
 	return proto.EnumName(CertificateParseStatus_name, int32(x))
 }
-func (CertificateParseStatus) EnumDescriptor() ([]byte, []int) { return fileDescriptor2, []int{2} }
+func (CertificateParseStatus) EnumDescriptor() ([]byte, []int) { return fileDescriptor8, []int{2} }
 
 type CertificateRevocationReason int32
 
@@ -165,7 +165,7 @@ var CertificateRevocationReason_value = map[string]int32{
 func (x CertificateRevocationReason) String() string {
 	return proto.EnumName(CertificateRevocationReason_name, int32(x))
 }
-func (CertificateRevocationReason) EnumDescriptor() ([]byte, []int) { return fileDescriptor2, []int{3} }
+func (CertificateRevocationReason) EnumDescriptor() ([]byte, []int) { return fileDescriptor8, []int{3} }
 
 type Path struct {
 	// Contains SHA256 fingerprints of a chain of certificates
@@ -175,7 +175,7 @@ type Path struct {
 func (m *Path) Reset()                    { *m = Path{} }
 func (m *Path) String() string            { return proto.CompactTextString(m) }
 func (*Path) ProtoMessage()               {}
-func (*Path) Descriptor() ([]byte, []int) { return fileDescriptor2, []int{0} }
+func (*Path) Descriptor() ([]byte, []int) { return fileDescriptor8, []int{0} }
 
 func (m *Path) GetSha256Fp() [][]byte {
 	if m != nil {
@@ -216,7 +216,7 @@ type RootStoreStatus struct {
 func (m *RootStoreStatus) Reset()                    { *m = RootStoreStatus{} }
 func (m *RootStoreStatus) String() string            { return proto.CompactTextString(m) }
 func (*RootStoreStatus) ProtoMessage()               {}
-func (*RootStoreStatus) Descriptor() ([]byte, []int) { return fileDescriptor2, []int{1} }
+func (*RootStoreStatus) Descriptor() ([]byte, []int) { return fileDescriptor8, []int{1} }
 
 func (m *RootStoreStatus) GetValid() bool {
 	if m != nil {
@@ -301,7 +301,7 @@ type CertificateValidation struct {
 func (m *CertificateValidation) Reset()                    { *m = CertificateValidation{} }
 func (m *CertificateValidation) String() string            { return proto.CompactTextString(m) }
 func (*CertificateValidation) ProtoMessage()               {}
-func (*CertificateValidation) Descriptor() ([]byte, []int) { return fileDescriptor2, []int{2} }
+func (*CertificateValidation) Descriptor() ([]byte, []int) { return fileDescriptor8, []int{2} }
 
 func (m *CertificateValidation) GetNss() *RootStoreStatus {
 	if m != nil {
@@ -379,7 +379,7 @@ type MozillaSalesForceStatus struct {
 func (m *MozillaSalesForceStatus) Reset()                    { *m = MozillaSalesForceStatus{} }
 func (m *MozillaSalesForceStatus) String() string            { return proto.CompactTextString(m) }
 func (*MozillaSalesForceStatus) ProtoMessage()               {}
-func (*MozillaSalesForceStatus) Descriptor() ([]byte, []int) { return fileDescriptor2, []int{3} }
+func (*MozillaSalesForceStatus) Descriptor() ([]byte, []int) { return fileDescriptor8, []int{3} }
 
 func (m *MozillaSalesForceStatus) GetCurrentInIntermediates() bool {
 	if m != nil {
@@ -578,7 +578,7 @@ type CertificateRevocation struct {
 func (m *CertificateRevocation) Reset()                    { *m = CertificateRevocation{} }
 func (m *CertificateRevocation) String() string            { return proto.CompactTextString(m) }
 func (*CertificateRevocation) ProtoMessage()               {}
-func (*CertificateRevocation) Descriptor() ([]byte, []int) { return fileDescriptor2, []int{4} }
+func (*CertificateRevocation) Descriptor() ([]byte, []int) { return fileDescriptor8, []int{4} }
 
 func (m *CertificateRevocation) GetRevoked() bool {
 	if m != nil {
@@ -601,7 +601,7 @@ type CertificateAudit struct {
 func (m *CertificateAudit) Reset()                    { *m = CertificateAudit{} }
 func (m *CertificateAudit) String() string            { return proto.CompactTextString(m) }
 func (*CertificateAudit) ProtoMessage()               {}
-func (*CertificateAudit) Descriptor() ([]byte, []int) { return fileDescriptor2, []int{5} }
+func (*CertificateAudit) Descriptor() ([]byte, []int) { return fileDescriptor8, []int{5} }
 
 func (m *CertificateAudit) GetMozilla() *MozillaSalesForceStatus {
 	if m != nil {
@@ -671,7 +671,7 @@ type Certificate struct {
 func (m *Certificate) Reset()                    { *m = Certificate{} }
 func (m *Certificate) String() string            { return proto.CompactTextString(m) }
 func (*Certificate) ProtoMessage()               {}
-func (*Certificate) Descriptor() ([]byte, []int) { return fileDescriptor2, []int{6} }
+func (*Certificate) Descriptor() ([]byte, []int) { return fileDescriptor8, []int{6} }
 
 func (m *Certificate) GetSha1Fp() []byte {
 	if m != nil {
@@ -1009,9 +1009,9 @@ func init() {
 	proto.RegisterEnum("zsearch.CertificateRevocationReason", CertificateRevocationReason_name, CertificateRevocationReason_value)
 }
 
-func init() { proto.RegisterFile("certificate.proto", fileDescriptor2) }
+func init() { proto.RegisterFile("certificate.proto", fileDescriptor8) }
 
-var fileDescriptor2 = []byte{
+var fileDescriptor8 = []byte{
 	// 2250 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x8c, 0x58, 0xdd, 0x52, 0xdb, 0x48,
 	0xf6, 0xff, 0xf3, 0x6d, 0x1f, 0x1b, 0x5b, 0x34, 0x1f, 0x11, 0x30, 0x09, 0x0e, 0x21, 0x33, 0x84,

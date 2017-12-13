@@ -2,72 +2,6 @@
 // source: anonstore.proto
 // DO NOT EDIT!
 
-/*
-Package censys_definitions is a generated protocol buffer package.
-
-It is generated from these files:
-	anonstore.proto
-	caa.proto
-	certificate.proto
-	common.proto
-	ct.proto
-	hoststore.proto
-	protocols.proto
-	pubkey.proto
-	rpc.proto
-	search.proto
-	zlint.proto
-
-It has these top-level messages:
-	AnonymousRecord
-	AnonymousDelta
-	ExternalCertificate
-	CAATagValue
-	CAARecord
-	CAALookup
-	Path
-	RootStoreStatus
-	CertificateValidation
-	MozillaSalesForceStatus
-	CertificateRevocation
-	CertificateAudit
-	Certificate
-	Metadatum
-	UserdataAtom
-	ASAtom
-	CTServerStatus
-	CTStatus
-	SCT
-	WHOISAtom
-	LocationAtom
-	ProtocolAtom
-	AnonymousKey
-	Record
-	Delta
-	RSACryptographicKey
-	DSACryptographicKey
-	ECCCryptographicKey
-	CryptographicKey
-	MinScanId
-	MozillaOneCRLEntry
-	Command
-	AnonymousStoreStatistics
-	StatisticsPair
-	StoreStatistics
-	ServerStatistics
-	PruneStatistics
-	CommandReply
-	HostQuery
-	HostQueryResponse
-	AnonymousQuery
-	AnonymousQueryResponse
-	UserDataRequest
-	RootStoreQuery
-	RootStoreReply
-	LintResult
-	ZLint
-	Lints
-*/
 package censys_definitions
 
 import proto "github.com/golang/protobuf/proto"
@@ -78,12 +12,6 @@ import math "math"
 var _ = proto.Marshal
 var _ = fmt.Errorf
 var _ = math.Inf
-
-// This is a compile-time assertion to ensure that this generated file
-// is compatible with the proto package it is being compiled against.
-// A compilation error at this line likely means your copy of the
-// proto package needs to be updated.
-const _ = proto.ProtoPackageIsVersion2 // please upgrade the proto package
 
 type AnonymousDelta_DeltaType int32
 
@@ -107,7 +35,7 @@ var AnonymousDelta_DeltaType_value = map[string]int32{
 func (x AnonymousDelta_DeltaType) String() string {
 	return proto.EnumName(AnonymousDelta_DeltaType_name, int32(x))
 }
-func (AnonymousDelta_DeltaType) EnumDescriptor() ([]byte, []int) { return fileDescriptor0, []int{1, 0} }
+func (AnonymousDelta_DeltaType) EnumDescriptor() ([]byte, []int) { return fileDescriptor6, []int{1, 0} }
 
 type AnonymousDelta_DeltaScope int32
 
@@ -134,7 +62,7 @@ var AnonymousDelta_DeltaScope_value = map[string]int32{
 func (x AnonymousDelta_DeltaScope) String() string {
 	return proto.EnumName(AnonymousDelta_DeltaScope_name, int32(x))
 }
-func (AnonymousDelta_DeltaScope) EnumDescriptor() ([]byte, []int) { return fileDescriptor0, []int{1, 1} }
+func (AnonymousDelta_DeltaScope) EnumDescriptor() ([]byte, []int) { return fileDescriptor6, []int{1, 1} }
 
 type AnonymousRecord struct {
 	Sha256Fp  []byte        `protobuf:"bytes,1,opt,name=sha256fp,proto3" json:"sha256fp,omitempty"`
@@ -158,7 +86,7 @@ type AnonymousRecord struct {
 func (m *AnonymousRecord) Reset()                    { *m = AnonymousRecord{} }
 func (m *AnonymousRecord) String() string            { return proto.CompactTextString(m) }
 func (*AnonymousRecord) ProtoMessage()               {}
-func (*AnonymousRecord) Descriptor() ([]byte, []int) { return fileDescriptor0, []int{0} }
+func (*AnonymousRecord) Descriptor() ([]byte, []int) { return fileDescriptor6, []int{0} }
 
 type isAnonymousRecord_OneofData interface {
 	isAnonymousRecord_OneofData()
@@ -423,7 +351,7 @@ type AnonymousDelta struct {
 func (m *AnonymousDelta) Reset()                    { *m = AnonymousDelta{} }
 func (m *AnonymousDelta) String() string            { return proto.CompactTextString(m) }
 func (*AnonymousDelta) ProtoMessage()               {}
-func (*AnonymousDelta) Descriptor() ([]byte, []int) { return fileDescriptor0, []int{1} }
+func (*AnonymousDelta) Descriptor() ([]byte, []int) { return fileDescriptor6, []int{1} }
 
 func (m *AnonymousDelta) GetDeltaType() AnonymousDelta_DeltaType {
 	if m != nil {
@@ -458,7 +386,7 @@ type ExternalCertificate struct {
 func (m *ExternalCertificate) Reset()                    { *m = ExternalCertificate{} }
 func (m *ExternalCertificate) String() string            { return proto.CompactTextString(m) }
 func (*ExternalCertificate) ProtoMessage()               {}
-func (*ExternalCertificate) Descriptor() ([]byte, []int) { return fileDescriptor0, []int{2} }
+func (*ExternalCertificate) Descriptor() ([]byte, []int) { return fileDescriptor6, []int{2} }
 
 func (m *ExternalCertificate) GetSource() CertificateSource {
 	if m != nil {
@@ -510,9 +438,9 @@ func init() {
 	proto.RegisterEnum("zsearch.AnonymousDelta_DeltaScope", AnonymousDelta_DeltaScope_name, AnonymousDelta_DeltaScope_value)
 }
 
-func init() { proto.RegisterFile("anonstore.proto", fileDescriptor0) }
+func init() { proto.RegisterFile("anonstore.proto", fileDescriptor6) }
 
-var fileDescriptor0 = []byte{
+var fileDescriptor6 = []byte{
 	// 710 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x84, 0x54, 0x5d, 0x6f, 0xda, 0x4a,
 	0x10, 0xc5, 0x86, 0x0b, 0xf6, 0x40, 0xc0, 0xd9, 0xe4, 0x2a, 0x0e, 0xf7, 0x43, 0x0e, 0x4f, 0x7e,

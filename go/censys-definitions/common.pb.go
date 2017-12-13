@@ -38,7 +38,7 @@ var DeltaType_value = map[string]int32{
 func (x DeltaType) String() string {
 	return proto.EnumName(DeltaType_name, int32(x))
 }
-func (DeltaType) EnumDescriptor() ([]byte, []int) { return fileDescriptor3, []int{0} }
+func (DeltaType) EnumDescriptor() ([]byte, []int) { return fileDescriptor10, []int{0} }
 
 type RegionalRegistrar int32
 
@@ -74,7 +74,7 @@ var RegionalRegistrar_value = map[string]int32{
 func (x RegionalRegistrar) String() string {
 	return proto.EnumName(RegionalRegistrar_name, int32(x))
 }
-func (RegionalRegistrar) EnumDescriptor() ([]byte, []int) { return fileDescriptor3, []int{1} }
+func (RegionalRegistrar) EnumDescriptor() ([]byte, []int) { return fileDescriptor10, []int{1} }
 
 type Metadatum struct {
 	Key   string `protobuf:"bytes,1,opt,name=key" json:"key,omitempty"`
@@ -84,7 +84,7 @@ type Metadatum struct {
 func (m *Metadatum) Reset()                    { *m = Metadatum{} }
 func (m *Metadatum) String() string            { return proto.CompactTextString(m) }
 func (*Metadatum) ProtoMessage()               {}
-func (*Metadatum) Descriptor() ([]byte, []int) { return fileDescriptor3, []int{0} }
+func (*Metadatum) Descriptor() ([]byte, []int) { return fileDescriptor10, []int{0} }
 
 func (m *Metadatum) GetKey() string {
 	if m != nil {
@@ -112,7 +112,7 @@ type UserdataAtom struct {
 func (m *UserdataAtom) Reset()                    { *m = UserdataAtom{} }
 func (m *UserdataAtom) String() string            { return proto.CompactTextString(m) }
 func (*UserdataAtom) ProtoMessage()               {}
-func (*UserdataAtom) Descriptor() ([]byte, []int) { return fileDescriptor3, []int{1} }
+func (*UserdataAtom) Descriptor() ([]byte, []int) { return fileDescriptor10, []int{1} }
 
 func (m *UserdataAtom) GetPrivateNotes() string {
 	if m != nil {
@@ -170,7 +170,7 @@ type ASAtom struct {
 func (m *ASAtom) Reset()                    { *m = ASAtom{} }
 func (m *ASAtom) String() string            { return proto.CompactTextString(m) }
 func (*ASAtom) ProtoMessage()               {}
-func (*ASAtom) Descriptor() ([]byte, []int) { return fileDescriptor3, []int{2} }
+func (*ASAtom) Descriptor() ([]byte, []int) { return fileDescriptor10, []int{2} }
 
 func (m *ASAtom) GetAsn() uint32 {
 	if m != nil {
@@ -236,9 +236,9 @@ func init() {
 	proto.RegisterEnum("zsearch.RegionalRegistrar", RegionalRegistrar_name, RegionalRegistrar_value)
 }
 
-func init() { proto.RegisterFile("common.proto", fileDescriptor3) }
+func init() { proto.RegisterFile("common.proto", fileDescriptor10) }
 
-var fileDescriptor3 = []byte{
+var fileDescriptor10 = []byte{
 	// 511 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x74, 0x93, 0x5f, 0x8f, 0xd2, 0x4c,
 	0x14, 0xc6, 0xdf, 0x52, 0x60, 0xb7, 0x87, 0xb2, 0x3b, 0xef, 0xc4, 0x98, 0xc6, 0xc4, 0x88, 0x78,
