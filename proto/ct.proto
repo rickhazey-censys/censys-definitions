@@ -29,7 +29,7 @@ message CTStatus {
 
     CTServerStatus censys_dev = 1;
     CTServerStatus censys = 2;
-
+    // Google
     CTServerStatus google_aviator = 10;
     CTServerStatus google_pilot = 11;
     CTServerStatus google_rocketeer = 12;
@@ -44,47 +44,49 @@ message CTStatus {
     CTServerStatus google_argon_2019 = 52;
     CTServerStatus google_argon_2020 = 53;
     CTServerStatus google_argon_2021 = 54;
-
+    // Cloudflare
     CTServerStatus cloudflare_nimbus_2017 = 60;
     CTServerStatus cloudflare_nimbus_2018 = 61;
     CTServerStatus cloudflare_nimbus_2019 = 62;
     CTServerStatus cloudflare_nimbus_2020 = 63;
     CTServerStatus cloudflare_nimbus_2021 = 64;
-
+    // Digicert
     CTServerStatus digicert_ct1 = 20;
     CTServerStatus digicert_ct2 = 40;
-
+    // Izenpe
     CTServerStatus izenpe_com_ct = 21; // deprecated
     CTServerStatus izenpe_eus_ct = 22;
-
+    // Symantec
     CTServerStatus symantec_ws_ct = 23;
     CTServerStatus symantec_ws_vega = 24;
     CTServerStatus symantec_ws_sirius = 37;
     CTServerStatus symantec_ws_deneb = 32;
-
+    // Comodo
     CTServerStatus comodo_dodo = 34;
     CTServerStatus comodo_mammoth = 35;
     CTServerStatus comodo_sabre = 41;
-
+	// Wosign, StartCom, Wotrus
     CTServerStatus wosign_ctlog = 25; // deprecated
     CTServerStatus wosign_ct = 26; // deprecated
     CTServerStatus wotrus_ctlog = 47;
     CTServerStatus wotrus_ctlog3 = 48;
-
+    // GDCA
     CTServerStatus gdca_ct = 28;
     CTServerStatus gdca_ctlog = 36;
     CTServerStatus gdca_log = 45;
     CTServerStatus gdca_log2 = 46;
-
+    // Venafi
     CTServerStatus venafi_api_ctlog = 31;
     CTServerStatus venafi_api_ctlog_gen2 = 39;
-
+    // Nordu
     CTServerStatus nordu_ct_plausible = 33;
+    // Let's Encrypt
+    CTServerStatus letsencrypt_ct_clicky = 43; // clicky.ct.letsencrypt.org
+    // Other
     CTServerStatus cnnic_ctserver = 27;
     CTServerStatus startssl_ct = 29;
     CTServerStatus certly_log = 30; // deprecated
     CTServerStatus sheca_ct = 42;
-    CTServerStatus letsencrypt_ct_clicky = 43; // clicky.ct.letsencrypt.org
     CTServerStatus behind_the_sofa = 44;
     CTServerStatus certificatetransparency_cn_ct = 38;
 
