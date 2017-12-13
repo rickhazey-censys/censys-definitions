@@ -738,6 +738,15 @@ class CTStatus : public ::google::protobuf::Message /* @@protoc_insertion_point(
   ::zsearch::CTServerStatus* release_nordu_ct_plausible();
   void set_allocated_nordu_ct_plausible(::zsearch::CTServerStatus* nordu_ct_plausible);
 
+  // .zsearch.CTServerStatus letsencrypt_ct_clicky = 43;
+  bool has_letsencrypt_ct_clicky() const;
+  void clear_letsencrypt_ct_clicky();
+  static const int kLetsencryptCtClickyFieldNumber = 43;
+  const ::zsearch::CTServerStatus& letsencrypt_ct_clicky() const;
+  ::zsearch::CTServerStatus* mutable_letsencrypt_ct_clicky();
+  ::zsearch::CTServerStatus* release_letsencrypt_ct_clicky();
+  void set_allocated_letsencrypt_ct_clicky(::zsearch::CTServerStatus* letsencrypt_ct_clicky);
+
   // .zsearch.CTServerStatus cnnic_ctserver = 27;
   bool has_cnnic_ctserver() const;
   void clear_cnnic_ctserver();
@@ -773,15 +782,6 @@ class CTStatus : public ::google::protobuf::Message /* @@protoc_insertion_point(
   ::zsearch::CTServerStatus* mutable_sheca_ct();
   ::zsearch::CTServerStatus* release_sheca_ct();
   void set_allocated_sheca_ct(::zsearch::CTServerStatus* sheca_ct);
-
-  // .zsearch.CTServerStatus letsencrypt_ct_clicky = 43;
-  bool has_letsencrypt_ct_clicky() const;
-  void clear_letsencrypt_ct_clicky();
-  static const int kLetsencryptCtClickyFieldNumber = 43;
-  const ::zsearch::CTServerStatus& letsencrypt_ct_clicky() const;
-  ::zsearch::CTServerStatus* mutable_letsencrypt_ct_clicky();
-  ::zsearch::CTServerStatus* release_letsencrypt_ct_clicky();
-  void set_allocated_letsencrypt_ct_clicky(::zsearch::CTServerStatus* letsencrypt_ct_clicky);
 
   // .zsearch.CTServerStatus behind_the_sofa = 44;
   bool has_behind_the_sofa() const;
@@ -847,11 +847,11 @@ class CTStatus : public ::google::protobuf::Message /* @@protoc_insertion_point(
   ::zsearch::CTServerStatus* venafi_api_ctlog_;
   ::zsearch::CTServerStatus* venafi_api_ctlog_gen2_;
   ::zsearch::CTServerStatus* nordu_ct_plausible_;
+  ::zsearch::CTServerStatus* letsencrypt_ct_clicky_;
   ::zsearch::CTServerStatus* cnnic_ctserver_;
   ::zsearch::CTServerStatus* startssl_ct_;
   ::zsearch::CTServerStatus* certly_log_;
   ::zsearch::CTServerStatus* sheca_ct_;
-  ::zsearch::CTServerStatus* letsencrypt_ct_clicky_;
   ::zsearch::CTServerStatus* behind_the_sofa_;
   ::zsearch::CTServerStatus* certificatetransparency_cn_ct_;
   mutable int _cached_size_;
@@ -2789,6 +2789,45 @@ inline void CTStatus::set_allocated_nordu_ct_plausible(::zsearch::CTServerStatus
   // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.nordu_ct_plausible)
 }
 
+// .zsearch.CTServerStatus letsencrypt_ct_clicky = 43;
+inline bool CTStatus::has_letsencrypt_ct_clicky() const {
+  return this != internal_default_instance() && letsencrypt_ct_clicky_ != NULL;
+}
+inline void CTStatus::clear_letsencrypt_ct_clicky() {
+  if (GetArenaNoVirtual() == NULL && letsencrypt_ct_clicky_ != NULL) delete letsencrypt_ct_clicky_;
+  letsencrypt_ct_clicky_ = NULL;
+}
+inline const ::zsearch::CTServerStatus& CTStatus::letsencrypt_ct_clicky() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.letsencrypt_ct_clicky)
+  return letsencrypt_ct_clicky_ != NULL ? *letsencrypt_ct_clicky_
+                         : *::zsearch::CTServerStatus::internal_default_instance();
+}
+inline ::zsearch::CTServerStatus* CTStatus::mutable_letsencrypt_ct_clicky() {
+  
+  if (letsencrypt_ct_clicky_ == NULL) {
+    letsencrypt_ct_clicky_ = new ::zsearch::CTServerStatus;
+  }
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.letsencrypt_ct_clicky)
+  return letsencrypt_ct_clicky_;
+}
+inline ::zsearch::CTServerStatus* CTStatus::release_letsencrypt_ct_clicky() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.letsencrypt_ct_clicky)
+  
+  ::zsearch::CTServerStatus* temp = letsencrypt_ct_clicky_;
+  letsencrypt_ct_clicky_ = NULL;
+  return temp;
+}
+inline void CTStatus::set_allocated_letsencrypt_ct_clicky(::zsearch::CTServerStatus* letsencrypt_ct_clicky) {
+  delete letsencrypt_ct_clicky_;
+  letsencrypt_ct_clicky_ = letsencrypt_ct_clicky;
+  if (letsencrypt_ct_clicky) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.letsencrypt_ct_clicky)
+}
+
 // .zsearch.CTServerStatus cnnic_ctserver = 27;
 inline bool CTStatus::has_cnnic_ctserver() const {
   return this != internal_default_instance() && cnnic_ctserver_ != NULL;
@@ -2943,45 +2982,6 @@ inline void CTStatus::set_allocated_sheca_ct(::zsearch::CTServerStatus* sheca_ct
     
   }
   // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.sheca_ct)
-}
-
-// .zsearch.CTServerStatus letsencrypt_ct_clicky = 43;
-inline bool CTStatus::has_letsencrypt_ct_clicky() const {
-  return this != internal_default_instance() && letsencrypt_ct_clicky_ != NULL;
-}
-inline void CTStatus::clear_letsencrypt_ct_clicky() {
-  if (GetArenaNoVirtual() == NULL && letsencrypt_ct_clicky_ != NULL) delete letsencrypt_ct_clicky_;
-  letsencrypt_ct_clicky_ = NULL;
-}
-inline const ::zsearch::CTServerStatus& CTStatus::letsencrypt_ct_clicky() const {
-  // @@protoc_insertion_point(field_get:zsearch.CTStatus.letsencrypt_ct_clicky)
-  return letsencrypt_ct_clicky_ != NULL ? *letsencrypt_ct_clicky_
-                         : *::zsearch::CTServerStatus::internal_default_instance();
-}
-inline ::zsearch::CTServerStatus* CTStatus::mutable_letsencrypt_ct_clicky() {
-  
-  if (letsencrypt_ct_clicky_ == NULL) {
-    letsencrypt_ct_clicky_ = new ::zsearch::CTServerStatus;
-  }
-  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.letsencrypt_ct_clicky)
-  return letsencrypt_ct_clicky_;
-}
-inline ::zsearch::CTServerStatus* CTStatus::release_letsencrypt_ct_clicky() {
-  // @@protoc_insertion_point(field_release:zsearch.CTStatus.letsencrypt_ct_clicky)
-  
-  ::zsearch::CTServerStatus* temp = letsencrypt_ct_clicky_;
-  letsencrypt_ct_clicky_ = NULL;
-  return temp;
-}
-inline void CTStatus::set_allocated_letsencrypt_ct_clicky(::zsearch::CTServerStatus* letsencrypt_ct_clicky) {
-  delete letsencrypt_ct_clicky_;
-  letsencrypt_ct_clicky_ = letsencrypt_ct_clicky;
-  if (letsencrypt_ct_clicky) {
-    
-  } else {
-    
-  }
-  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.letsencrypt_ct_clicky)
 }
 
 // .zsearch.CTServerStatus behind_the_sofa = 44;

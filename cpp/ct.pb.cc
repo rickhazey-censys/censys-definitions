@@ -93,11 +93,11 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, venafi_api_ctlog_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, venafi_api_ctlog_gen2_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, nordu_ct_plausible_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, letsencrypt_ct_clicky_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, cnnic_ctserver_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, startssl_ct_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, certly_log_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, sheca_ct_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, letsencrypt_ct_clicky_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, behind_the_sofa_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CTStatus, certificatetransparency_cn_ct_),
   ~0u,  // no _has_bits_
@@ -244,6 +244,8 @@ void TableStruct::InitDefaultsImpl() {
       ::zsearch::CTServerStatus::internal_default_instance());
   _CTStatus_default_instance_.get_mutable()->nordu_ct_plausible_ = const_cast< ::zsearch::CTServerStatus*>(
       ::zsearch::CTServerStatus::internal_default_instance());
+  _CTStatus_default_instance_.get_mutable()->letsencrypt_ct_clicky_ = const_cast< ::zsearch::CTServerStatus*>(
+      ::zsearch::CTServerStatus::internal_default_instance());
   _CTStatus_default_instance_.get_mutable()->cnnic_ctserver_ = const_cast< ::zsearch::CTServerStatus*>(
       ::zsearch::CTServerStatus::internal_default_instance());
   _CTStatus_default_instance_.get_mutable()->startssl_ct_ = const_cast< ::zsearch::CTServerStatus*>(
@@ -251,8 +253,6 @@ void TableStruct::InitDefaultsImpl() {
   _CTStatus_default_instance_.get_mutable()->certly_log_ = const_cast< ::zsearch::CTServerStatus*>(
       ::zsearch::CTServerStatus::internal_default_instance());
   _CTStatus_default_instance_.get_mutable()->sheca_ct_ = const_cast< ::zsearch::CTServerStatus*>(
-      ::zsearch::CTServerStatus::internal_default_instance());
-  _CTStatus_default_instance_.get_mutable()->letsencrypt_ct_clicky_ = const_cast< ::zsearch::CTServerStatus*>(
       ::zsearch::CTServerStatus::internal_default_instance());
   _CTStatus_default_instance_.get_mutable()->behind_the_sofa_ = const_cast< ::zsearch::CTServerStatus*>(
       ::zsearch::CTServerStatus::internal_default_instance());
@@ -326,12 +326,12 @@ void AddDescriptorsImpl() {
       " \001(\0132\027.zsearch.CTServerStatus\0226\n\025venafi_"
       "api_ctlog_gen2\030\' \001(\0132\027.zsearch.CTServerS"
       "tatus\0223\n\022nordu_ct_plausible\030! \001(\0132\027.zsea"
-      "rch.CTServerStatus\022/\n\016cnnic_ctserver\030\033 \001"
-      "(\0132\027.zsearch.CTServerStatus\022,\n\013startssl_"
-      "ct\030\035 \001(\0132\027.zsearch.CTServerStatus\022+\n\ncer"
-      "tly_log\030\036 \001(\0132\027.zsearch.CTServerStatus\022)"
-      "\n\010sheca_ct\030* \001(\0132\027.zsearch.CTServerStatu"
-      "s\0226\n\025letsencrypt_ct_clicky\030+ \001(\0132\027.zsear"
+      "rch.CTServerStatus\0226\n\025letsencrypt_ct_cli"
+      "cky\030+ \001(\0132\027.zsearch.CTServerStatus\022/\n\016cn"
+      "nic_ctserver\030\033 \001(\0132\027.zsearch.CTServerSta"
+      "tus\022,\n\013startssl_ct\030\035 \001(\0132\027.zsearch.CTSer"
+      "verStatus\022+\n\ncertly_log\030\036 \001(\0132\027.zsearch."
+      "CTServerStatus\022)\n\010sheca_ct\030* \001(\0132\027.zsear"
       "ch.CTServerStatus\0220\n\017behind_the_sofa\030, \001"
       "(\0132\027.zsearch.CTServerStatus\022>\n\035certifica"
       "tetransparency_cn_ct\030& \001(\0132\027.zsearch.CTS"
@@ -1163,11 +1163,11 @@ const int CTStatus::kGdcaLog2FieldNumber;
 const int CTStatus::kVenafiApiCtlogFieldNumber;
 const int CTStatus::kVenafiApiCtlogGen2FieldNumber;
 const int CTStatus::kNorduCtPlausibleFieldNumber;
+const int CTStatus::kLetsencryptCtClickyFieldNumber;
 const int CTStatus::kCnnicCtserverFieldNumber;
 const int CTStatus::kStartsslCtFieldNumber;
 const int CTStatus::kCertlyLogFieldNumber;
 const int CTStatus::kShecaCtFieldNumber;
-const int CTStatus::kLetsencryptCtClickyFieldNumber;
 const int CTStatus::kBehindTheSofaFieldNumber;
 const int CTStatus::kCertificatetransparencyCnCtFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
@@ -1395,6 +1395,11 @@ CTStatus::CTStatus(const CTStatus& from)
   } else {
     nordu_ct_plausible_ = NULL;
   }
+  if (from.has_letsencrypt_ct_clicky()) {
+    letsencrypt_ct_clicky_ = new ::zsearch::CTServerStatus(*from.letsencrypt_ct_clicky_);
+  } else {
+    letsencrypt_ct_clicky_ = NULL;
+  }
   if (from.has_cnnic_ctserver()) {
     cnnic_ctserver_ = new ::zsearch::CTServerStatus(*from.cnnic_ctserver_);
   } else {
@@ -1414,11 +1419,6 @@ CTStatus::CTStatus(const CTStatus& from)
     sheca_ct_ = new ::zsearch::CTServerStatus(*from.sheca_ct_);
   } else {
     sheca_ct_ = NULL;
-  }
-  if (from.has_letsencrypt_ct_clicky()) {
-    letsencrypt_ct_clicky_ = new ::zsearch::CTServerStatus(*from.letsencrypt_ct_clicky_);
-  } else {
-    letsencrypt_ct_clicky_ = NULL;
   }
   if (from.has_behind_the_sofa()) {
     behind_the_sofa_ = new ::zsearch::CTServerStatus(*from.behind_the_sofa_);
@@ -1572,6 +1572,9 @@ void CTStatus::SharedDtor() {
     delete nordu_ct_plausible_;
   }
   if (this != internal_default_instance()) {
+    delete letsencrypt_ct_clicky_;
+  }
+  if (this != internal_default_instance()) {
     delete cnnic_ctserver_;
   }
   if (this != internal_default_instance()) {
@@ -1582,9 +1585,6 @@ void CTStatus::SharedDtor() {
   }
   if (this != internal_default_instance()) {
     delete sheca_ct_;
-  }
-  if (this != internal_default_instance()) {
-    delete letsencrypt_ct_clicky_;
   }
   if (this != internal_default_instance()) {
     delete behind_the_sofa_;
@@ -1787,6 +1787,10 @@ void CTStatus::Clear() {
     delete nordu_ct_plausible_;
   }
   nordu_ct_plausible_ = NULL;
+  if (GetArenaNoVirtual() == NULL && letsencrypt_ct_clicky_ != NULL) {
+    delete letsencrypt_ct_clicky_;
+  }
+  letsencrypt_ct_clicky_ = NULL;
   if (GetArenaNoVirtual() == NULL && cnnic_ctserver_ != NULL) {
     delete cnnic_ctserver_;
   }
@@ -1803,10 +1807,6 @@ void CTStatus::Clear() {
     delete sheca_ct_;
   }
   sheca_ct_ = NULL;
-  if (GetArenaNoVirtual() == NULL && letsencrypt_ct_clicky_ != NULL) {
-    delete letsencrypt_ct_clicky_;
-  }
-  letsencrypt_ct_clicky_ = NULL;
   if (GetArenaNoVirtual() == NULL && behind_the_sofa_ != NULL) {
     delete behind_the_sofa_;
   }
@@ -3336,6 +3336,13 @@ size_t CTStatus::ByteSizeLong() const {
         *this->nordu_ct_plausible_);
   }
 
+  // .zsearch.CTServerStatus letsencrypt_ct_clicky = 43;
+  if (this->has_letsencrypt_ct_clicky()) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        *this->letsencrypt_ct_clicky_);
+  }
+
   // .zsearch.CTServerStatus cnnic_ctserver = 27;
   if (this->has_cnnic_ctserver()) {
     total_size += 2 +
@@ -3362,13 +3369,6 @@ size_t CTStatus::ByteSizeLong() const {
     total_size += 2 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->sheca_ct_);
-  }
-
-  // .zsearch.CTServerStatus letsencrypt_ct_clicky = 43;
-  if (this->has_letsencrypt_ct_clicky()) {
-    total_size += 2 +
-      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-        *this->letsencrypt_ct_clicky_);
   }
 
   // .zsearch.CTServerStatus behind_the_sofa = 44;
@@ -3537,6 +3537,9 @@ void CTStatus::MergeFrom(const CTStatus& from) {
   if (from.has_nordu_ct_plausible()) {
     mutable_nordu_ct_plausible()->::zsearch::CTServerStatus::MergeFrom(from.nordu_ct_plausible());
   }
+  if (from.has_letsencrypt_ct_clicky()) {
+    mutable_letsencrypt_ct_clicky()->::zsearch::CTServerStatus::MergeFrom(from.letsencrypt_ct_clicky());
+  }
   if (from.has_cnnic_ctserver()) {
     mutable_cnnic_ctserver()->::zsearch::CTServerStatus::MergeFrom(from.cnnic_ctserver());
   }
@@ -3548,9 +3551,6 @@ void CTStatus::MergeFrom(const CTStatus& from) {
   }
   if (from.has_sheca_ct()) {
     mutable_sheca_ct()->::zsearch::CTServerStatus::MergeFrom(from.sheca_ct());
-  }
-  if (from.has_letsencrypt_ct_clicky()) {
-    mutable_letsencrypt_ct_clicky()->::zsearch::CTServerStatus::MergeFrom(from.letsencrypt_ct_clicky());
   }
   if (from.has_behind_the_sofa()) {
     mutable_behind_the_sofa()->::zsearch::CTServerStatus::MergeFrom(from.behind_the_sofa());
@@ -3625,11 +3625,11 @@ void CTStatus::InternalSwap(CTStatus* other) {
   std::swap(venafi_api_ctlog_, other->venafi_api_ctlog_);
   std::swap(venafi_api_ctlog_gen2_, other->venafi_api_ctlog_gen2_);
   std::swap(nordu_ct_plausible_, other->nordu_ct_plausible_);
+  std::swap(letsencrypt_ct_clicky_, other->letsencrypt_ct_clicky_);
   std::swap(cnnic_ctserver_, other->cnnic_ctserver_);
   std::swap(startssl_ct_, other->startssl_ct_);
   std::swap(certly_log_, other->certly_log_);
   std::swap(sheca_ct_, other->sheca_ct_);
-  std::swap(letsencrypt_ct_clicky_, other->letsencrypt_ct_clicky_);
   std::swap(behind_the_sofa_, other->behind_the_sofa_);
   std::swap(certificatetransparency_cn_ct_, other->certificatetransparency_cn_ct_);
   std::swap(_cached_size_, other->_cached_size_);
@@ -5281,6 +5281,45 @@ void CTStatus::set_allocated_nordu_ct_plausible(::zsearch::CTServerStatus* nordu
   // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.nordu_ct_plausible)
 }
 
+// .zsearch.CTServerStatus letsencrypt_ct_clicky = 43;
+bool CTStatus::has_letsencrypt_ct_clicky() const {
+  return this != internal_default_instance() && letsencrypt_ct_clicky_ != NULL;
+}
+void CTStatus::clear_letsencrypt_ct_clicky() {
+  if (GetArenaNoVirtual() == NULL && letsencrypt_ct_clicky_ != NULL) delete letsencrypt_ct_clicky_;
+  letsencrypt_ct_clicky_ = NULL;
+}
+const ::zsearch::CTServerStatus& CTStatus::letsencrypt_ct_clicky() const {
+  // @@protoc_insertion_point(field_get:zsearch.CTStatus.letsencrypt_ct_clicky)
+  return letsencrypt_ct_clicky_ != NULL ? *letsencrypt_ct_clicky_
+                         : *::zsearch::CTServerStatus::internal_default_instance();
+}
+::zsearch::CTServerStatus* CTStatus::mutable_letsencrypt_ct_clicky() {
+  
+  if (letsencrypt_ct_clicky_ == NULL) {
+    letsencrypt_ct_clicky_ = new ::zsearch::CTServerStatus;
+  }
+  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.letsencrypt_ct_clicky)
+  return letsencrypt_ct_clicky_;
+}
+::zsearch::CTServerStatus* CTStatus::release_letsencrypt_ct_clicky() {
+  // @@protoc_insertion_point(field_release:zsearch.CTStatus.letsencrypt_ct_clicky)
+  
+  ::zsearch::CTServerStatus* temp = letsencrypt_ct_clicky_;
+  letsencrypt_ct_clicky_ = NULL;
+  return temp;
+}
+void CTStatus::set_allocated_letsencrypt_ct_clicky(::zsearch::CTServerStatus* letsencrypt_ct_clicky) {
+  delete letsencrypt_ct_clicky_;
+  letsencrypt_ct_clicky_ = letsencrypt_ct_clicky;
+  if (letsencrypt_ct_clicky) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.letsencrypt_ct_clicky)
+}
+
 // .zsearch.CTServerStatus cnnic_ctserver = 27;
 bool CTStatus::has_cnnic_ctserver() const {
   return this != internal_default_instance() && cnnic_ctserver_ != NULL;
@@ -5435,45 +5474,6 @@ void CTStatus::set_allocated_sheca_ct(::zsearch::CTServerStatus* sheca_ct) {
     
   }
   // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.sheca_ct)
-}
-
-// .zsearch.CTServerStatus letsencrypt_ct_clicky = 43;
-bool CTStatus::has_letsencrypt_ct_clicky() const {
-  return this != internal_default_instance() && letsencrypt_ct_clicky_ != NULL;
-}
-void CTStatus::clear_letsencrypt_ct_clicky() {
-  if (GetArenaNoVirtual() == NULL && letsencrypt_ct_clicky_ != NULL) delete letsencrypt_ct_clicky_;
-  letsencrypt_ct_clicky_ = NULL;
-}
-const ::zsearch::CTServerStatus& CTStatus::letsencrypt_ct_clicky() const {
-  // @@protoc_insertion_point(field_get:zsearch.CTStatus.letsencrypt_ct_clicky)
-  return letsencrypt_ct_clicky_ != NULL ? *letsencrypt_ct_clicky_
-                         : *::zsearch::CTServerStatus::internal_default_instance();
-}
-::zsearch::CTServerStatus* CTStatus::mutable_letsencrypt_ct_clicky() {
-  
-  if (letsencrypt_ct_clicky_ == NULL) {
-    letsencrypt_ct_clicky_ = new ::zsearch::CTServerStatus;
-  }
-  // @@protoc_insertion_point(field_mutable:zsearch.CTStatus.letsencrypt_ct_clicky)
-  return letsencrypt_ct_clicky_;
-}
-::zsearch::CTServerStatus* CTStatus::release_letsencrypt_ct_clicky() {
-  // @@protoc_insertion_point(field_release:zsearch.CTStatus.letsencrypt_ct_clicky)
-  
-  ::zsearch::CTServerStatus* temp = letsencrypt_ct_clicky_;
-  letsencrypt_ct_clicky_ = NULL;
-  return temp;
-}
-void CTStatus::set_allocated_letsencrypt_ct_clicky(::zsearch::CTServerStatus* letsencrypt_ct_clicky) {
-  delete letsencrypt_ct_clicky_;
-  letsencrypt_ct_clicky_ = letsencrypt_ct_clicky;
-  if (letsencrypt_ct_clicky) {
-    
-  } else {
-    
-  }
-  // @@protoc_insertion_point(field_set_allocated:zsearch.CTStatus.letsencrypt_ct_clicky)
 }
 
 // .zsearch.CTServerStatus behind_the_sofa = 44;
