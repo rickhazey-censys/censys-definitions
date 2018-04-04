@@ -33,7 +33,7 @@ enum Protocol {
     PROTO_SMB = 28;
     
     // Databases
-    PROTO_MAMBO = 64; 
+    PROTO_MONGO = 64; 
     PROTO_MSSQL = 65;
     PROTO_MYSQL = 66;
     PROTO_ORACLE = 67;
