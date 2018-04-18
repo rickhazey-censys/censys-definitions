@@ -73,12 +73,19 @@ enum Protocol {
   PROTO_HTTP_WWW = 26,
   PROTO_HTTPS_WWW = 27,
   PROTO_SMB = 28,
+  PROTO_MONGO = 64,
+  PROTO_MSSQL = 65,
+  PROTO_MYSQL = 66,
+  PROTO_ORACLE = 67,
+  PROTO_POSTGRES = 68,
+  PROTO_MEMCACHED = 128,
+  PROTO_REDIS = 129,
   Protocol_INT_MIN_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32min,
   Protocol_INT_MAX_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32max
 };
 bool Protocol_IsValid(int value);
 const Protocol Protocol_MIN = PROTO_RESERVED;
-const Protocol Protocol_MAX = PROTO_SMB;
+const Protocol Protocol_MAX = PROTO_REDIS;
 const int Protocol_ARRAYSIZE = Protocol_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* Protocol_descriptor();
@@ -132,6 +139,8 @@ enum Subprotocol {
   SUBPROTO_STATUS = 37,
   SUBPROTO_SZL = 38,
   SUBPROTO_V2 = 39,
+  SUBPROTO_TCP = 64,
+  SUBPROTO_UDP = 65,
   SUBPROTO_SYS_PUBLIC_LOCATION = 192,
   SUBPROTO_SYS_AS = 193,
   SUBPROTO_SYS_TAGS = 194,
