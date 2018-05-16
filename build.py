@@ -34,6 +34,7 @@ protobuf_prefixes = [
 ]
 
 grpc_prefixes = [
+    "esloader",
     "rpc",
     "search",
 ]
