@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  task-runner:
+    # A service for running tasks that build and regenerate code from the
+    # defined protobufs. In other words, this gives you an environment for
+    # reliably running our make tasks.
+    build:
+      context: .
+      dockerfile: Dockerfile.task-runner
+    volumes:
+      - .:/usr/src/app
+    working_dir: /usr/src/app
+    command: ["make", "python"]
