@@ -27,8 +27,13 @@ class ESLoaderStub(object):
         request_serializer=esloader__pb2.HealthCheckRequest.SerializeToString,
         response_deserializer=esloader__pb2.HealthCheckResponse.FromString,
         )
-    self.DeltaLoad = channel.unary_unary(
-        '/esloader.ESLoader/DeltaLoad',
+    self.IPv4DeltaLoad = channel.unary_unary(
+        '/esloader.ESLoader/IPv4DeltaLoad',
+        request_serializer=esloader__pb2.DeltaLoadRequest.SerializeToString,
+        response_deserializer=esloader__pb2.DeltaLoadResponse.FromString,
+        )
+    self.DomainDeltaLoad = channel.unary_unary(
+        '/esloader.ESLoader/DomainDeltaLoad',
         request_serializer=esloader__pb2.DeltaLoadRequest.SerializeToString,
         response_deserializer=esloader__pb2.DeltaLoadResponse.FromString,
         )
@@ -59,9 +64,17 @@ class ESLoaderServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
-  def DeltaLoad(self, request, context):
+  def IPv4DeltaLoad(self, request, context):
     """A remote procedure call to load into Elasticsearch a list of Delta
-    objects, i.e., for indexing IPv4 and Domain entries.
+    objects for indexing IPv4 entries.
+    """
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def DomainDeltaLoad(self, request, context):
+    """A remote procedure call to load into Elasticsearch a list of Delta
+    objects for indexing Domain entries.
     """
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
     context.set_details('Method not implemented!')
@@ -88,8 +101,13 @@ def add_ESLoaderServicer_to_server(servicer, server):
           request_deserializer=esloader__pb2.HealthCheckRequest.FromString,
           response_serializer=esloader__pb2.HealthCheckResponse.SerializeToString,
       ),
-      'DeltaLoad': grpc.unary_unary_rpc_method_handler(
-          servicer.DeltaLoad,
+      'IPv4DeltaLoad': grpc.unary_unary_rpc_method_handler(
+          servicer.IPv4DeltaLoad,
+          request_deserializer=esloader__pb2.DeltaLoadRequest.FromString,
+          response_serializer=esloader__pb2.DeltaLoadResponse.SerializeToString,
+      ),
+      'DomainDeltaLoad': grpc.unary_unary_rpc_method_handler(
+          servicer.DomainDeltaLoad,
           request_deserializer=esloader__pb2.DeltaLoadRequest.FromString,
           response_serializer=esloader__pb2.DeltaLoadResponse.SerializeToString,
       ),

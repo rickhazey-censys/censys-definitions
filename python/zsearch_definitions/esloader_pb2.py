@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='esloader.proto',
   package='esloader',
   syntax='proto3',
-  serialized_pb=_b('\n\x0e\x65sloader.proto\x12\x08\x65sloader\x1a\x0f\x61nonstore.proto\x1a\x0fhoststore.proto\"\x1c\n\x0cHelloRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"\x1d\n\nHelloReply\x12\x0f\n\x07message\x18\x01 \x01(\t\"\x14\n\x12HealthCheckRequest\"\x8e\x01\n\x13HealthCheckResponse\x12;\n\x06status\x18\x01 \x01(\x0e\x32+.esloader.HealthCheckResponse.ServingStatus\":\n\rServingStatus\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0b\n\x07SERVING\x10\x01\x12\x0f\n\x0bNOT_SERVING\x10\x02\"2\n\x10\x44\x65ltaLoadRequest\x12\x1e\n\x06\x64\x65ltas\x18\x01 \x03(\x0b\x32\x0e.zsearch.Delta\"y\n\x11\x44\x65ltaLoadResponse\x12:\n\x06status\x18\x01 \x01(\x0e\x32*.esloader.DeltaLoadResponse.ResponseStatus\"(\n\x0eResponseStatus\x12\x0b\n\x07SUCCESS\x10\x00\x12\t\n\x05\x45RROR\x10\x01\"N\n\x19\x41nonymousDeltaLoadRequest\x12\x31\n\x10\x61nonymous_deltas\x18\x01 \x03(\x0b\x32\x17.zsearch.AnonymousDelta\"\x8b\x01\n\x1a\x41nonymousDeltaLoadResponse\x12\x43\n\x06status\x18\x01 \x01(\x0e\x32\x33.esloader.AnonymousDeltaLoadResponse.ResponseStatus\"(\n\x0eResponseStatus\x12\x0b\n\x07SUCCESS\x10\x00\x12\t\n\x05\x45RROR\x10\x01\x32\xb9\x02\n\x08\x45SLoader\x12:\n\x08SayHello\x12\x16.esloader.HelloRequest\x1a\x14.esloader.HelloReply\"\x00\x12J\n\x0bHealthCheck\x12\x1c.esloader.HealthCheckRequest\x1a\x1d.esloader.HealthCheckResponse\x12\x44\n\tDeltaLoad\x12\x1a.esloader.DeltaLoadRequest\x1a\x1b.esloader.DeltaLoadResponse\x12_\n\x12\x41nonymousDeltaLoad\x12#.esloader.AnonymousDeltaLoadRequest\x1a$.esloader.AnonymousDeltaLoadResponseb\x06proto3')
+  serialized_pb=_b('\n\x0e\x65sloader.proto\x12\x08\x65sloader\x1a\x0f\x61nonstore.proto\x1a\x0fhoststore.proto\"\x1c\n\x0cHelloRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"\x1d\n\nHelloReply\x12\x0f\n\x07message\x18\x01 \x01(\t\"\x14\n\x12HealthCheckRequest\"\x8e\x01\n\x13HealthCheckResponse\x12;\n\x06status\x18\x01 \x01(\x0e\x32+.esloader.HealthCheckResponse.ServingStatus\":\n\rServingStatus\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0b\n\x07SERVING\x10\x01\x12\x0f\n\x0bNOT_SERVING\x10\x02\"2\n\x10\x44\x65ltaLoadRequest\x12\x1e\n\x06\x64\x65ltas\x18\x01 \x03(\x0b\x32\x0e.zsearch.Delta\"y\n\x11\x44\x65ltaLoadResponse\x12:\n\x06status\x18\x01 \x01(\x0e\x32*.esloader.DeltaLoadResponse.ResponseStatus\"(\n\x0eResponseStatus\x12\x0b\n\x07SUCCESS\x10\x00\x12\t\n\x05\x45RROR\x10\x01\"N\n\x19\x41nonymousDeltaLoadRequest\x12\x31\n\x10\x61nonymous_deltas\x18\x01 \x03(\x0b\x32\x17.zsearch.AnonymousDelta\"\x8b\x01\n\x1a\x41nonymousDeltaLoadResponse\x12\x43\n\x06status\x18\x01 \x01(\x0e\x32\x33.esloader.AnonymousDeltaLoadResponse.ResponseStatus\"(\n\x0eResponseStatus\x12\x0b\n\x07SUCCESS\x10\x00\x12\t\n\x05\x45RROR\x10\x01\x32\x89\x03\n\x08\x45SLoader\x12:\n\x08SayHello\x12\x16.esloader.HelloRequest\x1a\x14.esloader.HelloReply\"\x00\x12J\n\x0bHealthCheck\x12\x1c.esloader.HealthCheckRequest\x1a\x1d.esloader.HealthCheckResponse\x12H\n\rIPv4DeltaLoad\x12\x1a.esloader.DeltaLoadRequest\x1a\x1b.esloader.DeltaLoadResponse\x12J\n\x0f\x44omainDeltaLoad\x12\x1a.esloader.DeltaLoadRequest\x1a\x1b.esloader.DeltaLoadResponse\x12_\n\x12\x41nonymousDeltaLoad\x12#.esloader.AnonymousDeltaLoadRequest\x1a$.esloader.AnonymousDeltaLoadResponseb\x06proto3')
   ,
   dependencies=[anonstore__pb2.DESCRIPTOR,hoststore__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -447,8 +447,13 @@ try:
           request_serializer=HealthCheckRequest.SerializeToString,
           response_deserializer=HealthCheckResponse.FromString,
           )
-      self.DeltaLoad = channel.unary_unary(
-          '/esloader.ESLoader/DeltaLoad',
+      self.IPv4DeltaLoad = channel.unary_unary(
+          '/esloader.ESLoader/IPv4DeltaLoad',
+          request_serializer=DeltaLoadRequest.SerializeToString,
+          response_deserializer=DeltaLoadResponse.FromString,
+          )
+      self.DomainDeltaLoad = channel.unary_unary(
+          '/esloader.ESLoader/DomainDeltaLoad',
           request_serializer=DeltaLoadRequest.SerializeToString,
           response_deserializer=DeltaLoadResponse.FromString,
           )
@@ -479,9 +484,17 @@ try:
       context.set_details('Method not implemented!')
       raise NotImplementedError('Method not implemented!')
 
-    def DeltaLoad(self, request, context):
+    def IPv4DeltaLoad(self, request, context):
       """A remote procedure call to load into Elasticsearch a list of Delta
-      objects, i.e., for indexing IPv4 and Domain entries.
+      objects for indexing IPv4 entries.
+      """
+      context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+      context.set_details('Method not implemented!')
+      raise NotImplementedError('Method not implemented!')
+
+    def DomainDeltaLoad(self, request, context):
+      """A remote procedure call to load into Elasticsearch a list of Delta
+      objects for indexing Domain entries.
       """
       context.set_code(grpc.StatusCode.UNIMPLEMENTED)
       context.set_details('Method not implemented!')
@@ -508,8 +521,13 @@ try:
             request_deserializer=HealthCheckRequest.FromString,
             response_serializer=HealthCheckResponse.SerializeToString,
         ),
-        'DeltaLoad': grpc.unary_unary_rpc_method_handler(
-            servicer.DeltaLoad,
+        'IPv4DeltaLoad': grpc.unary_unary_rpc_method_handler(
+            servicer.IPv4DeltaLoad,
+            request_deserializer=DeltaLoadRequest.FromString,
+            response_serializer=DeltaLoadResponse.SerializeToString,
+        ),
+        'DomainDeltaLoad': grpc.unary_unary_rpc_method_handler(
+            servicer.DomainDeltaLoad,
             request_deserializer=DeltaLoadRequest.FromString,
             response_serializer=DeltaLoadResponse.SerializeToString,
         ),
@@ -542,9 +560,14 @@ try:
       https://github.com/grpc/grpc/blob/master/doc/health-checking.md
       """
       context.code(beta_interfaces.StatusCode.UNIMPLEMENTED)
-    def DeltaLoad(self, request, context):
+    def IPv4DeltaLoad(self, request, context):
       """A remote procedure call to load into Elasticsearch a list of Delta
-      objects, i.e., for indexing IPv4 and Domain entries.
+      objects for indexing IPv4 entries.
+      """
+      context.code(beta_interfaces.StatusCode.UNIMPLEMENTED)
+    def DomainDeltaLoad(self, request, context):
+      """A remote procedure call to load into Elasticsearch a list of Delta
+      objects for indexing Domain entries.
       """
       context.code(beta_interfaces.StatusCode.UNIMPLEMENTED)
     def AnonymousDeltaLoad(self, request, context):
@@ -574,12 +597,18 @@ try:
       """
       raise NotImplementedError()
     HealthCheck.future = None
-    def DeltaLoad(self, request, timeout, metadata=None, with_call=False, protocol_options=None):
+    def IPv4DeltaLoad(self, request, timeout, metadata=None, with_call=False, protocol_options=None):
       """A remote procedure call to load into Elasticsearch a list of Delta
-      objects, i.e., for indexing IPv4 and Domain entries.
+      objects for indexing IPv4 entries.
       """
       raise NotImplementedError()
-    DeltaLoad.future = None
+    IPv4DeltaLoad.future = None
+    def DomainDeltaLoad(self, request, timeout, metadata=None, with_call=False, protocol_options=None):
+      """A remote procedure call to load into Elasticsearch a list of Delta
+      objects for indexing Domain entries.
+      """
+      raise NotImplementedError()
+    DomainDeltaLoad.future = None
     def AnonymousDeltaLoad(self, request, timeout, metadata=None, with_call=False, protocol_options=None):
       """A remote procedure call to load into Elasticsearch a list of
       AnonymousDelta objects, i.e., for indexing Certificate entries.
@@ -596,20 +625,23 @@ try:
     generated only to ease transition from grpcio<0.15.0 to grpcio>=0.15.0"""
     request_deserializers = {
       ('esloader.ESLoader', 'AnonymousDeltaLoad'): AnonymousDeltaLoadRequest.FromString,
-      ('esloader.ESLoader', 'DeltaLoad'): DeltaLoadRequest.FromString,
+      ('esloader.ESLoader', 'DomainDeltaLoad'): DeltaLoadRequest.FromString,
       ('esloader.ESLoader', 'HealthCheck'): HealthCheckRequest.FromString,
+      ('esloader.ESLoader', 'IPv4DeltaLoad'): DeltaLoadRequest.FromString,
       ('esloader.ESLoader', 'SayHello'): HelloRequest.FromString,
     }
     response_serializers = {
       ('esloader.ESLoader', 'AnonymousDeltaLoad'): AnonymousDeltaLoadResponse.SerializeToString,
-      ('esloader.ESLoader', 'DeltaLoad'): DeltaLoadResponse.SerializeToString,
+      ('esloader.ESLoader', 'DomainDeltaLoad'): DeltaLoadResponse.SerializeToString,
       ('esloader.ESLoader', 'HealthCheck'): HealthCheckResponse.SerializeToString,
+      ('esloader.ESLoader', 'IPv4DeltaLoad'): DeltaLoadResponse.SerializeToString,
       ('esloader.ESLoader', 'SayHello'): HelloReply.SerializeToString,
     }
     method_implementations = {
       ('esloader.ESLoader', 'AnonymousDeltaLoad'): face_utilities.unary_unary_inline(servicer.AnonymousDeltaLoad),
-      ('esloader.ESLoader', 'DeltaLoad'): face_utilities.unary_unary_inline(servicer.DeltaLoad),
+      ('esloader.ESLoader', 'DomainDeltaLoad'): face_utilities.unary_unary_inline(servicer.DomainDeltaLoad),
       ('esloader.ESLoader', 'HealthCheck'): face_utilities.unary_unary_inline(servicer.HealthCheck),
+      ('esloader.ESLoader', 'IPv4DeltaLoad'): face_utilities.unary_unary_inline(servicer.IPv4DeltaLoad),
       ('esloader.ESLoader', 'SayHello'): face_utilities.unary_unary_inline(servicer.SayHello),
     }
     server_options = beta_implementations.server_options(request_deserializers=request_deserializers, response_serializers=response_serializers, thread_pool=pool, thread_pool_size=pool_size, default_timeout=default_timeout, maximum_timeout=maximum_timeout)
@@ -624,20 +656,23 @@ try:
     generated only to ease transition from grpcio<0.15.0 to grpcio>=0.15.0"""
     request_serializers = {
       ('esloader.ESLoader', 'AnonymousDeltaLoad'): AnonymousDeltaLoadRequest.SerializeToString,
-      ('esloader.ESLoader', 'DeltaLoad'): DeltaLoadRequest.SerializeToString,
+      ('esloader.ESLoader', 'DomainDeltaLoad'): DeltaLoadRequest.SerializeToString,
       ('esloader.ESLoader', 'HealthCheck'): HealthCheckRequest.SerializeToString,
+      ('esloader.ESLoader', 'IPv4DeltaLoad'): DeltaLoadRequest.SerializeToString,
       ('esloader.ESLoader', 'SayHello'): HelloRequest.SerializeToString,
     }
     response_deserializers = {
       ('esloader.ESLoader', 'AnonymousDeltaLoad'): AnonymousDeltaLoadResponse.FromString,
-      ('esloader.ESLoader', 'DeltaLoad'): DeltaLoadResponse.FromString,
+      ('esloader.ESLoader', 'DomainDeltaLoad'): DeltaLoadResponse.FromString,
       ('esloader.ESLoader', 'HealthCheck'): HealthCheckResponse.FromString,
+      ('esloader.ESLoader', 'IPv4DeltaLoad'): DeltaLoadResponse.FromString,
       ('esloader.ESLoader', 'SayHello'): HelloReply.FromString,
     }
     cardinalities = {
       'AnonymousDeltaLoad': cardinality.Cardinality.UNARY_UNARY,
-      'DeltaLoad': cardinality.Cardinality.UNARY_UNARY,
+      'DomainDeltaLoad': cardinality.Cardinality.UNARY_UNARY,
       'HealthCheck': cardinality.Cardinality.UNARY_UNARY,
+      'IPv4DeltaLoad': cardinality.Cardinality.UNARY_UNARY,
       'SayHello': cardinality.Cardinality.UNARY_UNARY,
     }
     stub_options = beta_implementations.stub_options(host=host, metadata_transformer=metadata_transformer, request_serializers=request_serializers, response_deserializers=response_deserializers, thread_pool=pool, thread_pool_size=pool_size)
