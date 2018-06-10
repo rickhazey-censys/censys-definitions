@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package zsearch;
+
+enum CTPushStatus {
+    CT_PUSH_STATUS_RESERVED = 0;
+    CT_PUSH_STATUS_UNKNOWN = 1;
+    CT_PUSH_STATUS_SUCCESS = 2;
+    CT_PUSH_STATUS_UNKNOWN_ERROR = 3;
+    CT_PUSH_STATUS_INVALID_ROOT = 4;
+    CT_PUSH_STATUS_ALREADY_EXISTS = 5;
+    CT_PUSH_STATUS_WILL_NOT_PUSH = 6;
+}
+
+message CTServerStatus {
+    int64 index = 1;
+    // parsed out timestamp inside the SCT
+    int64 ct_timestamp = 2;
+    // when we found the certificate in CT
+    int64 pull_timestamp = 3;
+    // when we pushed the record to CT
+    int64 push_timestamp = 4;
+    CTPushStatus push_status = 5;
+    bytes sct = 6;
+    string push_error = 7;
+}

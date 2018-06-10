@@ -1,0 +1,71 @@
+syntax = "proto3";
+
+package zsearch;
+
+enum CTServer {
+    CT_SERVER_RESERVED = 0;
+    // Censys
+    CT_SERVER_CENSYS_DEVELOPMENT = 1;
+    CT_SERVER_CENSYS_PRODUCTION = 2;
+    // Google
+    CT_SERVER_GOOGLE_AVIATOR = 10; // FROZEN ct.googleapis.com/aviator
+    CT_SERVER_GOOGLE_PILOT = 11; // ACTIVE ct.googleapis.com/pilot
+    CT_SERVER_GOOGLE_ROCKETEER = 12; // ACTIVE ct.googleapis.com/rocketeer
+    CT_SERVER_GOOGLE_SUBMARINER = 13; // ACTIVE ct.googleapis.com/submariner
+    CT_SERVER_GOOGLE_TESTTUBE = 14; // TESTING ct.googleapis.com/testtube
+    CT_SERVER_GOOGLE_ICARUS = 15; // ACTIVE ct.googleapis.com/icarus
+    CT_SERVER_GOOGLE_SKYDIVER = 16; // ACTIVE ct.googleapis.com/skydiver
+    CT_SERVER_GOOGLE_DAEDALUS = 17; // ACTIVE ct.googleapis.com/daedalus
+    // Google Argon
+    CT_SERVER_GOOGLE_ARGON_2017 = 50; // ACTIVE ct.googleapis.com/logs/argon2017
+    CT_SERVER_GOOGLE_ARGON_2018 = 51; // ACTIVE ct.googleapis.com/logs/argon2018
+    CT_SERVER_GOOGLE_ARGON_2019 = 52; // ACTIVE ct.googleapis.com/logs/argon2019
+    CT_SERVER_GOOGLE_ARGON_2020 = 53; // ACTIVE ct.googleapis.com/logs/argon2020
+    CT_SERVER_GOOGLE_ARGON_2021 = 54; // ACTIVE ct.googleapis.com/logs/argon2021
+    // Cloudflare Nimbus
+    CT_SERVER_CLOUDFLARE_NIMBUS_2017 = 60; // ACTIVE ct.cloudflare.com/logs/nimbus2017
+    CT_SERVER_CLOUDFLARE_NIMBUS_2018 = 61; // ACTIVE ct.cloudflare.com/logs/nimbus2018
+    CT_SERVER_CLOUDFLARE_NIMBUS_2019 = 62; // ACTIVE ct.cloudflare.com/logs/nimbus2019
+    CT_SERVER_CLOUDFLARE_NIMBUS_2020 = 63; // ACTIVE ct.cloudflare.com/logs/nimbus2020
+    CT_SERVER_CLOUDFLARE_NIMBUS_2021 = 64; // ACTIVE ct.cloudflare.com/logs/nimbus2021
+    // Digicert
+    CT_SERVER_DIGICERT_CT1 = 20; // ACTIVE ct1.digicert-ct.com/log
+    CT_SERVER_DIGICERT_CT2 = 40; // ACTIVE ct2.digicert-ct.com/log
+    // Izenpe
+    CT_SERVER_IZENPE_COM_CT = 21; // DEPRECATED ct.izenpe.com
+    CT_SERVER_IZENPE_EUS_CT = 22; // ACTIVE ct.izenpe.eus (aka "Izenpe Argi")
+    // Symantec
+    CT_SERVER_SYMANTEC_WS_CT = 23; // ACTIVE ct.ws.symantec.com
+    CT_SERVER_SYMANTEC_WS_VEGA = 24; // ACTIVE vega.ws.symantec.com
+    CT_SERVER_SYMANTEC_WS_SIRIUS = 37; // ACTIVE sirius.ws.symantec.com
+    CT_SERVER_SYMANTEC_WS_DENEB = 32; // ACTIVE deneb.ws.symantec.com
+    // Comodo
+    CT_SERVER_COMODO_DODO = 35; // ACTIVE dodo.ct.comodo.com
+    CT_SERVER_COMODO_MAMMOTH = 36; // ACTIVE mammoth.ct.comodo.com
+    CT_SERVER_COMODO_SABRE = 41; // ACTIVE sabre.ct.comodo.com
+    // Wosign, StartCom, and WoTrus
+    CT_SERVER_WOSIGN_CTLOG = 25; // ACTIVE ctlog.wosign.com
+    CT_SERVER_WOSIGN_CT = 26; // DEPRECATED
+    CT_SERVER_WOTRUS_CTLOG = 47; // ctlog.wotrus.com
+    CT_SERVER_WOTRUS_CTLOG3 = 48; // ctlog3.wotrus.com
+    CT_SERVER_STARTSSL_CT = 29; // ACTIVE ct.startssl.com
+    // GDCA
+    CT_SERVER_GDCA_CT = 28; // DEPCREATED ct.gdca.com.cn
+    CT_SERVER_GDCA_CTLOG = 34; // DEPRECATED ctlog.gdca.com.cn
+    CT_SERVER_GDCA_LOG = 45; // ACTIVE log.gdca.com.cn
+    CT_SERVER_GDCA_LOG2 = 46; // ACTIVE log2.gdca.com.cn
+    // Venafi
+    CT_SERVER_VENAFI_API_CTLOG = 31; // ACTIVE ctlog.api.venafi.com
+    CT_SERVER_VENAFI_API_CTLOG_GEN2 = 39; // ACTIVE ctlog-gen2.api.venafi.com
+    // Nordu
+    CT_SERVER_NORDU_CT_PLAUSIBLE = 33; // ACTIVE plausible.ct.nordu.net
+    // Let's Encrypt
+    CT_SERVER_LETSENCRYPT_CT_CLICKY = 43; // clicky.ct.letsencrypt.org
+    // Other
+    CT_SERVER_CERTLY_LOG = 30; // DEPRECATED log.certly.io
+    CT_SERVER_CNNIC_CTSERVER = 27; // ACTIVE ctserver.cnnic.cn
+    CT_SERVER_CERTIFICATETRANSPARENCY_CN_CT = 38; // ACTIVE www.certificatetransparency.cn/ct
+    CT_SERVER_SHECA_CT = 42; // ACTIVE     https://ct.sheca.com
+    CT_SERVER_BEHIND_THE_SOFA = 44; // ct.filippo.io/behindthesofa
+
+}
