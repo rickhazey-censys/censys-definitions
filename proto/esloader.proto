@@ -16,12 +16,8 @@ service ESLoader {
     rpc HealthCheck(HealthCheckRequest) returns (HealthCheckResponse);
 
     // A remote procedure call to load into Elasticsearch a list of Delta
-    // objects for indexing IPv4 entries.
-    rpc IPv4DeltaLoad(DeltaLoadRequest) returns (DeltaLoadResponse);
-
-    // A remote procedure call to load into Elasticsearch a list of Delta
-    // objects for indexing Domain entries.
-    rpc DomainDeltaLoad(DeltaLoadRequest) returns (DeltaLoadResponse);
+    // objects for indexing Host Delta entries.
+    rpc DeltaLoad(DeltaLoadRequest) returns (DeltaLoadResponse);
 
     // A remote procedure call to load into Elasticsearch a list of
     // AnonymousDelta objects, i.e., for indexing Certificate entries.
