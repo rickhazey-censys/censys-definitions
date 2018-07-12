@@ -31,6 +31,7 @@ enum Protocol {
     PROTO_HTTP_WWW = 26; // http://www.domain.tld, for use within Alexa
     PROTO_HTTPS_WWW = 27; // https://www.domain.tld, for use within Alexa
     PROTO_SMB = 28;
+    PROTO_IPP = 29;
     
     // Databases
     PROTO_MONGO = 64; 
