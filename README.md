@@ -1,6 +1,9 @@
 # censys-definitions
 Censys internal Protobuf objects
 
+## Just build
+If you just need to build an updated protobuf without pushing up a new egg, just run `docker-compose up`.
+
 ## Regenerating
 Only do this on OS X in a clean Python 2.7 virtualenv.
 
