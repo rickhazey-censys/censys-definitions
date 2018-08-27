@@ -44,7 +44,7 @@ const (
 	Protocol_PROTO_HTTPS_WWW Protocol = 27
 	Protocol_PROTO_SMB       Protocol = 28
 	// Databases
-	Protocol_PROTO_MONGO    Protocol = 64
+	Protocol_PROTO_MONGODB    Protocol = 64
 	Protocol_PROTO_MSSQL    Protocol = 65
 	Protocol_PROTO_MYSQL    Protocol = 66
 	Protocol_PROTO_ORACLE   Protocol = 67
@@ -83,7 +83,7 @@ var Protocol_name = map[int32]string{
 	26:  "PROTO_HTTP_WWW",
 	27:  "PROTO_HTTPS_WWW",
 	28:  "PROTO_SMB",
-	64:  "PROTO_MONGO",
+	64:  "PROTO_MONGODB",
 	65:  "PROTO_MSSQL",
 	66:  "PROTO_MYSQL",
 	67:  "PROTO_ORACLE",
@@ -120,7 +120,7 @@ var Protocol_value = map[string]int32{
 	"PROTO_HTTP_WWW":  26,
 	"PROTO_HTTPS_WWW": 27,
 	"PROTO_SMB":       28,
-	"PROTO_MONGO":     64,
+	"PROTO_MONGODB":   64,
 	"PROTO_MSSQL":     65,
 	"PROTO_MYSQL":     66,
 	"PROTO_ORACLE":    67,

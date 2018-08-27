@@ -34,7 +34,7 @@ enum Protocol {
     PROTO_IPP = 29;
     
     // Databases
-    PROTO_MONGO = 64; 
+    PROTO_MONGODB = 64;
     PROTO_MSSQL = 65;
     PROTO_MYSQL = 66;
     PROTO_ORACLE = 67;
