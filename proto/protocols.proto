@@ -40,6 +40,9 @@ enum Protocol {
     PROTO_ORACLE = 67;
     PROTO_POSTGRES = 68;
 
+
+    PROTO_KUBERNETES = 127;
+
     // Cache services
     PROTO_MEMCACHED = 128;
     PROTO_REDIS = 129;
